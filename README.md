@@ -1,6 +1,6 @@
-# MCT Blog
+# SMC Blog
 
-This is the repository for the blog of the [University of Oslo (UiO)](https://www.uio.no/english/) international master's programme in [Music, Communication and Technology (MCT)](https://www.uio.no/english/studies/programmes/mct-master/) offered by the [Department of Musicology](https://www.hf.uio.no/imv/english/).
+This is the repository for the blog of the [Aalborg University Copenhagen](https://www.aau.dk/en) international master's programme in [Sound and Music Computing](https://www.smc.aau.dk).
 
 To learn how to use the blog, and much more, visit our **[Full Documentation and Guides.](https://github.com/MCT-master/Guides/wiki/How-to-use-the-MCT-Blog)**
 
