@@ -1,19 +1,19 @@
 toc:
   - title: Topics
     subfolderitems:
-      - page: Interactive Music
+      - page: New Interfaces for Musical Expression (NIME)
         url: /interactive-music/
-      - page: Machine Learning
+      - page: Machine Learning for Media Experiences
         url: /machine-learning/
-      - page: Motion Capture
+      - page: Embodied Interaction
         url: /motion-capture/
       - page: Networked Music
         url: /networked-music/
       - page: Sonification
         url: /sonification/
-      - page: Sound Programming
+      - page: Sound Processing
         url: /sound-programming/
-      - page: Spatial Audio
+      - page: Spatial User Interfaces
         url: /spatial-audio/
       - page: Other
         url: /other/
@@ -21,7 +21,9 @@ toc:
         url: /alltopics/
   - title: Projects
     subfolderitems:
-      - page: Applied Projects
+      - page: Course Mini Projects
+        url: /mini-projects/
+      - page: Semester Projects
         url: /applied-projects/
       - page: Master's Theses
         url: /masters-thesis/
