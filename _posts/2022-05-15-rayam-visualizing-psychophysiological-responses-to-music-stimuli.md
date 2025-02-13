@@ -72,9 +72,9 @@ During the product research process, I started searching in parallel for a suita
 
 ## Data
 
-The breath and music data inputs used in this project were collected from the experiment "Headphones/speakers Experiment, 2018" (Jensenius, 2021) at the University of Oslo, part of the "MICRO - Human Bodily Micromotion in Music Perception and Interaction" project, which studied how music and rhythm influence the human body motion. The goal of the "Headphones/speakers Experiment, 2018" experiment was to analyse the body motion and rhythm entrainment while listening to music, exploring how the motor responses would differ if the listener were using headphones or speakers.
+The breath and music data inputs used in this project were collected from the experiment "Headphones/speakers Experiment, 2018" (Jensenius, 2021) at the Aalborg University, part of the "MICRO - Human Bodily Micromotion in Music Perception and Interaction" project, which studied how music and rhythm influence the human body motion. The goal of the "Headphones/speakers Experiment, 2018" experiment was to analyse the body motion and rhythm entrainment while listening to music, exploring how the motor responses would differ if the listener were using headphones or speakers.
 
-The participants were 42 persons signed up at the University of Oslo, without any impairments or medical conditions that would impact the results of the study. All the subjects listened to the same audio sample through headphones and speakers with systematic variation of the order of the samples and the listening device used. Every session starts with 30 seconds of silence, and presents the audio stimulus (45 seconds each) in different orders, having a 30 seconds interval between each song, and at the end.
+The participants were 42 persons signed up at the Aalborg University, without any impairments or medical conditions that would impact the results of the study. All the subjects listened to the same audio sample through headphones and speakers with systematic variation of the order of the samples and the listening device used. Every session starts with 30 seconds of silence, and presents the audio stimulus (45 seconds each) in different orders, having a 30 seconds interval between each song, and at the end.
 
 Audio Stimuli list:
 

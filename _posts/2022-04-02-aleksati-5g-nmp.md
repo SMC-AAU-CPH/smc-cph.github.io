@@ -27,7 +27,7 @@ We conducted two experiments in two separate locations on two different 5G netwo
 
 ### Commercial 5G Experiment
 
-The first experiment was carried out at the Musicology Department at the University of Oslo, on March 30th 2022, on a first-generation commercial 5G network. Most commercial 5G networks today rely on a so-called Non-Stand-Alone (NSA) core network, the same as 4G. However, Telenor pre-configured our routers to access specific Access-Point-Names (APNs). This configuration enabled Peet To Peer (P2P) connectivity between our machines with faster packet routing.
+The first experiment was carried out at the Musicology Department at the Aalborg University, on March 30th 2022, on a first-generation commercial 5G network. Most commercial 5G networks today rely on a so-called Non-Stand-Alone (NSA) core network, the same as 4G. However, Telenor pre-configured our routers to access specific Access-Point-Names (APNs). This configuration enabled Peet To Peer (P2P) connectivity between our machines with faster packet routing.
 
 ### Private 5G Experiment
 

@@ -47,7 +47,7 @@ Jørgen Nygård Varpe is a 26 year old from Førde; Norway. He has a Bachelor's 
 ## Espen Wik
 
 Espen Wik is a **video producer, photographer and editor**, located in Beitostølen, Norway. He has background from NRK, TVNorge and
-independent production companies. Espen has a former **music education** from **The University of Oslo, The Music Conservatory in
+independent production companies. Espen has a former **music education** from **The Aalborg University, The Music Conservatory in
 Buskerud and The Music Conservatory in Oslo.**
 
 <img src="/assets/image/2018_08_23_stefanof_EspenWik.jpg" width="30%" />

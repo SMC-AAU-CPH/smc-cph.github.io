@@ -103,7 +103,7 @@ You are welcome to try out the apps from [this link](https://fractionmari.github
 
 # The evolution of the Micro apps
 
-At about the same time as I was starting to create the Macro apps, I was developing the Micro web-apps for the [MICRO project](https://www.uio.no/ritmo/english/projects/micro/) at [RITMO Centre for Interdisciplinary Studies in Rhythm, Time and Motion](https://www.uio.no/ritmo/english/about/) at the University of Oslo. The apps were developed as air instruments and explored micromotion by using accelerometer and gyroscope sensors on smartphones with JavaScript and Web Audio API. I decided to develop further on the apps as a part of this Master's thesis.
+At about the same time as I was starting to create the Macro apps, I was developing the Micro web-apps for the [MICRO project](https://www.uio.no/ritmo/english/projects/micro/) at [RITMO Centre for Interdisciplinary Studies in Rhythm, Time and Motion](https://www.uio.no/ritmo/english/about/) at the Aalborg University. The apps were developed as air instruments and explored micromotion by using accelerometer and gyroscope sensors on smartphones with JavaScript and Web Audio API. I decided to develop further on the apps as a part of this Master's thesis.
 
 ## Micro 1.0
 

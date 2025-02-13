@@ -40,7 +40,7 @@ For the selection of excerpts, three tracks from three composers from the same p
 
 Each excerpt was performed in order in three different conditions three times: Normal, Deadpan, Exaggerated, a total of **54 files** were recorded.
 
-In **Motion Capture** section, motion data were collected, at a **120** frames per second, with a 8-camera Opti-track Motion Capture in University of Oslo, [SMC Portal](https://www.hf.uio.no/imv/english/about/rooms-and-equipment/SMC-portal/). Using 25 passive reflective markers on the performer’s **heads**, **wrists**, **shoulders**, **torso**, **elbows** and **arms**, the placement of markers on performer’s body is listed in Figure 1.
+In **Motion Capture** section, motion data were collected, at a **120** frames per second, with a 8-camera Opti-track Motion Capture in Aalborg University, [SMC Portal](https://www.hf.uio.no/imv/english/about/rooms-and-equipment/SMC-portal/). Using 25 passive reflective markers on the performer’s **heads**, **wrists**, **shoulders**, **torso**, **elbows** and **arms**, the placement of markers on performer’s body is listed in Figure 1.
 
 <figure style="float: auto">
    <img src="/assets/image/2021_04_19_wenbo_figure1.png" alt="" title="Figure 1. Upper body skeleton on Opti-track"/> <figcaption>Figure 1. Upper body skeleton on Opti-track</figcaption>

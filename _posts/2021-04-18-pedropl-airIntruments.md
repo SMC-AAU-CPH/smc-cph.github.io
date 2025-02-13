@@ -123,7 +123,7 @@ A demonstration of how it works is shown in the following video:
 
 # Conclusions
 
-One of the challenges in this project was managing a real-time setup for the whole architecture presented here. I used the Portal room at University of Oslo and there were some considerations regarding network and computers to use in order to make it work. Thus, it is essential to know the equipment we have and the limitations to deal with when we work with interconnected systems.
+One of the challenges in this project was managing a real-time setup for the whole architecture presented here. I used the Portal room at Aalborg University and there were some considerations regarding network and computers to use in order to make it work. Thus, it is essential to know the equipment we have and the limitations to deal with when we work with interconnected systems.
 
 Most of the fixed values used (thresholds and delay) were obtained experimentally to fit my particular style to play such instruments, hence it is important to develop calibration strategies to change those values according to the performer and the environment, even apply smart strategies for automatic adjustments if needed.
 

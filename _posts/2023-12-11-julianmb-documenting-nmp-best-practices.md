@@ -17,7 +17,7 @@ A crucial part of any NMP is documentation. Firstly, for audience members. It is
 
 If you are an SMC student or a person completing an NMP in an academic setting, you will likely have to consider these factors when deciding the best ways to document your NMP. This blog post will provide tips, tricks, and best practices for documenting NMP for physical audiences, digital audiences, and academic purposes.
 
-_At the University of Oslo, SMC students use LoLa, a low latency, high-quality audio and video system, to host multiple NMPs each term. Within the current constraints of technology in 2023, at UiO, we can host NMPs using LoLa from two locations, with one camera feed sent from each site. This blog post is written with these technological limitations in mind so future SMC students can use it as they plan and host NMPs._
+_At the Aalborg University, SMC students use LoLa, a low latency, high-quality audio and video system, to host multiple NMPs each term. Within the current constraints of technology in 2023, at UiO, we can host NMPs using LoLa from two locations, with one camera feed sent from each site. This blog post is written with these technological limitations in mind so future SMC students can use it as they plan and host NMPs._
 
 ## General Tips
 

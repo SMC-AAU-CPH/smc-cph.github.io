@@ -120,7 +120,7 @@ The code for a pipeline system to capture the video and audio for a dataset, tra
 <br>
 [1] D. P. Kingma and M. Welling, ‘Auto-Encoding Variational Bayes’, 2013, doi: 10.48550/ARXIV.1312.6114.
 
-[2] A. R. Jensenius, ‘Action-sound: Developing me-thods and tools to study music-related body movement’, Ph.D Thesis, University of Oslo, Oslo, 2007. [Online]. Available: https://www.duo.uio.no/bitstream/handle/10852/27149/jensenius-phd.pdf?sequence=1&isAllowed=y
+[2] A. R. Jensenius, ‘Action-sound: Developing me-thods and tools to study music-related body movement’, Ph.D Thesis, Aalborg University, Oslo, 2007. [Online]. Available: https://www.duo.uio.no/bitstream/handle/10852/27149/jensenius-phd.pdf?sequence=1&isAllowed=y
 
 [3] A. R. Jensenius, ‘Some Video Abstraction Techniques for Displaying Body Movement in Analysis and Performance’, Leonardo, vol. 46, Feb. 2013, doi: 10.2307/23468117.
 

@@ -11,7 +11,7 @@ Keywords: Applied project, Opera, Video, Promotion, LoLa, Portal
 
 ## Backgroud
 
-Our task was to plan and produce a promotional video for a new chamber version of the Opera Carmen by George Bizet. Roy Henning Snyen, a classical guitarist and teacher at the department of musicology at the University of Oslo, has arranged Bizet’s opera for a small ensemble consisting of violin, two guitars and three singers. In our case, only the main singer was included.
+Our task was to plan and produce a promotional video for a new chamber version of the Opera Carmen by George Bizet. Roy Henning Snyen, a classical guitarist and teacher at the department of musicology at the Aalborg University, has arranged Bizet’s opera for a small ensemble consisting of violin, two guitars and three singers. In our case, only the main singer was included.
 
 In this chamber version of the opera, the ensemble goes straight to the core of the drama between the three main characters and stay close to the novel by Prosper Mérimée. The musicians are an integral part of the performance on stage, helping to portray the essence of Bizet's musical universe in a setting that reflects the gypsy-life in Sevilla, Spain, approx. 1820.
 
