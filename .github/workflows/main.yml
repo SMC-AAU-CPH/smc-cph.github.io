@@ -1,85 +1,49 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
 
-title: The SMC Blog
-email: cer@create.aau.dk
-description: >- # this means to ignore newlines until "baseurl:"
-  The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master's programme in Sound and Music Computing (SMC).
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://smc-aau-cph.github.io/smc-cph.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"
-twitter_username: smc-aau-cph
-github_username:  smc-aau-cph
-youtube_username: smc-aau-cphr # hacked the social.html imported from minima 2.5.1 to override problem with channel URL
-rss: RSS feed
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
-# Comments
-comments:
-  provider: disqus
-disqus:
-  shortname: https-SMC-master-github-io
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-redirect-from
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
-show_excerpts: true
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
 
-# Needed to generate the author pages
-collections:
-  authors:
-    output: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'  # specify the Ruby version you need
 
-# Needed to paginate the list of posts in the homepage
-paginate: 5
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
 
-paginate_path: "/blog/page:num/"
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
 
-# Allowed categories
-categories:
-  - applied-project
-  - interactive-music
-  - machine-learning
-  - masters-thesis
-  - other
-  - motion-capture
-  - people
-  - portal
-  - sonification
-  - sound-programming
-  - spatial-audio
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
