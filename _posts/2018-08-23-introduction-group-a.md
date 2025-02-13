@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  "Meet MCT Group A 2018"
+title:  "Meet SMC Group A 2018"
 date:   2018-08-23 10:48:00 +0200
 categories: people
 author: Sam Roman, Juno Jensen, Jørgen Varpe, Espen Wik
 image: /assets/image/2018_08_23_stefanof_Group-A-Y1.jpg
-excerpt: "With a background from <strong>music, media, journalism, sound engineering, electronics and programming</strong>; the A-team aims to approach the MCT program with <strong>enthusiasm, curiosity and professionalism</strong>. We believe that our <strong>diversity</strong> and varied skill set will be a catalyst to achieive <strong>artistic innovation</strong> in a hyper technological world."
+excerpt: "With a background from <strong>music, media, journalism, sound engineering, electronics and programming</strong>; the A-team aims to approach the SMC program with <strong>enthusiasm, curiosity and professionalism</strong>. We believe that our <strong>diversity</strong> and varied skill set will be a catalyst to achieive <strong>artistic innovation</strong> in a hyper technological world."
 ---
 
 ![Photo of Group A](/assets/image/2018_08_23_stefanof_Group-A-Y1.jpg "Group A")
 
 # A-Team
 
-With a background from **music, media, journalism, sound engineering, electronics and programming**; the A-team aims to approach the MCT program with **enthusiasm, curiosity and professionalism**. We believe that our **diversity** and varied skill set will be a catalyst to acheive **artistic innovation** in a hyper technological world.
+With a background from **music, media, journalism, sound engineering, electronics and programming**; the A-team aims to approach the SMC program with **enthusiasm, curiosity and professionalism**. We believe that our **diversity** and varied skill set will be a catalyst to acheive **artistic innovation** in a hyper technological world.
 
 Our goal is to combine our **various specialisations** into a consistent and **efficient workflow**. _We are creatively a melting pot; different tastes and similar goals in life, a recipe for some interesting innovation!_
 

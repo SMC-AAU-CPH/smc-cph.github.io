@@ -5,7 +5,7 @@ date: 2022-05-20 17:00:00 +0200
 categories: machine-learning
 author: Kristian Wentzel
 image: /assets/image/2022_05_20_kriswent_piano_robot.jpeg
-keywords: mct, machine learning, MIDI, neural networks, deep learning, transformer
+keywords: SMC, machine learning, MIDI, neural networks, deep learning, transformer
 excerpt: "How I made use of Fourier Transforms in deep learning to generate expressive MIDI piano accompaniments."
 ---
 
@@ -63,19 +63,19 @@ The piano predictions below have the 256 first of 1024 tokens feed as an input c
 Original Accompaniment
 <audio controls>
 
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_kriswent_make_u_feel_original.mp3" type="audio/mpeg">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_kriswent_make_u_feel_original.mp3" type="audio/mpeg">
 </audio>
 
 FNet Predicted Accompaniment
 <audio controls>
 
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_kriswent_make_u_feel_fnet.mp3" type="audio/mpeg">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_kriswent_make_u_feel_fnet.mp3" type="audio/mpeg">
 </audio>
 
 Transformer Predicted Accompaniment
 <audio controls>
 
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_kriswent_make_u_feel_transformer.mp3" type="audio/mpeg">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_kriswent_make_u_feel_transformer.mp3" type="audio/mpeg">
 </audio>
 
 ### “Song 186 – Segment 5” – POP909 dataset
@@ -83,19 +83,19 @@ Transformer Predicted Accompaniment
 Original Accompaniment
 <audio controls>
 
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_kriswent_185_c4_original.mp3" type="audio/mpeg">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_kriswent_185_c4_original.mp3" type="audio/mpeg">
 </audio>
 
 FNet Predicted Accompaniment
 <audio controls>
 
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_kriswent_185_c4_fnet.mp3" type="audio/mpeg">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_kriswent_185_c4_fnet.mp3" type="audio/mpeg">
 </audio>
 
 Transformer Predicted Accompaniment
 <audio controls>
 
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_kriswent_185_c4_transformer.mp3" type="audio/mpeg">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_kriswent_185_c4_transformer.mp3" type="audio/mpeg">
 </audio>
 
 ## References

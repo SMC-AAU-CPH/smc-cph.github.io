@@ -4,7 +4,7 @@ title: Music Mode for Online Meetings
 date: 2022-11-28
 categories: networked-music
 author: Aysima Karcaaltincaba
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_28_aysimab_music-online.jpg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_28_aysimab_music-online.jpg
 keywords: music, network, cisco, microsoft, zoom
 excerpt: "It is possible to use popular meeting products for music!"
 ---
@@ -15,7 +15,7 @@ Online meetings and hybrid platforms have become a mandatory tool in our daily l
 
 <figure>
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_28_aysimab_music-online.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_28_aysimab_music-online.jpg"
       style="max-height:400px; width:auto;" />
    <figcaption>Performing music in an online meting, photo by Omar Prestwich</figcaption>
 </figure>
@@ -26,7 +26,7 @@ There are many reasons behind these problems and I will try to go through the re
 
 <figure>
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_28_aysimab_music_mode.jpeg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_28_aysimab_music_mode.jpeg"
       style="max-height:600px; width:auto;" />
    <figcaption>Music Mode vs normal audio path as Bjorn Winsvold explained in a Webex Board</figcaption>
 </figure>

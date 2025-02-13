@@ -10,7 +10,7 @@ keywords: human-computer-interaction
 ---
 
 
-During a hackathon in our introduction course to physical computing, we developed a prototype of a DMI. In our [previous blog post](https://mct-master.github.io/interactive-music/2019/10/22/GroupC-Physical-Computing-Day4.html) from this project we explained how the system was built and gave a short summary of our performance. In this blog post however, we will look at the instrument from an HCI-perspective. Where the main focus will be a summary of the problem space, the research question, the methodology used and our main findings and contributions. 
+During a hackathon in our introduction course to physical computing, we developed a prototype of a DMI. In our [previous blog post](https://SMC-master.github.io/interactive-music/2019/10/22/GroupC-Physical-Computing-Day4.html) from this project we explained how the system was built and gave a short summary of our performance. In this blog post however, we will look at the instrument from an HCI-perspective. Where the main focus will be a summary of the problem space, the research question, the methodology used and our main findings and contributions. 
 
 ## Research question
 

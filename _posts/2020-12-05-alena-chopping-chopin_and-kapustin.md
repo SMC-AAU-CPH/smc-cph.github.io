@@ -10,7 +10,7 @@ excerpt: "Chopping a prelude by Chopin and one by Kapustin and then merging the 
 ---
 ## Chopping Chopin and Kapustin preludes
 
-The Scientific Computing module within the MCT4000 course was the longest and most complex. I had some experience with programming from before, but not with anything audio, so this module provided a good introduction to audio processing with Python. The final assignment was a good combination of straight-forward and complex tasks: we had to choose two songs of relatively similar length, slice them and then concatenate all the segments based on a certain feature (this will become clearer in a moment). 
+The Scientific Computing module within the SMC4000 course was the longest and most complex. I had some experience with programming from before, but not with anything audio, so this module provided a good introduction to audio processing with Python. The final assignment was a good combination of straight-forward and complex tasks: we had to choose two songs of relatively similar length, slice them and then concatenate all the segments based on a certain feature (this will become clearer in a moment). 
 
 #### The Initial Songs
 

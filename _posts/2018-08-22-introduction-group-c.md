@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Meet MCT Group C 2018"
+title:  "Meet SMC Group C 2018"
 date:   2018-08-22 14:54:46 +0200
 categories: people
 author: Karolina Jawad, Elias Andersen, Jonas Bjordal
@@ -37,7 +37,7 @@ tools.
 ## Bio
 
 **Karolina**: With a background in media-film and theatre studies I
-landed in the MCT program to learn about hand-on technology and its
+landed in the SMC program to learn about hand-on technology and its
 societal implications in the field of music. I worked in web-, as well
 as in video- and film production.  I have experience in audio-visual
 editing and web-design.

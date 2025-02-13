@@ -13,7 +13,7 @@ excerpt: "How to use Csound to create a digital Steinway?"
 ![Acoustic Piano](/assets/image/2020_11_06_wenbo_vst.png)
 
 
-This VST plugins is a sound synthesizer for simulating real acoustic piano in [CSound](https://csound.com) environment. I was inspired to make this synthesizer by the MCT entrepreneurship course where Group C was trying to develop a remote music therapy App, and the technical core of this app was playing with music using a built-in lightweight sound synthesizer. Therefore, I tried to use Csound to simulate a real instrument in a way that would use the least amount of resources.
+This VST plugins is a sound synthesizer for simulating real acoustic piano in [CSound](https://csound.com) environment. I was inspired to make this synthesizer by the SMC entrepreneurship course where Group C was trying to develop a remote music therapy App, and the technical core of this app was playing with music using a built-in lightweight sound synthesizer. Therefore, I tried to use Csound to simulate a real instrument in a way that would use the least amount of resources.
 
 Below is my Demo:
 ## Demo

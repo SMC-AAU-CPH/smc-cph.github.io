@@ -5,15 +5,15 @@ date:   2023-08-18 10:48:00 +0200
 categories: people
 author: Tom Oldfield, Juliana Bigelow, Karenina Juarez
 image: /assets/image/2023_08_18_thomaseo_group.jpg
-excerpt: "Meet MCT’s three new first year students. Coming from the United Kingdom and the United States they have a wealth of diverse musical, professional and technological backgrounds."
+excerpt: "Meet SMC’s three new first year students. Coming from the United Kingdom and the United States they have a wealth of diverse musical, professional and technological backgrounds."
 ---
 
 <img src="/assets/image/2023_08_18_thomaseo_group.jpg" width="50%" />
 
 # Team U
-MCT’s 2023 students, Tom, Karenina and Juliana, have all had strong backgrounds in music from an early age. Playing cello, singing and being a part of various music groups have defined large portions of their lives. 
+SMC’s 2023 students, Tom, Karenina and Juliana, have all had strong backgrounds in music from an early age. Playing cello, singing and being a part of various music groups have defined large portions of their lives. 
 
-Within the past five years each of the three members have gravitated towards various aspects of music technology. Working in live sound, with Max and experimenting with electronic music composition and performance have drawn them each to MCT to explore music technology more deeply. You can meet each of them below:
+Within the past five years each of the three members have gravitated towards various aspects of music technology. Working in live sound, with Max and experimenting with electronic music composition and performance have drawn them each to SMC to explore music technology more deeply. You can meet each of them below:
 
 
 <img src="/assets/image/2023_08_18_kareninj_individual.jpg" width="30%" />
@@ -33,7 +33,7 @@ You can follow me on [*Instagram*](https://www.instagram.com/karenina.juarez/), 
 
 Juliana Bigelow, is forging a path for herself as a woman in audio and media. In June of 2021 she graduated with Bachelor’s of Science in Sonic Arts and Music Production from Portland State University. In addition to her studies, she has worked in digital marketing, journalism, and audio editing.
 
-She is passionate about accessibility and hopes the MCT program will allow her to create accessible music technology and installations. 
+She is passionate about accessibility and hopes the SMC program will allow her to create accessible music technology and installations. 
 
 You can see more of her work at [*julianabigelow.com*](https://julianabigelow.com) and listen to her music on [*SoundCloud*](https://soundcloud.com/julianabigelow).
 
@@ -41,5 +41,5 @@ You can see more of her work at [*julianabigelow.com*](https://julianabigelow.co
 <img src="/assets/image/2023_08_18_thomaseo_individual.jpg" width="30%" />
 ## Tom Oldfield
 
-Hello! My name is Tom Oldfield and I’m a musician from the UK. I studied classical cello and use this alongside hardware and modular synthesizers to make ambient, experimental and dance music. I like building, experimenting, improvising and finding new ways to interact with technology. I am excited to begin my journey in MCT as part of team U! Check out what I'm working on my 
+Hello! My name is Tom Oldfield and I’m a musician from the UK. I studied classical cello and use this alongside hardware and modular synthesizers to make ambient, experimental and dance music. I like building, experimenting, improvising and finding new ways to interact with technology. I am excited to begin my journey in SMC as part of team U! Check out what I'm working on my 
 [*website*](https://tomoldfield.com) or follow me on [*Instagram*](https://www.instagram.com/tomoldfieldmusic/).

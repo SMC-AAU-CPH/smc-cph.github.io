@@ -89,7 +89,7 @@ After some testing, I determined that all my trash was either non-conductive, or
 
 To make a homemade variable resistor one needs a conductor (a wire, rod, etc) that is only minimally conductive along its length. Connecting an ohm meter probe to one end and then touching along its length with the other probe, a feller can see that the resistance goes up the farther out from the first probe one goes. Used in a circuit, the second probe is the “wiper” and can be run along the wire to change the resistance in the same way a potentiometer does, controlling parameters such as volume, effect level, modulation, etc.
 
-Nichrome wire of the sort used to make heater elements would have been ideal, but surprisingly, I didn’t find any of that lying about. So, I decided to try making a wire-wound resistor out of the bit of found wire, wrapped around a drum stick I “recycled” from the MCT portal.
+Nichrome wire of the sort used to make heater elements would have been ideal, but surprisingly, I didn’t find any of that lying about. So, I decided to try making a wire-wound resistor out of the bit of found wire, wrapped around a drum stick I “recycled” from the SMC portal.
 
 ![Rod](/assets/image/2019_10_22_stefanof_rod.jpg)
 

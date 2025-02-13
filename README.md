@@ -2,7 +2,7 @@
 
 This is the repository for the blog of the [Aalborg University Copenhagen](https://www.aau.dk/en) international master's programme in [Sound and Music Computing](https://www.smc.aau.dk).
 
-To learn how to use the blog, and much more, visit our **[Full Documentation and Guides.](https://github.com/MCT-master/Guides/wiki/How-to-use-the-MCT-Blog)**
+To learn how to use the blog, and much more, visit our **[Full Documentation and Guides.](https://github.com/SMC-master/Guides/wiki/How-to-use-the-SMC-Blog)**
 
 <br>
 
@@ -27,7 +27,7 @@ To learn how to use the blog, and much more, visit our **[Full Documentation and
 
 ## 1. Serve the Blog Locally
 
-You can build the MCT blog and visualize it in the browser locally on your machine by installing [Jekyll](https://jekyllrb.com/docs/installation/).
+You can build the SMC blog and visualize it in the browser locally on your machine by installing [Jekyll](https://jekyllrb.com/docs/installation/).
 
 Once you have your Jekyll environment set up, you can serve from the root blog folder using this command in the terminal:
 
@@ -92,7 +92,7 @@ date: 2022-04-11 10:30:00 +0200
 categories: networked-music
 author: Aleksander Tidemann
 image: /assets/image/2022_04_01_aleksati_5g_telenor_logo.png
-keywords: mct, uio, networked music performances, telematic music, 5g, telenor research, lola, jacktrip, audio latency, video latency
+keywords: SMC, uio, networked music performances, telematic music, 5g, telenor research, lola, jacktrip, audio latency, video latency
 excerpt: "In collaboration with Telenor Research, we explored the prospects of doing networked music performances over 5G. Here are the preliminary results."
 ---
 ```
@@ -115,12 +115,12 @@ Example:
 2019_04_19_aleksati_blog_header.jpg
 ```
 
-You can store files in the appropriate sub-folder of `./assets/` in the GitHub blog repo, given that the files are less than 300KB in size. Files above 300KB must be stored in the equivalent sub-folder of the [UiO Vortex blog folder](https://www-adm.uio.no/english/studies/programmes/mct-master/blog/assets/?vrtx=admin).
+You can store files in the appropriate sub-folder of `./assets/` in the GitHub blog repo, given that the files are less than 300KB in size. Files above 300KB must be stored in the equivalent sub-folder of the [UiO Vortex blog folder](https://www-adm.uio.no/english/studies/programmes/SMC-master/blog/assets/?vrtx=admin).
 
 - Path to GitHub blog repo media `/assets/images/filename.extension`
-- Path to UiO Vortex folder media - `https://www.uio.no/english/studies/programmes/mct-master/blog/assets/images/filename.extension`
+- Path to UiO Vortex folder media - `https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/images/filename.extension`
 
-For more details on storing and sharing media files, visit the ["Embedding and Storage of Files" section](https://github.com/MCT-master/Guides/wiki/How-to-use-the-MCT-Blog-%E2%80%90-Embedding-and-Storage-of-Files) in the MCT Guides.
+For more details on storing and sharing media files, visit the ["Embedding and Storage of Files" section](https://github.com/SMC-master/Guides/wiki/How-to-use-the-SMC-Blog-%E2%80%90-Embedding-and-Storage-of-Files) in the SMC Guides.
 
 <br>
 
@@ -374,6 +374,6 @@ Some websites allow you to generate the markdown code automatically, like [this 
 
 ## 5. Issues and Improvements
 
-Fixing bugs, improving existing features or adding new ones are activities continuously carried out by users of the MCT Blog. If you find anything wrong or if you have suggestions, open an issue in the blog repository and include appropriate labels. If you [open an issue](https://github.com/MCT-master/mct-master.github.io/issues), you should also take the lead or contribute towards resolving it.
+Fixing bugs, improving existing features or adding new ones are activities continuously carried out by users of the SMC Blog. If you find anything wrong or if you have suggestions, open an issue in the blog repository and include appropriate labels. If you [open an issue](https://github.com/SMC-master/SMC-master.github.io/issues), you should also take the lead or contribute towards resolving it.
 
-For more information about the blog and how to use it, visit our **[Full Documentation and Guides.](https://github.com/MCT-master/Guides/wiki/How-to-use-the-MCT-Blog)**.
+For more information about the blog and how to use it, visit our **[Full Documentation and Guides.](https://github.com/SMC-master/Guides/wiki/How-to-use-the-SMC-Blog)**.

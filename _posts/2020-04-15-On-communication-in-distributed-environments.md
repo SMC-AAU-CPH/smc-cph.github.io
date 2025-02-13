@@ -5,11 +5,11 @@ date: 2020-04-15 14:20:00 +0200
 categories: networked-music
 author: Karolina Jawad
 image: /assets/image/2020_04_15_aleksati_ise_karolina.jpg
-excerpt: "Photo by Dr. Andrea Glang-Tossing. At ISE Europe, a trade fair in Amsterdam ( 11.02.-14.02. 2020) I was presenting together with SALTO the MCT course at the AVIXA Higher Education Conference.
+excerpt: "Photo by Dr. Andrea Glang-Tossing. At ISE Europe, a trade fair in Amsterdam ( 11.02.-14.02. 2020) I was presenting together with SALTO the SMC course at the AVIXA Higher Education Conference.
 Researchers and students were invited to highlight emerging innovative methods
 that enhance learning and teaching experiences through AV technologies. The ISE Europe is the world's biggest pro AV event for integrated systems, with 80000 visitors and 1400 vendors, spread over a dozens of halls.
 For the conference I was specifically asked to contrast the overall technically curated program with social aspects from a student perspective. A retrospective from current conditions."
-Keywords: AV, Portal, Women in AV, Women in technology, Lockdown, MCT, COVID19, distributed environments
+Keywords: AV, Portal, Women in AV, Women in technology, Lockdown, SMC, COVID19, distributed environments
 ---
 
 <figure text-align="center">
@@ -18,20 +18,20 @@ Keywords: AV, Portal, Women in AV, Women in technology, Lockdown, MCT, COVID19, 
 </figure>
 
 At [ISE Europe](iseurope.org/), a trade fair in Amsterdam ( 11.02.-14.02. 2020) I was presenting together with [SALTO](https://www.ntnu.edu/salto)
-the MCT course at the [AVIXA](https://www.avixa.org) Higher Education Conference. Researchers and students were
+the SMC course at the [AVIXA](https://www.avixa.org) Higher Education Conference. Researchers and students were
 [invited to highlight emerging innovative methods](https://www.iseurope.org/show-event/avixa-higher-education-av-conference/) that enhance learning and teaching
 experiences in distributed environments through audiovisual (AV) technologies. The ISE Europe is the world's biggest pro AV event for integrated systems, with 80000 visitors and 1400
 vendors, spread over a dozens of halls. For the conference I was specifically asked to contrast the overall technically curated program with
 social aspects from a student perspective. A retrospective from current conditions.
 
-The benefits and challenges of learning and teaching in distributed environments like MCT's cross campus study collaboration are
+The benefits and challenges of learning and teaching in distributed environments like SMC's cross campus study collaboration are
 currently very much at display. Communication is always important, but in the light of the current situation,
-our dependency on technology that connects us is even more exposed. I always had the feeling that we at MCT were in so many ways researching
+our dependency on technology that connects us is even more exposed. I always had the feeling that we at SMC were in so many ways researching
 ourselves in a microcosmos set-up that at some point would turn into a mega sized social laboratory. Among many other questions, we have
 asked ourselves by what audiovisual means we can increase mediated presence and the feeling of social connectedness online.
 In mid February most of us had no clue that a globally applied lockdown could force the entire higher education system in our promoted study
 format and these questions became large scale issues in times of physical distancing. For the interested potential applicants out there -
-with the difference that MCT still has co-located students in each city's Portal, a physical existent space that unites virtually both
+with the difference that SMC still has co-located students in each city's Portal, a physical existent space that unites virtually both
 campuses to one class room. But even that seems now like a relict from another life. When everything we consider essential for a diverse and
 human practise (gathering in the same room for musiking, theater...) is currently on ice, the necessity to improve AV solutions that enable
 close to face to face situations is invaluable to keep societies' sanity. At least our children will grow up in a totally different world
@@ -66,14 +66,14 @@ in caring for, designing and coordinating technologies that are valuable for soc
 Finally, the expo itself was quite overwhelming. It took all the days to visit the halls and to get a gripe of the materialised dimensions
 of electronic systems integration and IT for AV. For the future of the Portal it is definitely the venue to gather ideas to push new
 developments. I had also the chance to visit an inspiring talk at the [AVIXA diversity council](https://www.youtube.com/watch?v=BlTMjtbiIo0&feature=youtu.be) and learned about large professional
-networks that mentor and support young [women in AV](http://womeninav.com/). As this is my last semester at MCT, I hope the conversation and activities on diversity
+networks that mentor and support young [women in AV](http://womeninav.com/). As this is my last semester at SMC, I hope the conversation and activities on diversity
 and inclusion will continue and expand.
 
 
 ## Acknowledgements
 
 Thanks a lot to AVIXA and SALTO for enabling me to follow up Gill Ferrel invitation, who gave me the chance to share my perspectives.
-Thanks to you all and I hope the collaboration will continue at MCT on these matters.
+Thanks to you all and I hope the collaboration will continue at SMC on these matters.
 
 ## References
 

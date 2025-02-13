@@ -62,7 +62,7 @@ Listen to these recordings of two songs in the same room, each recorded before a
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_15_lindsay_portal_demoaudio.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_15_lindsay_portal_demoaudio.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Audio recordings of before and after acoustic treatment</figcaption>
@@ -74,7 +74,7 @@ In a room, the first room mode is not the only one to produce resonance. Each __
 
 In broadcast and education, __speech intelligibility__ is extremely important (lectures, interview, etc). Thus, controlling __decay times__ is very important for clarity of dialogue, clearing up the low end to give your sub more impact, and alleviating localization problems common with sound systems. Low frequency resonances result in the smearing of vocal frequencies and need to be controlled for clear and concise speech.
 
-### Optimizing the MCT portal and other rooms built for teleconferencing and telematic performances
+### Optimizing the SMC portal and other rooms built for teleconferencing and telematic performances
 
 ### 1. "Optimum” Room Dimensions
 
@@ -114,7 +114,7 @@ As any other resonance chamber, for a room to resonate, it needs containment. Th
 
 ### 4. Digital pre/post Equalization
 
-An effective way of achieving better frequency response is to apply __parametric EQ__ directly on the sound before it is sent out or on the microphone. When two rooms are virtually (and electronically) connected, such as the MCT Portals, this works like a charm – e.g. applying two filters on 35 and 63 Hz.
+An effective way of achieving better frequency response is to apply __parametric EQ__ directly on the sound before it is sent out or on the microphone. When two rooms are virtually (and electronically) connected, such as the SMC Portals, this works like a charm – e.g. applying two filters on 35 and 63 Hz.
 Check out Stephen's video for more information of feedback equalization.
 
 I hope this blog post helped you gain a better understanding of room modes and the ways to use or _misuse_ them!
@@ -122,7 +122,7 @@ I hope this blog post helped you gain a better understanding of room modes and t
 ### Video Tutorial
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_11_15_lindsay_portal_video.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_15_lindsay_portal_video.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
    <figcaption>Video Presentation</figcaption>
 </figure>
 

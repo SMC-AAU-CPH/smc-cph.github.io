@@ -5,7 +5,7 @@ permalink: /other/
 ---
 
 
-The blog posts of this section are not related to any specific course or relate to discontinued courses such as [MCT4015 Entrepreneurship for MCT](https://web.archive.org/web/20210420053930/https://www.ntnu.edu/studies/courses/MCT4015). 
+The blog posts of this section are not related to any specific course or relate to discontinued courses such as [SMC4015 Entrepreneurship for SMC](https://web.archive.org/web/20210420053930/https://www.ntnu.edu/studies/courses/SMC4015). 
 
 
 {%- if site.posts.size > 0 -%}

@@ -4,13 +4,13 @@ title: "Yggdrasil: An Environmentalist Interactive Music Installation"
 date: 2022-12-03 20:30:00 +0200
 categories: interactive-music
 author: Oliver Getz
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_03_olivegr_yggdrasil_thumb.jpg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_03_olivegr_yggdrasil_thumb.jpg
 excerpt: "Plant trees and nurture your forest to generate sound!"
 keywords: interactive music system, installation, mapping, inspiration
 ---
 <figure>
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_03_olivegr_yggdrasil_finished.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_03_olivegr_yggdrasil_finished.jpg"
    />
    <figcaption>Yggdrasil, in it's finished form</figcaption>
 </figure>
@@ -68,7 +68,7 @@ breadboard prototype to the perfboard is practically 1 to 1. I used some extra m
 support the attachment, making it feel more robust.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_03_olivegr_yggdrasil_circuit.jpg" />
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_03_olivegr_yggdrasil_circuit.jpg" />
   <figcaption>Pro tip: solder one component at a time. It's easier to debug.</figcaption>
 </figure>
 

@@ -11,7 +11,7 @@ excerpt: "The rehearsal experience for our telematic performance."
 
 # Concert Rehearsal
 
-For the final concert, we thought it would be more convenient to stick to the acoustic instruments setup. Therefore, the team C decided to play two songs, [Salut d’amour](https://mct-master.github.io/portal/2021/02/28/joni-teamcjam.html) and [Autumn Leaves](https://www.youtube.com/watch?v=ZEMCeymW1Ow), a classical music, and a jazz music, hope this combination can collide with new sparks.
+For the final concert, we thought it would be more convenient to stick to the acoustic instruments setup. Therefore, the team C decided to play two songs, [Salut d’amour](https://SMC-master.github.io/portal/2021/02/28/joni-teamcjam.html) and [Autumn Leaves](https://www.youtube.com/watch?v=ZEMCeymW1Ow), a classical music, and a jazz music, hope this combination can collide with new sparks.
 
 Wenbo, Joni and Stephen on piano, flute and bass as usual, and Lindsay on jazz drums for Autumn Leaves and harp for Salut d’amour.
 
@@ -42,7 +42,7 @@ For the mic setup, we set up an AKG C414 mic for the bass and one for the flute.
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_05_04_wenboyi_al.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_05_04_wenboyi_al.mp3" type="audio/mpeg">
     Listen to our Autumn Leaves!
   </audio>
   <figcaption>Listen to our Autumn Leaves!</figcaption>

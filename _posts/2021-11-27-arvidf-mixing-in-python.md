@@ -13,11 +13,11 @@ keywords: Music Production, Mixing, Python, Plugins
 
 # **Introduction**
 
-Being students at the MCT program is now a condition we've gotten accustomed to as our first term is gradually coming to an end. Usually we get some sort of assignments to solve every week, and most likely we will spend way too much time solving it. So when the last assignment was announced we decided to get extra ambitious and spend even more time on it, making sure our personal lives and sanity would be completely ruined come Christmas.
+Being students at the SMC program is now a condition we've gotten accustomed to as our first term is gradually coming to an end. Usually we get some sort of assignments to solve every week, and most likely we will spend way too much time solving it. So when the last assignment was announced we decided to get extra ambitious and spend even more time on it, making sure our personal lives and sanity would be completely ruined come Christmas.
 
 We decided to use our recently acquired Python skills to build a program that could mix a multitrack recording. With homebrew FX and everything you'd need, basically making a tiny Python-DAW except for a nice GUI. That would have made it too slick, we wanted this to be pure code.
 
-The code for this project is available [here.](https://github.com/wnetzel/MCT-teamA-2021/tree/main/Python%20Assignment%205/Part%202)
+The code for this project is available [here.](https://github.com/wnetzel/SMC-teamA-2021/tree/main/Python%20Assignment%205/Part%202)
 
 
 # **The Music**
@@ -37,7 +37,7 @@ On purpose we chose poorly sounding synth patches, completely unprocessed. We al
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_24_arvidf_org_mix.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_org_mix.mp3" type="audio/mpeg">
     Mixed
   </audio>
   <figcaption>The original unprocessed music</figcaption>
@@ -47,7 +47,7 @@ On purpose we chose poorly sounding synth patches, completely unprocessed. We al
 
 # **The Program**
 
-Segmenting and rejoining segments of audio has somehow become the bread and butter of the MCT program, so the assignment required us to do this. But this was also going to enable us to apply different processing on each segment of any track, which turned out to be an interesting option in the end result.
+Segmenting and rejoining segments of audio has somehow become the bread and butter of the SMC program, so the assignment required us to do this. But this was also going to enable us to apply different processing on each segment of any track, which turned out to be an interesting option in the end result.
 
 The basic thing needed whenever things are sliced up and pasted back together are some short overlap and fading functions, in order to avoid clicks and artifacts in the sound. Our approach to achieve this was the following:
 
@@ -195,7 +195,7 @@ It uses a set up of four parallel comb filters which then runs into two cascadin
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_24_arvidf_drysound.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_drysound.mp3" type="audio/mpeg">
     Unprocessed sine tone
   </audio>
   <figcaption>Dry sound</figcaption>
@@ -203,7 +203,7 @@ It uses a set up of four parallel comb filters which then runs into two cascadin
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_24_arvidf_wetsound.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_wetsound.mp3" type="audio/mpeg">
     Sine tone with our IIR Reverb
   </audio>
   <figcaption>Wet sound</figcaption>
@@ -214,7 +214,7 @@ Our delay was a FIR filter impulse response generating function, which does the 
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_24_arvidf_delay.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_delay.mp3" type="audio/mpeg">
     Brass stabs
   </audio>
   <figcaption>Brass stabs with our FIR Delay</figcaption>
@@ -277,7 +277,7 @@ But at last you could end up with something interesting, and then say some praye
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_24_arvidf_pluck_org.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_pluck_org.mp3" type="audio/mpeg">
     Unprocessed
   </audio>
   <figcaption>Pluck synth unprocessed</figcaption>
@@ -285,7 +285,7 @@ But at last you could end up with something interesting, and then say some praye
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_24_arvidf_pluck_mix.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_pluck_mix.mp3" type="audio/mpeg">
     Mixed
   </audio>
   <figcaption>Pluck Synth processed by our tiny Python DAW</figcaption>
@@ -356,7 +356,7 @@ After a few nights of this ordeal we then had six tracks we could sum together. 
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_24_arvidf_stereomix.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_stereomix.mp3" type="audio/mpeg">
     Mixed
   </audio>
   <figcaption>Our final mix</figcaption>

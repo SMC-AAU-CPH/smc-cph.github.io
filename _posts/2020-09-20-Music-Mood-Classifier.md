@@ -6,7 +6,7 @@ categories: machine-learning
 author: Rayam Luna
 image: /assets/image/2020_09_20_rayaml_ML-feelings.jpg
 excerpt: "This is an attempt to create a Music Mood Classifier with feature extractions from Librosa."
-Keywords: Machine Learning, Python, MCT4047, Feature, Mood, Classification
+Keywords: Machine Learning, Python, SMC4047, Feature, Mood, Classification
 ---
 
 ## [ Overview ]

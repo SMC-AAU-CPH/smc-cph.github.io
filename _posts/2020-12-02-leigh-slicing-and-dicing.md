@@ -28,7 +28,7 @@ so the tempo, chords and overall structure are the same but all the instrumentat
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2020_12_02_leigh_song_one.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_12_02_leigh_song_one.wav" type="audio/mpeg">
     Song One
   </audio>
   <figcaption>Song One</figcaption>
@@ -36,7 +36,7 @@ so the tempo, chords and overall structure are the same but all the instrumentat
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2020_12_02_leigh_song_two.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_12_02_leigh_song_two.wav" type="audio/mpeg">
     Song Two
   </audio>
   <figcaption>Song Two</figcaption>
@@ -48,7 +48,7 @@ bit more "musical" since the final output has a kind of loud beat followed by so
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2020_12_02_leigh_slicing_output.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_12_02_leigh_slicing_output.wav" type="audio/mpeg">
     Output Song
   </audio>
   <figcaption>Output Song</figcaption>

@@ -66,7 +66,7 @@ We further refined these proposals after discussing it with the Pedál team and 
 
 The B-team approached Pedál from the viewpoint of researching and identifying areas for
 improvement to its functionality, workflow, and user interface. This involved multiple sessions
-using the app both with each other and with musicians outside the MCT program. Multi-user
+using the app both with each other and with musicians outside the SMC program. Multi-user
 implementation was explored, as well as UI/UX design of the GUI itself. We divided the tasks among us like so:
 
 ### Breakdown of work
@@ -197,7 +197,7 @@ In this way, all the peers are able to hear each other. The P2P connection betwe
 # How would it look? - Prototype of UI/UX
 
 <figure>
-    <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_12_10_jacksong_pedal_ui.gif" width="200px">
+    <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_12_10_jacksong_pedal_ui.gif" width="200px">
     <figcaption>Pedál</figcaption>
 </figure>
 

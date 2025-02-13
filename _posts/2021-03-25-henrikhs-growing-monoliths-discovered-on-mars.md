@@ -52,13 +52,13 @@ We used third-party elements to enrich the visuals of the game which can be foun
 
 #### The Music
 Almost all audio is synthesized using Max/MSP. Before making the actual music we started with synthesizing the sound of Mars. The week before we started working on the project NASA released the first recordings of sound on Mars. This «noise» was something that could be synthesized. The benefit of synthesizing it rather than using the recording is the general feeling over time, as the synthesized noise will never repeat itself like a looped noise recording. It’s also easier to synthesize it in stereo rather than using the mono recording from Mars, so in general it feels a little more immersive and nice.
-The music is generated from weather data. There are three different modes for weather - cold, moderate and hot. This acts as a quantification controlling the range of different parameters in the patcher where sound is being generated. Cold weather has a +1 octave more «ice-bell-ish» sound to it and the reverb is also more lush and with higher frequencies. For moderate the synth sound is warmer as well as original octave and the reverb moves into hybrid delay fields while also getting lower damping. For the hot mode the synth sound is very warm, -1 octave and the reverb is more in a delay state with low dampening. For the modes vibrato is also affected, cold mode has a fast and firm vibrato, moderate slightly looser and warm mode has a slower and wobbly vibrato. There are different musical scales for the modes as well. Cold has a minor scale, moderate is pentatonic while warm goes to major scale. All of these variable changes for the modes are based on knowledge we’ve gotten through the studies of metaphors, entrainment and verticality during MCT. We wanted to solve the musical mapping in such a way to make it feel natural and intuitive to the user, so music makes sense and the sonification has a communicative purpose.
+The music is generated from weather data. There are three different modes for weather - cold, moderate and hot. This acts as a quantification controlling the range of different parameters in the patcher where sound is being generated. Cold weather has a +1 octave more «ice-bell-ish» sound to it and the reverb is also more lush and with higher frequencies. For moderate the synth sound is warmer as well as original octave and the reverb moves into hybrid delay fields while also getting lower damping. For the hot mode the synth sound is very warm, -1 octave and the reverb is more in a delay state with low dampening. For the modes vibrato is also affected, cold mode has a fast and firm vibrato, moderate slightly looser and warm mode has a slower and wobbly vibrato. There are different musical scales for the modes as well. Cold has a minor scale, moderate is pentatonic while warm goes to major scale. All of these variable changes for the modes are based on knowledge we’ve gotten through the studies of metaphors, entrainment and verticality during SMC. We wanted to solve the musical mapping in such a way to make it feel natural and intuitive to the user, so music makes sense and the sonification has a communicative purpose.
 When you discover a monolith there is a nudge happening in the delay time based on the size of the monolith. Bigger monoliths make a bigger impact than the smaller ones, and this is to create some direct interaction, with the impact of hitting something, within the music. It also creates some lucky musical accidents and makes the music less static.
 All sounds in the game are synthesized, except the sound of the vehicle engine which is sampled from a recording of the real Preservance driving on Mars. We thought it was cool to include an actual recording from Mars in the game, and surprisingly the tone of the engine fits with the harmonic content in the music. The recording was released the same week as we were doing the project, so it felt like it was meant to be. Sound FX are synthesized so everything lives within the same soundscape. Synthesizing the monolith-impact we took inspiration from the introduction lecture in the coarse where when students were to describe a sound. We had to think of what an impact would sound like and how we could synthesize the smashed rocks falling from being smashed in the impact. The method we used was applying a lot of overdrive, amplitude modulation in stereo phase and filtering in different stages, all triggered by the same signal.
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_03_25_henrikhs_7rocksmash.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_03_25_henrikhs_7rocksmash.wav" type="audio/mpeg">
     Should show a media player
   </audio>
   <figcaption>7 levels of monolith smashing</figcaption>
@@ -68,7 +68,7 @@ The sound for collecting health pack is inspired by classic retro games - a shor
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_03_25_henrikhs_healthpack_6.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_03_25_henrikhs_healthpack_6.wav" type="audio/mpeg">
     Should show a media player
   </audio>
   <figcaption>Health Pack</figcaption>
@@ -78,7 +78,7 @@ The «start game» and «game over» over melody lines are referring to ***2001:
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_03_25_henrikhs_newgame_1.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_03_25_henrikhs_newgame_1.wav" type="audio/mpeg">
     Should show a media player
   </audio>
   <figcaption>New Game</figcaption>
@@ -86,7 +86,7 @@ The «start game» and «game over» over melody lines are referring to ***2001:
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_03_25_henrikhs_gameover_1.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_03_25_henrikhs_gameover_1.wav" type="audio/mpeg">
     Should show a media player
   </audio>
   <figcaption>Game Over</figcaption>
@@ -95,10 +95,10 @@ The «start game» and «game over» over melody lines are referring to ***2001:
 #### Demonstration Video
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_03_26_pedropl_sonification_mars.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_03_26_pedropl_sonification_mars.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
    <figcaption>Gameplay Demonstration</figcaption>
 </figure>
 
 #### End Note
-Working on a project like this has been slightly different than other technical tasks we’ve done in MCT. We ended up using a lot of time actually figuring out what the game should be like to make the most sense, and the same thing goes for figuring out what the audio was going to be like. These parts took a while probably because there are so many possibilities and going through many revisions of ideas and evaluating them is a tedious process. But we feel like we got there in the end. We were all able to use our own skills in the project. Pedro did some excellent game programming and sew it all together, Stephen treated datasets crushed the numbers and Henrik got to play around with synthesis and build a sound engine. Small details ended up being the hardest part, but in retrospect we’re happy we took time to fix them.
+Working on a project like this has been slightly different than other technical tasks we’ve done in SMC. We ended up using a lot of time actually figuring out what the game should be like to make the most sense, and the same thing goes for figuring out what the audio was going to be like. These parts took a while probably because there are so many possibilities and going through many revisions of ideas and evaluating them is a tedious process. But we feel like we got there in the end. We were all able to use our own skills in the project. Pedro did some excellent game programming and sew it all together, Stephen treated datasets crushed the numbers and Henrik got to play around with synthesis and build a sound engine. Small details ended up being the hardest part, but in retrospect we’re happy we took time to fix them.
 Playing the game is really fun, and the music adds excitement to the gameplay when it reacts on your treatment of the weather data. Things we have thought about is making the car speed up throughout the gameplay as you gain higher scores, that way the difficulty would increase. Another element we would want to include is another enemy, and being in the 2001: space odyssey universe - what better than gorillas chasing you for destroying their precious monoliths? That was also the feedback from Stephen's son, he missed the element of being chased by robots (gorillas, or maybe even gorilla robots). So we all have something to look forward to here.

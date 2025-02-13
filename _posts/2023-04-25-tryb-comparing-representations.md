@@ -16,7 +16,7 @@ excerpt: "A comparing of different MIDI representations for generative machine l
 </figure>
 
 
-In my previous blog post, I wrote about different ways to represent MIDI for a neural network with the intent of generating melodic, symbolic music. You can read my previous post [here](https://mct-master.github.io/machine-learning/2023/04/19/tryb-midi-hassle-copy.html). In that post I mentioned some drawbacks and benefits of different representations, but how can this be observed in the music that is generated? I have implemented three of these methods, and generated some melodies based on the representations. The results stem from three similar neural networks, with similar configurations in order to compare only the representations. 
+In my previous blog post, I wrote about different ways to represent MIDI for a neural network with the intent of generating melodic, symbolic music. You can read my previous post [here](https://SMC-master.github.io/machine-learning/2023/04/19/tryb-midi-hassle-copy.html). In that post I mentioned some drawbacks and benefits of different representations, but how can this be observed in the music that is generated? I have implemented three of these methods, and generated some melodies based on the representations. The results stem from three similar neural networks, with similar configurations in order to compare only the representations. 
 
 # The representations
 

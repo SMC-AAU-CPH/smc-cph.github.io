@@ -107,11 +107,11 @@ Several challenges needed to be taken into consideration regarding the telematic
 
 ## **Media Content and Relevant Links**
 
-End of semester concert for students enrolled in the Physical-Virtual Communication and Music (MCT4024) Autumn 2021
+End of semester concert for students enrolled in the Physical-Virtual Communication and Music (SMC4024) Autumn 2021
 
 [Telematic performance](https://www.youtube.com/watch?v=-dnpzsVc32M)
 
-[Telematic concert guide](https://github.com/MCT-master/portal-wiki/wiki/Salen-Telematic-Concert-Guide)
+[Telematic concert guide](https://github.com/SMC-master/portal-wiki/wiki/Salen-Telematic-Concert-Guide)
 
 ## **Final Thoughts**
 

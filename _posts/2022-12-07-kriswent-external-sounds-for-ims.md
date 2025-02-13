@@ -5,7 +5,7 @@ date: 2022-12-07 16:00:00 +0200
 categories: interactive-music
 author: Kristian Wentzel
 image: /assets/image/2022_12_07_kriswent_ims.jpeg
-keywords: mct, modular synthesis, interactive music systems
+keywords: SMC, modular synthesis, interactive music systems
 excerpt: "Exploring alternatives for generating sounds with your interactive music system."
 ---
 
@@ -26,7 +26,7 @@ Let us not forget that audio in/out jacks essentially are analog I/O connectors 
 Pssst – Keep in mind that it can be possible to simulate extra analog outputs by applying *Pulse Width Modulation* (PWM) to a digital output (which has a state of either 0 or 1). You can read more about PWM [here](https://www.allaboutcircuits.com/technical-articles/introduction-to-microcontroller-timers-pwm-timers/).
 
 ## Bela
-[Bela](https://bela.io/) is the embedded system of choice at MCT, because of it's super low latency (0.5ms action-to-sound latency), and a generous amount of I/O pins. This is a complete system for creating an IMS, where [Pure Data](https://puredata.info/) is one of the programming languages supported.
+[Bela](https://bela.io/) is the embedded system of choice at SMC, because of it's super low latency (0.5ms action-to-sound latency), and a generous amount of I/O pins. This is a complete system for creating an IMS, where [Pure Data](https://puredata.info/) is one of the programming languages supported.
 
 ### I/O
 - 2x Audio Inputs
@@ -135,7 +135,7 @@ The Kastl's operate within 5V.
 
 # Start Connecting 
 
-Now you have some ideas for "out-of-the-box" sound generation in your IMS. In an upcoming [blogpost](https://mct-master.github.io/interactive-music/2022/12/09/kriswent-towards-a-claptrap-speaking-kastle-maus.html) for my IMS project, I will present how I made use of a Bela and a Bastl Kastle in beautiful(?) harmony!
+Now you have some ideas for "out-of-the-box" sound generation in your IMS. In an upcoming [blogpost](https://SMC-master.github.io/interactive-music/2022/12/09/kriswent-towards-a-claptrap-speaking-kastle-maus.html) for my IMS project, I will present how I made use of a Bela and a Bastl Kastle in beautiful(?) harmony!
 
 ## Disclaimer
 Don't try this at home! Or, well, please do. But play with this at your own discretion. 

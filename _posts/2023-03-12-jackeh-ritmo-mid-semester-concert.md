@@ -17,7 +17,7 @@ excerpt: "We worked with local high school students to put together a jazz conce
    <figcaption>Musicians from Edvard Munch Vgs in soundcheck with Alex riding the faders.</figcaption>
 </figure>
 
-For our third network musical performance as MCT students, we teamed up with students from Edvard Munch High School in Oslo to put together a jazz concert between Salen at the Department of Musicology and the motion capture lab at RITMO on Tuesday 7 March 2023. Read below for a look behind the scenes and some reflections on the event from the RITMO performers and technicians.
+For our third network musical performance as SMC students, we teamed up with students from Edvard Munch High School in Oslo to put together a jazz concert between Salen at the Department of Musicology and the motion capture lab at RITMO on Tuesday 7 March 2023. Read below for a look behind the scenes and some reflections on the event from the RITMO performers and technicians.
 
 First though, some fun facts and figures. Salen and RITMO are roughly 870 metres apart. Sound travels at approximately 343m/s so it would take sound around 2.5 seconds to travel that distance. However, using the LOLA network we are able to send sound and video from one location to the other and back again in 17 milliseconds. In other words, we played jazz at 149 times the speed of sound, or 184,000km/h.
 
@@ -31,13 +31,13 @@ We were lucky to be able to make use of a mounted 4k TV from RITMO for the perfo
 
 The LOLA network worked flawlessly during both the soundcheck day on Monday and the concert on Tuesday. We performed round-trip (RTT) latency measurements on both days and recorded 15ms and 17ms of latency respectively with a sample rate of 48kHz and a buffer size of 64 samples on both ends. This worked well for our use case as we aim to achieve a RTT of under 30ms, above which performability can be negatively affected. The performers confirmed that this latency worked well. They could see some slight latency in the camera feeds in front of them, but this did not affect their ability to perform with the system.
 
-You can find a more detailed technical specification of the setup we used on the wiki page [here](https://github.com/MCT-master/portal-wiki/wiki/2023-Mid-Semester-Networked-Music-Performance-in-RITMO).
+You can find a more detailed technical specification of the setup we used on the wiki page [here](https://github.com/SMC-master/portal-wiki/wiki/2023-Mid-Semester-Networked-Music-Performance-in-RITMO).
 
 
 
 # Watch the Performance
 
-Watch the full performance on the MCT YouTube channel here:
+Watch the full performance on the SMC YouTube channel here:
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/A-JyaKxe4U4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

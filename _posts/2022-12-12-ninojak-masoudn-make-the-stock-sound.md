@@ -4,7 +4,7 @@ title: "Make The Stocks Sound"
 date: 2022-12-10 10:00:00 +0200
 categories: sound-programming
 author: Masoud Niknafs, Nino Jakeli
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_10_masoudn_stock.jpg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_stock.jpg
 keywords: PD, Algorithmic, sonification
 excerpt: "Make The Stocks Sound"
 ---
@@ -20,7 +20,7 @@ Due to the fact that changes in the S&P index have an effect on stock markets ar
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_10_masoudn_patch.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_patch.jpg"
       alt="Alternative Text"
       title="Patch"
       width="auto" />
@@ -37,7 +37,7 @@ A polyphonic granular synthesizer is also derived from the S&P index. This synth
 
 Please listen to an exerpt of it!cheers!
 
-<div class="waveform" path="https://www-adm.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_10_masoudn_sonification.wav?vrtx=admin" color="#56BBCC" splitChannels></div>
+<div class="waveform" path="https://www-adm.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_10_masoudn_sonification.wav?vrtx=admin" color="#56BBCC" splitChannels></div>
 
 
 

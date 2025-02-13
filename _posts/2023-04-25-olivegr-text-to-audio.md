@@ -12,7 +12,7 @@ keywords: video games, text-to-audio, ai, generation, sound design, sound effect
 Early 2023, Hugging Face released a pipeline for [AudioLDM](https://github.com/haoheliu/AudioLDM). What this means is that audio generation with AI became readily accessible to everyone, with low setup times. Text-to-audio is, at this very moment, right at our fingertips! Curious about its usage in game audio, I set out to explore its current capabilities and limitations.
 
 # AI SFX Generation Setup Guide
-Getting up and running took a bit more effort than I anticipated due to Python packaging conflicts and GPU issues. If you are having trouble with pytorch and GPUs, you can follow my [setup guide](http://https://mct-master.github.io/machine-learning/2023/04/25/olivegr-pytorch-gpu.html). If you still have issues using CUDA, do like me and switch from full precision (torch.float32) to half precision (torch.float16) like so:
+Getting up and running took a bit more effort than I anticipated due to Python packaging conflicts and GPU issues. If you are having trouble with pytorch and GPUs, you can follow my [setup guide](http://https://SMC-master.github.io/machine-learning/2023/04/25/olivegr-pytorch-gpu.html). If you still have issues using CUDA, do like me and switch from full precision (torch.float32) to half precision (torch.float16) like so:
 
 <pre>
   <code>
@@ -44,7 +44,7 @@ Results were mixed. For a sound to be usable as is in a video game, it will more
 
 <figure>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_hammer_2.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_hammer_2.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Prompt: "hammering a nail into wood"</figcaption>
@@ -54,7 +54,7 @@ Others contained nothing but noise:
 
 <figure>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_construction.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_construction.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Prompt: "high quality construction site sfx, slight compression"</figcaption>
@@ -64,7 +64,7 @@ This was mostly the case for “imaginary” sounds with no real-world reference
 
 <figure>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_dragon.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_dragon.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Prompt: "a big dragon's roar"</figcaption>
@@ -74,7 +74,7 @@ On the other hand, many of the foley-like sounds were as clean as I could ever h
 
 <figure>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_hammer_cinematic.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_hammer_cinematic.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Prompt: "a nail being hammered into wood"</figcaption>
@@ -84,7 +84,7 @@ Adding the word "cinematic" to the prompt generated similar sounds, but with mor
 
 <figure>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_hammer.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_hammer.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Prompt: "cinematic hammering a nail into wood"</figcaption>
@@ -94,7 +94,7 @@ The model seems either somewhat biased toward music, or infer some musical meani
 
 <figure>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_footstep.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_footstep.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Prompt: "footstep in wet sand"</figcaption>
@@ -106,7 +106,7 @@ Asking for 90s video game sounds provided some interesting results. I specified 
 
 <figure>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_vgs.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_vgs.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Prompt: "90s video game sound effect"</figcaption>
@@ -121,15 +121,15 @@ To speed up the process, I generated 50 text prompts with ChatGPT which were in 
 
 <figure style="float: none">
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_water_1.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_water_1.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_water_2.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_water_2.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <audio controls>
-    <source src="	https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_water_3.mp3" type="audio/mpeg">
+    <source src="	https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_25_olivegr_ai_sfx_water_3.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>AI Generated Water Effects</figcaption>
@@ -138,7 +138,7 @@ To speed up the process, I generated 50 text prompts with ChatGPT which were in 
 To hear the final results of this process, follow the development of Sacred Gems on the official development [Discord](discord.gg/hGx6qxKMD3) server and wishlist the game on [Steam](https://store.steampowered.com/app/1739260/Sacred_Gems/)!
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_25_olivegr_sg.gif"  width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_25_olivegr_sg.gif"  width="auto" />
 </figure>
 
 # Will AI Take Your Sound Design Gig?

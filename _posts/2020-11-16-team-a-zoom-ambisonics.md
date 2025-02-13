@@ -11,7 +11,7 @@ excerpt: " A more natural way of communicating online, wherein it feels like all
 
 ## Zoom here & Zoom there: Ambisonics
 
-Ever since we started this digital semester as part of the MCT program, we knew we were in for a ride. With each of us sitting at our homes in different parts of the world, riding on the Zoom ferris wheel, resisting that urge to have snacks midway the meeting (sometimes giving up and having them), we kept trying to make the experience more immersive. With our first class in [HighFidelity](https://www.highfidelity.com/) we tried to host ourselves in a more natural way, as it created a spatial map of our voices making it easier to follow each other. After trying multiple software to make the jamming experience more than just an exchange of audio, we tried to do a similar thing during the workshop in Ambisonics, using [Zoom](https://zoom.us/) as the exchange platform.
+Ever since we started this digital semester as part of the SMC program, we knew we were in for a ride. With each of us sitting at our homes in different parts of the world, riding on the Zoom ferris wheel, resisting that urge to have snacks midway the meeting (sometimes giving up and having them), we kept trying to make the experience more immersive. With our first class in [HighFidelity](https://www.highfidelity.com/) we tried to host ourselves in a more natural way, as it created a spatial map of our voices making it easier to follow each other. After trying multiple software to make the jamming experience more than just an exchange of audio, we tried to do a similar thing during the workshop in Ambisonics, using [Zoom](https://zoom.us/) as the exchange platform.
 
 #### Workshop Task:
 

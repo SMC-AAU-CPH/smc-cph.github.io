@@ -9,12 +9,12 @@ keywords: digital-audio, csound, cabbage, fm, pitch-scaling, reverb, stereo-dela
 excerpt: "This performance is using two VST plugins produced in Cabbage through Csound. A synthesizer based on elemental waveforms, frequency modulation, and stereo delay, and an audio effect for pitch scaling and reverb."
 ---
 
-As part of the project for Digital Audio module regarding MCT4000 course, you will find below a video for a performance that uses an effect and a synthesizer implemented in [CSound](https://csound.com), which were exported through [Cabbage](https://cabbageaudio.com/). Besides, I used the looping capabilities of [Ableton Live](https://www.ableton.com/en/) together with a specialized Ableton controller (AKAI APC40), a MIDI keyboard controller (AKAI MPK mini), an electric guitar, and my voice.
+As part of the project for Digital Audio module regarding SMC4000 course, you will find below a video for a performance that uses an effect and a synthesizer implemented in [CSound](https://csound.com), which were exported through [Cabbage](https://cabbageaudio.com/). Besides, I used the looping capabilities of [Ableton Live](https://www.ableton.com/en/) together with a specialized Ableton controller (AKAI APC40), a MIDI keyboard controller (AKAI MPK mini), an electric guitar, and my voice.
 
 I called this song in Spanish **"El Camino de los Lamentos"** (The Road of Lamentations) considering the mystery and feelings that, personally, they produce in me. I hope you like it. Later, I will explain the work behind the development of these plugins.
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2020_11_03_pedropl_caminolamentos.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_11_03_pedropl_caminolamentos.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
    <figcaption>The Performance</figcaption>
 </figure>
 
@@ -106,4 +106,4 @@ I tried to implement these plugins as general-purpose components for a performan
 
 ## Get the Plugins
 
-You can download these plugins for Windows [here](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/document/2020_11_03_pedropl_pedrosynthewin.zip). (Copy the two folders in your VST folder). Users from other OS can use the .csd files from the Windows folder and [export the plugin in Cabbage](https://cabbageaudio.com/docs/exporting/)
+You can download these plugins for Windows [here](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2020_11_03_pedropl_pedrosynthewin.zip). (Copy the two folders in your VST folder). Users from other OS can use the .csd files from the Windows folder and [export the plugin in Cabbage](https://cabbageaudio.com/docs/exporting/)

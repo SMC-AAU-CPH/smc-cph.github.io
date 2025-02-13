@@ -62,7 +62,7 @@ Guitar: Jonas or Sepehr.
 ## Videos from the performance
 
 
-In those two videos, you see the Oslo Side of the performance. The Trondheim side of the performance was documented in [this](https://mct-master.github.io/portal/2019/02/10/Documentation-and-recommendations-from-the-latest-Portal-Jam.html) blog post.
+In those two videos, you see the Oslo Side of the performance. The Trondheim side of the performance was documented in [this](https://SMC-master.github.io/portal/2019/02/10/Documentation-and-recommendations-from-the-latest-Portal-Jam.html) blog post.
 
 
 #### First try, without click:

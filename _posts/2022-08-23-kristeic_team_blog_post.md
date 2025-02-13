@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Meet Triple A - MCT 2022
+title: Meet Triple A - SMC 2022
 date: 2022-08-26 09:30:00 +0200
 categories: people
 author: Jack Hardwick, Christian Thobroe Anda, Kristian Eicke
 image: /assets/image/2022_08_26_kristeic_teamA_thumbnail.jpg
-excerpt: Hi! This is MCT-Team Triple A - Read more on who we are and what we do besides hanging around trash bins.
+excerpt: Hi! This is SMC-Team Triple A - Read more on who we are and what we do besides hanging around trash bins.
 keywords: people
 ---
 
@@ -39,7 +39,7 @@ I am a musician and technology enthusiast from Dresden, Germany. I originally st
 
 Christian Thobroe Anda is a film/tv/game composer (or at least trying to be). He has a bachelor degree in film music from Leeds College of Music, took a “year course” (Årsstudium) in art history, and just finished a postgraduate certificate in education. Christian is a multi-instrumentalist, mainly focusing on guitar and piano
 
-His interests, and reason for attending MCT, is to learn more about audio interactivity, and how to compose and use music to make people feel. While also feeding his addiction for new and old technologies that can change the ways of composing, interacting and perceiving music.
+His interests, and reason for attending SMC, is to learn more about audio interactivity, and how to compose and use music to make people feel. While also feeding his addiction for new and old technologies that can change the ways of composing, interacting and perceiving music.
 
 [https://soundcloud.com/christian-thobroe-anda](https://soundcloud.com/christian-thobroe-anda)
 
@@ -54,7 +54,7 @@ His interests, and reason for attending MCT, is to learn more about audio intera
 
 Jack is a violinist and computer musician from Mirfield, a small town between Manchester and Leeds in northern England. He’s played the violin for 18 years (a realisation which has made him feel old) and has a BA in Music from Carleton College in Northfield, Minnesota, USA, where he discovered his love for electro-acoustic composition and technologically extended violin performance, as well as film and video art.
 
-After spending the last few years working in arts marketing for theatre and opera on both sides of the Atlantic, he’s looking forward to continuing to explore his passion for all things MCT, particularly human-computer interaction and instrument design.
+After spending the last few years working in arts marketing for theatre and opera on both sides of the Atlantic, he’s looking forward to continuing to explore his passion for all things SMC, particularly human-computer interaction and instrument design.
 
 Outside of music he can be found watching Formula 1, thinking he’s Gordon Ramsay while cooking questionable food, or playing strategy and simulation video games.
 

@@ -53,4 +53,4 @@ So, basically, since I wanted to work on a project that really motivated me, I w
 
 [1] Y. Park, H. Heo, K. Lee, "VOICON: An Interactive Gestural Microphone For Vocal Performance" in *NIME*, 2012. https://www.nime.org/proceedings/2012/nime2012_199.pdf
 
-[2] S. González, "Interactive Music Systems", in *The MCT Blog*, 2022. https://mct-master.github.io/interactive-music/2022/12/09/sofiagon-emotion-IMS.html [Accessed, Dec. 09, 2022]
+[2] S. González, "Interactive Music Systems", in *The SMC Blog*, 2022. https://SMC-master.github.io/interactive-music/2022/12/09/sofiagon-emotion-IMS.html [Accessed, Dec. 09, 2022]

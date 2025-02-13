@@ -43,7 +43,7 @@ When looking at previous research that focuses on music related problems, one pa
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_jakobhoydal_ir01_af01.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_jakobhoydal_ir01_af01.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>Class 0, Audiofile 1
@@ -52,7 +52,7 @@ When looking at previous research that focuses on music related problems, one pa
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_jakobhoydal_ir09_af01.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_jakobhoydal_ir09_af01.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>Class 9, Audiofile 1
@@ -61,7 +61,7 @@ When looking at previous research that focuses on music related problems, one pa
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_20_jakobhoydal_ir18_af01.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_jakobhoydal_ir18_af01.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>Class 18, Audiofile 1

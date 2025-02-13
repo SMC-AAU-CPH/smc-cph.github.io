@@ -18,7 +18,7 @@ keywords: Aurora, Borealis, Python, Pure Data, sonification
 
 The weekend of 31 October 2003 passed like any other Halloween, unless you happened to be in Spain or Texas. If you did, you would have seen something you might have never seen in person before: the Aurora Borealis. Halloween 2003 is the period of highest intensity of solar winds, which cause the Northern Lights, since modern records began. Your three authors have spent two weeks deeply immersed in the solar winds data from the week of Halloween 2003, which saw possibly the biggest solar event since 1859.
 
-Our final two group assignments for MCT4001 were to sonify a dataset using both Python and Pure Data. Here is a deep dive into how and why we sonified this data in the ways we did.
+Our final two group assignments for SMC4001 were to sonify a dataset using both Python and Pure Data. Here is a deep dive into how and why we sonified this data in the ways we did.
 
 # About Our Dataset
 
@@ -129,7 +129,7 @@ Having now mapped every value in our data to a grain or audio processing paramet
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_09_jackeh_python_sonification_datapoint.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_09_jackeh_python_sonification_datapoint.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Our Python sonification using the data point segmentation.</figcaption>
@@ -137,7 +137,7 @@ Having now mapped every value in our data to a grain or audio processing paramet
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_09_jackeh_python_sonification_midi.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_09_jackeh_python_sonification_midi.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Our Python sonification using the MIDI segmentation.</figcaption>
@@ -167,7 +167,7 @@ We also produced a dynamic visualisation of our dataset time-synced to the audio
 
 <figure style="float: none">
   <video width="60%" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_12_09_kristeic_dp_animation_synthesized.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_12_09_kristeic_dp_animation_synthesized.mp4" type='video/mp4'>
   </video>
 </figure>
 
@@ -312,7 +312,7 @@ You can listen to the entire thing here:
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_09_jackeh_puredata_sonification.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_09_jackeh_puredata_sonification.mp3" type="audio/mpeg">
   </audio>
   <figcaption>Our Pure Data sonification.</figcaption>
 </figure>
@@ -321,7 +321,7 @@ Or watch a shorter video showing part of it here:
 
 <figure style="float: none">
   <video width="75%" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_12_11_kristeic_ahmetem_jackeh_pure_data_sonification_clip.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_12_11_kristeic_ahmetem_jackeh_pure_data_sonification_clip.mp4" type='video/mp4'>
   </video>
   <figcaption>A clip of our Pure Data sonification showing the user interface.</figcaption>
 </figure>

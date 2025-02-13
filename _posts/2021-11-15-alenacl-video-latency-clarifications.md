@@ -6,7 +6,7 @@ categories: networked-music
 author: Alena Clim
 image: /assets/image/2021_11_15_alena_test_latency.png
 keywords: video-latency, streaming, codec, protocol, encoder, decoder
-excerpt: "This blogpost is made after the video lecture on the same topic and it includes a definition of video latency and other related key concepts, as well as concrete examples from the MCT portals."
+excerpt: "This blogpost is made after the video lecture on the same topic and it includes a definition of video latency and other related key concepts, as well as concrete examples from the SMC portals."
 ---
 
 ### Introducing Video Latency
@@ -54,7 +54,7 @@ __Network transport protocols__ are also influencing the end-to-end latency. Dif
 
 Depending on each use case, the image quality or the low-latency will be more important. For applications where latency is critical, such as __telematic performances__, picture quality can often be exchanged in favor of minimizing latency. However, if the video quality is of importance one has to accept extra latency. Ultimately, the optimal combination of bitrate, picture quality, and latency settings will result in a great live experience over any network.
 
-### Practical examples from the MCT Portals
+### Practical examples from the SMC Portals
 
 __Protocols__
 
@@ -66,7 +66,7 @@ Both the Trondheim and the UiO portal are equipped with two very good cameras: t
 
 Once a semester or so, for our awesome telematic performances, we need to set up a stream that feeds several camera perspectives (and audio!) to the Internet, mostly to Youtube. For this we use __OBS Studio__ – which also uses AVC. For a transport protocol, it uses __SRT (Secure Reliable Transport)__ – open source streaming protocol that enables encryption and utilizes packet recovery to maintain high quality over unreliable networks without compromising latency. 
 
-__Video Latency in the MCT Portals__
+__Video Latency in the SMC Portals__
 
 <figure style="float: auto">
    <img src="/assets/image/2021_11_15_alena_2_way_latency_zoom.jpg" alt="" title="Testing 2 way connection latency" width=auto/> <figcaption>Testing 2-way connection over zoom</figcaption>
@@ -78,7 +78,7 @@ __Video Latency in the MCT Portals__
 Using a fun method of filming a web clock from more locations and then calculating the time difference, we tested some actual latencies:
 
 <figure style="float: auto">
-   <img src="/assets/image/2021_11_15_alena_mct_portals_video_latencies.JPG" alt="" title="Video latencies tested in the MCT portals" width=auto/> <figcaption>Video latencies tested in the UiO and NTNU portal</figcaption>
+   <img src="/assets/image/2021_11_15_alena_SMC_portals_video_latencies.JPG" alt="" title="Video latencies tested in the SMC portals" width=auto/> <figcaption>Video latencies tested in the UiO and NTNU portal</figcaption>
 </figure>
  
 What is this telling us? Firstly, __the latency between Trondheim and Oslo is not _that_ terrible!__ And secondly, even in the same room there’s latency to consider. 
@@ -91,11 +91,11 @@ Remember, when working with video latency, to:
 -	make sure the transport protocols are suitable for your task;
 -	find the balance between latency, picture quality and bandwidth depending on the use case.
 
-If you’re searching for __inspiration for another latency test__ consider this use cases: during one of our MCT courses you need to use several camera perspectives: one for the lecturer, one for the class, one for the mixer view. Calculate the video latencies (and perhaps also video quality) between all cameras and compare them. Based on your findings decide which cameras should be placed where. Hint: perhaps it is more important to have a high quality stream of the mixer view rather than the other angles… 
+If you’re searching for __inspiration for another latency test__ consider this use cases: during one of our SMC courses you need to use several camera perspectives: one for the lecturer, one for the class, one for the mixer view. Calculate the video latencies (and perhaps also video quality) between all cameras and compare them. Based on your findings decide which cameras should be placed where. Hint: perhaps it is more important to have a high quality stream of the mixer view rather than the other angles… 
 
 As a last thought… have you considered that __latency can be a good thing__? For example to prevent obscenities from airing, for live subtitling, or closed captioning. 
 
-Congratulations to all MCT students and teacher that set up our portals – despite our constant complaining the “worst” latency was still _under 50 ms_! Great job!
+Congratulations to all SMC students and teacher that set up our portals – despite our constant complaining the “worst” latency was still _under 50 ms_! Great job!
 
 #### References and further reading
 Eberlein, P. (n.d.). Understanding Video Latency. U.S. Tech. http://www.us-tech.com/RelId/1490479/ISvars/default/Understanding_Video_Latency.htm

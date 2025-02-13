@@ -6,7 +6,7 @@ categories: sound-programming
 author: Thomas Anda
 image: "/assets/image/2020_02_11_aleksati_thomas_pd.png"
 excerpt: "In our audio programming course we were tasked to make a PD-patch without any restrictions on what it should be. I wanted to make something useful I could incorporate in my daily practice routine, and also distribute to some of my guitar students."
-Keywords: Audio Programming, Pure Data, MCT4048
+Keywords: Audio Programming, Pure Data, SMC4048
 ---
 
 # Overview

@@ -33,16 +33,16 @@ For now, though, Screamscape has proven its worth as a unique instrument for ext
 
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2024_12_15_kristeic_screamscape.png" alt="Alternate Text" title="Image Title" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2024_12_15_kristeic_screamscape.png" alt="Alternate Text" title="Image Title" width="auto" />
    <figcaption>Full view of the Screamscape’s software interface, integrating motion input, audio processing, parameter manipulation, and preset management.</figcaption>
 </figure>
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2024_12_15_kristeic_collagemotioncapturecontroller.png" alt="Alternate Text" title="Image Title" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2024_12_15_kristeic_collagemotioncapturecontroller.png" alt="Alternate Text" title="Image Title" width="auto" />
    <figcaption>Left-hand motion capture controller of Screamscape, incorporating a BNO085 sensor, HUZZAH32 ESP32 board, and a LiPo battery for wireless operation. The device inside its casing as well as top- and downside are depicted.</figcaption>
 </figure>
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2024_12_15_kristeic_collage_micr_adapter.png" alt="Alternate Text" title="Image Title" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2024_12_15_kristeic_collage_micr_adapter.png" alt="Alternate Text" title="Image Title" width="auto" />
    <figcaption>Right-hand controller of Screamscape integrated with a microphone, featuring a thermoplast body, five SPST buttons, and a Feather M4 Express board.</figcaption>
 </figure>

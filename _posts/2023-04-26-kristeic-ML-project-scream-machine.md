@@ -15,7 +15,7 @@ So I set sail this semester to find out whether I can emulate metal vocals with 
 ## The idea and the model
 
 Let's create a machine learning model that is trained on paired input data of a clean voice and the metal vocal version of it. The trained model would then generate the metal vocal equivalent if given the clean voice as new input. 
-I decided to go with a [Variational Autoencoder](https://mct-master.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html) framework because of it's reconstruction capabilities, relatively lightweight architecture and the possibility to feed it images of spectrograms which drastically reduces training and inference time. The idea is simple: feed my clean voice into the model and define the metal vocals as target, so that the autoencoder learns to reconstruct the metal vocals from my voice. 
+I decided to go with a [Variational Autoencoder](https://SMC-master.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html) framework because of it's reconstruction capabilities, relatively lightweight architecture and the possibility to feed it images of spectrograms which drastically reduces training and inference time. The idea is simple: feed my clean voice into the model and define the metal vocals as target, so that the autoencoder learns to reconstruct the metal vocals from my voice. 
 
 ## The dataset
 
@@ -25,7 +25,7 @@ I chose to record one of my favourite albums of all times, Fear Factory's 'Soul 
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_23_kristeic_metal_sample.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_23_kristeic_metal_sample.wav" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Metal vocals from the album</figcaption>
@@ -33,7 +33,7 @@ I chose to record one of my favourite albums of all times, Fear Factory's 'Soul 
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_23_kristeic_clean_sample.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_23_kristeic_clean_sample.wav" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>My clean voice rendition of the lyrics</figcaption>

@@ -175,7 +175,7 @@ When it comes to design and interaction, the most important thing is that the us
 
 ## Challenges
 **Group challenges:**
-Our group was put together of people who did not have any previous knowledge in programming prior to joining the MCT program. This proved to be a very big challenge since we had to research the very basics of the programming syntax for us to be able to progress. Programmers talk about “Languages” when referring to the syntax that is used when writing computer programs. We had to Talk when we, in all honesty, struggled to stutter.
+Our group was put together of people who did not have any previous knowledge in programming prior to joining the SMC program. This proved to be a very big challenge since we had to research the very basics of the programming syntax for us to be able to progress. Programmers talk about “Languages” when referring to the syntax that is used when writing computer programs. We had to Talk when we, in all honesty, struggled to stutter.
 
 **Conceptualizing and deciding on the final product:**
 Our plan was always to use the Convolver, but how to actually achieve it was much discussed within our group. We first wanted to run a live audio signal into the convolver (e.g. voice), and make that affect another audio signal (e.g. guitar). We found out that it was hard, and for this prototype, we decided to use a recording of a Drum solo as the audio input that the convolver would be fed with.

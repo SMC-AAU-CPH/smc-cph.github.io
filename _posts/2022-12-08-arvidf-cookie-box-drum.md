@@ -11,7 +11,7 @@ keywords: IMS, Electronic Drums
 
 # The Cookie Box Drum
 
-The final submission of the [MCT Interactive Music Systems](https://www.uio.no/studier/emner/hf/imv/MCT4045/) course was to create our own Interactive Music System (IMS), or more specifically create some sort of instrument using the [Bela](https://bela.io/), at least three sensors and some funky [Pure data](https://puredata.info/) code to control it all.  
+The final submission of the [SMC Interactive Music Systems](https://www.uio.no/studier/emner/hf/imv/SMC4045/) course was to create our own Interactive Music System (IMS), or more specifically create some sort of instrument using the [Bela](https://bela.io/), at least three sensors and some funky [Pure data](https://puredata.info/) code to control it all.  
 
 Trying to come up with an idea for my IMS project, I envisioned a hand held electronic drum capable of playing lots of different drum sounds just by pressure control on the skin and movement of the drum.
 
@@ -54,7 +54,7 @@ I had soldered some guitar mics and pedals back in the early 00's, so I thought 
 
 Two days later, three circuit boards in the graveyard and an amount of norwegian swear words not heard since [Oddvar Brå broke his ski pole](https://youtu.be/nBr9uQG52a0?t=20)[^1] I was about to give up. Really.
 
-The MCT master program has been pretty challenging to say the least, but I've never actually considered quitting a course. But facing the challenge of soldering very small components on a tiny board almost broke me. I had to call out for help.
+The SMC master program has been pretty challenging to say the least, but I've never actually considered quitting a course. But facing the challenge of soldering very small components on a tiny board almost broke me. I had to call out for help.
 
 A former collegue of my brother had a father (I knew neither of them) that accepted a zoom call to give me some advice. His first reaction when seeing my board was "*Norwegian swearword* how did you do that? How shaky are your hands?" He was witnessing a soldering massacre.
 

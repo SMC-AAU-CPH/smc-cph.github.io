@@ -10,7 +10,7 @@ keywords: physical-computing
 ---
 
 <figure>
-<a href="https://mct-master.github.io/the/portal/2018/10/18/A-team-Arduino-and-littleBits.html">
+<a href="https://SMC-master.github.io/the/portal/2018/10/18/A-team-Arduino-and-littleBits.html">
 <img src="/assets/image/2018_10_18_stefanof_Ateam_synthRevenge.jpg" alt="Star wars and synths" width="70%" align="middle"></a>
 </figure>
 

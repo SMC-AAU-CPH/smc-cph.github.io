@@ -4,7 +4,7 @@ title:  "We Are Sitting In Rooms"
 date:   2023-12-20 2:00:00 +0200
 categories: networked-music
 author: Karenina Juarez
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_20_karenij.blogclip.png
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_20_karenij.blogclip.png
 excerpt: "Recreating the most famous piece by composer Alvin Lucier as a network music performance"
 ---
 
@@ -18,18 +18,18 @@ I have always found this piece of music particularly interesting in that it star
 
 ## Performance
 
-For our group project in our class, Networked Music Performances, I wanted to see if this piece could be translated into a telematic performance. Instead of having a solo performance I wanted to see what it would be like to have the acoustics of two rooms to see what that recording would look like . We used two rooms: the MCT Portal Room and the MCT VIdeo Room. We knew that as opposed to Alvin Lucier’s long piece of art we comparatively had a limited time to create our room frequencies.
+For our group project in our class, Networked Music Performances, I wanted to see if this piece could be translated into a telematic performance. Instead of having a solo performance I wanted to see what it would be like to have the acoustics of two rooms to see what that recording would look like . We used two rooms: the SMC Portal Room and the SMC VIdeo Room. We knew that as opposed to Alvin Lucier’s long piece of art we comparatively had a limited time to create our room frequencies.
 
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_20_karenij_siar_diagram.png?alt=original" width="60%" style="display: block; margin: auto;" />
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_20_karenij_siar_diagram.png?alt=original" width="60%" style="display: block; margin: auto;" />
 
 Because of this we decided to do a short snippet, a little melody less than 10 seconds long. We knew that this would greatly decrease the performance time as we were able to create more loops in the piece with a shorter snippet of sound. Once we figured out what we were going to sing we decided of the software we would use to create an networked performance of Lucier’s piece we finally decided that two programs we had been using in class were our best bets in making this piece a reality, Sonobus and Pure Data. We used the Sonobus software to send the sound from both computers connected to the interfaces of the singers over to one main computer that would then delay and send the other signal back to each of the rooms.
 		
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_20_karenij_siar_pd.png?alt=original" width="60%" style="display: block; margin: auto;" />
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_20_karenij_siar_pd.png?alt=original" width="60%" style="display: block; margin: auto;" />
 
 The main problem we faced was trying to control the sound so that there wouldn’t be too much feedback but also enough sound so that the loop would not deteriorate as time went by. Once we found a sweet spot in which this was possible we recorded our piece. Though slightly different in sound and nature than the original piece, this new piece illuminated a bridge between the inspiring work of Alvin Lucier and the future of telematic performances.
 
 
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2023_12_20_karenij_nmpproj.mp4?alt=original" width="60%" style="display: block; margin: auto;" />
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2023_12_20_karenij_nmpproj.mp4?alt=original" width="60%" style="display: block; margin: auto;" />
 
 
 

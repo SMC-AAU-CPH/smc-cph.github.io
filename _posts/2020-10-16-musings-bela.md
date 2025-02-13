@@ -17,7 +17,7 @@ Coming from a undergraduate degree in cognitive science, I've always wanted to w
 
 ## Artistic examples
 
-In addition to my personal interest in finding an artistic meeting point between cogsci and MCT, I was also inspired by a number of performances and musical systems that employed EEG technology.
+In addition to my personal interest in finding an artistic meeting point between cogsci and SMC, I was also inspired by a number of performances and musical systems that employed EEG technology.
 
 The first of these was [Alvin Lucier's](https://en.wikipedia.org/wiki/Alvin_Lucier) "Music for Solo Performer" (1965) which was a landmark piece not only for its use of an EEG but sonification generally. Lucier had mapped the voltage potential from his electrodes into low-frequency tones that were able to excite percussive instruments in front of him.
 
@@ -109,7 +109,7 @@ Musings with Bela takes this EEG stream and modulate the amplitude of the read t
 
 Building an IMS is a whirlwind of an experience and one that is especially difficult to achieve in two weeks. Working with hardware and software turned out to double the time I expected any individual task would take. However, I feel like I had successfully built an interesting system that touched on my history in cognitive science and applied it within this an acousmatic environment. 
 
-## Here is my short, final performance for MCT4045.
+## Here is my short, final performance for SMC4045.
 
 <figure>
     <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/gEq9EnWrApc?start=901" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

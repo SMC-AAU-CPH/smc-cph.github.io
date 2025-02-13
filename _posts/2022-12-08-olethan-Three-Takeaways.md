@@ -12,7 +12,7 @@ excerpt: "Recounting the experience of making an instrument from scratch for the
 
 What if you could design novel sounds with a flashlight and your bare hand? This is an idea I decided to pursue with my first ever DIY digital instrument. I decided  to baptize it the "Ferelumen", a word containing both FM (its sound synthesis method) and lumen (a popular measurement of light). Furthermore, it vaguely sounds like "Theremin", a well known modern instrument that initially inspired the gestural control of my instrument.
 
-Being an outsider (musicology rather than MCT master student) looking in, this course has been immensely challenging, as well as immensely rewarding. I decided to hop on this course as an extension to my research area of interest, interactive composition for video games and other virtual/reality-intersecting spaces.
+Being an outsider (musicology rather than SMC master student) looking in, this course has been immensely challenging, as well as immensely rewarding. I decided to hop on this course as an extension to my research area of interest, interactive composition for video games and other virtual/reality-intersecting spaces.
 
 Planning, designing, sketching, programming, and then actually soldering all the necessary parts into a coherent piece of equipment, is no small feat. Let alone in a few months. The amount of "real-life" programming and circuitry experience I've amassed through keeping up with this course has been worth its weight in gold.
 

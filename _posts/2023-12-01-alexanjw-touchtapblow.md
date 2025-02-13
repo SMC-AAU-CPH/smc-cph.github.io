@@ -4,7 +4,7 @@ title: "Touch/Tap/Blow - Exploring Intimate Control for Musical Expression"
 date: 2023-12-01 10:00:00 +0200
 categories: interactive-music
 author: Alexander Wastnidge
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01-alexanjw_ttbfront.jpg?alt=original
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01-alexanjw_ttbfront.jpg?alt=original
 excerpt: 
 keywords: interactive music systems, musical expression, touch capacitance, pressure sensor, embodied rhythm, buchla synthesis
 ---
@@ -12,7 +12,7 @@ keywords: interactive music systems, musical expression, touch capacitance, pres
 Touch/Tap/Blow is, as its name suggests, an interactive music system which aims to combine three forms of intimate control over a digital musical instrument.  Notes and chords can be played via the touch interface while bass accompaniment can be driven by the player's foot tapping. Below are the details of it's main elements.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_alexanjw_ttb-2.jpg?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_alexanjw_ttb-2.jpg?alt=original"
   height="400"
   width="400">
   <figcaption>
@@ -29,7 +29,7 @@ Firstly, there is a touch interface for note input and pressure sensitivity.  Th
   Underneath the touch strips are four force sensitive resistors to capture pressure.  These have been hand-made using conductive tape and semi-conductive foam as detailed [here](http://iainmccurdy.org/diy/forcesensorfoam/forcesensorfoam.html)
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_alexanjw_ttbtouchstrips.jpg?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_alexanjw_ttbtouchstrips.jpg?alt=original"
   height="400"
   width="250">
   <figcaption>
@@ -46,7 +46,7 @@ At the player's feet is a foot tap block with a piezo pickup.  With this, the pl
 Finally, in front of the player is the microphone which acts as a breath sensor.  This controls the frequency of the modulation oscillators for amplitude modulation as well as being combined with the force sensors for modulation amount.  
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01-alexanjw_ttbfront.jpg?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01-alexanjw_ttbfront.jpg?alt=original"
   height="400"
   width="450">
   <figcaption>
@@ -61,7 +61,7 @@ In his [Principals for Designing Computer Music Controllers](https://arxiv.org/p
 This is a flow diagram illustrating the signal flow between sensors and sound engine.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_08_alexanjw_ttbsignalflow.png?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_08_alexanjw_ttbsignalflow.png?alt=original"
   height="400"
   width="500">
   <figcaption>

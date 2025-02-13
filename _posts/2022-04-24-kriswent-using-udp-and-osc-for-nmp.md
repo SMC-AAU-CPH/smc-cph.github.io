@@ -11,10 +11,10 @@ excerpt: "Taking advantage of light-weight control messages to do Networked Musi
 
 <!-- Alternative title: "Give and take control!" -->
 
-As MCT students, we have been exposed to Networked Music Performances ([NMP](https://en.wikipedia.org/wiki/Networked_music_performance)) – both in theory by reading up on the technology and research in the field, and in practice by arranging our own NMP concerts. We've been introduced to different approaches in coping with latency issues introduced when playing together in real-time by sending raw audio between each location. Are there other ways to perform music together over the internet which are not as demanding in regards to bandwidth and latency? We've looked into using lightweight control messages to create and manipulate music together. This can be done in an interactive, interdependent setting where each participant is creating music locally while influencing the music-creation process of the other(s). It can also be a setting where some participants are _manipulators_ and others are _creators_, where the manipulators influence the outcome of the creators. In this tutorial, we will introduce and explain three simple, network-based musical examples using UDP messages through network connections and with the OSC protocol.
+As SMC students, we have been exposed to Networked Music Performances ([NMP](https://en.wikipedia.org/wiki/Networked_music_performance)) – both in theory by reading up on the technology and research in the field, and in practice by arranging our own NMP concerts. We've been introduced to different approaches in coping with latency issues introduced when playing together in real-time by sending raw audio between each location. Are there other ways to perform music together over the internet which are not as demanding in regards to bandwidth and latency? We've looked into using lightweight control messages to create and manipulate music together. This can be done in an interactive, interdependent setting where each participant is creating music locally while influencing the music-creation process of the other(s). It can also be a setting where some participants are _manipulators_ and others are _creators_, where the manipulators influence the outcome of the creators. In this tutorial, we will introduce and explain three simple, network-based musical examples using UDP messages through network connections and with the OSC protocol.
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_04_05_kriswent_controlled_environment.jpeg" alt="Controlled Environment" title="" width="80%" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_04_05_kriswent_controlled_environment.jpeg" alt="Controlled Environment" title="" width="80%" />
    <figcaption><i>Photo: Yasin Hasan</i></figcaption>
 </figure>
 
@@ -43,7 +43,7 @@ The good thing is that this setup only needs to be done on the receiver's end, d
 
 ## Example #2: BespokeSynth
 
-Let’s show an [example](https://youtu.be/AYnd_vlNUxY?t=378) of a one-way NMP using [BespokeSynth](https://www.bespokesynth.com/) where Joseph is located at the MCT campus in Oslo, manipulating the music creation process of Kristian residing in Nittedal. We are using the modules ‘oscoutput’ to send, and ‘osccontroller’ to receive messages.
+Let’s show an [example](https://youtu.be/AYnd_vlNUxY?t=378) of a one-way NMP using [BespokeSynth](https://www.bespokesynth.com/) where Joseph is located at the SMC campus in Oslo, manipulating the music creation process of Kristian residing in Nittedal. We are using the modules ‘oscoutput’ to send, and ‘osccontroller’ to receive messages.
 
 ### Adding layers of complexity
 

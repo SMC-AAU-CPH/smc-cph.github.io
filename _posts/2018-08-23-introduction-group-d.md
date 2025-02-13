@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Meet MCT Group D 2018"
+title:  "Meet SMC Group D 2018"
 date:   2018-08-23 11:23:00 +0200
 categories: people
 author: Shreejay Shrestha, Eirik Dahl, Guy Sion, Armando Gonzalez Sosto

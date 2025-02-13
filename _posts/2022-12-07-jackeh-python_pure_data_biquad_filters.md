@@ -98,7 +98,7 @@ The audio files and spectrograms below demonstrate how both filtering methods pr
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_07_jackeh_sample_audio_unfiltered.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_07_jackeh_sample_audio_unfiltered.wav" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>The audio sample before filtering.</figcaption>
@@ -111,7 +111,7 @@ The audio files and spectrograms below demonstrate how both filtering methods pr
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_07_jackeh_sample_audio_filtered_python.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_07_jackeh_sample_audio_filtered_python.wav" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>The audio sample filtered using SciPy Signal.</figcaption>
@@ -124,7 +124,7 @@ The audio files and spectrograms below demonstrate how both filtering methods pr
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_07_jackeh_sample_audio_filtered_pd.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_07_jackeh_sample_audio_filtered_pd.wav" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>The audio sample filtered by the same filter recreated in Pure Data.</figcaption>

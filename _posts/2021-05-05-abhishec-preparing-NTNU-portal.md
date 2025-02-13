@@ -12,7 +12,7 @@ excerpt: "How the NTNU Portal was setup for the spring concert."
 
 ### Overview:
 
-Experiencing portal concert last semester in fall 2020 over Jamulus and a bit of JamKazam, It was time to organize and play music physically in the portal using the best of the low latency audio-video communications we have to learn and improve upon in the MCT: LoLa, Tico and Zoom. The uneven distribution of people, 3 folks at NTNU and 8 at UiO, meant, we at the NTNU side had a lot of roles to play, but this also meant most of the processing was done on the UiO side, and we just had to send the best-polished signals towards UiO. The result was a fun and enriching experience for all of us. Here's a picture of how portal looked before we started reorganizing everything for the concert.
+Experiencing portal concert last semester in fall 2020 over Jamulus and a bit of JamKazam, It was time to organize and play music physically in the portal using the best of the low latency audio-video communications we have to learn and improve upon in the SMC: LoLa, Tico and Zoom. The uneven distribution of people, 3 folks at NTNU and 8 at UiO, meant, we at the NTNU side had a lot of roles to play, but this also meant most of the processing was done on the UiO side, and we just had to send the best-polished signals towards UiO. The result was a fun and enriching experience for all of us. Here's a picture of how portal looked before we started reorganizing everything for the concert.
 
 
 <figure style="float: auto">

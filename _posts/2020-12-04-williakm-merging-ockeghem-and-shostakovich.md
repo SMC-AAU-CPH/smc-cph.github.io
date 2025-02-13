@@ -9,7 +9,7 @@ keywords: slicing, segments, python
 excerpt: "Taking beautiful music and making it less so."
 ---
 ## The Task
-After several weeks of learning the basics of Python in the Scientific Computing module of MCT4000, the reckoning finally arrived: the final exam.
+After several weeks of learning the basics of Python in the Scientific Computing module of SMC4000, the reckoning finally arrived: the final exam.
 
 *The mission, should you choose to accept it (and you better):*
 Combine and reorganize segments of audio from two distinct audio files in an order dictated by a specific trait. Here’s how it went for me.

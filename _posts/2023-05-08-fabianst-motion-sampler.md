@@ -64,5 +64,5 @@ The final module was a spectral freeze effect. This effect takes a snapshot of t
 This is how the final patch looks. If you're interesed in trying it out it's available on my [Github page](https://github.com/FabianStord/Motion-Sampler) I've included a README which throughly explains all functions and how they're used.
 
 <figure style="text-align: center;">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_05_08_fabianst_sampler.png?alt=original" alt="Alternate Text" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_05_08_fabianst_sampler.png?alt=original" alt="Alternate Text" width="auto" />
 </figure>

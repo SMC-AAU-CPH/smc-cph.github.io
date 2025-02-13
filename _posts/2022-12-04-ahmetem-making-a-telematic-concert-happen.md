@@ -15,7 +15,7 @@ keywords: telematic music, portal, concert, lola, network
    <figcaption>A Telematic Experience</figcaption>
 </figure>
 
-When it comes to telematic performances, there is always some technical processes in the bakcground, and a bunch of people taking care of all. This blog post is a brief technical overview of the 2022 fall mid-semester telematic concert performed by MCT students between two locations, _Salen_ and _Portal_ at UiO.
+When it comes to telematic performances, there is always some technical processes in the bakcground, and a bunch of people taking care of all. This blog post is a brief technical overview of the 2022 fall mid-semester telematic concert performed by SMC students between two locations, _Salen_ and _Portal_ at UiO.
 
 # Getting Ready
 
@@ -37,7 +37,7 @@ Video connection between two places was made using the [LoLa software](https://l
 
 ## Live Streaming the Concert on YouTube
 
-We live-streamed the whole concert from Salen on MCT's YouTube channel. We used the cameras and the streaming station in Salen. We had scheduled the concert beforehand and our stream reached around 387 people online. The recording can be seen [here](https://www.youtube.com/watch?v=IGkU3uVhr88).
+We live-streamed the whole concert from Salen on SMC's YouTube channel. We used the cameras and the streaming station in Salen. We had scheduled the concert beforehand and our stream reached around 387 people online. The recording can be seen [here](https://www.youtube.com/watch?v=IGkU3uVhr88).
 
 <figure>
    <img
@@ -52,10 +52,10 @@ Making our first telematic concert happen was a great experience. We are very pl
 
 # Please See Also
 
-- [2022 Fall Mid Semester Telematic Concert Salen and Portal Documentation (Technical)](https://github.com/MCT-master/portal-wiki/wiki/2022-Fall-Mid-Semester-Telematic-Concert-Salen-and-Portal-Documentation-(Technical))
+- [2022 Fall Mid Semester Telematic Concert Salen and Portal Documentation (Technical)](https://github.com/SMC-master/portal-wiki/wiki/2022-Fall-Mid-Semester-Telematic-Concert-Salen-and-Portal-Documentation-(Technical))
 
-- [2022 Fall Mid Semester Telematic Concert Salen and Portal Documentation (Performance)](https://github.com/MCT-master/portal-wiki/wiki/2022-Fall-Mid-Semester-Telematic-Concert-Salen-and-Portal-Documentation-(Performance))
+- [2022 Fall Mid Semester Telematic Concert Salen and Portal Documentation (Performance)](https://github.com/SMC-master/portal-wiki/wiki/2022-Fall-Mid-Semester-Telematic-Concert-Salen-and-Portal-Documentation-(Performance))
 
-- [2022 Fall End Semester Telematic Concert RITMO and Science Library Documentation (Technical)](https://github.com/MCT-master/portal-wiki/wiki/2022-Fall-End-Semester-Telematic-Concert-RITMO-and-Science-Library-Documentation-(Technical))
+- [2022 Fall End Semester Telematic Concert RITMO and Science Library Documentation (Technical)](https://github.com/SMC-master/portal-wiki/wiki/2022-Fall-End-Semester-Telematic-Concert-RITMO-and-Science-Library-Documentation-(Technical))
 
-- [2022 Fall End Semester Telematic Concert RITMO and Science Library Documentation (Performance)](https://github.com/MCT-master/portal-wiki/wiki/2022-Fall-End-Semester-Telematic-Concert-RITMO-and-Science-Library-Documentation-(Performance))
+- [2022 Fall End Semester Telematic Concert RITMO and Science Library Documentation (Performance)](https://github.com/SMC-master/portal-wiki/wiki/2022-Fall-End-Semester-Telematic-Concert-RITMO-and-Science-Library-Documentation-(Performance))

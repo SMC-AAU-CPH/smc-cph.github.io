@@ -13,7 +13,7 @@
 # Created by Stefano Fasciani on 13 July 2022
 # Last modified by Stefano Fasciani on 18 July 2022
 
-echo "MCT Blog Pre Commit Check ..."
+echo "SMC Blog Pre Commit Check ..."
 
 exec 1>&2
 

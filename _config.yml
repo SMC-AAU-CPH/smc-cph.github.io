@@ -14,23 +14,23 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The MCT Blog
-email: mct-info@imv.uio.no
+title: The SMC Blog
+email: SMC-info@imv.uio.no
 description: >- # this means to ignore newlines until "baseurl:"
-  The student-led blog of the University of Oslo (UiO) international master's programme in Music, Communication & Technology (MCT)
+  The student-led blog of the University of Oslo (UiO) international master's programme in Music, Communication & Technology (SMC)
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mct-master.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/image/2022_07_20_stefanof_MCT_logo_grey.png"
-twitter_username: MCT_master
-github_username: MCT-master
-youtube_username: MCTmaster # hacked the social.html imported from minima 2.5.1 to override problem with channel URL
+url: "https://SMC-master.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"
+twitter_username: SMC_master
+github_username: SMC-master
+youtube_username: SMCmaster # hacked the social.html imported from minima 2.5.1 to override problem with channel URL
 rss: RSS feed
 
 # Comments
 comments:
   provider: disqus
 disqus:
-  shortname: https-mct-master-github-io
+  shortname: https-SMC-master-github-io
 
 # Build settings
 markdown: kramdown

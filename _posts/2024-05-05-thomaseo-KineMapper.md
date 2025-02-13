@@ -44,7 +44,7 @@ OSC (Open Sound Control) is a protocol for sending messages between computers an
 * MIDI sends integers between 0 and 127 whereas OSC can send many different types of message, including strings of text, integers and 32-bit floating point values.
 * MIDI messages are labelled in a fixed way but labelling of OSC messages is much more flexible.
 
-For a more in depth overview of OSC, check out [this](https://mct-master.github.io/networked-music/2024/03/17/thomaseo-intro_to_OSC.html) blog post.
+For a more in depth overview of OSC, check out [this](https://SMC-master.github.io/networked-music/2024/03/17/thomaseo-intro_to_OSC.html) blog post.
 <br>
 
 ### How to connect devices

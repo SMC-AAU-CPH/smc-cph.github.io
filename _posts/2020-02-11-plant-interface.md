@@ -4,7 +4,7 @@ title: "Sonification of plants through Pure Data"
 date: 2020-02-11 22:10:42 +0100
 categories: sound-programming
 author: Gaute Wardenær
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_02_11_gtwarden_patch_2.png
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_gtwarden_patch_2.png
 excerpt: "I am not sure if I am going crazy or if I am actually interacting with plants, but here me out here"
 ---
 
@@ -82,14 +82,14 @@ I guess that the act of bringing a live plant as as the interface for my instrum
 
 
 <figure>
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_02_11_gtwarden_performance.jpg" width="80%" height="80%" align="center" frameborder="0" allowfullscreen="true" alt="Mesmerising GUI"></img>
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_gtwarden_performance.jpg" width="80%" height="80%" align="center" frameborder="0" allowfullscreen="true" alt="Mesmerising GUI"></img>
 <figcaption>Photo credit to the great Thomas Anda</figcaption>
 </figure>
 
 
 ## Reflections on the process of learning Pure Data
 
-Although I had experience in PD from earlier projects done here at MCT and some knowledge of MAX MSP from my bachelor's degree, the last two weeks has been a quantum leap when it comes to learning the software. 
+Although I had experience in PD from earlier projects done here at SMC and some knowledge of MAX MSP from my bachelor's degree, the last two weeks has been a quantum leap when it comes to learning the software. 
 
 I quickly adopted the process of figuring out where I wanted to go with the idea and then making a patch for it, not the other way around. Having creativity drive innovation has been my preferred way of thinking ever since I in 4th grade refused to learn to do division on paper until the teacher presented me with a real life situations where I had to and this was no exception. 
 

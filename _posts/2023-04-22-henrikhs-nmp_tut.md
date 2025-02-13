@@ -33,10 +33,10 @@ Cable management is important for maintaining the kit during use. Fold the cable
 #### NMP Kit Tutorial - Getting Started
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2023_04_22_henrikhs_nmp_tut.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2023_04_22_henrikhs_nmp_tut.mp4" type='video/mp4'>
   </video>
 </figure>
 
-For more and detailed information, please see the [NMP Wiki](https://github.com/MCT-master/NMP-Portable-Kits/wiki).
+For more and detailed information, please see the [NMP Wiki](https://github.com/SMC-master/NMP-Portable-Kits/wiki).
 
 Thank you.

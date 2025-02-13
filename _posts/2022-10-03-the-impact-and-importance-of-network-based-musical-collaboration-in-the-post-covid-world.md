@@ -5,7 +5,7 @@ date: 2022-10-03
 categories: networked-music
 author: Iosif Aragiannis
 image: /assets/image/2022_10_03_telematic_concert.jpg
-keywords: MCT, musical collaboration, networked music performance software, LoLa, JamKazam, Jamulus, live music
+keywords: SMC, musical collaboration, networked music performance software, LoLa, JamKazam, Jamulus, live music
 excerpt: The Covid-19 pandemic offered a unique opportunity (and necessity) to focus on the creative usage (and further development) of the technological tools used for network-based musical collaboration.
 ---
 

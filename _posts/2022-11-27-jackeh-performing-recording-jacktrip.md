@@ -11,11 +11,11 @@ excerpt: "Performing and recording network music at home? Thanks to JackTrip, no
 
 ## What is a Network Musical Performance?
 
-A network musical performance or NMP is a musical performance that happens over a network, be it a private network or a public one like the internet. In MCT we spend a lot of time experimenting with various software for performing and rehearsing network music. Two of our most used solutions are LOLA and JackTrip. First let's briefly compare them, and then we will dive deeper into JackTrip.
+A network musical performance or NMP is a musical performance that happens over a network, be it a private network or a public one like the internet. In SMC we spend a lot of time experimenting with various software for performing and rehearsing network music. Two of our most used solutions are LOLA and JackTrip. First let's briefly compare them, and then we will dive deeper into JackTrip.
 
 ## LOLA and JackTrip
 
-In MCT we most commonly use [LOLA](https://lola.conts.it/) for our network performances. The advantages of LOLA are many – with an ideal network, such as the LOLA network we use at UiO, we can stream uncompressed audio and video between two to three locations. This is just what we need for these concerts in which high production values are essential.
+In SMC we most commonly use [LOLA](https://lola.conts.it/) for our network performances. The advantages of LOLA are many – with an ideal network, such as the LOLA network we use at UiO, we can stream uncompressed audio and video between two to three locations. This is just what we need for these concerts in which high production values are essential.
 
 However, LOLA requires specific cameras and audio interfaces as well as powerful PCs to perform optimally, meaning it is mostly limited to performance scenarios over a dedicated network. What if we want to rehearse a larger ensemble across the internet on the go? What if we can do without low-latency video? Step forward [JackTrip](https://www.jacktrip.org/).
 
@@ -40,7 +40,7 @@ Take a look at this JackTrip performance featuring almost 100 performers:
 
 We can take advantage of internal audio routing within our laptops to record high-quality audio received over the network into a DAW. In Windows, JackTrip provides a handy utility called JackRouter, a virtual audio device which we can use to send and receive audio between the JackTrip and a DAW. It appears as a send and receive location in the JackTrip patch bay, at which point one can simply send channels to it to receive them in a DAW using JackRouter as its audio device.
 
-In our own testing with JackTrip in MCT4024, my fellow MCT student Kristian and I recorded two channels, one local and one from the network, while also sending out a drum track for us over which we would both improvise. We routed my microphone connected via XLR into an audio interface and Kristian’s synth received over the network into JackTrip and out into Ableton via the JackRouter receive patch point. There I recorded both of our instruments directly to Ableton audio tracks. Both of these received channels plus the pre-recorded drum machine track were then all routed back into JackTrip through the JackRouter receive. This allowed us to monitor ourselves and the drums with negligible latency, while also recording the whole session.
+In our own testing with JackTrip in SMC4024, my fellow SMC student Kristian and I recorded two channels, one local and one from the network, while also sending out a drum track for us over which we would both improvise. We routed my microphone connected via XLR into an audio interface and Kristian’s synth received over the network into JackTrip and out into Ableton via the JackRouter receive patch point. There I recorded both of our instruments directly to Ableton audio tracks. Both of these received channels plus the pre-recorded drum machine track were then all routed back into JackTrip through the JackRouter receive. This allowed us to monitor ourselves and the drums with negligible latency, while also recording the whole session.
 
 <figure style="float: none">
    <img src="/assets/image/2022_11_28_jackeh_jacktrip_routing_diagram.png"/>
@@ -51,7 +51,7 @@ See the result of our experiment in the video below:
 
 <figure style="float: none">
   <video width="75%" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_11_28_jackeh_jacktrip_recording_demo.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_28_jackeh_jacktrip_recording_demo.mp4" type='video/mp4'>
   </video>
   <figcaption>JackTrip performance over the LOLA network</figcaption>
 </figure>

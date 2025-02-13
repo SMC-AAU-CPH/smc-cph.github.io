@@ -19,9 +19,9 @@ keywords: Portal, Concert, Telematic, LoLa
 
 ## **Introduction**
 
-The annual Christmas concert of the first year [MCT](https://www.uio.no/english/studies/programmes/mct-master/) students has become a tradition at the Oslo campus, and this year it was our time to mark the start of the holidays with a telematic performance. We decided on the theme “A [Granjular](https://www.izotope.com/en/learn/the-basics-of-granular-synthesis.html) Christmas Performance”, which for the non-Norwegian speaking audience is a pun on the words “gran” (spruce, aka christmas tree) and “jul” (Christmas). In this post we will try our best to describe how we went about it, both technically and musically.
+The annual Christmas concert of the first year [SMC](https://www.uio.no/english/studies/programmes/SMC-master/) students has become a tradition at the Oslo campus, and this year it was our time to mark the start of the holidays with a telematic performance. We decided on the theme “A [Granjular](https://www.izotope.com/en/learn/the-basics-of-granular-synthesis.html) Christmas Performance”, which for the non-Norwegian speaking audience is a pun on the words “gran” (spruce, aka christmas tree) and “jul” (Christmas). In this post we will try our best to describe how we went about it, both technically and musically.
 
-The concert took place at two separate locations at [IMV](https://www.hf.uio.no/imv/english/) (Institute of Musicology) on December 3rd, 2021. Our team was based in our much beloved [Portal](https://www.hf.uio.no/imv/english/about/rooms-and-equipment/mct-portal/), while the other team and audience were situated in [Salen](https://www.hf.uio.no/imv/english/about/rooms-and-equipment/salen/index.html), an auditorium in the basement of IMV.
+The concert took place at two separate locations at [IMV](https://www.hf.uio.no/imv/english/) (Institute of Musicology) on December 3rd, 2021. Our team was based in our much beloved [Portal](https://www.hf.uio.no/imv/english/about/rooms-and-equipment/SMC-portal/), while the other team and audience were situated in [Salen](https://www.hf.uio.no/imv/english/about/rooms-and-equipment/salen/index.html), an auditorium in the basement of IMV.
 
 ## **What is telematic music and LoLa?**
 
@@ -43,15 +43,15 @@ Musically, the four performers (two in the Portal, two in Salen) planned for an 
 ## **Technical setup**
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_12_07_josephcl_portal_concert_flowchart.png" alt="Alternate Text" title="Image Title" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_12_07_josephcl_portal_concert_flowchart.png" alt="Alternate Text" title="Image Title" width="auto" />
    <figcaption>Block diagram of technical setup</figcaption>
 </figure>
 
-The LoLa rack is a recent creation by MCT, providing an all-in-one, portable setup for low latency telematic performance. For this concert, two LoLa racks were connected to each other: one from the MCT portal (LOLA4) and one from Salen downstairs (LOLA3). Both audio and video were passed through the LoLa program, and routed as seen in the diagram above. The portal performers were positioned in a way where they could easily see the downstairs performers through a monitor at any time, as shown in the pictures below. For a more detailed explanation of our setup and the performer’s rig, please visit our [wiki page](https://github.com/MCT-master/portal-wiki/wiki/Portal-Telematic-Concert-Guide).
+The LoLa rack is a recent creation by SMC, providing an all-in-one, portable setup for low latency telematic performance. For this concert, two LoLa racks were connected to each other: one from the SMC portal (LOLA4) and one from Salen downstairs (LOLA3). Both audio and video were passed through the LoLa program, and routed as seen in the diagram above. The portal performers were positioned in a way where they could easily see the downstairs performers through a monitor at any time, as shown in the pictures below. For a more detailed explanation of our setup and the performer’s rig, please visit our [wiki page](https://github.com/SMC-master/portal-wiki/wiki/Portal-Telematic-Concert-Guide).
 
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_12_09_josephcl_monitor_setup.jpeg" alt="Alternate Text" title="Image Title" width="75%" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_12_09_josephcl_monitor_setup.jpeg" alt="Alternate Text" title="Image Title" width="75%" />
    <figcaption>Monitor facing the performers</figcaption>
 </figure>
 

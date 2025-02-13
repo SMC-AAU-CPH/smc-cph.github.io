@@ -5,11 +5,11 @@ date: 2022-05-27 08:00:00 +0200
 categories: networked-music
 author: Jakob Høydal, Joachim Poutaraud, Joseph Clemente, Kristian Wentzel
 image: /assets/image/2022_06_01_jakobhoydal_thumbnail1.jpg
-excerpt: "In which we go over the most ambitious telematic concert of our MCT careers."
+excerpt: "In which we go over the most ambitious telematic concert of our SMC careers."
 keywords: Telematic, Machine Learning, Network
 ---
 
-After one year at the MCT master program, we finally went out into the masses to arrange a location, away from familiar locations. This time, we arranged a concert between the [science library](https://www.ub.uio.no/bibliotekene/mednat/ureal/) at Vilhelm Bjerknes hus, and the MCT Portal at ZEB. In terms of audiovisual setup, we still used the same [NMP-kits](https://github.com/MCT-master/NMP-Portable-Kits) as before, but at this concert we devided it into two section: one that was a traditional telematic concert with gestural interplay, and one with instruments created for the audience to interact with. This post is about the methods and techniques we used to create the Vilhelm Bjerknes side of the concert.
+After one year at the SMC master program, we finally went out into the masses to arrange a location, away from familiar locations. This time, we arranged a concert between the [science library](https://www.ub.uio.no/bibliotekene/mednat/ureal/) at Vilhelm Bjerknes hus, and the SMC Portal at ZEB. In terms of audiovisual setup, we still used the same [NMP-kits](https://github.com/SMC-master/NMP-Portable-Kits) as before, but at this concert we devided it into two section: one that was a traditional telematic concert with gestural interplay, and one with instruments created for the audience to interact with. This post is about the methods and techniques we used to create the Vilhelm Bjerknes side of the concert.
 
 <figure style="float: none">
    <iframe
@@ -26,7 +26,7 @@ After one year at the MCT master program, we finally went out into the masses to
 
 ## **Telematic Gestural Interplay**
 
-Our first part of the concert was a performance by Joseph Clemente, Arvid Falch and Kristian Wentzel. This performance centered around the idea of a telematic interplay where gestures at one site manipulate the audio coming from the other site. At the Science Library, Kristian used a Myo armband controlling a [ZOIA](https://empresseffects.com/products/zoia) modular system to process and manipulate Arvids electric guitar playing from the Portal. What is a Myo armband? It is an inertial measurement unit (IMU) with gyroscope and accelerometer sensors, which also sports eight electromyography (EMG) sensors. This handy device is also capable of recognizing five different hand gestures out of the box. For a more in-depth look at Kristians setup, take a look at his other [blog post](https://mct-master.github.io/portal/2022/05/20/kriswent-extending-the-keyboard-through-motion-capture-and-modular-synthesis.html).
+Our first part of the concert was a performance by Joseph Clemente, Arvid Falch and Kristian Wentzel. This performance centered around the idea of a telematic interplay where gestures at one site manipulate the audio coming from the other site. At the Science Library, Kristian used a Myo armband controlling a [ZOIA](https://empresseffects.com/products/zoia) modular system to process and manipulate Arvids electric guitar playing from the Portal. What is a Myo armband? It is an inertial measurement unit (IMU) with gyroscope and accelerometer sensors, which also sports eight electromyography (EMG) sensors. This handy device is also capable of recognizing five different hand gestures out of the box. For a more in-depth look at Kristians setup, take a look at his other [blog post](https://SMC-master.github.io/portal/2022/05/20/kriswent-extending-the-keyboard-through-motion-capture-and-modular-synthesis.html).
 
 To make a performance out of our concept, we added Joseph with a [Roland SPD-SX sampling pad](https://www.roland.com/global/products/spd-sx/) at the science library, and put a keyboard in front of Kristian as well. Our feature was an improvised piece, with some agreed guidelines. Our performance was made up of four sections, where one section seamlessly flowed into the next. We decided that Kristian should start the performance with a solo piece on an extended keyboard instrument using his setup. After some time, Arvid would join in for a duo performance where Kristian manipulated Arvid. In the third section we expanded into a trio, introducing Joseph on the drum pads. For the fourth section, we added more prominent and coherent grooves with a beat to the mix before finishing off.
 
@@ -64,4 +64,4 @@ As a quick note, with the threat of COVID finally becoming more of a distant mem
 
 ## **Additional Information**
 
-For more information on the technical details of this concert, visit our [wiki page](https://github.com/MCT-master/portal-wiki/wiki/End-semester-Concert-Spring-2022-Between-MCT-Portal-and-Science-Library).
+For more information on the technical details of this concert, visit our [wiki page](https://github.com/SMC-master/portal-wiki/wiki/End-semester-Concert-Spring-2022-Between-SMC-Portal-and-Science-Library).

@@ -14,13 +14,13 @@ excerpt: "An electronic music performance in an audio-visual digital environment
 Firstly, I want to encourage you to watch the performance related with this project before diving into the details of what is actually happening behind this audio-visual experience. You will find a video below.
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2020_10_16_pedropl_phyco_performance.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_16_pedropl_phyco_performance.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
    <figcaption>The Performance</figcaption>
 </figure>
 
 ## The Concept
 
-This project is the result of the task required for the Physical Computing module at MCT4000 course: "Shape an **interactive system** and present it as a short **musical performance**". Considering this description, I though firstly in a technological solution to support such application before the actual performance.
+This project is the result of the task required for the Physical Computing module at SMC4000 course: "Shape an **interactive system** and present it as a short **musical performance**". Considering this description, I though firstly in a technological solution to support such application before the actual performance.
 
 I have experience in game development and multimedia systems by using the [Unity](https://unity.com/) game engine. A widely used platform for interactive systems, mainly intended for game development but not limited to it. So I proposed to implement two applications, a mobile controller for an Android device, and a PC application (in my laptop) that receives the data from that controller and generates synchronized sounds and visuals.
 

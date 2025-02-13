@@ -6,7 +6,7 @@ categories: motion-capture
 author: Ulrik Halmøy
 image: /assets/image/2020_05_21_ulrikah_tsne_cover.jpg
 excerpt: "A system for interactive exploration of sound clusters with phone sensors"
-Keywords: MCT, motion tracking, machine learning, Max
+Keywords: SMC, motion tracking, machine learning, Max
 ---
 
 ## Idea
@@ -37,14 +37,14 @@ Extracting position from the phone sensors (by double integration of the acceler
     <figcaption>Virtual model with the controller in the middle</figcaption>
 </figure>
 
-To trigger the samples, I used the jerk value from the accelerometer sensor. Jerk is the rate of change of acceleration, and can be derived in both x, y and z axis. By performing an abrupt movement that causes a jerk value over a certain threshold in any of the axis, the user triggers the sample to which the controller (see the orange blob in the figure) is closest to. Intuitively, this is similar to a typical percussive instrument, where the musician hits a surface to make sound. This method of triggering samples was inspired by [last year's motion tracking project](https://mct-master.github.io/motion-capture/2019/04/24/How-music-related-motion-capture-can-sound.html). The jerk threshold was set by trial and error.
+To trigger the samples, I used the jerk value from the accelerometer sensor. Jerk is the rate of change of acceleration, and can be derived in both x, y and z axis. By performing an abrupt movement that causes a jerk value over a certain threshold in any of the axis, the user triggers the sample to which the controller (see the orange blob in the figure) is closest to. Intuitively, this is similar to a typical percussive instrument, where the musician hits a surface to make sound. This method of triggering samples was inspired by [last year's motion tracking project](https://SMC-master.github.io/motion-capture/2019/04/24/How-music-related-motion-capture-can-sound.html). The jerk threshold was set by trial and error.
 
 To determine which sample to trigger, I picked the sample with the lowest euclidian distance to the controller object.
 
 To avoid that successive jerk values triggers the same sample too frequently, I also added a cooldown of 200 ms between each sample trigger.
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_05_21_ulrikah_tsne_jerk.gif" width="auto" height="auto"/>
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_21_ulrikah_tsne_jerk.gif" width="auto" height="auto"/>
    <figcaption>Jerk movement</figcaption>
 </figure>
 

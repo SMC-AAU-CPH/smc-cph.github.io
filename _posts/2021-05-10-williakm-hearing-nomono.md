@@ -46,7 +46,7 @@ The **earthBound** logo employs tactile, natural sounds and acoustic instruments
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_05_11_williakm_earthboundsoundlogo.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_05_11_williakm_earthboundsoundlogo.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>earthBound sound logo</figcaption>
@@ -56,7 +56,7 @@ Our **skySphere** logo expands the musical materials vertically through arpeggia
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_05_11_williakm_skyspheresoundlogo.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_05_11_williakm_skyspheresoundlogo.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>skySphere sound logo</figcaption>
@@ -66,7 +66,7 @@ Our **skySphere** logo expands the musical materials vertically through arpeggia
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_05_11_williakm_interstellarsoundlogo.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_05_11_williakm_interstellarsoundlogo.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>interStellar sound logo</figcaption>
@@ -79,7 +79,7 @@ Our development of the sound logos was guided by two main considerations: first,
 This library accentuates the idea of earthiness by employing a tangible and tactile approach towards developing the sounds. The feedback sounds in this library are percussive at the core, are inspired by physical things in nature, and therefore are more natural sounding (even tending occasionally toward skeuomorphism). These sounds are mostly dry (meaning they don't have any time-based audio effects like reverb, delay or echo) and they typically lie in the most sensitive hearing range of a human ear, which is from 500Hz - 4000Hz.
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_05_11_williakm_earthboundfeedbacksamples.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_05_11_williakm_earthboundfeedbacksamples.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Six examples from the earthBound library</figcaption>
@@ -90,7 +90,7 @@ This library is a bridge between earthBound and interStellar, with natural-sound
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_05_11_williakm_skyspherefeedbackexamples.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_05_11_williakm_skyspherefeedbackexamples.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Six examples from the skySphere library</figcaption>
@@ -101,7 +101,7 @@ The interStellar library was designed to bring the user/listener to an intangibl
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_05_11_williakm_interstellarfeedbackexamples.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_05_11_williakm_interstellarfeedbackexamples.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Six examples from the interStellar library</figcaption>
@@ -128,7 +128,7 @@ Since most NOMONO users will connect their products via headphones, we rendered 
 
 ## Ambisonics Field Recordings for Testing and Inclusion in Sound Logo(s)
 
-One of the products which NOMONO is working on is a web-based software that performs signal processing, noise reduction, and sibilance detection algorithms in a dialogue-based setting on ambisonic recordings. To test out their software, the MCT team were tasked with the additional deliverable of ambisonic field/test recordings.
+One of the products which NOMONO is working on is a web-based software that performs signal processing, noise reduction, and sibilance detection algorithms in a dialogue-based setting on ambisonic recordings. To test out their software, the SMC team were tasked with the additional deliverable of ambisonic field/test recordings.
 
 <figure style="float: none">
    <img src="/assets/image/2021_05_11_williakm_ambisonicFieldRecording.jpeg" alt="Recording ambisonic audio" title="" width="auto" />

@@ -60,13 +60,13 @@ The system design is pretty simple and has one to one mapping as shown below:
 Below you can watch the demo video.
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_11_02_abhishec_ims_sequencephere.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_02_abhishec_ims_sequencephere.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
    <figcaption>Demonstration</figcaption>
 </figure>
 
 ## Future aspects and Reflections
 
-This was one of most exciting course of the MCT and was really fun to design a system from scratch. Although the system that I was able to design was kind of basic but I feel I got to learn a lot in this course and is my main outcome of the course. Due to some circumstances out of my control I wasn't able to finish the project as I intended to but this again taught me about time management and some very valuable moral lessons about living in Norway. But for the future prospects I would like to make it as a one cohesive system in which there are more sensors being used to control some audio effects, a switch to restart the system, and also increase/decrease the range of synth, change the generating wave of the synth and also have more control over the buttons, in the sense of velocity and other dynamics. Overall making the system more controllable and user friendly but trying to keep it simple and straightforward, so that anybody irrespective of there knowledge about music can play and have fun with it.
+This was one of most exciting course of the SMC and was really fun to design a system from scratch. Although the system that I was able to design was kind of basic but I feel I got to learn a lot in this course and is my main outcome of the course. Due to some circumstances out of my control I wasn't able to finish the project as I intended to but this again taught me about time management and some very valuable moral lessons about living in Norway. But for the future prospects I would like to make it as a one cohesive system in which there are more sensors being used to control some audio effects, a switch to restart the system, and also increase/decrease the range of synth, change the generating wave of the synth and also have more control over the buttons, in the sense of velocity and other dynamics. Overall making the system more controllable and user friendly but trying to keep it simple and straightforward, so that anybody irrespective of there knowledge about music can play and have fun with it.
 
 
 ## References

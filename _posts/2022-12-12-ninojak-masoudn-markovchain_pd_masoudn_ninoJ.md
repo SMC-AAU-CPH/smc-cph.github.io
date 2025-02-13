@@ -4,7 +4,7 @@ title: "Markov Chain Core in PD"
 date: 2022-12-10 10:00:00 +0200
 categories: sound-programming
 author: Masoud Niknafs, Nino Jakeli
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_10_masoudn_5.jpg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_5.jpg
 keywords: PD, Algorithmic, stochastic
 excerpt: "Markov Chain Core in PD"
 ---
@@ -36,7 +36,7 @@ As a result, C5 was only followed by A4. Probabilities between 0 and 1 can be me
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_10_masoudn_probability.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_probability.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>transition matrix</figcaption>
 </figure>
@@ -53,7 +53,7 @@ Our new matrix is saved in a data object known as a coll. When you refer to a co
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_10_masoudn_1.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_1.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>markov analysis</figcaption>
 </figure>
@@ -62,7 +62,7 @@ Our new matrix is saved in a data object known as a coll. When you refer to a co
 # Inside pd pair
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_10_masoudn_2.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_2.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>This additional subpatch chunks up the notes into pairs here.</figcaption>
 </figure>
@@ -74,14 +74,14 @@ Beginning with a single note from our input melody, we use the length object to 
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_10_masoudn_3.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_3.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>.</figcaption>
    
    
    <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_10_masoudn_4.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_4.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>pitch generator</figcaption>
  </figure>  

@@ -18,7 +18,7 @@ excerpt: "What happens when music is felt instead of heard? When music is just v
 
 If I were to ask you what is the first word that comes to mind when I say __MUSIC__ ... what would the answer be? Some might say their favourite genre, band or instrument, others might say _sounds_, or even _feelings_. Most of us would agree that music conveys and makes us feel certain emotions. If music is sound, and sounds are essentially mechanical vibrations, then __would vibrations make us feel something as well__? My thesis project revolved around this question...
 
-This blogpost presents the motivation behind the study, as well as the aim, and main findings of the pilot study and the main experiment. For more detailed information about the study, please read the manuscript ([available on GitHub](https://github.com/alenaclim/mct-thesis-tactile-music)). Additional materials such as the datasets and the R-scripts can be found in the same repository.
+This blogpost presents the motivation behind the study, as well as the aim, and main findings of the pilot study and the main experiment. For more detailed information about the study, please read the manuscript ([available on GitHub](https://github.com/alenaclim/SMC-thesis-tactile-music)). Additional materials such as the datasets and the R-scripts can be found in the same repository.
 
 ## Motivation
 

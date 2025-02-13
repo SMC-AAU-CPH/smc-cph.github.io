@@ -6,7 +6,7 @@ categories: networked-music
 author: Gaute Wardenær
 image: /assets/image/2020_04_06_stefanof_zoom.jpg
 excerpt: "One thing you can do is to enable the option of 'preserve original audio' in Zoom."
-Keywords: Zoom, Jamming, Jamulus, MCT, Internet, Cake
+Keywords: Zoom, Jamming, Jamulus, SMC, Internet, Cake
 ---
 
 ## Zoom as a tool for jamming online

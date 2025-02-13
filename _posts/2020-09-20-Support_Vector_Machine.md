@@ -9,7 +9,7 @@ keywords: chicken, fun
 excerpt: "Not fun"
 ---
 
-For MCT4047, I designed a Support Vector Machine(SVM) model which can learn to separate genres. The dataset used consist of a drastically different genre such as ambient and similar genres such as liquid drum and bass and hip hop. The reason for this choice of dataset was to hopefully combine a variety of feature extractions in efficiency with the most reasonable results at the end process.
+For SMC4047, I designed a Support Vector Machine(SVM) model which can learn to separate genres. The dataset used consist of a drastically different genre such as ambient and similar genres such as liquid drum and bass and hip hop. The reason for this choice of dataset was to hopefully combine a variety of feature extractions in efficiency with the most reasonable results at the end process.
 This project revolves around music recommendation. Streaming companies such as Spotify use user history and activities to recommend music that might be of similar taste of its users (Engineering, 2020). 
 
 ## Feature Extraction

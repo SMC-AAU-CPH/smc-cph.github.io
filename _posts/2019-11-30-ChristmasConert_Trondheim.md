@@ -10,7 +10,7 @@ excerpt: "Trondheim reflects on the Christmas concert 2019"
 
 ## Setup
 
-Tuesday the 26th was set aside for the yearly Christmas concert where high school musicians from Trondheim and Oslo play together through an MCT setup. The original plan was to rig up a portable version of the Portal at the high schools. Due to the discovery of technical problems on the portable Portal setup, together with a general lack of people, it was decided to invite the high school students over instead.
+Tuesday the 26th was set aside for the yearly Christmas concert where high school musicians from Trondheim and Oslo play together through an SMC setup. The original plan was to rig up a portable version of the Portal at the high schools. Due to the discovery of technical problems on the portable Portal setup, together with a general lack of people, it was decided to invite the high school students over instead.
 
 The rest of Monday was spent on staging the Portal for a concert. This work consisted of rigging up a set of new cameras, speakers, microphones and appropriate lighting. We had to figure out how to set up the Portal so that the musicians on both sides would be able to look at each other while playing without too much effort, and that the musicians also could see the audience in Trondheim and Oslo. At the end of Monday, we were done with everything except connecting the multi-channel audio setup in Lola and mixing the instruments together. The picture below shows the state of the Portal at the end of Monday.
 
@@ -28,6 +28,6 @@ The high school students arrived two hours before the concert, in order for us t
 
 ## Reflections
 
-For next year, time should be set aside in the the Portal course during the fall to be able to ensure that the portable setup works before the same week of the Christmas concert. Also, there was some confusion regarding the placement of the concert. As it initially collided with our exam in MCT4010, several students had already left Trondheim to work with their exam from remote.
+For next year, time should be set aside in the the Portal course during the fall to be able to ensure that the portable setup works before the same week of the Christmas concert. Also, there was some confusion regarding the placement of the concert. As it initially collided with our exam in SMC4010, several students had already left Trondheim to work with their exam from remote.
 
 One suggestion to avoid both problems would be to consider the Christmas concert as the *ultimate goal* of the first semester of the Portal course. The concert could be announced as part of the evaluation of the Portal course. In my opinion, the concert was not discussed sufficiently during the workshops and Portal meetings along the semester. The focus of the Portal workshops during the semester could be on the Christmas concert, so that all the students already were familiar with the technology beforehand.

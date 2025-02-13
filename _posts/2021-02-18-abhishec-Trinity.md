@@ -108,12 +108,12 @@ The architecture of the program was to restrict the effects from being rearrange
 
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_02_19_lindsay_trintiy_audioprogramming_demo.mp4" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_02_19_lindsay_trintiy_audioprogramming_demo.mp4" width="640" height="360" frameborder="0" allowfullscreen></iframe>
    <figcaption>Trinity_Demo</figcaption>
 </figure>
 
 
-**Download Trinity here** [Trinity](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/other/2021_02_19_lindsay_trinity_v1.zip)
+**Download Trinity here** [Trinity](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/other/2021_02_19_lindsay_trinity_v1.zip)
 
 ## FINAL THOUGHTS: REFLECTIONS
 

@@ -55,7 +55,7 @@ Ideally, Shimmerion should be played in a dark or at least dimly lit room, with 
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_12_09_iosifaragiannis_shimmerion_performance.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_12_09_iosifaragiannis_shimmerion_performance.mp4" type='video/mp4'>
   </video>
   <figcaption>Shimmerion Performance</figcaption>
 </figure>

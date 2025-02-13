@@ -4,12 +4,12 @@ title:  "The Sounds We Like"
 date:   2019-01-23 23:25:00 +0200
 categories: sonification
 author: Guy Sion
-image: /assets/image/2018_08_01_stefanof_mct-master-630.jpg
-excerpt: "For our first lesson in the Sonification and Sound Design course, we were asked to give a short presentation of a sonification or a sound design of choice. It was interesting to see the variety of examples among our classmates. Each of us brought a unique example and explained what is it about? why did they choose it? and how does it relate to our work at the MCT program?"
+image: /assets/image/2018_08_01_stefanof_SMC-master-630.jpg
+excerpt: "For our first lesson in the Sonification and Sound Design course, we were asked to give a short presentation of a sonification or a sound design of choice. It was interesting to see the variety of examples among our classmates. Each of us brought a unique example and explained what is it about? why did they choose it? and how does it relate to our work at the SMC program?"
 
 ---
 
-For our first lesson in the Sonification and Sound Design course, we were asked to give a short presentation of a sonification or a sound design of choice. It was interesting to see the variety of examples among our classmates. Each of us brought a unique example and explained what is it about? why they did choose? and how does it relate to our work at the MCT program?
+For our first lesson in the Sonification and Sound Design course, we were asked to give a short presentation of a sonification or a sound design of choice. It was interesting to see the variety of examples among our classmates. Each of us brought a unique example and explained what is it about? why they did choose? and how does it relate to our work at the SMC program?
 This is an overview of the examples presented:
 
 ## Karolina Jawad - Particles in the air

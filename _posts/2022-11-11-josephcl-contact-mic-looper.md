@@ -32,7 +32,7 @@ At midnight on the night of a full moon (ignore the daylight in the video, Holly
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_11_11_josephcl_piezo_looper_performance.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_11_josephcl_piezo_looper_performance.mp4" type='video/mp4'>
   </video>
   <figcaption>Contact Mic Looper Performance</figcaption>
 </figure>
@@ -40,13 +40,13 @@ At midnight on the night of a full moon (ignore the daylight in the video, Holly
 For the curious, view the blueprints of the escape below.
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_11_josephcl_piezo_looper_diagram.png" alt="circuit diagram" title="Contact Mic Looper Circuit Diagram" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_11_josephcl_piezo_looper_diagram.png" alt="circuit diagram" title="Contact Mic Looper Circuit Diagram" width="auto" />
    <figcaption>Contact Mic Looper Circuit Diagram</figcaption>
 </figure>
 
 # Chapter 5: And They Lived Happily Ever After
 
-And so Pieza and the Gang celebrated through the night on their successful getaway. Pieza went on to have a long and luxurious life in the music business like it always dreamed, but tragically passed away after the circuit was dismantled by a cruel MCT student. What have we learned from this tale? No matter what your situation is, no matter how small you feel, no matter how hopeless the situation is, you too can ~~waste your life writing about anthropomorphic piezo discs~~ overcome the odds and become the hero in your own story. 
+And so Pieza and the Gang celebrated through the night on their successful getaway. Pieza went on to have a long and luxurious life in the music business like it always dreamed, but tragically passed away after the circuit was dismantled by a cruel SMC student. What have we learned from this tale? No matter what your situation is, no matter how small you feel, no matter how hopeless the situation is, you too can ~~waste your life writing about anthropomorphic piezo discs~~ overcome the odds and become the hero in your own story. 
 
 # Files
 

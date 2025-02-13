@@ -10,7 +10,7 @@ excerpt: "Sometimes you want to compose and get your workout. Experience a chanc
 ---
 # This is *Sweaty Music*
 
-In recent weeks the MCT 2020 intake has been exploring physical computing ideas and tools. As a concluding activity, each one of us was instructed to develop a composition or tool utilizing some of the materials about which we’d learned.  While in more normal times that might mean hands-on manipulation of specialized equipment, the Covid era forced some real adjustments. Individual projects instead became an exercise in determining what could be done with a phone, ipad, or whatever else each student might have in his or her home. Necessity is the mother of invention, of course.
+In recent weeks the SMC 2020 intake has been exploring physical computing ideas and tools. As a concluding activity, each one of us was instructed to develop a composition or tool utilizing some of the materials about which we’d learned.  While in more normal times that might mean hands-on manipulation of specialized equipment, the Covid era forced some real adjustments. Individual projects instead became an exercise in determining what could be done with a phone, ipad, or whatever else each student might have in his or her home. Necessity is the mother of invention, of course.
 
 For me, it was clear that this assignment was a chance to compose something quirky and outside of my traditional comfort zone in acoustic art music. While electronics have not been explicitly my musical enemy historically, neither have they been an ally.
 
@@ -37,7 +37,7 @@ Enjoy this footage of a 1-minute subset of this piece. The sounds are fairly com
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2020_10_16_williem_sweatymusic.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_16_williem_sweatymusic.mp4" type='video/mp4'>
     Alternate Text
   </video>
   <figcaption>In which a composer/performer flails about. Willie performs an excerpt from Sweaty Music.</figcaption>

@@ -111,14 +111,14 @@ Therefore, when playing highly rehearsed music in which responding to another pl
 
  <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_02_21_hughav_funk_dungeon_50ms.wav" type="audio/wav">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_02_21_hughav_funk_dungeon_50ms.wav" type="audio/wav">
   </audio>
   <figcaption><i>Recording from the video room at 50ms latency.</i></figcaption>
 </figure>
 
 <figure style="float: none">
  <audio controls>
-   <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_02_21_hughav_funk_portal_50ms.wav" type="audio/wav">
+   <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_02_21_hughav_funk_portal_50ms.wav" type="audio/wav">
  </audio>
  <figcaption><i>Recording from the portal at 50ms latency. Note the audible click and that the keys are behind the beat in comparison to the video room recording.</i></figcaption>
 </figure>
@@ -129,14 +129,14 @@ For Kristian, the tempo and style of song had a direct influence on how much lat
 
 <figure style="float: none">
  <audio controls>
-   <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_02_21_hughav_solar_50ms.wav" type="audio/wav">
+   <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_02_21_hughav_solar_50ms.wav" type="audio/wav">
  </audio>
  <figcaption><i>Solar at 50ms recorded in the Portal. The style sounds natural, but the latency was noticeable for Kristian.</i></figcaption>
 </figure>
 
 <figure style="float: none">
 <audio controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_02_21_hughav_donnalee_35ms.wav" type="audio/wav">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_02_21_hughav_donnalee_35ms.wav" type="audio/wav">
 </audio>
 <figcaption><i>Donna Lee at 35ms recorded in the Portal. This was the point where Kristian started to really feel the latency.</i></figcaption>
 </figure>

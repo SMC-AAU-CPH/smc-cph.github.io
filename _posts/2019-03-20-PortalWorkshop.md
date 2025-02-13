@@ -10,7 +10,7 @@ excerpt: ""
 ---
 ## Rearranging and setup the portal for seminars and talks
 
-On 20 March 2019, the MCT team were tidying up the portal and rearranging the Portal for talks. We have collected some pictures from the day, enjoy the slideshow:
+On 20 March 2019, the SMC team were tidying up the portal and rearranging the Portal for talks. We have collected some pictures from the day, enjoy the slideshow:
 
 <img src="/assets/image/2019_03_20_aleksati_movingcamera2.jpg"  />
 

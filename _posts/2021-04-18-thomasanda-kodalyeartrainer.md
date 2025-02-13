@@ -13,7 +13,7 @@ excerpt: "App for training your ears based on old Hungarian methodolgy"
 Introduction
 ============
 
-For the final project in MCT4043 I decided to work on an iOS-application
+For the final project in SMC4043 I decided to work on an iOS-application
 where i utilised computer vision and machine learning to extract hand
 poses from a live camera feed and map Kodaly hand signs to the different
 scale degrees of the C-major scale. The purpose of this project was to
@@ -233,7 +233,7 @@ available tools. Rather than having to rely upon expensive closed off
 systems, I find the cheap and open resources much more attractive.
 
 
-<iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_04_18_thomasanda_kodaly.mp4" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+<iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_04_18_thomasanda_kodaly.mp4" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
 
 Resources used in this project:
 

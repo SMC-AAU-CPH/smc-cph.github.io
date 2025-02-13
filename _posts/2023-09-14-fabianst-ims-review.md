@@ -4,7 +4,7 @@ title: "Controling Guitar Signals Using a Pick?"
 date: 2023-09-20 01:00:00 +0200
 categories: interactive-music
 author: Fabian Stordalen
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_09_14_fabianst_magpick.jpg?alt=original
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_09_14_fabianst_magpick.jpg?alt=original
 keywords: ims, hci, guitar, interactive music systems, magpick
 excerpt: "A deeper dive into the Magpick"
 ---
@@ -16,7 +16,7 @@ excerpt: "A deeper dive into the Magpick"
 There are many ways of playing and expressing yourself using the guitar. Either through the use of [extended techniques](https://www.youtube.com/watch?v=UJZvc24IaD4&list=PLk9q3gCxIzjcmDlTBtBw-wMcErt6KqdYc&index=4), [effect pedals](https://www.youtube.com/watch?v=rYaloTRzVtc), or even [augmented guitars](https://www.youtube.com/watch?v=WXhh9hSlyHs). If you want to control and manipulate the signal coming from the guitar you're generally forced to  use your feet to control pedals. But this introduces some problems in regards to adjusting pedal parameters while playing since humans generally don't possess the ability to operate and fine-tune switches and dials with their feet, especially not when wearing shoes.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_09_17_fabianst_pedalboard.jpg?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_09_17_fabianst_pedalboard.jpg?alt=original"
   height="600"
   width="600">
   <figcaption>
@@ -38,7 +38,7 @@ The [Magpick](https://www.nime.org/proceedings/2019/nime2019_paper013.pdf) intro
 The system works by taking a hollowed out pick and embedding it with loops of wires which then reacts to the magnetic signal sent out from the guitars pickups. So, voltage is generated based on how fast you are playing. The signal then gets sent to an amplifier before it reaches Bela to be further processed.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_09_18_fabianst_magpick.png?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_09_18_fabianst_magpick.png?alt=original"
   height="600"
   width="600">
   <figcaption>
@@ -67,7 +67,7 @@ The Magpick is used very similarly to a traditional pick. A lot of the gestures 
 Now the last principle is quite interesting, because it's true in some ways and untrue in others. The guitar pick is decidedly not a *new* controller. But the Magpick is a *new* way of using the controller. As mentioned in their paper, the Magpick is not the first guitar pick controller, there have been others like the [PLXTRUM](https://www.youtube.com/watch?v=lIWzZeIgHIE&t=133s), but it is the first one which uses sensors to detect changes in the magnetic field.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_09_18_fabianst_ancientplectrum.jpg?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_09_18_fabianst_ancientplectrum.jpg?alt=original"
   height="300"
   width="300">
   <figcaption>

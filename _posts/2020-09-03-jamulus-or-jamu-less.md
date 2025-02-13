@@ -6,12 +6,12 @@ categories: networked-music
 author: Pedro Lucas, Willie Mandeville, Henrik Sveen, Anders Lidal
 image: /assets/image/2020_09_03_williakm_groupb_jamulus.png
 keywords: jamulus, music, latency
-excerpt: "Playing music together is not at all only about hearing, but also about the visual. Today the MCT students of 2020 experienced this in a “low latency jam session” in Jamulus."
+excerpt: "Playing music together is not at all only about hearing, but also about the visual. Today the SMC students of 2020 experienced this in a “low latency jam session” in Jamulus."
 ---
 
 # Jamulus, or jamu-less?
 
-Playing music together is not at all only about hearing, but also about the visual. Today the MCT students of 2020 experienced this in a “low latency jam session” in Jamulus. Short version of what Jamulus is: an online play-together program, that lets you join sessions with other musicians. You need to install Jamulus to your computer, and ideally use a cabled connection to the internet.
+Playing music together is not at all only about hearing, but also about the visual. Today the SMC students of 2020 experienced this in a “low latency jam session” in Jamulus. Short version of what Jamulus is: an online play-together program, that lets you join sessions with other musicians. You need to install Jamulus to your computer, and ideally use a cabled connection to the internet.
 
 You can either join an existing server, or set up your own server if you like a more private jam-session. We all connected to a closed server located at NTNU in Trondheim, and total delay (latency) for those of us who are located in Norway was between 20 and 45 ms, which is decent, but also enough to make rhythmic and percussive music a little hard to play.
 

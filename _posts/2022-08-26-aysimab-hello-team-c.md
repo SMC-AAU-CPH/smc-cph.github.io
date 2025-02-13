@@ -1,22 +1,22 @@
 ---
 layout: post
-title:  "Meet MCT Team C 2022"
+title:  "Meet SMC Team C 2022"
 date:   2022-08-26 14:10:42 +0200
 categories: people
 author: Alexander Wastnidge, Aysima Karcaaltincaba, Fabian Stordalen, Olve Skjeggedal
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_08_23_aysimab_teamc.jpeg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_08_23_aysimab_teamc.jpeg
 excerpt: "Hello! We are team C and new around here. Come and know us better!"
 keywords: jekyll, blog
 ---
 
 <figure style="float: none">
-    <img src='https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_08_23_aysimab_teamc.jpeg' width="auto"/>
+    <img src='https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_08_23_aysimab_teamc.jpeg' width="auto"/>
     <figcaption>Do not go into the dumpster!</figcaption>
 </figure>
 
 # Who are we?
 
-The members of Team C all share the ambition of really getting out of our individual comfort zones as we work our way through the MCT programme! We came together with quite diverse academic and professional backgrounds, but quickly found that there is a lot of common ground between us at various levels. We look forward to collaborating, learning, sharing and hopefully creating a lot of great things together over the coming two years!
+The members of Team C all share the ambition of really getting out of our individual comfort zones as we work our way through the SMC programme! We came together with quite diverse academic and professional backgrounds, but quickly found that there is a lot of common ground between us at various levels. We look forward to collaborating, learning, sharing and hopefully creating a lot of great things together over the coming two years!
 
 Have a look at our individual sections below to learn more about each of us.
 
@@ -68,14 +68,14 @@ I know programming but I have no idea about sound, electronics and even music. I
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_08_23_fabianst_picture.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_08_23_fabianst_picture.jpg"
       alt="Alternative Text"
       title="Image Title"
       width="auto" />
    <figcaption>In action</figcaption>
 </figure>
 
-Hello! I'm Fabian. I got Bachelor in Musicology from the University of Oslo specializing in music philosophy. My thesis explored the relationship between popular music and nostalgia, looking at different ways the past is used to todays music and how it affects our thoughts and feelings about the future. I have a passion for music production and (old) electronic music which naturally led me to the MCT program. What interests me in particular is getting a deeper understanding of the tools used in production and the interactivity between humans and computers. In my spare time I play bass in the band Ushikawa.
+Hello! I'm Fabian. I got Bachelor in Musicology from the University of Oslo specializing in music philosophy. My thesis explored the relationship between popular music and nostalgia, looking at different ways the past is used to todays music and how it affects our thoughts and feelings about the future. I have a passion for music production and (old) electronic music which naturally led me to the SMC program. What interests me in particular is getting a deeper understanding of the tools used in production and the interactivity between humans and computers. In my spare time I play bass in the band Ushikawa.
 
 [Ushikawa - Instagram](https://www.instagram.com/ushikawaband/)
 [Ushikawa - Facebook](https://www.facebook.com/UshikawaBand)
@@ -98,4 +98,4 @@ Despite my relatively long-running corporate career my greatest passion (apart f
 
 I am Norwegian and live just outside Oslo with my wife, our two teenagers and a labrador retriever. By way of education I have a MSc degree in Engineering from the NTNU technical university in Trondheim, and have also done 1-year full time programme in Music Production and Recording at the University of Stavanger.
 
-The integrated musical and technological nature of the MCT programme stands for me as a great way to combine my passion for music with my technical education and work experience, and I am really looking forward to it!
+The integrated musical and technological nature of the SMC programme stands for me as a great way to combine my passion for music with my technical education and work experience, and I am really looking forward to it!

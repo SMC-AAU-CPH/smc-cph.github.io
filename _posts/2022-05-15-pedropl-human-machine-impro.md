@@ -9,7 +9,7 @@ keywords:  human-machine-music, multi-agent-systems, live-algorithms, interactiv
 excerpt: "Let's make music with virtual fellows in mixed reality."
 ---
 
-This blog post presents a brief summary of my thesis. The main intention is to provide an overview of this work and multimedia material (video, audio, source code) for a complete understanding of how the system works and the results obtained from the research process. For more details you can read the [full manuscript](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/document/2022_05_15_pedropl_master_thesis_manuscript.pdf).
+This blog post presents a brief summary of my thesis. The main intention is to provide an overview of this work and multimedia material (video, audio, source code) for a complete understanding of how the system works and the results obtained from the research process. For more details you can read the [full manuscript](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2022_05_15_pedropl_master_thesis_manuscript.pdf).
 
 ## Abstract
 
@@ -30,9 +30,9 @@ The design is supported by the three cutting-edge technologies mentioned above (
    <figcaption>System Design Overview. The wider arrows represent inputs and outputs from the component to the system and the thinner ones show inputs provided by the user and outputs received from the system.</figcaption>
 </figure>
 
-The technologies illustrated above allow the user to interact with the system and receive feedback in real-time. An *agent* (sound source) is initially an audio track that is created when the human performer finishes a musical line that is input from the MIDI controller and looped it. The sound source can be moved in space through a trackable object called *rigid body* whose position is detected by an *optical motion capture system* (OptiTrack). The position is fed into the system to place the agent in space in terms of sound and image. For the audio output, a *spatial audio system* (MCT Portal) composed of a circular array of loudspeakers reflects the location of the sound source. For visualization, a *mixed reality* headset (Microsoft HoloLens) is used to render the agent (as a 3D colored sphere) in the physical space where the performer is, also the headset allows to interact with simple gestures to select the agent to control it or let it to behave autonomously (generate new musical material and move independently), that is why the mixed reality device receives and sends data to the main system.
+The technologies illustrated above allow the user to interact with the system and receive feedback in real-time. An *agent* (sound source) is initially an audio track that is created when the human performer finishes a musical line that is input from the MIDI controller and looped it. The sound source can be moved in space through a trackable object called *rigid body* whose position is detected by an *optical motion capture system* (OptiTrack). The position is fed into the system to place the agent in space in terms of sound and image. For the audio output, a *spatial audio system* (SMC Portal) composed of a circular array of loudspeakers reflects the location of the sound source. For visualization, a *mixed reality* headset (Microsoft HoloLens) is used to render the agent (as a 3D colored sphere) in the physical space where the performer is, also the headset allows to interact with simple gestures to select the agent to control it or let it to behave autonomously (generate new musical material and move independently), that is why the mixed reality device receives and sends data to the main system.
 
-The communication between components depends of the technology that is using. For the spatial audio system, the infrastructure from the MCT portal (8-channel loudspeakers array) is used. The motion capture system and the mixed reality headset are connected through a local network (LAN) over a router. The motion capture uses a wired (Ethernet) connection while the mixed reality headset uses the wireless network.
+The communication between components depends of the technology that is using. For the spatial audio system, the infrastructure from the SMC portal (8-channel loudspeakers array) is used. The motion capture system and the mixed reality headset are connected through a local network (LAN) over a router. The motion capture uses a wired (Ethernet) connection while the mixed reality headset uses the wireless network.
 
 These interconnections have an impact in the size, time, and rate of data transmission back and forth, which is significant for the user experience in a real-time setting. That is why it is relevant to take system measurements as part of the methodology to evaluate this system, since those measurements can help to improve and find a balance between the experience and the system efficiency, or identify the feasibility for music performances under these limitations.
 
@@ -64,7 +64,7 @@ You will find below an excerpt of 1 minute for the audio that the musicians prod
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_15_pedropl_user0.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user0.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>User 0</figcaption>
@@ -72,7 +72,7 @@ You will find below an excerpt of 1 minute for the audio that the musicians prod
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_15_pedropl_user1.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user1.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>User 1</figcaption>
@@ -80,7 +80,7 @@ You will find below an excerpt of 1 minute for the audio that the musicians prod
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_15_pedropl_user2.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user2.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>User 2</figcaption>
@@ -88,7 +88,7 @@ You will find below an excerpt of 1 minute for the audio that the musicians prod
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_15_pedropl_user3.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user3.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>User 3</figcaption>
@@ -96,7 +96,7 @@ You will find below an excerpt of 1 minute for the audio that the musicians prod
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_15_pedropl_user4.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user4.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>User 4</figcaption>
@@ -104,7 +104,7 @@ You will find below an excerpt of 1 minute for the audio that the musicians prod
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_15_pedropl_user5.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user5.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>User 5</figcaption>
@@ -112,7 +112,7 @@ You will find below an excerpt of 1 minute for the audio that the musicians prod
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_05_15_pedropl_user6.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user6.wav" type="audio/mpeg">
     Output Audio File
   </audio>
   <figcaption>User 6</figcaption>

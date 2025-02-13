@@ -49,7 +49,7 @@ This is how the system has been wired up:
 ## Performance
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_11_04_halvorsh_performance.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_04_halvorsh_performance.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
    <figcaption>Performance</figcaption>
 </figure>
 

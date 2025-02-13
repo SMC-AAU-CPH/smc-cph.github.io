@@ -10,7 +10,7 @@ excerpt: "Electrizing an ancient flute using capacitive and motion sensors"
 ---
 
 <figure style="text-align: center;">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_ahmetem_hyper-ney.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 85%;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_ahmetem_hyper-ney.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 85%;">
   <figcaption style="text-align: center;">
     <span class="caption">The Hyper-Ney</span>
   </figcaption>
@@ -31,7 +31,7 @@ The Turkish ney is played by pressing the bashpare against nearly-closed lips an
 Jonathan Impett, a researcher and trumpet player, has influenced the way I think about the Hyper-Ney's design. In designing his [Meta-Trumpet](https://quod.lib.umich.edu/i/icmc/bbp2372.1994.037/1), he made sure to keep the traditional playing techniques intact. He innovated without losing what makes the trumpet, well, a trumpet. Please see [Impett's performance](https://www.youtube.com/watch?v=LJxwEqF80sk) with his instrument with this design perspective in mind
 
 <figure style="text-align: center;">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_ahmetem_impett.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 35%;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_ahmetem_impett.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 35%;">
   <figcaption style="text-align: center;">
     <span class="caption">Jonathan Impett</span>
   </figcaption>
@@ -52,7 +52,7 @@ Ney flute is similar to other flutes in terms of the *spare bandwidth* it offers
 To achieve my design goals, I integrated various sensors to a *Mansur* size ney (see [here](https://en.wikipedia.org/wiki/Ney) for size reference). I used a [Bela](https://bela.io/products/bela-and-bela-mini/) for the sound processing and synthesis. Before I describe the Hyper-Ney part by part, please have a look at the final form of the components on the Hyper-Ney below.
 
 <figure style="text-align: center;">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_ahmetem_hyper-ney_design.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 85%;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_ahmetem_hyper-ney_design.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 85%;">
   <figcaption style="text-align: center;">
     <span class="caption">Main components of The Hyper-Ney</span>
   </figcaption>
@@ -76,7 +76,7 @@ Bela and BeagleBone Black boards are stacked on top of each other. I created a c
 Here take a look at two diagrams. One showing the high-level design of the system, second showing the main components of the system and connections, and second showing 
 
 <figure style="text-align: center;">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_ahmetem_block_diagram.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 90%;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_ahmetem_block_diagram.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 90%;">
   <figcaption style="text-align: center;">
     <span class="caption">System design</span>
   </figcaption>
@@ -85,7 +85,7 @@ Here take a look at two diagrams. One showing the high-level design of the syste
 ![Detailed Mapping](/assets/image/2024_09_05_ahmetem_hyper-ney-mapping.jpg)
 
 <figure style="text-align: center;">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_ahmetem_connection_diagram.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 90%;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_ahmetem_connection_diagram.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 90%;">
   <figcaption style="text-align: center;">
     <span class="caption">Detailed connection diagram</span>
   </figcaption>
@@ -96,7 +96,7 @@ Here take a look at two diagrams. One showing the high-level design of the syste
 Here is the final look of Hyper Ney.
 
 <figure style="text-align: center;">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_ahmetem_hyper-ney_playing.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 50%;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_ahmetem_hyper-ney_playing.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 50%;">
   <figcaption style="text-align: center;">
     <span class="caption">A closer look at the Hyper-Ney while being played</span>
   </figcaption>
@@ -106,14 +106,14 @@ Here is the final look of Hyper Ney.
 An interesting aspect of my work is that the spare bandwidth I utilized for mapping to sound processing modules changes dynamically during playing. This relies on the acoustic phonmena of "when a higher hole is open, all the lower holes doesn't contribute to anything, i.e., they are extra and can be used for extra controls! See the image below for the availability of holes for mapping, and the next one for how I am calculating the availability continuously from the capacitive sensor input.
 
 <figure style="text-align: center;">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_ahmetem_hole_availability.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 50%;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_ahmetem_hole_availability.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 50%;">
   <figcaption style="text-align: center;">
     <span class="caption">Availability of holes for mapping under different scenarios of hole usage</span>
   </figcaption>
 </figure>
 
 <figure style="text-align: center;">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_01_ahmetem_state_calculation.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 50%;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_ahmetem_state_calculation.jpg" alt="The Hyper-Ney" style="display: block; margin: 0 auto; width: 50%;">
   <figcaption style="text-align: center;">
     <span class="caption">The calculation of hole availability, where where H1 to H5 are the closure status of each hole, and S1 to S5 are the states of hole availability, as given in the figure above}</span>
   </figcaption>
@@ -161,7 +161,7 @@ All in all, the Hyper-Ney takes your traditional ney flute and enriches its expr
 
 ***You can read the paper [HERE](https://www.duo.uio.no/handle/10852/111718)***
 
-***See more interactive music works by MCT students [HERE](https://mct-master.github.io/interactive-music/).***
+***See more interactive music works by SMC students [HERE](https://SMC-master.github.io/interactive-music/).***
 
 # References
 - V. Bellotti, M. Back, W. K. Edwards, R. E. Grinter, A. Henderson, and C. Lopes. Making sense of sensing systems: Five questions for designers and researchers. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, CHI ’02, page 415–422, New York, NY, USA, 2002. Association for Computing Machinery.

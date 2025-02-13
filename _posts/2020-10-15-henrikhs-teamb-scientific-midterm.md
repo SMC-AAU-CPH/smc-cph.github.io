@@ -12,7 +12,7 @@ excerpt: "Team B reflects on a week of coding ups and downs."
 
 # A Midterm Reflection
 
-The B team is a professionally diverse group of individuals. Even by the standards of the MCT program, we have unusually eclectic skill sets. Often this variety is a strength, but for this assignment that may not have really been the case. Read on for four **very** different perspectives on a brief adventure in problem solving.
+The B team is a professionally diverse group of individuals. Even by the standards of the SMC program, we have unusually eclectic skill sets. Often this variety is a strength, but for this assignment that may not have really been the case. Read on for four **very** different perspectives on a brief adventure in problem solving.
 
 A bit of background. The task: creating a new csv file containing data from an original csv file and defining specific attributes of 60 individual wav files. Some of the knowledge needed for the task is easy if you have programming experience. It's a matter of knowing what functions to use, and what functionality already exists.
 

@@ -42,7 +42,7 @@ We mostly find ourselves adding lots of comments to our code but ideally a code 
 _"A name should tell you why it exists, what it does, and how it is used. If a name requires a comment, then the name does not reveal its intent."_          
 _–Uncle Bob Lessons-_ 
 
-Most MCT students are using a jupyter notebook to develop. I can imagine most of us running cells in a different order and noticing weird behaviours because of having many variables with the same names in different cells like x or y. However if we give variables very clear names about what they are, why they are different, this wouldn't be an issue. 
+Most SMC students are using a jupyter notebook to develop. I can imagine most of us running cells in a different order and noticing weird behaviours because of having many variables with the same names in different cells like x or y. However if we give variables very clear names about what they are, why they are different, this wouldn't be an issue. 
 
 ### Avoid disinformation
 

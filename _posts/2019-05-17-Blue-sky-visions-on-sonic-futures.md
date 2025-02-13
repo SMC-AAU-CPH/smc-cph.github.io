@@ -15,7 +15,7 @@ Keywords: Sonification, Music Technology, Career management, sonic arts, automat
 
 [Pedro Duarte Pestana](http://www.porto.ucp.pt/pt/cv-pedro-pestana) was the final guest speaker who joined us virtually with his presentation
 'Career Management in Music Technology / Knowledge Engineering in Music Technology and Sonic Arts' from Porto.
-The Sonification seminar series was part of the MCT Spring semester 2019, curated by Anna Xambo. This session was facilitated by Eigil Aandahl.
+The Sonification seminar series was part of the SMC Spring semester 2019, curated by Anna Xambo. This session was facilitated by Eigil Aandahl.
 
 Pedro Duarte Pestana (Lisbon, 1975) has a background in engineering and worked professionally as an sound engineer and music producer
 for 15 years before entering academia full-time. It is a pleasure and a very interesting challenge to introduce
@@ -40,7 +40,7 @@ As a [Gulbenkian](https://gulbenkian.pt/en/) Professor he currently researches i
 
 ### Sonification of care -  or healthy sonic futures
 In the Gulbenkian project Pedro's research group focused on 3 case studies based on generative algorithms either being agents of
-facilitation or blockers of everyday interaction between humans. For the context of the MCT sonification course there is
+facilitation or blockers of everyday interaction between humans. For the context of the SMC sonification course there is
 especially one interesting case study among the presented. In that, sound design is being applied for aural feedback in live support machines and EGG systems by health care professions. How can the sound be designed in a way that it has an informative character to care givers and at the same time enables to soothe those in need of help? He calls the system behind the process curated sonification as there is no one-to-one mapping of features to sonic parameters. Apparently most of the studies for this project were undertaken with offline data which poses questions to real-world results. However the analysis is still ongoing.
 Based on his own career, he pointed out possible career options and sees great potential in "audio analytics" in particular, as reflected in the figure below.
 

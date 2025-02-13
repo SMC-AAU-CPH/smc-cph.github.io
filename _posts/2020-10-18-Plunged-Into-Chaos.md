@@ -15,7 +15,7 @@ Beloved by plumbers, sexual deviants and trombonists, the venerable toilet plung
 
 Whether or not the consumption of too many chocolate cigars is what led to the invention of the force cup is question lost to history, but it’s easy to imagine a rough sort of timeline. As the Greek philosopher Plato was fond of saying, “necessity is the mother of invention”.
 
-Indeed. I already had in my mind a hazy idea for the type of instrument I’d like to invent for MCT4045 (Interactive Music Systems), and rest assured, dear reader, it wasn’t a musical toilet plunger. What I had was a roll of Nichrome resistance wire which I intended to wrap around a dowel of some sort and thereby create a crude sort of variable resistor, which would form the basis for varying the pitch of the instrument. But I had no dowel, so after moping about the house for a bit, I decided I’d better get a move on and make a run to Clas Ohlson for some crafting materials.
+Indeed. I already had in my mind a hazy idea for the type of instrument I’d like to invent for SMC4045 (Interactive Music Systems), and rest assured, dear reader, it wasn’t a musical toilet plunger. What I had was a roll of Nichrome resistance wire which I intended to wrap around a dowel of some sort and thereby create a crude sort of variable resistor, which would form the basis for varying the pitch of the instrument. But I had no dowel, so after moping about the house for a bit, I decided I’d better get a move on and make a run to Clas Ohlson for some crafting materials.
 
 It was then that serendipity struck. As I reached into the closet for my jacket, my gaze fell upon the utilitarian form of our lowly toilet plunger, purchased new and hence abandoned, unused, at the back of the closet. Apparently, they put some mighty strong-flushing crappers in SiO housing, because I’d forgotten it was there. Jackpot! Not only was its handle a perfect sort of dowel for wrapping the wire around, I could stick it to the table and use it as a sort of joystick. All I needed was a way to read the x/y axis . . .
 
@@ -86,7 +86,7 @@ And, lastly. How does it sound? Well here’s the video:
 And for those that are still interested, my (slightly more serious) slide presentation on the interface:
 
 <figure align="middle">
-    <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/document/2020_10_19_paulgk_plungingintochaos.pdf" width="800px" height="480px" allowfullscreen></iframe>
+    <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2020_10_19_paulgk_plungingintochaos.pdf" width="800px" height="480px" allowfullscreen></iframe>
     <figcaption>Presenting: The Presentation</figcaption>
 </figure>
 

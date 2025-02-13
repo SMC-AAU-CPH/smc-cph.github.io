@@ -18,7 +18,7 @@ Music streaming services rely on music recommendation systems (MRSs) to keep use
 
 ## **Extracting Groove Features**
 
-The audio files used in this project were taken from the Free Music Archive (FMA). [Spleeter](https://github.com/deezer/spleeter) and [Librosa’s HPSS function](https://librosa.org/doc/main/generated/librosa.effects.hpss.html) were used to isolate the percussive elements in each musical item. These two methods were chosen after testing the onset and beat detection system using test audio files [(view code and results on GitHub)](https://github.com/jpclemente97/mctThesis/tree/main/beatBinTest). Librosa was also used for its [beat tracking](https://librosa.org/doc/main/generated/librosa.beat.beat_track.html) and [onset detection](https://librosa.org/doc/main/generated/librosa.onset.onset_detect.html) functions, which were run on each audio file in the fma_small dataset from the FMA. Using the beats and onsets, the features of groove known as pulse, subdivisions, and syncopation were calculated to be used in the simulated MRS. 
+The audio files used in this project were taken from the Free Music Archive (FMA). [Spleeter](https://github.com/deezer/spleeter) and [Librosa’s HPSS function](https://librosa.org/doc/main/generated/librosa.effects.hpss.html) were used to isolate the percussive elements in each musical item. These two methods were chosen after testing the onset and beat detection system using test audio files [(view code and results on GitHub)](https://github.com/jpclemente97/SMCThesis/tree/main/beatBinTest). Librosa was also used for its [beat tracking](https://librosa.org/doc/main/generated/librosa.beat.beat_track.html) and [onset detection](https://librosa.org/doc/main/generated/librosa.onset.onset_detect.html) functions, which were run on each audio file in the fma_small dataset from the FMA. Using the beats and onsets, the features of groove known as pulse, subdivisions, and syncopation were calculated to be used in the simulated MRS. 
 
 According to [Câmara and Danielsen](https://researchgate.net/publication/331328515_Groove), the pulse of the groove is defined as the steady beat that keeps the groove going, acting as the foundation to add other groove characteristics on top of, the subdivisions of a beat are defined as the notes played at faster metrical levels than the beat, which are generally considered necessary to establish a groove and give a sense of drive to the groove, and syncopation enhances a groove by temporarily displacing the normal accent of the meter, and is considered to be the most important element in defining a style of groove.
 
@@ -39,7 +39,7 @@ The k-means clustering algorithm is a popular option for solving clustering prob
 
 ## **Evaluation Session**
 
-The evaluation session consists of a participant listening to multiple 30 second segments of songs [(download on GitHub)](https://github.com/jpclemente97/mctThesis/blob/main/evaluationAnalysis/MRS%20test%20audio.mp3). Each of these items are one of the six closest items to the centroids of either a Librosa PSS cluster or a Spleeter PSS cluster, since these can be considered the most representative items of each cluster. The participants then rank these musical items on two different seven point Likert scales. The first scale determines the participant’s subjective enjoyment of the track, with 1 corresponding to “extreme dislike” and 7 corresponding to “extreme like.” The second scale determines how likely the participant would be to listen to the track, or in other words how expected the item was, with one corresponding to “extremely unlikely” and seven corresponding to “extremely likely.”
+The evaluation session consists of a participant listening to multiple 30 second segments of songs [(download on GitHub)](https://github.com/jpclemente97/SMCThesis/blob/main/evaluationAnalysis/MRS%20test%20audio.mp3). Each of these items are one of the six closest items to the centroids of either a Librosa PSS cluster or a Spleeter PSS cluster, since these can be considered the most representative items of each cluster. The participants then rank these musical items on two different seven point Likert scales. The first scale determines the participant’s subjective enjoyment of the track, with 1 corresponding to “extreme dislike” and 7 corresponding to “extreme like.” The second scale determines how likely the participant would be to listen to the track, or in other words how expected the item was, with one corresponding to “extremely unlikely” and seven corresponding to “extremely likely.”
 
 # **Results and Discussion**
 
@@ -48,22 +48,22 @@ The evaluation session consists of a participant listening to multiple 30 second
 The standard deviation and average values of the quality of all items in each Librosa and Spleeter PSS cluster can be viewed below.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_03_josephcl_expectedlibrosafig.png" width = "50%" allign="middle" />
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_03_josephcl_expectedlibrosafig.png" width = "50%" allign="middle" />
 </figure>
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_03_josephcl_expectedspleeterfig.png" width = "50%" allign="middle" />
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_03_josephcl_expectedspleeterfig.png" width = "50%" allign="middle" />
 </figure>
 
 
 The standard deviation and average values of the expectedness of all items in each Librosa and Spleeter PSS cluster can be viewed below.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_03_josephcl_expectedlibrosafig.png" width = "50%" allign="middle" />
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_03_josephcl_expectedlibrosafig.png" width = "50%" allign="middle" />
 </figure>
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_03_josephcl_expectedspleeterfig.png" width = "50%" allign="middle" />
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_03_josephcl_expectedspleeterfig.png" width = "50%" allign="middle" />
 </figure>
 
 Assuming a normal distribution for quality and expectedness ratings, the average quality and expectedness values across all tracks for both PSS methods should be around 4. Across all participant ratings for all items of the evaluation session, an average quality rating of 4.25 in the Librosa segment suggests a fairly normal distribution, while an average quality rating of 3.52 suggests that other factors were at play that pushed the average rating further from 4. This could be because there were not enough ratings for a normal distribution, due to only having 5 Spleeter PSS clusters with 540 total ratings compared to 6 Librosa PSS clusters with 648 total ratings. Another explanation for this discrepancy is that the overall quality of the items served in the Spleeter system may have been less desirable than the items served by the Librosa system, which will be discussed further while analyzing true positives and true negatives later in this section.
@@ -128,7 +128,7 @@ Using Librosa HPSS was found to be superior to using Spleeter in nearly all scen
 
 
 ### **Sources & Resources**
-* All code and results on GitHub: https://github.com/jpclemente97/mctThesis
+* All code and results on GitHub: https://github.com/jpclemente97/SMCThesis
 * Thumbnail: https://www.vecteezy.com/vector-art/210521-party-people-dancing
 * G. S. Câmara and A. Danielsen, “Groove,” in The Oxford Handbook of Critical Concepts in Music Theory, A. Rehding and S. Rings, Eds., Oxford University Press, 2020, pp. 270–294. doi: 10.1093/oxfordhb/9780190454746.013.17.
 * L. A. C A and A. C A, “Research on DNN Methods in Music Source Separation Tools with emphasis to Spleeter,” Int. Res. J. Adv. Sci. Hub, vol. 3, no. Special Issue 6S, pp. 24–28, Jun. 2021, doi: 10.47392/irjash.2021.160.

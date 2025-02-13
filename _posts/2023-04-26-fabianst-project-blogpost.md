@@ -39,7 +39,7 @@ I mentioned I trained my model using mel spectrograms, but what it is? A mel spe
 
  Variational AutoEncoders (VAEs) are a type of artificial neural network that can learn to represent high-dimensional data in a lower-dimensional space. They work by encoding input data into a lower-dimensional latent space, and then decoding it back into the original space.
 
-VAEs use a probabilistic approach to encoding and decoding, allowing them to generate new data that resembles the input data. This makes them ideal for generative purposes. If you want to learn more about AEs and VAEs check out [this post](https://mct-master.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html)!
+VAEs use a probabilistic approach to encoding and decoding, allowing them to generate new data that resembles the input data. This makes them ideal for generative purposes. If you want to learn more about AEs and VAEs check out [this post](https://SMC-master.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html)!
 
 ## VAmEn
 
@@ -59,7 +59,7 @@ Once finished training the model was able to create quite good looking spectrogr
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_24_fabianst_ai_breakbeat.wav?vrtxPreviewUnpublished=true" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_24_fabianst_ai_breakbeat.wav?vrtxPreviewUnpublished=true" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>AI-Generated Breakbeat</figcaption>

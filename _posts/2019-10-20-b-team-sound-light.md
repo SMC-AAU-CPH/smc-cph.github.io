@@ -5,12 +5,12 @@ date:   2019-10-24 12:00:00 +0200
 categories: interactive-music
 author: Jackson Goode, Magda Futyma, Simon Sandvik, Jarle Steinhovden
 image: /assets/image/2019_10_20_stefanof_bela_device.jpg
-excerpt: "For the MCT 4000 mini-hackathon in the physical computing module we tried to send sound at the speed of light."
+excerpt: "For the SMC 4000 mini-hackathon in the physical computing module we tried to send sound at the speed of light."
 keywords: physical-computing
 ---
 ## Sound at the Speed of Light
 
-For the final workshop in the Physical Computing workshop of MCT 4000, we were tasked with developing a performance that utilized the [Bela](https://bela.io/) device for a brief ["Hackathon"](https://en.m.wikipedia.org/wiki/Hackathon). The theme of the performance this year was "Recycling", a broad and flexible term, our group interpreted it quite liberally as you will see.
+For the final workshop in the Physical Computing workshop of SMC 4000, we were tasked with developing a performance that utilized the [Bela](https://bela.io/) device for a brief ["Hackathon"](https://en.m.wikipedia.org/wiki/Hackathon). The theme of the performance this year was "Recycling", a broad and flexible term, our group interpreted it quite liberally as you will see.
 
 ## Our original idea
 

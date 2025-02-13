@@ -8,7 +8,7 @@ image: /assets/image/2019_09_16_stefanof_polarity.jpg
 excerpt: 'Is polarity the solution?'
 Keywords: Portal, polarity, DSP, phase, cancelation, feedback, live sound
 ---
-# This week in the MCT Portal
+# This week in the SMC Portal
 
 ## An old problem...
 
@@ -22,7 +22,7 @@ We are music technology students, of course we can find a more effective solutio
 
 The last two weeks were spent studying digital signal processing. One main feature of our studies was listening to the effect of the various filters we had applied to our sample sounds. To better understand the transformations at play, we creating two tracks, one with the sample and filter applied and the other with just the untampered sample whose polarity was inverted. The result of playing both at once was the effects' transformations heard in isolation (because the inverted track would be "canceling" the original track's waveform resulting in silence).
 
-![Magic!](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2019_09_16_stefanof_wave_interference.gif "Magic!")
+![Magic!](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_09_16_stefanof_wave_interference.gif "Magic!")
 
 Well, I was thinking about all of this new found knowledge one day last week and realized there might be some practical use of inverting the polarity of a signal with live sound interfaces. I made the comment to Jarle who first told me to never call polarity inversion "phase flipping" (see here) but then politely said that this might be a potential solution.
 

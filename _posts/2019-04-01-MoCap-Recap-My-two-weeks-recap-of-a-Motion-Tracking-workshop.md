@@ -4,8 +4,8 @@ title: MoCap Recap - Two weeks recap of a Motion Tracking workshop
 date: 2019-04-01 21:45:00 +0200
 categories: motion-capture
 author: Guy Sion, Sam Roman, Elias Anderson
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2019_04_01_guysi_ashane_mocap.jpg
-excerpt: "During weeks 10-11 we attended the Music related motion tracking course (MCT4043) as part of the MCT program.
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_04_01_guysi_ashane_mocap.jpg
+excerpt: "During weeks 10-11 we attended the Music related motion tracking course (SMC4043) as part of the SMC program.
 The week started with the installation of the OptiTrack system in Oslo, placement of cameras, connecting wires to
 hubs and software installation and setup. we got familiar with the Motive:Body software and was able to run
 calibrations, set and label markers, record motion data, export it in a correct way and experiment with sonifying
@@ -13,9 +13,9 @@ the results with both recorded and streamed motion capture data."
 Keywords: Motion Caption, Movment, MoCap, Gestures, Virtual DJ, OptiTrack
 ---
 
-![MoCap](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2019_04_01_guysi_ashane_mocap.jpg "MoCap")
+![MoCap](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_04_01_guysi_ashane_mocap.jpg "MoCap")
 
-<p>During weeks 10-11 Sam & Guy attended the Music related motion tracking course (MCT4043) as part of the MCT program.
+<p>During weeks 10-11 Sam & Guy attended the Music related motion tracking course (SMC4043) as part of the SMC program.
 The week started with the installation of the OptiTrack system in Oslo, placement of cameras, connecting wires to
 hubs and software installation and setup. We got familiar with the Motive:Body software and was able to run
 calibrations, set and label markers, record motion data, export it in a correct way and experiment with sonifying
@@ -23,7 +23,7 @@ the results with both recorded and streamed motion capture data.</p>
 
 ### Week 1
 
-<p>The first week was building up towards the <a href="https://www.hf.uio.no/ritmo/english/projects/flagship-projects/micro/events/standstill/2019/index.html" target="_blank">Nordic Championship of Standstill</a>. This gave us a good overview on all aspects of a thorough research, both in terms of preparation (calibration, paperwork, division of labor, attracting participants, testing etc.), conducting the experiment and data analysis. The MCT students have been rotating
+<p>The first week was building up towards the <a href="https://www.hf.uio.no/ritmo/english/projects/flagship-projects/micro/events/standstill/2019/index.html" target="_blank">Nordic Championship of Standstill</a>. This gave us a good overview on all aspects of a thorough research, both in terms of preparation (calibration, paperwork, division of labor, attracting participants, testing etc.), conducting the experiment and data analysis. The SMC students have been rotating
 between the different responsibilities and between us have managed to take part and be involved with all tasks during the
 week. We also have attended the lectures of the NordicSMC Winter School at RITMO, and was presented with several
 tutorials (mocap toolbox, Musical Gesture Toolbox) on research and project presentations concerning motion and
@@ -42,7 +42,7 @@ course. The group (including Elias and Sam) developed a Virtual DJ that utilizes
 movements of a DJ, for manipulating parameters a musical track. Our objective was capturing DJ body movements
 (recorded and streamed) into motion capture data and to sonify these movements.</p>
 
-![Panorama](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2019_04_01_guysi_all_panorama_mocap.jpg "Panorama")
+![Panorama](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_04_01_guysi_all_panorama_mocap.jpg "Panorama")
 
 <p>Our method was to use the OptiTrack/Motive system to record the motion tracking data of a DJ standing by a table
 imitating a controller deck. We exported the mocap data to a text file that can be read by a Max/MSP patch that

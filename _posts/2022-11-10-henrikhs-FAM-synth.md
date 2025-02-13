@@ -15,7 +15,7 @@ excerpt: "A simple digital synthesizer with the potential of sounding big, compl
 </figure>
 
 
-For my MCT4054 Interactive Music Systems midway project I made a FM/AM synthesizer with analog modulation. FM and AM can be very digital sounding, so I wanted to explore and expand some features in this specific synthesis model. Everything was made in Pure Data.
+For my SMC4054 Interactive Music Systems midway project I made a FM/AM synthesizer with analog modulation. FM and AM can be very digital sounding, so I wanted to explore and expand some features in this specific synthesis model. Everything was made in Pure Data.
 
 #### Sound Engine
 It consists of one carrier oscillator, one FM modulator and one AM modulator which i quitesimole, though the combination of FM and AM in itself opens for some new sonic possibilities as they have different sonic attributes. Ratio is selected from a set of harmonic intervals and modulation amount can be set from 0 to 100 %. To expand on this concept I have added stereo detune for all oscillators, which widens the sound and makes the modulation feel quite different from regular mono signal path modulation. This is also a way to access the non-harmonic ratio parameters for the modulators creating bell and metal like sounds. Lastly there is an ADSR for each of the oscillators and a distortion on the summed output for some analog ish grit.
@@ -47,7 +47,7 @@ On that note I should mention how expressive the synthesizer is. Both FM and AM 
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_11_10_henrikhs_famdemo.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_10_henrikhs_famdemo.mp4" type='video/mp4'>
   </video>
   <figcaption>FAM - Audio Demo</figcaption>
 </figure>

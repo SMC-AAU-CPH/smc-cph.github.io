@@ -1,33 +1,33 @@
 ---
 layout: post
-title: "MCT Blog Sonified!"
+title: "SMC Blog Sonified!"
 date: 2022-12-09 22:35:00 +0200
 categories: sound-programming
 author: Emin Memis
-image: /assets/image/2022_12_09_ahmetem_mct_blog_sonified_cover.jpg
+image: /assets/image/2022_12_09_ahmetem_SMC_blog_sonified_cover.jpg
 keywords: sonification, blog, python
 excerpt: "Making sound out of this blog."
 ---
 
 <figure style="float: none">
-   <img src="/assets/image/2022_12_09_ahmetem_mct_blog_sonified_banner.jpg" width="auto"  alt="" title="Photo by Jimmy Chan" width="auto" />
+   <img src="/assets/image/2022_12_09_ahmetem_SMC_blog_sonified_banner.jpg" width="auto"  alt="" title="Photo by Jimmy Chan" width="auto" />
 </figure>
 
-This blog has been held by students and alumni of the MCT program for the last four years. Today, it contains 370+ posts about topics ranging from audio programming to musical interaction, concerts, and experiences. According to wordstotime.com, to read this beautiful blog entirely, you would spend 286 hours. But don't worry, you can listen to it!
+This blog has been held by students and alumni of the SMC program for the last four years. Today, it contains 370+ posts about topics ranging from audio programming to musical interaction, concerts, and experiences. According to wordstotime.com, to read this beautiful blog entirely, you would spend 286 hours. But don't worry, you can listen to it!
 
 Before we dive into this, here are some fun facts about our blog!
 - Amongst **_2334573_** words typed in the blog so far, the three most frequent words were **_audio_**, **_sound_**, and **_music_**.
 - The word **_We_** was used **_1.43_** times more than the word **_I_**.
-- The longest word in the MCT blog is **_multiinstrumentalist_** with 20 characters - if we don't count the word _reverberaaatioooooooon_ with 22 :)
+- The longest word in the SMC blog is **_multiinstrumentalist_** with 20 characters - if we don't count the word _reverberaaatioooooooon_ with 22 :)
 
 To make a sound out of data, it should be in the shape we want it to be. Cleaning, arranging, and scaling are crucial, especially in appropriately mapping the data to specific parameters. Then, we can create _sound_ based on the numbers at hand. For this data, I started off by excluding some parts of the texts, removing unwanted words and filtering. Then, I scaled it before mapping it to specific sound parameters. Finally, these numbers turned into sound. Diagram below shows this sonification process.
 
 <figure style="float: none">
-   <img src="/assets/image/2022_12_09_ahmetem_mct_blog_sonified_diagram_01.png" alt="Sonification Process" title="Sonification Process" width="auto" />
+   <img src="/assets/image/2022_12_09_ahmetem_SMC_blog_sonified_diagram_01.png" alt="Sonification Process" title="Sonification Process" width="auto" />
 </figure>
 
 ## Gathering the Data
-The MCT Blog runs on GitHub Pages with a GitHub repo in the background, which allowed me to get each blog as a seperate file in markdown format. Each post had the same structure: a frontmatter with meta information (e.g., date, tags, authors), blog post content in markdown format with links to images, videos, and embedded elements. This structure made the data cleaning relatively more manageable.
+The SMC Blog runs on GitHub Pages with a GitHub repo in the background, which allowed me to get each blog as a seperate file in markdown format. Each post had the same structure: a frontmatter with meta information (e.g., date, tags, authors), blog post content in markdown format with links to images, videos, and embedded elements. This structure made the data cleaning relatively more manageable.
 
 I started cleaning the data by excluding the frontmatter from each file, which basically contains repetitive out-of-context words. Next, I scraped out markdown signs using BeautifulSoup. I cleaned the data further using a set of regular expressions, including lowercasing, removing punctuations, and cleaning white spaces.
 
@@ -127,18 +127,18 @@ for i, row in df[:2000].iterrows():
     # append
     signal = np.concatenate((signal, s*window))
 
-sf.write('mct_blog_sonified.wav', signal, sr)
+sf.write('SMC_blog_sonified.wav', signal, sr)
 ```
 
 ## Here is the result!
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_09_ahmetem_mct_blog_sonified.wav" type="audio/mpeg">
-    MCT Blog Sonified!
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_09_ahmetem_SMC_blog_sonified.wav" type="audio/mpeg">
+    SMC Blog Sonified!
   </audio>
   <figcaption></figcaption>
 </figure>
 
-<div class="github-card" data-github="aememis/mct-blog-sonified" data-width="400" data-height="150" data-theme="default"></div>
+<div class="github-card" data-github="aememis/SMC-blog-sonified" data-width="400" data-height="150" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>

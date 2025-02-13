@@ -9,7 +9,7 @@ keywords: livestream, portal, lola, obs
 excerpt: "When performing in two locations we need to cross the streams"
 ---
 
-For the final musical presentation of the portal subject for this semester I was responsible for streaming the audio and video to the MCT YouTube channel.  There were many different ways of doing this so I'll highlight the considerations and decisions for going with the setup we finally used.
+For the final musical presentation of the portal subject for this semester I was responsible for streaming the audio and video to the SMC YouTube channel.  There were many different ways of doing this so I'll highlight the considerations and decisions for going with the setup we finally used.
 
 # Overall considerations
 
@@ -71,5 +71,5 @@ We had not established a way to communicate between UiO and NTNU off-stream (not
 
 If you'd like to see the performance you can watch it on YouTube below.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tUqhI0R3DDA" title="MCT 2020 Musical Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tUqhI0R3DDA" title="SMC 2020 Musical Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

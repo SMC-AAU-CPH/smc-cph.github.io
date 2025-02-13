@@ -4,20 +4,20 @@ title: Telematic Concert between Salen and Portal - Performers’ Reflections
 date: 2022-11-28
 categories: networked-music
 author: Alexander Wastnidge, Aysima Karcaaltincaba, Iosif Aragiannis
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_28_aysimab_telematic_concert.jpg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_28_aysimab_telematic_concert.jpg
 keywords: telematic, performance, network
 excerpt: "Reflections on semester's first Telematic Concert"
 ---
 
 ## A Telematic Experience
 
-As MCT master students, one of our focus areas has been practicing low latency software solutions which allow us to host real-time music performances over the network. In our first semester, we did try performing together by using different software solutions. As part of these efforts, we were expected to perform two telematic concerts. Each concerts were hosted in two different locations at the same time over the network using a low latency audio visual streaming software, Lola.
+As SMC master students, one of our focus areas has been practicing low latency software solutions which allow us to host real-time music performances over the network. In our first semester, we did try performing together by using different software solutions. As part of these efforts, we were expected to perform two telematic concerts. Each concerts were hosted in two different locations at the same time over the network using a low latency audio visual streaming software, Lola.
 
 As one of the performer teams, we will describe this journey and provide some details about our first experience performing a concert over the network. Our performance, ‘A Telematic Experience’ was hosted in the Portal and Salen seminar rooms on the 4th of October and thanks to all the practices we did in the class, everything worked well and the performance and rehearsals turned out to be a lot of fun!
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_28_aysimab_telematic_concert.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_28_aysimab_telematic_concert.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>Our concert</figcaption>
 </figure>
@@ -50,7 +50,7 @@ A dedicated talkback microphone in the Portal may have helped with this. However
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_27_aysimab_rehearsal.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_27_aysimab_rehearsal.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>Another rehearsal</figcaption>
 </figure>
@@ -63,7 +63,7 @@ We were very pleased with the music we were able to create together in just thre
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_28_aysimab_concert_photo"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_28_aysimab_concert_photo"
       style="max-height:600px; width:auto;" />
    <figcaption>Our first rehearsal</figcaption>
 </figure>

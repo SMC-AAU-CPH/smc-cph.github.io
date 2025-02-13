@@ -5,12 +5,12 @@ date: 2019-11-25 17:00:00 +0200
 categories: machine-learning
 author: Paul Koenig, Aleksander Tidemann, Tom Ignatius, Thomas Anda
 image: /assets/image/2019_11_25_stefanof_cat.png
-excerpt: "Wherein we describe the denouement of MCT4000, Module #9: Machine Learning."
+excerpt: "Wherein we describe the denouement of SMC4000, Module #9: Machine Learning."
 ---
 
 ## Machine Learning, a (very) brief primer
 
-Our final module in MCT4000 was in Machine Learning. ML is a sub-discipline of Artificial Intelligence.
+Our final module in SMC4000 was in Machine Learning. ML is a sub-discipline of Artificial Intelligence.
 
 ML can be described this way:
 

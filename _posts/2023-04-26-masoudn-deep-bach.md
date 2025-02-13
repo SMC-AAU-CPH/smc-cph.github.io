@@ -4,7 +4,7 @@ title: "Isn't Bach deep enough?"
 date: 2023-04-26 12:00:00 +0200
 categories: machine-learning
 author: Masoud Niknafs
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_26_masoudn_bach.jpg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_26_masoudn_bach.jpg
 keywords: Machine Learning, Genarative music
 excerpt: "Deep Bach is an artificial intelligence that composes like Bach."
 ---

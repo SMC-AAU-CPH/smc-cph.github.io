@@ -58,7 +58,7 @@ The workshop was very fun, however in the development process of the IMS I ended
 are most likely not sufficient in other context. The unreliable or unpredictable can be a huge part of the aesthetic. Of course, it should not fall apart, on the one hand, the 'success' of a design is its technical realization. On the other hand (again), the level of technical sophistication will never replace meaningful interaction. The context probably determines the evaluation of the outcomes as well. As being someone with a past in theatre, I can hardly extract more than a nice application from it, that counts for all of the instruments. But inspires me to look further and include the potential applicability in the design process. In this interface of creation of things, it feels a little bit like a gap between 'designing' things and creating art. But it can help to generate an intersectional practise of technology, music and theatre for example, which is an inspiration for where one could go beyond the circuitry design.
 
 ### Acknowledgements
-I would like to thank heartfully all MCT-IMS-Trondheim peers who helped me developing the board, a big thank especially to Sepehr Haghighi! Thanks also to Stefano Fasciani.
+I would like to thank heartfully all SMC-IMS-Trondheim peers who helped me developing the board, a big thank especially to Sepehr Haghighi! Thanks also to Stefano Fasciani.
 
 ### References
 

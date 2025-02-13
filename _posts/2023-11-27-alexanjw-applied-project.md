@@ -11,7 +11,7 @@ excerpt: "Check out what we worked on as a team in this year's Applied Project."
 
 ### Introduction 
 
-For our MCT Applied Project we have worked on several proof-of-concept development solutions for [Muzziball™](https://www.muzziball.com/en), an exciting interactive ball which is currently in the development and prototype phase. The prototype of the Muzziball platform is based around a [Raspberry Pi](https://www.raspberrypi.com) and a [SenseHat cape](https://www.raspberrypi.com/products/sense-hat/) inside of a 3D printed sphere. The intention for the platform is to elicit movement from the user by having music and audio react to motion in real time. In order to explore further potential functionality and to provide short-to-medium term solutions for future rounds of prototypes, our team took on several areas of development for this platform, all of which are discussed below.
+For our SMC Applied Project we have worked on several proof-of-concept development solutions for [Muzziball™](https://www.muzziball.com/en), an exciting interactive ball which is currently in the development and prototype phase. The prototype of the Muzziball platform is based around a [Raspberry Pi](https://www.raspberrypi.com) and a [SenseHat cape](https://www.raspberrypi.com/products/sense-hat/) inside of a 3D printed sphere. The intention for the platform is to elicit movement from the user by having music and audio react to motion in real time. In order to explore further potential functionality and to provide short-to-medium term solutions for future rounds of prototypes, our team took on several areas of development for this platform, all of which are discussed below.
 
 ### Integrated Speaker Solution
 
@@ -56,7 +56,7 @@ We therefore created an API in Python for handling the behaviour of the LEDs. Th
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2023_11_26_jackeh_applied_project_leds.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2023_11_26_jackeh_applied_project_leds.mp4" type='video/mp4'>
   </video>
   <figcaption>The motion-reactive mode in the new lighting system.</figcaption>
 </figure>

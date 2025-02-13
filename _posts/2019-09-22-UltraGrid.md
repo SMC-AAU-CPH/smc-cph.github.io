@@ -5,7 +5,7 @@ date: 2019-09-22 16:00:00 +0200
 categories: networked-music
 author: Aleksander Tidemann, Thomas Anda, Paul Koenig, Tom Ignatius
 image: /assets/image/2019_09_22_stefanof_ultragrid.jpg
-excerpt: 'Exploring an alternative audio and video network transmission software in the MCT portal.'
+excerpt: 'Exploring an alternative audio and video network transmission software in the SMC portal.'
 Keywords: Portal, Network transmission, ultragrid
 ---
 # **Group C**
@@ -66,4 +66,4 @@ In the following weeks there are 2 important tasks we need to focus on for the i
 - Opening several IP-ports so that transmission between campuses is possible.
   - This involves contacting UiO and NTNU´s IT-departments.
 
-With the help from other MCT students and teacher guidance, we should be able to get UltraGrid up and running during the next couple of weeks.
+With the help from other SMC students and teacher guidance, we should be able to get UltraGrid up and running during the next couple of weeks.

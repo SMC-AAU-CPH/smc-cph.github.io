@@ -38,7 +38,7 @@ Creating a skeleton was way easier than in Qualsis. I used a predefined skeleton
 After this, recording the data was quite straightforward. Below you can see a short sneak peak from during one of the recordings. Exporting the data for anlaysis went smoothly as well. 
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_04_18_alenacl_lab_sneak_peak.mp4" width="600" height="400" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_04_18_alenacl_lab_sneak_peak.mp4" width="600" height="400" frameborder="0" allowfullscreen></iframe>
    <figcaption>Sneak Peak from the lab during data aquisition</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ After this, recording the data was quite straightforward. Below you can see a sh
 After exporting the mocap data as .csv files, I analysed them with the Jupyter Notebook provided in class. However, my computer is quite old and down't have a lot of computational power, so instead of using all the data, I only used the first 1000 rows of each of the takes, aproximately 8 seconds. In this clip you can see which dance moves were retained in the analysed data. 
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_04_18_alenacl_shimsham_short.mp4" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_04_18_alenacl_shimsham_short.mp4" width="500" height="300" frameborder="0" allowfullscreen></iframe>
    <figcaption>Short exerpt of the Shim Sham dance used in analysis</figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ When plotting the speed of the left and right tip of toes markers for all three 
 [Blender](https://www.blender.org/) is a open source 3D creation suite. And it's exceedingly complicated, a fact I didn't know before coming up with this project. I spent half the time watching tutorials and trying to understand how to move around the space and between modes and generally, how to use the program. I spend almost all the remaining time troubleshooting the retargeting between the mocap armature and the armature of the characters I downloaded from [Sketchfab](https://sketchfab.com/). I still had to manually add constrains for almost all bones in the final animations because of this and that reason (I don't understand enough about this yet to explain it). Weirdly enough, the biomechanical skeleton we did in class had better results when retargeted on a stormtrooper character, than the entertainment skeleton I used for this project. I've learned that it's much more complicated to retarget mocap data on characters if the armatures are not constructed of more or less the same bones - e.g., the monkey had no neck bone, which messed up the position of the head quite often. Since the presentation we had to give in class focused more on the animation part of the project, I will not give too many details here. Sufice to say that I didn't go very far, and instead of having three cute and funny characters dancing Shim Sham in the same time, this is as far as I got... I couldn't even figure out how to export it in a nice animation and add sound..
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_04_18_alenacl_stormtrooper_monkey_dance.mp4" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_04_18_alenacl_stormtrooper_monkey_dance.mp4" width="500" height="300" frameborder="0" allowfullscreen></iframe>
    <figcaption>Stormtrooper and monkey dancing shim sham</figcaption>
 </figure>
 

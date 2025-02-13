@@ -4,7 +4,7 @@ title: "Music Between Salen and the World"
 date: 2023-05-18 21:23:12 +0200
 categories: networked-music
 author: Jack Hardwick, Alexander Wastnidge, Masoud Niknafs, Emin Memis, Nino Jakeli, Henrik Sveen, Kristian Eicke, Fabian Stordalen, Aysima Karcaaltincaba
-image: "/assets/image/2023_05_10_henrikhs_mct_nmp_poster_square.jpg"
+image: "/assets/image/2023_05_10_henrikhs_SMC_nmp_poster_square.jpg"
 keywords: portal, audio, latency, concert, jacktrip
 excerpt: "We played in a global NMP concert. Check out our experiences."
 ---
@@ -13,7 +13,7 @@ For our final network music performance **Dispersionology and Other Tales**, we 
 
 # Concept
 
-For this telematic experience, as MCT Students, we contributed an improvisational performance conducted in the United States and performed in more than four countries.
+For this telematic experience, as SMC Students, we contributed an improvisational performance conducted in the United States and performed in more than four countries.
 
 Douglas Van Nort describes the performance as:
 >"In the world of physics, dispersion describes a phenomenon in which the rate of propagation of a wave in a medium, its phase velocity, is dependent on its frequency. This can be seen in light, sound, gravity waves, etc. Its a property of telecommunications signals, including the pulses of light in optical fibre cables, describing how the signal broadens and spreads out as it moves across the channel. Dispersion therefore is inherent in the medium that more-and-more binds us these days, in the movements of light pulses that transports our attention, and our listening, around the globe. A beautiful consequence of dispersion is a change in the angle of refraction of different frequencies, leading to a prismatic opening up of a full colour spectrum from incoming light. This ability to broaden out as signals propagate through the network reflects a much wider expansion of distributed listening and sounding that is made possible in the context of telematic musicking. It occurred to me recently that, as of early 2023 I’ve engaged this medium now for 20 years, with an ear towards exploring the myriad ways that the shared real/virtual and nowhere/everywhere site of performance can act as both a point of convergence towards a singular locus of performative attention -- yet also a dispersive prism, reflecting individual voices and the preservation of creative agencies of every performer."
@@ -72,7 +72,7 @@ Kristian explored unorthodox techniques for acoustic __Guitar__, laying the inst
 
 # Getting Technical
 
-In this concert, we transmitted audio using a network music performance software, [JackTrip](https://www.jacktrip.org/). We connected to a jacktrip server set up by the team around Douglas Van Nort with one of the [MCT's portable LoLa kits](https://github.com/MCT-master/NMP-Portable-Kits/wiki).
+In this concert, we transmitted audio using a network music performance software, [JackTrip](https://www.jacktrip.org/). We connected to a jacktrip server set up by the team around Douglas Van Nort with one of the [SMC's portable LoLa kits](https://github.com/SMC-master/NMP-Portable-Kits/wiki).
 
 ## Audio Engineering
 Audio routing for this project meant allowing for a FOH stereo mix for our local audience, three foldback mixes for Oslo-based musicians, as well as sending a stereo sub-mix of our instruments to the Jacktrip server. The plot below shows the routing used.
@@ -97,7 +97,7 @@ To follow the conductor and the live score, we placed two monitors on the stage 
 
 # Latency Measurements
 
-Measurements have been done beforehand on two different jacktrip servers with a loopback. We used the same setup we had been utilizing for other [concerts](https://github.com/MCT-master/portal-wiki/wiki/2023-Mid-Semester-Networked-Music-Performance-in-Salen). Server 1 had a Roundtrip latency time of 188ms whereas server 2 came in on 261ms RTT. High latency times were expected and did not really affect performance since the concert and musical pieces were planned to be a latency-accepting. The final concert happened over server 1 with a global sampling rate of 44.1 kHz and a buffersize of 256 ms.
+Measurements have been done beforehand on two different jacktrip servers with a loopback. We used the same setup we had been utilizing for other [concerts](https://github.com/SMC-master/portal-wiki/wiki/2023-Mid-Semester-Networked-Music-Performance-in-Salen). Server 1 had a Roundtrip latency time of 188ms whereas server 2 came in on 261ms RTT. High latency times were expected and did not really affect performance since the concert and musical pieces were planned to be a latency-accepting. The final concert happened over server 1 with a global sampling rate of 44.1 kHz and a buffersize of 256 ms.
 
 # Reflections
 

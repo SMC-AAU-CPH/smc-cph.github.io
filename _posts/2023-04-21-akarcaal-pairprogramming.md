@@ -47,7 +47,7 @@ Here you can take a look at the video I created in order to explain how pair pro
 
 <figure>
   <video style="float: none" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2023_23_04_akarcaal_pairprogramming_video.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2023_23_04_akarcaal_pairprogramming_video.mp4" type='video/mp4'>
   </video>
   <figcaption>Video of "How to do Pair Programming Over Network"</figcaption>
 </figure>

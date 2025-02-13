@@ -90,4 +90,4 @@ Take a look at a brief performance using _Strung Along_ here:
 # See Also
 
 - The codebase and implementation instructions for _Strung Along_ are available on GitHub [here](https://github.com/hathuwic/StrungAlong).
-- I also built _CordChord_, a digital string instrument inspired by the bow tracking approach used in this thesis. You can read about it [here](https://mct-master.github.io/interactive-music/2023/12/01/jackeh-cordchord.html).
+- I also built _CordChord_, a digital string instrument inspired by the bow tracking approach used in this thesis. You can read about it [here](https://SMC-master.github.io/interactive-music/2023/12/01/jackeh-cordchord.html).

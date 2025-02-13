@@ -18,7 +18,7 @@ So what did I actually make? The creation is called WoVi, meaning wind-driven vi
 
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_12_12_jakobhoydal_wovigif.gif"  width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_12_jakobhoydal_wovigif.gif"  width="auto" />
 </figure>
 
 ## Construction
@@ -92,7 +92,7 @@ The amplitude control is not perfect either. Does not only react to wind, but al
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_12_08_jakobhoydal_wovivideo.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_12_08_jakobhoydal_wovivideo.mp4" type='video/mp4'>
   </video>
 </figure>
 

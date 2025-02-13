@@ -5,7 +5,7 @@ date: 2021-12-14 12:10:00 +0200
 categories: masters-thesis
 author: Mari Lesteberg
 image: /assets/image/2021_12_13_fractionmari_comparison2.png
-keywords:  MCT, Master's thesis, Audio programming, HCI, Accessibility, Music Therapy, JavaScript
+keywords:  SMC, Master's thesis, Audio programming, HCI, Accessibility, Music Therapy, JavaScript
 excerpt: "Most of us will never be professional musicians, even though we have the musicality and the motor ability to achieve it..."
 ---
 
@@ -45,12 +45,12 @@ All of this made it clear to me that the world needs a web-based musical instrum
 ## The Diff Cam Engine
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_12_13_fractionmari_diffcam.gif" alt="Diffcam Engine" title="Diffcam Engine" width="70%" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_12_13_fractionmari_diffcam.gif" alt="Diffcam Engine" title="Diffcam Engine" width="70%" />
    <figcaption><i>The Diffcam Engine</i></figcaption>
 </figure>
 
 
-[The Diff Cam Engine](http://diffcam.com/) is an open source core engine that enables motion detecting in JavaScript, created by [Will Boyd](https://codersblock.com/about/). As I had learned audio programming in JavaScript through one of the [MCT courses](https://mct-master.github.io/sound-programming/2019/02/11/SpaghettiPlayer.html), I decided to start on the path of creating motion detecting web-apps for musicking.  Very quickly I found out how to use this technology to create sound:
+[The Diff Cam Engine](http://diffcam.com/) is an open source core engine that enables motion detecting in JavaScript, created by [Will Boyd](https://codersblock.com/about/). As I had learned audio programming in JavaScript through one of the [SMC courses](https://SMC-master.github.io/sound-programming/2019/02/11/SpaghettiPlayer.html), I decided to start on the path of creating motion detecting web-apps for musicking.  Very quickly I found out how to use this technology to create sound:
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OK11-359A4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>  </iframe> <figcaption> <i>The very first motion capture musical instrument attempt</i> </figcaption>  

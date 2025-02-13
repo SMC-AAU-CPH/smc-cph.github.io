@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MCT Heroes"
+title:  "SMC Heroes"
 date:   2018-11-14 14:23
 categories: interactive-music
 author: Eirik Dahl, Karolina Jawad

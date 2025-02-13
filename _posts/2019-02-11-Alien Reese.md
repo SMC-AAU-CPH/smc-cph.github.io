@@ -131,7 +131,7 @@ This shows the three mappings to the mouse. Osc1 pitch is affected by the x – 
 
 ### Event - Space (Audio Player)
 
-This is an audio player that runs alongside the main patch, routed through volume 3 to the output. Although one of the undeveloped parts of the code, it allowed some creativity in adding recorded sound, and can be experimented further at a later date (a beat possibly?) It was adapted from the code given in MCT repository.
+This is an audio player that runs alongside the main patch, routed through volume 3 to the output. Although one of the undeveloped parts of the code, it allowed some creativity in adding recorded sound, and can be experimented further at a later date (a beat possibly?) It was adapted from the code given in SMC repository.
 
 
 
@@ -213,7 +213,7 @@ Note Frequencies
 
 <http://pages.mtu.edu/~suits/notefreqs.html>
 
-MCT Github
+SMC Github
 
 <https://github.com/axambo/sound-programming-workshop/>
 

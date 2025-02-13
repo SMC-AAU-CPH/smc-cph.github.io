@@ -39,11 +39,11 @@ Our main problem was maintaining stable latency. We initially planned to use Son
 
 After these confusing results, we decided to conduct our performance with the LOLA software on the Portal and Videoroom LOLA computers instead.* Then we were able to obtain a stable latency of 21 ms - a good baseline from which to manually add latency in order to test the MSA and LBA approaches.
 
-<sub>* We experienced these issues when using SonoBus to record latency measurements despite entirely manual settings, therefore we cannot recommend it for that specific purpose. However, both ourselves and other MCT students have found SonoBus ideal for quickly setting up high-quality network rehearsals, performances, and recordings, therefore we can easily recommend SonoBus as a user-friendly solution for those purposes.</sub>
+<sub>* We experienced these issues when using SonoBus to record latency measurements despite entirely manual settings, therefore we cannot recommend it for that specific purpose. However, both ourselves and other SMC students have found SonoBus ideal for quickly setting up high-quality network rehearsals, performances, and recordings, therefore we can easily recommend SonoBus as a user-friendly solution for those purposes.</sub>
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_02_16_aysimab_latency_assignment.jpeg?alt=original" width="75%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_02_16_aysimab_latency_assignment.jpeg?alt=original" width="75%" />
    <figcaption>Kristian and Jack performing together with increased latency between the Portal and the Videoroom.</figcaption>
 </figure>
 

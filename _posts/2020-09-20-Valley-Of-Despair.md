@@ -11,11 +11,11 @@ excerpt: "Well, that was fun."
 
 ## The Setup:
 
-Well, that was fun. *Relax and have a good summer!* they told us. And so we did. The trauma and triumph of the first year of MCT slowly faded as we road-tripped, climbed mountains, ran rivers, and leaped naked into fjords. We were children then, careless like the wind, our sunburnt faces besmirched with brunost and bringebær jam as we grilled waffles in the park (who does that?!) and washed them down with can after can after can of Who Cares pilsner.
+Well, that was fun. *Relax and have a good summer!* they told us. And so we did. The trauma and triumph of the first year of SMC slowly faded as we road-tripped, climbed mountains, ran rivers, and leaped naked into fjords. We were children then, careless like the wind, our sunburnt faces besmirched with brunost and bringebær jam as we grilled waffles in the park (who does that?!) and washed them down with can after can after can of Who Cares pilsner.
 
 And then, we came back.
 
-MCT4047 is a tough course. There’s no sugarcoating it. Machine learning is a hard, bitter biscuit, dipped in cold data gravy. Eat and despair, ye who dare tread these shadowed neural pathways.
+SMC4047 is a tough course. There’s no sugarcoating it. Machine learning is a hard, bitter biscuit, dipped in cold data gravy. Eat and despair, ye who dare tread these shadowed neural pathways.
 
 Or, maybe not. If you have a good background in maths, some programming skill, and a fully-functioning frontal lobe, it’s easy! How nice for you. As for me, all I can say is time will beat you like a rented mule. Add in a deep suspicion of robits and a pernicious latent Luddism in general, and I’m pretty much that old guy at the park shouting at the kids to get their damn computers off my park bench.
 
@@ -24,9 +24,9 @@ Or, maybe not. If you have a good background in maths, some programming skill, a
 <figcaption><strong>figure 1: Dunning-Kruger Curve</strong></figcaption>
 </figure>
 
-Figure one maps my approximate location on the Dunning-Kruger curve. I got over the peak of 'Mount Stupid' quickly, once the first week of MCT disabused me of any notions of expertise, and plummeted straight into the Valley of Despair. It’s hard to get out of that valley, especially without wheels (brains), but I’m doing my damndest, and occasionally some progress is made.  
+Figure one maps my approximate location on the Dunning-Kruger curve. I got over the peak of 'Mount Stupid' quickly, once the first week of SMC disabused me of any notions of expertise, and plummeted straight into the Valley of Despair. It’s hard to get out of that valley, especially without wheels (brains), but I’m doing my damndest, and occasionally some progress is made.  
 
-At least MCT4047 is well-documented, with extensive preparatory readings and hours and hours of video tutorials. Enough to keep you busy for years.
+At least SMC4047 is well-documented, with extensive preparatory readings and hours and hours of video tutorials. Enough to keep you busy for years.
 
 Except there’s a catch: you only have two weeks to prepare. Hahaha! Good luck, suckers!
 

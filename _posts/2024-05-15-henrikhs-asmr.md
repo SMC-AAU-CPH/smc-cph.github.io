@@ -50,7 +50,7 @@ The spatial orientations were resembled as monophonic or stereophonic, while inc
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2024_05_15_henrikhs_mir_m.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_mir_m.mp3" type="audio/mpeg">
     Error loading audio content
   </audio>
   <figcaption>MIR Monophonic</figcaption>
@@ -58,7 +58,7 @@ The spatial orientations were resembled as monophonic or stereophonic, while inc
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2024_05_15_henrikhs_mir_s.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_mir_s.mp3" type="audio/mpeg">
     Error loading audio content
   </audio>
   <figcaption>MIR Stereophonic</figcaption>
@@ -67,7 +67,7 @@ The spatial orientations were resembled as monophonic or stereophonic, while inc
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2024_05_15_henrikhs_ran_m.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_ran_m.mp3" type="audio/mpeg">
     Error loading audio content
   </audio>
   <figcaption>RAN Monophonic</figcaption>
@@ -75,7 +75,7 @@ The spatial orientations were resembled as monophonic or stereophonic, while inc
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2024_05_15_henrikhs_ran_s.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_ran_s.mp3" type="audio/mpeg">
     Error loading audio content
   </audio>
   <figcaption>RAN Stereophonic</figcaption>
@@ -84,7 +84,7 @@ The spatial orientations were resembled as monophonic or stereophonic, while inc
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2024_05_15_henrikhs_fm_m.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_fm_m.mp3" type="audio/mpeg">
     Error loading audio content
   </audio>
   <figcaption>FM Monophonic</figcaption>
@@ -92,7 +92,7 @@ The spatial orientations were resembled as monophonic or stereophonic, while inc
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2024_05_15_henrikhs_fm_s.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_fm_s.mp3" type="audio/mpeg">
     Error loading audio content
   </audio>
   <figcaption>FM Stereophonic</figcaption>

@@ -6,7 +6,7 @@ categories: applied-project
 author: Jackson Goode, Paul Koenig, Tom Ignatius
 image: /assets/image/2020_05_03_jacksong_baby-spa.jpg
 excerpt: "For the spring applied project we created music for a hardware specific device to relax colicy babies in a collaboration with our external partner, Dream Nest. Our final product is a six track EP, engineered to put your baby to sleep (we hope!)"
-Keywords: MCT, Dream Nest, sound engine
+Keywords: SMC, Dream Nest, sound engine
 ---
 The Dream Nest is a therapeutic product that uses low-frequency sound waves to sooth infants that suffer from various colic or stress related problems, in particular those associated with pre-term birth. The "nest" acts as a crib where sound therapy hopes to ease the tension of these babies. In addition to the low-frequency sound stimulation, our external partner wanted music elements. 
 

@@ -4,7 +4,7 @@ title: "Integrating JackTrip and Sonobus in a DAW"
 date: 2023-04-23
 categories: networked-music
 author: Fabian Stordalen
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_22_fabianst_blogcover.png?alt=original
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_22_fabianst_blogcover.png?alt=original
 keywords: portal, audio, latency, DAW, network music, jacktrip, Sonobus
 excerpt: "How you can integrate both JackTrip and Sonobus into your DAW"
 ---
@@ -20,7 +20,7 @@ To setup JackTrip in your Daw you will need to download [JACK](https://jackaudio
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_22_fabianst_jackrouter.png?alt=original" width="90%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_22_fabianst_jackrouter.png?alt=original" width="90%" />
    <figcaption></figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ The next step is to start a JackTrip server. As soon as a connection is establis
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_22_fabianst_routing.png?alt=original" width="90%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_22_fabianst_routing.png?alt=original" width="90%" />
    <figcaption></figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ To start a session, click on the connect button. If you want to create a session
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_22_fabianst_sonobus.png?alt=original" width="90%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_22_fabianst_sonobus.png?alt=original" width="90%" />
    <figcaption></figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ Since Sonobus is running as a VST it means we’re able to run multiple instance
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_22_fabianst_returntracksetupsonobus.png?alt=original" width="90%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_22_fabianst_returntracksetupsonobus.png?alt=original" width="90%" />
    <figcaption></figcaption>
 </figure>
 

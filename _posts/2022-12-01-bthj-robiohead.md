@@ -29,7 +29,7 @@ On the surface of one half of the sphere could be metal, touch sensitive plates 
 
 The backside of the sphere could be reserved for evolutionary interactions, where individual sound genes, local or remote, can be paired and evolved while interacting with sounds from newly developed individuals on the tetromino-chord side. The following sketch depicts the tetromino-chord side and the evolutionary side with buttons for selecting and favoriting sound-genes, which may not be a very novel interface. In any case there was a struggle in coming up with a good representation for that interaction with clear affordances.
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image8.png)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image8.png)
 
 The tuning-lattice navigation with tetromino-chords is inspired by this video: [https://youtu.be/CSL\_Axohw94](https://youtu.be/CSL_Axohw94)
 
@@ -41,23 +41,23 @@ The tuning-lattice navigation with tetromino-chords is inspired by this video: [
 
 With that sphere-based design in mind, observing a robot head drawn by a nine-year-old on a misty glass lead to that form being considered as a basis for the IMS design: It may offer the desired invitation to play and discovery, as it looks intriguing and a bit playful. The box shape might also be easier to work with than a sphere, for an early prototype:
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image12.jpg)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image12.jpg)
 
 Discussing this with the nine-year-old prompted him to sketch out the ideas:
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image5.jpg)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image5.jpg)
 
-Observing a decades-old Desigual towel, during a bathroom break from the impromptu design session with the nine-year-old, offered new input to a possible design direction for the robot-head. The straight and diagonal lines for the mouth and nose, on the oddly designed head of that towel decoration, were somehow associated with the soft membrane potentiometer in the MCT4054 hardware kit.
+Observing a decades-old Desigual towel, during a bathroom break from the impromptu design session with the nine-year-old, offered new input to a possible design direction for the robot-head. The straight and diagonal lines for the mouth and nose, on the oddly designed head of that towel decoration, were somehow associated with the soft membrane potentiometer in the SMC4054 hardware kit.
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image11.jpg)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image11.jpg)
 
 * * *
 
 Hearing of those associations, the nine-year-old was quick to whip up new sketches:
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image2.png)![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image3.png)![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image7.png)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image2.png)![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image3.png)![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image7.png)
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image9.png)![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image1.png)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image9.png)![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image1.png)
 
 Thinking of the upcoming winter solstice celebrations, the design associate came up with the concept of a beard and a pointy cap, where the former could serve as a tilting support and the latter as a cover for any connectivity and charging ports.
 
@@ -69,7 +69,7 @@ Alternative mapping might have the shaking-gestures responsible for triggering a
 
 The design sketches from the nine-year-old associate may require 3D printing. Should time not allow such materialisation has not yet been realised, where a cardboard box currently serves as an initial substitute:
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image4.jpg)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image4.jpg)
 
 ### Current prototype
 
@@ -77,9 +77,9 @@ Of the possible sensor combinations considered during the second concept iterati
 
 While not exactly adhering to the initial design constraint of child safe robustness, without any parts sticking out, it is a start:
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image10.jpg)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image10.jpg)
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image6.jpg)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image6.jpg)
 
 ### Testing and performing
 
@@ -87,7 +87,7 @@ While not exactly adhering to the initial design constraint of child safe robust
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A1m3Xp4wVgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[Live performance with Robiohead](https://youtu.be/cHC35p4oBHE) in [Salen](https://www.hf.uio.no/imv/om/rom-og-utstyr/salen/) after an [MCT4054](https://www.uio.no/studier/emner/hf/imv/MCT4054/) exam, on Monday December 12, 2022:
+[Live performance with Robiohead](https://youtu.be/cHC35p4oBHE) in [Salen](https://www.hf.uio.no/imv/om/rom-og-utstyr/salen/) after an [SMC4054](https://www.uio.no/studier/emner/hf/imv/SMC4054/) exam, on Monday December 12, 2022:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cHC35p4oBHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -97,9 +97,9 @@ While not exactly adhering to the initial design constraint of child safe robust
 
 Alexander Szorkovszky trying out the Robiohead:
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image13.jpg)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image13.jpg)
 
-![](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022-12-01_bthj_robiohead_image14.jpg)
+![](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022-12-01_bthj_robiohead_image14.jpg)
 
 ### Open source
 

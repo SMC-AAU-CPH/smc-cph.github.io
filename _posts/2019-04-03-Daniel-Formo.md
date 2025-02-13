@@ -5,7 +5,7 @@ date: 2019-04-03 22:00:00 +0200
 categories: sonification
 author: Jørgen Varpe
 image: /assets/image/2019_04_03_varpe_Daniel_Formo.jpg   
-excerpt: "As a part of a three-week workshop in the course Sonification and Sound design at MCT, we were lucky to have Daniel Formo as a guest speaker."
+excerpt: "As a part of a three-week workshop in the course Sonification and Sound design at SMC, we were lucky to have Daniel Formo as a guest speaker."
 Keywords: Daniel Formo, The Orchestra of Speech, sonification, speech and music
 ---
 

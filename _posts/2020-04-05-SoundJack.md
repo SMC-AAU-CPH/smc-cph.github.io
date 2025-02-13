@@ -6,7 +6,7 @@ categories: networked-music
 author: Aleksander Tidemann, Rayam Luna, Thibault Jaccard
 image: /assets/image/2020_04_05_aleksati_soundjack_logo.jpg
 excerpt: "SoundJack is a p2p browser-based low-latency telematic communications system."
-Keywords: MCT, Portal, SoundJack, Corona
+Keywords: SMC, Portal, SoundJack, Corona
 ---
 
 [SoundJack](https://www.soundjack.eu/index.php) can be described as an ongoing scientific project, created and maintained by Alexander Cârot. On their webpage, SoundJack describes their services as being a browser-based low-latency communications system that provides quality and latency relevant control to the user. In out eyes, this is a pretty spot-on description. The browser UI-implementation, p2p system configuration, up to 8-channel audio support, video, and general customizability makes SoundJack a powerful and easy software to use.

@@ -5,7 +5,7 @@ date: 2021-05-15 15:37:00 +0200
 categories: masters-thesis
 author: Paul Koenig
 image: /assets/image/2021_05_15_paulgk_IntroducingPP.png
-keywords:  MCT, Master's thesis, TEL, International aid, Bangladesh, STS, development studies, education studies,
+keywords:  SMC, Master's thesis, TEL, International aid, Bangladesh, STS, development studies, education studies,
 excerpt: "Working toward a cogent ecological framework for technological-aid development, or: We are our technologies, they are Us"
 ---
 
@@ -42,7 +42,7 @@ The objective of this study was to research and design a distance-teaching syste
 
 ## Background
 
-Early in 2020 I re-connected with Troy Anderson, an old high-school friend of mine and the founder of Speak Up for the Poor. I was curious to know if there was something I could do for Speak Up that was related to MCT and my not-yet-determined master’s thesis. We talked about a variety of approaches but what really stuck was Troy’s wish for some way to help his students, 1400 girls in 30 different villages, with their English homework. Passing the national English exam is essential to being allowed to progress to higher education, but there is a lack of good English tutors in Bangladesh, particularly in rural areas. Troy wanted to be able to conduct a weekly lecture, based on the current chapter in the national English textbook, from his office in Khulna and broadcast it out to Speak Up’s “learning centers” in all 30 villages.
+Early in 2020 I re-connected with Troy Anderson, an old high-school friend of mine and the founder of Speak Up for the Poor. I was curious to know if there was something I could do for Speak Up that was related to SMC and my not-yet-determined master’s thesis. We talked about a variety of approaches but what really stuck was Troy’s wish for some way to help his students, 1400 girls in 30 different villages, with their English homework. Passing the national English exam is essential to being allowed to progress to higher education, but there is a lack of good English tutors in Bangladesh, particularly in rural areas. Troy wanted to be able to conduct a weekly lecture, based on the current chapter in the national English textbook, from his office in Khulna and broadcast it out to Speak Up’s “learning centers” in all 30 villages.
 
 Some type of videoconferencing solution is perhaps the obvious answer to this problem, but there are many factors inhibiting the success of information and communication technologies (ICT) in rural Bangladesh. Thus, the idea of the Portable Portal (PP) was born. Initial parameters we discussed for the device were as follows:
 
@@ -55,9 +55,9 @@ As I read further into the literature surrounding technological-aid intervention
 
 <br>
 
-## Relevance to MCT
+## Relevance to SMC
 
-In MCT we focus on video-communication technology primarily as it relates to music. However, the applications go well beyond music, as we are all quite aware of from the last year and a half that we’ve spend on Zoom. While the focus of this thesis is not explicitly on telematic music, networked musical collaboration, or music education, the Portable Portal could certainly be used for these ends, particularly in rural and remote areas that suffer from poor power and internet infrastructure. The reason that it is not the focus of this thesis is simply that online musical collaboration is not a major area of concern for Speak Up For The Poor, whereas passing national English language exams is. It’s felt that the importance of this mission overshadows the potential musical uses of the PP, though any musical applications are, of course, a welcome side-effect.
+In SMC we focus on video-communication technology primarily as it relates to music. However, the applications go well beyond music, as we are all quite aware of from the last year and a half that we’ve spend on Zoom. While the focus of this thesis is not explicitly on telematic music, networked musical collaboration, or music education, the Portable Portal could certainly be used for these ends, particularly in rural and remote areas that suffer from poor power and internet infrastructure. The reason that it is not the focus of this thesis is simply that online musical collaboration is not a major area of concern for Speak Up For The Poor, whereas passing national English language exams is. It’s felt that the importance of this mission overshadows the potential musical uses of the PP, though any musical applications are, of course, a welcome side-effect.
 
 <br>
 

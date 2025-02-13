@@ -13,7 +13,7 @@ Brought to you by Aleks 'Ack-Ack' Tidemann and Paul 'Ray Gun' Koenig
 
 ## The Dramaturgy, if you will
 
-For MCT4044 (Spatial Audio), we were tasked with the . . . task of designing, recording and mixing a spatialized audio composition. The composition was expected to have a clear dramaturgy, a unifying and coherent concept and realization, loads of action, excitement, and a mind-blowing climax that will simply blast your socks into next week. (I'm paraphrasing the requirements here.)
+For SMC4044 (Spatial Audio), we were tasked with the . . . task of designing, recording and mixing a spatialized audio composition. The composition was expected to have a clear dramaturgy, a unifying and coherent concept and realization, loads of action, excitement, and a mind-blowing climax that will simply blast your socks into next week. (I'm paraphrasing the requirements here.)
 
 Shamelessly ripping off the 1996 cult-classic film 'Mars Attacks!', we decided to tell our harrowing story-in-sound as a dramatic tale of alien invasion and eventual repulsion.
 

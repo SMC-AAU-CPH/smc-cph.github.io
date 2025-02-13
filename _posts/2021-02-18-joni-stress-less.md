@@ -109,7 +109,7 @@ We then studied the envelope of our acoustic model (Figure 7). For the time bein
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_02_19_joni_heartbeat_real.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_02_19_joni_heartbeat_real.wav" type="audio/mpeg">
     Real Heart Beat
   </audio>
   <figcaption><center>Real heartbeats</center></figcaption>
@@ -133,7 +133,7 @@ The result of the demo (Figure 9) resembles the real heartbeat to some extent, b
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_02_19_joni_heartbeat_simulation.wav
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_02_19_joni_heartbeat_simulation.wav
 " type="audio/mpeg">
     Song One
   </audio>

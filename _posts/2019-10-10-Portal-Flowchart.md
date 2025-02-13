@@ -5,8 +5,8 @@ date: 2019-10-10 16:00:00 +0200
 categories: networked-music
 author: Aleksander Tidemann, Jackson Goode, Paul Koenig, Tom Ignatius
 image: /assets/image/2019_10_10_stefanof_flow.png
-excerpt: 'The MCT portal has been subject to many configurations over the last couple of months. In this post, we explore how flowcharts may help us see a brighter tomorrow (we need as much light as we can get here).'
-Keywords: MCT Portal, signal flow
+excerpt: 'The SMC portal has been subject to many configurations over the last couple of months. In this post, we explore how flowcharts may help us see a brighter tomorrow (we need as much light as we can get here).'
+Keywords: SMC Portal, signal flow
 ---
 
 ## Week 41 in the portal, Group C
@@ -15,7 +15,7 @@ Keywords: MCT Portal, signal flow
 
 A rigid signal flowchart is an absolute must in any complex system. These charts help systemize, organize and streamline our interactions with the system. Ideally, a detailed flowchart will helps us save time setting up before class and enable more students to orient, use and explore the portal features. Because of our endless adjustments, 5-minute fixes, and general non-sense that drove Iggy to push a preparedness test upon us, we decided it was about time for an up-to-date flow chart to help us on the way to portal stardom. Or at least a setup that we can turn on and start class with.
 
-# The MCT portal chart
+# The SMC portal chart
 
 In our quest for the perfect chart, we agreed that detailed connection specifications and a good design is key. Therefore, we decided to center the flowchart around the Midas mixer and LoLa PC, since these two machines serve as the central hub of our system. While this chart is specific for the UiO setup here, there are minor differences on the Trondhiem side and perhaps they would be able to make a chart using this template.
 
@@ -37,6 +37,6 @@ Eventually, (we hope and pray) we might have a system that begins with an overhe
 
 # Summary
 
-We hope that these flowcharts can be used as manuals for setting up a default MCT portal rig, troubleshooting, as well as serve other educational purposes in our cross campus classroom. We also hope that our charts can help future MCT students become comfortable with the portal and inspire them to update the system in various ways.
+We hope that these flowcharts can be used as manuals for setting up a default SMC portal rig, troubleshooting, as well as serve other educational purposes in our cross campus classroom. We also hope that our charts can help future SMC students become comfortable with the portal and inspire them to update the system in various ways.
 
 Copy our charts, both the [Portal chart](https://www.lucidchart.com/invitations/accept/5c3deb5f-538c-4ddb-89ac-cf99db701ad0) and the [LoLa and Midas chart](https://www.lucidchart.com/invitations/accept/f53eb564-bcef-4da7-92ad-51e980891471).

@@ -18,7 +18,7 @@ The js file is included as a script to the `_layouts/post.html`, so it runs ever
 
 There is also a series of CSS classes in `assets/main.scss` associated with the slideshow implimentation.
 
-for full documentation, visit the Quick Guide in the https://github.com/MCT-master/mct-master.github.io readme
+for full documentation, visit the Quick Guide in the https://github.com/SMC-master/SMC-master.github.io readme
 
 ## waveform.js
 
@@ -28,7 +28,7 @@ The js file, + the waveSurfer js library, is included in `_layoyts/post.html`, s
 
 There is also a series of CSS classes in `assets/main.scss` associated with the slideshow implimentation.
 
-for full documentation, visit the Quick Guide in the https://github.com/MCT-master/mct-master.github.io readme
+for full documentation, visit the Quick Guide in the https://github.com/SMC-master/SMC-master.github.io readme
 
 ## hamburger-nav.js
 
@@ -42,7 +42,7 @@ The js file is included in `_layouts/header.html`. The btn-dropdown <a></a> elem
 
 ## pre-commit
 
-`pre-commit` is a git hook (script) that prevent commit of files violating the following MCT blog policies: whitespaces in filename, and is file size exceeding 300BB. The script has to be manually copied (and not moved) to the local hidden folder .git/hooks and ensure that is executable (command 'chmod +x pre-commit') after cloning the repository.
+`pre-commit` is a git hook (script) that prevent commit of files violating the following SMC blog policies: whitespaces in filename, and is file size exceeding 300BB. The script has to be manually copied (and not moved) to the local hidden folder .git/hooks and ensure that is executable (command 'chmod +x pre-commit') after cloning the repository.
 
 ## du.exe
 

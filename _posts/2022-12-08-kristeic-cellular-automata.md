@@ -144,7 +144,7 @@ CA module and parts of other patches play together. Check my [github](https://gi
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_12_07_kristeic_presentation.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_12_07_kristeic_presentation.mp4" type='video/mp4'>
   </video>
 </figure>
 

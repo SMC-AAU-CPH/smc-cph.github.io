@@ -11,14 +11,14 @@ excerpt: "Our spatial audio composition highlighted the ways audio can represent
 
 # A Composition 
 
-The MCT4044 course happened right in the middle of an increasing lockdown of the society due to the corona virus pandemic, and just the day before the workshop weeks began, the whole structure of the course was turned upside down. We were not supposed to be in the portal, then we were supposed to, but in smaller groups, and the requirements and due dates of the assignments were changed. In the middle of all of this we were supposed to collaborate on a huge spatial audio composition, putting our hands on the recording equipment (“but is it safe to touch it?”), but also follow the intensive workshop that really was a handful for some of us (4-5 hours in front of your laptop screen everyday), and learn how to use the DAW Reaper (the challenge occurs when you only have one screen on your laptop and you try to follow a course on Zoom, try it!).. To some of us, the whole situation was severely chaotic and confusing, and when some of us got sick ("This must be corona!") on top of all of this: it wasn’t really making things easier.
+The SMC4044 course happened right in the middle of an increasing lockdown of the society due to the corona virus pandemic, and just the day before the workshop weeks began, the whole structure of the course was turned upside down. We were not supposed to be in the portal, then we were supposed to, but in smaller groups, and the requirements and due dates of the assignments were changed. In the middle of all of this we were supposed to collaborate on a huge spatial audio composition, putting our hands on the recording equipment (“but is it safe to touch it?”), but also follow the intensive workshop that really was a handful for some of us (4-5 hours in front of your laptop screen everyday), and learn how to use the DAW Reaper (the challenge occurs when you only have one screen on your laptop and you try to follow a course on Zoom, try it!).. To some of us, the whole situation was severely chaotic and confusing, and when some of us got sick ("This must be corona!") on top of all of this: it wasn’t really making things easier.
 
 So the main theme behind our composition was inspired by this stressful situation, and we decided that we wanted to explore the search for “peace and calmness in a chaotic world”. 
 
 ## Listen to our track
 <figure style="width: 80%;">
     <audio controls style="width: 100%; border-radius: 16px;">
-        <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2020_11_16_jacksong_peace_in_chaos_binaural.mp3" type="audio/mpeg">
+        <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_11_16_jacksong_peace_in_chaos_binaural.mp3" type="audio/mpeg">
     </audio>
     <figcaption>Beginning with Thomas, then Jackson and finishing with Mari</figcaption>
 </figure>
@@ -117,6 +117,6 @@ Of course Corona restrictions were the major limitations in our collaboration. A
 ### Our final presentation can be viewed below
 
 <figure align="middle">
-    <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/document/2020_11_16_jacksong_spatial_audio presentation.pdf" width="800px" height="460px" allowfullscreen></iframe>
+    <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2020_11_16_jacksong_spatial_audio presentation.pdf" width="800px" height="460px" allowfullscreen></iframe>
     <figcaption>Our presentation on audio</figcaption>
 </figure>

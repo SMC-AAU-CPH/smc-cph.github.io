@@ -9,14 +9,14 @@ excerpt: "Learn about my adventures in designing and playing a wearable instrume
 keywords: interactive music systems, DMI, design, machine learning
 ---
 
-Hand-based motion-focused music systems like an [earlier version of Xyborg](https://mct-master.github.io/motion-capture/2023/05/08/kristeic-xyborg-MoCap-project.html) quickly became my field of interest during my studies at IMV. There is just something ideologically captivating about freeing myself from standing in front of a keyboard looking like I am google searching something. Prototyping instruments involving some sort of data glove has a long history dating back to the 1980s. One of these early designs piqued my interest in particular: Michel Waiswisz' first iteration of ["The Hands"](https://cracklemusic.org/TheHands.html) clearly influenced Xyborg's design. I wanted to see how far I could take this first iteration concept while incorporating my own ideas, dependencies, and, well, limited knowledge. Really, my thought in the beginning was: "Can I play a synthesizer strapped to my hands while walking around?
+Hand-based motion-focused music systems like an [earlier version of Xyborg](https://SMC-master.github.io/motion-capture/2023/05/08/kristeic-xyborg-MoCap-project.html) quickly became my field of interest during my studies at IMV. There is just something ideologically captivating about freeing myself from standing in front of a keyboard looking like I am google searching something. Prototyping instruments involving some sort of data glove has a long history dating back to the 1980s. One of these early designs piqued my interest in particular: Michel Waiswisz' first iteration of ["The Hands"](https://cracklemusic.org/TheHands.html) clearly influenced Xyborg's design. I wanted to see how far I could take this first iteration concept while incorporating my own ideas, dependencies, and, well, limited knowledge. Really, my thought in the beginning was: "Can I play a synthesizer strapped to my hands while walking around?
 
 ## From Paper to Prototype
 
 My system consists of two wooden frames, two [accelerometer](https://learn.sparkfun.com/tutorials/adxl337-and-adxl377-accelerometer-hookup-guide/all) sensors, sixteen DIY capacitive sensors (eight for each hand) and four buttons + LED's. All of this is connected via solid core wire with the brain of the system: my pure data sound patches run on a hardware system called [Bela](https://learn.bela.io/using-bela/about-bela/what-is-bela/) - a tiny powerful computer specifically designed for musical purposes. The Bela sits inside a plastic casing and is powered by a power bank. Everything is strapped around the waist. You are fully power-independent and mobile while wearing the instrument. 
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_4_kristeic_xyborg.png?alt=original" width="100%">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_4_kristeic_xyborg.png?alt=original" width="100%">
   <figcaption>
     <span class="caption">How to wear Xyborg + Model shots</span>
   </figcaption>

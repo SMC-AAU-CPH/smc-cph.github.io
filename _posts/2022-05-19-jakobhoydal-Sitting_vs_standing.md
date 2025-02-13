@@ -38,7 +38,7 @@ First we have to ask the question what an optimal pose for a musician is. The ea
 </figure>
 
 
-**The experiment** was conducted in the MCT-portal at the department of musicology at UiO. The participants did not know the cause of the study, and was asked to follow the instructions. Afterwards, they were asked questions about what they find the most comfortable position, and how they think they are affected by their position when playing.
+**The experiment** was conducted in the SMC-portal at the department of musicology at UiO. The participants did not know the cause of the study, and was asked to follow the instructions. Afterwards, they were asked questions about what they find the most comfortable position, and how they think they are affected by their position when playing.
 
 The participants was given Baa Baa Black Sheep as material to play. This was because it was easy to read, and could be played prima vista. The participants was given five minutes to play through the song for the first time. The participants was asked to play in the two different positions, both when playing the given repertoire and improvisation. Between each of the four settings, participants was given a video to watch. This was to reset their state, and become comfortable in seated or standing positions.
 

@@ -4,7 +4,7 @@ title: "Blackhole, Open Source MacOS Virtual Audio Device Solution for Telematic
 date: 2022-11-29 07:00:00 +0200
 categories: networked-music
 author: Masoud Niknafs
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_bbc_masoudn_.jpg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_bbc_masoudn_.jpg
 keywords: virtual audio device, telematic music
 excerpt: "MacOS guide to Blackhole"
 ---
@@ -29,7 +29,7 @@ BlackHole is a modern MacOS virtual audio driver that allows applications to pas
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_1_masoudn.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_1_masoudn.jpg"
       style="max-height:600px; width:auto;" />
 </figure>
 
@@ -44,7 +44,7 @@ Approach 1: Download Installer
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_2_masoudn.jpg" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_2_masoudn.jpg" />
    <figcaption></figcaption>
 </figure>
 
@@ -56,21 +56,21 @@ You must subscribe for the free version
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_3_masoudn.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_3_masoudn.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>Press continue</figcaption>
 </figure>
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_3_masoudn.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_3_masoudn.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>select its destination</figcaption>
 </figure>
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_5_masoudn.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_5_masoudn.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>Finalize your installation</figcaption>
 </figure>
@@ -123,21 +123,21 @@ In this example zoom H5 recorder is used as a sound card in combination with Bla
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_masoudn_8.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_masoudn_8.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>2) You can modify I/O and audio settings of the blackhole here </figcaption>
  </figure>
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_masoudn_9.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_masoudn_9.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>3)	Or create an aggregate device by hitting the plus Icon on the bottom left </figcaption>
 </figure>
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_11_29_bh_masoudn_10.jpg"
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_masoudn_10.jpg"
       style="max-height:600px; width:auto;" />
    <figcaption>4)	You can use this aggregate device in all DAW or Musical programming languages or communication software </figcaption>
 </figure>

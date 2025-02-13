@@ -34,7 +34,7 @@ We used the Next Generation 5G platform by Telenor Research as an autonomous pri
    <figcaption><i>Next Generation 5G platform by Telenor Research</i></figcaption>
 </figure>
 
-To connect, we used a pair of [Huawei H138-380 CPE Pro 3 5G](https://nettbutikk.emcom.no/) routers and [NMP Portable Kits](https://github.com/MCT-master/NMP-Portable-Kits/wiki) to facilitate ultra-low-latency music performances between two remote locations. These portable kits are essentially bundles of high-end software, audio/video peripherals and networking tools that can provide the lowest possible latency on audio/video transmissions over the network.
+To connect, we used a pair of [Huawei H138-380 CPE Pro 3 5G](https://nettbutikk.emcom.no/) routers and [NMP Portable Kits](https://github.com/SMC-master/NMP-Portable-Kits/wiki) to facilitate ultra-low-latency music performances between two remote locations. These portable kits are essentially bundles of high-end software, audio/video peripherals and networking tools that can provide the lowest possible latency on audio/video transmissions over the network.
 
 ### **Audio transmission**
 
@@ -79,7 +79,7 @@ For transmitting video through the network, we used [OBS Ninja](https://vdo.ninj
 
 The mainstage was at the Telenor HQ itself, a tent was set up next to the 5G on wheels trailer.
 
-- [NMP Portable Kit](https://github.com/MCT-master/NMP-Portable-Kits/wiki)
+- [NMP Portable Kit](https://github.com/SMC-master/NMP-Portable-Kits/wiki)
 - A condenser mic for the saxophone (played by Joachim)
 - An SM58 mic to communicate and for announcements
 - A Pair of Genelec 8030a speakers as PA system
@@ -122,7 +122,7 @@ Kristian and Joachim decided to play two jazz standards ([**A Child Is Born**](h
   <figcaption></figcaption>
 </figure>
 
-For Kristian, the tempo and style of song had a direct influence on how much latency could be tolerated. Consequently, difficulties in synchronizing timing for up tempo standards were experienced. This has already been studied in a previous blogpost on [Mastering Latency](https://mct-master.github.io/portal/2022/02/21/joachipo-measuring-latency.html).
+For Kristian, the tempo and style of song had a direct influence on how much latency could be tolerated. Consequently, difficulties in synchronizing timing for up tempo standards were experienced. This has already been studied in a previous blogpost on [Mastering Latency](https://SMC-master.github.io/portal/2022/02/21/joachipo-measuring-latency.html).
 
 In preparation for this NMP, we practiced over the Local Area Network (LAN) at UiO with artificially added latency. For the ballad “A Child Is Born”, it felt quite good to perform even when we had high latency. The more rhythmic “A Night In Tunisia” was a bit harder with high latency, where Kristian had to keep the focus mostly on his own playing so as to not lose the groove.
 
@@ -137,4 +137,4 @@ Furthermore, there was not a significant difference in playing over 5G compared 
 
 **[1]** Carôt, A., & Werner, C. (2009). _Fundamentals and principles of musical telepresence_. Journal of Science and Technology of the Arts, 1(1), 26-37. https://doi.org/10.7559/citarj.v1i1.6
 
-**[2]** Fasciani, S., & Tidermann, A. (2022, April 11). [5G Networked Music Performances - Will It Work?](https://mct-master.github.io/portal/2022/04/11/aleksati-5g-nmp.html)
+**[2]** Fasciani, S., & Tidermann, A. (2022, April 11). [5G Networked Music Performances - Will It Work?](https://SMC-master.github.io/portal/2022/04/11/aleksati-5g-nmp.html)

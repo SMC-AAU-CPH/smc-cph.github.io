@@ -5,7 +5,7 @@ date: 2019-07-14 14:42:00 +0200
 categories: applied-project
 author: Karolina Jawad, Espen Wik, Sepehr Haghighi, Shreejay Shrestha, Jørgen Varpe
 image: /assets/image/2019_06_26_aleksati_fb_header.JPG
-excerpt: 'Seismerssion is the title we gave our Applied Project in the context of the MCT spring semester 2019. This audio-visual installation is dedicated to the widely unknown issue of sound pollution in the ocean. In collaboration with NTNU Oceans, an intership was established to develop and implement a public installation concept for 2 different venues.'
+excerpt: 'Seismerssion is the title we gave our Applied Project in the context of the SMC spring semester 2019. This audio-visual installation is dedicated to the widely unknown issue of sound pollution in the ocean. In collaboration with NTNU Oceans, an intership was established to develop and implement a public installation concept for 2 different venues.'
 Keywords: Art and Science, NTNU Ocean Week 2019, The Big Challenge Festival 2019, NTNU Oceans, Sound Pollution, sonic arts, multi-modality, human computer interaction, marine life, Posyx
 ---
 
@@ -13,7 +13,7 @@ Keywords: Art and Science, NTNU Ocean Week 2019, The Big Challenge Festival 2019
      <iframe width="740" height="522" src="https://www.youtube.com/embed/KhSm62d-Heo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-In the context of the MCT Applied Project 1 our group collaborated with NTNU Oceans to design an Ocean Sensory Room within an internship project. Maria Azucena Gutierrez, our external supervisor tasked us to create an aesthetic environment that optimizes the perception of scientific content. The only requirement we got was to create an immersive space that would result in a public installation for the NTNU Ocean week in May 2019 and for “The Big Challenge” Science Festival in June 2019. We dedicated the Ocean Sensory Room to noise pollution in Norwegian waters, backed up by a scientific report from the Marine Research Institute. There was no explicit mentioning of Acoustic Pollution during the 'Breakfast Ocean Meeting” in January, therefore we decided to raise awareness about the important issue.
+In the context of the SMC Applied Project 1 our group collaborated with NTNU Oceans to design an Ocean Sensory Room within an internship project. Maria Azucena Gutierrez, our external supervisor tasked us to create an aesthetic environment that optimizes the perception of scientific content. The only requirement we got was to create an immersive space that would result in a public installation for the NTNU Ocean week in May 2019 and for “The Big Challenge” Science Festival in June 2019. We dedicated the Ocean Sensory Room to noise pollution in Norwegian waters, backed up by a scientific report from the Marine Research Institute. There was no explicit mentioning of Acoustic Pollution during the 'Breakfast Ocean Meeting” in January, therefore we decided to raise awareness about the important issue.
 
 ## Planning period Seismerssion
 
@@ -76,5 +76,5 @@ Beside the scientific facts on reflection seismology provided by the HFI and the
 As a group we have managed to combine our different knowledge and skills, combining visuals, audio and technology to create an installation that communicated the real-world issue of noise pollution in a new and interesting way. We have worked well together as a team and have divided roles to be able to get the installation finished in time.
 
 <figure>
-<img src="https://raw.githubusercontent.com/MCT-master/mct-master.github.io/master/assets/image/2019_06_26_aleksati_group_1.JPG" width="100%" align="center" />
+<img src="https://raw.githubusercontent.com/SMC-master/SMC-master.github.io/master/assets/image/2019_06_26_aleksati_group_1.JPG" width="100%" align="center" />
 </figure>

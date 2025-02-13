@@ -44,8 +44,8 @@ Originally, we were going to use Pure Data as the tool for analysing the data an
 <figure align="middle">
         <video height="100%" width="100%" controls>
         <source src="https://docs.google.com/uc?export=download&id=1rMDShl5TCwTklu4K-tyXBeZGZY8qcLEK" type="video/mp4">
-        <figcaption><strong>Live-Demo: MCT-Students performing in the Portal and Eigil on the Aircussion instrument</strong></figcaption>        
+        <figcaption><strong>Live-Demo: SMC-Students performing in the Portal and Eigil on the Aircussion instrument</strong></figcaption>        
         Your browser does not support the video tag.
 </video>
 </figure>
-Live-Demo: MCT-Students performing in the Portal and Eigil on the Aircussion instrument
+Live-Demo: SMC-Students performing in the Portal and Eigil on the Aircussion instrument

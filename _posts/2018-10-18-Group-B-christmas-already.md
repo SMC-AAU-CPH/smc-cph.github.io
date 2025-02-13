@@ -4,13 +4,13 @@ title:  "Group B, Christmas already?!"
 date:   2018-10-18 23:30:00 +0200
 categories: interactive-music
 author: Mari Lesteberg, Dmitry Vasilev, Ashane Silva, Shreejay Shreshta, Eigil Aandahl
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2018_10_18_stefanof_giphy.gif
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2018_10_18_stefanof_giphy.gif
 excerpt: "It was a great day today. We played with Arduino kits, made christmas lights and melodies like Twinkle Twinkle Little Star, Super Mario and Imperial March"
 keywords: physical-computing
 ---
 
 <figure>
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2018_10_18_stefanof_giphy.gif" alt="Imperial March on Arduino">
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2018_10_18_stefanof_giphy.gif" alt="Imperial March on Arduino">
 </figure>
 
 It was a great day today. We played with Arduino kits, made christmas lights and melodies like Twinkle Twinkle Little Star, Super Mario and Imperial March:

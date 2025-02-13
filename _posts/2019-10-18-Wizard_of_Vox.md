@@ -6,7 +6,7 @@ categories: interactive-music
 author: Notto Thelle
 image: /assets/image/2019_10_18_aleksati_wow_result.jpg
 excerpt: 'Wizard Of Vox - Wizard Of Vox is a gesture-based speech synthesis system that can be can be “made to speak”'
-Keywords: Interactive Music Systems, Bela, Sensors, Pure Data, IMS, Interactive Music Systems, NIME, MCT
+Keywords: Interactive Music Systems, Bela, Sensors, Pure Data, IMS, Interactive Music Systems, NIME, SMC
 ---
 
 Wizard Of Vox is a gesture-based speech synthesis system. I have been fascinated by the flexibility of the human voice for a long time. The first two formants can be used as parameters that have a large amount of expressiveness, and can be applied to any broadband frequency sound source. Instruments can be “made to speak”. The combination of several sound sources in the human speech production system and several branches of resonant chambers in the oral and nasal cavities are also a fun challenge to model. Artificial voices are always a bit creepy, and this can be used artistically.

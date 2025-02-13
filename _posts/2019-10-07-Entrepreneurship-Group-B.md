@@ -1,14 +1,14 @@
 ---
 layout: post
-title: 'Entrepreneurship for MCT - Group B'
+title: 'Entrepreneurship for SMC - Group B'
 date: 2019-10-07 22:18:00 +0200
 categories: other
 author: Paul Koenig, Gaute Wardenær, Magda Futyma, Ulrik Halmøy
 image: /assets/image/2019_10_07_stefanof_andvari.png
-excerpt: 'Summary of MCT4015 project from group B'
+excerpt: 'Summary of SMC4015 project from group B'
 Keywords: entrepreneurship, Andvarì
 ---
-# MCT4015 Entrepreneurship - Group B
+# SMC4015 Entrepreneurship - Group B
 
 For this class, we were divided into cross-campus groups and presented with a
 “problem” to solve via entrepreneurial methods learned through readings, class

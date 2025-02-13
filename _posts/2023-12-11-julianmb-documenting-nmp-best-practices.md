@@ -4,20 +4,20 @@ title: "Documenting Networked Music Performances: Tips, Tricks and Best Practice
 date: 2023-12-11
 categories: networked-music
 author: Juliana Bigelow
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_11_julianmb_top-image.jpeg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_11_julianmb_top-image.jpeg
 keywords: networked-music-performance, performance-documentation, music-technology
 excerpt: "Effectively documenting networked music performances can lead to better experiences for physical and digital audiences, and your academic explorations."
 ---
 
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_11_julianmb_top-image.jpeg?alt=original" width="80%" style="display: block; margin: auto;"/>
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_11_julianmb_top-image.jpeg?alt=original" width="80%" style="display: block; margin: auto;"/>
 
 At its simplest, a **networked music performance (NMP)** is a musical performance done in real time over a computer network. It enables people to be in two different locations and perform and practice music together synchronously as if they were in the same room. NMPs can connect musicians who would not usually be able to play together, help researchers gain insight into technology and performance interactions, and make concerts more accessible to audiences.
 
 A crucial part of any NMP is documentation. Firstly, for audience members. It is important to ensure every audience member in any location has adequate “documentation” of the parts of the performance they are not physically in the room to see. Secondly, there are considerations to consider if you will document an NMP for academic purposes so that your evidence supports answering your research questions.
 
-If you are an MCT student or a person completing an NMP in an academic setting, you will likely have to consider these factors when deciding the best ways to document your NMP. This blog post will provide tips, tricks, and best practices for documenting NMP for physical audiences, digital audiences, and academic purposes.
+If you are an SMC student or a person completing an NMP in an academic setting, you will likely have to consider these factors when deciding the best ways to document your NMP. This blog post will provide tips, tricks, and best practices for documenting NMP for physical audiences, digital audiences, and academic purposes.
 
-_At the University of Oslo, MCT students use LoLa, a low latency, high-quality audio and video system, to host multiple NMPs each term. Within the current constraints of technology in 2023, at UiO, we can host NMPs using LoLa from two locations, with one camera feed sent from each site. This blog post is written with these technological limitations in mind so future MCT students can use it as they plan and host NMPs._
+_At the University of Oslo, SMC students use LoLa, a low latency, high-quality audio and video system, to host multiple NMPs each term. Within the current constraints of technology in 2023, at UiO, we can host NMPs using LoLa from two locations, with one camera feed sent from each site. This blog post is written with these technological limitations in mind so future SMC students can use it as they plan and host NMPs._
 
 ## General Tips
 
@@ -27,11 +27,11 @@ Making at least one technical diagram is vital to planning and hosting a success
 
 No matter what software, hardware, locations, or performers you are using, a technical diagram can help you gain clarity from the start about what equipment you need, how many people need to be at each location, where the best places to set cameras may be, etc. It can also help you foresee any documentation challenges that may come up. For example, will you need an extra laptop and camera feed to record the performance? A technical diagram lets you prioritize your documentation needs from the beginning.
 
-Below is an example of a technical diagram MCT’s 2023 cohort made for their first autumn 2023 NMP.
+Below is an example of a technical diagram SMC’s 2023 cohort made for their first autumn 2023 NMP.
 
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_11_julianmb_tech-diagram.png?alt=original" width="60%" style="display: block; margin: auto;" />
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_11_julianmb_tech-diagram.png?alt=original" width="60%" style="display: block; margin: auto;" />
 
-<p style="text-align: center;"><em>Diagram made by <a href="https://mct-master.github.io/authors/kareninajuarez.html">Karenina Juarez</a></em></p>
+<p style="text-align: center;"><em>Diagram made by <a href="https://SMC-master.github.io/authors/kareninajuarez.html">Karenina Juarez</a></em></p>
 
 **2. Ask for consent**
 
@@ -41,7 +41,7 @@ Before beginning documentation, especially if the concert is live-streamed or da
 
 Through set-up, rehearsal, and during the performance, assign a technician to take photos. Often, in research-based contexts, it is helpful to have pictures of where any cameras are placed, where people are standing, and where other equipment is in relation to performers. These photos can then be used in reports to aid in explaining specific elements of the event.
 
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_12_11_julianmb_nmp-photo-example.jpeg?alt=original" width="60%" style="display: block; margin: auto;" />
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_11_julianmb_nmp-photo-example.jpeg?alt=original" width="60%" style="display: block; margin: auto;" />
 
 <p style="text-align: center;"><em>Example photo from the 2023 cohort’s second autumn NMP.</em></p>
 
@@ -65,7 +65,7 @@ If you want to learn more about OBS, check out their [Quick Start Guide](https:/
 
 ## Academic Purposes
 
-There are a few key things to consider when documenting a NMP for academic purposes. This year’s MCT students have found it helpful to rely on some of the concepts present in phenomenological research. Phenomenological research is a qualitative research approach that seeks to explain things by exploring people’s lived experiences of phenomena. For example, it can explore connections between musicians during performance and rehearsal. Here are a few things you should consider when documenting an NMP for academic purposes:
+There are a few key things to consider when documenting a NMP for academic purposes. This year’s SMC students have found it helpful to rely on some of the concepts present in phenomenological research. Phenomenological research is a qualitative research approach that seeks to explain things by exploring people’s lived experiences of phenomena. For example, it can explore connections between musicians during performance and rehearsal. Here are a few things you should consider when documenting an NMP for academic purposes:
 
 **1. Video and Audio Recording**
 

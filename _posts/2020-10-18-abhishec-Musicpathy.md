@@ -11,7 +11,7 @@ keywords: physical-computing, osc, midi, ableton, VPN, OSCrouter, FaceOsc
 
 # Introduction
 
-Since MCT began, we both were looking for an opportunity to make music together and we finally did it on our physical computing project. We both are from India, but still live 1000 km apart (Abhishek in Central India & Lindsay in South of India), this brought a series of challenges.  
+Since SMC began, we both were looking for an opportunity to make music together and we finally did it on our physical computing project. We both are from India, but still live 1000 km apart (Abhishek in Central India & Lindsay in South of India), this brought a series of challenges.  
 
 Our main idea was to play live music collaboratively with the tools that we were introduced to in the physical computing module, to input sensor data and control various aspects of the setup.
 We approached it with a hands-on physical controller that was self-made for another project and also the OSC router which takes inputs from the mobile phone. Ableton Live was our preferred DAW as both of us are well versed in using it. Abhishek was the host, he used his phone as an input device and Lindsay used his MIDI Controller to send MIDI data over the network.
@@ -54,7 +54,7 @@ The basic flow of the setup is as follows: Lindsay sends MIDI data to Abhishek�
 
 **MIDI:**
 
-For controlling the instrument setup into Abhishek’s Ableton using Lindsay’s MIDI controller we tried sending data over the network and since we both were on a wired connection, the latency that we always fight with at MCT, was very decent at about 37ms.
+For controlling the instrument setup into Abhishek’s Ableton using Lindsay’s MIDI controller we tried sending data over the network and since we both were on a wired connection, the latency that we always fight with at SMC, was very decent at about 37ms.
 The MIDI controller is directly plugged in via USB to the system, rtpMIDI takes the input data and sends it to Ableton’s instrument rack to the receiving port setup in Ableton, over a virtual VPN network made through Hamachi. There’s a flexibility of controlling multiple channels and playing them all at the same time by mapping the controller inputs to different instruments and parameters.
 
 ![MIDI Setup signal flow.](\assets\image\2020_10_18_abhishec_MIDI_setup.jpg)

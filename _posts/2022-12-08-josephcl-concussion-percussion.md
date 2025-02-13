@@ -26,7 +26,7 @@ Similar to a handpan, Concussion Percussion allows the user to hit an ordinary b
 
 <figure style="float: none">
 	<audio controls>
-      <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_7_josephcl_handpan_example.wav" type="audio/wav">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_7_josephcl_handpan_example.wav" type="audio/wav">
     </audio>
    <figcaption>Handpan Audio Example</figcaption>
 </figure>
@@ -57,7 +57,7 @@ The rotary encoder (or “knob” for the uninitiated) also serves two key funct
 
 <figure style="float: none">
 	<audio controls>
-      <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_7_josephcl_delay_example.wav" type="audio/wav">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_7_josephcl_delay_example.wav" type="audio/wav">
     </audio>
    <figcaption>Handpan Delay Audio Example</figcaption>
 </figure>
@@ -98,7 +98,7 @@ Finally, I mounted the rotary encoder on the side of the helmet to allow easy ac
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_12_11_josephcl_concussion_percussion_demo.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_12_11_josephcl_concussion_percussion_demo.mp4" type='video/mp4'>
   </video>
 </figure>
 

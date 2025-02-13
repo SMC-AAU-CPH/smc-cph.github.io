@@ -9,7 +9,7 @@ keywords:  telematic, conducting, telematic-performance
 excerpt: "A conductor in one portal. An orchestra in another. What could go wrong?"
 ---
 
-During our collective time in the portal(s), the musical pursuits of the MCT 2020 class have all shared a fairly specific layout. Groups of musicians assemble on each side of the latency chasm and then attempt to find some form of musical understanding while navigating telematic performance. Sometimes these efforts work out; sometimes they don’t. For this assignment, I decided to consider a different approach to telematic music-making, an approach that I actually think might hold substantial promise for satisfying group performance.
+During our collective time in the portal(s), the musical pursuits of the SMC 2020 class have all shared a fairly specific layout. Groups of musicians assemble on each side of the latency chasm and then attempt to find some form of musical understanding while navigating telematic performance. Sometimes these efforts work out; sometimes they don’t. For this assignment, I decided to consider a different approach to telematic music-making, an approach that I actually think might hold substantial promise for satisfying group performance.
 
 I propose that a telematic set-up in which one portal is inhabited by a lone conductor while the other portal contains a complete orchestra would actually provide a situation for music-making with more in common with non-telematic orchestral performance than one might expect.
 
@@ -76,7 +76,7 @@ Until we are lucky enough to find an orchestra willing to experiment in our port
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_11_14_williakm_telematicconducting.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_14_williakm_telematicconducting.mp4" type='video/mp4'>
     Telematic Conducting Lecture
   </video>
   <figcaption>Telematic Conducting Lecture</figcaption>

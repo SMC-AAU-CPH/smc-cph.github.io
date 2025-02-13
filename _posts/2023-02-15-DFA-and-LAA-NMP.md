@@ -4,7 +4,7 @@ title: "Designing DFA and LAA Network Music Performances"
 date: 2023-02-16
 categories: networked-music
 author: Alexander Wastnidge, Fabian Stordalen, Henrik Sveen, Masoud Niknafs, Nino Jakeli
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_02_17_fabianst_dfa.png?alt=original
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_02_17_fabianst_dfa.png?alt=original
 keywords: telematic music, LoLa, low latency, Sonobus
 excerpt: "Music Performances in High Latency"
 ---
@@ -69,7 +69,7 @@ For the LAA (Latency Accepting Approach) Fabian and Henrik used SonoBus over a w
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_02_16_fabianst_latency_sonobus.png?alt=original" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_02_16_fabianst_latency_sonobus.png?alt=original" />
    <figcaption>Sonobus settings</figcaption>
 </figure>
 

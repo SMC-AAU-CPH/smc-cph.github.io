@@ -13,7 +13,7 @@ excerpt: "This thesis is a study of reinforcement learning as a possible method 
 
 # Reinforcement learning for use in cross-adaptive audio processing
 
-This blog post is a brief summary of my thesis work. The style is meant to be informal, and as such, I've left out references and other formalities. The full thesis is available [here](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/document/2021_05_19_ulrikah_master_thesis.pdf)
+This blog post is a brief summary of my thesis work. The style is meant to be informal, and as such, I've left out references and other formalities. The full thesis is available [here](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2021_05_19_ulrikah_master_thesis.pdf)
 
 Øyvind Brandtsegg was my supervisor.
 

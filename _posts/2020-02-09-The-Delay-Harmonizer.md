@@ -6,7 +6,7 @@ categories: sound-programming
 author: Thibault Jaccard
 image: /assets/image/2020_02_09_aleksati_delay_harmonizer.jpg
 excerpt: "This chord generator uses a variable length delay fed by a microphone input as sound source."
-Keywords: Audio Programming, Pure Data, MCT4048
+Keywords: Audio Programming, Pure Data, SMC4048
 ---
 
 ## Overview
@@ -37,6 +37,6 @@ The main use case of this patch is to harmonize a percussive track, like beatbox
      frameborder="0"
      width="500"
      height="100"
-     src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2020_02_09_thibaulj_delayharmonizer.mp3">
+     src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_02_09_thibaulj_delayharmonizer.mp3">
   </iframe>
 </p>

@@ -83,13 +83,13 @@ Clicks and pops were audible but can be acceptable when practicing or doing a sm
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_11_27_jakobhoydal_5Gnmp-Song1.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_27_jakobhoydal_5Gnmp-Song1.mp4" type='video/mp4'>
   </video>
 </figure>
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_11_27_jakobhoydal_5gnmp-song2.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_27_jakobhoydal_5gnmp-song2.mp4" type='video/mp4'>
   </video>
 </figure>
 

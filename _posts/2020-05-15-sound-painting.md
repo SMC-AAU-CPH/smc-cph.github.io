@@ -6,14 +6,14 @@ categories: motion-capture
 author: Aleksander Tidemann
 image: /assets/image/2020_05_15_aleksati_sound_painting.jpg
 excerpt: "An application that tracks, visualizes and sonifies the motion of colors."
-Keywords: MCT, Motion Tracking, Color tracking, maxMSP
+Keywords: SMC, Motion Tracking, Color tracking, maxMSP
 ---
 
 In this project, I have explored how sonification through motion tracking can make daily activities more interesting and multi-modal. I have done this by creating a sound painting application that tracks and visualizes colors in a video and produces sounds based on the motion of those colors. My goal was just to create a visually and sonically precise color tracking system, in MaxMSP, that was intuitive to use and easy to understand.
 
 <figure align="middle">
 <video height="100%" width="100%" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2020_05_15_aleksati_sound_painting.mp4" type='video/mp4'>
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_05_15_aleksati_sound_painting.mp4" type='video/mp4'>
   Your browser does not support video tag.
 </video>
 <figcaption>Video Demo</figcaption>
@@ -31,7 +31,7 @@ When I starting working on this I immediately realized that certain key aspects 
 I experimented with three different methods of motion tracking. The first method revolved around creating a bounding box around specific RGB-values before calculating the center coordinates of that box. Practically however, this was not successfull because my webcamera feed was constantly adjusting due to various lighting conditions which in turn generated quite unpredictable RGB-input.
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_05_15_aleksati_findbounds.gif" width="auto" height="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_findbounds.gif" width="auto" height="auto" />
    <figcaption>Tracking method 1 - Findbounds</figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ The second method featured motion tracking through generating a motion image, th
 This method yielded better visual results but still lacked a good sense of agency similar to the first method. This was because the centroid was calculated from the sum total of motion on the screen.
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_05_15_aleksati_centroid_motion.gif" width="auto" height="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_centroid_motion.gif" width="auto" height="auto" />
    <figcaption>Tracking method 2 - Centroid of Motion</figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ It thus became clear that a combination of color tracking and centroid calculati
 I decided to use a set of filtering approaches to isolate specific colors in the video-stream and further processes it so that it satisfied the input requirements of the centroid calculation. Additionally, I added a controllable noise threshold parameter to allow for some calibration of the module to accommodate various contexts. Then, I implemented it together with the visualization module previously constructed and made the system respond to both blue and red colors.
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_05_15_aleksati_centroid_color.gif" width="auto" height="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_centroid_color.gif" width="auto" height="auto" />
    <figcaption>Tracking method 3 - Centroid of Color</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ I decided to use a set of filtering approaches to isolate specific colors in the
 For the sonification I ended up using a model where the motion controls the central frequency and the number of active audio channels in the mix. I chose these parameters because of their independence of one another which I believe could enhance sonic proprioception of an object moving around in a two-dimensional space.
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_05_15_aleksati_sound_diagram.jpg" width="auto" height="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_sound_diagram.jpg" width="auto" height="auto" />
    <figcaption>Sonification diagram</figcaption>
 </figure>
 
@@ -67,7 +67,7 @@ The frequency of the sound is controlled by movement along the y-axis. When the 
 To further enhance this effect I used panning to spatialize the sound based on the number of audio channels. The panning values are also automatically rescaled from left to right according to the number of channels selected.
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_05_15_aleksati_panning_diagram.jpg" width="auto" height="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_panning_diagram.jpg" width="auto" height="auto" />
    <figcaption>Panning diagram</figcaption>
 </figure>
 

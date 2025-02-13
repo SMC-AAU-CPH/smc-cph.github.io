@@ -9,7 +9,7 @@ excerpt: "Using a mop to play the feedback"
 keywords: interactive music system, acoustic feedback, Cello, bela
 ---
 
-In [part 1](https://mct-master.github.io/interactive-music/2022/12/06/hughav-feedbackquencer.html) of this blog post, the idea of using microphones and loudspeakers was presented with focus placed on the musical use of acoustic feedback. Based upon these principles, I developed two projects over the course of the last few months; The Feedbackquencer, presented in the previous post, and the Feedback Mop Cello, which is presented here.
+In [part 1](https://SMC-master.github.io/interactive-music/2022/12/06/hughav-feedbackquencer.html) of this blog post, the idea of using microphones and loudspeakers was presented with focus placed on the musical use of acoustic feedback. Based upon these principles, I developed two projects over the course of the last few months; The Feedbackquencer, presented in the previous post, and the Feedback Mop Cello, which is presented here.
 
 # The Feedback Mop Cello
 

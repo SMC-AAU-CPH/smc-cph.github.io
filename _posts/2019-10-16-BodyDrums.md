@@ -9,7 +9,7 @@ Keywords: Workshop, IMS, Interactive Music Systems, Drums, Augmented Instrument,
 ---
 
 ## Body Drums
-For the course MCT4045 - Interactive Music Systems, I built a wearable drumset.
+For the course SMC4045 - Interactive Music Systems, I built a wearable drumset.
 The wearable drumset consists of a piezo-element placed on one hand, a force-sensing resistor on the other and a accelerometer on the fot. These sensors are then used to trigger one file each. In my case I used a kick drum sound for the foot, snare drum sound for the piezo element and a hi hat sound for the FSR. Then when these sensors are triggered, the sound that are mapped to the sensor will be played. For example if I stump my foot, the kick drum sound will be played.
 
 <figure>

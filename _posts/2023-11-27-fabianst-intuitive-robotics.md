@@ -4,16 +4,16 @@ title: "Intuitive Robotics"
 date: 2023-11-27 07:00:00 +0200
 categories: applied-project
 author: Emin Memis, Fabian Stordalen, Masoud Niknafs, Theo Griffin Halvorsen
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_11_25_fabianst_blogcover.png?alt=original
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_25_fabianst_blogcover.png?alt=original
 keywords: imu, robotics, telerobotics
 excerpt: "Controlling a robot arm with medical sensors"
 ---
 
 # Introduction
-For our project we collaborated with [SiFi Labs](https://sifilabs.com/) to create and implement a system to showcase how you can use their [BioPoint](https://sifilabs.com/biopoint/) biosensors to control a robotic arm. This was quite an ambitious and daring project. As this project was a collaboration between us MCT students and the informatics department we wanted to work on a project which could combine our different fields of expertise.
+For our project we collaborated with [SiFi Labs](https://sifilabs.com/) to create and implement a system to showcase how you can use their [BioPoint](https://sifilabs.com/biopoint/) biosensors to control a robotic arm. This was quite an ambitious and daring project. As this project was a collaboration between us SMC students and the informatics department we wanted to work on a project which could combine our different fields of expertise.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_11_23_fabianst_workinghard.jpg?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_23_fabianst_workinghard.jpg?alt=original"
   height="500"
   width="400">
   <figcaption>
@@ -26,10 +26,10 @@ For our project we collaborated with [SiFi Labs](https://sifilabs.com/) to creat
 With the powerful combination of SiFi Labs' BioPoint biosensors and the Universal Robots UR10e, we aimed to showcase the precision and versatility of our robotic system through a visually engaging task: painting 🎨. By harnessing the data from BioPoint's IMU sensors, we can translate the movements captured by the user into the movement of the robot arm.
 
 ## The BioPoint
-The [BioPoint](https://sifilabs.com/biopoint/) is a powerful and lightweight device developed by SiFi labs featuring 6 different sensors capable of recording almost any biosignal imaginable. For our use case we were mostly interested in utilizing the [Intertial Measurement Unit sensors (IMU)](https://en.wikipedia.org/wiki/Inertial_measurement_unit) on the device. Multiple of our team members had previous experience using these sensors for [artistic applications](https://mct-master.github.io/motion-capture/) so we thought it would be fitting for our project. 
+The [BioPoint](https://sifilabs.com/biopoint/) is a powerful and lightweight device developed by SiFi labs featuring 6 different sensors capable of recording almost any biosignal imaginable. For our use case we were mostly interested in utilizing the [Intertial Measurement Unit sensors (IMU)](https://en.wikipedia.org/wiki/Inertial_measurement_unit) on the device. Multiple of our team members had previous experience using these sensors for [artistic applications](https://SMC-master.github.io/motion-capture/) so we thought it would be fitting for our project. 
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_11_27_fabianst_biopoint.jpg?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_27_fabianst_biopoint.jpg?alt=original"
   height="500"
   width="400">
   <figcaption>
@@ -41,7 +41,7 @@ The [BioPoint](https://sifilabs.com/biopoint/) is a powerful and lightweight dev
 Meet the robot we worked on for this project. The [Universal Robots UR10e](https://www.universal-robots.com/products/ur10-robot/). This is a medium sized industrial robot, and is also quite large as you can see! This big guy is known for its robust capabilities and ease of integration into various applications - it opens up a world of possibilities for automation in diverse industries.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_11_27_ahmetem_robotarm01.jpg?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_27_ahmetem_robotarm01.jpg?alt=original"
   height="500"
   width="400">
   <figcaption>
@@ -66,7 +66,7 @@ Embarking on a three-month project, we knew time was of the essence, guiding us 
 With the Project Network Diagram (PND), we visualized the sequential tasks, always having a clear next step in sight. This dynamic tool provided a bird's-eye view of our progress, ensuring we stayed on track and understood the needs and evolving aspects of our project.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_11_23_faibanst_pnd.png?alt=original"
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_23_faibanst_pnd.png?alt=original"
   height="300"
   width="700">
   <figcaption>
@@ -83,7 +83,7 @@ We persisted, exploring UR’s predefined protocols for communication over TCP/I
 Simultaneously, we implemented other necessary software for handling data streaming and processing from the BioPoint devices. With rigorous research, planning, and trials, we created a Python program that established a seamless and efficient connection with the devices, streamed the IMU data, and processed it to extract purposeful parameters for robot control.
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_11_27_ahmetem_diagram01.jpg?alt=original">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_27_ahmetem_diagram01.jpg?alt=original">
   <figcaption>
     <span class="caption">The Control Pipeline for the System</span>
   </figcaption>

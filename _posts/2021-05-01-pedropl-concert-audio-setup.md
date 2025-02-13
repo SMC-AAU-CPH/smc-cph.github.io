@@ -22,7 +22,7 @@ Ok, you might not find too many Ecuadorian or Norwegian cultur-specific expressi
 
 Streaming a telematic performance is a challenging process that demands the effort from several disciplines to make it work properly, and one of the fundamental elements is the audio setup.
 
-Here we'll quickly go through some of the audio management process behind the MCT-master students of 2020's end-of-semester concert <i>In Space We Make Music.</i>
+Here we'll quickly go through some of the audio management process behind the SMC-master students of 2020's end-of-semester concert <i>In Space We Make Music.</i>
 
 
 

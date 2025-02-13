@@ -30,7 +30,7 @@ Experimenting with different effects and where they're placed in the signal chai
 Finally I made a nicer looking GUI for the patch.
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2022_09_12_fabianst_mixerdone.png"  title="GUI done" width="auto" max-height="600px" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_09_12_fabianst_mixerdone.png"  title="GUI done" width="auto" max-height="600px" />
 </figure>
 
 ## Files

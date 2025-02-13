@@ -7,7 +7,7 @@ author: Guy Sion
 image: /assets/image/2019_04_12_aleksati_Ole_n_sam_portal.jpeg
 excerpt: "I had the pleasure of introducing Ole Neiling, a extradisciplinary 'life-style' artist. This was part of a series of lectures held over the portal in the sonification and sound design module."
 ---
-## MCT Sonification Lecture - Ole Neiling
+## SMC Sonification Lecture - Ole Neiling
 
 http://www.ole.wtf/
 

@@ -15,7 +15,7 @@ excerpt: "In the future, when the robots take over the world, we all will be lis
 <p style="text-align: center; font-size:34px; font-family:'Courier New'">Beneficial Unintelligence</p>
 
  
-Machine Learning, the buzz word. Since I started on the MCT master, I’ve been looking forward to these two intensive weeks of coding. I imagined building a whole choir of cute singing robots, performing Beethoven’s 9th symphony:
+Machine Learning, the buzz word. Since I started on the SMC master, I’ve been looking forward to these two intensive weeks of coding. I imagined building a whole choir of cute singing robots, performing Beethoven’s 9th symphony:
 <br> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gVfBizjQd_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
@@ -35,7 +35,7 @@ So Machine Learning is a lot of things, really. It’s not just the robots that 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MwtVkPKx3RA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 (This is by the way, what we all will be listening to in the future, when the robots take over the world) 
  
-If you are not THAT good at machine learning, but had a two weeks intensive MCT Music and Machine Learning course, you could for instance do something like I did: make a system that identifies which vocal technique you’re using! Why, you might say, don’t we have vocal teachers that do that? Well, if this corona hell is going to last, we might really need some online tools for music instrument learning assessment. If your internet connection is bad, and you sound like Dadabot’s Death Metal livestream through Skype, what should your vocal teacher say, I mean. Therefore I present:
+If you are not THAT good at machine learning, but had a two weeks intensive SMC Music and Machine Learning course, you could for instance do something like I did: make a system that identifies which vocal technique you’re using! Why, you might say, don’t we have vocal teachers that do that? Well, if this corona hell is going to last, we might really need some online tools for music instrument learning assessment. If your internet connection is bad, and you sound like Dadabot’s Death Metal livestream through Skype, what should your vocal teacher say, I mean. Therefore I present:
 
 
 <p style="text-align: center; font-size:30px; font-family:'Courier New'">The Vocal Technique Classifier:</p>

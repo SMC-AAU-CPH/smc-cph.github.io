@@ -15,7 +15,7 @@ There is research that suggests that errors in Audio and Video synchronization c
 
 ## Streaming Scenarios
 
-In the case of Audio and Video synchronization, I considered three of the main locations that we usually use on the MCT Program: Salen, the Video Room, and the Portal. The objectives are:
+In the case of Audio and Video synchronization, I considered three of the main locations that we usually use on the SMC Program: Salen, the Video Room, and the Portal. The objectives are:
 
 -	Measure Audio and Video synchronization errors for these three places.
 -	Fix the errors by introducing latency, which will happen mostly regarding the audio.
@@ -101,7 +101,7 @@ OBS Studio allows us to introduce latency for the audio sources through a parame
 In the following video you will find the presentation of this topic. From minute 5:30 there is a set of videos showing the test source and the comparisons when the audio latency is introduced for synchronization.
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_11_15_pedropl_video_lecture_avsync.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_15_pedropl_video_lecture_avsync.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
    <figcaption>Presentation</figcaption>
 </figure>
 
@@ -111,7 +111,7 @@ Values can be affected regarding AV-Sync errors by changing quality settings. It
 Errors can be introduced locally. It means that we can have local latency and we could fix locally and then send, but still, we probably will need to fix in the other end. In that sense, we must preserve the solution we choose, that is, fixing synchronization errors locally and in the streaming system or just in the streaming system. The goal is to reduce these errors in the final end.
 A Correction is not needed if the latency is not perceived. In this case we could skip the correction for the portal because it was within an acceptable value for human perception.
 
-Measurement and fixing techniques can be extended outside MCT, as well as external sources. For example, Salen can be considered an external source in the MCT portals, so we can add as many sources as we want by using, for example, OBS ninja to transmit audio and video and apply the same techniques.
+Measurement and fixing techniques can be extended outside SMC, as well as external sources. For example, Salen can be considered an external source in the SMC portals, so we can add as many sources as we want by using, for example, OBS ninja to transmit audio and video and apply the same techniques.
 
 Finally, future work considers synchronization of the sources after the individual correction of each one. It can be managed by having a way to centralize a source or deal with an actual telematic performance in real time so that we can try to run events synchronized among all the sources.
 

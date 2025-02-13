@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Meet MCT Group B"
+title:  "Meet SMC Group B"
 date:   2018-08-22 13:23:30 +0200
 categories: people
 author: Dmitry Vasilev, Ashane Silva, Mari Lesteberg, Eigil Aandahl
@@ -12,13 +12,13 @@ excerpt: "<strong>Team name</strong>: D.A.M.E. – We are a diverse and multicul
 
 **Team name**: M.A.D.E. – We are a diverse and multicultural group with different yet complementary practical skills, theoretical knowledge, and personal characteristics. Yet, the unifying agreement for our group is that music is key. We strongly believe in creative application of technology in musical performance and composition, communication, sound synthesis and music production.
 
-We are motivated, passionate, and eager to learn and play, and can't wait to share our musical identities with each other and the rest of the MCT students.
+We are motivated, passionate, and eager to learn and play, and can't wait to share our musical identities with each other and the rest of the SMC students.
 
 ## Team Members Bio
 
 ### Dmitry Vasilev
 
-Acoustical Engineer and musician. Recent graduate with a M.Sc. in acoustics and a passion for music. By participating in the MCT programme I aim to gain more knowledge about music technology and further strengthen my knowledge of musical programming and applications of machine learning in sound design and music cognition.
+Acoustical Engineer and musician. Recent graduate with a M.Sc. in acoustics and a passion for music. By participating in the SMC programme I aim to gain more knowledge about music technology and further strengthen my knowledge of musical programming and applications of machine learning in sound design and music cognition.
 
 <dmitryscen@gmail.com>
 
@@ -31,7 +31,7 @@ Acoustical Engineer and musician. Recent graduate with a M.Sc. in acoustics and 
 
 ### Ashane Silva
 
-Ashane Silva is a drummer, audio producer, composer, and the founder of the audio project "The Terra Tomorrow", as well as the founder of "Fatpuppy Audio Productions". He is a graduate of the University of Colombo, Sri Lanka, in financial mathematics and currently following the MCT programme at the University of Oslo, Norway.
+Ashane Silva is a drummer, audio producer, composer, and the founder of the audio project "The Terra Tomorrow", as well as the founder of "Fatpuppy Audio Productions". He is a graduate of the University of Colombo, Sri Lanka, in financial mathematics and currently following the SMC programme at the University of Oslo, Norway.
 
 <silva.randika@gmail.com>
 

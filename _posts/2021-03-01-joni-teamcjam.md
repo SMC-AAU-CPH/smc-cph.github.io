@@ -19,7 +19,7 @@ The following section presents Joni's reflection on Team C's direction in Portal
 
 #### Trondheim's call for love
 
-On 24th February during the winter break,  the most introverted C-team from Trondheim and Oslo creeped into the MCT Portal in the middle (not of the night) of the day. The solo Trondheim crew was able to rock the whole Portal by himself (Well-done Lindsay!).
+On 24th February during the winter break,  the most introverted C-team from Trondheim and Oslo creeped into the SMC Portal in the middle (not of the night) of the day. The solo Trondheim crew was able to rock the whole Portal by himself (Well-done Lindsay!).
 
 <i>‘’I connected the Midas M32 to Ableton live on a Windows computer, so the M32 audio interface drivers needed to be installed. At Trondheim we only have one person playing the harp on the piano as MIDI. For some reason the ceiling mics were not functional, so we used an AKG Mic as a talk-back mic to communicate with Oslo. Overall only 2 channels were being sent to Oslo via LoLa. We had problems communicating with each other at first, there were many sudden cuts and outs from the Oslo side but we managed to use discord and sort things out. Once we got the line to work with a stable connection, we focused on sending an appropriate mix to each other, more so from Oslo as they were 3 instruments with 3 mics and a lot of EQ. We recorded the session on Ableton live in Trondheim. Hey you guys there from Oslo?’’,</i> wrote Lindsay.
 
@@ -39,7 +39,7 @@ However, there is nothing set in stone with the choice of music yet. Who knows? 
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_03_01_joni_teamc.wav
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_03_01_joni_teamc.wav
 " type="audio/mpeg">
     Song One
   </audio>

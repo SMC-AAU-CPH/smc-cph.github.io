@@ -11,12 +11,12 @@ Keywords: Citizens' Band, CB Radio, Online Collaboration, Latency
 
 ## CB Radio for Real-Time Monitoring?
 
-Here in the MCT program, we deal a lot with internet communication technologies. In the years B.C. (before COVID-19), we would
+Here in the SMC program, we deal a lot with internet communication technologies. In the years B.C. (before COVID-19), we would
 meet four or five days a week in the Portal and chat, collaborate, and conduct classes between Oslo and Trondheim with some of
 the best technology available. Leveraging the cutting edge and trying to push the boundaries of LOLA, TICO, Dante, and other
 low-latency protocols was our daily task.
 
-Now, the Portal sits empty. Hopefully, someone remembered to turn off the lights. All MCT courses and meetings now takes place
+Now, the Portal sits empty. Hopefully, someone remembered to turn off the lights. All SMC courses and meetings now takes place
 via Zoom, pretty much like the rest of the university’s activities - like the rest of universities and businesses worldwide.
 
 It’s kind of a step backwards for us, technology-wise. But I think it’s been a good exercise in the practical application of

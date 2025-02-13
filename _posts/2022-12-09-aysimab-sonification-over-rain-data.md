@@ -13,7 +13,7 @@ excerpt: "How we sonified the rainfall data."
 
 Data driven sonification is bringing us huge opportunities regarding experimenting sound of "things". Things can be an unemployment rate as well as the number of deaths everyday. It can be anything.
 
-As MCT Master students, we wanted to sonify rainfall timeseries data for our python project and apperantly rainfall has a good understanding of harmony!
+As SMC Master students, we wanted to sonify rainfall timeseries data for our python project and apperantly rainfall has a good understanding of harmony!
 For our project, we used rainfall timeseries data from [kaggle](https://www.kaggle.com/datasets/poojag718/rainfall-timeseries-data) which was collected from **Power Data Access Viewer.**
 
 As it is described in kaggle website: <br/>
@@ -52,6 +52,6 @@ And there was our sonification! We summed three output signals and had one sound
 
 We had some cracks between sounds which we couldnt fix yet, but we hope you enjoy listening it!
 <audio controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2022_12_08_aysimab_team_c_sonification.wav" type="audio/mpeg">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_08_aysimab_team_c_sonification.wav" type="audio/mpeg">
   Your browser does not support the audio tag.
 </audio>

@@ -13,7 +13,7 @@ excerpt: The first week at The Portal was interesting. Most of the equipment was
 <figcaption><strong>Fig 2: The portal setup in Trondheim</strong></figcaption>
 </figure>
 
-### A-team, Opening week of MCT
+### A-team, Opening week of SMC
 
 The first week at The Portal was interesting. Most of the equipment was not ready for use, and the TICO system network card crashed two days before opening ceremony.
 
@@ -171,7 +171,7 @@ We found the cardioid setting on the AKG was the clearest for this classroom set
 
 #### Preparing Portal for Studio Production
 
-Due to a misunderstanding we started preparing the Portal-room for the MCT4000, studio production course, by setting up cameras showing the tutor and the audio mixer for Thursday. The setting was to be 1 canon camera pointing towards tutor, full body shot - and a Panasonic remote controlled PTZ-camera (Pan-Tilt-Zoom) covering the mixer. We got as far as to connect the PTZ-camera to the remote control, then having to initialize the camera software online. The setup was taken down when we learned that it was not necessary for the studio production course.
+Due to a misunderstanding we started preparing the Portal-room for the SMC4000, studio production course, by setting up cameras showing the tutor and the audio mixer for Thursday. The setting was to be 1 canon camera pointing towards tutor, full body shot - and a Panasonic remote controlled PTZ-camera (Pan-Tilt-Zoom) covering the mixer. We got as far as to connect the PTZ-camera to the remote control, then having to initialize the camera software online. The setup was taken down when we learned that it was not necessary for the studio production course.
 
 <a href="https://pro-av.panasonic.net/en/sales_o/camera/aw-he40/index.html" target="_blank">Panasonics AW-HE40SW/SK/HW/HK</a>
 
@@ -179,4 +179,4 @@ Due to a misunderstanding we started preparing the Portal-room for the MCT4000, 
 
 And Lastly....
 
-MCT opening ceromony was reported on Krono online. includes <a href="https://khrono.no/ntnu-gunnar-bovim-music-communication-and-technology/de-er-studenter-ved-to-universiteter-samtidig/234810" target="_blank">interview with group A's Juno & Sam</a>
+SMC opening ceromony was reported on Krono online. includes <a href="https://khrono.no/ntnu-gunnar-bovim-music-communication-and-technology/de-er-studenter-ved-to-universiteter-samtidig/234810" target="_blank">interview with group A's Juno & Sam</a>

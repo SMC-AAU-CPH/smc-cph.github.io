@@ -4,7 +4,7 @@ title: "Review of On Board Call: A Gestural Wildlife Imitation Machine"
 date: 2023-09-22 14:00:00 +0200
 categories: interactive-music
 author: Masoud Niknafs
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_09_20_masoudn_onboard_cover.png
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_09_20_masoudn_onboard_cover.png
 keywords: Interactive Music System
 excerpt: "Critical Review of On Board Call: A Gestural Wildlife Imitation Machine"
 ---
@@ -15,7 +15,7 @@ The [On Board Call](https://nime.pubpub.org/pub/uofmcznd/release/1) introduced i
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_09_20_masoudn_onboard.jpg" width="60%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_09_20_masoudn_onboard.jpg" width="60%" />
    <figcaption>On Board call System(Photo from NIME website)</figcaption>
 </figure>
 
@@ -24,7 +24,7 @@ The musical interface uses an [ESP8266](https://en.wikipedia.org/wiki/ESP8266)mi
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_09_20_masoudn_on-_board.jpg" width="60%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_09_20_masoudn_on-_board.jpg" width="60%" />
    <figcaption>On Board Call PCB</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ In the context of the Call software for the interactive music system, the mappin
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_09_20_masoudn_on-.png" width="60%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_09_20_masoudn_on-.png" width="60%" />
    <figcaption>On Board Call interaction diagram with a simple two-operator FM synthesis architecture (Photo from NIME website)</figcaption>
 </figure>
 

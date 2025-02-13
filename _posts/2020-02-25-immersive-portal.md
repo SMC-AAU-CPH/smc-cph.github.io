@@ -5,7 +5,7 @@ date: 2020-02-24 18:00:00 +0200
 categories: networked-music
 author: Thomas Anda, Jackson Goode, Paul Koenig, Rayam Luna, Jarle Steinhovden, Aleksander Tidemann, Gaute Wardenær, Ulrik Halmøy, Tom Ignatius, Thibault Jaccard, Simon Sandvik
 image: /assets/image/2020_02_25_aleksati_ambisonics.jpg
-excerpt: The MCT portal is rigged for ambisonics to fit a virtual classroom in a classroom
+excerpt: The SMC portal is rigged for ambisonics to fit a virtual classroom in a classroom
 Keywords: Portal, Spatialization, Ambisonics, IEM
 ---
 

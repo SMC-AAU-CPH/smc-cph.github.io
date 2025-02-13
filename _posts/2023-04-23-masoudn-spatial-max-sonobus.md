@@ -4,7 +4,7 @@ title: "Spatial Audio with Max-Msp and Sonobus"
 date: 2023-04-23 14:00:00 +0200
 categories: networked-music
 author: Masoud Niknafs
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_23_masoudn_space.jpg
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_23_masoudn_space.jpg
 keywords: Spatial Audio, Networking
 excerpt: "This post's video tutorial aims to introduce readers to the many uses for which the Sonobus can be implemented as a VST in Max-Msp."
 ---
@@ -23,7 +23,7 @@ As the heart of the audio chain we have the mc.ambiencode~ and, mc.ambidecode~:
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_23_masoudn_encod_decode.png" width="60%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_23_masoudn_encod_decode.png" width="60%" />
    <figcaption>Encoder and Decoder</figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ The encoder is given the [spherical coordinates](https://en.wikipedia.org/wiki/S
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_23_masoudn_source_locations.png?alt=original" width="60%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_23_masoudn_source_locations.png?alt=original" width="60%" />
    <figcaption>Ambimonitor object</figcaption>
 </figure>
 
@@ -39,7 +39,7 @@ Also the same approach applies for the speakers relative position where it can e
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_23_masoudn_s_locations.png" width="60%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_23_masoudn_s_locations.png" width="60%" />
    <figcaption>Ambimonitor object</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ Simply you can bring the Sonobus in the game by loading the VST3 version in the 
 
 <figure style="float: none">
    <img
-      src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_04_23_masoudn_overal.png" width="60%" />
+      src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_23_masoudn_overal.png" width="60%" />
    <figcaption></figcaption>
 </figure>
 

@@ -15,7 +15,7 @@ excerpt: This blog post outlines the production of the MonoSynth. The Mono Synth
 </figure>
 <br>
 
-My previous knowledge with programming before starting the MCT course was virtually nonexistent, much unlike the error codes I have come across during the creation of this project. Still, I feel like my understanding of programming has grown alot since the previous semester's programming course.
+My previous knowledge with programming before starting the SMC course was virtually nonexistent, much unlike the error codes I have come across during the creation of this project. Still, I feel like my understanding of programming has grown alot since the previous semester's programming course.
 
 ### Finding A Project
 

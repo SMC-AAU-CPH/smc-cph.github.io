@@ -24,7 +24,7 @@ Final week before christmas. After months of experimentation with microphones, l
 
 The main aim in Oslo was to move the _LOLA_ and _TICO_ set up to the other end of the room, so that all connections were more conveniently in the same place. The second task was to change the routing so that all connections, both inputs and outputs passed through the Midas mixer. This was the way it is set up in Trondheim - and makes a lot of sense. Then using the mixer we can group each connection, use effects and adjust levels all in the same place. One control to rule them all!
 
-Monday we got together, with many of the _MCT team_, and moved the whole setup. I present to you the new, improved portal room….
+Monday we got together, with many of the _SMC team_, and moved the whole setup. I present to you the new, improved portal room….
 
 <figure align="middle">
 <img src="/assets/image/2018_11_29_stefanof_Ateam_tidyAF.jpg" alt="" width="70%">

@@ -10,7 +10,7 @@ keywords: machine-learning, artificial-neural-networks, DOA, FOA, Ambisonics, cr
 excerpt: "Where is that sound coming from? Let's explore how a machine could answer this question."
 ---
 
-**Note: The source code and technical report are available on [GitHub](https://github.com/pedro-lucas-bravo/mct_machine_learning_project)**
+**Note: The source code and technical report are available on [GitHub](https://github.com/pedro-lucas-bravo/SMC_machine_learning_project)**
 
 The aim of this project is to estimate the Direction of Arrival (DOA) from a sound event encoded as a First Order Ambisonic (FOA) audio file (4-channel). Basically, we want to know where a sound is coming from just by looking at a raw audio file for 3D sound, which can be solved by humans but still with some imprecision.
 
@@ -84,4 +84,4 @@ The most challenging part was to figure out the right features. It is important 
 
 I hope this work gives lights to build up an understanding of the process for DOA from a ML perspective.
 
-**The source code and technical report are available on [GitHub](https://github.com/pedro-lucas-bravo/mct_machine_learning_project)**
+**The source code and technical report are available on [GitHub](https://github.com/pedro-lucas-bravo/SMC_machine_learning_project)**

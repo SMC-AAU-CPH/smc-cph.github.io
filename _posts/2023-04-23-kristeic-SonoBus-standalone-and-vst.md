@@ -16,7 +16,7 @@ keywords: sonobus, networking
 
 <figure style="float: none">
   <video width="auto" controls>
-     <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2023_04_23_kristeic_sonobus_video_tutorial.mp4" type='video/mp4'>
+     <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2023_04_23_kristeic_sonobus_video_tutorial.mp4" type='video/mp4'>
   </video>
 </figure>
 

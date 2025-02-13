@@ -14,7 +14,7 @@ excerpt: "The pixel sequencer is an interactive web app for sonification of imag
 </figure>
 
 
-[The pixel sequencer](https://limesack.github.io/MCT4046/Javascript/index_draft8.html) is an interactive web app for sonification of images, written in Javascript, CSS and HTML. The user can upload an image, decide on parameters like size (up to 16 pixels horizontally and vertically) and sensitivity. The image is then pixelated, and colour parameters from the image is the basis for the sonification of the image.
+[The pixel sequencer](https://limesack.github.io/SMC4046/Javascript/index_draft8.html) is an interactive web app for sonification of images, written in Javascript, CSS and HTML. The user can upload an image, decide on parameters like size (up to 16 pixels horizontally and vertically) and sensitivity. The image is then pixelated, and colour parameters from the image is the basis for the sonification of the image.
 
 #### The idea
 Making music based on a picture is not a new thing. Recent artists, like youtuber Andrew Huang has experimented with the use of MIDI notes on a piano roll to create a playable picture. The different MIDI notes on the piano roll appear to be pixels that form a picture, and what you get is a composition that sounds like a musical piece. Andrew Huang’s [Glorious Midi Unicorn](https://www.youtube.com/watch?v=i3tiuGVDDkk&t=4s) is a neat example.
@@ -102,4 +102,4 @@ When using RGB data of an image as a starting point for sonification, one could 
 
 There is nothing scientific behind the choice of mappings between parameters; everything has been aesthetic decisions based on what we think sounds intuitive and pleasant. The way MIDI values are mapped to vertical axis and the time is mapped to the horizontal axis is not a groundbreaking way of thinking of visualisation of music. So there is a contrast here between the rigidness of MIDI and the randomness of RGB. We believe that it works together and kind of makes some system in the chaos. The idea is that the user should be able to see how there is a link between the image and the sound, and we believe that we have been able to achieve this with our mapping.
 
-We have made more of a system for sonification than just a sonification piece. While sonification of images is not a new thing, we have yet to see an online application that allows the user to upload a picture and sonify it in real time. So we hope you enjoy our [pixel sequencer](https://limesack.github.io/MCT4046/Javascript/index_draft8.html)!
+We have made more of a system for sonification than just a sonification piece. While sonification of images is not a new thing, we have yet to see an online application that allows the user to upload a picture and sonify it in real time. So we hope you enjoy our [pixel sequencer](https://limesack.github.io/SMC4046/Javascript/index_draft8.html)!

@@ -14,16 +14,16 @@ Keywords: Portal, Visual, Camera
 Below are screenshots from the testing of different cameras.
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_02_03_ulrikah_vd20.png" width="auto" height="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_03_ulrikah_vd20.png" width="auto" height="auto" />
    <figcaption align="middle">VHD-V302</figcaption>
 </figure>
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_02_03_ulrikah_logitech.png" width="auto" height="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_03_ulrikah_logitech.png" width="auto" height="auto" />
    <figcaption align="middle">Logitech</figcaption>
 </figure>
 
 <figure align="middle">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2020_02_03_ulrikah_huddly.png" width="auto" height="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_03_ulrikah_huddly.png" width="auto" height="auto" />
    <figcaption align="middle">Huddly</figcaption>
 </figure>

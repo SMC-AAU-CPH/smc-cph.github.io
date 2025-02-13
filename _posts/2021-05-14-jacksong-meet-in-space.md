@@ -69,7 +69,7 @@ With this, I integrated dynamic, toggle-able, spatial audio for each participant
 
 ## Validating with a User Study
 
-After a technical evaluation of the system suggested its ability to scale at least to 5 concurrent participants, I ran a user study consisting of students from MCT as well as other's who were experienced with conferencing on a daily basis. The experiment consisted of a brief conversation among 4 users, with and without spatial audio. The results, while preliminary, were promising and appear to support previous findings in the literature.
+After a technical evaluation of the system suggested its ability to scale at least to 5 concurrent participants, I ran a user study consisting of students from SMC as well as other's who were experienced with conferencing on a daily basis. The experiment consisted of a brief conversation among 4 users, with and without spatial audio. The results, while preliminary, were promising and appear to support previous findings in the literature.
 
 There was support for four hypothesis of perceived metrics:
 - Decreased cognitive effort

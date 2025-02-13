@@ -20,7 +20,7 @@ By using movement data, in this case provided by a phone’s accelerometers, we 
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2024_04_28_olavus_vid1.mp4" type='video/mp4'  width="60%">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2024_04_28_olavus_vid1.mp4" type='video/mp4'  width="60%">
   </video>
     <figcaption>Video 1: Showing what gets analyzed
 </figcaption>

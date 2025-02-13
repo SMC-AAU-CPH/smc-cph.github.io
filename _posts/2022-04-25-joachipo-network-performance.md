@@ -60,7 +60,7 @@ When measuring the `bandwidth`, we usually get two numbers related to the `uploa
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_22_04_jakobhoydal_av-latency_and_network_diagnostics.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_22_04_jakobhoydal_av-latency_and_network_diagnostics.mp4" type='video/mp4'>
   </video>
   <figcaption> Network Performance Tutorial</figcaption>
 </figure>
@@ -78,8 +78,8 @@ Then, we could open a web browser on the Client device and type in the IP addres
 Finally, we could measure the `ping` (ms) and the `download` (Bps) checking the local server address with our nice GUI.
 
 <figure style="float: none">
-   <img src="/assets/image/2022_04_21_joachipo_GUI.jpg" alt="MCT Network Performance" title="" width="auto" />
-   <figcaption><i>MCT Network Performance GUI</i></figcaption>
+   <img src="/assets/image/2022_04_21_joachipo_GUI.jpg" alt="SMC Network Performance" title="" width="auto" />
+   <figcaption><i>SMC Network Performance GUI</i></figcaption>
 </figure>
 
 If you want to try it out, note that it is mandatory to install the following packages.
@@ -116,7 +116,7 @@ master = Tk()
 ping = StringVar()
 download = StringVar()
 
-Label(master, text="MCT Network Performance\n").grid(row=0, sticky=W)  
+Label(master, text="SMC Network Performance\n").grid(row=0, sticky=W)  
 Label(master, text="Local Server\n").grid(row=1, sticky=W)
 Label(master, text="Ping Result:").grid(row=3, sticky=W)
 Label(master, text="Download Result:").grid(row=4, sticky=W)

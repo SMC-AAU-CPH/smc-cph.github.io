@@ -5,11 +5,11 @@ date: 2022-05-20 02:00:00 +0200
 categories: motion-capture
 author: Kristian Wentzel
 image: /assets/image/2022_05_20_kriswent_spread.jpg
-keywords: mct, motion capture, gestures, IMU, EMG, modular synthesis
+keywords: SMC, motion capture, gestures, IMU, EMG, modular synthesis
 excerpt: "Extending the keyboard through gestures and modular synthesis."
 ---
 
-As my final project in the "Motion Capture" course, I chose to explore an extended keyboard instrument. There are several ways to perform motion capture, some of them demanding more equipment and being more complex than others. I wanted to keep my extended instrument setup lightweight, not too costly and not too complex. By deciding on this framework, I wanted to be able to use my design even after the course was finished – and ultimately bring it to the stage. While we have access to state-of-the-art equipment and facilities as MCT students, a full-on Infrared Motion Capture system might be hard to bring to the next festival gig or summer tour. My choice was to use an Inertial Measurement Unit (IMU), usually a small devices with a combination of accelerometers and gyroscopes. I also wanted to make use of modular synthesis to accompany and process the audio from my keyboard.
+As my final project in the "Motion Capture" course, I chose to explore an extended keyboard instrument. There are several ways to perform motion capture, some of them demanding more equipment and being more complex than others. I wanted to keep my extended instrument setup lightweight, not too costly and not too complex. By deciding on this framework, I wanted to be able to use my design even after the course was finished – and ultimately bring it to the stage. While we have access to state-of-the-art equipment and facilities as SMC students, a full-on Infrared Motion Capture system might be hard to bring to the next festival gig or summer tour. My choice was to use an Inertial Measurement Unit (IMU), usually a small devices with a combination of accelerometers and gyroscopes. I also wanted to make use of modular synthesis to accompany and process the audio from my keyboard.
 
 ## Gestural control – Myo
 

@@ -17,7 +17,7 @@ excerpt: "The sound of Aurora sonified in a synth"
 ## Valkyrie:
 
 Who are **Valkyries**? Are they those fierce warriors who serves the god Odin and is sent by him to the battlefields to choose the souls who are worthy of a place in Valhalla? Are the sounds that we made coming from her lustrous shield, maybe? Maybe not?
-Perhaps, the relevant question is what is ***Valkyrie***? It's a synth we made that sonifies northern lights, the Aurora Borealis, for our sonification course MCT 4046.
+Perhaps, the relevant question is what is ***Valkyrie***? It's a synth we made that sonifies northern lights, the Aurora Borealis, for our sonification course SMC 4046.
 The Inspiration: A strong sighting of the majestic aurora, here in Trondheim, the science behind how they are formed, and the interesting Nordic mythology were the fuels for it, and so began our quest to chase Northern Lights.
 
 
@@ -136,7 +136,7 @@ Here follows a brief presentation how different parameters of the sound are affe
 ## Demonstration
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_03_26_abhishec_valkyrie_sonification.mp4" width="auto" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_03_26_abhishec_valkyrie_sonification.mp4" width="auto" frameborder="0" allowfullscreen></iframe>
    <figcaption>Aurora_sonified_by_valkyrie</figcaption>
 </figure>
 

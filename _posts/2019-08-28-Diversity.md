@@ -5,9 +5,9 @@ date: 2019-08-27 12:31:00 +0100
 categories: other
 author: Magda Futyma, Thibault Jaccard, Tom Ignatius, Simon Sandvik, Ulrik Halmøy
 image: /assets/image/2019_08_28_aleksati_WoNoMute.jpg
-excerpt: "First year students in Trondheim reflects on diversity in MCT"
+excerpt: "First year students in Trondheim reflects on diversity in SMC"
 ---
-*This post is a collection of thoughts on how to bring more diversity into the domain of MCT. It was written by the first years students in Trondheim during the first week.*
+*This post is a collection of thoughts on how to bring more diversity into the domain of SMC. It was written by the first years students in Trondheim during the first week.*
 
 > Dear ladies, do you really expect that any of you would end up working in the music industry in the future? Female engineers? Do you picture yourself running around with amplifiers bigger and heavier than yourselves? Do you think that any acoustic company really hire women? It’s all men’s work. It requires strength and analytical thinking. I don’t want to destroy your plans but forget it. It will just not happen.
 

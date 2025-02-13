@@ -14,7 +14,7 @@ In this semester's Motion Capture class I wanted to find a way to literally take
 You can buy wearable devices such as the [genki ring](https://genkiinstruments.com/) but I wanted to see if I can come up with an inexpensive customizable version. Check out my final concept in the picture below. 
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_05_08_kristeic_front.jpg" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_05_08_kristeic_front.jpg" width="auto" />
    <figcaption>Current state of the device fixed to my forearm and hand.</figcaption>
 </figure>
 
@@ -32,12 +32,12 @@ Well, no system is perfect from the beginning. That's why I sat down again and i
 
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_05_08_kristeic_right.png" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_05_08_kristeic_right.png" width="auto" />
    <figcaption>Rendering of a future concept</figcaption>
 </figure>
 
 <figure style="float: none">
-   <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2023_05_08_kristeic_hand.png" width="auto" />
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_05_08_kristeic_hand.png" width="auto" />
    <figcaption>Inner side of the hand</figcaption>
 </figure>
 

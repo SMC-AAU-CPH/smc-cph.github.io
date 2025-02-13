@@ -11,7 +11,7 @@ excerpt: "Who says that Csound and early music can't mix? Building a VSTi for sw
 
 # *Tuning Up*
 
-When thinking about interactions between music, communication, and technology, I am usually starting from a much different place than most other students in the MCT program. I respect, **fear**, and expect to learn much more about coding and all the technology that makes the world go round, but my ultimate goals lean toward preservation, education, and transmission of older, decidedly lower-tech music.
+When thinking about interactions between music, communication, and technology, I am usually starting from a much different place than most other students in the SMC program. I respect, **fear**, and expect to learn much more about coding and all the technology that makes the world go round, but my ultimate goals lean toward preservation, education, and transmission of older, decidedly lower-tech music.
 
 With this in mind, our recent shallow dive (that’s what I’ll call a deep dive that’s done in just a few packed hours) into the world of Csound presented me with an opportunity to create a nifty little tool for explorers of early western music. I developed a VSTi for use in Reaper that allows the user to toggle his or her midi keyboard between a handful of the different tuning systems commonly used in Europe within the last 500 years.
 
@@ -43,7 +43,7 @@ Watch the video below for a taste of the different temperaments in action.
 
 <figure style="float: none">
   <video width="640" height="360" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2020_11_06_williakm_temperaments.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_11_06_williakm_temperaments.mp4" type='video/mp4'>
     Alternate Text
   </video>
   <figcaption>Playing example chords and excerpts in different temperaments.</figcaption>

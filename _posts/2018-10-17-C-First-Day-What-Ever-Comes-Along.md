@@ -4,7 +4,7 @@ title: "Group C - Whatever comes along the way"
 date: 2018-10-17 10:10:42 +0200
 categories: interactive-music
 author: Karolina Jawad, Elias Andersen, Eirik Dahl, Guy Sion
-image: /assets/image/2018_08_01_stefanof_MCT.jpg
+image: /assets/image/2018_08_01_stefanof_SMC.jpg
 excerpt: "To wrap it up, the first workshop day on 'physical computing' surprised us in many ways.
 Exposed to new tools in webtechnology we were able to create a little jamsession.  
 Some of the tools were familiar, some of them less. To start with the hardest
@@ -23,7 +23,7 @@ EVERYBODY present in the (extended virtual) room was contributing.
   <figcaption>Noise jam excerpt</figcaption>
 </figure>
 
-# Diverse mobile phone selection, cheap ear plugs, 9Volt batteries, a lot of coffee, 7 rules of hacking, chocolate cream and much more: MCT students are getting ready for the mini-hackathon.
+# Diverse mobile phone selection, cheap ear plugs, 9Volt batteries, a lot of coffee, 7 rules of hacking, chocolate cream and much more: SMC students are getting ready for the mini-hackathon.
 
 
 To wrap it up, the first workshop day on 'physical computing' surprised us in many ways.

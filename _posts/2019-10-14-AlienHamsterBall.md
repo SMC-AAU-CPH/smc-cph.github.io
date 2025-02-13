@@ -6,7 +6,7 @@ categories: interactive-music
 author: Samuel Roman
 image: /assets/image/2019_10_14_stefanof_hamsterball4.jpg
 excerpt: 'The Alien Hamster ball - an instrument expressed through a 3D space'
-Keywords: Interactive Music Systems, Bela, Sensors, Pure Data, IMS, Interactive Music Systems, NIME, MCT
+Keywords: Interactive Music Systems, Bela, Sensors, Pure Data, IMS, Interactive Music Systems, NIME, SMC
 ---
 
 The main concept for the Alien Hamster ball is an instrument expressed through a 3D space. The movement of the sphere will trigger the modulation of the tone, with a sound that is space age or “alien”. Other functions create further options and depth to the model, and allow further exploration through the timbres created.
@@ -18,7 +18,7 @@ The main concept for the Alien Hamster ball is an instrument expressed through a
 It is directly inspired by the alien reece project i produced last year. It is a web based audio model that had oscillators mapped to the mouse movement, on both X and Y axis. I found it refreshingly intuitive to find various clashing and morphing frequencies as you move around the page. This felt very different to adjusting frequencies on a regular synthesiser, and encouraged creating abstract tones and sweeps.
 I wanted to translate this idea to a movement in a 3D space with a physical object.
 
-https://mct-master.github.io/sound-programming/2019/02/11/Alien-Reese.html
+https://SMC-master.github.io/sound-programming/2019/02/11/Alien-Reese.html
 
 Also to a lesser extent i was inspired by a group project presented in the first year exploring the use of feedback in a collaborative instrument, and wanted to combine these elements to create a wholly new one.
 

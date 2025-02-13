@@ -5,7 +5,7 @@ date: 2022-04-11 10:30:00 +0200
 categories: networked-music
 author: Aleksander Tidemann, Stefano Fasciani
 image: /assets/image/2022_04_01_aleksati_5g_telenor_logo.png
-keywords: mct, uio, networked music performances, telematic music, 5g, telenor research, lola, jacktrip, audio latency, video latency
+keywords: SMC, uio, networked music performances, telematic music, 5g, telenor research, lola, jacktrip, audio latency, video latency
 excerpt: "In collaboration with Telenor Research, we explored the prospects of doing networked music performances over 5G. Here are the preliminary results."
 ---
 
@@ -13,7 +13,7 @@ excerpt: "In collaboration with Telenor Research, we explored the prospects of d
 
 5G is the new paradigm of telecommunication and wireless networking. But what is so great about 5G? For the average user, the biggest difference from 4G to 5G will be a massive increase in speed (bandwidth). In reality, 5G is an entirely new networking infrastructure. This is one reason why there are so many high expectations of 5G. We imagine remote-controlled surgery from afar, distributed sporting events, and even stable networked music performances (NMP).
 
-At [MCT](https://www.uio.no/english/studies/programmes/mct-master/), we have been experimenting with NMPs for several years. One of the biggest challenges with playing music over the network is the exceptionally high demand for low-latency communication <small>[2] [3] [4]</small>. In fact, research tells us that the ideal roundtrip latency (back and forth between two locations) for synchronous music performances is around 25-30ms, with the maximum we can tolerate at around 40-50ms <small>[5]</small>. For some perspective:
+At [SMC](https://www.uio.no/english/studies/programmes/SMC-master/), we have been experimenting with NMPs for several years. One of the biggest challenges with playing music over the network is the exceptionally high demand for low-latency communication <small>[2] [3] [4]</small>. In fact, research tells us that the ideal roundtrip latency (back and forth between two locations) for synchronous music performances is around 25-30ms, with the maximum we can tolerate at around 40-50ms <small>[5]</small>. For some perspective:
 
 **Demo -** `30ms audio delay from left to right ear:`
 
@@ -80,7 +80,7 @@ The second experiment was carried out in Elverum, close to Terningmoen Army Base
 
 For both experiments, we used a pair of [Huawei H138-380 CPE Pro 3 5G Routers](https://nettbutikk.emcom.no/h138-380-cpe-pro-3-5g-ruter-4g-5g-ruter-wifi-6-2-x-lan-111560-p0000028124) to connect to the network.
 
-To send audio and video back and forth, we used our own portable and custom-built NMP systems. These racks are essentially bundles of high-end software, audio/video peripherals and networking tools that can provide the lowest possible latency on audio/video transmissions over the network, given that all other the pieces of the puzzle are correct. Full documentation and more detailed info about these systems is available [here](https://github.com/MCT-master/NMP-Portable-Kits/wiki).
+To send audio and video back and forth, we used our own portable and custom-built NMP systems. These racks are essentially bundles of high-end software, audio/video peripherals and networking tools that can provide the lowest possible latency on audio/video transmissions over the network, given that all other the pieces of the puzzle are correct. Full documentation and more detailed info about these systems is available [here](https://github.com/SMC-master/NMP-Portable-Kits/wiki).
 
 <div class="slideshow-container" id="hardware-setup">
     <div class="mySlides fade">
@@ -90,7 +90,7 @@ To send audio and video back and forth, we used our own portable and custom-buil
             alt="5g_telenor_lolaracks"
             title="5g_telenor_lolaracks"
             width="auto" />
-            <figcaption>MCT's new NMP Portable Kits in action at UiO.</figcaption>
+            <figcaption>SMC's new NMP Portable Kits in action at UiO.</figcaption>
         </figure>
     </div>
     <div class="mySlides fade">
@@ -239,7 +239,7 @@ With this configuration, we measured the one-way video latency between our machi
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_04_01_aleksati_5g_video_latency.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_04_01_aleksati_5g_video_latency.mp4" type='video/mp4'>
   </video>
   <figcaption>The capture of the video latency between our two NMP kits during experiment nr.1. The playback speed is 50%. Video by Stefano Fasciani.</figcaption>
 </figure>
@@ -283,7 +283,7 @@ Using the above configurations we measured a 55-60ms digital RTT and an analog R
 
 During a two-week period in late March 2022, we investigated the feasibility of conducting NMPs over commercial and private 5G networks, in collaboration with Telenor Research. On two separate occasions, we measured the stability, quality, and latency of transferring uncompressed audio and compressed video over the networks with high-end hardware and software utilities. When accepting borderline conditions on a private 5G network (5GNoW), we managed to push the audio RTT latency down to 75ms. However, in more realistic conditions on a first-generation commercial 5G, we achieved an analog RTT audio latency of 165ms and 116ms one-way latency for video.
 
-Compared with audio RTT benchmarks mentioned in the introduction (between 25-50ms), our 5G test results were not particularly promising. However, I believe we could conduct successful NMPs over 5G if we could get the audio analog RTT down between 50-70ms. There are many documented strategies for coping with latency-rich environments <small>[1]</small>. In fact, MCT students have recently explored some of these strategies in detail (read more [here](https://mct-master.github.io/portal/)). Also, considering that we had unfortunate testing conditions in Elverum, there is reason to be optimistic about achieving better RTT audio and video scores if we manage to resolve these issues at a later stage.
+Compared with audio RTT benchmarks mentioned in the introduction (between 25-50ms), our 5G test results were not particularly promising. However, I believe we could conduct successful NMPs over 5G if we could get the audio analog RTT down between 50-70ms. There are many documented strategies for coping with latency-rich environments <small>[1]</small>. In fact, SMC students have recently explored some of these strategies in detail (read more [here](https://SMC-master.github.io/portal/)). Also, considering that we had unfortunate testing conditions in Elverum, there is reason to be optimistic about achieving better RTT audio and video scores if we manage to resolve these issues at a later stage.
 
 On the other hand, although we can do more testing, some things we cannot mitigate. For instance, we cannot change how the 5G protocol is written, to some extent how our routers/modems choose to buffer, or the inherent instability of using wireless networks. Because of this, we have to be practical and make the best with what we can get. Moreover, lower latency should be possible when the Ultra-Reliable Low Latency Communications (URLLC) feature of 5G is implemented on future Telenor networks.
 

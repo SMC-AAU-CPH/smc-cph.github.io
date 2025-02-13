@@ -32,7 +32,7 @@ As you can see, the main idea is tracking movement trough a **motion capture sys
 
 Using this concept, I implemented two “air” instruments for a live performance which are the following ones:
 
-* **Drums:** The idea is that the player can do gestures that simulate a “hit” in the air with each hand by holding an object that represents a drumstick and produce drums sounds every time a “hit” is performed. For this case, this implementation is limited to play a kick drum with the right hand and a snare drum with the left hand. The inspiration for this instrument came from a previous work in the MCT master that can be found [here.](https://mct-master.github.io/motion-capture/2019/04/24/How-music-related-motion-tracking-can-sound.html)
+* **Drums:** The idea is that the player can do gestures that simulate a “hit” in the air with each hand by holding an object that represents a drumstick and produce drums sounds every time a “hit” is performed. For this case, this implementation is limited to play a kick drum with the right hand and a snare drum with the left hand. The inspiration for this instrument came from a previous work in the SMC master that can be found [here.](https://SMC-master.github.io/motion-capture/2019/04/24/How-music-related-motion-tracking-can-sound.html)
 
 * **Theremin:** This is an instrument that is naturally played in the air, and my intention was to implement a digital version of it with some modifications. Particularly, I am using the distance between a hand and a *point* in space to map frequency and amplitude of a sine wave. The *point* is an object that can be tracked by the motion capture system to obtain its position, which is used to calculate the needed distance to the position of the hand. More details will be provided later.
 
@@ -117,7 +117,7 @@ Because of the precision and reliability of the motion capture system, the respo
 A demonstration of how it works is shown in the following video:
 
 <figure style="float: none">
-   <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_04_18_pedropl_airInstrumentsperformance.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_04_18_pedropl_airInstrumentsperformance.mp4" width="1024" height="576" frameborder="0" allowfullscreen></iframe>
    <figcaption>'Air' Instruments - Live Performance</figcaption>
 </figure>
 

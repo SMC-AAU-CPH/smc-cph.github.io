@@ -9,7 +9,7 @@ excerpt: 'Prototyping musical instruments in the name of recycling - exploring O
 keywords: HCI, Bela, Physical Computing, Orchestrash, human-computer-interaction
 ---
 
-During the HCI course, we examined the instruments prototypes built as part of the physical computing hackathon. This blog post is a summary of our reflections of prototyping musical instruments in the name of recycling, a project we called *Orchestrash*. Where [the previous blog post](https://mct-master.github.io/interactive-music/2019/10/24/Orchestrash.html) discuss the technicalities of prototyping instruments in a physical computing environment, this one will examine Orchestrash from an HCI point of view.
+During the HCI course, we examined the instruments prototypes built as part of the physical computing hackathon. This blog post is a summary of our reflections of prototyping musical instruments in the name of recycling, a project we called *Orchestrash*. Where [the previous blog post](https://SMC-master.github.io/interactive-music/2019/10/24/Orchestrash.html) discuss the technicalities of prototyping instruments in a physical computing environment, this one will examine Orchestrash from an HCI point of view.
 
 ## Introduction
 

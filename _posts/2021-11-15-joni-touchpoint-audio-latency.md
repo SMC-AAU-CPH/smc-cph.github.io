@@ -6,10 +6,10 @@ categories: networked-music
 author: Joni Mok
 image: /assets/image/2021_11_15_joni_1.jpeg
 keywords: portal, communication system, audio latency
-excerpt: "Quick tips for future MCT-ers or external partners who will be using the MCT Portal for the first time: this article gives you practical information to start with improving audio latency."
+excerpt: "Quick tips for future SMC-ers or external partners who will be using the SMC Portal for the first time: this article gives you practical information to start with improving audio latency."
 ---
 
-Quick tips for future MCT-ers or external partners who will be using the MCT Portal for the first time: this article gives you practical information to start with improving audio latency.
+Quick tips for future SMC-ers or external partners who will be using the SMC Portal for the first time: this article gives you practical information to start with improving audio latency.
 
 ## Introduction
 
@@ -62,11 +62,11 @@ In this session, I used Reaper, which is a free digital audio workstation. I too
 
 ## Current limitations:
 
-NTNU was not able to connect with Zoom. Both 48 kHz samples were not collected during the testing sessions due to technical errors. Therefore, only 6 pairs of roundtrip and a pair of local testing at UiO were carried out.  However, in the future, if there is also a higher sampling rates option, such as 96 kHz in the MIDAS mixer it could be used instead to decrease audio latency. Additionally, the buffer size in Lola software at the moment cannot go lower than 64 samples. It could be an interesting problem to look at for future MCT students, namely how to increase the buffering.
+NTNU was not able to connect with Zoom. Both 48 kHz samples were not collected during the testing sessions due to technical errors. Therefore, only 6 pairs of roundtrip and a pair of local testing at UiO were carried out.  However, in the future, if there is also a higher sampling rates option, such as 96 kHz in the MIDAS mixer it could be used instead to decrease audio latency. Additionally, the buffer size in Lola software at the moment cannot go lower than 64 samples. It could be an interesting problem to look at for future SMC students, namely how to increase the buffering.
 
 ## Touchpoint to consider while dealing with audio latency in a communication system:
 
-A take-away message for the new MCT students: the most useful things to consider when you need to improve audio latency are whether there are some touchpoints you could start with. In the the Lola software, it’s where you can change the buffer size, for instance. And then, you can also alter the MIDAS mixer sample rates. Another touchpoint may depend on other particulars of the setup, for example, the setting in a DAW and the capacity of a sound card.
+A take-away message for the new SMC students: the most useful things to consider when you need to improve audio latency are whether there are some touchpoints you could start with. In the the Lola software, it’s where you can change the buffer size, for instance. And then, you can also alter the MIDAS mixer sample rates. Another touchpoint may depend on other particulars of the setup, for example, the setting in a DAW and the capacity of a sound card.
 
 
 ## Special thanks:

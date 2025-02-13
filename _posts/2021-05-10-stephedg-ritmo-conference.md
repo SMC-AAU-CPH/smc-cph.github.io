@@ -9,7 +9,7 @@ keywords: conference, concert, zoom, streaming
 excerpt: "How do you design conference that brings together both virtual and physical participants? This was the problem we explored for our Applied Project."
 ---
 
-Rhythm Production and Perception Workshop (RPPW) is a biannual international event that brings researchers from a range of disciplines together to engage in discussions about the scientific study of rhythm. Our MCT4031 project was to design and develop a hybrid conference solution for the RITMO/RPPW conference scheduled for 22nd-25th June 2021.
+Rhythm Production and Perception Workshop (RPPW) is a biannual international event that brings researchers from a range of disciplines together to engage in discussions about the scientific study of rhythm. Our SMC4031 project was to design and develop a hybrid conference solution for the RITMO/RPPW conference scheduled for 22nd-25th June 2021.
 
 Online conferences have been becoming more and more popular, allowing people from all over the world to attend events that might not have previously been possible due to time and cost restraints. Then COVID hit, and suddenly they were the only way to hold a conference. This means that there is now a lot of technology out there to support virtual conferences. What has been less explored however is the concept of the hybrid conference. As COVID (hopefully!) starts to recede, conferences will once again start to open up physically, but the demand for online access to these conferences is likely to remain high. So we need to find new solutions that can combine the online and offline elements of a conference into an engaging, unified whole.
 

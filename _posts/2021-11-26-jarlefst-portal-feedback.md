@@ -10,7 +10,7 @@ excerpt: "Inspired by how virtual communication has been adopted and integrated 
 ---
 
 
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_11_25_jarlefst_midissineangle.gif" alt="fader_snake" style="width:100%;height:width/2.56px;">
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_25_jarlefst_midissineangle.gif" alt="fader_snake" style="width:100%;height:width/2.56px;">
 
 
 ##  Audio Feedback / LOLA / ZOOM / & MIDI
@@ -28,7 +28,7 @@ __As 2021__ comes to an end, a particular virus might hopefully find its way to 
 <br>  
 
 
-__MCT_Portal__ virtual communication persists in 2021 through lectures and seminars, group collaborations, and scattered non-academic pursuits. Well documented throughout this blog - the MCT_Portal is the audio/video link connecting students in Trondheim (NTNU) and Oslo (UiO) and part-takers from around the globe joining classes and workshops via ZOOM.  
+__SMC_Portal__ virtual communication persists in 2021 through lectures and seminars, group collaborations, and scattered non-academic pursuits. Well documented throughout this blog - the SMC_Portal is the audio/video link connecting students in Trondheim (NTNU) and Oslo (UiO) and part-takers from around the globe joining classes and workshops via ZOOM.  
 
 
 
@@ -36,7 +36,7 @@ __The particulars__ of the Portal audio-communication architecture engender some
 
 
 <figure align="center">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_11_25_jarlefst_portalfeedback.gif" alt="Audio Feedback in the MCT Portal" style="width:480px;height:auto;">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_25_jarlefst_portalfeedback.gif" alt="Audio Feedback in the SMC Portal" style="width:480px;height:auto;">
   <figcaption>fig. 1 - <i>Portal feedback is not usual feedback</i> -</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ __The particulars__ of the Portal audio-communication architecture engender some
 
 __Rules of audio thumb__ dictate that microphones should not be routed to nearby loudspeakers if avoidable. The amplified signal from the loudspeakers potentially _bleeding_ back into the microphones, and if gained to hot, causing a self-amplifying loop.
 
-__Where multiple microphones__ in Trondheim and Oslo are _live_ by default - receiving and transmitting once the power is turned on - the MCT_Portal has its inherent feedback structure. Although local loudspeakers do not amplify local microphones - Oslo mics are not sent to Oslo speakers, Trondheim mics are not sent to Trondheim speakers - the system itself constitutes an augmented audio loop. As _fig.1_ illustrates - if the gain staging done at both communication nodes is set too hot local microphones might very well receive their own amplified signal, only by the detour of the other nodes' loudspeakers and microphones.  
+__Where multiple microphones__ in Trondheim and Oslo are _live_ by default - receiving and transmitting once the power is turned on - the SMC_Portal has its inherent feedback structure. Although local loudspeakers do not amplify local microphones - Oslo mics are not sent to Oslo speakers, Trondheim mics are not sent to Trondheim speakers - the system itself constitutes an augmented audio loop. As _fig.1_ illustrates - if the gain staging done at both communication nodes is set too hot local microphones might very well receive their own amplified signal, only by the detour of the other nodes' loudspeakers and microphones.  
 
 __Complicating things__ further is the transitory latency governing the Trondheim/Oslo communication.  Once acoustic feedback has occurred in the system, the initial response is naturally: mute everything! Just make that howling noise disappear! To later establish what instigated the problem has proven particularly tricky. The Portal audio moves so counterintuitively that traditional approaches to feedback-reduction (EQing, Gating) have fallen short.
 
@@ -68,11 +68,11 @@ __Which has inspired__ this simple proposition:
 
 ### Fighting Audio Feedback with MIDI
 
-__The quickSet_TotalMix.pd__ patch is directly inspired by the mentioned unmute buttons of ZOOM et al. With simple, customizable keystrokes or similarly settable MIDI ControlChange messages - or MIDI notes - the patch sends six presets to safeguard against acoustic feedback. [[download_patch](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/code/2021_25_11_jarlefst_puredata_patch.zip "Download the folder including /abstractions for fully functioning patch - Patch is pure-vanilla.pd with no other dependencies")]
+__The quickSet_TotalMix.pd__ patch is directly inspired by the mentioned unmute buttons of ZOOM et al. With simple, customizable keystrokes or similarly settable MIDI ControlChange messages - or MIDI notes - the patch sends six presets to safeguard against acoustic feedback. [[download_patch](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/code/2021_25_11_jarlefst_puredata_patch.zip "Download the folder including /abstractions for fully functioning patch - Patch is pure-vanilla.pd with no other dependencies")]
 
 
 <figure align="left">
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_11_26_jarlefst_totalmix_pd.jpg" alt="TotalMix and PureData">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_jarlefst_totalmix_pd.jpg" alt="TotalMix and PureData">
   <figcaption>fig. 2 - <i>TotalMix submixes reflected in the quickSet_patch</i> </figcaption>
 </figure>
 
@@ -96,7 +96,7 @@ __The__ ___"... is talking"___ presets give that when one of the LOLA nodes is t
 
 ### MIDI setup
 
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_11_25_jarlefst_midisettings_pd&totmix.jpg">
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_25_jarlefst_midisettings_pd&totmix.jpg">
   <figcaption>fig. 3 <i> MIDI-setup in PureData and TotalMix </i> </figcaption>
 
 </figure>
@@ -121,10 +121,10 @@ __There is much__ still wanting in the quickSet_patch. A preset storing system..
 ---
 <br>  
 
-<img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_11_25_jarlefst_fadersinewide.gif" alt="M32 fader Wave" style="width:100%;height:auto;">
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_25_jarlefst_fadersinewide.gif" alt="M32 fader Wave" style="width:100%;height:auto;">
 
-__POST SCRIPT__  --- These somewhat hypnotizing silver sinewaves are the faders on a Midas M32 mixing console. Controlling the M32 - another fixture in the MCT_Portal setup - is another path to reducing feedback. Next year then...
-__Though serving__ no sensible purpose for any audio - and disregarding the absolute racket emanating from twentyfive hardworking motorized faders - there is a particular satisfaction in sending some MIDI-messages from a [MaxMSP_patch](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/code/2021_11_25_jarlefst_midasm32_midi.maxpat "set the MIDI-menu to correspond to the M32 and make waves!") to set some things in motion.
+__POST SCRIPT__  --- These somewhat hypnotizing silver sinewaves are the faders on a Midas M32 mixing console. Controlling the M32 - another fixture in the SMC_Portal setup - is another path to reducing feedback. Next year then...
+__Though serving__ no sensible purpose for any audio - and disregarding the absolute racket emanating from twentyfive hardworking motorized faders - there is a particular satisfaction in sending some MIDI-messages from a [MaxMSP_patch](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/code/2021_11_25_jarlefst_midasm32_midi.maxpat "set the MIDI-menu to correspond to the M32 and make waves!") to set some things in motion.
 
 
 ... so a huge thanks to Joni Mok for all help, reflections, inspiration, and drive!!
@@ -153,4 +153,4 @@ __FURTHER READING:__
 <br>  
 <br>  
 
-![subMix](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_11_26_jarlefst_submix.png)
+![subMix](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_jarlefst_submix.png)

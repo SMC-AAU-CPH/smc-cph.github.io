@@ -37,7 +37,7 @@ EnCodec is particularly relevant to network musical performance. It can encode w
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_sample.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_sample.wav" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>The uncompressed audio sample.</figcaption>
@@ -46,7 +46,7 @@ EnCodec is particularly relevant to network musical performance. It can encode w
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_sample_opus_6.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_sample_opus_6.wav" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>The sample compressed to 6kbps using Opus.</figcaption>
@@ -54,7 +54,7 @@ EnCodec is particularly relevant to network musical performance. It can encode w
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_encodec_sample_6.wav" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_encodec_sample_6.wav" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>The sample compressed to 6kbps using EnCodec.</figcaption>
@@ -62,7 +62,7 @@ EnCodec is particularly relevant to network musical performance. It can encode w
 
 # ML Codecs for Network Musical Performance
 
-What advantages do these new codecs offer for network music applications? Primarily, they may allow us to perform network music over a much wider range of networks. At MCT we are spoilt by the LOLA network, which is our gigabit local network used solely for music research. However, by encoding music to the small bitrates made possible by ML-enhanced codecs, we may be able to rehearse and even perform music over standard consumer Wi-Fi and even mobile networks like 5G.
+What advantages do these new codecs offer for network music applications? Primarily, they may allow us to perform network music over a much wider range of networks. At SMC we are spoilt by the LOLA network, which is our gigabit local network used solely for music research. However, by encoding music to the small bitrates made possible by ML-enhanced codecs, we may be able to rehearse and even perform music over standard consumer Wi-Fi and even mobile networks like 5G.
 
 Of course, there are some problems a snazzy new codec won’t solve. We’re still ultimately limited in terms of latency by the speed of light – sending audio over fibre optic cables from Oslo to Sydney takes a minimum of 60ms simply due to the laws of physics. However, ML-enhanced codecs may help to democratise network music performance, bringing it outside of the classroom and into the hands of the average home musician. That is something we can all get behind.
 

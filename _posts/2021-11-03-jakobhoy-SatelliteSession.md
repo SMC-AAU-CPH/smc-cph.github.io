@@ -13,7 +13,7 @@ keywords: Music Production, Logic Pro, Ableton Live, Communication, collaboratio
 
 
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_11_03_jakobhoy_satellitesessions_header.jpg" alt="Yuri Gagarin was the first man in space (Sattelite Sessions)" width="100%" align="middle"/>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_03_jakobhoy_satellitesessions_header.jpg" alt="Yuri Gagarin was the first man in space (Sattelite Sessions)" width="100%" align="middle"/>
 </figure>
 
 ```
@@ -77,14 +77,14 @@ As an experiment, we also tried to join our Satellite session through BeSpoke, a
 <br>
 <br>
 <figure>
-  <img src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_11_03_jakobhoy_abletonlivesession.png" alt="Yuri Gagarin was the first man in space (Sattelite Sessions)" width="100%" align="middle"/>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_03_jakobhoy_abletonlivesession.png" alt="Yuri Gagarin was the first man in space (Sattelite Sessions)" width="100%" align="middle"/>
 <figcaption align="center">Can you spot Yuri?</figcaption>
 </figure>
 <br>
 <br>
 <p style="text-align: center;">
   <audio title="Segment 1" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_03_jakobhoy_yurissnippet.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_03_jakobhoy_yurissnippet.mp3" type="audio/mpeg">
 
   </audio>
 </p>  
@@ -100,7 +100,7 @@ As an experiment, we also tried to join our Satellite session through BeSpoke, a
 
 
 
-One of the few downsides we found was the email notification system, which seems not to be responding very rapidly. Kristian got an email at 19:29 saying Jakob had made three updates, with a “screenshot” of a generic session. This was actually 3 updates made at 13:23 when we tested the plugin together at MCT. This could lead to minor confusion, but is no big deal if you’re aware of it.
+One of the few downsides we found was the email notification system, which seems not to be responding very rapidly. Kristian got an email at 19:29 saying Jakob had made three updates, with a “screenshot” of a generic session. This was actually 3 updates made at 13:23 when we tested the plugin together at SMC. This could lead to minor confusion, but is no big deal if you’re aware of it.
 Another minor issue would happen when you upload tracks with Audio/MIDI Satellite plugins to your session, but forget to save the project locally in your DAW. Those tracks in the Satellite can not be re-assigned to your local tracks anymore, even if you give tracks similar names in a new project. No biggie, but you’ll lose the flexibility to replace/update the content of those specific tracks, which you’re able to do when opening a saved project with your Satellite session.
 
 In addition to sharing individual tracks, there is nothing stopping you from adding Satellite Audio plugins to buses (drum bus, reverb bus, etc.) or even the master track as well. This makes the plugin really flexible, and it’s easy to share stems from your projects. When mixing the song, we used a reverb from Jakobs plugins and a delay from Kristian.
@@ -111,4 +111,4 @@ All in all this is a great tool for audio file sharing on-the-go. It skips the t
 
 <br>
 
-If you want to listen to the full song, you can download it [here](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_11_03_jakobhoy_yurifull.mp3).
+If you want to listen to the full song, you can download it [here](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_03_jakobhoy_yurifull.mp3).

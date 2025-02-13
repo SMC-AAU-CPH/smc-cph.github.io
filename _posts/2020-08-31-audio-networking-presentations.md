@@ -11,13 +11,13 @@ keywords: Portal, audio, networking, cross-campus, lecture, presentation
 ### Audio in the Portal
 
 <figure align="middle">
-    <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/document/2020_08_31_jacksong_audio_presentation.pdf" width="800px" height="480px" allowfullscreen></iframe>
+    <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2020_08_31_jacksong_audio_presentation.pdf" width="800px" height="480px" allowfullscreen></iframe>
     <figcaption>Our presentation on audio</figcaption>
 </figure>
 
 ### A Brief on Network Audio
 
 <figure align="middle">
-    <iframe src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/document/2020_09_01_ulrikah_network_presentation.pdf" width="800px" height="480px" allowfullscreen></iframe>
+    <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2020_09_01_ulrikah_network_presentation.pdf" width="800px" height="480px" allowfullscreen></iframe>
     <figcaption>Our presentation on networking</figcaption>
 </figure>

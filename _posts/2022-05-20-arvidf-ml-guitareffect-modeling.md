@@ -5,7 +5,7 @@ date: 2022-05-20 00:30:00 +0200
 categories: machine-learning
 author: Arvid Falch
 image: /assets/image/2022_05_19_arvidf_pedals.png
-keywords: mct, machine learning, scientific computing, analog effects
+keywords: SMC, machine learning, scientific computing, analog effects
 excerpt: "Using LSTM recurrent neural networks to model two analog guitar pedals."
 ---
 

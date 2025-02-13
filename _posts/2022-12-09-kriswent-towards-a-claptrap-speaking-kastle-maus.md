@@ -5,13 +5,13 @@ date: 2022-12-09 13:00:00 +0200
 categories: interactive-music
 author: Kristian Wentzel
 image: /assets/image/2022_12_09_kriswent_kastle_maus.jpg
-keywords: mct, modular synthesis, puppets, interactive music systems
+keywords: SMC, modular synthesis, puppets, interactive music systems
 excerpt: "Once upon a time, there was a maus living in a kastle.."
 ---
 
 # Introduction
 
-It's the most beautiful time of the year! The time of the year when MCT projects are due and exams keep competing for your attention. As for the beautiful part of it, this means that the MCT perimeters will showcase telematic performances and instruments you didn't knew you wanted to experience.
+It's the most beautiful time of the year! The time of the year when SMC projects are due and exams keep competing for your attention. As for the beautiful part of it, this means that the SMC perimeters will showcase telematic performances and instruments you didn't knew you wanted to experience.
 
 This is the story of my project in Interactive Music Systems, trough it's early stages and aaaaalmost to it's final iteration. I hope you enjoy it!
 
@@ -35,7 +35,7 @@ Except from his knack to speaking loud, (don't get him started on his opinions o
 
 # The Kastle
 
-The Kastle is where the Maus resides. It originates from the Czech Republic, but is now located next to the MCT Headquarters. To Maus, this is more than just a home, it's a place of refuge. It's a place where he can be himself, without being judged. It's a place where he can be free. It's a place where he can be Maus. The Kastle is magical, and the true inspiration for all of Maus' gibberish.
+The Kastle is where the Maus resides. It originates from the Czech Republic, but is now located next to the SMC Headquarters. To Maus, this is more than just a home, it's a place of refuge. It's a place where he can be himself, without being judged. It's a place where he can be free. It's a place where he can be Maus. The Kastle is magical, and the true inspiration for all of Maus' gibberish.
 
 <figure style="float: none">
    <img src="/assets/image/2022_12_07_kriswent_bastl.jpeg" alt="Bastl Kastle" title="" height="auto" width="45%" />
@@ -63,7 +63,7 @@ Today is Friday the 9th of December and there is still 3 days until deadline. My
 
 <figure style="float: none">
   <video width="45%" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_12_09_kriswent_prototype.mov" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_12_09_kriswent_prototype.mov" type='video/mp4'>
   </video>
   <figcaption><i>Work-in-Progress after the soldering was done, and everything (except sensors) spoke gobbledygook fluently to each other.</i></figcaption>
 </figure>

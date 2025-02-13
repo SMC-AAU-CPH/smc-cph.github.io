@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The MCT Audio Vocabulary"
+title: "The SMC Audio Vocabulary"
 date: 2022-12-06 03:00:00 +0200
 categories: networked-music
 author: Kristian Eicke
@@ -9,7 +9,7 @@ keywords: audio, routing, tips, guide, portal
 excerpt: "Click this post if you need some explanation on jargon, mainly related to the Portal and the NMP kits."
 ---
 
-After my first MCT semester I found answers to my tech questions and also asked my fellow students what part of the audio jargon they need clearance on. So what I will do in this post is providing a short portal-related list of vocabulary and explanations some of you will find helpful, as well as tips and tricks I learned over the years as a rookie guitar player and some general workflow for a happy day in audio-land. Bear in mind that I will only cover hardware audio routing – so basically everything you can touch. I also plan on updating this post with more relevant vocabulary after the semester break. 
+After my first SMC semester I found answers to my tech questions and also asked my fellow students what part of the audio jargon they need clearance on. So what I will do in this post is providing a short portal-related list of vocabulary and explanations some of you will find helpful, as well as tips and tricks I learned over the years as a rookie guitar player and some general workflow for a happy day in audio-land. Bear in mind that I will only cover hardware audio routing – so basically everything you can touch. I also plan on updating this post with more relevant vocabulary after the semester break. 
 
 
 ## Mix Bus/Bus/Buss, Subgroups and Aux/Returns  
@@ -87,7 +87,7 @@ First, make sure that the cable is untangled and lies on the floor in a more or 
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_11_27_kristeic_cableroll.mov" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_27_kristeic_cableroll.mov" type='video/mp4'>
   </video>
 </figure>
 

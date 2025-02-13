@@ -11,7 +11,7 @@ excerpt: "The first physical portal experience during the pandemic"
 
 # 1. Overview
 
-The **MCT4022** was our first physical course since we attended the MCT. *The aim of this course is to learn to operate and maintain the Portal, the audio-visual communication platform connecting the two campuses in Trondheim and Oslo.* Meanwhile, the preparation of a telematic concert between UiO and NTNU is one of the important outcomes of this course.
+The **SMC4022** was our first physical course since we attended the SMC. *The aim of this course is to learn to operate and maintain the Portal, the audio-visual communication platform connecting the two campuses in Trondheim and Oslo.* Meanwhile, the preparation of a telematic concert between UiO and NTNU is one of the important outcomes of this course.
 
 In this semester, we followed Guy and Eigil, learned about the operation and the set up of the hardware devices in Portal, also the low-latency communication tools such as [LOLA](https://lola.conts.it/), TICO, [Zoom](https://zoom.us/) between Oslo and Trondheim campuses. In this blog post, we will summarise and reflect on our portal experiences and our telematic concert.
 
@@ -35,7 +35,7 @@ The primary learnings, playing music and communicating with each other in the te
 
 ### Troubleshooting
 
-The experience in Portal was a bit of a mixed bag. During [Team C rehearsals](https://mct-master.github.io/portal/2021/02/28/joni-teamcjam.html), we encountered a variety of software and hardware problems pretty much continuously from the beginning of the course right to the end of the concert. Here we will discuss three LOLA related problems that we encountered during the semester.
+The experience in Portal was a bit of a mixed bag. During [Team C rehearsals](https://SMC-master.github.io/portal/2021/02/28/joni-teamcjam.html), we encountered a variety of software and hardware problems pretty much continuously from the beginning of the course right to the end of the concert. Here we will discuss three LOLA related problems that we encountered during the semester.
 
 The first seems to be a common one - if LOLA is connected for a longer period of time (usually more than two hours), the audio receive will suddenly disconnect at one end, while the other side remains completely normal. This happened to us pretty much every rehearsal we had, and it always happened on the Oslo side. We found that after restarting the whole computer and reconnecting LOLA, communication was restored and everything worked normally again.
 
@@ -60,7 +60,7 @@ From a musical perspective, as a traditional classical music soloist, I am not s
 
 During the concert, although the digital piano was being constantly compressed for unknown reasons, and re-listening to the Youtube stream was a completely different experience from the live one. But I guess that's probably one of the charms of being involved in telematic performance, you can never predict what strange problems you'll have next time!
 
-The MCT4022 was a good exploration of telematic performance and low-latency transmission techniques, and I hope to further refine my understanding of Portal technology in the next semester!
+The SMC4022 was a good exploration of telematic performance and low-latency transmission techniques, and I hope to further refine my understanding of Portal technology in the next semester!
 
 # 3b. Stephen's Reflection
 
@@ -70,8 +70,8 @@ I really enjoyed the rehearsals. It was an amazing experience to play with Linds
 
 # 3c. Lindsay's Reflection
 
-In our second semester, we were excited and looking forward to finally meet our classmates and to work in the core feature of the program, the high-tech MCT Portal.  
-Starting to understand the technologies and getting a hands-on experience on what we learned theoretically in the first semester and getting around with using the mixer, LOLA and TICO setup was fairly challenging at first. Speaking on behalf of all MCT students, the one main thing we all were experts on, was using ZOOM.
+In our second semester, we were excited and looking forward to finally meet our classmates and to work in the core feature of the program, the high-tech SMC Portal.  
+Starting to understand the technologies and getting a hands-on experience on what we learned theoretically in the first semester and getting around with using the mixer, LOLA and TICO setup was fairly challenging at first. Speaking on behalf of all SMC students, the one main thing we all were experts on, was using ZOOM.
 
 The course had much to offer, in terms of utilizing the time and technologies at our disposable. Even though we were only 3 in Trondheim, I could reach a good amount of skill using the Midas M32, be quick to grasp ques from sound feedback while able to sort out the equalizing and spend some quality human time in these COVID times.   
 
@@ -83,4 +83,4 @@ Reflecting on the concert, it was fun and engaging to play spontaneously with Gu
 
 Come and hear our concert, and **huge thanks to Guy and his magnificent saxophone skills!**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tUqhI0R3DDA" title="MCT 2020 Musical Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tUqhI0R3DDA" title="SMC 2020 Musical Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

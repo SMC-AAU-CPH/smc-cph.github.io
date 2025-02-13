@@ -4,12 +4,12 @@ title: "Funky Balls"
 date: 2021-02-17 20:00:00 +0200
 categories: sound-programming
 author: Alena Clim, Leigh Murray
-image: https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_02_19_leigh_funkyballs.gif
+image: https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_02_19_leigh_funkyballs.gif
 keywords: csound, reverb, bit crusher, delay, moog diode, string resonator, harmoniser
 excerpt: "Want a more organic and dynamic way of mixing and applying effects? Experiment with funky balls!"
 ---
 
-![Funkyballs](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_02_19_leigh_funkyballs.gif)
+![Funkyballs](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_02_19_leigh_funkyballs.gif)
 
 ## The idea
 
@@ -64,7 +64,7 @@ Effects:
 
 With all the tracks and effects shown in the image above, it is easy to become overwhelmed. So we wanted to create a simple user interface that hides this complexity and lets the user focus on exploring the different sounds and effects.  We found the [Paper JS](http://paperjs.org/examples/meta-balls/) metaballs example and it seemed to suit our use-case perfectly.
 
-![Metaballs](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_02_19_leigh_metaballs.gif)
+![Metaballs](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_02_19_leigh_metaballs.gif)
 
 We wanted a minimalist user interface that doesn't immediately let the user know what circle represents which instrument or effect. This is to encouring exploring and relying on the audio feedback to influence the user's choices.
 
@@ -76,7 +76,7 @@ To combat the static look and sound when the user is not interacting, we impleme
 
 Finally we wanted to allow different multi-tracks for different user experiences, so we chose a second song the user can experiment with, and made it very easy to implement more through the use of a url parameter.
 
-![Funkyballs](https://www.uio.no/english/studies/programmes/mct-master/blog/assets/image/2021_02_19_leigh_funkyballs.gif)
+![Funkyballs](https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_02_19_leigh_funkyballs.gif)
 
 ### Getting started
 
@@ -110,7 +110,7 @@ There are two "interfaces" you can choose from: the sliders (mostly useful for d
 
 ## Future improvements
 
-_Let's play together!_ Although in the beginning we wanted to create a multi-user platform, behind the scene it would have been somewhat similar to Leigh's [Kovid Keyboard](https://mct-master.github.io/sound-programming/2020/11/03/kovid-keyboard.html). That's why we decided to work on other features, such as the dynamic effects instead of taking the time to integrate the already existing code. For the future, however, this connectivity feature is important to implement.
+_Let's play together!_ Although in the beginning we wanted to create a multi-user platform, behind the scene it would have been somewhat similar to Leigh's [Kovid Keyboard](https://SMC-master.github.io/sound-programming/2020/11/03/kovid-keyboard.html). That's why we decided to work on other features, such as the dynamic effects instead of taking the time to integrate the already existing code. For the future, however, this connectivity feature is important to implement.
 
 _Wanna see something cool?_ Another feature that helps with the connectivity side is to be able to save the project and send it to someone - and enable them to pick it where you left off. Sharing work and being able to save it for later is important!
 

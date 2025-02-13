@@ -32,7 +32,7 @@ We must also be able to tell exactly what drums the drummer is playing at any gi
 You can view one of the test videos below, with the left hand playing a snare and right hand playing a hi-hat.
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_snarelefthihatright.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_snarelefthihatright.mp4" type="video/mp4">
 </video>
 
 # Feature Extraction
@@ -62,13 +62,13 @@ We will be evaulating the ML systems using both qualitative and quantitative met
 ## Regressor
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_videoregressor.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_videoregressor.mp4" type="video/mp4">
 </video>
 
 ## Classifier
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_videoclassifier.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_videoclassifier.mp4" type="video/mp4">
 </video>
 
 # Results With Raw VideoAnalysis Features
@@ -76,13 +76,13 @@ We will be evaulating the ML systems using both qualitative and quantitative met
 ## Regressor
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_varegressor.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_varegressor.mp4" type="video/mp4">
 </video>
 
 ## Classifier
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_vaclassifier.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_vaclassifier.mp4" type="video/mp4">
 </video>
 
 # Results With Smoothed VideoAnalysis Features
@@ -90,13 +90,13 @@ We will be evaulating the ML systems using both qualitative and quantitative met
 ## Regressor
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_varegressorsmooth.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_varegressorsmooth.mp4" type="video/mp4">
 </video>
 
 ## Classifier
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_vaclassifiersmooth.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_vaclassifiersmooth.mp4" type="video/mp4">
 </video>
 
 # Results With Smoothed VideoAnalysis And Accelerometer Features
@@ -104,13 +104,13 @@ We will be evaulating the ML systems using both qualitative and quantitative met
 ## Regressor
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_varegressoraccelerometersmooth.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_varegressoraccelerometersmooth.mp4" type="video/mp4">
 </video>
 
 ## Classifier
 
 <video width="720" height="406" controls>
-  <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2022_05_19_josephcl_vaclassifieraccelerometersmooth.mp4" type="video/mp4">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_vaclassifieraccelerometersmooth.mp4" type="video/mp4">
 </video>
 
 # Quantitative Metrics
@@ -135,7 +135,7 @@ In general, using raw video input with as inputs to ML systems seems to not be a
 
 # Files
 
-You can view the GitHub repository with the files for this project [here](https://github.com/jpclemente97/MCT4053FinalProject).
+You can view the GitHub repository with the files for this project [here](https://github.com/jpclemente97/SMC4053FinalProject).
 
 # Image Source
 

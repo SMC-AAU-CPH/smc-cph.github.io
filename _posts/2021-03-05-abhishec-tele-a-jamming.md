@@ -13,7 +13,7 @@ excerpt: "Our portal experience mapped on a delicious Jam recipe"
 </figure>
 # Tele-A-Jammin
 
-As the spring comes and fruits will be ready to harvest in no time, have you thought of making some jam? After several hiccups, the 2020 MCT generation is finally allowed to access the portal, so this is team A(wesome)’s first attempt at a jam in the NTNU-UiO portals.
+As the spring comes and fruits will be ready to harvest in no time, have you thought of making some jam? After several hiccups, the 2020 SMC generation is finally allowed to access the portal, so this is team A(wesome)’s first attempt at a jam in the NTNU-UiO portals.
 
 ## How to (make) jam
 
@@ -48,7 +48,7 @@ Here is our recordings. We can only say that we hope you’ll see progress soon!
 
 <figure style="float: none">
   <audio controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/audio/2021_03_09_abhishec_jamv2.mp3" type="audio/mpeg">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_03_09_abhishec_jamv2.mp3" type="audio/mpeg">
     Alternate Text
   </audio>
   <figcaption>Audio recording of the jam</figcaption>
@@ -56,7 +56,7 @@ Here is our recordings. We can only say that we hope you’ll see progress soon!
 
 <figure style="float: none">
   <video width="auto" controls>
-    <source src="https://www.uio.no/english/studies/programmes/mct-master/blog/assets/video/2021_03_09_leigh_portal_practice1.mp4" type='video/mp4'>
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_03_09_leigh_portal_practice1.mp4" type='video/mp4'>
   </video>
   <figcaption>Playing in the portal</figcaption>
 </figure>

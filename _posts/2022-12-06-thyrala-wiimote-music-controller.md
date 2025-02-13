@@ -5,7 +5,7 @@ date: 2022-12-06 17:00:00 +0200
 categories: interactive-music
 author: Thyra Liang Aakvåg
 image: /assets/image/2022_12_06_thyrala_cover_wiimote_music_controller.jpg 
-keywords: interactive-music-system, wii, wii-controller, mct
+keywords: interactive-music-system, wii, wii-controller, SMC
 excerpt: "Read this post to find information on a different use of a Wiimote than playing games on your Wii console."
 ---
 

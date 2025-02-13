@@ -17,7 +17,7 @@ keywords: telematic music, portal, livestreaming, concert, video
 
 Massive development in network technologies and passing through a strong pandemic make telematic performances more and more common every day. Today, splitting your band to different locations and playing music *together* and *in real-time* is not a big deal. It's not only that the performers are lazy for a meet-up in a concert hall, but also the audience is becoming more *remote* in time. If you want your show to reach people, you may have to live stream your telematic show!
 
-When it comes to streaming a _telematic_ performance, a couple of things may be essential. Primarily how you represent multiple venues may be crucial in terms of transmitting a telematic feel. Also, being aware of technical obstacles may help you on the go. In this blog post, I gather thoughts and advice based on my experience and observations on telematic concerts throughout the first semester in MCT.
+When it comes to streaming a _telematic_ performance, a couple of things may be essential. Primarily how you represent multiple venues may be crucial in terms of transmitting a telematic feel. Also, being aware of technical obstacles may help you on the go. In this blog post, I gather thoughts and advice based on my experience and observations on telematic concerts throughout the first semester in SMC.
 
 # Equipment
 There are tons of equipment that can go well in your streaming setup. However, you can perform an excellent live stream with just a few. Below are lists of _must-have_ and _good-to-have_ equipment. You don't need any specific equipment when live streaming a telematic show. But remember that quality streaming/recording starts with the right equipment.
@@ -50,7 +50,7 @@ If you would like to live stream mainly from multiple rooms, make sure you still
    <img
       src="/assets/image/2022_12_04_ahmetem_livestreaming_telematic_2.jpg"
    />
-   <figcaption>MCT students playing in their telematic concert between RITMO and Science Library.</figcaption>
+   <figcaption>SMC students playing in their telematic concert between RITMO and Science Library.</figcaption>
 </figure>
 
 # Filming A Screen
