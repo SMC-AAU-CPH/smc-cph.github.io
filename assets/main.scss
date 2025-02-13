@@ -4,7 +4,6 @@
 
 @charset "utf-8";
 @use 'sass:math';
-@use 'sass:color';
 
 // Google Fonts
 // @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap);
@@ -37,8 +36,8 @@ $post-button-height: 400px;
 $text-color: rgb(0, 0, 0);
 $brand-color: rgb(0, 0, 0);
 $background-color: #ffffff; //#fdfdfd;
-$brand-color-dark: color.scale($brand-color, $lightness: -50%);
-$brand-color-lighten: color.scale($brand-color, $lightness: 50%);
+$brand-color-dark: darken($brand-color, 50%);
+$brand-color-lighten: lighten($brand-color, 50%);
 $brand-color-1: rgb(50, 50, 50);
 $brand-color-2: #519ACB; //#333; // for links
 $brand-color-3: #9a67c2;
@@ -46,8 +45,8 @@ $brand-color-4: #ff6908;
 $brand-color-5: #ffc719;
 $brand-color-6: #598c14;
 $grey-color: #828282;
-$grey-color-light: color.scale($grey-color, $lightness: 25%);
-$grey-color-dark: color.scale($grey-color, $lightness: -25%);
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
 
 // Width of the content area
 $content-width: 900px;
