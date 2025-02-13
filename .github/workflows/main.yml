@@ -1,0 +1,85 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: The SMC Blog
+email: cer@create.aau.dk
+description: >- # this means to ignore newlines until "baseurl:"
+  The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master's programme in Sound and Music Computing (SMC).
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://smc-aau-cph.github.io/smc-cph.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"
+twitter_username: smc-aau-cph
+github_username:  smc-aau-cph
+youtube_username: smc-aau-cphr # hacked the social.html imported from minima 2.5.1 to override problem with channel URL
+rss: RSS feed
+
+# Comments
+comments:
+  provider: disqus
+disqus:
+  shortname: https-SMC-master-github-io
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+show_excerpts: true
+
+# Needed to generate the author pages
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+
+# Needed to paginate the list of posts in the homepage
+paginate: 5
+
+paginate_path: "/blog/page:num/"
+
+# Allowed categories
+categories:
+  - applied-project
+  - interactive-music
+  - machine-learning
+  - masters-thesis
+  - other
+  - motion-capture
+  - people
+  - portal
+  - sonification
+  - sound-programming
+  - spatial-audio
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
