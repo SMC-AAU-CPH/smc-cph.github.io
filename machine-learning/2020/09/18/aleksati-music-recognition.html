@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exploring Music Preference Recognition Using Spotify’s Web API | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Exploring Music Preference Recognition Using Spotify’s Web API" />
+<meta name="author" content="Aleksander Tidemann" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A proposed ML model that predicts the degree to which I will enjoy specific Spotify tracks based on previous preference ratings." />
+<meta property="og:description" content="A proposed ML model that predicts the degree to which I will enjoy specific Spotify tracks based on previous preference ratings." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/18/aleksati-music-recognition.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/18/aleksati-music-recognition.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_18_aleksati_matrix_spotify.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-18T04:30:20+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_18_aleksati_matrix_spotify.jpg" />
+<meta property="twitter:title" content="Exploring Music Preference Recognition Using Spotify’s Web API" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aleksander Tidemann"},"dateModified":"2020-09-18T04:30:20+00:00","datePublished":"2020-09-18T04:30:20+00:00","description":"A proposed ML model that predicts the degree to which I will enjoy specific Spotify tracks based on previous preference ratings.","headline":"Exploring Music Preference Recognition Using Spotify’s Web API","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_18_aleksati_matrix_spotify.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/18/aleksati-music-recognition.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Aleksander Tidemann"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/18/aleksati-music-recognition.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Exploring Music Preference Recognition Using Spotify&#39;s Web API
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-09-18T04:30:20+00:00"
+        itemprop="datePublished"
+      >Sep 18, 2020 •
+      </time>
+         
+      <a href="/authors/aleksandertidemann.html">Aleksander Tidemann</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>During these last two intense weeks of machine learning, I ventured to design a system that sought to recognize individual preferences in music using only the <a href="https://www.spotify.com/us/">Spotify</a> environment and <a href="(https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/)">API</a> as resources. The model tries to predict the degree to which the author will enjoy specific tracks by Johann Sebastian Bach based on a subjective rating given to every example in the dataset. The dataset consisted of 100 Johann Sebastian Bach tracks collected from Spotify playlists. This unfortunate size of this dataset was due to the unexpected amount of time it took to gather music I liked (who knew?!). Anyway, the particular use of Bach’s works was not coincidental as it presented an opportunity to collect a relatively consistent body of examples in one particular genre (baroque) that I was familiar with.</p>
+
+<p>The project was first and foremost aimed at exploring how a relatively new and accessible online resource of high-level musical data could be used for machine learning purposes but also to examine whether machine learning in this sense can be used as creative tools to gain new interesting knowledge about our personal music preferences and/or biases.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_09_18_aleksati_ml_main.gif" alt="Alternate Text" title="Image Title" width="680" />
+   <figcaption></figcaption>
+</figure>
+
+<h1 id="data-collection">Data Collection</h1>
+<p>Collecting audio feature-data from Spotify was quite manageable due to their <a href="https://spotipy.readthedocs.io/en/2.16.0/">well-documented API</a>. I decided to collect a variety of features for experimentation, including a few high-level features native to Spotify’s ecosystem;  duration, energy, tempo, time signature, loudness, <strong><em>pitches</em></strong>, <strong><em>valence</em></strong>, <strong><em>danceability</em></strong>, <strong><em>timbres</em></strong>, key and mode.</p>
+
+<ul>
+  <li>Pitches
+    <ul>
+      <li>The pitch feature returns a normalized vector per segment (a consistent subdivision of a track based on a consistent amount of sound) with 12 values representing the degree of occurrence for each note. I collected every pitch vector of a given track and averaged corresponding indexes. What remained was one list per track with the average occurrence of each note in the track.</li>
+    </ul>
+  </li>
+  <li>Timbre
+    <ul>
+      <li>Similar to pitches, the timbre feature returns a vector per segment with 12 elements. The specifics on what this timbre feature is based remains ambiguous, but it refers to the quality of the notes in the segment. The API also presses that these timbre values are best compared to each other. The gathering process here was the as with the pitch features.</li>
+    </ul>
+  </li>
+  <li>Danceability
+    <ul>
+      <li>This measure refers to how suitable a track is for dancing based on a combination of tempo, rhythm, stability, beat strength etc. Returns a scalar value per track.</li>
+    </ul>
+  </li>
+  <li>Valence
+    <ul>
+      <li>A normalized scalar of the “positiveness” conveyed by a track. The higher this value, the more happy, cheerful and euphoric the track is. The lower the value, the more sad, depressing and angry the track is.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>An interesting observation was that these high-level Spotify features did not immediately correlate with other suspected feature data. For instance, valence did not correlate particularly well with the mode of the tracks, as seen in the image below, something I anticipated.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2020_09_18_aleksati_ml_valence_mode.png" alt="Alternate Text" title="Image Title" width="620" />
+   <figcaption>Valence (happiness) in relation to the average mode of all tracks in the dataset. The lower the mode value, the more minor keys occur in a specific track.</figcaption>
+</figure>
+
+<h1 id="das-model">Das Model</h1>
+
+<p>Since the goal of my project was to train a system to recognize my taste in music, a personal rating from 1-10 was given to each track representing target values for the supervised MLP (neural network) regressor algorithm intend. Additionally, I used a repeated K-fold for training and validation because I feared that more strict dependencies on particular percentages of samples in each target class, like what stratified repeated K-fold ensures, could be problematic due to my shortage of training data.</p>
+
+<p>Both principal component (PCA) and linear discriminate analysis (LDA) were considered as dimensionality reduction techniques for the dataset. By comparing the variance of different sets of features to the total feature variance, I could find an approximation of how many reduction components I would need:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Here we find the minimal amount of DR-components needed 
+to keep 99% of the total feature variance.
+
+feat_variance = np.var(features, axis=0).sum()
+for i in range(features.shape[1]):
+        temp = np.var(features[:,0:i+1], axis=0).sum()
+        percentage = temp/feat_variance
+        if percentage &gt; 0.99:
+            print("componenets needed: ", i+1)
+            print("reached: ", percentage, "%")
+            break
+</code></pre></div></div>
+
+<p>Even though the grid-search scores revealed a significant advantage of using LDA over PCA, I had to take into consideration that my system could be defined as a kind of hybrid between a classifier and a regressor. This is evident by examining the scalar nature and range of my target values. Therefore, the consequence of using LDA might be that it interprets my task as classification rather than regression, an interpretation that might compromise the validity of my algorithm. But even though PCA might have been more suited, its detrimental scores led me to use LDA instead and rather keep in mind the impact this might have on the model.</p>
+
+<p><strong>LDA cross-validation grid-search results:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>best params: {'activation': 'logistic', 'hidden_layer_sizes': (2, 2), 'max_iter': 20000}
+associated best score: 0.749
+</code></pre></div></div>
+<p>Lastly, the suggestion of using a logistic sigmoid activation function seemed logical considering that it’s often used to predict normalized probabilities which is exactly what my model would do.</p>
+
+<h1 id="results">Results</h1>
+
+<p>The general results were adequate and expected. However, with an R2 score of 0.75 on my limited dataset, I suspected signs of overfitting. In light of this, I conducted some tests by training the model on testing and training data before comparing the respective R2 and mean square errors. The larger the difference was between the comparisons, the more symptomatic my system would be of overfitting.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Original Training Data</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Metric</td>
+      <td>Scores</td>
+      <td>Difference between training and test data predictions</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>R2</td>
+      <td>0.75</td>
+      <td>4-5%</td>
+    </tr>
+    <tr>
+      <td>MSE</td>
+      <td>-0.9</td>
+      <td>18-20%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As seen in the first table above, the first comparisons were not as bad as anticipated but still grounds for suspicion. To investigate further, I decided to artificially create more training data to test whether extending the size of the traing data could increase the performances and limit the metric differences.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Original Training Data + 1/4 Artificially Created Training Data</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Metric</td>
+      <td>Scores</td>
+      <td>Difference between training and test data predictions</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>R2</td>
+      <td>0.8</td>
+      <td>3%</td>
+    </tr>
+    <tr>
+      <td>MSE</td>
+      <td>-0.7</td>
+      <td>13-15%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>At best, I only managed to decrease the differences by approximately 2-3\% when adding 1/4 of artificial training data. The lack of performance variation from extending the dataset in this way can indicate sub-optimal algorithm parameters, dataset quality and/or dataset size. Most likely due to the latter..</p>
+
+<h1 id="concluding-remarks">Concluding Remarks</h1>
+<p>Evaluating performance metrics of a machine learning model depends on the system in question. I set out to prove that using Spotify data to train a machine learning model was feasible, and I believe this project has proved this concept.</p>
+
+<p>The obvious dataset limitations were largely attributed to an inefficient process of gathering and labeling data. I believe that the system could have been better if the theme of the project was adjusted. For instance, comparisons of baroque composers or different musical genres could have facilitated a more effective data collection process. Alternatively, a more specialized focus, for instance on only piano sonatas or preludes, could also have yielded better results despite having a shortage of data.</p>
+
+<p>For future work, it would be especially interesting to further explore and evaluate the high-level Spotify audio descriptors (danceability, valence etc..) through machine learning algorithms like this one.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2020/09/18/aleksati-music-recognition.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Feedbackquencer: Making Music with Feedback - Part 1 | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="The Feedbackquencer: Making Music with Feedback - Part 1" />
+<meta name="author" content="Hugh Alexander von Arnim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using feedback in a sequencer" />
+<meta property="og:description" content="Using feedback in a sequencer" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/06/hughav-feedbackquencer.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/06/hughav-feedbackquencer.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_06_hughav_micspeaker.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-06T18:30:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_06_hughav_micspeaker.jpg" />
+<meta property="twitter:title" content="The Feedbackquencer: Making Music with Feedback - Part 1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hugh Alexander von Arnim"},"dateModified":"2022-12-06T18:30:00+00:00","datePublished":"2022-12-06T18:30:00+00:00","description":"Using feedback in a sequencer","headline":"The Feedbackquencer: Making Music with Feedback - Part 1","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_06_hughav_micspeaker.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/06/hughav-feedbackquencer.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Hugh Alexander von Arnim"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/06/hughav-feedbackquencer.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      The Feedbackquencer: Making Music with Feedback - Part 1
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-12-06T18:30:00+00:00"
+        itemprop="datePublished"
+      >Dec 6, 2022 •
+      </time>
+         
+      <a href="/authors/hughalexandervonarnim.html">Hugh Alexander von Arnim</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="microphones-loudspeakers-and-feedback">Microphones, Loudspeakers, and Feedback</h1>
+
+<p>We all know the sound of <a href="https://en.wikipedia.org/wiki/Audio_feedback">acoustic feedback</a>, the screech that occurs when a microphone is held too close to a loudspeaker.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_06_hughav_feedback.jpg" alt="Alternate Text" title="Image Title" width="auto" />
+   <figcaption>How acoustic feedback occurs <br />
+   <i>From: https://www.toa.jp/soundoh_wiki/index.php?Soundindex/Acoustic%20feedback</i></figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="/assets/audio/2022_12_06_hughav_feedback.mp3" type="audio/mp3" />
+  </audio>
+  <figcaption>The sound of feedback</figcaption>
+</figure>
+
+<p>Usually we try to minimise the occurrence of this phenomenon as we see it as intruding upon the musical performance which is taking place. This is part of a tendency we have towards attempting to make microphones and loudspeakers transparent. We see the focus as lying upon the performer and their instrument, and not the auxiliary technology that we are using to facilitate it.</p>
+
+<p>But what if we draw attention to the fact that we are using microphones and loudspeakers, remove the transparency and use them as musical instruments? Then acoustic feedback can be seen as the sound of the instrument, and one of its most fundamental sounds at that! It is “the sound of microphones and loudspeakers themselves” <strong><a href="#link1">[1, p. 4]</a></strong>. In fact, the composer Robert Ashley describes it as “the only sound that is intrinsic to electronic music” <strong><a href="#link2">[2, p. 185]</a></strong>.</p>
+
+<p>This concept underlies two projects that I’ve worked on over the last few months. Both conceptualise a microphone and loudspeaker as a musical instrument, presented in different interactive contexts. The first of these is presented in this post, and is based around building musical sequences out of feedback. It takes the form of the Feedbackquencer.</p>
+
+<h1 id="the-feedbackquencer">The Feedbackquencer</h1>
+
+<p>The Feedbackquencer is focussed on the timbral aspects of acoustic feedback. It encourages the musician to explore the way in which the spatial relationship between loudspeaker and microphone alters and emphasises different aspects of the sound of the feedback. The instrument consists of two main components: a microphone mounted in a stable position and a loudspeaker held in the hand.</p>
+
+<p>The musician plays the instrument by moving the loudspeaker towards the microphone until feedback is generated. This feedback is then played back by a four-step sequencer, with each note <a href="https://en.wikipedia.org/wiki/Pitch_shift">pitchshifted</a> to a different musical pitch (the length of each sequence step and the pitches are set before the instrument is booted up). The musician then explores the timbral space offered by the acoustic feedback within this set pattern.</p>
+
+<p>But there’s more! An <a href="https://en.wikipedia.org/wiki/Light-emitting_diode">LED</a> is mounted next to the microphone which increases and decreases in brightness at a set rate. Adjacent to the LED is a <a href="https://en.wikipedia.org/wiki/Photoresistor">photoresistor</a> (a sensor that can be used to measure light). The signal from the photoresistor (corresponding to the brightness of the LED) is used to control the volume of the feedback, in effect working as an amplitude envelope. So the musician can also control this parameter by placing an object between the LED and photoresistor. There’s also a button that can be used to control the rate at which the LED flashes.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_06_hughav_fq_breadboard.jpg" alt="Alternate Text" title="Image Title" height="70%" width="70%" />
+   <figcaption>The Feedbackquencer constructed on a breadboard</figcaption>
+</figure>
+
+<p>The use of the photoresistor also means that the system is sensitive to the environment. So you can also play the instrument through interactions as simple as turning on and off the light in the room.
+A short performance with the system can be seen below, where a piece of paper was used to control the light reaching the photoresistor.</p>
+
+<p><br /></p>
+<figure style="float: none">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/hTqeqTyfqrg " title="YouTube video player" frameborder="0" allow="accelerometer;
+100%play;
+clipboard-write;
+encrypted-media;
+gyroscope;
+picture-in-picture" allowfullscreen="">
+</iframe>
+<figcaption><i>The Feedbackquencer in action</i></figcaption>
+</figure>
+<p><br /></p>
+
+<p>All of the computation and signal processing is carried out by a <a href="https://bela.io/">Bela</a> running a <a href="https://puredata.info/">Pure Data</a> patch. The block diagram below shows how all of the various components interact.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_06_hughav_fq_block.png" alt="Alternate Text" title="Image Title" height="70%" width="70%" />
+   <figcaption>A block diagram showing how the Feedbackquencer functions</figcaption>
+</figure>
+
+<p>If you want to try constructing the system and playing around with it yourself, all the software and design documents can be found <a href="https://github.com/Hughav92/feedbackquencer.git">here</a>.</p>
+
+<p>This instrument works well enough, but interaction by the musician is limited to control over timbre and the amplitude envelope. Can a more complex system be developed that offers the musician control over many more parameters, enabling much richer interaction with the feedback. Check out <a href="https://SMC-master.github.io/interactive-music/2022/12/08/hughav-feedback-mop-cello.html">part 2</a> of this post to see the further development of these ideas.</p>
+
+<h1 id="references">References</h1>
+
+<p><b><a name="link1">[1]</a></b> C. van Eck, Between air and electricity: microphones and loudspeakers as musical instruments. New York London Oxford New Delhi Sydney: Bloomsbury Academic, 2017.
+
+<p><b><a name="link2">[2]</a></b>	T. Holmes, Electronic and Experimental Music, 3rd ed. New York: Routledge, 2008.
+</p></p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2022/12/06/hughav-feedbackquencer.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

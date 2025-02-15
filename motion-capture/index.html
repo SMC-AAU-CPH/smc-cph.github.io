@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Motion Capture | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Motion Capture" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC)." />
+<meta property="og:description" content="The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC)." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Motion Capture" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC).","headline":"Motion Capture","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"}},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="page-heading" align="left">Motion Capture</h1>
+  </header>
+
+  <div class="post-content"><p>The blog posts of this section relate to the course <a href="https://www.uio.no/studier/emner/hf/imv/SMC4053/">SMC4053 Motion Capture</a> (from 2022) and to the discontinued course <a href="https://www.uio.no/studier/emner/hf/imv/SMC4043">SMC4043 Music-related Motion Tracking</a> (2019 to 2021). The aim of these courses is to provide knowledge and skills in recording, visualising, and analysing human body motion. This includes learning about human anatomy and biomechanics and getting hands-on experience with setting up, calibrating, tracking, and recording with different types of motion capture systems.<!-- <h2 class="post-list-heading">Posts</h2> --></p>
+<ul class="post-list"><li>
+  <a class="post-button" href="/motion-capture/2024/05/05/thomaseo-KineMapper.html">
+    <div class="post-left"><img src="/assets/image/2024_05_05_thomaseo_kine_mapper_1.png" alt="KineMapper" title="KineMapper" /></div>
+    <div class="post-right">
+      <h3 class="post-title">KineMapper</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 5, 2024 • Tom Oldfield
+      </div><p class="post-excerpt">A Max for Live device that maps motion data from a smartphone to controls in Ableton Live.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2023/05/09/ahmetem-vocal-instrument-motion.html">
+    <div class="post-left"><img src="/assets/image/2023_05_09_ahmetem_vocal_mocap_cover.jpg" alt="A Body Instrument: Exploring the Intersection of Voice and Motion" title="A Body Instrument: Exploring the Intersection of Voice and Motion" /></div>
+    <div class="post-right">
+      <h3 class="post-title">A Body Instrument: Exploring the Intersection of Voice and Motion</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 9, 2023 • Emin Memis
+      </div><p class="post-excerpt">Manipulate your voice with your body</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2023/05/09/alexanjw-generative-motion-control.html">
+    <div class="post-left"><img src="/assets/image/2023_05_09_alexanjw_pd_patch.png" alt="Generative Music with IMU data" title="Generative Music with IMU data" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Generative Music with IMU data</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 9, 2023 • Alexander Wastnidge
+      </div><p class="post-excerpt">Eight routes to meta-control</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2023/05/09/ninojak-looping-with-hand-movements.html">
+    <div class="post-left"><img src="/assets/image/2023_05_09_ninojak_front.jpg" alt="Simple yet unique way of playing music" title="Simple yet unique way of playing music" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Simple yet unique way of playing music</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 9, 2023 • Nino Jakeli
+      </div><p class="post-excerpt">Gestures can be more intuitive to play around with</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2023/05/08/kristeic-xyborg-MoCap-project.html">
+    <div class="post-left"><img src="/assets/image/2023_05_08_kristeic_hand_thumbnail.jpg" alt="Xyborg: Wearable Control Interface and Motion Capture System for Manipulating Sound" title="Xyborg: Wearable Control Interface and Motion Capture System for Manipulating Sound" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Xyborg: Wearable Control Interface and Motion Capture System for Manipulating Sound</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 8, 2023 • Kristian Eicke
+      </div><p class="post-excerpt">Witness my transition from human to machine - with piezo discs</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2023/05/08/fabianst-motion-sampler.html">
+    <div class="post-left"><img src="/assets/image/2023_05_08_fabianst_post_cover_image.png" alt="Motion Controlled Sampler in Ableton" title="Motion Controlled Sampler in Ableton" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Motion Controlled Sampler in Ableton</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 8, 2023 • Fabian Stordalen
+      </div><p class="post-excerpt">A fun and creative way of sampling</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2022/05/20/josephcl-air-drumming.html">
+    <div class="post-left"><img src="/assets/image/2022_05_19_josephcl_air_drumming_thumbnail.jpeg" alt="Developing Techniques for Air Drumming Using Video Capture and Accelerometers" title="Developing Techniques for Air Drumming Using Video Capture and Accelerometers" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Developing Techniques for Air Drumming Using Video Capture and Accelerometers</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 20, 2022 • Joseph Clemente
+      </div><p class="post-excerpt">Creating MIDI scores using only data from air drumming</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2022/05/20/hughav-mo-cap-reconfigurations.html">
+    <div class="post-left"><img src="/assets/image/2022_05_20_hughav_created_body.png" alt="Reconfigurations: Reconfiguring the Captured Body in Dance" title="Reconfigurations: Reconfiguring the Captured Body in Dance" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Reconfigurations: Reconfiguring the Captured Body in Dance</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 20, 2022 • Hugh Alexander von Arnim
+      </div><p class="post-excerpt">Building cooperative visual, kinaesthetic, and sonic bodies</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2022/05/20/kriswent-extending-the-keyboard-through-motion-capture-and-modular-synthesis.html">
+    <div class="post-left"><img src="/assets/image/2022_05_20_kriswent_spread.jpg" alt="Myo My – That keyboard sure tastes good with some ZOIA on top" title="Myo My – That keyboard sure tastes good with some ZOIA on top" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Myo My – That keyboard sure tastes good with some ZOIA on top</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 20, 2022 • Kristian Wentzel
+      </div><p class="post-excerpt">Extending the keyboard through gestures and modular synthesis.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2022/05/19/jakobhoydal-Sitting_vs_standing.html">
+    <div class="post-left"><img src="/assets/image/2022_05_19_jakobhoydal_positions.png" alt="Playing music standing vs. seated; whats the difference?" title="Playing music standing vs. seated; whats the difference?" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Playing music standing vs. seated; whats the difference?</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 19, 2022 • Jakob Høydal
+      </div><p class="post-excerpt">A study of saxophonist in seated vs standing position</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2022/05/19/sofiagon-what-is-a-gesture.html">
+    <div class="post-left"><img src="/assets/image/2022_05_12_sofiagon_gesture.jpg" alt="What is a gesture?" title="What is a gesture?" /></div>
+    <div class="post-right">
+      <h3 class="post-title">What is a gesture?</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 19, 2022 • Sofía González
+      </div><p class="post-excerpt">There are many takes on gesticulation and its meanings, however, I wanted to take the time to delimit what a gesture is, possible categories and gesturing patters.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2021/04/21/abhishec-walking-in-seasons.html">
+    <div class="post-left"><img src="/assets/image/2021_04_21_abhishec_wis.jpg" alt="Walking in Seasons" title="Walking in Seasons" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Walking in Seasons</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 21, 2021 • Abhishek Choubey, Lindsay Charles, Joel Vide Hynsjö
+      </div><p class="post-excerpt">Sonification of motion</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2021/04/18/wenbo-motiontracking.html">
+    <div class="post-left"><img src="/assets/image/2021_04_19_wenbo_figuretitle.png" alt="Exploring the influence of expressive body movement on audio parameters of piano performances" title="Exploring the influence of expressive body movement on audio parameters of piano performances" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Exploring the influence of expressive body movement on audio parameters of piano performances</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 18, 2021 • Wenbo Yi
+      </div><p class="post-excerpt">How expressive body movement influence music?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2021/04/18/anderlid-Wet-Dry.html">
+    <div class="post-left"><img src="/assets/image/2021_04_18_anderlid_fp.jpg" alt="Motion (and emotion) in recording" title="Motion (and emotion) in recording" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Motion (and emotion) in recording</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 18, 2021 • Anders Lidal
+      </div><p class="post-excerpt">The first time I went to a recording studio in the early nineties, my eagerness to (music)-world domination—as well as my fascination for the possibility to put my beautiful playing to a magnetic tape—totally over-shadowed that the result sounded crappy, at least for a while.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2021/04/18/alenacl-shimsham-mocap.html">
+    <div class="post-left"><img src="/assets/image/2021_04_18_alenacl_calibrating.jpg" alt="Shim-Sham Motion Capture" title="Shim-Sham Motion Capture" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Shim-Sham Motion Capture</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 18, 2021 • Alena Clim
+      </div><p class="post-excerpt">We've learned about motion capture in a research environment. But what about motion capture in the entertainment field? In this project I attempted to make an animation in Blender based on motion captured in the lab using the Optitrack system. Beside this, I also analysed three takes of a Shim Sham dance. For more details and some sneak peaks read this blog post.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2021/04/18/thomasanda-kodalyeartrainer.html">
+    <div class="post-left"><img src="/assets/image/2021_04_08_thomasanda_fingersOverlay.jpeg" alt="Kodaly EarTrainer-App" title="Kodaly EarTrainer-App" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Kodaly EarTrainer-App</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 18, 2021 • Thomas Anda
+      </div><p class="post-excerpt">App for training your ears based on old Hungarian methodolgy</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2021/04/17/pedropl-airIntruments.html">
+    <div class="post-left"><img src="/assets/image/2021_04_18_pedropl_airInstFeatured.jpeg" alt="'Air' Instruments Based on Real-Time Motion Tracking" title="'Air' Instruments Based on Real-Time Motion Tracking" /></div>
+    <div class="post-right">
+      <h3 class="post-title">&#39;Air&#39; Instruments Based on Real-Time Motion Tracking</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 17, 2021 • Pedro Lucas
+      </div><p class="post-excerpt">Let's make music with movements in the air.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2021/04/17/stephedg-airguitar.html">
+    <div class="post-left"><img src="/assets/image/2021_04_17_stephedg_airguitar.jpg" alt="An air guitar experiment with OpenCV" title="An air guitar experiment with OpenCV" /></div>
+    <div class="post-right">
+      <h3 class="post-title">An air guitar experiment with OpenCV</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 17, 2021 • Stephen Gardener
+      </div><p class="post-excerpt">Get to know OpenCV by building an air guitar player. Shaggy perm not required.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2021/04/16/henrikhs-postureGuard.html">
+    <div class="post-left"><img src="/assets/image/2021_04_16_henrikhs_greatPosture.jpeg" alt="Posture Guard" title="Posture Guard" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Posture Guard</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 16, 2021 • Henrik Sveen
+      </div><p class="post-excerpt">Back pains, neck pains, shoulder pains - what do they all have in common? They are caused by bad posture while working on a laptop. So I made a program that makes the laptop help out maintaining a good posture while working.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2020/09/25/motion-tracking-workshop.html">
+    <div class="post-left"><img src="/assets/image/2020_09_25_jacksong_mocap.jpg" alt="A Brief Workshop on Motion Tracking" title="A Brief Workshop on Motion Tracking" /></div>
+    <div class="post-right">
+      <h3 class="post-title">A Brief Workshop on Motion Tracking</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Sep 25, 2020 • Jackson Goode
+      </div><p class="post-excerpt">Since our spring semester of motion tracking was a purely digital experience, a few of us got to together to quickly test out the OptiTrack system within the Portal.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2020/05/20/tsne-adventure.html">
+    <div class="post-left"><img src="/assets/image/2020_05_21_ulrikah_tsne_cover.jpg" alt="a t-SNE adventure" title="a t-SNE adventure" /></div>
+    <div class="post-right">
+      <h3 class="post-title">a t-SNE adventure</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 20, 2020 • Ulrik Halmøy
+      </div><p class="post-excerpt">A system for interactive exploration of sound clusters with phone sensors</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2020/05/18/breathing-through-max.html">
+    <div class="post-left"><img src="/assets/image/2020_05_20_jacksong_distance.png" alt="Breathing through Max" title="Breathing through Max" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Breathing through Max</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 18, 2020 • Jackson Goode
+      </div><p class="post-excerpt">For the COVID-19 version of motion-capture, I developed a system to track your rate of breath and sonify it through Max. It emphasized the tenants of biofeedback and hopes to serve as a responsive system for stress relief.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2020/05/14/sound-painting.html">
+    <div class="post-left"><img src="/assets/image/2020_05_15_aleksati_sound_painting.jpg" alt="Sound Painting" title="Sound Painting" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Sound Painting</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        May 14, 2020 • Aleksander Tidemann
+      </div><p class="post-excerpt">An application that tracks, visualizes and sonifies the motion of colors.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2019/04/24/How-music-related-motion-tracking-can-sound.html">
+    <div class="post-left"><img src="\assets\image\2019_04_24_aleksati_mocap_pic_ei.png" alt="How music related motion tracking can sound" title="How music related motion tracking can sound" /></div>
+    <div class="post-right">
+      <h3 class="post-title">How music related motion tracking can sound</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 24, 2019 • Karolina Jawad, Jørgen Varpe, Eirik Dahl
+      </div><p class="post-excerpt">During the course 'Music related Motion Tracking' there were several approaches among the students to realize their ideas. The Opti-Track system, new to all of us consists of infrared-cameras, markers and a software with calibration tools. We were exploring the functions from scratch during the first week when hosting the 'Nordic-stand-still-championship' on both campus.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/motion-capture/2019/04/01/MoCap-Recap-My-two-weeks-recap-of-a-Motion-Tracking-workshop.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_04_01_guysi_ashane_mocap.jpg" alt="MoCap Recap - Two weeks recap of a Motion Tracking workshop" title="MoCap Recap - Two weeks recap of a Motion Tracking workshop" /></div>
+    <div class="post-right">
+      <h3 class="post-title">MoCap Recap - Two weeks recap of a Motion Tracking workshop</h3>
+      <span class="post-meta-category">motion-capture
+      </span><div class="post-meta">
+        Apr 1, 2019 • Guy Sion, Sam Roman, Elias Anderson
+      </div><p class="post-excerpt">During weeks 10-11 we attended the Music related motion tracking course (SMC4043) as part of the SMC program. The week started with the installation of the OptiTrack system in Oslo, placement of cameras, connecting wires to hubs and software installation and setup. we got familiar with the Motive:Body software and was able to run calibrations, set and label markers, record motion data, export it in a correct way and experiment with sonifying the results with both recorded and streamed motion capture data.</p></div>
+  </a>
+</li>
+</ul>
+</div>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

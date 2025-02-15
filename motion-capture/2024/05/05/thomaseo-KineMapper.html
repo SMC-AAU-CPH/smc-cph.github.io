@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KineMapper | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="KineMapper" />
+<meta name="author" content="Tom Oldfield" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Max for Live device that maps motion data from a smartphone to controls in Ableton Live." />
+<meta property="og:description" content="A Max for Live device that maps motion data from a smartphone to controls in Ableton Live." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2024/05/05/thomaseo-KineMapper.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2024/05/05/thomaseo-KineMapper.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_05_thomaseo_kine_mapper_1.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-05T08:48:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_05_thomaseo_kine_mapper_1.png" />
+<meta property="twitter:title" content="KineMapper" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tom Oldfield"},"dateModified":"2024-05-05T08:48:00+00:00","datePublished":"2024-05-05T08:48:00+00:00","description":"A Max for Live device that maps motion data from a smartphone to controls in Ableton Live.","headline":"KineMapper","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_05_thomaseo_kine_mapper_1.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2024/05/05/thomaseo-KineMapper.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Tom Oldfield"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2024/05/05/thomaseo-KineMapper.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      KineMapper
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2024-05-05T08:48:00+00:00"
+        itemprop="datePublished"
+      >May 5, 2024 •
+      </time>
+         
+      <a href="/authors/tomoldfield.html">Tom Oldfield</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h3 id="introduction">Introduction</h3>
+<p>KineMapper is a framework for motion control in music. It is a free and open-source Max for Live device which receives motion data from a smartphone via OSC (Open Sound Control) messages. Using the ‘Nodes’ object in Max, this data is translated to 8 mappable dials which are able to control parameters within Ableton Live. The key advantages of KineMapper are as follows;</p>
+
+<ul>
+  <li>
+    <p>Flexibility - KineMapper encourages the user to develop motion controlled instruments through freely experimenting with different mappings in Ableton Live. Outputs from KineMapper could be mapped to sound parameters, arpeggiators, audio effects, triggering clips and so on.</p>
+  </li>
+  <li>
+    <p>Easy to use - The system is designed to make connecting devices simple and once connected, the transparent mapping of motion to sound makes for a fast learning process.</p>
+  </li>
+  <li>
+    <p>Ubiquitous technology - KineMapper uses technology that you probably already have so there is no need to invest in expensive specialist equipment to start experimenting with motion and music. A full list of requirements can be seen below.</p>
+  </li>
+</ul>
+
+<p><br />
+<img src="/assets/image/2024_05_05_thomaseo_kine_mapper_2.png" width="50%" style="display: block; margin: auto;" />
+<br /></p>
+
+<h3 id="list-of-required-technology">List of required technology</h3>
+<ul>
+  <li>A smartphone.</li>
+  <li>An app for transmitting motion data via OSC (I recommend GyrOSC).</li>
+  <li>A computer running Ableton Live Suite (for Max for Live devices).
+<br /></li>
+</ul>
+
+<h3 id="how-does-it-work">How does it work?</h3>
+
+<p>KineMapper works with data from the gyroscope inside your phone. This means rotational movements are detected rather than linear or translational movements. The difference between rotational and translational movements can be seen in the image below. (Image from ‘What are the “6 Degrees of Freedom”? available <a href="https://alexisakov-17446.medium.com/gyro-6dof-gyroscope-with-six-degrees-of-freedom-f8aa7258c0db">here</a>.)</p>
+
+<p><img src="/assets/image/2024_05_05_thomaseo_6_degrees.png" width="50%" style="display: block; margin: auto;" />
+<br /></p>
+
+<p>KineMapper is designed to work with the iOS app called GyrOSC, although adaptations can be made to function with any compatible smartphone application.
+<br /></p>
+
+<h3 id="what-is-osc-anyway">What is OSC anyway?</h3>
+
+<p>OSC (Open Sound Control) is a protocol for sending messages between computers and musical devices. OSC messages are similar to MIDI messages in their function - they can be used to achieve the same result - although there are some key differences between the two.</p>
+
+<ul>
+  <li>OSC messages are sent via a network, this can be through ethernet cable or WIFI connection.</li>
+  <li>MIDI sends integers between 0 and 127 whereas OSC can send many different types of message, including strings of text, integers and 32-bit floating point values.</li>
+  <li>MIDI messages are labelled in a fixed way but labelling of OSC messages is much more flexible.</li>
+</ul>
+
+<p>For a more in depth overview of OSC, check out <a href="https://SMC-master.github.io/networked-music/2024/03/17/thomaseo-intro_to_OSC.html">this</a> blog post.
+<br /></p>
+
+<h3 id="how-to-connect-devices">How to connect devices</h3>
+
+<p>In order to send and receive OSC messages, both devices must be connected to a network. To get the best results when using KineMapper, use an external router which is not connected to the internet or activate the ‘hotspot’ feature on the smartphone (this does not use up your mobile data allowance). Connect your computer to the same network as the smartphone. Find out the IP address of the computer and enter this into the smartphone app - this will let the app know where to send messages to.</p>
+
+<p>The app will also ask for a port number. The default port number for KineMapper is 6000 but this can be changed by opening the Max patch. The port number is contained within a message box in the top left of the patch. Ports can sometimes be used by other tasks your computer is running, so changing the port number can be a good place to start when troubleshooting. Click the message box to start a connection. If a successful connection is made, the light should flash green.</p>
+
+<p>Summary:</p>
+
+<ol>
+  <li>Open the Max for Live device on an audio or MIDI track in Ableton.</li>
+  <li>Connect both smartphone and computer to the same network.</li>
+  <li>Open GyrOSC and enter the IP address of the computer.</li>
+  <li>Set the port number to 6000.</li>
+  <li>Click the message box ‘6000’ in the top left corner of the Max for Live device.</li>
+  <li>A green light indicates a good connection.</li>
+</ol>
+
+<p>Now for the fun stuff … almost.</p>
+
+<h3 id="calibrating-kinemapper">Calibrating KineMapper</h3>
+
+<p>Before KineMapper can be used effectively, a calibration process must be carried out. This process tells the device the size of space you would like to use the controller in by measuring the maximum values expected for each axis of rotation on the gyroscope.</p>
+
+<p>Calibration is done by pointing the controller towards the centre of this imaginary space and pressing the ‘calibrate’ button. Next move the arm left and right to the edges of the imagined space. Then, return to the centre and move up and down to the edges. Finally, return to the centre and rotate the arm left and right remaining in the boundaries of what is comfortable. Click the calibrate button (‘now labelled as ‘stop’) once more the end the procedure.</p>
+
+<p><img src="/assets/image/2024_05_05_thomaseo_cali.png" width="60%" style="display: block; margin: auto;" />
+<br /></p>
+
+<h3 id="nodes">Nodes</h3>
+
+<p>Nodes is a Max object which uses a pointer to navigate on a 2d surface. On this surface, ‘nodes’ can be placed at specific position. Nodes have a circle around them, the size of which can also be altered. The object outputs a value between 0 and 1 based on the proximity of the pointer to each node. (The pointer must be inside the boundary of the circle to register a positive output.) The pitch and yaw (left-right and up-down) rotation of the smartphone is mapped to the X and Y coordinates of the pointer. Basically, the pointer follows where you point. KineMapper can have up to 7 nodes by default (this can be edited inside the Max patch).</p>
+
+<p><img src="/assets/image/2024_05_05_thomaseo_nodes.png" width="60%" style="display: block; margin: auto;" />
+<br /></p>
+
+<h3 id="extra-features">Extra features</h3>
+
+<p>KineMapper also boasts a motion record feature where data can be recorded over a period of 1, 2 or 4 bars (synced with Ableton’s clock). After recording, the data is played back in a loop and new data coming in is stopped. This allows the user to experiment with a loop of movement, record it then move on to interacting with another device.</p>
+
+<p>Incoming data can also be gated and each axis inverted independently.</p>
+
+<p><img src="/assets/image/2024_05_05_thomaseo_mo_rec.png" width="60%" style="display: block; margin: auto;" />
+<br /></p>
+
+<h3 id="mappable-dials">Mappable dials</h3>
+
+<p>The final output of KineMapper is 8 mappable dials which you can use to control anything in Ableton which is able to be mapped. 1 - 7 represent each node value and the 8th is linked to the roll axis of rotation. (Note: roll also alters the size of the pointer for visual feedback but this does not have any effect on the outputted values from Nodes. Click the ‘map’ button followed by the parameter of choice in Ableton to create a mapping. Click ‘unmap’ to reset the mapping.</p>
+
+<p><img src="/assets/image/2024_05_05_thomaseo_map_dials.png" width="80%" style="display: block; margin: auto;" />
+<br /></p>
+
+<h3 id="pro-tips">Pro tips</h3>
+
+<ul>
+  <li>Press cmd/ctrl+m in Ableton to see all mappable controls (shaded in blue).</li>
+  <li>Don’t make your space to big while calibrating, otherwise you might not be able to reach the edges. This is especially relevant for the roll axis as twisting the wrist can be a little uncomfortable.</li>
+  <li>If you can’t connect, double check the IP address or try changing the port number.</li>
+  <li>Open GyrOSC facing the direction you want to use the device.</li>
+</ul>
+
+<p>Happy motion controlling!</p>
+</div>
+
+  
+
+  <a class="u-url" href="/motion-capture/2024/05/05/thomaseo-KineMapper.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

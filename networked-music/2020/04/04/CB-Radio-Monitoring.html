@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Smokey and the Bandwidth | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Smokey and the Bandwidth" />
+<meta name="author" content="Paul Koenig" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hijacking Old Tech for New Uses" />
+<meta property="og:description" content="Hijacking Old Tech for New Uses" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/04/CB-Radio-Monitoring.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/04/CB-Radio-Monitoring.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_04_aleksati_70s_CB.JPG" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-04T21:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_04_aleksati_70s_CB.JPG" />
+<meta property="twitter:title" content="Smokey and the Bandwidth" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Paul Koenig"},"dateModified":"2020-04-04T21:00:00+00:00","datePublished":"2020-04-04T21:00:00+00:00","description":"Hijacking Old Tech for New Uses","headline":"Smokey and the Bandwidth","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_04_aleksati_70s_CB.JPG","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/04/CB-Radio-Monitoring.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Paul Koenig"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/04/CB-Radio-Monitoring.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Smokey and the Bandwidth
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-04-04T21:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 4, 2020 •
+      </time>
+         
+      <a href="/authors/paulkoenig.html">Paul Koenig</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="cb-radio-for-real-time-monitoring">CB Radio for Real-Time Monitoring?</h2>
+
+<p>Here in the SMC program, we deal a lot with internet communication technologies. In the years B.C. (before COVID-19), we would
+meet four or five days a week in the Portal and chat, collaborate, and conduct classes between Oslo and Trondheim with some of
+the best technology available. Leveraging the cutting edge and trying to push the boundaries of LOLA, TICO, Dante, and other
+low-latency protocols was our daily task.</p>
+
+<p>Now, the Portal sits empty. Hopefully, someone remembered to turn off the lights. All SMC courses and meetings now takes place
+via Zoom, pretty much like the rest of the university’s activities - like the rest of universities and businesses worldwide.</p>
+
+<p>It’s kind of a step backwards for us, technology-wise. But I think it’s been a good exercise in the practical application of
+“everyday” tech, and really valuable for me personally. In the last few weeks, I think I’ve learned more about my own laptop, it’s capabilities and limitations, than I learned in the entire seven years since I bought it.</p>
+
+<p>After all, most people don’t really have access to the level of tech we became accustomed to using in the Portal. What do we
+have to teach others about Music Communication Technology when the average person lacks a Portal? The real question becomes,
+what can we do with what we have?</p>
+
+<p>I don’t know if it’s just the effects of sitting around the house all day, carefully cultivating my quarantine beard and
+pondering the future, or something that could actually be of use to somebody - but I have this weird idea to help local
+musicians be able to collaborate in real-time, without having to leave their own quarantine bunkers. Yes, it involves CB radios.</p>
+
+<h2 id="whats-the-big-deal">What’s the big deal?</h2>
+
+<p>The problem space here is the same as it always has been: latency. Even for musicians that live right down the street from
+each other, the cumulative round-trip latency incurred as a musical signal from Musician A is A/D converted, sent over WiFi,
+bounced from node to node all around town, then D/A converted and piped into the ears of Musician B, who reacts with a
+collaborative musical signal which then travels back to Musician A along the same lines can be too much to be useful,
+particularly when network traffic is high. And right now, it’s pretty much always high.</p>
+
+<p>In the Portal, we didn’t have this problem. With our dedicated network, round-trip latency Oslo-Trondheim was consistently
+around 30-40ms, making real-time musical collaboration possible. At home, using Zoom or other similar technologies, latency
+has fluctuated widely and unpredictably, veering drunkenly between 30-300 or more milliseconds. It’s enough to make me want to
+take up drinking myself, except that I can’t afford booze now.</p>
+
+<h2 id="but-i-digress">But I digress.</h2>
+
+<p>The idea works like this: Each musician has a CB receiver for each member of their ensemble, plus one
+transmitter for themselves. Each musician transmits their signal on a separate dedicated channel, which is received in turn by
+each other musician.  Therefore, if the ensemble has four players, each player would have four CB receiver/transmitters, three to receive the signals from their bandmates, and one to transmit their own. Each player would then be able to mix their own custom monitor mix by routing each of the four signals into a simple desktop mixer.</p>
+
+<p>The fun doesn’t have to stop there, of course. The players could also send a separate signal (not the CB audio) in high-
+quality via the internet, without concern for latency, since they would be playing and reacting to the audio they were
+receiving through their CBs. These signals (audio as well as video, if desired) could be received, aligned, and streamed as a
+real-time performance via the internet, with very good results. The end observer wouldn’t have to be aware of the novel
+monitoring system used, all they would know is that the musicians are keeping surprisingly good time, considering their
+geographical separation.</p>
+
+<p>Now, since none of that made any sense, I made a diagram. See Figure 1.</p>
+
+<figure>
+    <img src="/assets/image/2020_04_04_aleksati_CB_Monitoring_Flow.jpg" width="800" />
+    <figcaption>Fig 1. How It Works</figcaption>
+</figure>
+
+<p>Anyway, that’s how it works in my dream. Could it work in real life? 10-6, good buddy. Gonna need some green stamps to put the
+hammer down on that one.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2020/04/04/CB-Radio-Monitoring.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>An air guitar experiment with OpenCV | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="An air guitar experiment with OpenCV" />
+<meta name="author" content="Stephen Gardener" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Get to know OpenCV by building an air guitar player. Shaggy perm not required." />
+<meta property="og:description" content="Get to know OpenCV by building an air guitar player. Shaggy perm not required." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2021/04/17/stephedg-airguitar.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2021/04/17/stephedg-airguitar.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_04_17_stephedg_airguitar.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-17T12:35:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_04_17_stephedg_airguitar.jpg" />
+<meta property="twitter:title" content="An air guitar experiment with OpenCV" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Stephen Gardener"},"dateModified":"2021-04-17T12:35:00+00:00","datePublished":"2021-04-17T12:35:00+00:00","description":"Get to know OpenCV by building an air guitar player. Shaggy perm not required.","headline":"An air guitar experiment with OpenCV","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_04_17_stephedg_airguitar.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2021/04/17/stephedg-airguitar.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Stephen Gardener"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2021/04/17/stephedg-airguitar.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      An air guitar experiment with OpenCV
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-04-17T12:35:00+00:00"
+        itemprop="datePublished"
+      >Apr 17, 2021 •
+      </time>
+         
+      <a href="/authors/stephengardener.html">Stephen Gardener</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction">Introduction</h2>
+<p>For my Motion Tracking assignment, I wanted to get to know <a href="https://opencv.org">OpenCV</a>, an open source computer vision library. I had enjoyed going through a few tutorials, and liked the idea of diving a little deeper. Plus it meant I could code in Python, which I am warming to, despite it not being Ruby.</p>
+
+<p>So the next question was - who’s motion am I going to track, and for what purpose? My dog is now too old and sleepy to film her jumping through hoops in the park, and anyway, this is supposed to be a masters in music. A MIDI controller maybe? Could I get my webcam to recognise the sliders I am moving on my MIDI controller and translate them to OSC messages? Then if I am ever at band practice and have forgotten my USB cable, I could just turn on my webcam and use my MIDI controller wirelessly! The only slight hitch in the plan was that I didn’t actually have a MIDI controller.
+I did have some guitars on my wall though - maybe I could make an air guitar player? I could stand in front of my webcam, wave my hands about in the air as if I was Brian May at Wembley Stadium and trigger some guitar samples in a (hopefully) semi-realistic way.</p>
+
+<h2 id="methodology">Methodology</h2>
+<p>My initial panic was triggered by the thought “how on earth am I going to identify my hands waving about in a webcam”. It had me working through lots of tutorials on feature detection, learning about how to spot edges and corners, the panic increasing by the second as I realised how big a task I had taken on.</p>
+
+<p>Thankfully, I stumbled on <a href="https://mediapipe.dev">MediaPipe</a>, an open source machine learning library for human pose detection and tracking (amongst many other things). I could feed each frame from the webcam into this, and it would spit out a series of landmarks signifying the location of hips, hands, shoulders etc. Sorted! The motion tracking showed my shoulders visibly relaxing.</p>
+
+<p>The second stage of panic was born of the realisation that I still had to do some maths to get this to work. OpenCV makes it easy to step through a camera feed frame by frame, and MediaPipe makes it easy to get a list of landmarks that correspond to points on the body, but what then? 
+The landmarks need to be translated into x/y points relative to the frames dimensions. I decided that I only needed to know 4 points on the body - one for each of the hips and hands. The hands are obvious - we need to know if the strumming hand is moving over the strings or not, and where on the neck the fretting hand is.</p>
+
+<p>The hip points could be used to position the guitar. Talking of the guitar - how are we going to draw it? I had already played around with OpenCVs various drawing features, and so quickly cobbled together an ellipse for the guitar body, and a thickened line for the neck. Realising that I didn’t want to spend the whole assignment using rudimentary drawing tools to create a guitar that would still look terrible, I looked into the other option which was finding an image of a guitar and superimposing that onto the frame. This worked much better, especially once I had figured out the surprisingly complicated process of displaying a PNG with a transparent background.</p>
+
+<p>At this stage the guitar was the correct size when I was standing in front of my webcam, but turned into a giant guitar as I stepped further back in the frame. Hip points to the rescue! I used the distance between the hip points to scale the guitar image to the appropriate size as I moved forward and backwards in the frame.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_04_17_stephedg_airguitar.jpg" alt="" title="Scaled guitar in place!" /> <figcaption>Scaled guitar image in place!</figcaption>
+</figure>
+
+<h3 id="strumming">Strumming</h3>
+<p>The next step was to identify whether my hands were in the process of strumming or not. I used the hip points again to define a rectangle which would correspond to the strum-zone. If my right hand (I am right handed when I play guitar, and left handed for everything else) was within that rectangle, a guitar strum would be triggered. This isn’t really how guitars work however, and so it was time to apply some of the maths that I had learnt in class. I needed to know if the hand was moving up or down over the strings, which meant that I needed to have a record of the hands position from the previous frame to compare to. Once I had this, I could work out the direction and distance that the hand had travelled. The distance also allowed me to calculate velocity using the derivative. So I set about recording multiple guitar strums - up, down, fast and slow - and used the information I calculated to trigger the correct sample. The right hand was working!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># get distance right hand has moved in the y direction by
+</span>    <span class="c1"># comparing current hand position to previous values
+</span>    <span class="n">distance</span> <span class="o">=</span> <span class="n">human</span><span class="p">.</span><span class="n">rhand_y</span> <span class="o">-</span> <span class="n">human</span><span class="p">.</span><span class="n">prev_rhand_y</span>
+
+    <span class="c1"># calculate derviative of distance to get our velocity
+</span>    <span class="n">velocity</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">distance</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span>
+
+    <span class="c1"># define strum area
+</span>    <span class="n">tlx</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">human</span><span class="p">.</span><span class="n">center_x</span> <span class="o">-</span> <span class="n">human</span><span class="p">.</span><span class="n">hip_width</span><span class="o">/</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">tly</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">human</span><span class="p">.</span><span class="n">center_y</span> <span class="o">-</span> <span class="n">human</span><span class="p">.</span><span class="n">hip_width</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">brx</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">human</span><span class="p">.</span><span class="n">center_x</span> <span class="o">+</span> <span class="n">human</span><span class="p">.</span><span class="n">hip_width</span><span class="o">/</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">bry</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">human</span><span class="p">.</span><span class="n">center_y</span> <span class="o">+</span> <span class="n">human</span><span class="p">.</span><span class="n">hip_width</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">strum</span> <span class="o">=</span> <span class="sh">''</span>
+
+    <span class="c1"># if right hand is over the strum area
+</span>    <span class="nf">if </span><span class="p">(</span><span class="n">tly</span> <span class="o">&lt;</span> <span class="n">human</span><span class="p">.</span><span class="n">rhand_y</span> <span class="o">&lt;</span> <span class="n">bry</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">tlx</span> <span class="o">&lt;</span> <span class="n">human</span><span class="p">.</span><span class="n">rhand_x</span> <span class="o">&lt;</span> <span class="n">brx</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># down strum
+</span>        <span class="k">if</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="n">velocity</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span> <span class="c1"># slow strum
+</span>          <span class="n">strum</span> <span class="o">=</span> <span class="sh">'</span><span class="s">down_slow</span><span class="sh">'</span>
+        <span class="k">elif</span> <span class="n">velocity</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">:</span> <span class="c1"># fast strum
+</span>          <span class="n">strum</span> <span class="o">=</span> <span class="sh">'</span><span class="s">down_fast</span><span class="sh">'</span>
+      <span class="k">elif</span>  <span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># up strum
+</span>        <span class="k">if</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="n">velocity</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span> <span class="c1"># slow strum
+</span>          <span class="n">strum</span> <span class="o">=</span> <span class="sh">'</span><span class="s">up_slow</span><span class="sh">'</span>
+        <span class="k">elif</span> <span class="n">velocity</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">:</span> <span class="c1"># fast strum
+</span>          <span class="n">strum</span> <span class="o">=</span> <span class="sh">'</span><span class="s">up_fast</span><span class="sh">'</span>
+</code></pre></div></div>
+
+<p>I had originally thought to use Csound for the audio, but as I was just triggering a sample it seemed a little like overkill. Instead I found a very simple Python library called <a href="https://github.com/TaylorSMarks/playsound">Playsound</a> which does just one thing - play an audio file you send to it.
+Now on to the left hand. Maths wasn’t my strong point the last time I actually did any, which was over 30 years ago at school, but I knew I was going to need it to work out my left hands position on the neck, so I rolled up my sleeves and took some deep breaths. To keep things simple, I decided to split the neck into 3 regions, each one triggering a different chord. The neck is at an angle, so I knew that to calculate the length of the neck, and the position of my hand along it, it was going to involve lots of triangles. Pythons math library has a nice simple <code class="language-plaintext highlighter-rouge">hypot</code> function, which allows me to throw in a couple of points and find the hypotenuse, so it’s an easy solution for finding the distance between 2 points.</p>
+
+<p>So I had the length of the neck, but how do I find out whether the hand is near it? Numpy came to my rescue. I used Numpys <code class="language-plaintext highlighter-rouge">linspace</code> function to step along the neck at intervals, checking whether the hands co-ordinates were nearby. If they were, I could do the triangle thing again to calculate how far along the neck it was, and so work out which chord should be triggered.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># calculate neck length
+</span>    <span class="n">neck_len</span> <span class="o">=</span> <span class="nf">hypot</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">neck_start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">neck_end</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> \
+                     <span class="n">self</span><span class="p">.</span><span class="n">neck_start</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">neck_end</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="c1"># step along the neck at intervals, checking if lhand is near
+</span>    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">neck_start</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">neck_end</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+
+      <span class="n">hand_distance_from_neck</span> <span class="o">=</span> <span class="nf">hypot</span><span class="p">(</span><span class="n">human</span><span class="p">.</span><span class="n">lhand_x</span> <span class="o">-</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> \
+                                      <span class="n">human</span><span class="p">.</span><span class="n">lhand_y</span> <span class="o">-</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+      <span class="k">if</span> <span class="n">hand_distance_from_neck</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span> <span class="c1"># hand is touching the neck
+</span>
+        <span class="c1"># grab the coordinates of the left hand
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="c1"># calculate how far along the neck the hand is
+</span>        <span class="n">distance_from_end</span> <span class="o">=</span> <span class="nf">hypot</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">neck_x</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">neck_y</span><span class="p">)</span>
+        <span class="n">percent</span> <span class="o">=</span> <span class="nf">int</span><span class="p">((</span><span class="n">distance_from_end</span> <span class="o">/</span> <span class="n">neck_len</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+
+        <span class="c1"># split neck into 3 in order to grab the correct chord sample
+</span>        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">percent</span> <span class="o">&lt;</span> <span class="mi">33</span><span class="p">:</span>
+          <span class="n">note</span> <span class="o">=</span> <span class="sh">'</span><span class="s">1_</span><span class="sh">'</span>
+        <span class="k">elif</span> <span class="mi">33</span> <span class="o">&lt;</span> <span class="n">percent</span> <span class="o">&lt;</span> <span class="mi">66</span><span class="p">:</span>
+          <span class="n">note</span> <span class="o">=</span> <span class="sh">'</span><span class="s">2_</span><span class="sh">'</span>
+        <span class="k">elif</span> <span class="mi">66</span> <span class="o">&lt;</span> <span class="n">percent</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+          <span class="n">note</span> <span class="o">=</span> <span class="sh">'</span><span class="s">3_</span><span class="sh">'</span>
+
+        <span class="n">cv2</span><span class="p">.</span><span class="nf">circle</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">break</span>
+</code></pre></div></div>
+
+<h2 id="results">Results</h2>
+<p>The script was working - I could strum with my right hand, and determine the chord that would be played with my left. The guitar sample can be triggered multiple times when holding my hand over the strings, and I played around with various settings to try and alleviate this. I introduced a timestamp that is set once a chord has been played, and prevented any further triggering of samples within 0.2 seconds. This works, but it also slows down the rate at which you can strum. So I tried reducing the minimum distance required to move the strumming hand before a chord is triggered, which seems to be a better solution.</p>
+
+<p>Another issue was that previous samples aren’t cut off when new samples are played, which doesn’t help with the realism! The Playsound library scores highly for simplicity, but this comes at the cost of tweak-ability. So I switched over to a library called <a href="https://github.com/hamiltron/py-simple-audio">Simpleaudio</a>, which also allowed for stopping of audio. Cutting off the audio didn’t sound very natural either, and so I settled on a compromise, and configured things so that the previous audio sample is cut off when changing chords. This helps with the sustain when strumming a single chord, but makes sure that when you change chord, the previous chord doesn’t bleed over the currently sounding one.</p>
+
+<p>The scaling of the superimposed guitar image was a little jumpy, but then the calculation for the scaling was pretty rudimentary and so to be expected. I found that I wasn’t always sure of my left hand placement, and so I added a marker to show the detected position of my hand on the fretboard - this gave useful visual feedback while I was playing.</p>
+
+<p>Another thing I didn’t take into consideration was that I wrote the code on my 2019 iMac, but it needs to run on my older 2012 laptop for the presentation. I found that the scaling of the guitar image was causing various problems on my laptop that I didn’t come across on my iMac. And during the actual presentation, the scaling issues were exacerbated by the low lighting in the room. That my back jumper didn’t exactly stand out against the black curtains didn’t help either.</p>
+
+<h2 id="conclusions">Conclusions</h2>
+<p>This was a fun project to work on. OpenCV and MediaPipe worked well for the most part, and when you consider this has been running on an old (2012) laptop using just its built in webcam, I think the tracking accuracy is surprisingly good.</p>
+
+<p>There is lots of room for improvements of course. An improved scaling algorithm for the guitar image, using more landmarks from MediaPipe to get a better/smoother distance estimation. A larger number of guitar samples would be a big improvement - more chords, and more variations of strumming. Using Csound could give more control over the guitar samples as well, including the use of effects, and being able to use gestures to turn effects on and off could be lots of fun.</p>
+
+<p>Ultimately, this project was an experiment to see what can be done with OpenCV. I think I would focus future efforts on building something that use gestures to control MIDI sequencers - this would be something I could see myself using in my own music making.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/motion-capture/2021/04/17/stephedg-airguitar.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

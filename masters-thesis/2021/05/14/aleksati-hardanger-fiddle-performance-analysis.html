@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exploring Hardanger Fiddle Performance Patterns Through Interactive Computational Tools | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Exploring Hardanger Fiddle Performance Patterns Through Interactive Computational Tools" />
+<meta name="author" content="Aleksander Tidemann" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This thesis presents the development and evaluation of two software applications that integrate contemporary research perspectives on the complex rhythmical structuring of Hardanger fiddle performances." />
+<meta property="og:description" content="This thesis presents the development and evaluation of two software applications that integrate contemporary research perspectives on the complex rhythmical structuring of Hardanger fiddle performances." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/05/14/aleksati-hardanger-fiddle-performance-analysis.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/05/14/aleksati-hardanger-fiddle-performance-analysis.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_05_19_aleksati_pitch.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-14T10:10:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_05_19_aleksati_pitch.jpg" />
+<meta property="twitter:title" content="Exploring Hardanger Fiddle Performance Patterns Through Interactive Computational Tools" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aleksander Tidemann"},"dateModified":"2021-05-14T10:10:00+00:00","datePublished":"2021-05-14T10:10:00+00:00","description":"This thesis presents the development and evaluation of two software applications that integrate contemporary research perspectives on the complex rhythmical structuring of Hardanger fiddle performances.","headline":"Exploring Hardanger Fiddle Performance Patterns Through Interactive Computational Tools","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_05_19_aleksati_pitch.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/05/14/aleksati-hardanger-fiddle-performance-analysis.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Aleksander Tidemann"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/05/14/aleksati-hardanger-fiddle-performance-analysis.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Exploring Hardanger Fiddle Performance Patterns Through Interactive Computational Tools
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-05-14T10:10:00+00:00"
+        itemprop="datePublished"
+      >May 14, 2021 •
+      </time>
+         
+      <a href="/authors/aleksandertidemann.html">Aleksander Tidemann</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="problem-space--contribution">Problem Space &amp; Contribution</h1>
+<p>Analyzing musical performances is a challenging and emergent field of computational music research, aiming to reveal performance patterns and link them to musical contexts. The <a href="https://www.uio.no/ritmo/english/projects/mirage/">MIRAGE research project</a> is contributing to this scientific body, currently addressing the modest amount of computational research on traditional Scandinavian folk music, utilizing a transdisciplinary approach that builds on contemporary musicological perspectives. However, collaborating across disciplines can introduce a number of challenges on its own. One way to mitigate challenges inherent in transdisciplinary research approaches is to develop tailored technologies that seek to increase the availability of expertise and knowledge across disciplines. Recent studies have also shown that most tailored technologies for music performance assessment are unreliable in educational settings, suggesting that further research is needed to evaluate the usability of computational tools that explore musical performances. Inspired by these contemporary conundrums, and my ability to acquire detailed Hardanger fiddle performance data from MIRAGE, my research question became:</p>
+
+<ul>
+  <li><strong>How can we design interactive computational tools to explore performance patterns in Hardanger fiddle music?</strong></li>
+</ul>
+
+<p>Therefore, the aim of the thesis was to increase the availability of computational music research in the field of musicology, offering small contributions to HCI (human-computer interaction), CMA (computational music analysis), Scandinavian folk music studies, and to the preservation and modernization of valuable cultural heritage.</p>
+
+<h1 id="approach">Approach</h1>
+<p>The thesis presents the development and evaluation of two software prototypes that integrate contemporary research perspectives on the complex rhythmical structuring of traditional Hardanger fiddle <em>springar</em> performances. The goal was that this procedure would pinpoint important design-related concepts and generate an evidence-based discussion that would ultimately address the research question.</p>
+
+<h3 id="system-description">System Description</h3>
+<p>The toolkit I developed consisted of three modules, implemented in <a href="https://cycling74.com/">MaxMSP</a> using the <a href="https://www.bachproject.net/">Bach library</a> with additional JavaScript code, all designed based on detailed Hardanger fiddle performance data acquired from the MIRAGE. Although the tools harbored an array of interactive and analytical features, with several import and export options, each module had a primary functionality inspired by contemporary research on Hardanger fiddle performance patterns. The first module featured an interactive score representation that enabled users to manipulate the beat-level rhythmical structuring of a performance. Modules 2 and 3 were more analytical in nature, featuring custom-built plotting interfaces (created with [<a href="https://docs.cycling74.com/max7/refpages/jsui">jsui</a>] objects in Max). The second module enabled users to explore how timing patterns are related to motivic structuring while module 3 harbored the ability to investigate if regions with similar rhythmical properties share other musical parameters, such as pitch, velocity and metric position, incorporating a basic pattern-finding mechanism. To learn more about the core functionalities of these tools, see the video demonstration below:</p>
+
+<figure style="float: none">
+  <iframe width="800" height="500" src="https://www.youtube.com/embed/fMtfsBs5QBw" title="YouTube video player" frameborder="0" allow="accelerometer;
+      100%play;
+      clipboard-write;
+      encrypted-media;
+      gyroscope;
+      picture-in-picture" allowfullscreen="">
+    </iframe>
+  <figcaption>This brief video demonstration goes through the very basic functionalities of the proposed toolkit.
+</figcaption>
+</figure>
+
+<p>The source code for the project is available on <a href="https://github.com/AleksanderTidemann/hardanger-fiddle-performance-analysis">GitHub</a>.</p>
+
+<h4 id="evaluation">Evaluation</h4>
+<p>The evaluation procedure featured a combination of methods. First, two operational tests were designed to assess the technical accuracy and general usability of modules 2 and 3, in particular, measuring whether the module results were consistent with contemporary performance studies and symbolic representations of the music (musical notation). Second, a questionnaire was administered directly following an online presentation, held on March 4th, 2021. The questionnaire featured fourteen questions designed to collect systematic feedback on more aesthetic and conceptual aspects of the prototypes.</p>
+
+<h1 id="findings--future-work">Findings &amp; Future Work</h1>
+<p>When reflecting on the evaluation results in the context of the primary thesis objective, a number of key findings were identified. Perhaps the most essential finding was that there is a demand for more tailored technologies in the field of traditional Scandinavian folk music studies, and that the proposed toolkit can accommodate some of these demands. More specifically, the response showed a preference for tools capable of revealing the complex relationships between musical dimensions through interactive and visual means, much like module 3. However, module 3 was only partly successful in this regard as most of the feedback advocated for more advanced features, such as the ability to investigate how musical practices (such as bowing patterns or foot-stomping) are related to structural components (such as motifs) and other musical parameters. The results also revealed that it would be worthwhile to integrate existing computational analysis frameworks and retrieval systems into the toolkit implementation. This upgrade would improve the compatibility of the software and increase the overall prospects of the technologies becoming research instruments that can contribute to our contemporary understanding of Hardanger fiddle performance patterns.</p>
+
+<figure>
+  <div style="display:flex;">
+    <div style="display:flex; padding:5px;">
+      <img src="/assets/image/2021_05_19_aleksati_metricposition.jpg" width="100%" />
+    </div>
+    <div style="display:flex; padding:5px;">
+      <img src="/assets/image/2021_05_19_aleksati_midivelocity.jpg" width="100%" />
+    </div>
+    <div style="display:flex; padding:5px;">
+      <img src="/assets/image/2021_05_19_aleksati_pitch.jpg" width="100%" />
+    </div>
+  </div>
+  <figcaption> These images show the current multi-dimensional analysis capabilities of module 3. Displayed is the metric position (left), velocity (middle) and pitch (right) of two three-note regions in one Hardanger fiddle performance that share similar timing patterns.</figcaption>
+</figure>
+
+<p>Additional findings illuminated other design considerations for tools aiming to increase the availability of computational music research in the field of musicology, such as integrated features that actively facilitate nuanced interpretation processes. When linking performance parameters to various structural and symbolic layers, the number of variables in our analysis increases, rendering it more complex to make precise interpretations. Therefore, in order to tailor to an audience with varying degrees of musical or technical expertise, tools with the proposed levels of complexity should, ideally, include features that can guide the interpretation process.</p>
+
+<h3 id="future-work">Future Work</h3>
+<p>Optimally, future development should see a software migration from Max to a web application. A web application is easier to use, more maintainable, has better support for interactive and UI design elements, and facilitates more complex functionalities. More importantly, a web solution would render the application to be more compatible with other software. Finally, having more carefully designed features in a web-based solution could also enable a better evaluation procedure with the ability to collect more varied data and reach more people in shorter periods of time.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/masters-thesis/2021/05/14/aleksati-hardanger-fiddle-performance-analysis.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

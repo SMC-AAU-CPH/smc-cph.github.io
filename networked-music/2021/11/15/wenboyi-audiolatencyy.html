@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Latency as an opportunity to embrace | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Latency as an opportunity to embrace" />
+<meta name="author" content="Wenbo Yi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How can we turn unavoidable latency into an integral part of telematic performance?" />
+<meta property="og:description" content="How can we turn unavoidable latency into an integral part of telematic performance?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/wenboyi-audiolatencyy.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/wenboyi-audiolatencyy.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_wenboyi_cover.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-15T07:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_wenboyi_cover.jpeg" />
+<meta property="twitter:title" content="Latency as an opportunity to embrace" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wenbo Yi"},"dateModified":"2021-11-15T07:00:00+00:00","datePublished":"2021-11-15T07:00:00+00:00","description":"How can we turn unavoidable latency into an integral part of telematic performance?","headline":"Latency as an opportunity to embrace","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_wenboyi_cover.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/wenboyi-audiolatencyy.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Wenbo Yi"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/wenboyi-audiolatencyy.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Latency as an opportunity to embrace
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-15T07:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 15, 2021 •
+      </time>
+         
+      <a href="/authors/wenboyi.html">Wenbo Yi</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>In the era of COVID pandemic, online collaborative performance became the only way we can afford the music, but this form of collaboration suffers from audio latency, is there any way we can use it as an advantage?</p>
+
+<h2 id="is-latency-always-bad">Is latency always bad?</h2>
+
+<p>Latency is everywhere on the earth, and actually, our auditory abilities are built on latency. The sound latency between two ears from the sound source is one of the bases for the human’s sound localization ability, and this is also the basis for the construction of stereo audio, which is particularly adapted to sounds below 1500 Hz and is the fundamental frequency range of the various musical instruments and also the human voice. According to research, People can perceive the directional difference of about 1 to 3 degrees, because of the latency for the sound to reach both ears is about 10 microseconds. Latency also forms our perception of sound space, the latency and proportion between direct and reflected sound allows us to perceive the size and texture of space.</p>
+
+<p>Modern telematic audio systems have always strived for low latency, but in fact, latency has also always been present in traditional music performance. According to sensory-motor synchrony study, There is usually a 30-50ms delay between the musician’s prediction, and sound producing action. Delays are everywhere in music hall. Conductors often give instructions for beats in advance, and even in the best orchestra, musicians are not perfectly synchronised with each other. Actually, imperfection makes the music more human, and these humanities are so rooted in our auditory culture that we can become uncomfortable with perfectly synchronised orchestral music produced by MIDI.</p>
+
+<h2 id="when-does-the-delay-become-a-problem">When does the delay become a problem?</h2>
+
+<p>Researchers found that in a test involving two Mozart duets, that a latency of anything over 100ms was enough to render the experience either unmusical or non-interactive (Bartlette et al. 2006: 49). Others have observed when the latency around 11ms(Chafe et al. 2004: 1), each performer waits slightly for the other, creating a gradual deceleration in tempo. More extensive studies tend to agree that latencies of between 20 to 30ms are where notable disruptions to performers start to occur(Haas [1949] 1972: 145).</p>
+
+<p>Between NTNU and UiO, we measured around 29ms latency for direct signals, and around 40ms included microphone and speakers.  As a result, we can still feel audible latency in the Portal. So, instead of trying to figure out how to reduce latency, we should embrace it and make it part of the music. The first solution is to develop an audio system with fixed latency, and the second solution is to use a special approach to compose telematic music.</p>
+
+<h2 id="online-orchestra">Online Orchestra</h2>
+
+<p>Researchers from the UK have used an idea to develop a system called <a href="https://onlineorchestra.com/">Online Orchestra</a>. In this system, the software will first check the latency of each part of the system and choose a value bigger than the latency of each part as the tempo of the music and lock the latency, e.g. setting a 500ms latency is equivalent to one beat at a 120BPM music piece, then the latency between each part is one beat. In the figure 1, When the conductor makes a command in the first beat, all the nodes, on the second beat, will receive this signal and make the sound, and these signals, delayed by another beat, return to the conductor side in the third beat and are sounded in unison. Although the sound of each node is inconsistent, at the end, the sound is perfectly harmonised in conductor’s perspective.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_wenboyi_figure1.png" alt="Online Orchestra illustration" title="Online Orchestra illustration" width="75%" />
+   <figcaption><i>Online Orchestra illustration</i></figcaption>
+</figure>
+
+<h2 id="composing-for-latency">Composing for latency</h2>
+
+<h4 id="texture-distribution">Texture Distribution</h4>
+<p>As well as from a technical perspective, we can also compose music for latency using special arrangements. A simple solution is to distribute a texture across the ensemble. This score shows an example of this type of distributed texture. In the music score below, we can see the focus moves from the strings and vocal materials of Node 1 to flutes in Node 2, with the strings imitated in the flutes to smooth the transition. flutes have highly active materials, but this rhythmic activity does not spread to other parts of the ensemble. Latency therefore does not disrupt the overall coherence.</p>
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_wenboyi_figure2.png" alt="Texture distribution" title="Texture distribution" width="75%" />
+   <figcaption><i>Texture distribution</i></figcaption>
+</figure>
+
+<h4 id="polyrhythm-and-ostinato">Polyrhythm and Ostinato</h4>
+
+<p>The second method here is to arrange polyrhythm and ostinato for complex rhythm, A rhythmic ostinato is a short, constantly repeated rhythmic pattern, the pattern onset points with respect to each other are less significance, especially under the situation that the latency is locked to one beat. We can know more about Ostinato from the video below:</p>
+
+<figure style="float: none">
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_15_wenboyi_o.mp4" width="1024" height="576" frameborder="0" allowfullscreen=""></iframe>
+   <figcaption>Ostinato demonstration</figcaption>
+</figure>
+
+<h4 id="harmony">Harmony</h4>
+
+<p>The third option is to prioritize linear music organization, as opposed to vertical harmonic progression. In other words, the harmony determines the colour of the music, and if we blurs and reduces the harmonic transitions in telematic music, the impact of the delay is reduced. Like the score below, the harmony of the music is not affected even though the music is shifted due to the delay.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_wenboyi_figure3.png" alt="Harmony illustration" title="Harmony illustration" width="75%" />
+   <figcaption><i>Texture distribution</i></figcaption>
+</figure>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In summary, we may never get a telematic system with zero latency, but we can embrace latency through rigorous, delicate system design and musical arrangements. Finally, let’s listen an excerpt from In Sea Cold Lyonesse, a telematic performance applied the technical and compositional techniques we have just described. this work spread three locations in the UK and involving over 100 musicians. Hope you enjoy it:)</p>
+
+<figure style="float: none">
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_15_wenboyi_i.mp4" width="1024" height="576" frameborder="0" allowfullscreen=""></iframe>
+   <figcaption>In Sea Cold Lyonesse</figcaption>
+</figure>
+
+<h2 id="references">References</h2>
+
+<p>Braasch, Jonas. (2009). The Telematic Music System: Affordances for a New Instrument to Shape the Music of Tomorrow. Contemporary Music Review, 28:4-5, 421-432, DOI: 10.1080/07494460903422404.</p>
+
+<p>Rofe, Michael and Reuben, Federico (2017). Telematic performance and the challenge of latency. The Journal of Music, Technology and Education. 167–183. ISSN 1752-7074 . https://doi.org/10.1386/jmte.10.2-3.167_1</p>
+
+<p>Rofe, M., &amp; Geelhoed, E. (2017). Composing for a latency-rich environment. Journal of Music, Technology &amp; Education, 10(2-3), 231-255.</p>
+
+<p>Mills R. (2019) Telematics, Art and the Evolution of Networked Music Performance. Springer Series on Cultural Computing. Springer, Cham. https://doi-org.ezproxy.uio.no/10.1007/978-3-319-71039-6_2</p>
+
+<p>Palmer, C., &amp; Demos, A. (2021). Are we in time? How predictive coding and dynamical systems explain musical synchrony.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2021/11/15/wenboyi-audiolatencyy.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Why Your Exhibit Tech Failed (and how to fix it) | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Why Your Exhibit Tech Failed (and how to fix it)" />
+<meta name="author" content="Oliver Getz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Why are visitors not using your installation? You might just disagree with yourself, the visitors, and your department or client about their needs and wants. The reason for this disagreement is always the same." />
+<meta property="og:description" content="Why are visitors not using your installation? You might just disagree with yourself, the visitors, and your department or client about their needs and wants. The reason for this disagreement is always the same." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/03/olivegr-musetech.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/03/olivegr-musetech.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_03_olivegr_musetech_model.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-03T18:30:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_03_olivegr_musetech_model.jpg" />
+<meta property="twitter:title" content="Why Your Exhibit Tech Failed (and how to fix it)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Oliver Getz"},"dateModified":"2022-12-03T18:30:00+00:00","datePublished":"2022-12-03T18:30:00+00:00","description":"Why are visitors not using your installation? You might just disagree with yourself, the visitors, and your department or client about their needs and wants. The reason for this disagreement is always the same.","headline":"Why Your Exhibit Tech Failed (and how to fix it)","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_03_olivegr_musetech_model.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/03/olivegr-musetech.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Oliver Getz"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/03/olivegr-musetech.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Why Your Exhibit Tech Failed (and how to fix it)
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-12-03T18:30:00+00:00"
+        itemprop="datePublished"
+      >Dec 3, 2022 •
+      </time>
+         
+      <a href="/authors/olivergetz.html">Oliver Getz</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure>
+    <img src="/assets/image/2022_12_03_olivegr_musetech_circuit.jpg" align="center" />
+</figure>
+
+<p>You had a great idea for an installation, convinced your stakeholders of said idea, took it through design
+and execution, only to realize that it doesn’t perform as intended. Why, you think to yourself after
+months of hard work, are visitors not using your installation? Why is the client unhappy? Why do people
+not understand how to use it? It’s so simple!</p>
+
+<p>Chances are it’s not a bad installation at all. You might just disagree with yourself, the visitors, and
+your department or client about their needs and wants. The reason for this disagreement is always
+the same: you didn’t lay the project foundations early enough. Or worse, you didn’t lay down any
+foundations at all.</p>
+
+<h1 id="asking-the-right-questions">Asking The Right Questions</h1>
+<p>It is rarely a good idea to jump into a project and just start solving the most apparent problems. If you
+don’t spend time diagnosing, how confident can you really be that you’re solving the correct problem?
+Maybe you’re doing the right thing, but maybe not, and I probably won’t have to tell you that leaving
+the success of a project to chance is a bad idea.</p>
+
+<h2 id="why-should-this-project-exist">Why should this project exist?</h2>
+<p>Installations can be commissioned by a third party, be part of a public funding deal, be requested by
+visitors, or be requested by an exhibit. These are not good enough reasons by themselves to create an
+installation. They will not guide your decision making, nor will they ensure a successful project.
+Sometimes these commissions come with a set of requirements. It’s important to understand the basis
+for those requirements and, if that basis is unreasonable or unrealistic, work with the stakeholders to
+create a better frame for the project.</p>
+<h2 id="is-this-truly-a-change-for-the-better">Is this truly a change for the better?</h2>
+<p>Have you ever made a change to a product because you thought it was what your boss wanted when
+they really had something else in mind? Have you been stuck making minor changes because your client
+just isn’t happy with the result?</p>
+
+<p>Stakeholders often request a feature or installation without having a reason beyond that they want it to
+exist. Other times they do have reasons, but they are unable to articulate those reasons in a way that’s
+easily digestible, and you spend an unnecessary amount of time finding common ground. This might be
+true for you as well. Your gut might say yes to a new idea but, while there is value in gut feelings, take a
+step back and see how a change relates to your goals.</p>
+
+<h2 id="how-do-you-know-if-the-project-is-successful-or-not">How do you know if the project is successful or not?</h2>
+<p>Goals and evaluation go hand-in-hand. You cannot accurately evaluate the success of a project unless
+you set highly specific goals during the outset of your project. Worst case scenario, you will evaluate the
+project based on the wrong criteria and think the outcome is better or worse than it is. So, what do you
+do?</p>
+
+<h1 id="the-musetech-framework">The MUSETECH Framework</h1>
+<p>Developed by Areti Damala, Ian Ruthven, and Eva Hornecker, the MUSETECH model provides a strong
+foundation for judging the performance of technology. While intended for museums, any exhibition,
+gallery, or experiential learning center will benefit from this model, the only difference is terminology.
+This tool will speed up your decision-making process and give you the means to justify your design and
+implementation choices.</p>
+
+<p>The model lists 121 criteria serving to guide you in your quest to understand what works and what
+doesn’t work about your installations and exhibit technologies. These criteria are grouped into 4
+categories:</p>
+<ul>
+  <li>Design: These criteria will help you make mindful design choices and articulate why these
+choices were made.</li>
+  <li>Content: These criteria are concerned with the kinds of tech curators and establishments use
+to create and maintain content, but also visitor-personalized or visitor-created content.</li>
+  <li>Operation: These criteria focus on resource requirements, installation, and maintenance of
+the installation.</li>
+  <li>Compliance: These criteria deal with accessibility, health, safety, ethics, and potential legal
+issues.</li>
+</ul>
+
+<p>These categories can in turn be approached from 3 different perspectives:</p>
+<ul>
+  <li>The Visitor: Whomever is likely to attend the exhibition, the end users.</li>
+  <li>The Cultural Heritage Professional: Outside of museums, I would call them curators or
+operation managers. They will be interacting with the same tech daily.</li>
+  <li>The Museum (or exhibit/gallery/learning center): They have a unique understanding of their
+own purpose and how they envision the future of the establishment.</li>
+</ul>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_03_olivegr_musetech_model.jpg" alt="A circle with 4 quadrants: Design, Content, Compliance, and Operation. Within each quadrant there is a selection of criteria from the respective category. Around the circle there is a wheel with 3 stakeholders: the Visitor, the Museum, and the Cultural Heritage Professional." title="The MUSETECH Model" width="auto" />
+   <figcaption>The MUSETECH Model</figcaption>
+</figure>
+
+<p>Work together with your stakeholders to select criteria and do so early in the development process to
+minimize misunderstandings and waste of resources.</p>
+
+<h2 id="selecting-appropriate-criteria">Selecting Appropriate Criteria</h2>
+<p>The model presents a heap of criteria to choose from, but in reality you will rarely have the resources
+to fulfill each of them. Write down every criterion you think is relevant, then eliminate half of those
+with your main stakeholder to determine what’s truly important. What you’re left with is common
+criteria to measure your project against, giving you leverage to eliminate requests that do not support
+the goals of the project and more power to make changes that do, saving both time and money. If
+your only criterion is to promote social interaction and a feature request or design choice does not
+support this criterion, it is a poor use of resources.</p>
+
+<h1 id="additional-readings">Additional Readings</h1>
+<p>For a deeper understanding about this framework, I highly recommend reading the <a href="https://dl.acm.org/doi/10.1145/3297717">original article</a>. If
+you just want to get started, check out the <a href="https://strathprints.strath.ac.uk/66536/1/Damala_etal_2019_The_MUSETECH_companion_navigating.pdf">MUSETECH Companion</a> for a comprehensive list of criteria.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2022/12/03/olivegr-musetech.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

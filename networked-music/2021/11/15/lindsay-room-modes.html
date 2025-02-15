@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Room acoustics: what are room modes and how do they influence the physical space? | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Room acoustics: what are room modes and how do they influence the physical space?" />
+<meta name="author" content="Lindsay Charles" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blog post explains what room modes are, how they affect the physical space and what can be done about it. It was made together with a video lecture." />
+<meta property="og:description" content="This blog post explains what room modes are, how they affect the physical space and what can be done about it. It was made together with a video lecture." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/lindsay-room-modes.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/lindsay-room-modes.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_lindsay_portal_roommode.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-15T06:10:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_lindsay_portal_roommode.png" />
+<meta property="twitter:title" content="Room acoustics: what are room modes and how do they influence the physical space?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lindsay Charles"},"dateModified":"2021-11-15T06:10:00+00:00","datePublished":"2021-11-15T06:10:00+00:00","description":"This blog post explains what room modes are, how they affect the physical space and what can be done about it. It was made together with a video lecture.","headline":"Room acoustics: what are room modes and how do they influence the physical space?","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_lindsay_portal_roommode.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/lindsay-room-modes.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Lindsay Charles"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/lindsay-room-modes.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Room acoustics: what are room modes and how do they influence the physical space?
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-15T06:10:00+00:00"
+        itemprop="datePublished"
+      >Nov 15, 2021 •
+      </time>
+         
+      <a href="/authors/lindsaycharles.html">Lindsay Charles</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="room-acoustics">Room acoustics</h1>
+<h2 id="what-are-room-modes-and-how-do-they-influence-the-physical-space">What are room modes and how do they influence the physical space?</h2>
+
+<h3 id="introducing-key-concepts">Introducing key concepts</h3>
+
+<p>One of the most discussed topics in <strong>room acoustics</strong> is that of room modes. But what exactly are they and why are they important? Let’s clear out the confusion and misunderstandings together.</p>
+
+<p><strong>Room modes</strong> represent the resonant frequencies that occur within a room.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_15_lindsay_portal_organs.jpg" alt="" title="Organs" width="auto" /> <figcaption>Organs</figcaption>
+</figure>
+
+<p>Just like organ pipes, <em>rooms resonate</em>; similarly, just like the different pipe dimensions produce different resonant frequencies, room dimensions also correspond to certain frequencies.</p>
+
+<p>Based on this, the goal when designing a good room for music, conferences, or home theatre systems is to <strong>control the decay time and minimize this coloration</strong> – strongest at bass frequencies between 20-200 Hz.</p>
+
+<p>When talking about soundwaves, we often think of their frequency first. However, they are also characterized by their <strong>wavelength</strong> (size) – the distance between two consecutive peaks in a wave. To exemplify, a 1kHz soundwave would have a wavelength of about 0.35m. Lower frequencies have much longer wavelengths – a wave of 150 Hz has a wavelength of 2.28m (almost the height of a normal room!)</p>
+
+<h3 id="resonance-chambers">Resonance chambers</h3>
+
+<p>If you work with sound or play an instrument, then you’re probably already familiar with the way the physical volume affects sound. To produce different frequencies, instruments use strings and chambers of varying sizes – e.g. the difference between a bass and a treble instrument.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_15_lindsay_portal_dbass.jpg" alt="" title="Double bass" width="auto" /> <figcaption>Double bass</figcaption>
+</figure>
+
+<p>Similarly, any room will act as a resonance chamber at specific frequencies depending on its size. For example, if you consider a room with the longest length of 6m, this would correspond to about 56 Hz. <strong>The first room mode corresponds with the longest dimension of the room.</strong> In the case of our example, 56 Hz would be the first and strongest room mode.</p>
+
+<p>This sounds quite abstract. How can you test it?
+Simply choose a tone based on your room dimensions and play it over your speakers (it’s important that it has a subwoofer). Now move around the room and observe how in some spots of the room the tone is very strong, whereas in others it suddenly disappears. Crazy, right?!</p>
+
+<p>This is an example of an <strong>axial room mode</strong>, the strongest type of room modes and the main focus in a rectangular room. The frequencies and wavelengths of such a room correspond with the three axes of the Cartesian coordinates of the room.</p>
+
+<p>When listening to audio in a room with strong room modes, unwanted characteristics are observed at particular frequencies, such as:</p>
+<ul>
+  <li>long decay time,</li>
+  <li>boominess, and</li>
+  <li>apparent pitch changes.</li>
+</ul>
+
+<p>This happens because as a tone with one frequency excites and is then dominated by a strong resonance at a slightly different frequency, the low frequencies then affect the middle and high frequencies.</p>
+
+<p><strong>Nearly all</strong> systems, even those with extremely high-end equipment, suffer from the negative impact of <em>modal resonances</em> - e.g. a room with long decay times in the bass range can sound “muddy” or “boomy.”</p>
+
+<h3 id="practical-demonstration">Practical demonstration</h3>
+
+<p>Listen to these recordings of two songs in the same room, each recorded before and after acoustic treatment. Notice how the long decay times affect the clarity of the low-, middle- and upper- frequencies.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_15_lindsay_portal_demoaudio.mp3" type="audio/mpeg" />
+    Alternate Text
+  </audio>
+  <figcaption>Audio recordings of before and after acoustic treatment</figcaption>
+</figure>
+
+<h3 id="addressing-problems-of-resonance">Addressing problems of resonance</h3>
+
+<p>In a room, the first room mode is not the only one to produce resonance. Each <strong>harmonic integer multiples of the fundamental modal resonance</strong> will do it too – e.g. a room has the first mode at 80 Hz; it will also resonate at 160/240/320/… Hz. These harmonic resonances are mostly observed as feedback issues in a microphone-speaker setting.</p>
+
+<p>In broadcast and education, <strong>speech intelligibility</strong> is extremely important (lectures, interview, etc). Thus, controlling <strong>decay times</strong> is very important for clarity of dialogue, clearing up the low end to give your sub more impact, and alleviating localization problems common with sound systems. Low frequency resonances result in the smearing of vocal frequencies and need to be controlled for clear and concise speech.</p>
+
+<h3 id="optimizing-the-smc-portal-and-other-rooms-built-for-teleconferencing-and-telematic-performances">Optimizing the SMC portal and other rooms built for teleconferencing and telematic performances</h3>
+
+<h3 id="1-optimum-room-dimensions">1. “Optimum” Room Dimensions</h3>
+
+<p>If a room has evenly divisible dimensions – e.g. a height of 3 m and a length of 6 m – then it’s going to have similar modes: similar frequencies will stack upon themselves and exasperate the problem even more.</p>
+
+<p>So, <strong>room dimensions are one way we can control room modes</strong>. The standard modal approach for designing a room with good acoustics is to create as many different resonances as possible and to spread them as evenly as possible across the frequency spectrum (see the ‘Handbook for Sound Engineers’). Bigger rooms also reduce the spacing between resonances.</p>
+
+<p>In general, <strong>the lower the better</strong> for the first resonant frequency, because this region is where the frequency response is most variable.</p>
+<h3 id="2-acoustic-materials">2. Acoustic Materials</h3>
+
+<p><strong>Bass traps</strong> and large <strong>broadband absorbers</strong> are absorbers of acoustic energy designed to damp low-frequency sound-energy. They are typically made from porous materials such as rockwool, mineral wool, basotect, or other types of acoustic foams, and incorporate elements such as membranes, airspaces and additional thicknesses of fiberglass (≥ 6″) – all needed to control low frequency bands.</p>
+
+<p>What is the best place to put them in a room? They are most effective if placed on:</p>
+<ul>
+  <li>A tri-corner (e.g. where 2 walls meet the ceiling or the floor);</li>
+  <li>A wall/wall corner (e.g. between the side and back wall);</li>
+  <li>The ceiling.</li>
+</ul>
+
+<p>A <strong>diffuser</strong> is any reflective structure that has an irregular surface capable of scattering the reflections. To be effective, it needs to have bumps and humps of at least several inches (≥ 1/4 of wavelengths).</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_15_lindsay_portal_diffuser.jpg" alt="" title="Diffuser" width="auto" /> <figcaption>Diffuser</figcaption>
+</figure>
+
+<p>Other effective acoustic materials are soft furnishings that ‘accidentally’ create absorption such as <strong>curtains</strong> and <strong>carpets</strong>.</p>
+
+<p><em><strong>Attention!</strong> Porous absorbers (most commonly sound absorbing panels) don’t work on low frequencies unless they are very thick, or placed far enough away from the wall.</em></p>
+
+<p>For example, for a 200 Hz sound wave, the wavelength is 1125/200 = 5.6 feet; in a sound wave, the velocity is maximum (and the pressure is zero) at ¼ the wavelength from a boundary or the wall; such, a quarter of the example soundwave is 1.4 feet (0.43 meters). You read it right! You need <em>a lot</em> of space to absorb low frequencies using porous absorption!</p>
+
+<h3 id="3-optimal-listener-speaker-locations">3. Optimal listener speaker locations</h3>
+
+<p>Modal theory tells us that a subwoofer in a room corner will excite all modes. In contrast, for a subwoofer perfectly centered along one wall, several modes will not be excited at all.</p>
+
+<p>So, ideally, the loudspeaker should be out and away from the corners. The optimal placement can be calculated using some good-ol’ math, and then tested by ear and with instruments.</p>
+
+<p>As any other resonance chamber, for a room to resonate, it needs containment. Thus, opening large windows and doors will help relieve the room modes, creating an “escape route”.</p>
+
+<h3 id="4-digital-prepost-equalization">4. Digital pre/post Equalization</h3>
+
+<p>An effective way of achieving better frequency response is to apply <strong>parametric EQ</strong> directly on the sound before it is sent out or on the microphone. When two rooms are virtually (and electronically) connected, such as the SMC Portals, this works like a charm – e.g. applying two filters on 35 and 63 Hz.
+Check out Stephen’s video for more information of feedback equalization.</p>
+
+<p>I hope this blog post helped you gain a better understanding of room modes and the ways to use or <em>misuse</em> them!</p>
+
+<h3 id="video-tutorial">Video Tutorial</h3>
+
+<figure style="float: none">
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_15_lindsay_portal_video.mp4" width="1024" height="576" frameborder="0" allowfullscreen=""></iframe>
+   <figcaption>Video Presentation</figcaption>
+</figure>
+
+<p>Here are some other resources and tools for calculation, check out these links:</p>
+
+<p><a href="https://amcoustics.com/tools/amroc?l=363&amp;w=273&amp;h=300&amp;re=DIN%2018041%20-%20Music">Acoustic tool for room mode calculation</a></p>
+
+<p><a href="http://www.silcom.com/~aludwig/Room_acoustics.html">Room acoustics</a></p>
+
+<p><a href="http://www.acousticfrontiers.com/room-modes-101/">Room modes</a></p>
+
+<p><a href="http://arqen.com/bass-traps-101/placement-guide/">Bass trap placement guide</a></p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2021/11/15/lindsay-room-modes.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

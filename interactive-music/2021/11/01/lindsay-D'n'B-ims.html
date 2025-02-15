@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>D’n’B | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="D’n’B" />
+<meta name="author" content="Lindsay Charles" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Exploration and design of the ‘Drum and Bass’ interactive music system with Csound" />
+<meta property="og:description" content="Exploration and design of the ‘Drum and Bass’ interactive music system with Csound" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2021/11/01/lindsay-D'n'B-ims.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2021/11/01/lindsay-D'n'B-ims.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_01_lindsay_DnB_schematic.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-01T09:50:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_01_lindsay_DnB_schematic.jpg" />
+<meta property="twitter:title" content="D’n’B" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lindsay Charles"},"dateModified":"2021-11-01T09:50:00+00:00","datePublished":"2021-11-01T09:50:00+00:00","description":"Exploration and design of the ‘Drum and Bass’ interactive music system with Csound","headline":"D’n’B","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_01_lindsay_DnB_schematic.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2021/11/01/lindsay-D'n'B-ims.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Lindsay Charles"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2021/11/01/lindsay-D'n'B-ims.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      D&#39;n&#39;B
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-01T09:50:00+00:00"
+        itemprop="datePublished"
+      >Nov 1, 2021 •
+      </time>
+         
+      <a href="/authors/lindsaycharles.html">Lindsay Charles</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction">Introduction</h2>
+
+<p>Inspired by the raw nature of the low frequencies, I envisioned a powerful bass synth in combination with drums leading me to design “D’n’B”.
+D’n’B is FM based synth consisting of 3 oscillators and a sample triggering drums along with it. This system is a multi dexterous instrument with other features that control the parameters of the synth.</p>
+
+<h2 id="musicality">Musicality</h2>
+
+<p>The bass synth is monophonic, has a fluid pitch control and the fundamental oscillator is limited to bass frequencies upto 220 Hz, but with 3 oscillators in series it is tuned to cover a larger spectrum.
+The performer also has vibrato and timbre control, implemented for greater expression.</p>
+
+<p>For the rhythm section, drum samples can be triggered on pressing the buttons. 5 different samples are mapped to each button.</p>
+
+<h2 id="design-and-implementation">Design and implementation</h2>
+
+<p>The system is dived into 3 main sections. Input/output section(BELA), the bass synth, the drums.
+I’ve arranged it such that the bass synth is on the left, BELA in the between and the drums on the right.
+This is an ambidextrous system and can be interchanged according to the performer.</p>
+
+<p>Below you will see the schematic diagram of the system.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_01_lindsay_DnB_schematic.jpg" alt="D'n'B Schematic diagram" title="D'n'B Schematic diagram." width="100%" />
+   <figcaption><i>Ethrio - Electronic Components Diagram</i></figcaption>
+</figure>
+
+<h3 id="components-used">Components used</h3>
+
+<ol>
+  <li>Soft Potentiometer</li>
+  <li>Flex sensor</li>
+  <li>Rotatory potentiometer</li>
+  <li>slider potentiometer</li>
+  <li>Push buttons</li>
+  <li>LEDs</li>
+  <li>Resistors</li>
+  <li>BELA</li>
+</ol>
+
+<h3 id="bass-synthesizer">Bass synthesizer</h3>
+
+<p>The main oscillator of the synth is an ‘foscil’ which is based on frequency modulation and The wave form used in the demonstration is a based on a distortion table. Other waves such as sine, saw-tooth and square waves can also be used.
+It has amplitude envelope, a frequency sweep and a logic which attempts to separate frequency from resonance.
+The soft potentiometer is mapped to the frequency of the 1st oscillator and the fundamentals are limited from 80Hz to 220Hz.
+The second oscillator is a high pression ‘poscil’ which is used with an lfo of square wave(uni-polar) with an increasing rate mapped to the soft-pot. This gives the synth a weird low thumping noise which increases gradually or suddenly if you slide up on the soft-pot.
+The Third oscillator is a ‘vco2’ which is multiplied by 0.7 times the frequency of the first oscillator. This gives it nice mids and high frequencies complementing the main oscillator.</p>
+
+<h3 id="effect-chain">Effect Chain</h3>
+
+<p>Reverb and Low pass filter are in series respectively.
+The Reverb mix is mapped to the the rotatory potentiometer
+The Low pass fitler’s cut off frequency is mapped to the flex sensor, which is to be attached to either thumbs. Moving the thumb inward and outward controls the filter parameter.</p>
+
+<h3 id="drums">Drums</h3>
+
+<p>The drums section is a simple triggering mechanism mapped to push buttons and for visual presentation, each button is linked to a LED.
+There are 5 buttons which are mapped to 5 different sounds(samples).</p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Below you can watch the demo video.</p>
+
+<figure style="float: none">
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_01_lindsay-ims-demo.mp4" width="1024" height="576" frameborder="0" allowfullscreen=""></iframe>
+   <figcaption>D'n'B Demonstration</figcaption>
+</figure>
+
+<h2 id="reflections">Reflections</h2>
+
+<p>Building this instrument in such a short time made me realize the effectiveness of time management and planning accurate details before hand. This instrument is interesting due to the fact that it has complete control of the notes the performer plays, it is very sensitive to horizontal movement, every small variation is noticeable sonically, it involves playing rhythm and melody and it is quite hard to master playing it with two hands.</p>
+
+<p>If we had more time, I would work intensively on the sound synthesis and using it in various musical contexts to see how far it can go.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2021/11/01/lindsay-D'n'B-ims.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

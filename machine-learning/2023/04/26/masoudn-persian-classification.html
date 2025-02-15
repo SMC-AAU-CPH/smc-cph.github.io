@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Persian classical instruments recognition and classification | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Persian classical instruments recognition and classification" />
+<meta name="author" content="Masoud Niknafs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blog post will go over various feature extraction techniques used to identify Persian classical music instruments." />
+<meta property="og:description" content="This blog post will go over various feature extraction techniques used to identify Persian classical music instruments." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/26/masoudn-persian-classification.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/26/masoudn-persian-classification.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_26_masoudn_cover.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-26T11:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_26_masoudn_cover.jpg" />
+<meta property="twitter:title" content="Persian classical instruments recognition and classification" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Masoud Niknafs"},"dateModified":"2023-04-26T11:00:00+00:00","datePublished":"2023-04-26T11:00:00+00:00","description":"This blog post will go over various feature extraction techniques used to identify Persian classical music instruments.","headline":"Persian classical instruments recognition and classification","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_26_masoudn_cover.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/26/masoudn-persian-classification.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Masoud Niknafs"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/26/masoudn-persian-classification.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Persian classical instruments recognition and classification
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-26T11:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 26, 2023 •
+      </time>
+         
+      <a href="/authors/masoudniknafs.html">Masoud Niknafs</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_26_masoudn_cover.jpg" width="100%" />
+   <figcaption></figcaption>
+</figure>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>This blog post will go over various feature extraction techniques used to identify Persian classical music instruments. The similarity in timbre and tonality between various instruments makes this task difficult. We will investigate the efficacy of a number of features, including Chroma, Spectral Centroid, Spectral Flatness, and Zero Crossing Rate in order to address this challenge. After that, we will classify the instruments based on these features and evaluate their performance using a Support Vector Machine (SVM) model.</p>
+
+<h1 id="process">Process</h1>
+
+<p>Data preparation: lets begin by making a list of the instruments used in Persian classical music and listening to the corresponding audio files for each one. We take into account Santur, Setar, Ud, Ney, Tar, and Kamancheh as our instruments.</p>
+
+<p>Features listed below:</p>
+
+<p>MFCC: Represents the audio signal’s power spectrum and is frequently used in tasks involving music and speech recognition.
+Chroma: Chroma is a useful concept for analyzing tonality and harmony in music as it depicts the distribution of energy across various pitch classes.
+The spectral centroid, which represents the power spectrum’s center of mass, can shed light on the timbre of an audio signal.
+Measures the power spectrum’s flatness and can offer information about the timbre of the audio signal.
+Zero Crossing Rate: This metric illustrates the speed at which the audio signal crosses the zero amplitude and can shed light on the audio signal’s texture.
+Data organization: For later use, we create dictionaries out of the extracted features and store them in pickled files.</p>
+
+<p>Evaluation of extracted features: Using a k-fold cross-validated SVM model, we combine the extracted features for all instruments and assess each one’s performance. Then, we evaluate each feature’s accuracy and contrast how well it performs.</p>
+
+<h1 id="findings">Findings</h1>
+
+<p>Here are the findings of the experiment:</p>
+<ul>
+  <li>The accuracy of the SVM model using MFCC features is: 88.88%</li>
+  <li>The accuracy of the SVM model using Chroma features is: 62.12%</li>
+  <li>The accuracy of the SVM model using Spectral Centroid features is: 41.91%</li>
+  <li>The accuracy of the SVM model using Spectral Flatness features is: 24.40%</li>
+  <li>The accuracy of the SVM model using Zero Crossing Rate features is: 42.45%</li>
+  <li>The accuracy of the SVM model using MFCC concatonated features is: 89.8%</li>
+</ul>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_26_masoudn_findings1.png" width="100%" />
+   <figcaption>Findings</figcaption>
+</figure>
+
+<p>The SVM model’s accuracy when employing MFCC features is 88.88%.
+Using Chroma features, the SVM model achieves a 62.12% accuracy rate.
+With Spectral Centroid features, the SVM model achieves a 41.91% accuracy rate.
+When Spectral Flatness features are used in an SVM model, the resulting accuracy is 24.40 percent.
+Using features based on the zero crossing rate, the SVM model achieves a 42.45% accuracy rate.
+Conclusion</p>
+
+<p>The data  collected shows that the MFCC features do well at identifying the instruments used in Persian classical music, with an accuracy of 88.88%. This makes sense, as MFCC features have previously been shown to capture crucial aspects of the audio signal for applications like speech and music recognition.</p>
+
+<p>With an accuracy of 62.12%, the Chroma features are a close second. Chroma features still provide a respectable level of accuracy for identifying instruments in Persian classical music, despite being less effective than MFCC features in this particular application.</p>
+
+<p>Lower precision is achieved by employing the Spectral Centroid, Spectral Flatness, and Zero Crossing Rate features. These features are not as discriminative as the MFCC and Chroma features for the task of instrument recognition in Persian classical music, or in general instrument recognition, but they can provide some insight into the timbre and texture of the audio signal.</p>
+
+<p>As the MFCC and Chroma feature represent the first two accurate feature vectore we concatonated them to increase the accuracy and as the results show it increased it by roughly 1 percent.</p>
+
+<h1 id="acknowledgements">Acknowledgements:</h1>
+<p>Dataset:
+Mousavi, Seyed Muhammad Hossein, and VB Surya Prasath. “Persian Classical Music Instrument Recognition (PCMIR) Using a Novel Persian Music Database.” 2019 9th International Conference on Computer and Knowledge Engineering (ICCKE). IEEE, 2019.</p>
+
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2023/04/26/masoudn-persian-classification.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

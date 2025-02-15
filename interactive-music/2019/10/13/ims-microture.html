@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Microture | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Microture" />
+<meta name="author" content="Sepehr Haghighi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Microture is an interactive music system, based on manipulation of the input sound (microphone sound) with small gestures.." />
+<meta property="og:description" content="Microture is an interactive music system, based on manipulation of the input sound (microphone sound) with small gestures.." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/10/13/ims-microture.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/10/13/ims-microture.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_10_13_stefanof_IMS2.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-13T11:25:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_10_13_stefanof_IMS2.jpg" />
+<meta property="twitter:title" content="Microture" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sepehr Haghighi"},"dateModified":"2019-10-13T11:25:00+00:00","datePublished":"2019-10-13T11:25:00+00:00","description":"Microture is an interactive music system, based on manipulation of the input sound (microphone sound) with small gestures..","headline":"Microture","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_10_13_stefanof_IMS2.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/10/13/ims-microture.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Sepehr Haghighi"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/10/13/ims-microture.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Microture
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-10-13T11:25:00+00:00"
+        itemprop="datePublished"
+      >Oct 13, 2019 •
+      </time>
+         
+      <a href="/authors/sepehrhaghighi.html">Sepehr Haghighi</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>Microture is an interactive music system, based on manipulation of the input sound (microphone sound) with small gestures. It uses <a href="https://bela.io/about">Bela</a>. Bela is an embedded computing platform for creating beautifully responsive interactive applications. Bela provides ultra-low latency, high quality audio, analog and digital I/O in a tiny self-contained package that can be easily embedded. Built upon the <a href="https://beagleboard.org/">BeagleBone</a> family of open-source embedded computers, Bela combines the processing power of an embedded computer with the timing precision and connectivity of a microcontroller.</p>
+<figure>
+<img src="/assets/image/2019_10_13_stefanof_IMS2.jpg" width="85%" align="center" />
+<figcaption><strong></strong></figcaption>
+</figure>
+
+<h3 id="introduction">Introduction</h3>
+<p>One of the main principles of this project is augmentation. The current research field on augmented instruments is motivated by the assumption that the combination of traditional acoustic instruments with today’s sound technology yields a high potential for the development of tomorrow’s musical instruments. Considering that we are living in tomorrow in a sense, it is a current matter.
+That means integrating the tactile and expressive qualities of the traditional instruments with the sonic possibilities of today’s digital audio techniques creates a promising perspective for instrument design. (Lähdeoja, 2019)<br />
+This augmentation is based on the use of gestures in order to make and expand the sonical perspective of the instrument.
+As Pierre Hébert says, the measure of a work of art is whether one can sense in it the presence of the artist’s body. If so, then it is a success, and if not, it’s a failure. (Ostertag, 2002)<br />
+Of course, he is talking about a corporal presence of the artist emanating from the work. Which in here refers to our body gestures.
+In here the body is used to express oneself and that includes all the small-movements. In other words, combination of body gestures with technology to expand the amount of expressiveness.</p>
+<h4 id="history">History</h4>
+<p>At the beginning of the process, the goal was to create an Augmented electric guitar, by the use of gestures. But there were three phases that I went through, and in the end
+as you can observed the outcome became so different. <br />
+First I decided to expand on the idea of slide guitar, considering the limited bandwidth and practicality of the guitar I though it is going to bring me more control.
+But unfortunately it did not and that was because of a couple of reasons:</p>
+<ul>
+  <li>Not having sufficent skills to play slide guitar</li>
+  <li>Not having sufficient equipment and time to build the system</li>
+</ul>
+
+<p>Even with overcoming those issues the main problem was the lack of time to practice using the instrument and present a decent performance. Therefore I decided to use the microphone as the sound source, which gave me much more bandwidth and reliabality.</p>
+
+<h3 id="key-features">Key features</h3>
+<p>The key features in this instrument are:</p>
+<ul>
+  <li>Capturing the sound input: Vocals or any other sounds produced by mouth or other objects (sound effects)</li>
+  <li>Manipulation of sound input with various effects / controllers (based on gestures), which is being down in a <a href="https://puredata.info/">Pure Data</a> patch, uploaded to Bela.</li>
+</ul>
+
+<h3 id="design-and-implementation">Design and implementation</h3>
+<p>The sound, after getting into the system goes through various effects and signal processing systems. Those include:<br />
+Sound manipulation process:</p>
+<ul>
+  <li>Delay</li>
+  <li>Pitch</li>
+  <li>Distortion</li>
+</ul>
+
+<p>After that they are being manipulated by the controllers. The controllers are the sensors that are implemented in the system.<br />
+Sensors being used in this system are:</p>
+
+<ul>
+  <li>Accelerometer, being worn as a ring, using its X and Y axis</li>
+  <li>Distance sensor</li>
+  <li>Potentiometer</li>
+  <li>Slider</li>
+</ul>
+
+<figure>
+<img src="/assets/image/2019_10_13_stefanof_IMS3.jpg" width="85%" align="center" />
+<figcaption><strong></strong></figcaption>
+</figure>
+
+<p>The senors, transform the movements into values and those values are being modified to change the effects parameters. The mappings being done are as follows:</p>
+
+<p><strong><em>One to one mapping:</em></strong></p>
+<ul>
+  <li>Right hand:<br />
+The use of the accelerometer sensor: X axis for the delay mix, Y axis for the delay time</li>
+  <li>Left hand:<br />
+Ultrasound sensor for the distortion amount, Potentiometer for the pitch shift amount</li>
+</ul>
+
+<p><strong><em>One to two (many?) mapping:</em></strong></p>
+<ul>
+  <li>Left hand:<br />
+Slider: The normal use of it controls the delay feedback and by moving it rapidly, the velocity amount is being used for engaging/ disengaging the pitch shift and distortion processing chain.</li>
+</ul>
+
+<figure>
+<img src="/assets/image/2019_10_13_stefanof_IMS1.png" width="85%" align="center" />
+<figcaption><strong></strong></figcaption>
+</figure>
+
+<p>Also, Here is a picture that shows the pure data patch.</p>
+
+<figure>
+<img src="/assets/image/2019_10_13_stefanof_IMS4.png" width="85%" align="center" />
+<figcaption><strong></strong></figcaption>
+</figure>
+
+<h3 id="expressiveness-playability-learning">Expressiveness, Playability, Learning</h3>
+
+<p><strong><em>Expressiveness:</em></strong> Expressiveness in this case could refer to intelligent recognition of gesture in order to characterize the gesture. Of course by make the appropriate mapping and more gesture-sound mapping, more expressiveness could be acheived. But it is important to mention that the performer should achieve a level of virtuosity by more practice, in order to experience that matter.<br />
+<strong><em>Playability and learning:</em></strong> This instrument is tangible. That is because of the use of acceleromenter. It is being extremly sensetive. But it can be addressed in further developments, by using a low pass folter for the data being captured by it. But considering the amount of effects that can manipulate the sound and enough practice, the player can lead to an acceptable degree of control regarding playing hte instrument.</p>
+
+<h3 id="evaluation">Evaluation</h3>
+<p>This is the expert user’s evaluation that I received, from Karolina Jawad.<br />
+<strong><em>Overall impression:</em></strong> The augmentation of the voice is very engaging and interesting. There is a great amount of playfulness that is provided through the different controllers. Through the gesture controllers it was especially inviting to explore the instrument and spend time with it.<br />
+<strong><em>Things that can be worked upon:</em></strong> audibility of what is happening through which action could be a little bit more
+direct since there are many parameters, but it is at the same instance a positive effect of complexity.</p>
+
+<h3 id="present-issues--further-development">Present issues / Further development</h3>
+<ul>
+  <li>Robustness: There should be more time spent and more relevant equipment used in order to robust the instrument</li>
+  <li>Moving on from the initial idea: Considering having more time to practice and build the instrument adn also having proper equipment in touch, the initial idea could be implemented.</li>
+</ul>
+
+<p>Following there is a short video of the protoype being played:</p>
+<iframe width="676" height="380" src="https://www.youtube.com/embed/xuEf8yBa1Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h3 id="acknowledgement">Acknowledgement</h3>
+<p>I would like to thanks <a href="https://stefanofasciani.com/">Stefano Fasciani</a> for his crucial support and guidance in the process of making the instrument.</p>
+
+<h3 id="references">References:</h3>
+<ul>
+  <li>Lähdeoja, Otso. (2019). An approach to instrument augmentation: the electric guitar.</li>
+  <li>Ostertag, Bob. (2002). Human Bodies, Computer Music. Leonardo Music Journal. 12. 11-14. 10.1162/096112102762295070.</li>
+  <li>Dobrian, Christopher &amp; Koppelman, Daniel. (2006). The ‘E’ in NIME: Musical Expression with New Computer Interfaces.. 277-282.</li>
+</ul>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2019/10/13/ims-microture.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

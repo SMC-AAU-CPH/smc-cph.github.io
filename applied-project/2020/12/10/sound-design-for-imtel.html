@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sound Design for IMTEL | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Sound Design for IMTEL" />
+<meta name="author" content="Simon Rønsholm Sandvik, Thibault Jaccard" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For the applied project 2, we worked on enhancing the sound components of a VR language learning application in Unity" />
+<meta property="og:description" content="For the applied project 2, we worked on enhancing the sound components of a VR language learning application in Unity" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2020/12/10/sound-design-for-imtel.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2020/12/10/sound-design-for-imtel.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_03_31_thibault_virtual_reality.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-10T10:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_03_31_thibault_virtual_reality.jpeg" />
+<meta property="twitter:title" content="Sound Design for IMTEL" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Simon Rønsholm Sandvik, Thibault Jaccard"},"dateModified":"2020-12-10T10:00:00+00:00","datePublished":"2020-12-10T10:00:00+00:00","description":"For the applied project 2, we worked on enhancing the sound components of a VR language learning application in Unity","headline":"Sound Design for IMTEL","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_03_31_thibault_virtual_reality.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2020/12/10/sound-design-for-imtel.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Simon Rønsholm Sandvik, Thibault Jaccard"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2020/12/10/sound-design-for-imtel.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Sound Design for IMTEL
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-12-10T10:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 10, 2020 •
+      </time>
+          Simon Rønsholm Sandvik,      
+      <a href="/authors/thibaultjaccard.html">Thibault Jaccard</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="project-overview">Project Overview</h2>
+
+<p>For the Applied Projects 2 course, the team consisted of Thibault and Simon.
+We were given IMTEL as our external partner, a research group focusing on developing VR and AR applications for learning purposes.</p>
+
+<p>The project was a language learning application. In it, several people can connect together with a teacher in a multiplayer setting. They can talk together and the players can interact with objects in the game and by doing so the words are read out loud and players are asked to repeat them back through speech recognition.</p>
+
+<p>The application consists of two scenes, a Kafé scene and a Forest one. Each scene contains different objects (e.g. table and cake in the Kafé, tent and campfire in the forest).</p>
+
+<h2 id="our-solution">Our solution</h2>
+
+<p>Our solution for the project was to introduce audio middleware for the game, FMOD, and provide basic documentation of workflow to utilize this.
+We improved the sound design for the game and added spatialization for an improved immersive experience.</p>
+
+<figure>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0p6tdIcdqaI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+    </iframe>
+    <figcaption>Snippet from the Kafé scenes</figcaption>
+</figure>
+
+<h2 id="fmod">FMOD</h2>
+
+<p>FMOD is a middleware and engine to handle game audio. Most who have previous experience with working with audio will immediately find familiarities with the UI being similar to that of a DAW and having many of the same functionalities.
+Using audio middleware has certain advantages. FMOD allows
+you to create a timeline for each event that can be triggered.
+Here you can lay out multiple or individual tracks much like in a DAW and
+process these in a similar way. This allows
+looping and skipping back and forth to different timestamps. It also provides
+access to VST’s which can all be automated through game parameters. You can let
+audio tracks trigger with different parameters e.g., pitch each time they are
+triggered to make the event sound unique each time they are triggered, reducing
+the need for multiple audio files within the game project itself, which can be one
+of the bigger contributors to game size and loading times.</p>
+
+<figure>
+    <img src="/assets/image/2021_03_31_thibault_fmod.jpeg" width="650" />
+    <figcaption>A project in FMOD</figcaption>
+</figure>
+
+<h2 id="steamaudio">SteamAudio</h2>
+
+<p>SteamAudio is a spatializer that can virtualize the audio through the ambisonics format and decode it binaurally, and add geometrically and materially correct reverberation greatly improving immersion, which is important for VR-enabled games. By using the steam audio source, material, and geometry components within Unity we can achieve a realistic and immersive soundscape.</p>
+
+<p>[INSERT IMAGE]</p>
+<figure>
+    <img src="/assets/image/2021_03_31_thibault_steamaudio.png" width="650" />
+    <figcaption>SteamAudio plugin for FMOD</figcaption>
+</figure>
+
+<h2 id="process">Process</h2>
+
+<p>The first step was to dig into the existing project, and try to understand the existing implementation. The general architecture was done using the Unity GUI, but a lot of the logic was hiding in C# scripts. We therefore spent hours reading and meeting with programmers to make sense out of it.</p>
+
+<p>Then, what turned out to be the most time consuming process has been setting up FMOD and SteamAudio. Indeed, we had to try various versions of each, and follow step-by-step tutorials many times to make those pieces of software work.</p>
+
+<p>Then came the most interesting part, the actual sound design and implementation. We switched off the Unity audio engine, therefore disabling the existing sounds, and implemented all our sounds using the FMOD sound engine. All the words were created using the Google text-to-speech services, exported and integrated as wav files. We also did some sound design, especially for the environmental sounds, such as the Kafé background music and crows croaks in the Forest.</p>
+
+<h2 id="issues-we-faced">Issues we faced</h2>
+
+<p>Originally we were 4 team members, but losing Rayam and Jarle along the way left us having to reduce the workload and our ambitions.</p>
+
+<p>The game was originally a VR application but during the course, a desktop version was made available for us to work on. This solved a lot of issues for us as we did not have access to the necessary VR hardware.</p>
+
+<p>The project was a challenge for the team, as we did not have any previous substantial experience working with Unity and C#. It became a learning experience and we relied on documentation which there was plenty of.</p>
+
+<p>Creating the necessary scripts for triggering the sounds were for the same reason one of the harder tasks for us to achieve. While the FMOD API is easy to understand, referring to the correct object within unity can be a challenge.</p>
+
+<h2 id="last-remarks">Last remarks</h2>
+
+<p>We did not reach all the goals we wanted, such as enhancing VoIP capabilities or implementing different languages. But given the Covid situation and half of the team leaving the project, we managed to still have a working prototype, and most of all we learned a lot about gaming sound design!</p>
+
+<p>Our main contribution was establishing a new workflow, and documenting it extensively. We will see in the future if IMTEL is going to use it in other projects!</p>
+</div>
+
+  
+
+  <a class="u-url" href="/applied-project/2020/12/10/sound-design-for-imtel.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

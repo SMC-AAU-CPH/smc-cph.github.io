@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Voice/Bend | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Voice/Bend" />
+<meta name="author" content="Nino Jakeli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Microphone Gestural controller" />
+<meta property="og:description" content="Microphone Gestural controller" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/04/ninojak-voicebend.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/04/ninojak-voicebend.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_12_08_ninojak_cover.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-04T09:09:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_12_08_ninojak_cover.png" />
+<meta property="twitter:title" content="Voice/Bend" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nino Jakeli"},"dateModified":"2023-12-04T09:09:00+00:00","datePublished":"2023-12-04T09:09:00+00:00","description":"Microphone Gestural controller","headline":"Voice/Bend","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_12_08_ninojak_cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/04/ninojak-voicebend.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Nino Jakeli"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/04/ninojak-voicebend.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Voice/Bend
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-12-04T09:09:00+00:00"
+        itemprop="datePublished"
+      >Dec 4, 2023 •
+      </time>
+          Nino Jakeli   </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
+
+<div align="center" style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+    <!-- Flex Sensor Image and Caption -->
+    <div style="text-align: center; margin-right: 5px;"> <!-- Adjusted margin-right for slight space -->
+        <img src="/assets/image/2023_12_08_ninojak_300_flex.jpg" alt="Flex Sensor" style="width: auto; height: auto; max-width: 100%; max-height: 300px;" />
+        <em>Flex Sensors</em>
+    </div>
+
+    <!-- IR Sensor Image and Caption -->
+    <div style="text-align: center;">
+        <img src="/assets/image/2023_12_08_ninojak_IR.jpg" alt="IR Sensor" style="width: auto; height: auto; max-width: 100%; max-height: 300px;" />
+        <em>IR Sensor</em>
+    </div>
+</div>
+
+<p>Voice/Bend is an interactive gestural controller for improvised vocal performance. The idea is to interact with the sound like a physical object.</p>
+
+<p>It is wearable glove a singer wears on their right hand. It’s fitted with bend sensors that detect the flexing of the fingers and an Infrared Distance (IR) sensor on the palm to measure how far the hand is from other objects. The left-hand holds a microphone, capturing the performer’s voice.</p>
+
+<p>This approach differs from traditional electronic instruments, which typically rely on knobs or sliders for sound control. With Voice/Bend, the concept is more about physically interacting with sound, as if you could shape and touch it with your hands.
+This concept emerged from understanding how singers often use hand movements as part of their expression. The development of interactive systems in music performances has been increasing. These systems, particularly sensor-based ones, have made it simpler for musicians and vocalists to interact with their music.</p>
+
+<p>Gestures play an important role in performances. They can add a different dimension beyond just their visual aspect. This was a key consideration in creating Voice/Bend. The glove’s sensors and the dynamic microphone allow for a different way to control sound based on the singer’s movements.</p>
+
+<h1 id="technical-implementation">Technical Implementation</h1>
+
+<div align="center" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 20px;">
+    <!-- Image 1 -->
+    <img src="/assets/image/2023_12_08_ninojak_diagram1.png" alt="Diagram of Voice/Bend" style="width: auto; height: auto; max-width: 100%; max-height: 300px;" />
+    <!-- Italicized caption for the image -->
+    <i>Voice/Bend Diagram</i>
+</div>
+
+<p>The glove has flex sensors attached to the index and ring fingers, which detect the amount of  fingers deflection. These sensors change their electrical resistance based on the bending, which is captured to understand the finger’s position. I used double-sided tape to mount these sensors onto the glove, ensuring they stay in place during performances.</p>
+
+<p>Additionally, there’s an Infrared Distance (IR) sensor on the palm of the glove. This sensor is crucial for detecting how far the hand is from various objects. It generates an electrical potential that changes with distance, making it a reliable proximity sensor.</p>
+
+<p>Regarding sound, voice manipulation can be tricky, especially to avoid feedback issues in live settings. I chose the Shure SM58 microphone, known for its resilience against feedback and excellent sound rejection capabilities.</p>
+
+<p>I utilized Pure Data (Pd), an open-source graphical programming language, and Bela, a unique hardware-software environment. This combination allowed me to prototype the sound and sensor mappings rapidly.</p>
+
+<p>The mapping process in Voice/Bend is multi-layered, translating physical gestures into sound through various stages. This process is integral in converting the data from the glove’s sensors into meaningful musical parameters.</p>
+
+<p>The microphone captures the voice and tracks the pitch, generating two distinct sound waves. These waves are then modified based on the glove’s sensor data, offering an intuitive way for vocalists to add new dimensions to their performance.</p>
+
+<h1 id="user-study">User-Study</h1>
+
+<p>In an evaluation of the Voice/Bend a performer with a background in singing participated. This user-centric evaluation aimed to assess the controller’s usability, musicality, expressiveness, and overall performance utility, integrating subjective and objective elements.</p>
+
+<p>The performer found the Voice/Bend controller relatively straightforward in usability. While certain aspects were intuitive and easy to use, others presented a moderate learning curve. The controller excelled in its expressiveness, significantly enhancing the dynamic and emotional range of the performance. However, the intuitiveness of control received mixed responses, with some functions integrating smoothly into the performer’s style while others required more adaptation.</p>
+
+<p>The user reported high levels of enjoyment and engagement, appreciating the controller’s ability to add new dimensions of sound and expression. Objective measurements indicated a reasonable learning time, with precise and accurate control over sound modulation tasks. The performer proficiently managed various musical aspects, including polyphony and feature modulation, essential elements of the controller’s design.
+Feedback also included suggestions for ergonomic improvements and increased sensor sensitivity, indicating areas for refinement. The flex sensors for controlling FM synthesis parameters were rated positively, with the index finger sensor rated as ‘Good’ and the ring finger sensor as ‘Very Good’. The IR sensor, used for controlling other sound parameters, was rated as ‘Fair’, suggesting a need for enhancement in its design for better precision and responsiveness.</p>
+
+<p>Overall, the Voice/Bend showed the potential to enhance interactive music performances. The performer’s feedback highlighted the importance of continuous refinement to realize the controller’s capabilities in live settings fully.</p>
+
+<h1 id="future-considerations">Future Considerations</h1>
+
+<p>To make the system more expressive, a key upgrade will be the addition of three extra flex sensors on each glove. These sensors will allow for a more comprehensive tracking of finger movements, enabling precise modulation of sound parameters like pitch, timbre, and volume. By accurately capturing the bending of each finger, musicians can express more complex gestures, thus enriching their performance with greater depth and nuance.</p>
+
+<p>Another significant enhancement will be integrating an Inertial Measurement Unit (IMU) into each glove. Positioned centrally on the back of the gloves, the IMU, with its 9 degrees of freedom, will track the orientation and movement of the hands. This technology is particularly effective in influencing the sound’s spatial characteristics, such as panning and spatial effects. With this addition, performers can manipulate the spatial positioning of the sound in real time, creating a more dynamic and immersive auditory experience.</p>
+
+<p>To ensure the optimal functioning of these sensors, I will design custom 3D-printed mounts. These mounts will secure the sensors on the gloves while allowing full finger mobility. Additionally, I plan to use soft, stretchable fabric for the gloves, similar to materials used for osteoarthritis patients. This choice will ensure comfort and adaptability to various hand sizes, crucial for prolonged use without compromising the sensors’ sensitivity or responsiveness. These future enhancements aim to make Voice/Bend a more powerful and versatile tool for interactive music performance.</p>
+
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2023/12/04/ninojak-voicebend.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Deep Steps: A Generative AI Step Sequencer | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Deep Steps: A Generative AI Step Sequencer" />
+<meta name="author" content="Alexander Wastnidge" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A stand alone MIDI step sequencer application with a user-trainable generative neural network" />
+<meta property="og:description" content="A stand alone MIDI step sequencer application with a user-trainable generative neural network" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/alexanjw-DeepSteps.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/alexanjw-DeepSteps.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_14_alexanjw_DS_UI.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-14T10:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_14_alexanjw_DS_UI.png" />
+<meta property="twitter:title" content="Deep Steps: A Generative AI Step Sequencer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexander Wastnidge"},"dateModified":"2024-05-14T10:00:00+00:00","datePublished":"2024-05-14T10:00:00+00:00","description":"A stand alone MIDI step sequencer application with a user-trainable generative neural network","headline":"Deep Steps: A Generative AI Step Sequencer","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_14_alexanjw_DS_UI.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/alexanjw-DeepSteps.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alexander Wastnidge"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/alexanjw-DeepSteps.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Deep Steps: A Generative AI Step Sequencer
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2024-05-14T10:00:00+00:00"
+        itemprop="datePublished"
+      >May 14, 2024 •
+      </time>
+         
+      <a href="/authors/alexanderwastnidge.html">Alexander Wastnidge</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>Last year during the Music and Machine Learning course, I began explore incorporating the autoencoder into a musical step sequencer.  I wrote about this initial work <a href="https://SMC-master.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html">here</a> and <a href="https://SMC-master.github.io/machine-learning/2023/04/25/alexanjw-stacked-autoencoder.html">here</a>.  My jumping off point was the similarity between a step sequencer and using  many-hot encoding for representing music.  The work there used Pure Data for the sequencer and GUI interactions communicating with a Python script running the ML models.  My other intention was to provide a format, interface and dataset pipeline which could potentially be accessible for music producers.  As such, I chose audio loops as the format for training data due to their ubiquity in electronic music production workflows.</p>
+
+<h2 id="deep-steps">Deep Steps</h2>
+
+<p>For my SMC Masters thesis I chose to develop this work into a more unified implementation.  This meant bringing all the aspects together into a single interface that would be potentially usable for electronic music producers.  In doing so, the intention was to have model training and model generation being part of a real-time musical interaction.  Rather than provide a fixed pre-trained model, users would instead use their own training data to customise the model for their own intentions and styles.  I decided to call this combination of a deep learning model and a step sequencer, Deep Steps.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_14_alexanjw_DS_UI.png" width="50%" height="50%" />
+</figure>
+
+<h2 id="new-interactions">New Interactions</h2>
+
+<p>The traditional machine learning pipeline is to train and optimise a model and then deploy it for use.  This is appropriate for many situations where use of such a model is appropriate but it is debatable for applications involving creativity.  A comparison can be made to the evolution of drum machines from having fixed sounds and rhythms in their early days to now having full user control over programming and timbre.</p>
+
+<p>In developing Deep Steps as a GUI-based interactive system, the intention was to expose some machine learning parameters to user control.  Though numerous systems exist which use machine learning and deep learning models <a href="https://hal.science/hal-04075492">interactively</a>, these often focus on the means of control for triggering and steering a model’s generative output.  In creating an accessible framework for training an ML model on the user’s own data (audio loops), the intention is to explore the potential for this interaction as part of creativity.  In a similar way to how <a href="https://SMC-master.github.io/motion-capture/2023/05/09/alexanjw-generative-motion-control.html">Generative Music</a> is a practice of system building as a form of creativity, could the selection and use of training data and parameters for model training also become part of the creative process?</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_14_alexanjw_ds_grounding.png" width="70%" height="70%" />
+    <figcaption> The design principals for Deep Steps. </figcaption>
+</figure>
+
+<h2 id="implementation">Implementation</h2>
+<p>Deep Steps was developed as a stand alone application using the <a href="https://openframeworks.cc">openFrameworks</a> C++ creative toolkit.  This allowed for the creation of the GUI, embedding of Pure Data and the compiling of the application itself.  The machine learning model was an autoencoder as before.  Rather than use a large library like Tensorflow, I instead adapted code from the <a href="https://github.com/eriklindernoren/ML-From-Scratch">ML-From-Scratch</a> library which features examples of low-level implementations of ML algorithms using Numpy.  For audio analysis of onsets in the training data I used the <a href="{https://aubio.org">aubio</a> library’s C++ framework.</p>
+
+<p>The model generates material by having values fed through its decoder stage either through the GUI generate button or through the A, B, C, D sliders.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_15_alexanjw_ds_generate.png" width="70%" height="70%" />
+    <figcaption> Using Deep Steps to generate rhythms </figcaption>
+</figure>
+
+<p>The source code for Deep Steps is available <a href="https://github.com/ajwast/DeepSteps">here</a></p>
+
+<h2 id="evaluation">Evaluation</h2>
+<p>Deep Steps was evaluated two times.  After a first round of development, it was evaluated in a short workshop-based user study where 11 participants used the application under controlled conditions and then responded to questionnaires.  The intention of this was to test the core principals, functionality and usability of the system.  Thankfully, these were all mostly validated.</p>
+
+<p>Deep Steps was then distributed to three music producers to use as part of their music making for a week.  The participants were then interviewed to capture their user experiences.</p>
+
+<p>Overall, the findings from the evaluations found Deep Steps to be usable and indeed provided an accessible interface for interaction with machine learning parameters.  Training data as an engaging interaction and a part of the creative process was evident in the feedback.  The participants’ feedback also highlighted several areas where the software could be improved to make it more appealing for future adoption and long-term engagement.  A key theme here was the extra required to engage with the ML processes, especially when existing tools such as randomisers can potentially do a comparable job with less effort.  This is a recurring point of friction for these types of implementations which to some extent can be viewed as simply re-inventing an existing algorithmic process.</p>
+
+<p>In creating a GUI to make the ML processes accessible, what I had also done was to hide them away behind the interface.  One recommendation was to offer a visualisation of these processes.  For instance, the processing of the onset data could be visualised through waveform displays.  The feeding forward of the data through the decoder to generate material could also be visualised.  This could be used to illustrate the causal relationship of the sliders, which many users reported as feeling like an unsatisfying and arbitrary feeling interaction.</p>
+
+<p>The findings overall are generally positive with Deep Steps representing a functional proof-of-concept for its intentions and design principals.</p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Finally, here is Deep Steps in action.  Here, I am using Deep Steps for rhythmic triggers in my Eurorack modular synth.  I am not using the pitch controls in the application, instead looping random voltages from elsewhere in the modular system.  I am controlling the models generative output via a MIDI controller with knobs mapped to the four ‘‘latent dimension’’ sliders to pass values into the decoder.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2JSRgUECKNA?si=tSb-U4u2SQglzFrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div>
+
+  
+
+  <a class="u-url" href="/masters-thesis/2024/05/14/alexanjw-DeepSteps.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

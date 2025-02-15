@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Machine Learning | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Machine Learning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC)." />
+<meta property="og:description" content="The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC)." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Machine Learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC).","headline":"Machine Learning","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"}},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="page-heading" align="left">Machine Learning</h1>
+  </header>
+
+  <div class="post-content"><p>The blog posts of this section relate to the course <a href="https://www.uio.no/studier/emner/hf/imv/SMC4052/">SMC4052 Music and Machine Learning</a> (2022 onwards) and to the discontinued course <a href="https://www.uio.no/studier/emner/hf/imv/SMC4047">SMC4047 Music and Machine Learning</a> (2019 to 2021). The aim of these courses is to develop knowledge of and practical experience with machine learning algorithms applied to music analysis, music information retrieval, interactive music systems, and algorithmic music.<!-- <h2 class="post-list-heading">Posts</h2> --></p>
+<ul class="post-list"><li>
+  <a class="post-button" href="/machine-learning/2024/04/30/karenij-ANNPlaylistClassifier.html">
+    <div class="post-left"><img src="/assets/image/2024_04_29_karenij_cover.jpg" alt="Playlist Data and Recommendations Using Artificial Neural Networks" title="Playlist Data and Recommendations Using Artificial Neural Networks" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Playlist Data and Recommendations Using Artificial Neural Networks</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 30, 2024 • Karenina Juarez
+      </div><p class="post-excerpt">a machine-learning algorithm that pairs independent artists, with curated playlists that best fit based on musical attributes</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2024/04/28/thomaseo-AcidLab.html">
+    <div class="post-left"><img src="/assets/image/2024_04_28_thomaseo_cover.jpeg" alt="AcidLab: deep acid bass-line generation" title="AcidLab: deep acid bass-line generation" /></div>
+    <div class="post-right">
+      <h3 class="post-title">AcidLab: deep acid bass-line generation</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 28, 2024 • Tom Oldfield
+      </div><p class="post-excerpt">Using machine learning to generate acid bass-line melodies with user-created datasets.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2024/04/28/olavus-eigenryths.html">
+    <div class="post-left"><img src="/assets/image/2024_04_28_olavus_fig7.png" alt="Connecting Eigenrhythms and Human movement" title="Connecting Eigenrhythms and Human movement" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Connecting Eigenrhythms and Human movement</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 28, 2024 • Olav Utne Skjeldal
+      </div><p class="post-excerpt">Connecting Machine Learning and Human understanding of rhythm.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2024/04/28/sondrerk-chiptransformer.html">
+    <div class="post-left"><img src="/assets/image/2024_04_28_sondrerk_circular_pitch.png" alt="The Chiptransformer" title="The Chiptransformer" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Chiptransformer</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 28, 2024 • Sondre Røvik Kippenes
+      </div><p class="post-excerpt">The Chiptransformer an my attempt at building a machine learning model using the transformer architecture to generate music based on a dataset of Nintendo NES music.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2024/04/28/eastorks-classify.html">
+    <div class="post-left"><img src="/assets/image/2024_04_28_eastorks_confusion.png" alt="Using convolutional neural networks to classify music genres" title="Using convolutional neural networks to classify music genres" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Using convolutional neural networks to classify music genres</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 28, 2024 • Erlend André Lie Størkson
+      </div><p class="post-excerpt">When classifying genres in music, CNNs are a popular choice because of their ability to capture intricate patterns in data.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/kristeic-ML-project-scream-machine.html">
+    <div class="post-left"><img src="/assets/image/2023_04_23_kristeic_thumbnail_ML_post.png" alt="Scream Machine: Voice Conversion with an Artifical Neural Network" title="Scream Machine: Voice Conversion with an Artifical Neural Network" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Scream Machine: Voice Conversion with an Artifical Neural Network</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Kristian Eicke
+      </div><p class="post-excerpt">Using a VAE to transform one voice to another.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/noorfo-generating-music-with-evolutionary-algorithm.html">
+    <div class="post-left"><img src="/assets/image/2023_04_26_noorfo_MusicEvolution.png" alt="Generating music with an evolutionary algorithm" title="Generating music with an evolutionary algorithm" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Generating music with an evolutionary algorithm</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Noor Othmani
+      </div><p class="post-excerpt">Looking at a theoretical and general implementation of an evolutionary algorithm to generate music.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/masoudn-persian-classification.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_26_masoudn_cover.jpg" alt="Persian classical instruments recognition and classification" title="Persian classical instruments recognition and classification" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Persian classical instruments recognition and classification</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Masoud Niknafs
+      </div><p class="post-excerpt">This blog post will go over various feature extraction techniques used to identify Persian classical music instruments.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/masoudn-deep-bach.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_04_26_masoudn_bach.jpg" alt="Isn't Bach deep enough?" title="Isn't Bach deep enough?" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Isn&#39;t Bach deep enough?</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Masoud Niknafs
+      </div><p class="post-excerpt">Deep Bach is an artificial intelligence that composes like Bach.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/jackeh-key-signature-classified.html">
+    <div class="post-left"><img src="/assets/image/2023_04_26_jackeh_key_classification_thumbnail.png" alt="Recognizing Key Signatures with Machine Learning" title="Recognizing Key Signatures with Machine Learning" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Recognizing Key Signatures with Machine Learning</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Jack Hardwick
+      </div><p class="post-excerpt">The first rule of machine learning? Understand your data! A look into how music theory came to my rescue for classifying key signatures.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/fabianst-project-blogpost.html">
+    <div class="post-left"><img src="/assets/image/2023_04_24_fabianst_spectrogram.png" alt="Breakbeat Science" title="Breakbeat Science" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Breakbeat Science</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Fabian Stordalen
+      </div><p class="post-excerpt">AI-Generated amen breakbeats</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html">
+    <div class="post-left"><img src="/assets/image/2023_04_26_fabianst_perceptron.jpg" alt="Spotlight: AutoEncoders and Variational AutoEncoders" title="Spotlight: AutoEncoders and Variational AutoEncoders" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Spotlight: AutoEncoders and Variational AutoEncoders</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Fabian Stordalen, Alexander Wastnidge, Kristian Eicke
+      </div><p class="post-excerpt">A simple generative algorithm</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/noorfo-music-ai-a-brief-history.html">
+    <div class="post-left"><img src="/assets/image/2023_04_26_noorfo_IlliacSuite.png" alt="Music AI, a brief history" title="Music AI, a brief history" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Music AI, a brief history</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Noor Othmani
+      </div><p class="post-excerpt">Chronicling the field of AI-generated music's start, where it went from there, and what you can expect from musical AI right now.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/26/ahmetem-caveman-art.html">
+    <div class="post-left"><img src="/assets/image/2023_04_25_ahmetem_caveman_art_creature.jpg" alt="A caveman's way of making art" title="A caveman's way of making art" /></div>
+    <div class="post-right">
+      <h3 class="post-title">A caveman&#39;s way of making art</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 26, 2023 • Emin Memis
+      </div><p class="post-excerpt">...and art in the age of complexity.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/25/ninojak-clustering-audio.html">
+    <div class="post-left"><img src="/assets/image/2023_04_26_ninojak_pattern.jpg" alt="Clustering audio features" title="Clustering audio features" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Clustering audio features</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 25, 2023 • Nino Jakeli
+      </div><p class="post-excerpt">Music information retrieval(MIR)</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/25/ninojak-SVS.html">
+    <div class="post-left"><img src="/assets/image/2023_04_26_ninojak_cover.jpg" alt="What's wrong with singing voice synthesis" title="What's wrong with singing voice synthesis" /></div>
+    <div class="post-right">
+      <h3 class="post-title">What&#39;s wrong with singing voice synthesis</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 25, 2023 • Nino Jakeli
+      </div><p class="post-excerpt">Dead can sing</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/25/ahmetem-whistling-autoencoders.html">
+    <div class="post-left"><img src="/assets/image/2023_04_25_ahmetem_vae_whistling_bird.jpeg" alt="The whistle of the autoencoder" title="The whistle of the autoencoder" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The whistle of the autoencoder</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 25, 2023 • Emin Memis
+      </div><p class="post-excerpt">How I used autoencoders to create whistling.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/25/jackeh-chord-generation-chroma-representations.html">
+    <div class="post-left"><img src="/assets/image/2023_04_25_jackeh_ABBA_chroma_histogram_thumbnail.jpg" alt="Chroma Representations of MIDI for Chord Generation" title="Chroma Representations of MIDI for Chord Generation" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Chroma Representations of MIDI for Chord Generation</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 25, 2023 • Jack Hardwick
+      </div><p class="post-excerpt">Understanding two ways of representing and generating chords in machine learning.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/25/olivegr-text-to-audio.html">
+    <div class="post-left"><img src="/assets/image/2023_04_25_olivegr_audioldm_tta.jpg" alt="Generating Video Game SFX with AI" title="Generating Video Game SFX with AI" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Generating Video Game SFX with AI</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 25, 2023 • Oliver Getz
+      </div><p class="post-excerpt">A first look at text-to-audio sound effect generation for video games.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/25/olivegr-pytorch-gpu.html">
+    <div class="post-left"><img src="/assets/image/2023_04_25_olivegr_pytorch_gpu.jpg" alt="Pytorch GPU Setup Guide" title="Pytorch GPU Setup Guide" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Pytorch GPU Setup Guide</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 25, 2023 • Oliver Getz
+      </div><p class="post-excerpt">Having trouble getting Pytorch to recognize your GPU? Try this!</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/25/alexanjw-stacked-autoencoder.html">
+    <div class="post-left"><img src="/assets/image/2023_04_25_alexjw_ae_seq.png" alt="A Rhythmic Sequencer Driven by a Stacked Autoencoder" title="A Rhythmic Sequencer Driven by a Stacked Autoencoder" /></div>
+    <div class="post-right">
+      <h3 class="post-title">A Rhythmic Sequencer Driven by a Stacked Autoencoder</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 25, 2023 • Alexander Wastnidge
+      </div><p class="post-excerpt">Sometimes you need to leave room for the musician</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/25/tryb-comparing-representations.html">
+    <div class="post-left"><img src="/assets/image/2023_04_25_tryb_thumbail.png" alt="Comparing MIDI Representations: The Battle Between Efficiency and Complexity" title="Comparing MIDI Representations: The Battle Between Efficiency and Complexity" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Comparing MIDI Representations: The Battle Between Efficiency and Complexity</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 25, 2023 • Trym Bø
+      </div><p class="post-excerpt">A comparing of different MIDI representations for generative machine learning</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/24/akarcaal-programmingwithchatgpt.html">
+    <div class="post-left"><img src="/assets/image/2023_04_24_akarcaal_ai_pair_programmer.jpg" alt="Programming with OpenAI" title="Programming with OpenAI" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Programming with OpenAI</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 24, 2023 • Aysima Karcaaltincaba
+      </div><p class="post-excerpt">How OpenAI solutions help us to program?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/24/akarcaal-midichallenges.html">
+    <div class="post-left"><img src="/assets/image/2023_04_24_akarcaal_midi.png" alt="Challenges with Midi" title="Challenges with Midi" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Challenges with Midi</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 24, 2023 • Aysima Karcaaltincaba
+      </div><p class="post-excerpt">Is it easy to create chord progression from midi files?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2023/04/19/tryb-midi-hassle-copy.html">
+    <div class="post-left"><img src="/assets/image/2023_04_19_thumbnail.jpeg" alt="MIDI music generation, the hassle of representing MIDI" title="MIDI music generation, the hassle of representing MIDI" /></div>
+    <div class="post-right">
+      <h3 class="post-title">MIDI music generation, the hassle of representing MIDI</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Apr 19, 2023 • Trym Bø
+      </div><p class="post-excerpt">A brief guide of the troubles with MIDI representation for generative AI</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2022/05/20/jakobhoydal-Reverb_classification.html">
+    <div class="post-left"><img src="/assets/image/2022_05_20_jakobhoydal_mffcc.png" alt="Reverb Classification of wet audio signals" title="Reverb Classification of wet audio signals" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Reverb Classification of wet audio signals</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        May 20, 2022 • Jakob Høydal
+      </div><p class="post-excerpt">Differenciating reverberation times of wet audio signals using machine learning. </p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2022/05/20/kriswent-generating-piano-accompaniments-using-fourier-transforms.html">
+    <div class="post-left"><img src="/assets/image/2022_05_20_kriswent_piano_robot.jpeg" alt="Piano Accompaniment Generation Using Deep Neural Networks" title="Piano Accompaniment Generation Using Deep Neural Networks" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Piano Accompaniment Generation Using Deep Neural Networks</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        May 20, 2022 • Kristian Wentzel
+      </div><p class="post-excerpt">How I made use of Fourier Transforms in deep learning to generate expressive MIDI piano accompaniments.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2022/05/20/josephcl-recognizing-and-predicting-groove.html">
+    <div class="post-left"><img src="/assets/image/2022_05_19_josephcl_groove_thumbnail.jpeg" alt="Recognizing and Predicting Individual Drumming Groove Styles Using Artificial Neural Networks" title="Recognizing and Predicting Individual Drumming Groove Styles Using Artificial Neural Networks" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Recognizing and Predicting Individual Drumming Groove Styles Using Artificial Neural Networks</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        May 20, 2022 • Joseph Clemente
+      </div><p class="post-excerpt">Can we teach an algorithm to groove exactly like a specific drummer?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2022/05/20/joachipo-estimating-repertoire-size.html">
+    <div class="post-left"><img src="/assets/image/2022_05_11_joachipo_chloris.jpg" alt="Estimating the repertoire size in birds" title="Estimating the repertoire size in birds" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Estimating the repertoire size in birds</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        May 20, 2022 • Joachim Poutaraud
+      </div><p class="post-excerpt">Estimating the repertoire size in birds using unsupervised clustering techniques</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2022/05/19/arvidf-ml-guitareffect-modeling.html">
+    <div class="post-left"><img src="/assets/image/2022_05_19_arvidf_pedals.png" alt="Emulating analog guitar pedals with Recurrent Neural Networks" title="Emulating analog guitar pedals with Recurrent Neural Networks" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Emulating analog guitar pedals with Recurrent Neural Networks</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        May 19, 2022 • Arvid Falch
+      </div><p class="post-excerpt">Using LSTM recurrent neural networks to model two analog guitar pedals.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2022/05/03/hughav-VAE-sampler.html">
+    <div class="post-left"><img src="/assets/image/2022_05_20_hughav_performance_system_VAE.jpg" alt="Generating Samples Through Dancing" title="Generating Samples Through Dancing" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Generating Samples Through Dancing</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        May 3, 2022 • Hugh Alexander von Arnim
+      </div><p class="post-excerpt">Using a VAE to build a generative sampler instrument</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2022/03/23/jakobhoydal_posturiser.html">
+    <div class="post-left"><img src="/assets/image/2022_03_23_jakobhoydal_webcamThumbnail.jpg" alt="Generating Music Based on Webcam Input" title="Generating Music Based on Webcam Input" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Generating Music Based on Webcam Input</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Mar 23, 2022 • Arvid Falch, Hugh Alexander von Arnim, Jakob Høydal, Joachim Poutaraud
+      </div><p class="post-excerpt">Do you miss PS2 EyeToy? Then you have to check this out!</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2022/03/23/josephcl-osc-sonic-pi.html">
+    <div class="post-left"><img src="/assets/image/2022_03_20_josephcl_sonic_pi_thumbnail.png" alt="Using Live OSC Data From Smartphones To Make Music With Sonic Pi" title="Using Live OSC Data From Smartphones To Make Music With Sonic Pi" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Using Live OSC Data From Smartphones To Make Music With Sonic Pi</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Mar 23, 2022 • Joseph Clemente, Kristian Wentzel
+      </div><p class="post-excerpt">Easy as pi!</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2021/09/20/abhishec-audio-effect-classification-ml.html">
+    <div class="post-left"><img src="/assets/image/2021_09_20_abhishec_excerpt_ml.PNG" alt="Can Machine learning classify audio effects, a dry to wet sound ?" title="Can Machine learning classify audio effects, a dry to wet sound ?" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Can Machine learning classify audio effects, a dry to wet sound ?</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 20, 2021 • Abhishek Choubey
+      </div><p class="post-excerpt">Distortion or No Distortion - Machine learning magic</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2021/09/20/alena-genre-classification-ml.html">
+    <div class="post-left"><img src="/assets/image/2021_09_20_alena_musical_genres.jpg" alt="Ensemble algorithms and music classification" title="Ensemble algorithms and music classification" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Ensemble algorithms and music classification</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 20, 2021 • Alena Clim
+      </div><p class="post-excerpt">Playing around with some supervised machine learning - genre classification is hard!</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2021/09/19/wenbo-ml-nl.html">
+    <div class="post-left"><img src="/assets/image/2021_09_19_wenbo_cover.jpg" alt="Classifying Classical Piano Music Based On Composer’s Native Language Using Machine Learning" title="Classifying Classical Piano Music Based On Composer’s Native Language Using Machine Learning" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Classifying Classical Piano Music Based On Composer’s Native Language Using Machine Learning</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 19, 2021 • Wenbo Yi
+      </div><p class="post-excerpt">How does the language we speak help computers to classify classical music?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2021/09/18/pedropl-ml-doa-estimation.html">
+    <div class="post-left"><img src="/assets/image/2021_09_18_pedropl_estimation_vs_real_featured.jpg" alt="Estimation of Direction of Arrival (DOA) for First Order Ambisonic (FOA) Audio Files" title="Estimation of Direction of Arrival (DOA) for First Order Ambisonic (FOA) Audio Files" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Estimation of Direction of Arrival (DOA) for First Order Ambisonic (FOA) Audio Files</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 18, 2021 • Pedro Lucas
+      </div><p class="post-excerpt">Where is that sound coming from? Let's explore how a machine could answer this question.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2021/09/17/stephedg-ml.html">
+    <div class="post-left"><img src="/assets/image/2021_09_17_stephedg_shoegaze.jpeg" alt="Ensemble algorithms and music classification" title="Ensemble algorithms and music classification" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Ensemble algorithms and music classification</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 17, 2021 • Stephen Gardener
+      </div><p class="post-excerpt">'Why is shoegaze so hard to classify?' and other pertinent questions for the technologically inclined indie-kid.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/21/Gaute-sv-Skynet.html">
+    <div class="post-left"><img src="/assets/image/2020_09_21_gtwarden_robotreading.jpg" alt="ML something creative" title="ML something creative" /></div>
+    <div class="post-right">
+      <h3 class="post-title">ML something creative</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 21, 2020 • Gaute Wardenær
+      </div><p class="post-excerpt">Intuition tells me that a larger network should be better. More is more, as Yngwie says, but that is definitely not the case.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/21/MLPclassification.html">
+    <div class="post-left"><img src="/assets/image/2020_09_21_simonrs_mlpheaderimg.png" alt="Multilayer Perceptron Classification" title="Multilayer Perceptron Classification" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Multilayer Perceptron Classification</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 21, 2020 • Simon Rønsholm Sandvik
+      </div><p class="post-excerpt">Multi-layer Perceptron classification. Big words for a big task. During this two-week course in machine learning all my brain cells were allocated in solving this task. Initially I wanted something simple to do for my project since wrapping my head around ML was a daunting enough task. I soon realized there really is no such thing as simple in machine learning.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/21/scale-over-chord-ann.html">
+    <div class="post-left"><img src="/assets/image/2020_09_21_thibault_chord_progression.png" alt="Scale over Chord using ANN" title="Scale over Chord using ANN" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Scale over Chord using ANN</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 21, 2020 • Thibault Jaccard
+      </div><p class="post-excerpt">Try to learn scale over chord choices of great jazz improvisers</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/21/reinforcement-learning-drum-sequences.html">
+    <div class="post-left"><img src="/assets/image/2020_09_21_ulrikah_reinforcement_learning.jpg" alt="Learning to sequence drums" title="Learning to sequence drums" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Learning to sequence drums</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 21, 2020 • Ulrik Halmøy
+      </div><p class="post-excerpt">Can reinforcement learning be a useful tool to teach a neural network to sequence drums?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/21/beneficial-unintelligence.html">
+    <div class="post-left"><img src="/assets/image/2020_09_22_FractionMari_robot_guitarist.jpg" alt="Beneficial Unintelligence" title="Beneficial Unintelligence" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Beneficial Unintelligence</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 21, 2020 • Mari Lesteberg
+      </div><p class="post-excerpt">In the future, when the robots take over the world, we all will be listening to 24/7 live streamed death metal until infinity</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/20/Valley-Of-Despair.html">
+    <div class="post-left"><img src="/assets/image/2020_09_20_paulgk_wish_you_were_here.jpeg" alt="Postcard from The Valley of Despair" title="Postcard from The Valley of Despair" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Postcard from The Valley of Despair</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 20, 2020 • Paul Koenig
+      </div><p class="post-excerpt">Well, that was fun.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/20/Support_Vector_Machine.html">
+    <div class="post-left"><img src="/assets/image/2020_09_21_tomi_is_this.png" alt="Support Vector Machine Attempt" title="Support Vector Machine Attempt" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Support Vector Machine Attempt</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 20, 2020 • Tom Ignatius
+      </div><p class="post-excerpt">Not fun</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/20/classifying-urban-sounds.html">
+    <div class="post-left"><img src="https://miro.medium.com/max/700/1*D_yXVrrJD1Y46Z1T0OTOVA.png" alt="Classifying Urban Sounds in a Multi-label Database" title="Classifying Urban Sounds in a Multi-label Database" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Classifying Urban Sounds in a Multi-label Database</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 20, 2020 • Jackson Goode
+      </div><p class="post-excerpt">How well does a convolution neural network perform at detecting multiple classes within a single sample? This experiment explores augmenting the UrbanSound8K database to test a well performing CNN architecture in a multi-label, multi-class scenario.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/20/Music-Mood-Classifier.html">
+    <div class="post-left"><img src="/assets/image/2020_09_20_rayaml_ML-feelings.jpg" alt="[ Music Mood Classifrustration ]" title="[ Music Mood Classifrustration ]" /></div>
+    <div class="post-right">
+      <h3 class="post-title">[ Music Mood Classifrustration ]</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 20, 2020 • Rayam Luna
+      </div><p class="post-excerpt">This is an attempt to create a Music Mood Classifier with feature extractions from Librosa.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/20/thomas-ML.html">
+    <div class="post-left"><img src="/assets/image/2020_09_20_thomasanda_ml_cluster.png" alt="Classification of guitar playing techniques" title="Classification of guitar playing techniques" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Classification of guitar playing techniques</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 20, 2020 • Thomas Anda
+      </div><p class="post-excerpt">An attempt at making a model which can classify 6 different playing techniques on the guitar</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2020/09/18/aleksati-music-recognition.html">
+    <div class="post-left"><img src="/assets/image/2020_09_18_aleksati_matrix_spotify.jpg" alt="Exploring Music Preference Recognition Using Spotify's Web API" title="Exploring Music Preference Recognition Using Spotify's Web API" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Exploring Music Preference Recognition Using Spotify&#39;s Web API</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 18, 2020 • Aleksander Tidemann
+      </div><p class="post-excerpt">A proposed ML model that predicts the degree to which I will enjoy specific Spotify tracks based on previous preference ratings.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/11/25/b-team-deep.html">
+    <div class="post-left"><img src="/assets/image/2019_11_25_stefanof_ml_final.jpg" alt="The B Team Dives in Deep (Learning!)" title="The B Team Dives in Deep (Learning!)" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The B Team Dives in Deep (Learning!)</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Nov 25, 2019 • Jackson Goode, Jarle Steinhovden, Simon Sandvik
+      </div><p class="post-excerpt">Well, here we are, at the end of a semester where one of the most challenging courses remain - only Rebecca Fiebrink can save us now.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/11/25/Machine-Learning-Group-C.html">
+    <div class="post-left"><img src="/assets/image/2019_11_25_stefanof_cat.png" alt="Group C Learns to Think about how Machines Learn to Think" title="Group C Learns to Think about how Machines Learn to Think" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Group C Learns to Think about how Machines Learn to Think</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Nov 25, 2019 • Paul Koenig, Aleksander Tidemann, Tom Ignatius, Thomas Anda
+      </div><p class="post-excerpt">Wherein we describe the denouement of SMC4000, Module #9: Machine Learning.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/11/25/ML-GroupA.html">
+    <div class="post-left"><img src="/assets/image/2019_11_25_aleksati_wekinator_groupA_cover.png" alt="Music and machine learning - Group A" title="Music and machine learning - Group A" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Music and machine learning - Group A</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Nov 25, 2019 • Rayam Luna, Gaute Wardenær, Thibault Jaccard, Ulrik Halmøy
+      </div><p class="post-excerpt">Using machine learning for performance and for classifying sounds</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/09/19/All-about-the-data.html">
+    <div class="post-left"><img src="/assets/image/2019_09_20_eigila_data-blur.jpg" alt="Machine Learning, it's all about the data" title="Machine Learning, it's all about the data" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Machine Learning, it&#39;s all about the data</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 19, 2019 • Eigil Aandahl
+      </div><p class="post-excerpt">For my machine learning project, I wanted to see if I could teach my laptop to distinguish between different types of music using a large amount of data. Using metadata from a large dataset for music analysis, I tested different machine learning classifiers with supervised learning to distinguish between tracks labeled belonging to 'Rock' and 'Electronic'. The project was developed using Python and libraries for data analysis and machine learning.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/09/17/Clustering-high-dimensional-data.html">
+    <div class="post-left"><img src="/assets/image/2019_09_17_aleksati_high_dimensions_ship.png" alt="Clustering high dimensional data" title="Clustering high dimensional data" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Clustering high dimensional data</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 17, 2019 • Karolina Jawad
+      </div><p class="post-excerpt">In the project for Music and Machine Learning I was using raw audio data to see how well the K-Mean clustering technique would work for structuring and classifying an unlabelled data-set of voice recordings. </p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/09/16/ML-Drum-Beat-Generation.html">
+    <div class="post-left"><img src="/assets/image/2019_09_16_stefanof_Rock_Drum-Beat.png" alt="MIDI drum beat generation" title="MIDI drum beat generation" /></div>
+    <div class="post-right">
+      <h3 class="post-title">MIDI drum beat generation</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 16, 2019 • Elias Andersen
+      </div><p class="post-excerpt">Most music production today depend strongly on technology, from the beginning of a songs creation, till the the last final tunings during mix and master. Still their is usually many human aspect involved, like singing, humans playing instruments, humans using a music making software etc..</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/09/16/ML-Roman.html">
+    <div class="post-left"><img src="/assets/image/2019_09_16_stefanof_1.SamML_Results.png" alt="IR Reverberation Classifier using Machine Learning" title="IR Reverberation Classifier using Machine Learning" /></div>
+    <div class="post-right">
+      <h3 class="post-title">IR Reverberation Classifier using Machine Learning</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 16, 2019 • Sam Roman
+      </div><p class="post-excerpt">Using Machine Learning to classify different reverb spaces (using impulse response files)</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/09/16/ML-Dry-Wet-Sound-Classification.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_09_16_guysi_figures16.png" alt="Multi-Layer Perceptron Classifier of Dry/Wet Saxophone Sound" title="Multi-Layer Perceptron Classifier of Dry/Wet Saxophone Sound" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Multi-Layer Perceptron Classifier of Dry/Wet Saxophone Sound</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 16, 2019 • Guy Sion
+      </div><p class="post-excerpt">The application I have decided to work on is of a machine learning model that can ultimately differentiate between a saxophone sound with effect (wet) and without effect (dry).</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/09/14/ML-SH.html">
+    <div class="post-left"><img src="/assets/image/2019_09_14_aleksati_SML0.jpeg" alt="Triggering effects, based on playing style" title="Triggering effects, based on playing style" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Triggering effects, based on playing style</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 14, 2019 • Sepehr Haghighi
+      </div><p class="post-excerpt">Technology in collaboration with art could create creative solutions and achievements. In here we use machine learning in order to ease the work of player while playing an instrument.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/machine-learning/2019/09/14/ML-Classify-instr.html">
+    <div class="post-left"><img src="/assets/image/2019_09_14_varpe_spectrogram.PNG" alt="Classification of string instruments" title="Classification of string instruments" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Classification of string instruments</h3>
+      <span class="post-meta-category">machine-learning
+      </span><div class="post-meta">
+        Sep 14, 2019 • Jørgen Varpe
+      </div><p class="post-excerpt">During a 2 week intensive workshop in the course Music and Machine Learning I had to develop a machine learning system for the field of music technlogy.</p></div>
+  </a>
+</li>
+</ul>
+</div>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

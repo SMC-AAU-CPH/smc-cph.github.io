@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Reese da Alien! | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Reese da Alien!" />
+<meta name="author" content="Sam Roman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The project I have developed on over the first week of web audio based programing is called Reese da Alien - a web based synth of sorts with mouse functionality. The idea is that the program presents a relatively novel way of producing a reese, by the user moving around the mouse on the the page to find different sweet spots as they affect the pitch and amplitude of two oscillators with the movements. The persona of the application came after early in development I likened the sounds to an alien talking – I felt it a fitting title for the weird, abrasive sounds that the program creates." />
+<meta property="og:description" content="The project I have developed on over the first week of web audio based programing is called Reese da Alien - a web based synth of sorts with mouse functionality. The idea is that the program presents a relatively novel way of producing a reese, by the user moving around the mouse on the the page to find different sweet spots as they affect the pitch and amplitude of two oscillators with the movements. The persona of the application came after early in development I likened the sounds to an alien talking – I felt it a fitting title for the weird, abrasive sounds that the program creates." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Alien-Reese.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Alien-Reese.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_stefanof_alienwareplus.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-11T14:10:42+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_stefanof_alienwareplus.jpg" />
+<meta property="twitter:title" content="Reese da Alien!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sam Roman"},"dateModified":"2019-02-11T14:10:42+00:00","datePublished":"2019-02-11T14:10:42+00:00","description":"The project I have developed on over the first week of web audio based programing is called Reese da Alien - a web based synth of sorts with mouse functionality. The idea is that the program presents a relatively novel way of producing a reese, by the user moving around the mouse on the the page to find different sweet spots as they affect the pitch and amplitude of two oscillators with the movements. The persona of the application came after early in development I likened the sounds to an alien talking – I felt it a fitting title for the weird, abrasive sounds that the program creates.","headline":"Reese da Alien!","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_stefanof_alienwareplus.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Alien-Reese.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Sam Roman"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Alien-Reese.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Reese da Alien!
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-02-11T14:10:42+00:00"
+        itemprop="datePublished"
+      >Feb 11, 2019 •
+      </time>
+         
+      <a href="/authors/samroman.html">Sam Roman</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure align="middle">
+<video height="100%" width="100%" controls="">
+    <source src="https://docs.google.com/uc?export=download&amp;id=1Lo5qrpjHcKJDVOmNJdbKLzbYhkX3WGSi" />
+</video>
+</figure>
+
+<h3 id="technologies-used">Technologies Used</h3>
+
+<ul>
+  <li><em>Visual Studio Code</em></li>
+</ul>
+
+<p>Code editor used to write and compile code. Seems to be ideal for the job, but relatively new. Opinion from from some experienced coders “I use …… - but you shouldn’t, if I started again I would use visual studio code”. It also has a live share function that may prove useful later when collaborating.</p>
+
+<ul>
+  <li><em>HTML</em></li>
+</ul>
+
+<p>for the basic user interface (UI), including the buttons, the main picture and the placement of all the UI elements.</p>
+
+<ul>
+  <li><em>JavaScript (JS)</em></li>
+</ul>
+
+<p>The bulk of the code and all action and sound based commands are run through JavaScript. This includes the creation of oscillators, and routing the audio signal (which is how the delay functionality is created). Also mapping of all controls – buttons, mouse and keyboard.</p>
+
+<ul>
+  <li><em>CSS</em></li>
+</ul>
+
+<p>Used on the last day to add some beatification to the basic HTML. Was used for the “Reese da Alien” title and main background colour. A slider from the nexus library was also added.</p>
+
+<ul>
+  <li><em>Github</em></li>
+</ul>
+
+<p>Used for sharing code, and where the repositories of this blog and the code will be stored and shared.</p>
+
+<h3 id="timeline">Timeline</h3>
+
+<ul>
+  <li><em>Day 1</em></li>
+</ul>
+
+<p>Got accustomed to JavaScript and basic HTML. Created two oscillators in visual studio code. Experimented with the provided code.</p>
+
+<ul>
+  <li><em>Day 2</em></li>
+</ul>
+
+<p>Added functionality to the mouse movement, and set it up to affect one oscillators pitch and another’s volume. Gave the project the name “Reese da Alien” and found the background image. Experimented with audio FX with little result due to inexperience of routing.</p>
+
+<ul>
+  <li><em>Day 3</em></li>
+</ul>
+
+<p>After slow progress during the day, managed to organise the variables and routing on the code. Through routing added a delay effect to the oscillator mix (OSCMix).  Created a player looping an audio sample – routed to the output running parallel to the MainMix. Added a third oscillator as FM. Mapped the keyboard with hotkeys.js</p>
+
+<ul>
+  <li><em>Day 4</em></li>
+</ul>
+
+<p>Added mouse functionality to the FM oscillator, and remapped the keyboard to use all of the lettered keys. Used CSS to improve visuals, and tweaked audio mapping variables and UI elements to get ready for the final presentation.</p>
+
+<h3 id="the-project--code">The Project &amp; Code</h3>
+
+<p>On day 3 when asking for help with my project I was told to possibly start from scratch – and pay attention to the routing and organisation of the signal flow. This helped me immensely. Although I didn’t start from scratch (í was determined to find the problem in the code)
+the one point that I started to feel more comfortable coding was when I took control of the routing. One of the challenges I faced was that in the first couple of days in the workshop I was trying to achieve results by copying and pasting various examples of code – with mixed or no results. This technique of trial and error in the end helped me formulate my idea, and it was satisfying eventually (although stressful before!) once I worked out how to organise the routing of nodes properly. The original routing was simple like this:</p>
+
+<figure align="middle">
+<img src="/assets/image/2019_02_11_aleksati_old_flow.jpg" alt="" width="70%" />
+<figcaption align="middle"><strong>“Routing day 1 &amp; 2”</strong></figcaption>
+</figure>
+
+<p>The aspect that I was confused about was the volume node. With experience in using DAW’s, I didn’t take volume to be a node, rather as a parameter that is attached to in this case, the oscillators. It is a small difference – but not knowing that it was a node in its own right confused me when I tried to expand on the project. The flow diagram of the project currently looks like this:</p>
+
+<figure align="middle">
+<img src="/assets/image/2019_02_11_stefanof_Alien_Reese_Flow.jpg" alt="" width="70%" />
+<figcaption align="middle"><strong>“Routing day 3 &amp; 4”</strong></figcaption>
+</figure>
+
+<h3 id="event---talk-button">Event - Talk Button</h3>
+
+<p>Most of the functionality of this project is located in this event – as can be seen from the flow diagram it includes the first two oscillators, the delay and most of the routing.</p>
+
+<p>The first action I took was to split the routing of the oscillators to various volume nodes (volume, volume 2, volume 3 and volume FM) so they are distinguishable from each other, and can be routed and affected differently if need be. I then combined the oscillator 1 &amp; 2 volume nodes into OSCMix, which was then routed to MainMix into the context.destination  or output. Although there is little reason to do this amount of volume nodes for the project in its current state, I wanted to have options for routing if needed – and it helped me visualise the signal flow.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//oscillator.connect(volume);
+    oscillator2.connect(volume2);
+
+    volume.connect(OscMix);
+    volume2.connect(OscMix);
+
+    OscMix.connect(MainMix);
+    MainMix.connect(context.destination);
+</code></pre></div></div>
+
+<h3 id="delay">Delay</h3>
+
+<p>The delay was used as an example in class, and I have lifted most of the code from there. It is created using just JavaScript and routing. The delay is only affecting one volume node, and is short time at 0.1 sec and at half intensity of 0.5. This combination I found to soften the sound as well as adding some richness – without sacrificing all of the harshness.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// create a delay effect node
+    delay = context.createDelay();
+    delay.delayTime.value = 0.1; // lenght of the delay
+
+     // create a gain effect node
+    delayAmount = context.createGain();
+    delayAmount.gain.value = 0.5; // amount of the effect
+
+
+ // connect the different nodes
+    oscillator.connect(delay);
+    oscillator2.connect(delay);    
+    delay.connect(delayAmount);
+    delayAmount.connect(volume);
+    delayAmount.connect(delay);
+</code></pre></div></div>
+
+<h3 id="event---fm-probe-fm-oscillator">Event - FM Probe (Fm Oscillator)</h3>
+
+<p>One of the aspects of this project I am proudest of is the addition of the FM Probe event that routes the third oscillator to the OSC2 frequency. This is done with the line:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//volumeFM.connect(oscillator2.frequency);
+</code></pre></div></div>
+
+<p>Firstly, the OSC FM is routed to VolumeFM – then that is routed to the frequency of OSC2.
+This was because the first oscillators frequency was already mapped to the mouse movement, so now there would be ability to affect the pitch of both oscillators. This worked in conjunction with the mouse mapping:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    if (playing == 1) {
+      //oscillator.frequency.value = x;
+      oscillator.frequency.value = widthnor*1000;
+      volume2.gain.value = 1 - heightnor;
+      oscilatorFM.frequency.value = heightnor*1000;
+</code></pre></div></div>
+
+<p>This shows the three mappings to the mouse. Osc1 pitch is affected by the x – axis. Osc2 volume (volume 2) is affected by the Y – axis. Lastly the OSC FM frequency is adjusted by the Y axis. The aim was to create an increasingly complex sound as the mouse moves around.</p>
+
+<h3 id="event---space-audio-player">Event - Space (Audio Player)</h3>
+
+<p>This is an audio player that runs alongside the main patch, routed through volume 3 to the output. Although one of the undeveloped parts of the code, it allowed some creativity in adding recorded sound, and can be experimented further at a later date (a beat possibly?) It was adapted from the code given in SMC repository.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    player = context.createBufferSource();
+    player.loop = true;
+
+    volume3 = context.createGain();
+    volume3.gain.value = 1;
+
+    player.connect(volume3);
+    volume3.connect(context.destination);
+
+    loadSound("alien.mp3");
+</code></pre></div></div>
+
+<h3 id="keyboard-mapping">Keyboard Mapping</h3>
+
+<p>I found an online library called hotkeys.js that allowed me to map my keyboard. Found on Github. I declared which keys to use (list after the yellow “hotkeys”), and then below created a large list mapping each character key to frequency of OSC2. I used a webpage (link at bottom) as a reference to frequencies of notes, and mapped just over two octaves (not in a piano roll formation). This allowed for another way to affect the pitch of the patch – adding depth to the playability.  I found when used it overrode the mouse mapping of the volume. Not intentional or wanted, however I found when the mouse was off the screen this was reset – which could be used as a feature when played. I would prefer if there was a more elegant way of harnessing both these controls at the same time, an aspect to improve in the future.</p>
+
+<h3 id="ui-elements---html--css">UI Elements - HTML &amp; CSS</h3>
+
+<p>I wanted one centred, background image. I found this code online to centre the image using HTML, and found the alien picture I wanted and applied it in code, and the jpg same folder:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg {
+      /* The image used */
+      background-image: url("alienwareplus.jpg");
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+</code></pre></div></div>
+
+<h3 id="css--beautification">CSS &amp; Beautification</h3>
+
+<p>CSS was used for the title in the bottom right corner, separated in a CSS file. This code defined the font, border and colour, as well as the positioning permanently in the bottom right.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>position: fixed;
+bottom: 0;
+right: 0;
+width: 300px;
+border: 3px solid #73AD21;
+</code></pre></div></div>
+
+<p>The same technique is applied to the text, and the fader that went unused. The fader came from the nexus.js library, I was able to implement the fader, but not attach it to any command as of yet.</p>
+
+<p>Other tips I have learned throughout the workshop – organisation is key. Having events on the leftmost lane, and having its contents further tabbed on the right helped a lot in understanding the code, and made it easier on the eye at a glance. Writing notes and toggling line comment was picked up on the second day – but vital for any beginner.</p>
+
+<h3 id="future-development">Future Development</h3>
+
+<p>There are many ideas and avenues I feel this project could go down. I would like some more feedback on the project, but for now I have some thoughts on the directions it could go.</p>
+
+<p>One of the issues of the patch is that not all areas of the screen sound “good”. This was alleviated by the inclusion of a delay – but I believe more FX could be added to sweeten the corners especially. These FX ideally would be sensitive to mouse placement, and programed in a way so that they would be applied only with the mouse on a certain part of the page. I installed Tuna.js for more FX, but did not manage to get it implemented in the code and ran out of time to troubleshoot.</p>
+
+<p>During day 3 I spent some time trying to implement canvas.js, after being inspired by another project. I managed to create a box, but quickly realised if I wanted the sound to be the focus it was a little out of my depth or timescale for the project. The idea was to create more interactivity in regards to the synth, more of a hybrid from the X/Y axis that the mouse mapping produced. Although I didn’t manage any meaningful results, I would like to explore this further. I would like the page to work well in a smart phone environment, and a canvas feature would aid in this I feel.</p>
+
+<p>Talking of visual components, having the alien pull various facial expressions during certain moments would be a nice touch, giving more character to the potential app. As I mentioned I would like the program to be smart phone friendly (have no experience in how that is implemented, but the concept) – using a finger rather than a mouse may be preferable for the final product.</p>
+
+<p>If anyone would like to use or view the projects code it will be located at this repository for reference:</p>
+
+<p><a href="https://github.com/cheeserage/ReeseAlien/tree/master/ReeseAlien">https://github.com/cheeserage/ReeseAlien/tree/master/ReeseAlien</a></p>
+
+<p>Sources used below -</p>
+
+<p>Note Frequencies</p>
+
+<p><a href="http://pages.mtu.edu/~suits/notefreqs.html">http://pages.mtu.edu/~suits/notefreqs.html</a></p>
+
+<p>SMC Github</p>
+
+<p><a href="https://github.com/axambo/sound-programming-workshop/">https://github.com/axambo/sound-programming-workshop/</a></p>
+
+<p>Canvas.js</p>
+
+<p><a href="https://canvasjs.com/">https://canvasjs.com/</a></p>
+
+<p>Nexus.js</p>
+
+<p><a href="https://github.com/nexus-js/ui">https://github.com/nexus-js/ui</a></p>
+
+<p>Hotkeys.js</p>
+
+<p><a href="https://github.com/jaywcjlove/hotkeys">https://github.com/jaywcjlove/hotkeys</a></p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2019/02/11/Alien-Reese.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

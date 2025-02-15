@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AudioBend | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="AudioBend" />
+<meta name="author" content="Ashane Silva" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My project idea for the Interactive Music Systems was to build a glove that can manipulate sound. It was actually inspired by seeing the “mi.mu Gloves”. The paper on the “Data Glove” gave me ideas on the design aspect of the glove although the way it works is a bit more different than what I use in my glove. “Data glove” uses multiple flex sensors on the fingers and force sensitive sensors to contact the finger tips and an accelerometer to get data from the wrist control. In my glove I used flex sensor on index finger, 3 – axis accelerometer on my hand and a Distance Ultrasonic sensor on my palm. Attaching those stuff to the glove was a bit tricky but “ducktape” saved my life." />
+<meta property="og:description" content="My project idea for the Interactive Music Systems was to build a glove that can manipulate sound. It was actually inspired by seeing the “mi.mu Gloves”. The paper on the “Data Glove” gave me ideas on the design aspect of the glove although the way it works is a bit more different than what I use in my glove. “Data glove” uses multiple flex sensors on the fingers and force sensitive sensors to contact the finger tips and an accelerometer to get data from the wrist control. In my glove I used flex sensor on index finger, 3 – axis accelerometer on my hand and a Distance Ultrasonic sensor on my palm. Attaching those stuff to the glove was a bit tricky but “ducktape” saved my life." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/10/14/AudioBend.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/10/14/AudioBend.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_10_14_stefanof_AudioBend.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-14T15:16:42+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_10_14_stefanof_AudioBend.jpg" />
+<meta property="twitter:title" content="AudioBend" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ashane Silva"},"dateModified":"2019-10-14T15:16:42+00:00","datePublished":"2019-10-14T15:16:42+00:00","description":"My project idea for the Interactive Music Systems was to build a glove that can manipulate sound. It was actually inspired by seeing the “mi.mu Gloves”. The paper on the “Data Glove” gave me ideas on the design aspect of the glove although the way it works is a bit more different than what I use in my glove. “Data glove” uses multiple flex sensors on the fingers and force sensitive sensors to contact the finger tips and an accelerometer to get data from the wrist control. In my glove I used flex sensor on index finger, 3 – axis accelerometer on my hand and a Distance Ultrasonic sensor on my palm. Attaching those stuff to the glove was a bit tricky but “ducktape” saved my life.","headline":"AudioBend","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_10_14_stefanof_AudioBend.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/10/14/AudioBend.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Ashane Silva"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/10/14/AudioBend.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      AudioBend
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-10-14T15:16:42+00:00"
+        itemprop="datePublished"
+      >Oct 14, 2019 •
+      </time>
+         
+      <a href="/authors/ashanesilva.html">Ashane Silva</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="project-idea">Project Idea</h1>
+
+<p>My project idea for the Interactive Music Systems was to build a glove that can manipulate sound. It was actually inspired by seeing the “mi.mu Gloves”. The paper on the “Data Glove” gave me ideas on the design aspect of the glove although the way it works is a bit more different than what I use in my glove. “Data glove” uses multiple flex sensors on the fingers and force sensitive sensors to contact the finger tips and an accelerometer to get data from the wrist control.
+In my glove I used flex sensor on index finger, 3 – axis accelerometer on my hand and a Distance Ultrasonic sensor on my palm. Attaching those stuff to the glove was a bit tricky but “ducktape” saved my life.</p>
+
+<h1 id="design-and-implementation">Design and implementation.</h1>
+
+<p>The circuit made to sit top of the Bela Cape and sensors were connected to the circuit through long wires. The Bela Cape is connected to the beaglebone black wireless board which has the Operating system. The sound module is a pure data patch made by Riccardo Sraccia. Check out his work. So the work flow in the building process is to use the bela IDE on browser to edit the PD patch and test with sensors. Once everything is finalized the final the project was set to boot on start on Bela. Then it runs on its own without any connection to the PC.</p>
+
+<ol>
+  <li>
+    <p>Flex Sensor</p>
+
+    <figure>
+<img src="/assets/image/2019_10_14_stefanof_flex.jpg" width="50%" align="center" />
+</figure>
+  </li>
+  <li>
+    <p>Acceleroeter</p>
+
+    <figure>
+<img src="/assets/image/2018_10_14_stefanof_ACC.jpg" width="50%" align="center" />
+</figure>
+  </li>
+  <li>
+    <p>Ultrasonic Sensor</p>
+    <figure>
+<img src="/assets/image/2019_10_14_stefanof_ULTRA.jpg" width="50%" align="center" />
+</figure>
+  </li>
+</ol>
+
+<h1 id="pd-sound-module">PD sound Module.</h1>
+
+<p>The Pure data patch is based on granular synthesis. It has following sections. And It needs and audio sample and I used a pad sample.</p>
+
+<figure>
+<img src="/assets/image/2019_10_14_stefanof_SOUNDM.png" width="50%" align="center" />
+</figure>
+
+<h1 id="the-mapping">The Mapping</h1>
+
+<p>The mapping is mostly “one to one “and single instance of “One to many “I tried to control the starting point of the sample and the length with sensors but it tends make the instruments sound crappy and not very expressive.
+Accelerometer.
+X – Acceleration controls the frequency of the granular phasor.
+Y – Acceleration mapped to sine LFO frequency and the cutoff.
+Z –acceleration mapped to Sawtooth LFO
+Flex sensor - speed of the sample.
+Ultrasound sensor is mapped to Resonance Frequency.</p>
+
+<figure>
+<img src="/assets/image/2019_10_14_stefanof_GLOVE2.jpg" width="50%" align="center" />
+</figure>
+
+<figure>
+<img src="/assets/image/2019_10_14_stefanof_GLOVE1.jpg" width="50%" align="center" />
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2019/10/14/AudioBend.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

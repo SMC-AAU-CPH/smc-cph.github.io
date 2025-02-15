@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Latency: To Accept or to Delay Feedback? | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Latency: To Accept or to Delay Feedback?" />
+<meta name="author" content="Arvid Falch, Joseph Clemente, Jakob Høydal, Oliver Getz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We tested two of the solutions—the Delayed Feedback Approach (DFA) and the Latency Accepting Approach (LAA)—so you don’t have to!" />
+<meta property="og:description" content="We tested two of the solutions—the Delayed Feedback Approach (DFA) and the Latency Accepting Approach (LAA)—so you don’t have to!" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/02/21/josephcl-dfa-laa-latency-approaches.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/02/21/josephcl-dfa-laa-latency-approaches.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_02_21_josephcl_latency_thumbnail.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-02-21T10:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_02_21_josephcl_latency_thumbnail.png" />
+<meta property="twitter:title" content="Latency: To Accept or to Delay Feedback?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arvid Falch, Joseph Clemente, Jakob Høydal, Oliver Getz"},"dateModified":"2022-02-21T10:00:00+00:00","datePublished":"2022-02-21T10:00:00+00:00","description":"We tested two of the solutions—the Delayed Feedback Approach (DFA) and the Latency Accepting Approach (LAA)—so you don’t have to!","headline":"Latency: To Accept or to Delay Feedback?","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_02_21_josephcl_latency_thumbnail.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/02/21/josephcl-dfa-laa-latency-approaches.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Arvid Falch, Joseph Clemente, Jakob Høydal, Oliver Getz"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/02/21/josephcl-dfa-laa-latency-approaches.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Latency: To Accept or to Delay Feedback?
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-02-21T10:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 21, 2022 •
+      </time>
+         
+      <a href="/authors/arvidfalch.html">Arvid Falch,</a>
+           
+      <a href="/authors/josephclemente.html">Joseph Clemente,</a>
+           
+      <a href="/authors/jakobhoydal.html">Jakob Høydal,</a>
+           
+      <a href="/authors/olivergetz.html">Oliver Getz</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_02_21_josephcl_latency_header.png" alt="Alternate Text" title="Image Title" width="auto" />
+</figure>
+
+<h3 id="introduction"><strong>Introduction</strong></h3>
+
+<p>If you’ve ever tried jamming or performing music with your band online, you’ve undoubtedly encountered latency issues. So have we, and while looking for ways to deal with these issues we came across an <a href="https://journals.ucp.pt/index.php/jsta/article/view/6956/6689">academic paper</a> with a couple of potential solutions. We tested two of the solutions—the Delayed Feedback Approach (DFA) and the Latency Accepting Approach (LAA)—so you don’t have to!</p>
+
+<h3 id="setup-and-equipment"><strong>Setup and equipment</strong></h3>
+
+<p>In our testing of DFA and LAA, we connected two computers together through <a href="https://lola.conts.it/">LOLA</a>, but you can also use other low latency software like JackTrip. We used the Midas M32 to add latency in <em>location 1</em>. The latency was added to the signal going out and the signal coming in, which simulates latency added by distance.</p>
+
+<h3 id="delayed-feedback-approach-setup"><strong>Delayed Feedback Approach setup</strong></h3>
+
+<p>The schematics for DFA can be found in <em>illustration 1</em>. The concept of this approach is that the <em>master</em> delays its listening to their instrument to compensate for the delay introduced by the system, while the slave plays normally as if there was no latency. The delay added to their own listening (B) should move towards a middle ground between no latency and the actual latency of what the system introduces (A). This approach is typically used for round trip latency times of 25 to 50 ms. For our test, the master was our guitarist and the slave was our drummer.</p>
+
+<figure>
+  <img src="/assets/image/2022_02_21_josephcl_Delayed_Feedback_Approach.png" alt="DFA" width="80%" allign="middle" />
+  <figcaption>illustration 1 </figcaption>
+</figure>
+
+<h3 id="latency-accepting-approach-setup"><strong>Latency Accepting Approach setup</strong></h3>
+
+<p>The schematics for LAA can be found in <em>illustration 2</em>. This is the baseline for telematic communication. It simply means accepting whatever latency the connection causes, and negotiating the latency to achieve some meaningful interplay. For this approach, we tried different amounts of latency ranging from 25 ms to 100 ms to simulate inherent latency. Normally this technique would be used for non-rhythmic musical performances, but for our purposes we attempted to play rhythmically to analyze how this approach holds up under such conditions.</p>
+
+<figure>
+  <img src="/assets/image/2022_02_21_josephcl_Latency_Accepting_Approach.png" alt="LAA" width="80%" allign="middle" />
+  <figcaption> illustration 2 </figcaption>
+</figure>
+
+<h3 id="measurements"><strong>Measurements</strong></h3>
+
+<p>Measurements were done at roundtrip level. A short 1kHz sine wave was transmitted from location 1 to location 2, where a speaker transmitted the signal into a microphone placed into the speaker’s diaphragm. The signal returned was recorded in a separate timeline in the digital audio workstation <a href="https://www.reaper.fm/">Reaper</a>, which is where the time measurements were done. The inherent system latency was measured to be 19ms roundtrip. The measurements can be seen in <em>illustration 3</em>.</p>
+
+<figure>
+  <img src="/assets/image/2022_02_21_josephcl_reaper_measurements.png" alt="reaper" width="80%" allign="middle" />
+  <figcaption> illustration 3 </figcaption>
+</figure>
+
+<h3 id="testing"><strong>Testing</strong></h3>
+
+<p>The song we chose to perform was <a href="https://www.youtube.com/watch?v=0J2QdDbelmY">“Seven Nation Army”</a> by The White Stripes due to its straightforward rhythmic nature, which we hypothesized will accurately tell us if we are playing on beat or not.</p>
+
+<p>The <em>master</em> (guitarist) had to manually add latency to the monitoring of the signal. To do this we used an <a href="https://empresseffects.com/products/superdelay">Empress Superdelay guitar pedal</a> set to full wet signal (preventing the original non-latency signal to go through), and added latency in a range from 5  ms to 55 ms manually with the pedals potmeter. Adding too much latency resulted in an awkward playing experience, but there was a fine area around 25-35 ms of latency (roundtrip of LOLA signal at this point was 50 ms)  which was acceptable to perform with and made it easier to play in sync with the <em>slave</em> (drummer).  The DFA is definitely a compromise for the <em>master</em>, as it does negatively affect the playing experience of the master. However, from the slave’s point of view, he could not feel any of the effects of latency using DFA and was able to play with relative ease. This approach would also not work for an instrument with a loud acoustic output level, as the master needs to only hear their own signal through the delayed monitoring.</p>
+
+<p>The LAA removes the need for delayed monitoring, but showcases the limits of musical interplay when the latencies are too high. Playing in time is impossible and it is more suitable for more ambient music genres with less emphasis on beat, or extremely slow pulses. Instruments suited for the LAA approach would be instruments for example with very slow attack.</p>
+
+<p>For improvements we would suggest a more controlled way of applying monitoring delay in the DFA.</p>
+
+<h3 id="what-do-tldr"><strong>What do? (TLDR;)</strong></h3>
+
+<p>So which solution do you choose for an online performance or jam? In our experience, accepting latency is generally not a good idea if the music is rhythmical and reliant on a constant pulse. If you are experiencing relatively high latency issues, introduce some delay to your master’s monitoring of their own signal instead. While it won’t make the problem go away entirely, it makes a world of difference in terms of how comfortable playing over a network feels.</p>
+
+<p>While we relied on an expensive rig to get the job done, there are more available tools out there which can achieve similar results. If you’re looking into low latency solutions for playing music online, check out <a href="https://jacktrip.org/">JackTrip</a>.</p>
+
+<h3 id="sources--resources"><strong>Sources &amp; Resources</strong></h3>
+
+<ul>
+  <li><a href="https://journals.ucp.pt/index.php/jsta/article/view/6956/6689">https://journals.ucp.pt/index.php/jsta/article/view/6956/6689</a></li>
+  <li><a href="https://ccrma.stanford.edu/software/jacktrip/">https://ccrma.stanford.edu/software/jacktrip/</a></li>
+</ul>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2022/02/21/josephcl-dfa-laa-latency-approaches.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>EarSketch (Or How to Get More Python in Your Life) | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="EarSketch (Or How to Get More Python in Your Life)" />
+<meta name="author" content="Joachim Poutaraud, Hugh Alexander von Arnim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A review of the asynchronous music production software ‘EarSketch’" />
+<meta property="og:description" content="A review of the asynchronous music production software ‘EarSketch’" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/05/joachipo-earsketch.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/05/joachipo-earsketch.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_02_hughav_EarSketch.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-05T09:45:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_02_hughav_EarSketch.png" />
+<meta property="twitter:title" content="EarSketch (Or How to Get More Python in Your Life)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joachim Poutaraud, Hugh Alexander von Arnim"},"dateModified":"2021-11-05T09:45:00+00:00","datePublished":"2021-11-05T09:45:00+00:00","description":"A review of the asynchronous music production software ‘EarSketch’","headline":"EarSketch (Or How to Get More Python in Your Life)","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_02_hughav_EarSketch.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/05/joachipo-earsketch.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joachim Poutaraud, Hugh Alexander von Arnim"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/05/joachipo-earsketch.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      EarSketch (Or How to Get More Python in Your Life)
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-05T09:45:00+00:00"
+        itemprop="datePublished"
+      >Nov 5, 2021 •
+      </time>
+         
+      <a href="/authors/joachimpoutaraud.html">Joachim Poutaraud,</a>
+           
+      <a href="/authors/hughalexandervonarnim.html">Hugh Alexander von Arnim</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h3 id="introduction"><strong>Introduction</strong></h3>
+
+<p><a href="https://earsketch.gatech.edu/landing/#/">Earsketch</a> is a browser based compositional tool developed by the Georgia Institute of Technology (Georgia Tech). The aim of its development was to create an accessible environment in which high school and undergraduate students would be able to gain skill in the area of music technology and computational composition, as there are often high financial and practical barriers when it comes to providing students access to music software within educational institutions.
+<br /></p>
+<figure>
+  <img src="/assets/image/2021_11_02_joachipo_EarSketch.jpg" alt="the misty jungle" width="100%" align="middle" />
+
+<figcaption align="center">Hugh and Joachim <i>EarSketch</i> session</figcaption>
+
+</figure>
+<p><br /></p>
+
+<p><a href="https://earsketch.gatech.edu/landing/#/">Earsketch</a> takes the form of a familiar DAW-style interface with a commercial digital audio workstation program (Cockos’ Reaper) that can be opened in a web-browser. Users can assemble songs from a library of nearly 4000 samples, add effects and transitions, and perform some basic audio analysis. However, there is a catch! Instead of a drag and drop, menu-based system found in most DAWs, Earsketch requires the user to program their track using either the JavaScript or Python programming language. Joachim and Hugh decided to test their Python skills and see what they could come up with.</p>
+
+<h3 id="experiment"><strong>Experiment</strong></h3>
+
+<p>Joachim started the session by initializing the Python script and set a <strong>100 BPM</strong> tempo using the following code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from earsketch import *
+
+init()
+setTempo(100)
+</code></pre></div></div>
+
+<p>He then accessed the sound collection to filter some <code class="language-plaintext highlighter-rouge">FUNK</code> and <code class="language-plaintext highlighter-rouge">NEW_FUNK</code> samples and started arranging the chosen instrumental samples using the <code class="language-plaintext highlighter-rouge">fitMedia()</code> function which has arguments to specify the file name, track number, start location, and end location.</p>
+
+<p><code class="language-plaintext highlighter-rouge">fitMedia(fileName , trackNumber , startLocation , endLocation)</code></p>
+
+<p>He then laid down some vocals by making a quick record using the in-built sound recording feature. <a href="https://earsketch.gatech.edu/landing/#/">Earsketch</a> also allow the users to upload sound and use sounds of the collaborative database of Creative Commons Licensed sounds <a href="https://freesound.org/">Freesound</a>.</p>
+
+<p>Joachim then shared the script with Hugh by sending an <a href="https://earsketch.gatech.edu/earsketch2/?sharing=rvNruw-gqtgbVbVb-qsWnA">url shortcut file</a>.</p>
+
+<p>Hugh then could added some effects such as compression, delay, phasors, and reverb as well as setting some volume automation, using the <code class="language-plaintext highlighter-rouge">setEffect()</code> function.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Effects
+setEffect(2, COMPRESSOR, COMPRESSOR_THRESHOLD, -4.0)
+setEffect(2, VOLUME,GAIN, -20, 1, 6, 5)
+setEffect(7, DELAY, DELAY_TIME, 500.0)
+setEffect(8, VOLUME,GAIN, 12)
+setEffect(8, PHASER, PHASER_FEEDBACK, -1.0)
+setEffect(8, REVERB, REVERB_TIME, 1000.0)
+</code></pre></div></div>
+
+<p>He then sent the script back to Joachim, so that Joachim could programmed some rhythmical fills using the following code:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fillA = "0---0-0-00--0000"
+fillB = "0--0--0--0--0-0-"
+makeBeat(OS_SNARE03, 3, 4, fillA)
+makeBeat(COMMON_LOVE_DRUMBEAT_1, 3, 8, fillB)
+</code></pre></div></div>
+<p>In an innovative way of working, the beats in the fill can be programmed as variables using a string of zeros <code class="language-plaintext highlighter-rouge">0</code> and dashes <code class="language-plaintext highlighter-rouge">-</code>, and the sound can then be specified using the <code class="language-plaintext highlighter-rouge">makeBeat()</code> function which takes these strings as an argument.</p>
+
+<p>At the end of the script, Joachim added the line <code class="language-plaintext highlighter-rouge">finish()</code> which ensures that the music is prepared for playback in the digital audio workstation. Hugh and Joachim then hit the run button to compile the code, and then listened back to their awesome song! After agreeing that it really was awesome, they decided to upload it directly to <a href="https://soundcloud.com/discover">Soundcloud</a> using the inbuilt <a href="https://soundcloud.com/discover">Soundcloud</a> integration, so that the whole world could listen to their awesome baby.</p>
+
+<iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1152619627&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+<div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-230930804-586783059" title="User 230930804" target="_blank" style="color: #cccccc; text-decoration: none;">User 230930804</a> · <a href="https://soundcloud.com/user-230930804-586783059/awesome-tune" title="Awesome Tune" target="_blank" style="color: #cccccc; text-decoration: none;">Awesome Tune</a></div>
+
+<h3 id="results"><strong>Results</strong></h3>
+<p>Hugh and Joachim found that there were some positive and negative aspects to working in <a href="https://earsketch.gatech.edu/landing/#/">Earsketch</a>.</p>
+
+<p><strong>Pros</strong>
+The first positive aspect that they found was that sharing the music back and forth was very simple and fast. Because they were mainly working with the in-built sound collection, they just had to send the Python script to each other and could continue working instantaneously. This was a lot quicker and more efficient than having to send DAW-files and bounced tracks. They also found that the DAW-style display was very well laid out, and appreciated that the documentation was included in the interface. They also appreciated ability to record sounds or integrate user samples.</p>
+
+<p><strong>Cons</strong>
+On the other hand, they found that the included samples were a little limited, with Joachim in particular bemoaning the lack of Jazz samples. They also found that the disconnect between making a change and being able to directly play it back stymied their workflow. The major sticking point here was that after each change the code had to be recompiled, which took a non-negligible amount of time. There was also no teletype style functionality or ability to track changes, which made collaboration a little more difficult, especially if the project were to grow in size and scope.</p>
+
+<p><strong>Bottom Line</strong>
+On a more general level, however, they agreed that the program could offer a good introduction to programming and computational music to students with little or no background in these areas. Finally, they both agreed that, for the time being, more traditional methods of working might be a little more suitable when it comes to the practicality of creating professional work.</p>
+
+<p><br /></p>
+
+<p><strong>References</strong></p>
+
+<font size="2"><p><b>[1] </b> McCoid, S., Freeman, J., Magerko, B., Michaud, C., Jenkins, T., Mcklin, T., &amp; Kan, H. (2013). EarSketch: An integrated approach to teaching introductory computer music. Organised Sound, 18(2), 146-160. <a href="https://doi.org/10.1017/S135577181300006X">https://doi.org/10.1017/S135577181300006X</a></p></font>
+
+<font size="2"><p><b>[2] </b> Siva, S., Im, T., Freeman, J., Magerko , B., &amp; Hendler, G. (n.d.). Introduction to Programming with Python and EarSketch. Retrieved November 2, 2021 , from. <a href="https://ggc-itec2120.github.io/EarSketchBook/#_introduction_to_earsketch">https://ggc-itec2120.github.io/EarSketchBook/#_introduction_to_earsketch</a></p></font>
+
+<hr />
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2021/11/05/joachipo-earsketch.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

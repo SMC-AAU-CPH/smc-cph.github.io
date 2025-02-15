@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Generative Music with IMU data | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Generative Music with IMU data" />
+<meta name="author" content="Alexander Wastnidge" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Eight routes to meta-control" />
+<meta property="og:description" content="Eight routes to meta-control" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2023/05/09/alexanjw-generative-motion-control.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2023/05/09/alexanjw-generative-motion-control.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_05_09_alexanjw_pd_patch.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-09T09:23:12+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_05_09_alexanjw_pd_patch.png" />
+<meta property="twitter:title" content="Generative Music with IMU data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexander Wastnidge"},"dateModified":"2023-05-09T09:23:12+00:00","datePublished":"2023-05-09T09:23:12+00:00","description":"Eight routes to meta-control","headline":"Generative Music with IMU data","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_05_09_alexanjw_pd_patch.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2023/05/09/alexanjw-generative-motion-control.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alexander Wastnidge"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2023/05/09/alexanjw-generative-motion-control.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Generative Music with IMU data
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-05-09T09:23:12+00:00"
+        itemprop="datePublished"
+      >May 9, 2023 •
+      </time>
+         
+      <a href="/authors/alexanderwastnidge.html">Alexander Wastnidge</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>For  this project I wanted to explore the use of IMU motion data for techniques associated with generative music practices, such as those often found in Eurorack and audio programming.  <a href="http://www.inmotionmagazine.com/eno1.html">Brian Eno</a> defines this practice generally as the creation of a system which automatically creates musical parts based on rules and sensibilities set by the musician.  The musician the therefore designer and curator over the system, rather than being directly responsible for creating the musical ideas.</p>
+
+<p>Here, eight processes/techniques were emulated in Pure Data and their parameters opened to IMU motion  data.  These are listed below.   There is also a performance video of myself using all eight processes in a complete system.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_05_09_alexanjw_pd_patch.png" width="60%" />
+   <figcaption>Some of the motion controlled "modules" in the performance system </figcaption>
+</figure>
+
+<p>For control, the IMU sensor used was the one built into my smartphone.  It was then attached to my wrist using an armband normally intended for runners.  I chose to attach the sensor to the  wrist due to high range of potential movement afforded by that placement.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WaLT-xSJqBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p><strong>Step Sequencer</strong>
+Pitch - Mapped to MIDI note number on the selected step
+Roll - Chooses the step to be edited by pitch
+Yaw - Number of notes in the connected Euclidean sequencer, allowing for a unified sequencing environment.</p>
+
+<p><strong>Random Sequencer</strong>
+Pitch - Mapped to “lvl”, control over the highest possible  MIDI value generated
+Roll - Mapped to “loop length”
+Yaw - Mapped to “offset”, control over the lowest possible MIDI value generated</p>
+
+<p><strong>Clock Division Mixer</strong>
+Pitch - Mapped to 1/8 clock division
+Roll - Mapped to 1/4 clock division
+Yaw - Mapped to 1/6 clock division
+X acceleration  - Mapped to 1/2 clock division
+Y acceleration - Mapped to 1/3 clock division
+Z acceleration - Mapped to 1/1 clock division</p>
+
+<p><strong>Euclidean Sequencer</strong>
+Pitch - Mapped to the number of notes/triggers
+Roll - Mapped to “rotation” or timing offset
+Yaw - Mapped to total number of steps in thee sequence</p>
+
+<p><strong>Euclidean Drum Sequencer</strong>
+Pitch - Mapped to number of kick drum triggers and the length of sequence.
+Roll - Mapped to number of closed hi-hat triggers and the rotation of the kick triggers.
+Yaw - Mapped to number off open hi-hat triggers, closed hi-hat rotation and closed hat sequence length.</p>
+
+<p><strong>Arpeggiator</strong>
+Pitch - Mapped to the number of notes in the arpeggio
+Roll - Mapped to the MIDI note number of the arpeggio’s root note.
+Yaw - Mapped to arpeggio “direction”, up, down or up and down.</p>
+
+<p><strong>Motion Generative Wavetable</strong>
+Pitch - Mapped to select which value in the wavetable to change.  This value changed also triggers normalisation of the wavetable.
+Roll, Yaw, X, Y, Z acceleration - All fed in to write to the wavetable array.</p>
+
+</div>
+
+  
+
+  <a class="u-url" href="/motion-capture/2023/05/09/alexanjw-generative-motion-control.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

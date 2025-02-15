@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CordChord - controlling a digital string instrument with distance sensing and machine learning | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="CordChord - controlling a digital string instrument with distance sensing and machine learning" />
+<meta name="author" content="Jack Hardwick" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How can we use sensors to control a digital string instrument? Here’s one idea." />
+<meta property="og:description" content="How can we use sensors to control a digital string instrument? Here’s one idea." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/01/jackeh-cordchord.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/01/jackeh-cordchord.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_12_01_jackeh_cordchord_thumbnail.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-01T16:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_12_01_jackeh_cordchord_thumbnail.jpg" />
+<meta property="twitter:title" content="CordChord - controlling a digital string instrument with distance sensing and machine learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jack Hardwick"},"dateModified":"2023-12-01T16:00:00+00:00","datePublished":"2023-12-01T16:00:00+00:00","description":"How can we use sensors to control a digital string instrument? Here’s one idea.","headline":"CordChord - controlling a digital string instrument with distance sensing and machine learning","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_12_01_jackeh_cordchord_thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/01/jackeh-cordchord.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jack Hardwick"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/01/jackeh-cordchord.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      CordChord - controlling a digital string instrument with distance sensing and machine learning
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-12-01T16:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 1, 2023 •
+      </time>
+         
+      <a href="/authors/jackhardwick.html">Jack Hardwick</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2023_12_01_jackeh_cordchord_collage.jpg" alt="CordChord" title="CordChord" width="auto" />
+   <figcaption>CordChord: a two-voice digital string instrument. L-R: the whole instrument, back of the instrument, the circuitry, optical distance sensor placement</figcaption>
+</figure>
+
+<h1 id="introducing-cordchord">Introducing CordChord</h1>
+
+<p>CordChord (cord as in string, chord as in two or more notes played together) is a two-voice digital string instrument that is part harp and part cello, and is built using the <a href="https://bela.io/">Bela platform</a>. In order to understand the behaviour of two strings that neither vibrate nor have acoustic amplification, I made use of an intriguing methodology for string for tracking the movement of and pressure exerted through violin bows. Read on to learn how CordChord works and some of my reflections on the project.</p>
+
+<h1 id="designing-the-frame">Designing the Frame</h1>
+
+<p>Like many of the finest string instruments from the likes of <a href="https://www.classicfm.com/discover-music/instruments/violin/why-stradivarius-special/">Stradivarius</a>, CordChord is constructed out of maple and spruce wood for old-growth forests (discarded IKEA bed slats I found in a skip last winter) that I assembled with an all-natural glue (nailed together into long rectangle). I then fixed the two ‘strings’ (lengths of polyester rope) between the short ends of the structure using fine pegs of ebony wood (metal hooks from Clas Ohlson).</p>
+
+<h1 id="determining-the-positions-of-the-strings-using-sensors">Determining the Positions of the Strings Using Sensors</h1>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_12_01_jackeh_cordchord_sensor_attachment.jpg" alt="Sensor placement on the IMS" width="auto" />
+   <figcaption>Optical proximity sensors are mounted on the neck facing towards the strings</figcaption>
+</figure>
+
+<p>Most musicians have a fairly accurate mental model of how an acoustic string instrument works. By changing the effective length of the string by stopping it using our fingers, the string vibrates at a different frequency when plucked, hit, or bowed. However, unlike the guitar, cello, or violin, the performer of CordChord does not vibrate the strings at all, and there is no ‘body’ which acts as a resonating chamber to amplify these vibrations.</p>
+
+<p>Instead, I needed to find a way of interpreting the behaviour of the strings using sensors. An approach previously used for tracking the motion of and pressure exerted through violin bows came to my rescue. In 2013, <a href="https://www.nime.org/proceedings/2013/nime2013_247.pdf">Pardue et al.</a> proposed a method for bow tracking using <a href="https://www.sparkfun.com/products/246">optical distance sensors</a>.</p>
+
+<p>These sensors are essentially two components in one housing: an infrared (IR) <a href="https://en.wikipedia.org/wiki/Light-emitting_diode">LED</a> and an IR <a href="https://en.wikipedia.org/wiki/Photoresistor">photoresistor/light-dependent resistor</a>. The basic concept is this: the IR LED emits infrared light, which then hits and is reflected by a reflective object or surface. For an object directly infront of the sensor housing, this light will be reflected directly back towards the IR photoresistor. The closer the reflective surface is to the sensor, the more of the IR light that makes it back to the photoresistor. As a result, we can interpret the reading we get from the photoresistor as correlating to the distance between the reflective object and the sensor itself.</p>
+
+<p>But how does this apply to tracking <a href="https://en.wikipedia.org/wiki/Bow_(music)">violin bows</a>? Pardue et al. place four of these distance sensors under the bow stick facing towards the bow hair. As the bow is pressed down into the string, the bow hair deflects around the contact point by an amount which correlates to the downward force applied through the bow. As the hair deflects, the distance between the stick and the hair changes. By measuring this change at the points where the sensors are mounted, we can determine where the string contacted the bow and how much the hair moved. In fact, every combination of contact point and pressure results in a unique set of readings from the sensors.</p>
+
+<p>I decided to repurpose this approach to determine the position of the strings in CordChord. Attached to the vertical neck plank, which is equivalent to the bow stick in this analogy, are four distance sensors per string, pointed towards the string. As the strings (equivalent to the bow hair) are reflective to IR light, pulling a string towards the neck changes the readings from the sensors pointed towards it.</p>
+
+<p>I then trained a simple <a href="https://en.wikipedia.org/wiki/Polynomial_regression">regression machine learning (ML) model</a> using the <a href="https://github.com/alexdrymonitis/neuralnet">Neuralnet external for Pure Data</a> which, given the values received from the sensors pointed at each string, is able to predict the position along the neck at which the string is pressed (equivalent to the contact point in the bow example), and by how much it is displaced at that position (equivalent to the pressure). This position and displacement are then mapped to pitch and volume respectively; pressing the string low on the neck will result in low pitches and vice versa, while pulling the string only slightly will create a softer sound than pulling it all the way towards the neck.</p>
+
+<h1 id="controlling-timbre-with-capacitive-sensing">Controlling Timbre with Capacitive Sensing</h1>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_12_01_jackeh_cordchord_capactive_sensors.jpg" alt="Sensor placement on the IMS" width="auto" />
+   <figcaption>Capacitive strips on the back of the neck allow the performer to control the timbre with their thumbs</figcaption>
+</figure>
+
+<p>I settled on <a href="https://www.tacterion.com/wiki/capacitive-sensing">capacitive sensing</a> to control the timbre of the sound engine. The performer can place their thumbs on two copper strips on the back of the neck, which increases the capacitance in the circuit. Different thumb positions result in different amounts of contact between the skin and the copper strips, which we can read in software as a number. This number is mapped to grain length of the granular synthesiser and a delay feedback parameter such that not touching the strips at all will result in a ‘grainy’ sound with little of the delay effect, whereas touching lots of skin to the strips will create a much more sustained sound with a noticable delay effect.</p>
+
+<h1 id="sound-engine">Sound Engine</h1>
+
+<p>The sound engine for CordChord is a two-voice (one per string) <a href="https://www.jstor.org/stable/3679937">granular synthesiser</a> which chops up a sample of a cello sustaining a single pitch. This sample is sped up or slowed down to create the pitch, which is determined by position of the performer’s finger that is pressing the string. As mentioned above, the grain length, or the length of each tiny ‘grain’ of sound that is taken from the original sample, is controlled by touching the capacitive copper strips on the back of the neck. Longer grain length results in more overlap between consecutive grains, in turn resulting in a richer timbre and a more sustained tone.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_12_01_jackeh_cordchord_flowchart.png" alt="Data flowchart for CordChord" width="auto" />
+   <figcaption>The entire data flow for CordChord split into the sensor data, machine learning, and sound engine subsections </figcaption>
+</figure>
+
+<h1 id="reflections--future-improvements">Reflections &amp; Future Improvements</h1>
+
+<p>CordChord works well as a prototype. However, as with any prototype, there are a myriad of small issues and areas for improvement.</p>
+
+<p>Two primary issues is the relationship between the dimensions of the frame and the range of the distance sensors. The distance sensors I used have a working sensing range of around 3cm, but this range does not scale linearly. For example, assuming a scaled sensor reading in range 0-1, 0-0.5 is covered by the first ~5mm of distance from the sensor, while the distance around 2-3cm from the sensor only covers around 0.9-1. As a result, the ML model can more accurately register the position of the string when they are pressed close towards the neck. The effect of this is twofold. Firstly, it results in an audible ‘squelching’ sound as the ML model struggles to determine the pitch when first pressing a string. Secondly, it also means that the quieter volumes are less accessible to the performer while also maintaining accurate control of pitch. This could be partially solved by reducing the distance between the neck and the string.</p>
+
+<p>There is also simply the limited precision of my dataset collection method and of the frame itself. Because the sensors are quite sensitive to light, I collected the dataset in a windowless room in near complete darkness. This meant my hands did not block any ambient light reaching the sensors, but it also meant my measurements were never quite exact. This was compounded by some inaccuracies in the fabrication of the frame and the sensor placement; while I tried to be as precise as possible by measuring twice and sawing/gluing once, this being a handmade prototype so nothing is exactly square.</p>
+
+<p>The result is that, while I intended for the pitch to be linearly mapped across the length of the string, it is more sensitive in some areas i.e., the middle, than it is at the ends. This means that pitches are found mostly by ear rather than by feel, as they are often not exactly where the performer expects them to be. In turn, this acts as a barrier to intuitive control of the instrument.</p>
+
+<h1 id="take-a-listen">Take a Listen</h1>
+
+<p>Now you’ve read about it, take a look at the demo and performance video:</p>
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/kdyKK7qH69U?si=mHWxtM9PiKYpeaTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2023/12/01/jackeh-cordchord.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sequencephere-Linesequencer | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Sequencephere-Linesequencer" />
+<meta name="author" content="Abhishek Choubey" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Exploration and design of a drum Sequencer and synth using Bela as an interactive music system with Csound" />
+<meta property="og:description" content="Exploration and design of a drum Sequencer and synth using Bela as an interactive music system with Csound" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2021/11/03/abhishec-cirquencer-ims.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2021/11/03/abhishec-cirquencer-ims.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_02_abhishec_sequencphere_ims.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-03T09:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_02_abhishec_sequencphere_ims.png" />
+<meta property="twitter:title" content="Sequencephere-Linesequencer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Abhishek Choubey"},"dateModified":"2021-11-03T09:00:00+00:00","datePublished":"2021-11-03T09:00:00+00:00","description":"Exploration and design of a drum Sequencer and synth using Bela as an interactive music system with Csound","headline":"Sequencephere-Linesequencer","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_02_abhishec_sequencphere_ims.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2021/11/03/abhishec-cirquencer-ims.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Abhishek Choubey"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2021/11/03/abhishec-cirquencer-ims.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Sequencephere-Linesequencer
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-03T09:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 3, 2021 •
+      </time>
+         
+      <a href="/authors/abhishekchoubey.html">Abhishek Choubey</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="inspiration">Inspiration</h2>
+
+<p>While looking for inspiration for my system, I landed up on this instrument on the Bela blog called <a href="https://blog.bela.io/opal-rhythm-computer-dmx-krew/">Opal rhythm computor</a>, this basically is a drum machine &amp; sampler and then I found this device called <a href="https://artiphon.com/pages/orbacam-by-artiphon">Orba</a> which is a synth, sampler and controller all in one. I always wanted to keep my instrument simple, straightforward and easy to use, so I decided to combine this two design aesthetics and try to build a sequencer. Although in the end I ended up making a sequencephere, but at the end, the classic moment of when you really want to something work and it doesn’t, happened, and my project was evolved into a drum sequencer that could record a pattern and play it in a loop, combined with a softpot synth. So with one hand you could play a melody on the softpot and with the other you could play the drums on top of it.</p>
+
+<h2 id="key-features-and-functionalities">Key Features and Functionalities</h2>
+
+<p>The sequencer has four buttons arranged in a sequence. Each of these button is mapped to an audio file, that is triggered when the button is pressed. These buttons when triggered plays the sample in a loop, and the user can keep updating the pattern, while pressing the button, the samples are quantified automatically to the closest beat. There are LEDs placed along with the buttons for providing a visual cue to understand what samples is being triggered and when is it triggered in the loop. In addition to this, a Softpot is used to create a digital saw wave synthesizer to play a melody on top of the drum sequencer.</p>
+
+<h2 id="design-and-implementation">Design and Implementation</h2>
+
+<p>The way I envisioned it to be and got pretty close to finish it is shown below in the figure.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_02_abhishec_sequencphere_ims.png" width="100%" />
+   <figcaption><i>sequencephere</i></figcaption>
+</figure>
+
+<p>In the ideal version, there are 6 buttons arranged in a circular fashion, that are used to trigger samples. These a softpot is placed at the bottom to play melodies on top of the drum sequencer, a rotatory potentiometer is used to control the speed of the drum sequencer and a flex potentiometer and other sensors are used for audio effects. The user can program the sequence with one hand and play the melody with other hand on the softpot. The user can also control the audio effects and tempo the sequencer using the rotatory potentiometer. There are LEDs placed along with the button for visual feedback. A switch is placed in between to reset the pattern to scratch.</p>
+
+<p>But in the working model shown in the diagram below I have four buttons which are triggering the samples as intended and the corresponding LEDs glow when they are triggered. This buttons are arranged sequentially and are looped. So if a user for example triggers a kick sample using the first button in the first bar, the kick will be played in the loop in every first bar, and user can then keep updating the pattern by pressing the button and adding more samples. There is also a softpot as intended to play a melody on top of the pattern, and a rotatory potentiometer to adjust the tempo of the pattern.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_02_abhishec_lineseq_ims.png" width="100%" />
+   <figcaption><i>Linesequencer</i></figcaption>
+</figure>
+
+<p>The list of Components I have used are as follows:<br />
+       1. BELA board<br />
+       2. 4 LEDs
+       3. 4 Push buttons
+       4. Softpot
+       5. Rotatory Potentiometer
+       6. Resistors</p>
+
+<p>The system design is pretty simple and has one to one mapping as shown below:</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_02_abhishec_systemdesign_ims.png" width="100%" />
+   <figcaption><i>System design</i></figcaption>
+</figure>
+
+<h2 id="performance">Performance</h2>
+
+<p>Below you can watch the demo video.</p>
+
+<figure style="float: none">
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_02_abhishec_ims_sequencephere.mp4" width="1024" height="576" frameborder="0" allowfullscreen=""></iframe>
+   <figcaption>Demonstration</figcaption>
+</figure>
+
+<h2 id="future-aspects-and-reflections">Future aspects and Reflections</h2>
+
+<p>This was one of most exciting course of the SMC and was really fun to design a system from scratch. Although the system that I was able to design was kind of basic but I feel I got to learn a lot in this course and is my main outcome of the course. Due to some circumstances out of my control I wasn’t able to finish the project as I intended to but this again taught me about time management and some very valuable moral lessons about living in Norway. But for the future prospects I would like to make it as a one cohesive system in which there are more sensors being used to control some audio effects, a switch to restart the system, and also increase/decrease the range of synth, change the generating wave of the synth and also have more control over the buttons, in the sense of velocity and other dynamics. Overall making the system more controllable and user friendly but trying to keep it simple and straightforward, so that anybody irrespective of there knowledge about music can play and have fun with it.</p>
+
+<h2 id="references">References</h2>
+
+<p>Mapping strategies for musical performance, by Hunt A. and Kirk R. in Trends in Gestural Control of Music, 2000.</p>
+
+<p>Drummond, J. (2009). Understanding Interactive Systems. <em>Organised Sound,</em> <em>14</em>(2), 124-133. doi:10.1017/S1355771809000235F</p>
+
+<p>Tetsuro Kitahara, “Smart loop sequencer: An audio-based approach for ease of music creation”, The Journal of the Acoustical Society of America 140, 3090-3090 (2016)</p>
+
+<p>Prince, D. P., &amp; Perugini, S. (2018). An application of the Actor model of concurrency in Python: A Euclidean rhythm music sequencer. Journal of computing sciences in colleges, 34(1).</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2021/11/03/abhishec-cirquencer-ims.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

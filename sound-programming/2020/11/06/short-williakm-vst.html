@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Everything’s Out of Tune (And Nothing Is) | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Everything’s Out of Tune (And Nothing Is)" />
+<meta name="author" content="Willie Mandeville" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Who says that Csound and early music can’t mix? Building a VSTi for swappable historical temperaments." />
+<meta property="og:description" content="Who says that Csound and early music can’t mix? Building a VSTi for swappable historical temperaments." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/short-williakm-vst.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/short-williakm-vst.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_williakm_piano.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-06T16:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_williakm_piano.jpg" />
+<meta property="twitter:title" content="Everything’s Out of Tune (And Nothing Is)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Willie Mandeville"},"dateModified":"2020-11-06T16:00:00+00:00","datePublished":"2020-11-06T16:00:00+00:00","description":"Who says that Csound and early music can’t mix? Building a VSTi for swappable historical temperaments.","headline":"Everything’s Out of Tune (And Nothing Is)","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_williakm_piano.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/short-williakm-vst.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Willie Mandeville"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/short-williakm-vst.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Everything&#39;s Out of Tune (And Nothing Is)
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-11-06T16:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 6, 2020 •
+      </time>
+         
+      <a href="/authors/williemandeville.html">Willie Mandeville</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="tuning-up"><em>Tuning Up</em></h1>
+
+<p>When thinking about interactions between music, communication, and technology, I am usually starting from a much different place than most other students in the SMC program. I respect, <strong>fear</strong>, and expect to learn much more about coding and all the technology that makes the world go round, but my ultimate goals lean toward preservation, education, and transmission of older, decidedly lower-tech music.</p>
+
+<p>With this in mind, our recent shallow dive (that’s what I’ll call a deep dive that’s done in just a few packed hours) into the world of Csound presented me with an opportunity to create a nifty little tool for explorers of early western music. I developed a VSTi for use in Reaper that allows the user to toggle his or her midi keyboard between a handful of the different tuning systems commonly used in Europe within the last 500 years.</p>
+
+<h2 id="an-extremely-oversimplified-history-of-tuning">An Extremely Oversimplified History of Tuning</h2>
+
+<p>Equal temperament, the division of the octave into 12 equal parts to produce the chromatic scale is very convenient. People can play things in any key and have them sound ‘correct,’ making transposition and movement of music materials quite simple. However, the dirty little secret of equal temperament is that it is achieved by pushing every single note slightly out of tune. Our oversaturated ears are very used to hearing this tuning system, but, when examined more closely, it really ensures that every interval (except for the octave) has a small amount of rhythmic beating.</p>
+
+<p>Before equal temperament became widespread (some semblance of it has likely always been around in less codified forms) music theorists and performers of different eras utilized a variety of different tuning systems. Renaissance music typically remained in keys with fewer sharps and flats, allowing for tuning systems in which certain chords sounded delightful while others sounded horrendous. The same applied somewhat to Baroque music, however, as harmonies grew more complex, the rougher qualities of far-flung keys likely actually became a compositional and expressive tool that keyboard players could exploit. Today, bowed string players, singers, and other instrumentalists who can adjust intonation while playing may color notes in pursuit of purer intervals, but the constant presence of keyboard and fretted string instruments really drives everything toward equal temperament.</p>
+
+<p>For the purposes of this blog post (since as much as I’d love to go full tuning nerd, the assignment is to write about Csound and not tuning histories) let’s stick with an oversimplified outline of tuning systems. Tuning approaches moved from concepts like Pythagoras’ system (developed in the 6th century BC and based on pure intervals from the harmonic series) toward systems like just intonation and meantone temperament (based on sequences of pure or almost pure intervals) before settling (from roughly the tail end of 18th century onward) into today’s general adherence to equal temperament.</p>
+
+<h2 id="the-vsti">The VSTi</h2>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_11_06_williakm_reapevstrview.jpg" alt="The Score" title="Temperament Toggling" width="auto" /> <figcaption>Temperament Toggling</figcaption>
+</figure>
+
+<p>Since I currently still know far more about tuning systems than I do about Csound, it is fair to say that my VSTi is a fairly rudimentary one. It allows a user equipped with a midi keyboard to select equal temperament, just intonation, meantone temperament, Pythagorean tuning, or a mixture of any or all of these tuning systems for use within Reaper. As would be likely on a historical keyboard, the tuning system begins on C, an important distinction in these non-symmetrical temperaments.</p>
+
+<p>I used Cabbage to assemble a series of <em>if</em> statements pertaining to each note in the two-octave compass of my midi controller keyboard. By simply giving the proper ratios to provide the correct adjustments away from equal temperament for each note in each tuning system and then assigning each system to a toggle button in the interface, it was possible to construct a basic but serviceable VSTi with a clickable interface. Currently, the VSTi has only been tested in Reaper, but I see no reason why it wouldn’t work in other similar DAWs.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_11_06_williakm_codeif.jpg" alt="If statements" title="If statements" width="auto" />
+</figure>
+
+<p>For my purposes, this little VSTi is useful for exploring early keyboard and plucked string music. A desire to hear different temperaments in musical contexts isn’t convincing enough to drive most keyboard players to retune their instruments every five minutes, however being able to toggle between them makes it much easier to consider how tuning decisions could affect a piece or repertoire. Basically, it’s a fun toy for making nerdy activities even nerdier.</p>
+
+<p>Watch the video below for a taste of the different temperaments in action.</p>
+
+<figure style="float: none">
+  <video width="640" height="360" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_11_06_williakm_temperaments.mp4" type="video/mp4" />
+    Alternate Text
+  </video>
+  <figcaption>Playing example chords and excerpts in different temperaments.</figcaption>
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/11/06/short-williakm-vst.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>[ pd Loop Station ] | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="[ pd Loop Station ]" />
+<meta name="author" content="Rayam Luna" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is an attempt to create a Loop Station with features that I wish I had in such a pedal / software." />
+<meta property="og:description" content="This is an attempt to create a Loop Station with features that I wish I had in such a pedal / software." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/13/The-Loop-Station.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/13/The-Loop-Station.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_11_rayaml_blog-cover-small.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-13T18:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_11_rayaml_blog-cover-small.jpg" />
+<meta property="twitter:title" content="[ pd Loop Station ]" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rayam Luna"},"dateModified":"2020-02-13T18:00:00+00:00","datePublished":"2020-02-13T18:00:00+00:00","description":"This is an attempt to create a Loop Station with features that I wish I had in such a pedal / software.","headline":"[ pd Loop Station ]","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_11_rayaml_blog-cover-small.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/13/The-Loop-Station.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Rayam Luna"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/13/The-Loop-Station.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      [ pd Loop Station ]
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-02-13T18:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 13, 2020 •
+      </time>
+         
+      <a href="/authors/rayamluna.html">Rayam Luna</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="-overview-">[ Overview ]</h2>
+
+<p>When you switch from being the user of a product, to become the one who is building the product that you need yourself, things change completely. This is an attempt to create a Loop Station with features that I wish I had in such a pedal / software.</p>
+
+<p>With four independent channels routed to integrated FX busses, such as pitch_shift and reverb, this Loop Station aims to attend several needs of artists that use loopers to jam in live performances or as tool in the creative process of composing.</p>
+
+<figure align="middle">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_rayaml_loopstation.png" width="auto" height="auto" />
+</figure>
+
+<h2 id="-features-">[ Features~ ]</h2>
+
+<p>The Loop Station is designer to be used for live performances, but also, as a tool that can be powerful to help with the creative process composing and arranging songs. So, in addition to the usual features mentioned above, I decided to risk my sleeping time to implement a drum beat trigger based on the sounds generated by the users using any surface, from the mouth like a beatbox or using one’s own body as a percurssive surface.</p>
+
+<ul>
+  <li>Inputs: Line In / Microphone / Midi</li>
+  <li>4 tracks (independent)</li>
+  <li>Unlimited overdub cycles for each track</li>
+  <li>Record / Save each track in unique files</li>
+  <li>Record / Save Master Mix</li>
+  <li>2 Fx BUS: Octave / Reverb (Pre Loop / Post Loop)</li>
+  <li>Built-in Drum Machine with 2 modes (Body Drum / Pad Beat)</li>
+</ul>
+
+<p>When implementing the features mentioned above, I started by the most important first: the loop record and playback functions. To create the overdub, a <strong>bang</strong> feeds a counter which goes through selections and bang triggers that pass the signal in the right order to calculate the time/size of each sample, record, stop recording and play it in a loop. This way is possible to start a recording tapping one key once, and if you tap again it stops interrupts the audio input that is sending to [tabwrite~ ]. Then the [timer ] is activated, so we can extract the exact duration of the sample recorded and send it to the array receiving the loops. A [line~ 10] was used to open/interrupt the signal without pops and clicks on the sound output.</p>
+
+<figure align="middle">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_rayaml_loop-inside.png" width="auto" height="auto" />
+</figure>
+
+<h2 id="-drum-machine-">[ Drum Machine ]</h2>
+
+<p>Play drums using your body or any other surface as the beat generator! When implementing the Drum Machine, my intention was to provide a creative way to generate beats in a Live Loop Performance, creating an expressive and spontaneous experience within the process of composing and improvising layers in a song. To make it happen, Pure Data has to detect an acoustic audio input distinguish it by frequency region and attack, and by these features, bang the assigned beat samples for each type of audio received.</p>
+
+<p>When designing this function, I did several tests using the objects <strong>[bonk~ ]</strong> and <strong>[fiddle~ ]</strong>, to see which one would be more accurate detecting and reading the audio input features and unpacking it into distinct data. This process is very useful to trigger sounds based on specific aspects of the acoustic sound produced. After testing different sound sources and initial arguments for each one of the objects mentioned, <strong>[fiddle~ ]</strong> proved to be more accurate to the task. It detects attacks and the amplitudes very well, and send the domain frequency and its partials unpacked in numbers. Which is very useful to trigger different beat samples based on the frequency range and attack of the specifc sounds produced by hi-hat, snare, and bass drum.</p>
+
+<p>It works cool, but it is still very unstable and needs a silent and controlled environment to avoid random frequency and attack detection. I am still developing this function, refining the arguments, specially the amplitude and attack, to filter the audio information in a way that makes it more controllable. “Audio is wild”, as mentioned during the course. To get around this issue, while I am developing this function, I provided two modes for the Drum Machine function, one is the described above Body Drum, and the other is the Beat Pad, in which I assigned the beat samples to different midi notes, in a more common, but stable approach.</p>
+
+<h2 id="-conclusion-">[ Conclusion (</h2>
+
+<p>The process of designing such functionalities opened my mind to a huge amount of new information regarding audio programming signal flow, digital audio processing and effectively made me understand many of the issues and limitations encountered within my experience using equipment, hardware, and software when performing or producing music. To design a Loop Station with all the desired functionalities, is still a challenge, especially when it comes to playback latency and delay, tempo accuracy, time manipulation, artifacts, and synchronization. All in all, it is a valuable way to learn audio programming.</p>
+
+<p>Tusen takk!</p>
+
+<h2 id="-prototype-working-demonstration-">[ Prototype working: (Demo)nstration ]</h2>
+
+<p align="center">
+<iframe width="832" height="468" src="https://www.youtube.com/embed/95EbyaaJifg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/02/13/The-Loop-Station.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sound Painting | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Sound Painting" />
+<meta name="author" content="Aleksander Tidemann" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An application that tracks, visualizes and sonifies the motion of colors." />
+<meta property="og:description" content="An application that tracks, visualizes and sonifies the motion of colors." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2020/05/14/sound-painting.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2020/05/14/sound-painting.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_05_15_aleksati_sound_painting.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-14T22:00:10+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_05_15_aleksati_sound_painting.jpg" />
+<meta property="twitter:title" content="Sound Painting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aleksander Tidemann"},"dateModified":"2020-05-14T22:00:10+00:00","datePublished":"2020-05-14T22:00:10+00:00","description":"An application that tracks, visualizes and sonifies the motion of colors.","headline":"Sound Painting","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_05_15_aleksati_sound_painting.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2020/05/14/sound-painting.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Aleksander Tidemann"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2020/05/14/sound-painting.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Sound Painting
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-05-14T22:00:10+00:00"
+        itemprop="datePublished"
+      >May 14, 2020 •
+      </time>
+         
+      <a href="/authors/aleksandertidemann.html">Aleksander Tidemann</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>In this project, I have explored how sonification through motion tracking can make daily activities more interesting and multi-modal. I have done this by creating a sound painting application that tracks and visualizes colors in a video and produces sounds based on the motion of those colors. My goal was just to create a visually and sonically precise color tracking system, in MaxMSP, that was intuitive to use and easy to understand.</p>
+
+<figure align="middle">
+<video height="100%" width="100%" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_05_15_aleksati_sound_painting.mp4" type="video/mp4" />
+  Your browser does not support video tag.
+</video>
+<figcaption>Video Demo</figcaption>
+</figure>
+
+<p>When I starting working on this I immediately realized that certain key aspects were essential for the project to succeed. The application would have to:</p>
+
+<ol>
+  <li>Track some motion precisely.</li>
+  <li>Visualize the motion tracking in a meaningful way.</li>
+  <li>Extract tracking coordinates in realtime.</li>
+  <li>Use tracking coordinates as basis for sonification.</li>
+</ol>
+
+<h2 id="tracking">Tracking</h2>
+
+<p>I experimented with three different methods of motion tracking. The first method revolved around creating a bounding box around specific RGB-values before calculating the center coordinates of that box. Practically however, this was not successfull because my webcamera feed was constantly adjusting due to various lighting conditions which in turn generated quite unpredictable RGB-input.</p>
+
+<figure align="middle">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_findbounds.gif" width="auto" height="auto" />
+   <figcaption>Tracking method 1 - Findbounds</figcaption>
+</figure>
+
+<p>The second method featured motion tracking through generating a motion image, the difference between two consecutive frames, and calculating the center of mass (centroid) from this image. Additionally, to enhance the visualization of the tracking, I implemented a feature that paints several colored circles on the display based on the centroid coordinates using the jit.lcd object.</p>
+
+<p>This method yielded better visual results but still lacked a good sense of agency similar to the first method. This was because the centroid was calculated from the sum total of motion on the screen.</p>
+
+<figure align="middle">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_centroid_motion.gif" width="auto" height="auto" />
+   <figcaption>Tracking method 2 - Centroid of Motion</figcaption>
+</figure>
+
+<p>It thus became clear that a combination of color tracking and centroid calculation would be the way to go. This meant that I had to devise a better color tracking module.</p>
+
+<p>I decided to use a set of filtering approaches to isolate specific colors in the video-stream and further processes it so that it satisfied the input requirements of the centroid calculation. Additionally, I added a controllable noise threshold parameter to allow for some calibration of the module to accommodate various contexts. Then, I implemented it together with the visualization module previously constructed and made the system respond to both blue and red colors.</p>
+
+<figure align="middle">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_centroid_color.gif" width="auto" height="auto" />
+   <figcaption>Tracking method 3 - Centroid of Color</figcaption>
+</figure>
+
+<h2 id="sonification">Sonification</h2>
+
+<p>For the sonification I ended up using a model where the motion controls the central frequency and the number of active audio channels in the mix. I chose these parameters because of their independence of one another which I believe could enhance sonic proprioception of an object moving around in a two-dimensional space.</p>
+
+<figure align="middle">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_sound_diagram.jpg" width="auto" height="auto" />
+   <figcaption>Sonification diagram</figcaption>
+</figure>
+
+<p>The frequency of the sound is controlled by movement along the y-axis. When the user moves an object along the x-axis, more audio channels are audible and the frequency of the previous channel is held in place. The number of audio channels can also be adjusted which consequently divides the x-dimension of the screen into greater of fewer equally big sections. The idea is that this would generate a path of sound, like a pencil sketching lines on paper.</p>
+
+<p>To further enhance this effect I used panning to spatialize the sound based on the number of audio channels. The panning values are also automatically rescaled from left to right according to the number of channels selected.</p>
+
+<figure align="middle">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_05_15_aleksati_panning_diagram.jpg" width="auto" height="auto" />
+   <figcaption>Panning diagram</figcaption>
+</figure>
+
+<h2 id="summing-up">Summing up</h2>
+
+<p>After several rounds of testing I was generally surprised by how well the color tracking worked, both by itself and in conjunction with the centroid calculations for the visualization and sonification. However, there was still some jitter when subjecting the system to various lighting conditions and different locations. In these scenarios, the noise threshold parameter comes in handy and was usually able to calibrate the system to a working standard.</p>
+
+<p>Another interesting discovery was the musical use of audio channels. Although I originally expected the sonification to be somewhat uninteresting, the dynamic use of audio channels uniquely colored the sound. However, when painting with multiple colors on a high number of channels, the sounds quickly gets cluttered and noisy.</p>
+
+<h2 id="future-development">Future Development</h2>
+
+<p>A future development if this project would involve extracting more motion parameters to create more complex sonifications and visualizations. For instance, it would be interesting to extract the acceleration of the movement and the intensity of the colors to enhance the sense of agency and user control. Additionally, by having a standardized size for the tracking objects and extracting the size of those objects in realtime, it would be worth exploring whether it was possible to represent a virtual 3D space through binaural panning or other spatial audio techniques.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/motion-capture/2020/05/14/sound-painting.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Testing Two Approaches to Performing with Latency | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Testing Two Approaches to Performing with Latency" />
+<meta name="author" content="Aysima Karcaaltincaba, Emin Memis, Jack Hardwick, Kristian Eicke" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We tested two approaches to dealing with latency in network music. Read all about it!" />
+<meta property="og:description" content="We tested two approaches to dealing with latency in network music. Read all about it!" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/02/16/aysimab-latency-assignment.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/02/16/aysimab-latency-assignment.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_02_16_aysimab_latency_assignment_thumbnail.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-02-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_02_16_aysimab_latency_assignment_thumbnail.jpeg" />
+<meta property="twitter:title" content="Testing Two Approaches to Performing with Latency" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aysima Karcaaltincaba, Emin Memis, Jack Hardwick, Kristian Eicke"},"dateModified":"2023-02-16T00:00:00+00:00","datePublished":"2023-02-16T00:00:00+00:00","description":"We tested two approaches to dealing with latency in network music. Read all about it!","headline":"Testing Two Approaches to Performing with Latency","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_02_16_aysimab_latency_assignment_thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/02/16/aysimab-latency-assignment.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Aysima Karcaaltincaba, Emin Memis, Jack Hardwick, Kristian Eicke"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/02/16/aysimab-latency-assignment.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Testing Two Approaches to Performing with Latency
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-02-16T00:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 16, 2023 •
+      </time>
+         
+      <a href="/authors/aysimakarcaaltincaba.html">Aysima Karcaaltincaba,</a>
+           
+      <a href="/authors/eminmemis.html">Emin Memis,</a>
+           
+      <a href="/authors/jackhardwick.html">Jack Hardwick,</a>
+           
+      <a href="/authors/kristianeicke.html">Kristian Eicke</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_02_17_jackeh_msa_lba_diagrams.jpg" width="75%" />
+   <figcaption>The Master-Slave Approach (left) and Laid Back Approach (right) as illustrated by Carôt and Werner.</figcaption>
+</figure>
+
+<p>This semester in Physical-Virtual Communication and Music 2, we have been both designing networked music performances and reading about the experiments of others - the challenges they have faced and the lessons they have learned. We set out to investigate the various strategies to work with latency in Network Music Performances presented by Alexander Carôt and Christian Werner in <a href="https://revistas.ucp.pt/index.php/jsta/article/view/6956">Fundamentals and Principles of Music Telepresence</a>. In this blog we will pass on some of our insights about using the Master-Slave Approach (MSA) and Laid Back Approach (LBA) for network musical performances in high-latency situations.</p>
+
+<p>In the Master-Slave Approach, one performer/location is the ‘master’ while the second location is the ‘slave’. The master performs without regard for the slave and therefore has control of the tempo. The slave then simply follows the master as they hear it. This results in the illusion of perfect sync for the slave, while the master receives the slave’s audio delayed from their original performance by the RTT latency of the system.</p>
+
+<p>In the Laid-Back Approach, a more collaborative relationship is established between performers/locations. In this approach the performers are to listen to and follow each other, thus maintaining tempo is the equal responsibility of both parties.</p>
+
+<h1 id="setting-up">Setting Up</h1>
+
+<h2 id="the-challenge-of-stable-latency">The Challenge of Stable Latency</h2>
+
+<p>Our main problem was maintaining stable latency. We initially planned to use SonoBus for our performance, but preliminary latency testing using the software gave wildly varying results for the latency in the system. In our initial measurements, the round trip latency was 41 ms. However, from there we saw a approximately linear increase over the course of 30 minutes. When we manually added delay using the Portal’s Midas M32 mixer, the latency measurements did not increase as we expected. When we then removed this extra delay, the inherent latency of our system had increased by several milliseconds from our previous measurement - far beyond the expected amount of network jitter.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>No Delay</th>
+      <th>10ms Delay on Send</th>
+      <th>10ms Delay on Receive</th>
+      <th>10ms Delay on Both</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>44ms</td>
+      <td>44ms</td>
+      <td>57ms</td>
+      <td>57ms</td>
+    </tr>
+    <tr>
+      <td>50ms</td>
+      <td>50ms</td>
+      <td>63ms</td>
+      <td>63ms</td>
+    </tr>
+    <tr>
+      <td>53ms</td>
+      <td>56ms</td>
+      <td>68ms</td>
+      <td>68ms</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Table 1: Our calculated latency amounts in milliseconds while adding and removing artifical delay. Note the ‘No Delay’ numbers increasing over time, which was the main source of our initial confusion.</em></p>
+
+<p>After these confusing results, we decided to conduct our performance with the LOLA software on the Portal and Videoroom LOLA computers instead.* Then we were able to obtain a stable latency of 21 ms - a good baseline from which to manually add latency in order to test the MSA and LBA approaches.</p>
+
+<p><sub>* We experienced these issues when using SonoBus to record latency measurements despite entirely manual settings, therefore we cannot recommend it for that specific purpose. However, both ourselves and other SMC students have found SonoBus ideal for quickly setting up high-quality network rehearsals, performances, and recordings, therefore we can easily recommend SonoBus as a user-friendly solution for those purposes.</sub></p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_02_16_aysimab_latency_assignment.jpeg?alt=original" width="75%" />
+   <figcaption>Kristian and Jack performing together with increased latency between the Portal and the Videoroom.</figcaption>
+</figure>
+
+<h2 id="audio-routing-diagram">Audio Routing Diagram</h2>
+
+<p>Once we decided to switch our testing from SonoBus to the LOLA software, things moved along more smoothly. The Portal and Videoroom LOLA PC’s were connected to the LOLA network for audio and video streaming. An external laptop running Ableton Live and an sound card were used to a) record audio of our performances, and b) provide the click track for Kristian to play with for the Master Slave Approach.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_02_17_jackeh_MSA_LBA_routing_diagram.png" width="75%" />
+   <figcaption>Our audio routing in the Portal and the Videoroom.</figcaption>
+</figure>
+
+<h1 id="testing-the-approaches">Testing the Approaches</h1>
+
+<p>We decided to test the suitability of each approach at multiple levels of latency and playing at different speeds. We tested each approach four times as follows:</p>
+<ul>
+  <li>Playing to a half-time beat at 120 BPM with 50 ms round trip latency (RTT), or 25ms one-way</li>
+  <li>Playing at regular beat at 120 BPM with 50 ms RTT/25 one-way</li>
+  <li>Playing at a half-time beat at 120 BPM with 100 ms RTT/50 one-way</li>
+  <li>Playing at regular beat at 120 BPM with 100 ms RTT/50 one-way</li>
+</ul>
+
+<p>For our tests Kristian played the e-drums in the Portal while Jack played violin in the Videoroom. Kristian and Jack could see each other on video through LOLA and the Ximea cameras. Unlike the audio over LOLA, this video was never subject to any artificial latency.</p>
+
+<h2 id="master-slave-approach">Master Slave Approach</h2>
+
+<p>We found the master-slave approach to work well with both 50 and 100ms of RTT latency with the half-time beat. For Kristian on drums, it initially took some adjusting to focus just on the click track and mentally block out the delayed signal from Jack. However after this adjustment it was relatively easy to perform with the latency. This approach was very straightforward for Jack in the Videoroom as he simply had to play in time with the audio he received from Kristian.</p>
+
+<p>Playing with the regular beat at 120BPM with 50ms of RTT latency was also fairly easy using the MSA. Kristian was able to adapt to the latency similarly to the half-time beat, and it felt the same as the half-time beat for Jack as he was not directly dealing with latency. It was slightly more difficult with 100ms of latency, but still playable.</p>
+
+<h2 id="laid-back-approach">Laid Back Approach</h2>
+
+<p>We found it fairly straightforward to keep in time with each other while performing the half-time beat using the LBA with 50ms of RTT latency. However, as we performed this approach without using a click track, it did have a tendency to slow down over time. This is a common pitfall of performing with latency, so it is unsurprising that we also found it to be an issue here. This problem was further amplified when we tried performing the half-time beat with 100ms of latency.</p>
+
+<p>The laid back approach was less effective when performing the regular beat at 120BPM with 50ms of RTT latency. The faster beat increased the cognitive load for both Kristian and Jack significantly. We required several takes before we were able to hold together for more than a few bars, and the tempo also slowed down as it did with the half-time beat. This may have been partly due to the fact that neither are regularly performing currently, so our internal tempi are not what they once were. It is likely that professional session musicians would be able to adapt to this latency much better than we could.</p>
+
+<p>The regular beat with 100ms of latency proved even trickier to manage. Once again, it took several takes for us to adjust and the music slowed down over the course of the performance.</p>
+
+<h1 id="watch-the-video">Watch the Video</h1>
+
+<p>Here is the audio-video recording of each test, along with our comments on our personal experience during the process.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RIJ6EN1oLik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Carôt and Werner present several approaches for dealing with high-latency systems for network musical performance. We set out to test two of these, the Master-Slave Approach and the Laid Back Approach, with different levels of latency and at different speeds. While the MSA required some initial adjustment by the master, we found it to be usable from a performance perspective at varying levels of latency, and to a lesser extent with both slow and fast music.</p>
+
+<p>Meanwhile, although the LBA worked well at with the slower beat and with lower latency, we found it difficult to manage in faster music and with high latency.</p>
+
+<p>While both approaches have their place within NMP settings, we feel that they are more effective for music which doesn’t require precise synchronisation, such as ambient/experimental or relaxed jazz styles, or for slower music.</p>
+
+<h1 id="references">References</h1>
+
+<p>[1] A. Carôt and C. Werner, ‘Fundamentals and principles of musical telepresence’, <em>Journal of Science and Technology of the Arts</em>, pp. 26–37, Jan. 2009, doi: 10.7559/CITARJ.V1I1.6.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2023/02/16/aysimab-latency-assignment.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Classification of string instruments | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Classification of string instruments" />
+<meta name="author" content="Jørgen Varpe" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="During a 2 week intensive workshop in the course Music and Machine Learning I had to develop a machine learning system for the field of music technlogy." />
+<meta property="og:description" content="During a 2 week intensive workshop in the course Music and Machine Learning I had to develop a machine learning system for the field of music technlogy." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/09/14/ML-Classify-instr.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/09/14/ML-Classify-instr.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_09_14_varpe_spectrogram.PNG" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-14T11:25:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_09_14_varpe_spectrogram.PNG" />
+<meta property="twitter:title" content="Classification of string instruments" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jørgen Varpe"},"dateModified":"2019-09-14T11:25:00+00:00","datePublished":"2019-09-14T11:25:00+00:00","description":"During a 2 week intensive workshop in the course Music and Machine Learning I had to develop a machine learning system for the field of music technlogy.","headline":"Classification of string instruments","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_09_14_varpe_spectrogram.PNG","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/09/14/ML-Classify-instr.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jørgen Varpe"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/09/14/ML-Classify-instr.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Classification of string instruments
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-09-14T11:25:00+00:00"
+        itemprop="datePublished"
+      >Sep 14, 2019 •
+      </time>
+         
+      <a href="/authors/j%C3%B8rgenvarpe.html">Jørgen Varpe</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>During a 2-week intensive workshop in the course Music and Machine Learning I had to develop a machine learning system for the field of music technology. With no previous practical experience with machine learning (ML), this turned out to be quite a challenge. During the two weeks we got a broad overview over ML theory and practical ML in Python. Several example systems were shown during the weeks by our professor Stefano Fasciani, which would come in very handy when working on my own project.</p>
+
+<p>A machine learning system uses ML algorithms to build a model based on data that is fed into it, which we call “training data”. This model can then make predictions on new data without being explicitly programmed. When choosing a project, it is important to know that the problem you want to solve cannot easily be explicitly programmed. Machine learning would then be overkill. Let’s say you want to automatically separate between the sound of a bass drum and a hihat. These can very easily be separated with a simple threshold on the frequency spectrum, and using machine learning to figure this out, would clearly be overkill.</p>
+
+<h2 id="my-classification-project">My classification project</h2>
+
+<p>With my project I wanted to see if a machine learning system could separate between three instruments that have a lot of spectral similarities, and which seem quite similar to the human ear. These instruments are guitar, mandolin and banjo. All are string instruments, and for an untrained ear it can sometimes be hard to separate between them. It’s at least not as easy to separate as a bass drum and a hihat.</p>
+
+<p>This process of separating between input data with machine learning is called classification. In classification a machine learning algorithm predicts a class/label based on a given dataset. In the case of classification, the dataset is labelled, which makes it fall under the category of supervised learning.</p>
+
+<p>I can divide my system into three main processes:</p>
+
+<ul>
+  <li>Data preparation (light red)</li>
+  <li>Feature extraction (red)</li>
+  <li>Model training and prediction (dark red)</li>
+</ul>
+
+<figure>
+<img src="/assets/image/2019_09_14_varpe_flow.png" width="100%" align="center" />
+<figcaption><strong>System flow</strong></figcaption>
+</figure>
+
+<h3 id="the-data">The data</h3>
+
+<p>The data preparation part is where you would get rid of noise, silence etc. in the dataset; get rid of random variables that will mess up the classification. In my case I had 39 samples of each instrument. I chose to trim each file (total of 117) to last for 1 second from the first note onset. This was of course done with python code (with the help of a package called Librosa), or else I would have had a really boring time.</p>
+
+<figure>
+<img src="/assets/image/2019_09_14_varpe_trimming.PNG" width="70%" align="center" />
+<figcaption><strong>Audio trimming</strong></figcaption>
+</figure>
+
+<h3 id="feature-extraction-mfcc">Feature extraction (MFCC)</h3>
+
+<p>The machine learning algorithm works with numbers. Which numbers is up to me, and of course it should be numbers that tells some characteristic of the data. I chose to give my ML algorithm something called Mel frequency cepstral coefficients (MFCCs). Pretty self-explainable, right? No, absolutely not…“MFCCs are short time power spectral representation of a signal and represents psychoacoustic property of the human auditory system”. Now, when that is completely clear for everyone, why do I give the ML algorithm this? Well, it turns out to be one of the most, if not THE most popular feature when working with speech recognition, genre classification, music insformation retrival and more. One of the reasons for this is that it tells something about the timbre of the sound. Exactly what I want to separate my instruments by, so great.</p>
+
+<figure>
+<img src="/assets/image/2019_09_14_varpe_spectrogram.PNG" width="80%" align="center" />
+<figcaption><strong>Spectrogram showing 39 guitar samples stacked on a row, and MFCCs on the columns</strong></figcaption>
+</figure>
+
+<h3 id="model-training-and-prediction">Model training and prediction</h3>
+
+<p>So, when I had the “timbre” of each sample of each instrument, I just gave 80% of the data to an ML classifier called support-vector machines (SVM) as training data, and 20% as test data, tweeked some parameters to make it throw my data into a higher dimensional feature space, and then a few ms later it told me that it had classified everything with a 100% accuracy. Could not be any better than that right? Turns out it is not a problem for a machine to classify between three similar string instruments, if you give it some good data that is.</p>
+
+<figure>
+<img src="/assets/image/2019_09_14_varpe_score.PNG" width="80%" align="center" />
+<figcaption><strong>SVM report</strong></figcaption>
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2019/09/14/ML-Classify-instr.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

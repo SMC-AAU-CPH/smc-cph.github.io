@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Audio Codecs and the AI Revolution | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Audio Codecs and the AI Revolution" />
+<meta name="author" content="Jack Hardwick" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I dove headfirst into the world of machine learning-enhanced audio codecs. Here’s what I found out." />
+<meta property="og:description" content="I dove headfirst into the world of machine learning-enhanced audio codecs. Here’s what I found out." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/23/jackeh-audio-codecs-ml.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/23/jackeh-audio-codecs-ml.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_23_jackeh_codecs_thumnail.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-23T19:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_23_jackeh_codecs_thumnail.jpg" />
+<meta property="twitter:title" content="Audio Codecs and the AI Revolution" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jack Hardwick"},"dateModified":"2023-04-23T19:00:00+00:00","datePublished":"2023-04-23T19:00:00+00:00","description":"I dove headfirst into the world of machine learning-enhanced audio codecs. Here’s what I found out.","headline":"Audio Codecs and the AI Revolution","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_23_jackeh_codecs_thumnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/23/jackeh-audio-codecs-ml.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jack Hardwick"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/23/jackeh-audio-codecs-ml.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Audio Codecs and the AI Revolution
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-23T19:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 23, 2023 •
+      </time>
+         
+      <a href="/authors/jackhardwick.html">Jack Hardwick</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2023_04_23_jackeh_EnCodec_results.jpg" width="75%" />
+   <figcaption>A MUSHRA plot for the EnCodec ML-based codec. The X axis is bitrate and the Y axis is the MUSHRA score, a subjective measure of audio quality.</figcaption>
+</figure>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Audio codecs are something we experience nearly every day, even if we don’t know it. From the audio you stream from Spotify (other streaming services are available) to the voices of your classmates or colleagues that you hear on Zoom, it is all compressed using an audio codec. So, what is a codec?</p>
+
+<p>An audio codec is essentially an algorithm for changing the representation of an audio signal. It is often tied up with compression to reduce the amount of storage required. All codecs must include an encoder, which turns a raw audio signal into an encoded format, and a decoder, which does the opposite.</p>
+
+<h1 id="traditional-codecs">Traditional Codecs</h1>
+
+<p>One of the most popular audio codecs of the past two decades is MP3. You will probably recognise MP3 as an audio file type, but it also the name of a codec. The MP3 codec made waves (get it?) because it can compress audio to around 10% of its original size – roughly 1MB per minute of audio. In this case, the MP3 file is the encoded format, which is decoded during playback.</p>
+
+<p>Another popular codec, albeit one with less brand recognition, is <a href="https://opus-codec.org/">Opus</a>. Opus is designed primarily for real-time applications. When you hold a voice call on WhatsApp or Discord, your microphone audio is encoded on your computer using Opus, sent over the internet to your friend, whose computer decodes it. Opus is specifically designed to encode at very low bitrates – that is, to compress audio so that it is represented by only a small number of bits per second, in turn using less of the available bandwidth on your home Wi-Fi or mobile network. It is also designed to be low-latency, meaning it introduces only a minimal amount of delay during the encoding and decoding processes.</p>
+
+<p>Traditional codecs like MP3 or Opus leverage psychoacoustics and fancy maths to compress audio. They start by removing anything the human ear won’t hear – frequencies above the range of human hearing or sounds masked by other sounds, and then use mathematical tricks like Fast Fourier Transform to represent the signal using less information.</p>
+
+<h1 id="audio-codecs--the-ai-revolution">Audio Codecs &amp; The AI Revolution</h1>
+
+<p>Machine learning is quickly making its mark in every arena of technology, and audio codecs are no different. The last three years have seen the release of several new audio codecs which use machine learning, rather than the traditional psychoacoustic and mathematical techniques, to compress audio. Prominent among them are <a href="https://ai.googleblog.com/2021/08/soundstream-end-to-end-neural-audio.html">SoundStream</a>, <a href="https://opensource.googleblog.com/2022/09/lyra-v2-a-better-faster-and-more-versatile-speech-codec.html">Lyra</a>, which is developed by Google, and <a href="https://github.com/facebookresearch/encodec">EnCodec</a> from Meta.</p>
+
+<p>EnCodec is particularly relevant to network musical performance. It can encode wide-band stereo audio signals to bitrates as low as 3kbps while maintaining significantly higher quality than Opus at the same bitrate. SoundStream and Lyra are similarly impressive, although they are intended for compressing speech rather than music. Listen to the audio clips below to hear Opus and EnCodec in action on a sample of a string quartet:</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_sample.wav" type="audio/mpeg" />
+    Alternate Text
+  </audio>
+  <figcaption>The uncompressed audio sample.</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_sample_opus_6.wav" type="audio/mpeg" />
+    Alternate Text
+  </audio>
+  <figcaption>The sample compressed to 6kbps using Opus.</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2023_04_23_jackeh_string_quartet_encodec_sample_6.wav" type="audio/mpeg" />
+    Alternate Text
+  </audio>
+  <figcaption>The sample compressed to 6kbps using EnCodec.</figcaption>
+</figure>
+
+<h1 id="ml-codecs-for-network-musical-performance">ML Codecs for Network Musical Performance</h1>
+
+<p>What advantages do these new codecs offer for network music applications? Primarily, they may allow us to perform network music over a much wider range of networks. At SMC we are spoilt by the LOLA network, which is our gigabit local network used solely for music research. However, by encoding music to the small bitrates made possible by ML-enhanced codecs, we may be able to rehearse and even perform music over standard consumer Wi-Fi and even mobile networks like 5G.</p>
+
+<p>Of course, there are some problems a snazzy new codec won’t solve. We’re still ultimately limited in terms of latency by the speed of light – sending audio over fibre optic cables from Oslo to Sydney takes a minimum of 60ms simply due to the laws of physics. However, ML-enhanced codecs may help to democratise network music performance, bringing it outside of the classroom and into the hands of the average home musician. That is something we can all get behind.</p>
+
+<h1 id="watch-the-video">Watch the Video</h1>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vlHGuBmSBUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<h1 id="references">References</h1>
+
+<ul>
+  <li>S. Hacker, MP3: the definitive guide, 1st ed. Sebastopol [Calif.]: O’Reilly, 2000.</li>
+  <li>‘Opus Codec’. https://opus-codec.org/ (accessed Apr. 22, 2023).</li>
+  <li>Défossez, J. Copet, G. Synnaeve, and Y. Adi, ‘High Fidelity Neural Audio Compression’. arXiv, Oct. 24, 2022. Accessed: Apr. 08, 2023. [Online]. Available: http://arxiv.org/abs/2210.13438</li>
+</ul>
+
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2023/04/23/jackeh-audio-codecs-ml.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

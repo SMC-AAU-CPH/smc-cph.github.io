@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The sound of rain | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="The sound of rain" />
+<meta name="author" content="Alexander Wastnidge, Aysima Karcaaltincaba, Fabian Stordalen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How we sonified the rainfall data." />
+<meta property="og:description" content="How we sonified the rainfall data." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/09/aysimab-sonification-over-rain-data.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/09/aysimab-sonification-over-rain-data.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_aysimab_dataset_cover.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_aysimab_dataset_cover.jpg" />
+<meta property="twitter:title" content="The sound of rain" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexander Wastnidge, Aysima Karcaaltincaba, Fabian Stordalen"},"dateModified":"2022-12-09T00:00:00+00:00","datePublished":"2022-12-09T00:00:00+00:00","description":"How we sonified the rainfall data.","headline":"The sound of rain","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_aysimab_dataset_cover.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/09/aysimab-sonification-over-rain-data.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alexander Wastnidge, Aysima Karcaaltincaba, Fabian Stordalen"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/09/aysimab-sonification-over-rain-data.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      The sound of rain
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-12-09T00:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 9, 2022 •
+      </time>
+         
+      <a href="/authors/alexanderwastnidge.html">Alexander Wastnidge,</a>
+           
+      <a href="/authors/aysimakarcaaltincaba.html">Aysima Karcaaltincaba,</a>
+           
+      <a href="/authors/fabianstordalen.html">Fabian Stordalen</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+
+<p>Data driven sonification is bringing us huge opportunities regarding experimenting sound of “things”. Things can be an unemployment rate as well as the number of deaths everyday. It can be anything.</p>
+
+<p>As SMC Master students, we wanted to sonify rainfall timeseries data for our python project and apperantly rainfall has a good understanding of harmony!
+For our project, we used rainfall timeseries data from <a href="https://www.kaggle.com/datasets/poojag718/rainfall-timeseries-data">kaggle</a> which was collected from <strong>Power Data Access Viewer.</strong></p>
+
+<p>As it is described in kaggle website: <br />
+<em>The POWER Meteorological data is prediction or observation given by NASA’s GMAO MERRA-2 assimilation model.</em>
+<em>The data collected is monthly frequency data for a particular latitude and longitude in Mumbai for the period 2000 – 2020. The data consists of the following variables:</em></p>
+<ul>
+  <li><em>Specific Humidity</em></li>
+  <li><em>Relative Humidity</em></li>
+  <li><em>Temperature</em></li>
+  <li><em>Precipitation (The data consist of precipitation as monthly sum of rainfall )</em></li>
+</ul>
+
+<figure>
+   <img src="/assets/image/2022_12_07_aysimab_dataset_cover.jpg" style="max-height:400px; width:auto;" />
+   <figcaption>Do you hear rain singing?</figcaption>
+</figure>
+
+<h3 id="sound-corpus">Sound corpus</h3>
+
+<p>Firstly we created sound corpus which had three synthesis. Two synthesis were two different musical lines in A Minor and one was the combination of chords responding to the same musical line. As first job for sonification, we calculated the duration of each note from the corresponding midi file by checking start and end time of the first note. Later we used this duration in order to slice the wav file of musical line into multiple wav files of each single note.</p>
+
+<p>At this point, we had <strong>7 wav files for each synthesis with the note names A, B, C, D , E, F and G</strong>.</p>
+
+<h3 id="mapping-rainfall-data">Mapping rainfall data</h3>
+
+<p>As second step, we extracted some arrays from our rain data like temperature, humidity and perceived temperature which was a multiplication of specific humidity and temperature. Afterwards we took these values as frequency and mapped them into midi numbers. By doing that, we were able to use “note_number_to_name” function of “pretty midi” library, in order to get note names for each array item.</p>
+
+<p>At this point, we had multiple rain data which were mapped to note numbers and three different corpus data of wav files with note names.</p>
+
+<h3 id="sonification-process">Sonification process</h3>
+
+<p>As a final step of our sonification, we created three musical lines based on three synthesis and array data. For each corpus and rainfall array, we started iterating on the array and appending the sound of that note. One sonification was created by “temperature” data while the other two were created by “relative humidity” and “preceived temperature” data and all the data was ordered by time.</p>
+
+<p>And there was our sonification! We summed three output signals and had one sound which was generated by rainfall data! We built conductors from rainfall data features and they played a song for us together!</p>
+
+<p>We had some cracks between sounds which we couldnt fix yet, but we hope you enjoy listening it!</p>
+<audio controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_12_08_aysimab_team_c_sonification.wav" type="audio/mpeg" />
+  Your browser does not support the audio tag.
+</audio>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2022/12/09/aysimab-sonification-over-rain-data.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

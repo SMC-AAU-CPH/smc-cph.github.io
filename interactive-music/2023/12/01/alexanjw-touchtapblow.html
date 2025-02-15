@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Touch/Tap/Blow - Exploring Intimate Control for Musical Expression | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Touch/Tap/Blow - Exploring Intimate Control for Musical Expression" />
+<meta name="author" content="Alexander Wastnidge" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Touch/Tap/Blow is, as its name suggests, an interactive music system which aims to combine three forms of intimate control over a digital musical instrument. Notes and chords can be played via the touch interface while bass accompaniment can be driven by the player’s foot tapping. Below are the details of it’s main elements." />
+<meta property="og:description" content="Touch/Tap/Blow is, as its name suggests, an interactive music system which aims to combine three forms of intimate control over a digital musical instrument. Notes and chords can be played via the touch interface while bass accompaniment can be driven by the player’s foot tapping. Below are the details of it’s main elements." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/01/alexanjw-touchtapblow.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/01/alexanjw-touchtapblow.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01-alexanjw_ttbfront.jpg?alt=original" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-01T08:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01-alexanjw_ttbfront.jpg?alt=original" />
+<meta property="twitter:title" content="Touch/Tap/Blow - Exploring Intimate Control for Musical Expression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexander Wastnidge"},"dateModified":"2023-12-01T08:00:00+00:00","datePublished":"2023-12-01T08:00:00+00:00","description":"Touch/Tap/Blow is, as its name suggests, an interactive music system which aims to combine three forms of intimate control over a digital musical instrument. Notes and chords can be played via the touch interface while bass accompaniment can be driven by the player’s foot tapping. Below are the details of it’s main elements.","headline":"Touch/Tap/Blow - Exploring Intimate Control for Musical Expression","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01-alexanjw_ttbfront.jpg?alt=original","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/01/alexanjw-touchtapblow.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alexander Wastnidge"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/12/01/alexanjw-touchtapblow.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Touch/Tap/Blow - Exploring Intimate Control for Musical Expression
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-12-01T08:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 1, 2023 •
+      </time>
+         
+      <a href="/authors/alexanderwastnidge.html">Alexander Wastnidge</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>Touch/Tap/Blow is, as its name suggests, an interactive music system which aims to combine three forms of intimate control over a digital musical instrument.  Notes and chords can be played via the touch interface while bass accompaniment can be driven by the player’s foot tapping. Below are the details of it’s main elements.</p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_alexanjw_ttb-2.jpg?alt=original" height="400" width="400" />
+  <figcaption>
+    <span class="caption">Touch/Tap/Blow</span>
+  </figcaption>
+</figure>
+
+<h2 id="touch">Touch</h2>
+
+<p>Firstly, there is a touch interface for note input and pressure sensitivity.  This is comprised of capacitive touch strips using <a href="https://learn.bela.io/tutorials/trill-sensors/working-with-trill-craft/">Trill Craft</a>.  These are are arranged in an <a href="https://en.wikipedia.org/wiki/Isomorphic_keyboard">isomorphic</a> chromatic manner.  The layout is based on the layout of <a href="https://en.wikibooks.org/wiki/Accordion/Right_hand_(Chromatic_button_accordion)">B-System chromatic button accordians</a>.  There are three notes accessible on each strip arranged chromatically vertically.  This isomorphic layout allows for harmonically related notes to be close together and for major and minor triad chords to have the same hand “shape” when playing (like a barre chord on guitar)</p>
+
+<p>Underneath the touch strips are four force sensitive resistors to capture pressure.  These have been hand-made using conductive tape and semi-conductive foam as detailed <a href="http://iainmccurdy.org/diy/forcesensorfoam/forcesensorfoam.html">here</a></p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01_alexanjw_ttbtouchstrips.jpg?alt=original" height="400" width="250" />
+  <figcaption>
+    <span class="caption">Touch strips and FSRs</span>
+  </figcaption>
+</figure>
+
+<p>The force sensors are mapped to wavefolders on each of the pads’ voices as well as to amplitude modulation.  More details on the sound engine are below.</p>
+
+<h2 id="tap">Tap</h2>
+<p>At the player’s feet is a foot tap block with a piezo pickup.  With this, the player can tap their foot to drive the tempo of a sequenced bass voice.  The notes of the bass are generated by a shift register which stores the notes that the player plays sequentially.  As more notes are added to the register, the oldest are pushed out.</p>
+
+<h2 id="blow">Blow</h2>
+<p>Finally, in front of the player is the microphone which acts as a breath sensor.  This controls the frequency of the modulation oscillators for amplitude modulation as well as being combined with the force sensors for modulation amount.</p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_01-alexanjw_ttbfront.jpg?alt=original" height="400" width="450" />
+  <figcaption>
+    <span class="caption">Touch/Tap/Blow - note the blue microphone in front</span>
+  </figcaption>
+</figure>
+
+<h2 id="sound-engine-and-composition">Sound Engine and Composition</h2>
+<p>In his <a href="https://arxiv.org/pdf/2010.06524.pdf">Principals for Designing Computer Music Controllers</a>, Perry Cook advises to “create a piece, not an instrument”.  Following this, the design of Touch/Tap/Blow’s sound engine was informed by another intimate relationship between musician and instrument, that of Suzanne Ciani and the Buchla modular synthesiser.  The synthesis itself is based on augmenting sine wave oscillators with amplitude modulation and wavefolding controlled by the pressure and breath sensors.  Furthermore, several other decisions as well asa the piece performed here are based on the performance ideas from Ciani’s <a href="https://www.finearts.uvic.ca/~aschloss/course_mat/MU307/MU307%20Labs/Lab3_BUCHLA/Suzanne%20Ciani/Ciani_BuchlaCookbook.pdf">Report to National Endowment</a>, anecdotally referred to as the ‘Buchla Cookbook”.  One such example is the use of the live chromatic note input being fed into a shift register.  In my implementation, the shift register is being used for the bass sequence voice for an ever evolving accompaniment part.</p>
+
+<p>This is a flow diagram illustrating the signal flow between sensors and sound engine.</p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_12_08_alexanjw_ttbsignalflow.png?alt=original" height="400" width="500" />
+  <figcaption>
+    <span class="caption">Signal Flow diagram</span>
+  </figcaption>
+</figure>
+
+<h2 id="performing-with-touchtapblow">Performing with Touch/Tap/Blow</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ySrjSWU_Mf8?si=_4DmQsR65qQIE0UO&amp;start=623" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<h2 id="reflections">Reflections</h2>
+
+<p>This instrument has proved to be a fun and engaging interface for musical expression.  A notable strength has been the touch interface which offers something familiar to musicians accustomed to keyboard-based instruments but with a different layout.  The force sensors offered an intuitive interaction with their wavefolder mapping.</p>
+
+<p>The tap interface adds an important dimension to the instrument, notably opening up possibilities beyond the touch interface live playing, making it more suited to solo performance.</p>
+
+<p>The breath interface proved to be the most challenging aspect of the instrument.  Using a microphone for this purpose meant that it was prone to being affected by ambient noise.  Gating/thresholding this signal meant that only strong blowing signals could be used which limited the subtlety of performance possible.  My initial concept for this element was for amplitude, like a wind instrument, however I was not able to implement this in a musically pleasing manner.</p>
+
+<p>A key challenge in constructing the instrument was the sheer number of elements that comprise it.  The touch strips and force sensors are “hand-made” and as such were sometimes prone to needing troubleshooting and recalibration or even to outright failure. The touch strips for instance required individual and repeated calibration to track their notes successfully.  The force sensors where prone to failure when their wires were not completely secure. Many attempts were made to implement them in a neater way but nothing worked as reliably as crocodile clips.</p>
+
+<p>One of my main intentions with Touch/Tap/Blow was to make something that still felt like a musical instrument with the balance of immediacy and open-endedness, with potential for both musical expression and failure.  Indeed you can hear me play wrong notes and make mistakes in the performance.  While it is possible to lock the note input to quantised musical scales, this potential for failure is, to me, an important part of musicality.</p>
+
+<p>When playing the instrument of extended periods I did find myself with pain in my hands and arms from pressed on the force sensors so much.  This is perhaps an innate problem with the ergonomics of how I implemented the instrument as a physical object.  Or it could be that, like other instruments, my intuitive technique for playing it was not optimal.</p>
+
+<p>Overall, Touch/Tap/Blow achieved what I set out for it, albeit with some difficulties and compromises along the way.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2023/12/01/alexanjw-touchtapblow.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

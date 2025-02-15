@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Developing Techniques for Air Drumming Using Video Capture and Accelerometers | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Developing Techniques for Air Drumming Using Video Capture and Accelerometers" />
+<meta name="author" content="Joseph Clemente" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Creating MIDI scores using only data from air drumming" />
+<meta property="og:description" content="Creating MIDI scores using only data from air drumming" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2022/05/20/josephcl-air-drumming.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2022/05/20/josephcl-air-drumming.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_josephcl_air_drumming_thumbnail.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-20T08:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_josephcl_air_drumming_thumbnail.jpeg" />
+<meta property="twitter:title" content="Developing Techniques for Air Drumming Using Video Capture and Accelerometers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joseph Clemente"},"dateModified":"2022-05-20T08:00:00+00:00","datePublished":"2022-05-20T08:00:00+00:00","description":"Creating MIDI scores using only data from air drumming","headline":"Developing Techniques for Air Drumming Using Video Capture and Accelerometers","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_josephcl_air_drumming_thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2022/05/20/josephcl-air-drumming.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joseph Clemente"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2022/05/20/josephcl-air-drumming.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Developing Techniques for Air Drumming Using Video Capture and Accelerometers
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-05-20T08:00:00+00:00"
+        itemprop="datePublished"
+      >May 20, 2022 •
+      </time>
+         
+      <a href="/authors/josephclemente.html">Joseph Clemente</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
+
+<p>In this blog post, I’ll be descibing my process to create a system for air drumming using a combination of accelerometer data and video input, and showing my results via a video synchronizing the generated MIDI files to a test video file. To do this, the system will be broken down into two parts: drum hit detection and drumming position prediction.</p>
+
+<h1 id="hit-detection">Hit Detection</h1>
+
+<p>In order to tell when a drum hit should be registered in the MIDI file, we will use one <a href="https://axivity.com/product/ax3">AX3</a> accelerometer in each hand. They will both be held in between the thumb and index finger, much like a drum stick would. In order to detect a hit, we will only be analyzing the y axis of acceleration since this was found to be the most accurate.</p>
+
+<h1 id="position-prediction">Position Prediction</h1>
+
+<p>We must also be able to tell exactly what drums the drummer is playing at any given time using purely video data, which is a much harder task. To do this, we will be using a variety of machine learning (ML) techniques and tools. First, we need to train our ML systems using there will be 7 different postions we will use, each corresponding to which drum the left and right hand are playing. Those postions are:</p>
+
+<ul>
+  <li>Left and right hand playing a hi-hat</li>
+  <li>Left hand playing a snare, right hand playing a hi-hat</li>
+  <li>Left and right hand playing a snare</li>
+  <li>Left hand playing a snare, right hand playing a ride cymbal</li>
+  <li>Left hand playing a snare, right hand playing a floor tom</li>
+  <li>Left and right hand playing a floor tom</li>
+  <li>Left hand playing a snare, right hand playing a crash cymbal</li>
+</ul>
+
+<p>You can view one of the test videos below, with the left hand playing a snare and right hand playing a hi-hat.</p>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_snarelefthihatright.mp4" type="video/mp4" />
+</video>
+
+<h1 id="feature-extraction">Feature Extraction</h1>
+
+<p>Now, the question is how we can tell each of these positions apart. To accomplish this, I came up with 4 different feature extraction methods to attempt this: using raw video data in a system similar to the <a href="http://www.wekinator.org/">Wekinator</a>, using raw CSV data from the <a href="https://github.com/fourMs/VideoAnalysis/wiki">VideoAnalysis</a> software, using smoothed CSV data from VideoAnalysis, and using smoothed VideoAnalysis data along with smoothed AX3 accelerometer data.</p>
+
+<h2 id="raw-video-data">Raw Video Data</h2>
+
+<p>In order to use raw video as an input to ML systems, we will import the videos into python using the pacakge <a href="https://opencv.org/">OpenCV</a>, convert them to grayscale, downsample the video to 50x50 pixels, and parse each training video frame by frame to train our systems to predict positions.</p>
+
+<h2 id="videoanalysis-data">VideoAnalysis Data</h2>
+
+<p>The VideoAnalysis software was developed by the <a href="https://www.uio.no/ritmo/english/research/labs/fourms/">fourMs lab</a> to perform simple motion analysis on video inputs. The inputs we will use for our ML systems that are output into a CSV by the VideoAnalysis software will be the quantity of motion, the x and y coordinates for center of motion, and the x and y coordinates of the motion bounding box’s minimum and maximum values.</p>
+
+<p>We will use this data in two different ways. The first will be similar to the raw video data, where we will parse the output CSV file row by row (equivalent to frame by frame) and use the afformentioned values to train the ML systems. The second will be using a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html">rolling average</a> in order to smooth the data, and then the ML systems will be trained in the same way as before. Finally, we will be using a combination of smoothed VideoAnalysis data and smoothed accelerometer data as inputs to the ML systems.</p>
+
+<h1 id="ml-techniques">ML Techniques</h1>
+
+<p>For each feature extraction method, we’ll use both an <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">MLP regressor</a> and an <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">MLP classifier</a>. In regards to this project, the main difference between the two are that the classifier will use input data to predict a label that corresponds to a drumming position, while the regressor will output two continuous values which will be rounded and used to correspond to the position of each hand (ex. [0, 1] corresponds to left hand snare, right hand hi-hat).</p>
+
+<h1 id="evaluation-metrics">Evaluation Metrics</h1>
+
+<p>We will be evaulating the ML systems using both qualitative and quantitative methods. For regressors, we will be using R2 score as our quantitative metric and for classifiers we will be using accuracy. We will also sync the generated MIDI to the test video file, which you can view below.</p>
+
+<h1 id="results-with-raw-video-features">Results With Raw Video Features</h1>
+
+<h2 id="regressor">Regressor</h2>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_videoregressor.mp4" type="video/mp4" />
+</video>
+
+<h2 id="classifier">Classifier</h2>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_videoclassifier.mp4" type="video/mp4" />
+</video>
+
+<h1 id="results-with-raw-videoanalysis-features">Results With Raw VideoAnalysis Features</h1>
+
+<h2 id="regressor-1">Regressor</h2>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_varegressor.mp4" type="video/mp4" />
+</video>
+
+<h2 id="classifier-1">Classifier</h2>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_vaclassifier.mp4" type="video/mp4" />
+</video>
+
+<h1 id="results-with-smoothed-videoanalysis-features">Results With Smoothed VideoAnalysis Features</h1>
+
+<h2 id="regressor-2">Regressor</h2>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_varegressorsmooth.mp4" type="video/mp4" />
+</video>
+
+<h2 id="classifier-2">Classifier</h2>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_vaclassifiersmooth.mp4" type="video/mp4" />
+</video>
+
+<h1 id="results-with-smoothed-videoanalysis-and-accelerometer-features">Results With Smoothed VideoAnalysis And Accelerometer Features</h1>
+
+<h2 id="regressor-3">Regressor</h2>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_varegressoraccelerometersmooth.mp4" type="video/mp4" />
+</video>
+
+<h2 id="classifier-3">Classifier</h2>
+
+<video width="720" height="406" controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_05_19_josephcl_vaclassifieraccelerometersmooth.mp4" type="video/mp4" />
+</video>
+
+<h1 id="quantitative-metrics">Quantitative Metrics</h1>
+
+<h2 id="regressors">Regressors</h2>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_josephcl_regressor_r2.png" alt="Alternate Text" width="auto" />
+</figure>
+
+<h2 id="classifiers">Classifiers</h2>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_josephcl_classifier_accuracy.png" alt="Alternate Text" width="auto" />
+</figure>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>As you can see from these videos, hit detection with accelerometry was very accurate, but none of the attempted techniques for position prediction worked particularly well. This could be due to a variety of factors, but my main theories are that I tested the ML systems on too many positions and due to some of the movements being incredibly similar (ex. left hand snare and right hand hi-hat vs. both hands snare), the resulting ML system just ended up getting confused. However, there were some brief flashes of success in the results for the regressor using smoothed VideoAnalysis CSV data as an input.</p>
+
+<p>In general, using raw video input with as inputs to ML systems seems to not be a good way to produce accurate MIDI scores through air drumming. One possible alternativesthat may work better is using raw video data, but defining boundaries for each instrument so the onus is on the user to perform correctly instead of relying on an ML system. If ML were to still be used, a more accurate 3D rendering of arm motion using a system such as <a href="https://optitrack.com/">OptiTrack</a> should be used instead of just flat, 2D video data.</p>
+
+<h1 id="files">Files</h1>
+
+<p>You can view the GitHub repository with the files for this project <a href="https://github.com/jpclemente97/SMC4053FinalProject">here</a>.</p>
+
+<h1 id="image-source">Image Source</h1>
+
+<p>https://jamaddict.com/wp-content/uploads/2019/11/bigstock-Boy-listening-to-music-57379796.jpg</p>
+</div>
+
+  
+
+  <a class="u-url" href="/motion-capture/2022/05/20/josephcl-air-drumming.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

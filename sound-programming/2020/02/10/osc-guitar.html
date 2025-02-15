@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Strumming through space and OSC | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Strumming through space and OSC" />
+<meta name="author" content="Jackson Goode" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A gesture-driven guitar built in Puredata and utilizing OSC" />
+<meta property="og:description" content="A gesture-driven guitar built in Puredata and utilizing OSC" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/10/osc-guitar.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/10/osc-guitar.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_10_jacksong_oscguitar-logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-10T16:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_10_jacksong_oscguitar-logo.png" />
+<meta property="twitter:title" content="Strumming through space and OSC" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jackson Goode"},"dateModified":"2020-02-10T16:00:00+00:00","datePublished":"2020-02-10T16:00:00+00:00","description":"A gesture-driven guitar built in Puredata and utilizing OSC","headline":"Strumming through space and OSC","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_10_jacksong_oscguitar-logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/10/osc-guitar.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jackson Goode"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/10/osc-guitar.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Strumming through space and OSC
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-02-10T16:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 10, 2020 •
+      </time>
+         
+      <a href="/authors/jacksongoode.html">Jackson Goode</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="osc-guitar">OSC Guitar</h1>
+
+<p>My second project for the audio programming course was to accurately simulate a guitar strum in Puredata using the sensor information sent from a mobile device in motion. I wanted its interaction to be reflective of the direction, speed, and acoustic uniqueness of a real guitar strum. By uniqueness I mean the qualities of a strum that are not necessarily intended by the musician, like the intensity of each string strike and the delay between each individual string as the fingers (or pick) slide across the strings. These additions make both the sound and the experience of strumming quite realistic and, as implemented in this patch, benefit the realism of the virtual strum. However, a number of unforeseen difficulties made the feat of a seamless gesture-to-sound production quite a challenge. As I will discuss, one of the greatest barriers to responsiveness was network latency and the inability for native-local interfacing within both Puredata and sensor data on my mobile device.</p>
+
+<figure>
+    <img src="/assets/image/2020_02_10_jacksong_oscguitar-g-main.png" width="600" align="center" alt="Frontpage of Pd patch" />
+    <figcaption>Frontpage of Pd patch</figcaption>
+</figure>
+
+<h1 id="strings-and-things">Strings and Things</h1>
+
+<p>I began the project with a detailed search for an accurate model of a string. While I could have built a simple string, the focus of my work was integrating the string model into a framework from which it could serve as a guitar. The string was built using a digital waveguide model by <a href="https://ccrma.stanford.edu/realsimple/waveguideintro/">Edgar J. Berdahl and Julius O. Smith</a>. Their model is quite good, both to the ear and to the standards of Stanford’s Department of Music.</p>
+
+<figure>
+    <img src="/assets/image/2020_02_10_jacksong_oscguitar-g-waveguide.png" width="600" align="center" alt="Waveguide model of a string" />
+    <figcaption>Waveguide model of a string</figcaption>
+</figure>
+
+<p>However, the model was not designed in a way to be used in polyphony. To correct their design, I renamed each array, send, and receive to be unique for each instance of the waveguide model using a prefix of “$0-”. This allowed each object to be instantiated with a unique identity and as a result, enabled the messages passed by each of the six strings to exist without overwriting potential shared arrays or variables. I also reformatted some of their code to better fit my purposes like adding inlets and outlets that would communicate with the main patch and the six strings in concert. I also cleaned and reorganized their layouts to make more functional sense.</p>
+
+<figure>
+    <img src="/assets/image/2020_02_10_jacksong_oscguitar-g-model.png" width="600" align="center" alt="The guitar model sub-patch" />
+    <figcaption>The guitar model sub-patch</figcaption>
+</figure>
+
+<p>Once the strings were in place, I assigned the fundamental frequency of each string of four chords to four messages and made a simple metronome to send a chord pattern to play the chords (for a non-interactive demo). To create a delay between each string I used the “pipe” object prior to reaching the waveguide model. The delays’ right-hand argument allows for an input number, whose sign (positive of negative) determines whether the string delays will cascade downwards or upwards. The expression also considers randomness by calling six variables that were assigned six random numbers included in the sub-patch “rnd-strings”.</p>
+
+<figure>
+    <img src="/assets/image/2020_02_10_jacksong_oscguitar-rnd-strings.png" width="600" allign="center" alt="Sub-patch for the randomizer" />
+    <figcaption>Sub-patch for the randomizer</figcaption>
+</figure>
+
+<p>These random variables are created on every “strum-bang”, a global variable used to send a bang when there is a strum (either from the metro or OSC). The random variables in the delay increase or decrease the total delay time (and is then factored by the acceleration of the strum). After the audio signals are generated, they have their amplitude reduced by the same random factors used before. There is then some light panning that pans the mono signals of the top two and bottom two strings. This is finally sent to the dac.</p>
+
+<h1 id="the-notorious-osc">The Notorious OSC</h1>
+<figure>
+    <img src="https://sensors2.org/wp-content/uploads/2015/02/osc.png" width="600" align="center" alt="Sensor2OSC" />
+    <figcaption>Sensors2OSC</figcaption>
+</figure>
+
+<p>The last step was into employ a method to send OSC messages from my smartphone’s accelerometer. I used the Android app <a href="https://github.com/SensorApps/Sensors2OSC">Sensors2OSC</a> to send OSC messages from the gravity and linear acceleration sensors in the phone. The “mrpeach” external library facilitated receiving these messages into the patch. I chose the gravity sensor over the accelerometer sensor because the tilt values that correspond to rotating the top of the phone downwards and upwards were distinctly positive and negative as the top the crossed over the y-axis (horizon).</p>
+
+<figure>
+    <img src="/assets/image/2020_02_10_jacksong_oscguitar-g-osc.png" width="600" allign="center" alt="Receiving and manipulating OSC data from the phone" />
+    <figcaption>Receiving and manipulating OSC data from the phone</figcaption>
+</figure>
+
+<p>Two mechanisms were created to trigger a bang from a strum using the phone. The first opens or closs a gate depending on whether or not there is a sufficient change in the tilt of the top of the phone from the gravity sensor. The second mechanism determines if the acceleration of the strum is enough to trigger a bang. In its design, the second impulse generator can only be activated if there is enough of a properly shaped strum gesture. In addition to the thresholds preventing any rapid activation, I also created a refractory period that prevents a bang from being sent until the previous strum has completed from calculating strum duration. The impulse that is sent when a strum makes it through the thresholds is a positive value from the linear acceleration. The sign of this number is then changed depending on whether the strum was down or up (using the sign of the gravity sensor’s change). This number determines the speed and direction of the strum. If all thresholds were tuned perfectly and there was zero latency (my next point), this would allow rapid strumming of the virtual guitar.</p>
+
+<h1 id="complications">Complications</h1>
+
+<p>Unfortunately, one of the first issues I recognized was the latency that appeared from communicating over the local network. The latency was also inconsistent as well as the message rate that was being received (not to mention messages dropped). There were some moments where the speed and response of the OSC messages was incredibly fast and at other times inoperably slow. Because of this, a good portion of my time was spent finding threshold values and averages that catered to the message rate and latency. There is also the issue of this configuration being device dependent. Different smartphones will likely have different sensor hardware, sensor names, ranges, rates, etc. so this patch is certain to need some configuring in each case. The initial goal of this project was to build the app in Pd and afterwards “simply and easily” port it over to the <a href="http://danieliglesia.com/mobmuplat/">MobMuPlat</a> application for Android and iOS. However, this app does not appear to read the necessary sensor data natively and there do not appear to be alternatives in hosting Pd patches on Android. For the time being, this patch will have to be hosted on a remote computer and receive OSC messages from a device connected to the same network.</p>
+
+<figure>
+    <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_02_11_jacksong_guitar_osc_demo.mp4" width="800" height="480" frameborder="0" align="center" alt="Video demo of the OSC functionality"></iframe>
+    <figcaption>Video demo of the OSC functionality - credit: Thomas Anda</figcaption>
+</figure>
+
+<p>The audio within the video was recorded internally (oddly the pops only appeared after video editing - my computer was struggling with that fabulous transition).</p>
+
+<p>All in all, this project was a great introduction to Puredata and definitely taught us the general principles of the language as well as some of the challenges you only encounter in hour 11 of debugging. While making this a standalone app would require a bit more investigation into MobMuPlat or some other Pd host-able interface, I think my goals were met. And when the network connection is good and the thresholds are polished, it’s quite surprising how responsive a network connection can be.</p>
+
+<p>My project’s code can be found <a href="https://github.com/jacksongoode/osc-guitar">here</a>.</p>
+
+<h1 id="works-cited">Works Cited</h1>
+
+<p>Iglesia, Daniel. <em>Monkeyswarm/MobMuPlat</em>. 2013. 2020. GitHub, https://github.com/monkeyswarm/MobMuPlat.</p>
+
+<p><em>MobMuPlat - Mobile Music Platform</em>. http://danieliglesia.com/mobmuplat/. Accessed 7 Feb. 2020.</p>
+
+<p><em>Plucked String Digital Waveguide Model</em>. https://ccrma.stanford.edu/realsimple/waveguideintro/. Accessed 7 Feb. 2020.</p>
+
+<p><em>SensorApps/Sensors2OSC</em>. 2014. SensorApps, 2020. GitHub, https://github.com/SensorApps/Sensors2OSC.</p>
+
+<p><em>Sensors2OSC - Sensors2</em>. https://sensors2.org/osc/. Accessed 7 Feb. 2020.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/02/10/osc-guitar.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

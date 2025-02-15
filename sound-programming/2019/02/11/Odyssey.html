@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Odyssey | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Odyssey" />
+<meta name="author" content="Shreejay Shrestha" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Odyssey is a simple prototype of a Web Audio API envisioned to immerse users into a misty jungle environment. Besides soundscape of a jungle, the application adds bits of flavour of few domestic animals and mix them all together with a piece of jazz music. The web audio application is developed using HTML5 and javascript." />
+<meta property="og:description" content="Odyssey is a simple prototype of a Web Audio API envisioned to immerse users into a misty jungle environment. Besides soundscape of a jungle, the application adds bits of flavour of few domestic animals and mix them all together with a piece of jazz music. The web audio application is developed using HTML5 and javascript." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Odyssey.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Odyssey.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_aleksati_odyssey_2.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-11T15:43:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_aleksati_odyssey_2.jpg" />
+<meta property="twitter:title" content="Odyssey" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shreejay Shrestha"},"dateModified":"2019-02-11T15:43:00+00:00","datePublished":"2019-02-11T15:43:00+00:00","description":"Odyssey is a simple prototype of a Web Audio API envisioned to immerse users into a misty jungle environment. Besides soundscape of a jungle, the application adds bits of flavour of few domestic animals and mix them all together with a piece of jazz music. The web audio application is developed using HTML5 and javascript.","headline":"Odyssey","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_aleksati_odyssey_2.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Odyssey.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Shreejay Shrestha"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Odyssey.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Odyssey
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-02-11T15:43:00+00:00"
+        itemprop="datePublished"
+      >Feb 11, 2019 •
+      </time>
+         
+      <a href="/authors/shreejayshrestha.html">Shreejay Shrestha</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure>
+  <img src="/assets/image/2019_02_11_aleksati_odyssey_2.jpg" alt="the misty jungle" width="100%" align="middle" />
+</figure>
+
+<h1 id="introduction">Introduction</h1>
+<p>Odyssey is a simple prototype of a Web Audio API developed as a mini project during the first week of workshop in the SMC4048 Audio Programming course. The application is envisioned to immerse users into a misty jungle environment. Besides soundscape of a jungle, it adds bits of flavour of few domestic animals and mix them all together with a piece of jazz music. It may not give you a profound immersion into the environment at the moment though. But, I am hopeful that you will enjoy and have fun playing with it. It is written in HTML5 and javascript and the sounds and picture are taken from <a href="http://freesound.org" target="_blank">freesound.org</a> and <a href="http://selfgrowth.info/WDF-13569.html" target="_blank">selfgrowth.info</a> respectively.</p>
+
+<p><strong>Keywords:</strong> <em>Web Audio API</em>, JavaScript, HTML5</p>
+
+<h2 id="how-to-play-odyssey">How to play Odyssey?</h2>
+<p>The start button triggers a soundscape from a jungle environment and fills in a jazz piece in about 10 seconds. But, you can also press the buttons named ‘Dog’, ‘Cat’, ‘Chicken’ or ‘Elephant’ to play their sounds at any time. Infact, there is no any particular sequence of pressing the buttons. So you can actually experiment with a permutation of 5x5! i.e. in 600 unique ways. However, you can repeat it as many times as you like 😜.</p>
+
+<p><strong>Want to try my Odyssey?</strong> Check the <a href="http://folk.ntnu.no/shreejas/Odyssey/" target="_blank">Live Demo here.</a>
+You can also have a look at the code and related files in my <a href="http://github.com/shreejayshrestha/Odyssey" target="_blank">github repository</a></p>
+
+<h2 id="routing-of-different-audio-nodes">Routing of Different Audio Nodes</h2>
+<figure>
+  <img src="/assets/image/2019_02_11_aleksati_Routing_audio_nodes_03_delay_node.png" alt="Routing of the audio signals" width="60%" align="middle" />
+  </figure>
+
+<p>The application is built upon ‘example 3’ presented in the first and the third day of the Audio Programming workshop called ‘play sound’ and ‘delay node’ respectively. All of the sounds have been individually routed following the figure above except for the environment sound and the jazz piece, which have been directly sent to the output without delay or any kind of envelope.</p>
+
+<h2 id="learning-from-the-individual-mini-project">Learning from the individual mini-project</h2>
+<p>It was my first time working with HTML and javascript. With no doubt, their was a lot of frustration in the first few days of the workshop. I did have some experience working with MATLab where codes would normally follow line by line. But unlike MATLab, I experienced that the process in javascript is a bit different. Nonetheless, the overall structure of the workshop, environment of working everyone together and later in split groups made it comforting and possible to ask for help in no time. It was not so difficult for me to grasp the concepts presented by our teacher, Anna. Moreover, I am also lucky to have such a friendly and helpful peers both in Trondheim and Oslo who I could run to whenever I have questions and problems. I am so glad that I can do some code and create similar kind of web audio API. And I am hopeful to learn more and also incorporate some css in near future!</p>
+
+<h2 id="future-plans">Future Plans</h2>
+<p>I wish to make my Odyssey a bit more immersive by applying some binaural/ambisonic techniques and adding varieties of soundscape. Besides, to make it more interactive, features like mouse interaction can be applied that we exercised during Day 1 of the Audio Programming Workshop in ‘example 6’ called the ‘Mouse Interaction’. And ofcourse it would be intresting to add some fancy looking stuffs incorporating CSS.</p>
+
+<h2 id="acknowledgement">Acknowledgement</h2>
+<p>My heartfelt gratitude to Anna xambo for her valuable insights, guidance and patience in teaching us the basics of HTML5, javascripts, CSS and create a Web Audio API. Prior to the first week of workshop, I had zero knowlede in these areas. Besides, I would also like to thank my peers, Jørgen, Mari, Guy and everyone for helping me out with programming, giving suggesitions and sharing codes. Thank you all.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2019/02/11/Odyssey.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

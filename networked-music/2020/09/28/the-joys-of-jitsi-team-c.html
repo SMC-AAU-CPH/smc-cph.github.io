@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Joys of Jitsi | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="The Joys of Jitsi" />
+<meta name="author" content="Joni Mok, Wenbo Yi, Lindsay Charles, Stephen Gardener" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Jitsi is a venerable open source chat and video-conferencing app thats been around since 2003. It’s multi-platform, and runs pretty much everywhere. We were given the task of testing the desktop apps on MacOS and Windows, and the mobile apps on Android and iOS." />
+<meta property="og:description" content="Jitsi is a venerable open source chat and video-conferencing app thats been around since 2003. It’s multi-platform, and runs pretty much everywhere. We were given the task of testing the desktop apps on MacOS and Windows, and the mobile apps on Android and iOS." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/09/28/the-joys-of-jitsi-team-c.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/09/28/the-joys-of-jitsi-team-c.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_28_stephedg_jitsi_logo.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-28T15:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_28_stephedg_jitsi_logo.jpg" />
+<meta property="twitter:title" content="The Joys of Jitsi" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joni Mok, Wenbo Yi, Lindsay Charles, Stephen Gardener"},"dateModified":"2020-09-28T15:00:00+00:00","datePublished":"2020-09-28T15:00:00+00:00","description":"Jitsi is a venerable open source chat and video-conferencing app thats been around since 2003. It’s multi-platform, and runs pretty much everywhere. We were given the task of testing the desktop apps on MacOS and Windows, and the mobile apps on Android and iOS.","headline":"The Joys of Jitsi","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_28_stephedg_jitsi_logo.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/09/28/the-joys-of-jitsi-team-c.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joni Mok, Wenbo Yi, Lindsay Charles, Stephen Gardener"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/09/28/the-joys-of-jitsi-team-c.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      The Joys of Jitsi
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-09-28T15:00:00+00:00"
+        itemprop="datePublished"
+      >Sep 28, 2020 •
+      </time>
+         
+      <a href="/authors/jonimok.html">Joni Mok,</a>
+           
+      <a href="/authors/wenboyi.html">Wenbo Yi,</a>
+           
+      <a href="/authors/lindsaycharles.html">Lindsay Charles,</a>
+           
+      <a href="/authors/stephengardener.html">Stephen Gardener</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p><a href="https://jitsi.org">Jitsi</a> is a venerable open source chat and video-conferencing app thats been around since 2003. It’s multi-platform, and runs pretty much everywhere. We were given the task of testing the desktop apps on MacOS and Windows, and the mobile apps on Android and iOS.</p>
+
+<p>Let’s start with <a href="https://desktop.jitsi.org">Jitsi desktop</a>. First impressions weren’t great - you are requested to log in with an account from <strong>Google Talk</strong> (a service whose retirement was announced in 2012), <strong>SIP</strong> (eh?) or <strong>XMPP</strong>. I had a Jabber account once, although I wouldn’t even know where you’d set one up now. I guess we’ve all been sucked into the proprietary services offered by the likes of Apple and Facebook.</p>
+
+<p><img src="/assets/image/2020_09_28_stephedg_jitsi_1.jpg" alt="Jitsi Desktop." /></p>
+
+<p>We wanted to see if there was a way to chat together without us having to set up Jabber accounts, so we dismissed that window and had a rummage around the app itself.</p>
+
+<p><em>“Jisti wants to access your contacts. Allow?”</em> - Deny!</p>
+
+<p>Ah, there’s an <em>“Add a chat room”</em> option hidden under the File menu (where else?), maybe this is it? <em>“Choose account”</em> - ah, bugger.</p>
+
+<p>Lets check the documentation. Hm.. a little thin on the ground here. There is a <em>“How to download and install Jisti”</em> video from erm.. 2012.</p>
+
+<p>Ok, maybe we’ll have a bit more joy with the mobile apps. 
+Oh, hang on - whats this in the FAQ?</p>
+
+<blockquote>
+  <p>Is there an iPhone/iPad version of Jitsi?</p>
+
+  <p>No. Due to the restrictions imposed by the platform it is highly unlikely this answer is going to change.</p>
+</blockquote>
+
+<p>Bugger.</p>
+
+<p>Thankfully the answer has changed, and not only that, but the Jitsi experience on iOS was much better.</p>
+
+<p>At least initially.</p>
+
+<p><a href="https://jitsi.org">Jitsi Meet</a> (the mobile version of Jitsi) doesn’t require you to sign in to other services, so we could jump straight into setting up a room.</p>
+
+<p><em>“This room is insecure, anyone can join. Press the security button”</em> Um.. which security button? After not managing to find any security buttons anywhere, we decided to throw caution to the wind and start our video chat.</p>
+
+<p>And it worked! Latency seemed fine on iOS, although there was no direct way of measuring it like there is in Zoom. On Android it didn’t run quite as smoothly, with quite a lot of audio dropouts.</p>
+
+<p>We were still a little nervous a stranger might jump into our cosy video chat, so the hunt for the ‘security button’ resumed. Tucked away 2 levels down in a menu, I found an option that allowed you to set a password for the room. We’d done it!</p>
+
+<p>Jitsi Meet has a nice ‘recents’ list, which allows you to jump straight back into any rooms from previous sessions. Unfortunately we found that it didn’t remember the password we had set, and not only that, but it didn’t warn us this time.</p>
+
+<p>Jitsi is free and open source, and we were really hoping for it to be a viable and more ethical alternative to the Zooms of this world, but for us it was a disaster. In terms of UX, it is user-unfriendly to the extreme and even worse, it’s clumsy attempts at security are leaving people vulnerable. Until the Jitsi team sort out these issues, our recommendation is to look elsewhere.</p>
+
+<h1 id="update">Update</h1>
+
+<p>Shortly after we published this post, there was a big update to the <a href="https://meet.jit.si">Jitsi Meet</a> mobile apps, fixing quite a few of the issues we came across. We have also been pointed in the direction of <a href="https://meet.web.net">https://meet.web.net</a>, a web based client for Jitsi that works really well, and offers a much improved user experience. We would still recommend avoiding Jitsi Desktop, but both the web and mobile apps are beginning to look like viable alternatives for online video meetings.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2020/09/28/the-joys-of-jitsi-team-c.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

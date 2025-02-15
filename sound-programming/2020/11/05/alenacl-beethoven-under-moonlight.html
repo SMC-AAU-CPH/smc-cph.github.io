@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Beethoven under Moonlight | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Beethoven under Moonlight" />
+<meta name="author" content="Alena Clim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Creating a CSound project that uses Frequency Modulation synthesis (carrier and modulating oscillator) and plays the first few bars of the Moonlight Sonata by Beethoven based on a score." />
+<meta property="og:description" content="Creating a CSound project that uses Frequency Modulation synthesis (carrier and modulating oscillator) and plays the first few bars of the Moonlight Sonata by Beethoven based on a score." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/05/alenacl-beethoven-under-moonlight.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/05/alenacl-beethoven-under-moonlight.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_05_alenacl_moonlight.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-05T16:09:38+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_05_alenacl_moonlight.jpg" />
+<meta property="twitter:title" content="Beethoven under Moonlight" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alena Clim"},"dateModified":"2020-11-05T16:09:38+00:00","datePublished":"2020-11-05T16:09:38+00:00","description":"Creating a CSound project that uses Frequency Modulation synthesis (carrier and modulating oscillator) and plays the first few bars of the Moonlight Sonata by Beethoven based on a score.","headline":"Beethoven under Moonlight","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_05_alenacl_moonlight.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/05/alenacl-beethoven-under-moonlight.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alena Clim"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/05/alenacl-beethoven-under-moonlight.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Beethoven under Moonlight
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-11-05T16:09:38+00:00"
+        itemprop="datePublished"
+      >Nov 5, 2020 •
+      </time>
+         
+      <a href="/authors/alenaclim.html">Alena Clim</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="beethoven-under-moonlight-using-csound">Beethoven under Moonlight using CSound</h1>
+
+<p><img src="/assets/image/2020_11_05_alenacl_moonlight.jpg" alt="Beethoven Moonlight Sonata" /></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>During the Digital Audio module we’ve been given a basic introduction to <strong>CSound</strong>, a domain-specific programming language for audio programming. In class, we covered the basics of this language: the syntax, structure, a few syntesis techniques, and effects based on delay, distorsion and filtering. For the individual projects we each wrote a functioning Csound program in the form of an audio generator and/or a processing unit for incoming audio.</p>
+
+<p>With these freshly-acquired knowledge about <strong>CSound</strong> and the assignment instructions I designed my idea. Sound effects are fascinating to me, but still a bit of a mistery; on the other hand, I have quite some experience with acoustic instruments (especially pianos). Having said this, I decided to ease into the world of digital audio by writing a <strong>CSound</strong> program that would imitate as closely as possible the sound of an acoustic instrument while “performing” a classical piece of music. For me, this was a theoretical assignment as much as it was practical.</p>
+
+<p>In 2020 people all around the globe are celebrating the 250th anniversary of the birth of <em>Ludwig van Beethoven</em> (1770-1827). During the years I performed classical music, I played several pieces composed by him for piano and I always found them extremely… fullfilling to play and full of emotions. This, together with the special significance of this year inspired me to choose his “Moonlight Sonata” for the present assignment.</p>
+
+<h4 id="fun-fact">Fun fact:</h4>
+<p>This sonata was completed in 1801 and dedicated in 1802 to Countess Giulietta Guicciardi, his pupil. Its original name is <em>The Piano Sonata No. 14 in C-sharp minor, marked Quasi una fantasia, Op. 27, No. 2</em>. The popular name of <em>Moonlight Sonata</em> dates back to the remark of a musical critic sometime after Beethoven’s death.</p>
+
+<h2 id="preparations--resources">Preparations &amp; Resources</h2>
+
+<p>The principal resource of this assignment was <a href="https://csound.com/"><strong>CSound</strong></a>. I tried several methods of running it, for example the frontend <strong>CSoundQT</strong> with which <strong>CSound</strong> comes when installed, <a href="https://cabbageaudio.com/"><strong>Cabbage</strong></a> and <a href="https://mnt.conts.it/winxound/"><strong>Winxound</strong></a>. Although I managed to make <strong>Cabbage</strong> work on my computer, it crashed quite a lot which got frustrating, so I ended up using a <a href="https://marketplace.visualstudio.com/items?itemName=kunstmusik.csound-vscode-plugin"><strong>Visual Studio Code</strong></a> extension.</p>
+
+<p><strong>CSound</strong> has a pretty consistent <a href="https://flossmanual.csound.com/introduction/how-to-use-this-manual">manual</a>, which proved to be an important resource. In order to understand more about this language programming and <strong>digital audio</strong> in general, I had to start with the <a href="https://flossmanual.csound.com/basics/digital-audio">basics</a> and read about sounds, waveforms, pitch, frequencies and other realted concepts. This proved to be very useful for the next steps: understanding the basic mechanisms of <strong>sounds</strong> allowed a smoother transition to <strong>digital</strong>.</p>
+
+<h2 id="program-development">Program development</h2>
+
+<h3 id="theoretical-background">Theoretical background</h3>
+
+<p>In 1971 he wrote an article about <a href="https://www.aes.org/e-lib/browse.cfm?elib=2220">stimulating real instruments</a>.</p>
+
+<p>While at Stanford University, <a href="https://en.wikipedia.org/wiki/John_Chowning">John M. Chowning</a>, an American composer, musician and researcher worked on finding ways to stimulate real instruments digitally. He developed something called <strong>Frequency Modulation synthesis</strong> (FM synthesis) which is a way of synthesising sound based on its frequency and amplitude: the frequency of a waveform is changed using a modulator such that the frequency of an oscillator is altered “in accordance with the amplitude of a modulating signal” (<a href="https://www.aes.org/e-lib/browse.cfm?elib=1954">Chowning, 1973</a>).</p>
+
+<p>Using this synthesis method, both <em>harmonic</em> and <em>inharmonic</em> sounds can be created - for the former, the modulating signal has to be harmonically related to the original “carrier signal” (i.e., the sound grows more complex the more the amount of frequency modulation increases), while for the latter, modulators with frequencies that are not integer multiples of the “carrier signal” have to be used.</p>
+
+<p>Implementing <strong>FM synthesis</strong> through analog oscillators can result in pitch instability, so the digital implementation quickly became standard practice. This is how <strong>digital FM synthesis</strong> began to be the basis of digital instruments starting from 1974. It was implemented using <strong>phase modulation</strong>(a form of angle modulation).</p>
+
+<h3 id="csound-implementation-steps">CSound implementation steps</h3>
+
+<p>Implementing a <strong>FM synthesis</strong> in <strong>CSound</strong> proved to be doable after understanding the concepts and the formulas. Below is a step by step explanation that leads to the final program (based on an example found online).</p>
+
+<h4 id="first-step">First step:</h4>
+
+<ul>
+  <li>Creating an instrument inside <code class="language-plaintext highlighter-rouge">&lt;CsInstruments&gt;</code> that plays sine tones.</li>
+  <li>Creating an oscillator that gets the <code class="language-plaintext highlighter-rouge">amplitude</code>, <code class="language-plaintext highlighter-rouge">frequency</code> and <code class="language-plaintext highlighter-rouge">wave shape</code>. The parameters are all determinted by p-fields in the score file <code class="language-plaintext highlighter-rouge">&lt;CsScore&gt;</code>. This is also playing the role of the <strong>carrier oscillator</strong>.</li>
+</ul>
+
+<p><img src="/assets/image/2020_11_05_alenacl_step1.jpg" alt="CSound step 1" /></p>
+
+<h4 id="second-step">Second step:</h4>
+
+<ul>
+  <li>Creating another oscillator, the <strong>modulating oscillator</strong>, that will modulate the <code class="language-plaintext highlighter-rouge">frequency</code> of the <strong>carrier oscillator</strong> by adding the output of this oscillator to the frequency of the other one.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">rate</code> of the modulation (the <code class="language-plaintext highlighter-rouge">vibrator rate</code>) is determined by the <code class="language-plaintext highlighter-rouge">frequency</code> of the modulator, whereas the <code class="language-plaintext highlighter-rouge">depth</code> of the frequency deviation is determined by the <code class="language-plaintext highlighter-rouge">amplitude</code> of the modulator.</li>
+  <li>A subtle vibrato - deviation <code class="language-plaintext highlighter-rouge">depth</code> of about 1/5 of a semitone and a <code class="language-plaintext highlighter-rouge">rate</code> of 6Hz - in the <strong>carrier oscillator</strong>’s frequency is caused this way, by adding the low-aplitude, low-frequency sine wave as the <strong>modulator oscillator</strong>.</li>
+</ul>
+
+<p><img src="/assets/image/2020_11_05_alenacl_step2.jpg" alt="CSound step 2" /></p>
+
+<p>This far we’ve seen an example of <strong>FM</strong> (frequency modulation), more specifically using a <strong>LFO</strong> (low-frequency modulating oscillator) to create a slight vibrato. When the <strong>modulating oscillator</strong> has an audible frequency and larger amplitude, something else happens: <strong>sidebands</strong> (other frequencies present around the carrier frequency) are created.</p>
+
+<p>This <strong>sidebands</strong>’ frequencies depend on the frequencies of the carrier and modulating oscillator: c+m, c-m, c+2m, c-2m, etc (where c stands for carrier and m for modulating oscillator’s frequencies). This relationship represents the ratio of carrier frequency to modulating frequency (Fcar/Fmod) = <strong>the harmonicity ratio</strong>.
+The number of <strong>sidebands</strong> is determined by how strong the modulating oscillator’s amplitude relative to its frequency. The ratio Amod/Fmod = <strong>modulation index</strong>.</p>
+
+<p>The harmonicity ratio and the modulation index are the main factors in determining the number, placement, and relative strength of the different partials of the resulting sound = the <strong>timbre</strong>.</p>
+
+<h4 id="third-step">Third step:</h4>
+
+<ul>
+  <li>Create a high-frequency <strong>modulating oscillator</strong> to create <strong>sidebands</strong> (in addition to the LFO for the vibrato). In order to control the <strong>timbre</strong> of each note, we specify the modulating index and the harmonicity ratio as separate p-fields in the score file.</li>
+  <li>Doing the necessary calculations as described above, obtain the ratios needed for this new modulating oscillator (in the instrument design).</li>
+  <li>Harmonicity ratio = Fcar/Fmod =&gt; Fmod = Fcar/harmonicity ratio. Fcar is <code class="language-plaintext highlighter-rouge">p5</code> and the harmonicity ratio is <code class="language-plaintext highlighter-rouge">p7</code> =&gt; the frequency of the modulating oscillator = p5/p7.</li>
+  <li>Use an <strong>amplitude envelope</strong>: the <a href="http://www.csounds.com/manual/html/linseg.html"><code class="language-plaintext highlighter-rouge">linseg</code></a> generator. This traces a series of line segments between some specified points - in this case the shape of the envelope is made to be directly dependent on the amplitude value given through <code class="language-plaintext highlighter-rouge">p4</code>. The same envelope is used to shape the amplitude of the modulating oscillator: the lounder a sound gets, the more partials is contains (the modulation deviation increases), giving a more realistic <strong>timbre</strong>.</li>
+</ul>
+
+<p><img src="/assets/image/2020_11_05_alenacl_step3.jpg" alt="CSound step 3" /></p>
+
+<p>Although defining frequencies for the notes to be played is alright, it can get quite messy the more complex the score. Luckily, it’s fairly easy to use pitch notations, as <strong>CSound</strong> has a function called <code class="language-plaintext highlighter-rouge">cpspch()</code> to translate pitch to cycles per second. Pitch = actave plus a number of semitones: e.g. A above middle C = middle C plus 9 semitones = <code class="language-plaintext highlighter-rouge">cpspch(8.09)</code>.</p>
+
+<h4 id="forth-and-last-step">Forth (and last) step:</h4>
+
+<ul>
+  <li>Adding a variable <code class="language-plaintext highlighter-rouge">ifreq</code> in the instrument design that will save the carrier frequency based on the pitch notation in the score =&gt; replacing <code class="language-plaintext highlighter-rouge">p5</code> with <code class="language-plaintext highlighter-rouge">ifreq</code>.</li>
+</ul>
+
+<p><img src="/assets/image/2020_11_05_alenacl_step4.jpg" alt="CSound step 4" /></p>
+
+<h3 id="csound-final-score-and-demo">CSound final score and demo</h3>
+
+<p><a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/code/2020_11_05_alenacl_csound_moonlight_sonata.csd">Here</a> is the final <strong>CSound</strong> program. Using a <a href="http://www.harmoniccycle.com/hc/music-07-tempo_and_note_length.htm">Tempo and Note Length Calculator</a> I calculated the durations of each note based on a BMP = 51 (<em>Largo</em>). Knowing the <a href="https://pages.mtu.edu/~suits/notefreqs.html">frequencies</a> of notes was also useful at different stages of this project.</p>
+
+<p>Here is a demo video of the final “performance” of the first few bars of “Moonlight Sonata” by Beethoven using a slightly peculiar sound - somewhere between a marimba and a vibraphone.</p>
+
+<figure style="float: none">
+  <video width="640" height="360" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_11_05_alenacl_csound_moonlight_sonata_demo.mp4" type="video/mp4" />
+  </video>
+  <figcaption>CSound Moonlight Sonata</figcaption>
+</figure>
+
+<h2 id="overall-impressions">Overall impressions</h2>
+
+<p>It was a nice experience to read so much about oscillators and ways to module sound and creating the score was really fun, even if a bit tedious as well.
+This assignment helped me understand more about the basis of <strong>CSound</strong>. Before this, I knew nothing about sound modulation and how we can use the frequency and amplitude of sounds, so even the simple notion of creating an oscillator slightly confused me. I can now say that I familiarized myself with the concept of creating different types of oscillators and I know how to use the “interface” of CSound (e.g. I know how to create an instrument and how to controll it from the score). I even got the chance to use the manual when looking for <code class="language-plaintext highlighter-rouge">linseg</code>.
+However, for me, the most interesting part was to read the theory behind these techniques, and finally understand (at least a few of) the concepts behind digital audio.</p>
+
+<hr />
+<hr />
+<h4 id="references">References</h4>
+
+<p><a href="https://www.aes.org/e-lib/browse.cfm?elib=1954">Chowning, J. (1973)</a>. “The Synthesis of Complex Audio Spectra by Means of Frequency Modulation” (PDF). Journal of the Audio Engineering Society. 21 (7).</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/11/05/alenacl-beethoven-under-moonlight.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

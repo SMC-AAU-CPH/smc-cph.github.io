@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Generating Samples Through Dancing | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Generating Samples Through Dancing" />
+<meta name="author" content="Hugh Alexander von Arnim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using a VAE to build a generative sampler instrument" />
+<meta property="og:description" content="Using a VAE to build a generative sampler instrument" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/03/hughav-VAE-sampler.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/03/hughav-VAE-sampler.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_20_hughav_performance_system_VAE.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-03T07:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_20_hughav_performance_system_VAE.jpg" />
+<meta property="twitter:title" content="Generating Samples Through Dancing" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hugh Alexander von Arnim"},"dateModified":"2022-05-03T07:00:00+00:00","datePublished":"2022-05-03T07:00:00+00:00","description":"Using a VAE to build a generative sampler instrument","headline":"Generating Samples Through Dancing","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_20_hughav_performance_system_VAE.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/03/hughav-VAE-sampler.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Hugh Alexander von Arnim"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/03/hughav-VAE-sampler.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Generating Samples Through Dancing
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-05-03T07:00:00+00:00"
+        itemprop="datePublished"
+      >May 3, 2022 •
+      </time>
+         
+      <a href="/authors/hughalexandervonarnim.html">Hugh Alexander von Arnim</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h3 id="introduction"><strong>Introduction</strong></h3>
+<p><br />
+When we dance to music we are reacting to the sounds that we hear, interpreting elements of the music that stand out to us with our bodies. For example, if the music is louder we might make larger movements or we might time our movements to be on the beat. Therefore if we look at a video of somebody dancing we have a record of several elements that were in the music that they were dancing to. Can this record be used to reverse the process, and generate new music that possesses characteristics that were found in the music was originally danced to?</p>
+
+<p>This was the question underlying the Sampling Through Dance project. Using a dataset of videos and audio files of the accompanying music and a machine learning architecture called the <a href="https://en.wikipedia.org/wiki/Variational_autoencoder">Varational AutoEncoder (VAE)</a> [1] a generative model was trained. This was then attached to a live camera input, creating a sampler style instrument, and through dancing the generative sampler is played.</p>
+
+<h3 id="system-design"><strong>System Design</strong></h3>
+<p><br /></p>
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_hughav_system_design.jpg" alt="" title="" width="auto" />
+   <figcaption><i>The System Design</i></figcaption>
+</figure>
+<p><br />
+The system comprises three main components:
+<br />
+<br />
+<strong>1.</strong> A component to capture the audio and video input from the computer soundcard and a camera and create a dataset to train the model with. These data are chopped into sample segments of the length desired.
+<br />
+<br />
+<strong>2.</strong> A VAE component that is trained on the data captured. A VAE is an artificial neural network architecture which is trained on an identical input and output. The data is compressed into a bottleneck, the ‘latent space’, and then reconstructed at the output. However, what’s interesting about VAEs is that this latent space is actually a representation of the parameters of a distribution of the data, and this is what provides the architecture with its generative capacities.
+<br />
+<br />
+Here, the data of the dance motion and the corresponding audio segments are encoded together in a shared latent space. After the model has been trained, the input for the audio and the outputs for the motion data are removed, meaning that motion data can be passed to the model to sample the latent space and generate new audio samples.
+<br />
+<br />
+<strong>3.</strong> A performance system, centred on this trained model. A live camera input is attached to the model and through dancing, music is generated.</p>
+
+<h3 id="representing-motion"><strong>Representing Motion</strong></h3>
+<p><br />
+Passing raw video files to the model for training and in the performance system was not a good idea for a number of reasons. Firstly, raw video files are extremely large and would greatly increase the time required to train the model and the time required to generate new material. Secondly, when using the model after training, the environment and camera setup would have to be identical to that in which the data to train the model was collected. Instead, <a href="https://en.wikipedia.org/wiki/Motiongram">motiongrams</a> [2] were extracted from each sample segment and used to represent the dance motion.
+<br /></p>
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_hughav_motiongram.png" alt="" title="" width="auto" />
+   <figcaption><i>How a motiongram is created (© A.R. Jensenius) from [3] </i></figcaption>
+</figure>
+<p><br />
+A motiongram is a representation of motion along an axis through time and is created by calculating the mean of each column or row (depending upon whether an x-axis or y-axis motiongram is desired) of the difference between each frame in the video data. In this way, each row or column represents a single frame of the original video, greatly reducing the size of the data. In addition, they offer a good representation of both the quantity and location of motion, capture the temporal dependencies of the motion, and are also environment ‘agnostic’, due to the fact that they are calculated from the frame difference. This means that the system can be used to perform in environments different to those in which the data was collected.</p>
+
+<h3 id="the-prototype"><strong>The Prototype</strong></h3>
+<p><br />
+A prototype of the system was developed using a dataset of around one hour of dancing to the album <a href="https://en.wikipedia.org/wiki/Reward_(album)">Reward by Cate Le Bon</a>.
+<br /></p>
+<figure style="float: none">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/vLfoGZTgt5o" title="YouTube video player" frameborder="0" allow="accelerometer;
+100%play;
+clipboard-write;
+encrypted-media;
+gyroscope;
+picture-in-picture" allowfullscreen="">
+</iframe>
+<figcaption><i>Miami by Cate Le Bon, the first song used in the dataset</i></figcaption>
+</figure>
+<p><br />
+Two models were trained, one with a sample segment length of 0.1 seconds and 0.5 seconds. The following videos demonstrate a short performance with each, showing the video as captured by the camera (at a low resolution of 64x48) along with the motiongrams that were passed to the model.
+<br /></p>
+<figure style="float: none">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/aDR_YmxUpdo " title="YouTube video player" frameborder="0" allow="accelerometer;
+100%play;
+clipboard-write;
+encrypted-media;
+gyroscope;
+picture-in-picture" allowfullscreen="">
+</iframe>
+  <figcaption><i>A performance with the 0.5 second model system (audio adjusted for latency)</i></figcaption>
+</figure>
+<p><br /></p>
+<figure style="float: none">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/0lYoG2HrWxc" title="YouTube video player" frameborder="0" allow="accelerometer;
+100%play;
+clipboard-write;
+encrypted-media;
+gyroscope;
+picture-in-picture" allowfullscreen="">
+</iframe>
+  <figcaption><i>A performance with the 0.1 second model system (audio adjusted for latency)</i></figcaption>
+</figure>
+<p><br />
+The results are rather interesting and not what were expected at the outset of the project. Instead of distinct audio samples, there instead is a shifting textural quality to the sound over a droning bass that occasionally changes pitch. There is also a repeated phrase underlying all of the segments. The VAE also adds a lot of noise, but this isn’t spread evenly throughout the frequency spectrum. Instead, this is mostly found in the higher frequency bands.</p>
+
+<p>Looking at several characteristics of the sound and motion, it’s possible to see that the element best captured by the models was the link between the quantity of motion and the dynamics of the audio segment, with larger motion resulting in a louder segment. The rhythm is set by the length of the sample segment, meaning that there this element cannot be captured by the model.
+These three aspects create an interesting collaborative effect when dancing with the system. The timbral and harmonic elements of the texture feel very out of the control of the dancer, while the dynamics feel very manipulable, with the rhythm being set in advance. This creates an effect that one is dancing <i>with</i> the system, and not fully in control of it.</p>
+
+<h3 id="the-issue-of-latency"><strong>The Issue of Latency</strong></h3>
+<p><br />
+There is an issue when it comes to using motion data as an input for machine learning model in a performance system. There are several figures provided on the maximum latency between motion and sound in a motion controlled system in order to create a sense that motion is creating the resulting sound, ranging from 0.02 to 0.15 seconds (see, e.g. [4], [5]). However, as a machine learning based model requires the motion to be finished before the resulting sound can be generated, the length of the motion itself is already creating latency (for the two models here 0.1 seconds and 0.5 seconds respectively). This is in addition to the time taken by the model to generate the audio, which (on my computer) was around 0.1 seconds for the 0.1 second model and 0.2 seconds for the 0.5 second model. This results in a total latency of around 0.2 seconds for the 0.1 second model and 0.7 seconds for the 0.5 second model, both of which exceed the maximum to create a sense of link between motion and sound.</p>
+
+<p>Although this latency was noticeable for the 0.1 second model, there was still a sense that the motion is creating the alterations in sound. However, for the 0.5 second model the latency was so large that there is a feeling that the system is reacting to the motion, not that the dancer is creating it through their motion. This adds to the feeling that the dancer is dancing with the system instead of controlling it. For the above videos demonstrating the system, the audio was aligned with the motion to remove this latency, in order to show the direct link between the motion and the musical elements.</p>
+
+<p>The code for a pipeline system to capture the video and audio for a dataset, train a model and perform with it can be downloaded <a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/code/2022_05_20_hughav_dance_sampler.zip">here</a>.</p>
+
+<h3 id="sources"><strong>Sources</strong></h3>
+<p><br />
+[1] D. P. Kingma and M. Welling, ‘Auto-Encoding Variational Bayes’, 2013, doi: 10.48550/ARXIV.1312.6114.</p>
+
+<p>[2] A. R. Jensenius, ‘Action-sound: Developing me-thods and tools to study music-related body movement’, Ph.D Thesis, Aalborg University, Oslo, 2007. [Online]. Available: https://www.duo.uio.no/bitstream/handle/10852/27149/jensenius-phd.pdf?sequence=1&amp;isAllowed=y</p>
+
+<p>[3] A. R. Jensenius, ‘Some Video Abstraction Techniques for Displaying Body Movement in Analysis and Performance’, Leonardo, vol. 46, Feb. 2013, doi: 10.2307/23468117.</p>
+
+<p>[4] T. Mäki-patola and P. Hämäläinen, ‘Latency Tolerance for Gesture Controlled Continuous Sound Instrument Without Tactile Feedback’, in Proc. International Computer Music Conference (ICMC, 2004, pp. 1–5.</p>
+
+<p>[5] R. Gehlhaar, ‘Sound= Space: an interactive musical environment’, Contemporary Music Review, vol. 6, no. 1, pp. 59–72, 1991.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2022/05/03/hughav-VAE-sampler.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

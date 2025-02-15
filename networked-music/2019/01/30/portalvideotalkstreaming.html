@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How to stream content from the portal | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="How to stream content from the portal" />
+<meta name="author" content="Eigil Aandahl, Sepehr Haghighi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this blogpost, we will try to explain in more detail how these streams have been set up using OBS, Open Broadcaster Software and Youtube Live while being connected between Trondheim and Oslo. This can be of use for anyone looking to set up a co-located stream of a speaker or performance." />
+<meta property="og:description" content="In this blogpost, we will try to explain in more detail how these streams have been set up using OBS, Open Broadcaster Software and Youtube Live while being connected between Trondheim and Oslo. This can be of use for anyone looking to set up a co-located stream of a speaker or performance." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/01/30/portalvideotalkstreaming.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/01/30/portalvideotalkstreaming.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_01_30_stefanof_broadcasting.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-30T14:40:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_01_30_stefanof_broadcasting.jpg" />
+<meta property="twitter:title" content="How to stream content from the portal" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eigil Aandahl, Sepehr Haghighi"},"dateModified":"2019-01-30T14:40:00+00:00","datePublished":"2019-01-30T14:40:00+00:00","description":"In this blogpost, we will try to explain in more detail how these streams have been set up using OBS, Open Broadcaster Software and Youtube Live while being connected between Trondheim and Oslo. This can be of use for anyone looking to set up a co-located stream of a speaker or performance.","headline":"How to stream content from the portal","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_01_30_stefanof_broadcasting.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/01/30/portalvideotalkstreaming.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Eigil Aandahl, Sepehr Haghighi"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/01/30/portalvideotalkstreaming.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      How to stream content from the portal
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-01-30T14:40:00+00:00"
+        itemprop="datePublished"
+      >Jan 30, 2019 •
+      </time>
+         
+      <a href="/authors/eigilaandahl.html">Eigil Aandahl,</a>
+           
+      <a href="/authors/sepehrhaghighi.html">Sepehr Haghighi</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure align="middle">
+<img src="/assets/image/2019_01_30_stefanof_broadcasting.jpg" alt="Broadcasting header image" width="70%" />
+</figure>
+<p><br /></p>
+
+<p>In 2006, <a href="http://content.time.com/time/magazine/article/0,9171,1570810,00.html">Time Magazine names “You” as the person of the year</a>. This was because of the explosion of community based content and the impact people on the internet could have. Since then, the accessibility of creating and sharing content online has increased tremendously, and the ability to broadcast sound and video has been similarly democratised. We at SMC have also been exploring ways of broadcasting some of what goes on in The Portal to a wider audience (NTNU/Trondheim, UiO/Oslo and online viewers, particularly in the context of <a href="http://wonomute.no/">WoNoMute and the monthly talks by women in music technology</a>.</p>
+
+<p>In this blogpost, we will try to explain in more detail how these streams have been set up using <a href="https://github.com/SMC-master/Portal/wiki/Open-Broadcaster-Software-Studio">OBS, Open Broadcaster Software</a> and <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig/about">Youtube Live</a> while being connected between Trondheim and Oslo. This can be of use for anyone looking to set up a co-located stream of a speaker or performance.</p>
+
+<h3 id="how-to-use-obs-and-youtube-live">How to use OBS and Youtube Live</h3>
+
+<p>First things first, we will take a look at how to set up a live stream using OBS and Youtube, as this information will be crucial to understand how we have been using these technologies.</p>
+
+<p>The end goal of our streams has been to broadcast talks and events in the portal to whomever wants to watch and listen anywhere in the world. To do this we have been using Youtube, which is the most popular video-sharing website and supports live streaming. Since we want to use many different cameras, microphones, presentation slides and so on when broadcasting, we use a streaming encoder software called OBS. This software lets us compose scenes with different elements in them that go out as a single video feed. OBS can be linked to for example a Youtube channel using a streaming key that is generated by the website to send the stream where we want it to go. It is also possible to use OBS to do screen recording of a computer or local recordings from video cameras.</p>
+
+<p>When setting up a scene in OBS, it is possible to add many different sources and move them around, such as text, images, video, and even audio that can be mixed within the software. In studio mode, it is possible make edits to scenes without the edits going out before a transition is made. Furthermore, the sources can be modified, chroma keyed (made transparent using for example a green-screen), filtered and cropped. Below is a screenshot of OBS in studio mode with two scenes. The image on the right is what would be the output if we were to click “start streaming” to a live feed. The image on the left is a preview of what the output would be when transitioning, and changes made to the composition here is not streamed.</p>
+
+<figure align="middle">
+<img src="/assets/image/2019_01_30_aleksati_OBSscreenshot.png" alt="OBS in studio mode" width="70%" />
+<figcaption align="middle"><strong>OBS in studio mode with two scenes.</strong></figcaption>
+</figure>
+
+<p>For more information on how to use OBS and setting up live streaming on Youtube, the following links lead to external Youtube video tutorials on the subject:</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=DTk99mHDX_I">How to Use OBS Studio (Beginners Guide)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=OtJHX7O3p5U">How To Live Stream On YouTube With OBS | Fast Start Guide
+</a></li>
+</ul>
+
+<p>A couple of notes on streaming with Youtube. Compared to some of the other solutions we have been using to communicate between Oslo and Trondheim, streaming is very slow. See the blogpost <a href="https://SMC-master.github.io/portal/2018/11/28/Mutual-Concert-Between-Oslo-and-Trondheim-Personal-Reflections.html">Mutual Concert Between Oslo and Trondheim - Personal Reflections</a>, about the network performance we did using LoLa. To ensure the best possible quality of image and sound, the streaming services generally have a long buffer which adds up to several seconds of latency. It is therefore not very useful for real-time two-way communication with sound or video, but these kinds of services usually have a text chat where questions from the audience can be read and responded to.</p>
+
+<h3 id="how-our-setup-has-been-for-wonomute">How our setup has been for WoNoMute</h3>
+
+<p>Here we present how we have setup streaming from The Portal. It should be noted that this is only one of many possible solutions, and might not be exactly how we will do this in the future.</p>
+
+<p>In order to have a proper communication, two computers are needed in the place that the presenter is and one on the other side of The Portal. The computers in Trondheim are used for streaming, setting up LOLA for audio sharing and video sharing (presentation and live videos), using Zoom video conference. The third computer (in Oslo) is used for receiving and sending the sound and image, via LOLA and Zoom video conference. Also a mixer is required to mix the sounds in the presenter’s place. Below we shall explain the signal chain and the way that audio/visual aspect of this presentation could be set up. See also the flowchart below for an overview of the different audio and video signals going between Trondheim, Oslo and streaming.</p>
+
+<figure align="middle">
+<img src="/assets/image/2019_01_30_stefanof_Flowchartstreaming.jpg" alt="Flowchart for the streaming setup" width="70%" />
+<figcaption align="middle"><strong>Flowchart for the streaming setup between Oslo and Trondheim.</strong></figcaption>
+</figure>
+
+<p>First we will look more thouroughly at the audio setup.
+    There could in this case be three audio sources in Trondheim, where the presenter is, and one in Oslo to pickup questions from the audience.
+    The audio sources in Trondheim consist of:</p>
+
+<ul>
+  <li>1 - Presenter Mic</li>
+  <li>2 - Presentation material (presenter’s laptop)</li>
+  <li>3 - Audience Mic</li>
+</ul>
+
+<p>Those sources are going to the mixer and then sent to Oslo and played back via LOLA system. The same thing happens with the sound from  Oslo. The audience mic in Oslo is going to be received in Trondheim via LOLA and then played back.
+    In the end, the sound from the mixer (consisting of all of the sound sources from the two sides) goes to the streaming computer and is played back in the stream.</p>
+
+<p>When it comes to the video, the process gets more complicated. Starting from the Trondheim’s side, there are three video sources.</p>
+<ul>
+  <li>1 - Presenter camera</li>
+  <li>2 - Presentation material (presenter’s laptop)</li>
+  <li>3 - Audience camera</li>
+</ul>
+
+<p>Also there is one camera in Oslo to capture the audience. For video communication, Zoom video conference software is used.
+    Starting from the presenter camera in Trondheim, It goes directly to the streaming computer. When it comes to audience cameras, the Trondheim one’s signal goes into a Blackmagic web presenter, which captures the video so it can be used in OBS, alongside the audience camera signal coming from Oslo. Then both are getting into the streaming computer and go into the stream. Zoom is being used in the streaming computer in order to share the presenter video with Oslo.
+    The presentation material’s video is directly going into the Zoom computer and going to be shared. That shall allow the Zoom software in the streaming computer to receive the video for streaming.
+    In regards of the displays, both places use two big screens. In Trondheim, one screen is receiving the audience signal from Oslo via Zoom and the other is showing the presentation material, again coming from the Zoom. In Oslo both screens receive their picture from Zoom as well and one is dedicated to presenter’s picture (since the presenter is not in Oslo) and one to the presentation material.</p>
+
+<p>That sums up the technical setup we have been using to stream talks from the Portal between Trondheim, Oslo and the wider web through Youtube.</p>
+
+<h3 id="final-remarks">Final Remarks</h3>
+<p>As stated, the setup described here is only how we have done it lately for the WoNoMute talks, but it is perhaps not the optimal solution, and more trials to improve on the setup are certainly ongoing. It is anyway indicative of the the complex but rewarding activity of connecting places and people, letting them take part in events when they are happening. Hopefully this has been an illuminating read, but if not, <a href="mailto:eigil94@gmail.com">we can probably be reached for answers to your questions</a>.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2019/01/30/portalvideotalkstreaming.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

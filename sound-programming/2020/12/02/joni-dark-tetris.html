@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Dark Tetris | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Dark Tetris" />
+<meta name="author" content="Joni Mok" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Scientific Computing assignment for a non-programmer, please don’t expect anything special when you see the title about DARK Tetris, even I really want to create that…" />
+<meta property="og:description" content="Scientific Computing assignment for a non-programmer, please don’t expect anything special when you see the title about DARK Tetris, even I really want to create that…" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/02/joni-dark-tetris.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/02/joni-dark-tetris.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/%5Cassets%5Cimage%5C2020_12_03_joni_dark_tetris.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-02T13:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/%5Cassets%5Cimage%5C2020_12_03_joni_dark_tetris.jpg" />
+<meta property="twitter:title" content="Dark Tetris" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joni Mok"},"dateModified":"2020-12-02T13:00:00+00:00","datePublished":"2020-12-02T13:00:00+00:00","description":"Scientific Computing assignment for a non-programmer, please don’t expect anything special when you see the title about DARK Tetris, even I really want to create that…","headline":"Dark Tetris","image":"https://smc-aau-cph.github.io/smc-cph.github.io/%5Cassets%5Cimage%5C2020_12_03_joni_dark_tetris.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/02/joni-dark-tetris.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joni Mok"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/02/joni-dark-tetris.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Dark Tetris
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-12-02T13:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 2, 2020 •
+      </time>
+         
+      <a href="/authors/jonimok.html">Joni Mok</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h4 id="what">What?</h4>
+
+<p>The final assignment in the Scientific Computing module was to take out self-chosen audio segments from two audio files, to analyse their features  and to combine them into one audio file. We also needed to visualise both songs and the slicing points and create a new csv file with the features that we have analysed with the help of the Librosa library.</p>
+
+<h4 id="what-resulted">What resulted?</h4>
+<p>I merged a piece of music from the game Tetris and a song called Veil of Elysium, originally by a power metal band called Kamelot.   Originally, I wanted to merge “Tetris” with the other song so as to give it a heavy metal quality, meaning that the rather cute sounding Tetris would become darker and heavier. Very unsurprisingly, as a novice Pythonista here, I ended up putting the “epic” (a style of Heavy Metal) beginnings of the two audio files into one. In addition, I focused on the downbeats (onsets) and set as a ¼ tempo.</p>
+
+<p>The version of Tetris I used was performed by London Philharmonic Orchestra and the recording of Veil of the Elysium was performed by the American power metal band called Kamelot. Both songs are in the Allegro to Vivace range (120 - 156 bpm), the average tempo is at 130 bpm. The expressions of both songs are quite different despite the fact that they both share rather epic introductions. Tetris is playful and Veil of Elysium is tense and a bit dystopian. The genres of both songs are obviously very different, however, from the music psychology point of view, the complexities of both genres are very similar and attracted similar listeners, such as introverts, whose minds crave for complexities and enjoy swimming in their train of thoughts. I have extracted the most epic beginnings from both files and simply put them together. (Feel free to laugh, it is a non-programmer way of doing programming).</p>
+
+<h4 id="process-and-why">Process and Why:</h4>
+<p>As I just mentioned with the onsets and tempo, these are the segments I have sliced, in a hope that it will make the downbeats clearer. The visualisation of this is, to be honest, quite boring, as you can see as below:</p>
+
+<p><img src="/assets/image/2020_12_04_joni_darktetris.png" alt="Slicing Audio Output" /></p>
+
+<p>Then, I extracted their average root-mean-square (RMS) and spectral centroids levels and created a new CSV file. While RMS quantifies the average level of a signal, RMS correlates more closely to our hearing, in this sense, I considered the timbre of both audio files. The spectral centroid is simply a measure used to characterise a spectrum of the digital signal it processes. In a nutshell, it indicates where the core spectrum is located - the brightness of a timbre. So, I tried to make the downbeats of the remix file clearer and brighter in its timbre.</p>
+
+<h4 id="lessons-learned">Lessons Learned:</h4>
+<p>I have to admit that I didn’t understand the array until this assignment, I finally learned how to play with it and twist it in order to program the ideas I have in my head. There is a lot to be explored in the audio field. Coming from the social sciences, humanities and architecture and design backgrounds, it took quite a while before I began to grasp the computing languages and communication styles. I noticed how terms have different meanings in different things in other fields, I also gained new insights by communicating with Team C.</p>
+
+<p>Ending with this small reflection of my final assignment for Sci-Com, I want to say thank you for the teaching program that was constantly improving and tailored for different types of learners. I have to admit that as a creative learner, thinking about spaces and visual terms are way easier than following verbal concepts step-by-step. I feel that the program changed along the way, and it helps my learning. Last but not least, I want to thank Stephen from Team C, who took his time and patience to help and explain with the codes in the past few weeks. Without these collaborations, I would have found it hard to  even finish the task. (Even if there will be a lot of weird errors, it is better than an incomplete assignment.)</p>
+
+<figure style="float: none">
+    <iframe width="800" height="480" src="https://www.youtube.com/embed/58exd3kJPZk" frameborder="0" allowfullscreen=""></iframe>
+    <figcaption>The output</figcaption>
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/12/02/joni-dark-tetris.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

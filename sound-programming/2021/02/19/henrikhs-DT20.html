@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tapeloop DT-20 | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Tapeloop DT-20" />
+<meta name="author" content="Henrik Sveen, Anders Lidal, Pedro Lucas, Stephen Gardener" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For the SMC4048 we wanted to make some looper with layers and FX. But what did we get? The DT-20, a 4-track inspired digital tape looper with FX channels and a ‘WASD’-mixer. Enjoy! - Stephen, Pedro, Anders &amp; Henrik" />
+<meta property="og:description" content="For the SMC4048 we wanted to make some looper with layers and FX. But what did we get? The DT-20, a 4-track inspired digital tape looper with FX channels and a ‘WASD’-mixer. Enjoy! - Stephen, Pedro, Anders &amp; Henrik" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/02/19/henrikhs-DT20.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/02/19/henrikhs-DT20.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_02_19_henrikhs_DT20front_cassette.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-19T20:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_02_19_henrikhs_DT20front_cassette.png" />
+<meta property="twitter:title" content="Tapeloop DT-20" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Henrik Sveen, Anders Lidal, Pedro Lucas, Stephen Gardener"},"dateModified":"2021-02-19T20:00:00+00:00","datePublished":"2021-02-19T20:00:00+00:00","description":"For the SMC4048 we wanted to make some looper with layers and FX. But what did we get? The DT-20, a 4-track inspired digital tape looper with FX channels and a ‘WASD’-mixer. Enjoy! - Stephen, Pedro, Anders &amp; Henrik","headline":"Tapeloop DT-20","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_02_19_henrikhs_DT20front_cassette.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/02/19/henrikhs-DT20.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Henrik Sveen, Anders Lidal, Pedro Lucas, Stephen Gardener"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/02/19/henrikhs-DT20.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Tapeloop DT-20
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-02-19T20:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 19, 2021 •
+      </time>
+         
+      <a href="/authors/henriksveen.html">Henrik Sveen,</a>
+           
+      <a href="/authors/anderslidal.html">Anders Lidal,</a>
+           
+      <a href="/authors/pedrolucas.html">Pedro Lucas,</a>
+           
+      <a href="/authors/stephengardener.html">Stephen Gardener</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: auto">
+   <img src="/assets/image/2021_02_19_henrikhs_DT20front.png" alt="" title="" width="auto" /> <figcaption></figcaption>
+</figure>
+
+<h4 id="the-idea">The Idea</h4>
+<p>The initial idea was to have a looper keeping track of each loop as a new layer, so it could be possible to browse your way through the history of the loop by muting and unmuting layers on the fly. In addition the idea included slicing of the chosen layer. Slicing based on some MIR in the style of the Scientific Computing exam from 2020. The reason would be that the looper then could «listen» to the loop layer and, based on what you played, reorganize the audio in slices giving you, the user, a new musical suggestion.
+After discussing ideas as a team, and after a week of work, we figured that we would have to aim for a slightly different approach to actually get the instrument working in time. After the first week we had the basic looper function plus nearly done effects to put in. What we wanted to implement was a way to send the loops into the effects and then feedback the effects back into the loop recorder so that it would gradually get more and more effected. An interesting looper approach seen in Mood by Chase Bliss Audio. We figured the best thing would be to simply start by including the effects as FX-return channels receiving send audio from the loops. A simple start. After some thinking it all worked, and we started playing around with the looper and figured this simple functionality was quite good. Considering the time we had left it felt like a better idea to focus on getting this idea to work properly rather than stepping away from it and maybe end up somewhere not so inspiring. So we did.</p>
+
+<h4 id="the-dt-20">The DT-20</h4>
+<p>The result is the DT-20, a 4-track style looper taking inspiration from tape looping in a digital manner. The recording and playback is driven by a «digital motor» which can be controlled by pitch and with wow and flutter. It’s a digital tape degrading audio in a digital way. To avoid sample drops and copies when recording the motor records 44100 samples/sec at double speed, meaning that when driving it at «normal speed» it records 22050 samples /sec. Calling it «normal speed» as you can decide yourself where 1:1 playback speed is by adjusting the speed parameter before starting the first recording. At lowest speed, half time, the sample rate is 10025. And then there is all the in-between values where the digital tape really shines with recorded sample degradation happening, adding charm and love to the recordings. The instrument has a stereo mixer/preamp (with overdrive on high volumes) with FX on sends. The effects will be described in separate parts of this post.
+The interface has a «semi hardware» approach. Since the instrument is based on old school lo-fi approach towards recording and music making, we felt that this should be reflected in the interface. So everything is computer keyboard controlled inspired by <strong><em>Commodore 64</em></strong> way of controlling the computer. We used the ascii-numbers for the keys to identify what key is being pressed, and the ascii is reflected in the interface of the instrument which is solely based on ascii as well. It’s an interface that allows you to monitor what you’re doing with the keys. Highly convenient. We slowly managed to use the keyboard without the interface, but it’s a tedious process of confusion and doubts. Especially when debugging other functionalities at the same time.
+The keyboard actions are mainly based on the position of the left hand around the ‘WASD’-keys. The mixer part is enabled by holding the shift key. We tried a lot of different approaches to this, also managing to make regular keys act as modulator keys, and really wanted this distinctly retro approach to interfacing feel natural in the century of touch screen. We’re not the ones to judge this, so we can only hope that you feel the same as us about this.</p>
+
+<figure style="float: none">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/afjwCwhPTUs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<figcaption>Demo of the DT-20 prototype</figcaption>
+</figure>
+
+<h4 id="the-philosophy">The Philosophy</h4>
+<p>Nothing is perfect, but some things may still be considered perfecterer than others. Many of us would argue that digital hi-fi is more perfect, in terms of audio quality, than an old gramophone record. And objectively many of us would kind of agree. But how these different different mediums color and affect the sound complicates the question of perfectness, lifting it to the domain of subjective opinions and musical taste or preferences.
+So for the DT-20 the approach to this topic is that degraded audio can have a positive and inspiring effect on recorded audio, playing back a slightly different sound quality than the one you put into it. It doesn’t sound like a good idea in writing, but the experience of it is playful and creative. Sometimes perfect isn’t the most interesting thing necessarily, sometimes you just want to go back to easier times - degrading in both time and audio.</p>
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_02_19_henrikhs_dt-20_demo2.mp3" type="audio/mpeg" />
+    Should show a media player
+  </audio>
+  <figcaption>An audio demo of the DT-20</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_02_19_henrikhs_dt-20_demo4.wav" type="audio/mpeg" />
+    Should show a media player
+  </audio>
+  <figcaption>Another audio demo</figcaption>
+</figure>
+
+<h3 id="the-effects">The Effects</h3>
+
+<h4 id="granola">Granola</h4>
+
+<p>This effect is a Csound unit that uses time-based granular synthesis techniques with additional effects. The diagram for the signal flow and parameter modification is shown in the following figure. The implementation details are given below.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_02_19_pedropl_granola_diagram.png" alt="" title="" width="auto" /> <figcaption></figcaption>
+</figure>
+
+<p>This unit is wrapped as an opcode that receives an input signal with the possibility to modify six parameters. The main process is performed by the opcode <strong><em>Partikkel</em></strong> which allows a wide flexibility to manipulate time-based granulation. Most of the input data that this opcode receives is the default and other fixed parameters in which some important ones are: the envelope with its corresponding ratios, random positioning for the source wave, and a mask to distribute grains in three outputs. The user can modify the grain frequency and grain duration for the <strong><em>Partikkel</em></strong>.</p>
+
+<p>After getting the three output signals from the granular processor, each one is scaled in terms of amplitude by considering the overlapping of grains to avoid distortion, an ‘Amplitude factor’ is calculated and applied to the outputs for this purpose. Then, each signal is scaling by pitch randomly between semitones -12, -7, -4, - 3, 0, 3, 4, 7, 12 as well as displaced by the semitone factor given by the user. The results after the pitch process try to mimic a kind of chord that is obtained by the addition of the three signals and the right scaling. The next step in the chain is the application of a low pass filter in which the user can change the cut off frequency and the resonance, after this operation the signal is passing through an expander due that the previous amplitude scaling could be more than necessary because of the envelope, so this is a way to bring to better levels. Finally, a sine LFO is used to produce two signals with a moving stereo effect, which will be the final outputs for this unit.</p>
+
+<h4 id="milk-aka-meshverb">Milk (AKA meshverb)</h4>
+<p>Milk, the DT-20s reverb unit, started out as a waveguide based spring reverb emulation. When we realised the potential of the waveguide approach, a multitude of meshes of different shapes, sizes and complexity emerged. The configuration possibilities seemed endless, being able to route audio into and out of any point on the mesh, and being able to use varying delay times to give different nodes of the mesh different physical properies. All this complexity had to be tamed, not least because it was so easy to drive the thing into uncontrolled feedback. So we decided on a preset system, with each preset using a particular shaped mesh and pre-configured input/output locations, delay and feedback times.</p>
+
+<h4 id="bread">Bread</h4>
+<p>Combining grains makes a bread. Initially Anders wanted to work with effects inserted inside the looper, for experimenting with different degrading over time, but as we didn’t get to implement that function, he decided to work with the ‘partikkel’ opcode, and make some time-skewed presets with long grains (breads). So he ended up with five pretty nice presets (IHO at least) where the two of four breads where delayed (one of them fixed at 300 ms, the other one from 5 to 5000 ms), and reverberated, as well as panned. Anders being in love with the EHX DMM, the presets are very audible, but pretty subtle at the same time. You can easily use them without disturbing your original signal, according to him. He describes the five presets:</p>
+
+<h5 id="no1">No1</h5>
+<p>0.5 grain/sec, long grains with no enveloping/windowing, some grains reverberated and delayed 900 ms. Try plucking instrument.</p>
+<h5 id="no2">No2</h5>
+<p>1.6 grain/sec, slow attack, some grains reverberated and delayed 2750 ms. Try droning.</p>
+<h5 id="no3">No3</h5>
+<p>2 grains/sec, slower attack, some grains heavily reverberated. Try drones and plucking.</p>
+<h5 id="no4">No4</h5>
+<p>5 grains/sec, slowest attack, low reverberation. Try plucking and droning.</p>
+<h5 id="no5">No5</h5>
+<p>15 grains/sec, middle attack, some grains reverberated and delayed 5 sec. Try drones and plucking.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2021/02/19/henrikhs-DT20.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

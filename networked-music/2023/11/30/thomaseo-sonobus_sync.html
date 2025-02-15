@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sync your synths and jam over a network using Sonobus | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Sync your synths and jam over a network using Sonobus" />
+<meta name="author" content="Tom Oldfield" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A quick start guide to jamming over a network. Designed for instruments which can synchronize using an analog clock pulse." />
+<meta property="og:description" content="A quick start guide to jamming over a network. Designed for instruments which can synchronize using an analog clock pulse." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/11/30/thomaseo-sonobus_sync.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/11/30/thomaseo-sonobus_sync.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_11_30_thomaseo_sonobus-sync6.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-30T08:48:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_11_30_thomaseo_sonobus-sync6.jpg" />
+<meta property="twitter:title" content="Sync your synths and jam over a network using Sonobus" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tom Oldfield"},"dateModified":"2023-11-30T08:48:00+00:00","datePublished":"2023-11-30T08:48:00+00:00","description":"A quick start guide to jamming over a network. Designed for instruments which can synchronize using an analog clock pulse.","headline":"Sync your synths and jam over a network using Sonobus","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_11_30_thomaseo_sonobus-sync6.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/11/30/thomaseo-sonobus_sync.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Tom Oldfield"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/11/30/thomaseo-sonobus_sync.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Sync your synths and jam over a network using Sonobus
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-11-30T08:48:00+00:00"
+        itemprop="datePublished"
+      >Nov 30, 2023 •
+      </time>
+         
+      <a href="/authors/tomoldfield.html">Tom Oldfield</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h3 id="introduction">Introduction</h3>
+<p>In this post we are going to use Sonobus to set up a simple jam session between two locations over the internet, designed for electronic instruments with a built in sequencer. The primary location (referred to as the ‘Hub’) will send audio alongside an analog clock pulse. The secondary location (the ‘Node’) will receive these and in turn, send back it’s own audio. There are multiple ways to achieve this effectively, here’s just one way to do it. This technique is referred to as Forward Synchronisation.</p>
+
+<h3 id="equipmentsoftware-checklist">Equipment/software checklist</h3>
+<p>The equipment/software both locations will need are as follows:</p>
+
+<ul>
+  <li>Network cable (plus USB adapter if necessary)</li>
+  <li>Sonobus software (with plug ins)</li>
+  <li>External sound card (with 3 or more outputs for the Node)</li>
+</ul>
+
+<p>The Hub also needs Ableton Live or similar DAW that can delay individual tracks.</p>
+
+<p>You may have to adapt this setup to match the instruments you want to use. At the Hub, I used a Roland TR8s drum machine connected to Ableton Live through USB midi. At the Node, a KORG Monologue which receives analog clock from the 3rd output an external sound card.</p>
+
+<p>Sonobus is free software which enables peer to peer transmission of audio over the internet. You can download and read more about it <a href="https://www.sonobus.net/"><em>here</em></a>. Sonobus is also available as a plugin so you can run it from inside your DAW of choice.</p>
+
+<h3 id="step-1---connecting-to-a-network">Step 1 - Connecting to a network</h3>
+
+<p>Although it is possible to use Sonobus over wifi, it is highly recommended to use a network cable. From my testing of this setup, not using a cable increases the latency by around 80ms, enough to make playing any type of instrument feel uncomfortable. Once you have connected the cable, the Node should find their IP address by looking in the network settings on your computer.</p>
+
+<h3 id="step-2---starting-a-session-in-sonobus">Step 2 - Starting a session in Sonobus</h3>
+
+<p>The node can now open Sonobus and click ‘connect’. This opens a menu where you can give your session a name, an optional password and choose a display name (this can be handy to label yourself ‘Node’). Under the ‘connect to group’ button there is a box called ‘Connection Server’. Here you can enter your IP address. The last thing we need to do is allocate a port number. For Sonobus, this is 10999. The IP address and port number should be separated by a colon like this:</p>
+
+<p><img src="/assets/image/2023_11_30_thomaseo_sonobus-sync1.jpg" width="60%" style="display: block; margin: auto;" /></p>
+
+<p>Once this is entered, click ‘Connect to Group’. If it fails to connect, double check your IP address and consult the guide on the Sonobus website. Copy your IP address and node to send to the Hub because they will need to enter the same information.</p>
+
+<p>Now the Hub can also open Sonobus but this time as a plug in in Ableton Live. I recommend using Sonobus on a return track. Input the same information as the Node (except change the display name to ‘Hub’) and click connect.</p>
+
+<h3 id="step-3---sending-audio">Step 3 - Sending audio</h3>
+
+<p>The Hub can make a new track, make sure you have signal coming in and sync with Ableton Live in which ever way suits your set up best. For me this is through USB Midi. For the purposes of setting up and adjusting the connection, make a simple sequence that it easy to rhythmically hear (like a metronome or 4 to the floor kick with a short decay time). Next make the track ‘sends only’ and send signal to the return track with Sonobus on it. If you open the plug in, you sound now see signal coming in, being sent to the Node and hear it from the return track.</p>
+
+<p>The Node can also set up their instrument and send audio back. Check the correct sound card is selected and that uncompressed audio is being sent (PCM 16 bit) in the global settings. Clicking the ‘Input Mixer’ opens more settings to select the correct input channel.</p>
+
+<p><img src="/assets/image/2023_11_30_thomaseo_sonobus-sync2.jpg" width="60%" style="display: block; margin: auto;" /></p>
+
+<h3 id="step-4---sending-clock">Step 4 - Sending clock</h3>
+
+<p>It is <strong>very important</strong> to remember that clock pulses are <strong>extremely loud</strong> so remember that <strong>everyone</strong> should <strong>remove headphones/mute outputs</strong> while we set up the clock. The Hub should make a new Midi track with a Drum Rack on. We are going to send a sample of an audio pulse every 16th note. <a href="https://www.ableton.com/en/blog/midi-cv-link-sync-many-ways-connecting-modular-gear-live/"><em>This</em></a> article from Ableton links to a free download of an audio clock pulse and has some further information on syncing modular gear with Live.</p>
+
+<p>Make a new return track with a fresh instance of Sonobus. Connect to the same session as before with a display name ‘Clock’ and mute the Hub and the Node. A mono signal is fine to send here (this can be changed in the top centre of the window) but make sure the clock is also being sent as uncompressed audio. Now follow the same audio routing as before except send to the second return track. Go back to the first instance of Sonobus and mute the clock.</p>
+
+<p>Now the Node should be receiving the clock signal. This can be routed out the 3rd output of the sound card and into the sync input of the instrument. Check that you are not hearing any clock in your headphones. Now test that the clock is reaching the instrument and that control of start/stop transport is taken over by the clock. You might have to adjust some settings on the instrument for this to function correctly (it is possible to skip this step and just start the sequencer manually on the first beat).</p>
+
+<h3 id="step-5---synchronizing-latency">Step 5 - Synchronizing latency</h3>
+
+<p>Finally we need to synchronize the instruments. This can be a bit of trial and error because we are trying to find a balance. The ideal situation for the network is to have a large delay buffer, but the best thing for us playing the instruments is to have as small of a jitter buffer as possible. First the Node should go to the clock and set the latency to manual, a good number to start with is 20ms.</p>
+
+<p><img src="/assets/image/2023_11_30_thomaseo_sonobus-sync3.jpg" width="60%" style="display: block; margin: auto;" /></p>
+
+<p>Next the Hub also needs to delay the clock being sent to their instrument by the same amount. In my case, I can delay the Midi clock in Ableton’s settings.</p>
+
+<p><img src="/assets/image/2023_11_30_thomaseo_sonobus-sync4.jpg" width="60%" style="display: block; margin: auto;" /></p>
+
+<p>Finally both people need to adjust the latency of the audio they are receiving and the monitor audio of their own instruments. As before with the clock, set the jitter buffer to 20ms. Then delay their own monitoring by opening the input mixer and clicking the button M.FX. The Additional Monitoring Delay button should be highlighted blue when activated.</p>
+
+<p><img src="/assets/image/2023_11_30_thomaseo_sonobus-sync5.jpg" width="60%" style="display: block; margin: auto;" /></p>
+
+<h3 id="testing-and-tweaking">Testing and tweaking</h3>
+
+<p>Test out the connection by starting and stopping the clock, getting it running in time and waiting to see if it goes out of sync. If this happens, repeat the steps in this section with a higher number, remembering to change all settings to the same number. If you are hearing some latency but the timing seems consistent this could be down to latency within your system (all setups have some degree of latency) so you can manually adjust the Additional Monitoring Delay until the instruments synchronize. Underneath is a flow chat to help visualise the signal path. Good luck and happy jamming!</p>
+
+<p><img src="/assets/image/2023_12_13_thomaseo_sonobus-sync6.jpg" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2023/11/30/thomaseo-sonobus_sync.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

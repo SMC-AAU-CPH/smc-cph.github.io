@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Connecting Eigenrhythms and Human movement | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Connecting Eigenrhythms and Human movement" />
+<meta name="author" content="Olav Utne Skjeldal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Connecting Machine Learning and Human understanding of rhythm." />
+<meta property="og:description" content="Connecting Machine Learning and Human understanding of rhythm." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2024/04/28/olavus-eigenryths.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2024/04/28/olavus-eigenryths.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_04_28_olavus_fig7.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-28T07:30:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_04_28_olavus_fig7.png" />
+<meta property="twitter:title" content="Connecting Eigenrhythms and Human movement" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Olav Utne Skjeldal"},"dateModified":"2024-04-28T07:30:00+00:00","datePublished":"2024-04-28T07:30:00+00:00","description":"Connecting Machine Learning and Human understanding of rhythm.","headline":"Connecting Eigenrhythms and Human movement","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_04_28_olavus_fig7.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2024/04/28/olavus-eigenryths.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Olav Utne Skjeldal"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2024/04/28/olavus-eigenryths.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Connecting Eigenrhythms and Human movement
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2024-04-28T07:30:00+00:00"
+        itemprop="datePublished"
+      >Apr 28, 2024 •
+      </time>
+          Olav Utne Skjeldal   </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>This blog post explores a machine learning pipeline designed to classify music genres based on MIDI drum patterns and how to relate it to human movement.</p>
+
+<p>Two different CNN models is proposed that aim to discern rhythm data from the accelerometers in smartphones, bridging the gap between music analytics and human movement. Much like how we instinctively nod along to the groove of a song, this project seeks to delve deeper into this intuitive interaction.</p>
+
+<p>The objective here is not just to identify well-known rhythmic patterns but also to provide insights into how these rhythms are physically executed. Exploring the “feel” of a genre’s groove to see if machine learning can enhance our understanding of, and interaction with, musical rhythms.</p>
+
+<p>A lot of the work done is based on the idea of “eigenrhythms”, which by John Arroyo et. al, is defined as an high dimensional rhythm pattern, which has been reduced to a lower-dimensional representation [2].</p>
+
+<p>By using movement data, in this case provided by a phone’s accelerometers, we can then try to create a one dimensional rhythm and see what genre the model would classify it as. In the video we can see how the accelerometer data is generated, and in figure 1 we can see what genre one of the model classified my rhythm with.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2024_04_28_olavus_vid1.mp4" type="video/mp4" width="60%" />
+  </video>
+    <figcaption>Video 1: Showing what gets analyzed
+</figcaption>
+</figure>
+
+<figure style="float: none">
+    <img src="/assets/image/2024_04_28_olavus_fig1.png" width="70%" />
+    <figcaption>Figure 1: Results from PCA-CNN Model trained on 10 Genres analysing the movement from Video 1
+</figcaption>
+</figure>
+
+<h2 id="dataset">Dataset</h2>
+<p>The dataset used is made by Magenta [1] and contains over 1,150 midi files, performed by 10 different drummers playing up to 17 different genres. The dataset is however skewed where there is definitely most rock, jazz and latin songs, which does effect the result somewhat.</p>
+
+<h2 id="data-processing">Data processing</h2>
+<p>This pipeline uses signal processing and machine learning techniques, including Principal Component Analysis (PCA) and convolutional neural networks (CNNs).</p>
+
+<p>The first step of preproccesing the data is sequencing the midi data to not overload the CNN with too much data at once. As the goal is for the model to recognize temporal patterns, I have segmented each midi file into 2 bars with 32 timesteps. We can see one such representation in the picture here, showing 22 drum instruments, over 32 timesteps.</p>
+
+<figure style="float: none">
+    <img src="/assets/image/2024_04_28_olavus_fig2.png" width="70%" />
+    <figcaption>Figure 2: Piano roll example of 22 drum instruments, 32 timesteps</figcaption>
+</figure>
+
+<p>PCA allows for these methods allow the system to effectively reduce dimensionality and highlight critical features within the data. It works by identifying the axes (principal components) along which the variance of the data is maximized.</p>
+
+<p>In figure 3 we can see the same drum roll in figure 2after it has been reduced to a one dimentional eigenrhythm using the first (best) principle component.</p>
+
+<figure style="float: none">
+    <img src="/assets/image/2024_04_28_olavus_fig3.png" width="70%" />
+    <figcaption>Figure 3: CNN input after figure 2 has gone through PCA layer
+</figcaption>
+</figure>
+
+<p>Another method introduced is Linear Discriminant Analysis (LDA). It is employed in machine learning and statistics to improve class separability by finding a lower-dimensional space that enhances the distinction between class means while minimizing in-class variance. This layer could further help discriminate between genres.</p>
+
+<h2 id="cnn">CNN</h2>
+<p>First a baseline CNN model was made. It trained on several thousand segments with 22 instrument dimensions over 32 timesteps as in figure 2, to recognize the statistical patterns in the temporal dimension of the midi signal.</p>
+
+<figure style="float: none">
+    <img src="/assets/image/2024_04_28_olavus_fig4.png" width="70%" />
+    <figcaption>Figure 4: Normalized confusion matrix for CNN model trained on 10 genres
+</figcaption>
+</figure>
+
+<p>Two eigenrtyhm models were proposed to expand on the baseline CNN model. One model used a PCA layer on each timestep, finding statistical variations for each timesteps, reducing every step down to 1 dimension as seen in figure 3. The other used a global PCA layer to reduce down to 5 dimension, and then a LDA layer to further reduce down to 1 dimension.</p>
+
+<figure style="float: none">
+    <img src="/assets/image/2024_04_28_olavus_fig5.png" width="70%" />
+    <figcaption>Figure 5: Normalized confusion matrix for PCA CNN model trained on 10 genres. One can see it has lower scores and skewes more towards rock
+</figcaption>
+</figure>
+
+<figure style="float: none">
+    <img src="/assets/image/2024_04_28_olavus_fig6.png" width="70%" />
+    <figcaption>Figure 6: Normalized confusion matrix for PCA LDA CNN model trained on 10 genres. One can its similar accuracy to the PCA CNN model
+</figcaption>
+</figure>
+
+<p>The eigenrhythm models definitely decreased the accuracy compared to the baseline CNN. Which is not strange as there are now 21 less dimensions the CNN can train on. The change is however only around 5–10% depending on how many genres the model is trained on.</p>
+
+<p>If only the classification was in focus, the pure CNN model might still have the best results, but to explore the eigenrhythms and relate it to the movement data, it is imperative to reduce the dimensions down to 1 to be able to compare the data.</p>
+
+<figure style="float: none">
+    <img src="/assets/image/2024_04_28_olavus_fig7.png" width="70%" />
+    <figcaption>Figure 7: 3D PCA Analysis
+</figcaption>
+</figure>
+
+<p>Using repeated k-fold analysis the different models, I got these results:</p>
+
+<figure style="float: none">
+    <img src="/assets/image/2024_04_28_olavus_fig8.png" width="70%" />
+    <figcaption>Figure 8: Repeated k-fold accuracy results with 10 folds repeated 5 times
+</figcaption>
+</figure>
+
+<h2 id="connecting-to-movement-data">Connecting to movement data</h2>
+<p>For accelerator data, I have used an app called phyphox (but any similar app would work), which simply records accelerator data from my phone, and exports it as a CSV file (Type:Comma, decimal point). When loading the data, it puts it into an empty 22x32 matrix, and then uses the same PCA filter as the model is trained on to reduce it down to 1 dimension again, and then feed back into the PCA-CNN or PCA-LDA-CNN model to make an prediction. It does however matter what type of data the model is trained on.</p>
+
+<p>After having trained the model on the chosen genres, I then wanted to see how this relate to how we humans would “feel” the rhythm of a genre. Since the model is trained on a large viarity of samples, it could be able to identify some of the same patterns. If the model is only trained on jazz &amp; rock, the model would simply output if they think your rhythm is more alike rock, or more alike jazz. The model utilizes a softmax filter at the end which simply picks the genre based on the highest probability. So if it was very unsure, but thought it was 51% rock and 49% jazz, it would say that it think your rhythm is rock with 51% confidence.</p>
+
+<p>Having more genres increases the possibilities, but having consistent larger than 1/n in predicted outcome, where n is number of genres, would imply the prediction is based on more than just pure probability.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>The work here is a continuation on the idea of “eigenrhythm”, and to see if there is a connection to how we “feel” rhythm. There are a lot of variables that could be tweaked to improve all the aspects of the pipeline, and even more that could be added. Using a mocap suit would increase the number of movement dimensions available, increasing the number of dimensions the model can be trained on.</p>
+
+<p>It can have practical applications of drum training tools. By tailoring the training datasets to specific needs — whether different musical genres or distinct styles within a band’s discography. This approach not only allows for genre-specific training but also enables exploration of diverse rhythmic “grooves,” potentially changing the way we understand and teach musical rhythm.</p>
+
+<h2 id="sources">Sources</h2>
+
+<p>[1] <a href="https://magenta.tensorflow.org/datasets/groove">https://magenta.tensorflow.org/datasets/groove</a></p>
+
+<p>[2] <a href="https://academiccommons.columbia.edu/doi/10.7916/D8PG2230Links">https://academiccommons.columbia.edu/doi/10.7916/D8PG2230Links</a></p>
+
+<p>[3] <a href="https://www.mdpi.com/2227-7390/10/23/4604">https://www.mdpi.com/2227-7390/10/23/4604</a></p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2024/04/28/olavus-eigenryths.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

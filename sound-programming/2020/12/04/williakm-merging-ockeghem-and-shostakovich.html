@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Chop it Up: Merging Rearranged Audio | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Chop it Up: Merging Rearranged Audio" />
+<meta name="author" content="Willie Mandeville" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Taking beautiful music and making it less so." />
+<meta property="og:description" content="Taking beautiful music and making it less so." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/04/williakm-merging-ockeghem-and-shostakovich.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/04/williakm-merging-ockeghem-and-shostakovich.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_04_williakm_scissors.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-04T13:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_04_williakm_scissors.jpeg" />
+<meta property="twitter:title" content="Chop it Up: Merging Rearranged Audio" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Willie Mandeville"},"dateModified":"2020-12-04T13:00:00+00:00","datePublished":"2020-12-04T13:00:00+00:00","description":"Taking beautiful music and making it less so.","headline":"Chop it Up: Merging Rearranged Audio","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_04_williakm_scissors.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/04/williakm-merging-ockeghem-and-shostakovich.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Willie Mandeville"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/04/williakm-merging-ockeghem-and-shostakovich.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Chop it Up: Merging Rearranged Audio
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-12-04T13:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 4, 2020 •
+      </time>
+         
+      <a href="/authors/williemandeville.html">Willie Mandeville</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="the-task">The Task</h2>
+<p>After several weeks of learning the basics of Python in the Scientific Computing module of SMC4000, the reckoning finally arrived: the final exam.</p>
+
+<p><em>The mission, should you choose to accept it (and you better):</em>
+Combine and reorganize segments of audio from two distinct audio files in an order dictated by a specific trait. Here’s how it went for me.</p>
+
+<p>As the aural qualities of the final reorganized audio file didn’t matter within the context of this assignment, I didn’t spend a whole lot of time considering the musical properties of my two files. My only aural interest in these selections was ensuring that the instrumentation between my source files was noticeably different.  I selected a Kyrie from a Mass by Johannes Ockeghem and a Fugue for piano by Dmitri Shostakovich. Each less than two minutes long, these selections are both fairly monochromatic in texture, but I find them pleasing.</p>
+
+<p>Having selected these two pieces, I then decided to divide each into 5-second segments and reorganize these segments by ascending maximum amplitude within each segment. All fairly straightforward once I wrapped my head around the right steps.</p>
+
+<p>Because these audio files are, of course, copyrighted I won’t be including them here in my post, but do yourself a favor and go look these pieces up. They’re the opening Kyrie from Ockeghem’s <em>Missa prolationum</em> and the second Fugue from Shostakovich’s <em>24 Preludes and Fugues</em>.</p>
+
+<p>The rearranged final file is not particularly interesting sounding as a piece of music, but does yield some interesting points for consideration, particularly when its visualization is examined.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_12_04_williakm_audiovisualization.png" alt="The Score" title="Comparing Amplitudes" width="auto" /> <figcaption>Comparing Amplitudes</figcaption>
+</figure>
+
+<p>Because the segments were ordered by peak amplitudes within each segment, there was no guarantee that the general aural aesthetic of each one would actually trend higher amplitude as the file progressed. This can be seen in the visualization above particularly toward the end of the combined piece where there actually is a visible segment characterized by low amplitude. Since this segment also happens to contain an accented downbeat, it has a moment of high enough amplitude to appear late in the rearranged file. A rearrangement of the 5-second segments by average amplitude within each one would likely have yielded a noticeable different structure.</p>
+
+<p>Another element of this combination of files that I find interesting, and the driving force behind why I wanted files with different instrumentations, is the matter of how sonic structure is actually a key element in how ensemble music is shaped. Although I’m certainly not an expert in recording strategies for vocal music or piano music, it seems obvious that different approaches must be taken. The Kyrie, coming initially from the mouths of several singers, in comparison to the Fugue, featuring multiple voices that all emanate from a single source, raises questions for me about musical shape. Once the multiple voices get involved in the Kyrie, the amplitude shown in its visualization never seems to dip to the same degree that the Fugue’s amplitude does in the course of its duration.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_12_04_williakm_kyrie1.png" alt="The Score" title="Kyrie Shape" width="auto" /> <figcaption>Kyrie Shape</figcaption>
+</figure>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_12_04_williakm_fugue1.png" alt="The Score" title="Comparing Amplitudes" width="auto" /> <figcaption>Fugue Shape</figcaption>
+</figure>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Since the point of these blog posts isn’t to list line-by-line the specifics of each line of our code but to instead briefly outline some thoughts concerning how and what we produced, I’ll leave these last thoughts here. Is the audio I produced here very interesting? No, not at all. Would it be a victory for anyone who had been using Python for more than a few weeks? Definitely not. Was it a victory for me? Absolutely.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/12/04/williakm-merging-ockeghem-and-shostakovich.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

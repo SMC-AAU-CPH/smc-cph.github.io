@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setting up a controlled environment | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Setting up a controlled environment" />
+<meta name="author" content="Joseph Clemente, Kristian Wentzel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Taking advantage of light-weight control messages to do Networked Music Performances" />
+<meta property="og:description" content="Taking advantage of light-weight control messages to do Networked Music Performances" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/04/24/kriswent-using-udp-and-osc-for-nmp.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/04/24/kriswent-using-udp-and-osc-for-nmp.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_04_25_kriswent_TakeControl.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-04-24T21:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_04_25_kriswent_TakeControl.jpg" />
+<meta property="twitter:title" content="Setting up a controlled environment" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joseph Clemente, Kristian Wentzel"},"dateModified":"2022-04-24T21:00:00+00:00","datePublished":"2022-04-24T21:00:00+00:00","description":"Taking advantage of light-weight control messages to do Networked Music Performances","headline":"Setting up a controlled environment","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_04_25_kriswent_TakeControl.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/04/24/kriswent-using-udp-and-osc-for-nmp.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joseph Clemente, Kristian Wentzel"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/04/24/kriswent-using-udp-and-osc-for-nmp.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Setting up a controlled environment
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-04-24T21:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 24, 2022 •
+      </time>
+         
+      <a href="/authors/josephclemente.html">Joseph Clemente,</a>
+           
+      <a href="/authors/kristianwentzel.html">Kristian Wentzel</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><!-- Alternative title: "Give and take control!" -->
+
+<p>As SMC students, we have been exposed to Networked Music Performances (<a href="https://en.wikipedia.org/wiki/Networked_music_performance">NMP</a>) – both in theory by reading up on the technology and research in the field, and in practice by arranging our own NMP concerts. We’ve been introduced to different approaches in coping with latency issues introduced when playing together in real-time by sending raw audio between each location. Are there other ways to perform music together over the internet which are not as demanding in regards to bandwidth and latency? We’ve looked into using lightweight control messages to create and manipulate music together. This can be done in an interactive, interdependent setting where each participant is creating music locally while influencing the music-creation process of the other(s). It can also be a setting where some participants are <em>manipulators</em> and others are <em>creators</em>, where the manipulators influence the outcome of the creators. In this tutorial, we will introduce and explain three simple, network-based musical examples using UDP messages through network connections and with the OSC protocol.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_04_05_kriswent_controlled_environment.jpeg" alt="Controlled Environment" title="" width="80%" />
+   <figcaption><i>Photo: Yasin Hasan</i></figcaption>
+</figure>
+
+<h3 id="udp">UDP</h3>
+
+<p>Let’s start with the User Datagram Protocol (<a href="https://en.wikipedia.org/wiki/User_Datagram_Protocol">UDP</a>), which is one of the main protocols computer applications use to send and receive messages over an Internet Protocol (<a href="https://en.wikipedia.org/wiki/Internet_Protocol">IP</a>) network. The other common protocol for sending messages through the network is known as the Transmission Control Protocol (<a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a>). This is slower than UDP, but much more reliable. TCP is connection-oriented, establishes a connection before transmitting, and expects confirmation messages back from the receiver. UDP on the other hand is a connectionless communication model which does not send or receive confirmation messages. This makes it more unreliable overall, but is much simpler and faster – the perfect choice for us! UDP is often ideal for musical contexts, since we care more about fast connections than sending and receiving every message exactly correct.</p>
+
+<h2 id="example-1-pure-data">Example #1: Pure data</h2>
+
+<p>One simple way to use UDP in a musical context is through the application <a href="https://puredata.info/">Pure Data</a>. Music in Pure Data is created and manipulated using “objects”, such as a phasor and reverb. Two of the key objects in our Pure Data patch are “netsend” and “netrecieve”, which give the user the ability to collaborate with others across a network. In our small <a href="https://youtu.be/AYnd_vlNUxY?t=162">example</a>, two users are controlling each other’s synthesizer patch. The user on the left is controlling song tempo and presets, while the user on the right is controlling vibrato and low-pass filter cutoff. Notice how when a user change each of these parameters on their device, it concurrently changes other user’s patch.</p>
+
+<h3 id="osc">OSC</h3>
+
+<p>So now that we know what UDP is, what is <a href="https://en.wikipedia.org/wiki/Open_Sound_Control">OSC</a>? OSC stands for Open Sound Control, and it is a protocol that allows different devices connected on the same networks or through the internet to send messages to each other. It is much like <a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> in many ways, but way more flexible. For our upcoming OSC example, one is manipulating the other music creator over internet through UDP.</p>
+
+<p>To do this, each participant first needs to know their public IP address. Preferably, you would want a static IP address for this, but that could prove difficult – as there are not enough static IPs for everyone. This usually won’t be an issue, but you would want to check if your public IP is still the same before starting a new NMP session, since dynamic IPs are – well – <em>dynamic</em>. Your public IP can easily be found by simply <a href="https://www.google.com/search?q=what+is+my+ip">googling</a> it.</p>
+
+<p>The second thing to take care of before jamming out and broadcasting OSC messages across the internet, is to configure port forwarding on your LAN router<sup><b><a href="#Footnotes">[1]</a></b></sup>. (Look up your router address in your network settings, e.g. <a href="http://192.168.0.1/">192.168.0.1</a>) This part makes it hard, or even impossible, to do this through a public Wi-Fi, at campus, or even at your friend’s house. Some <a href="https://en.wikipedia.org/wiki/Internet_service_provider">ISP</a>’s won’t even let their customers access such settings on their router.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_04_25_kriswent_PortForwarding.png" alt="Port Forwarding" title="" width="80%" />
+   <figcaption><i>An example of port forwarding in the router settings.</i></figcaption>
+</figure>
+
+<p>The good thing is that this setup only needs to be done on the receiver’s end, due to the nature of UDP messages not establishing a two-way connection. If we assume a setting where one is controlling the other, the sender only needs to know the public IP of the receiver and decide on a <a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">port</a>. The receiver then needs to know the public IP of the sender and do port forwarding of messages from the chosen port of that IP to their local IP address (on an arbitrary port). <em>Note: Under such circumstances, TCP would’ve not worked.</em></p>
+
+<h2 id="example-2-bespokesynth">Example #2: BespokeSynth</h2>
+
+<p>Let’s show an <a href="https://youtu.be/AYnd_vlNUxY?t=378">example</a> of a one-way NMP using <a href="https://www.bespokesynth.com/">BespokeSynth</a> where Joseph is located at the SMC campus in Oslo, manipulating the music creation process of Kristian residing in Nittedal. We are using the modules ‘oscoutput’ to send, and ‘osccontroller’ to receive messages.</p>
+
+<h3 id="adding-layers-of-complexity">Adding layers of complexity</h3>
+
+<p>The cloud is the limit (pun intended) for how you could take advantage of this technology for creative purposes. In our final example we’re seasoning OSC with accelerometer data from a phone, and a Machine Learning model in Python. The model is trained on 4 different gestures, and its output are scaled and converted back to OSC messages. We’re running Python and the music software on the same computer, but this could’ve been happening on different devices in different locations.</p>
+
+<h2 id="example-3-sonic-pi">Example #3: Sonic Pi</h2>
+
+<p><a href="https://youtu.be/AYnd_vlNUxY?t=528">Here</a> is our last brief example, using <a href="https://sonic-pi.net/">Sonic Pi</a> and based around a loop of the ‘Amen’ break. The gestures are controlling cutoff and beat_stretch rate of the loop.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>In summary, we have gone through the basics of UDP and OSC, as well as three different ways to use these tools to create and manipulate music across networks. What we have shown here is only the beginning in terms of the possibilities afforded by playing music through networks. This blogpost is accompanying our video tutorial found below.</p>
+
+<figure style="float: none">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/AYnd_vlNUxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</figure>
+
+<p>We hope that you take what we have taught in this video as a basis to explore further and create your own NMP someday soon!</p>
+
+<hr />
+
+<h3 id="footnotes"><a name="Footnotes">Footnotes</a></h3>
+<p><sup>[1]</sup> Take a look at the <a href="https://portforward.com/">Port Forward</a> webpage for more information on how to configure your router.</p>
+
+<p><sup>[2]</sup> For more advanced and reliable use of OSC over UDP, look up ‘Time Tags’ in the <a href="https://opensoundcontrol.stanford.edu/spec-1_0.html">Open Sound Control Specification</a>.</p>
+
+<p><sup>[3]</sup> CNMAT have released <a href="https://github.com/CNMAT/CNMAT-odot">ODOT</a>, a set of externals for even more advanced use of OSC in Pure data and Max/MSP.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2022/04/24/kriswent-using-udp-and-osc-for-nmp.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

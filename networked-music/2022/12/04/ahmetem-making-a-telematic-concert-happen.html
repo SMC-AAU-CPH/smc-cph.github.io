@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Making A Telematic Concert Happen - A Quick Technical Look | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Making A Telematic Concert Happen - A Quick Technical Look" />
+<meta name="author" content="Emin Memis, Nino Jakeli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background of A Telematic Experience" />
+<meta property="og:description" content="Background of A Telematic Experience" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/12/04/ahmetem-making-a-telematic-concert-happen.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/12/04/ahmetem-making-a-telematic-concert-happen.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_04_ahmetem_mid_semester_concert.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-04T03:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_04_ahmetem_mid_semester_concert.jpg" />
+<meta property="twitter:title" content="Making A Telematic Concert Happen - A Quick Technical Look" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emin Memis, Nino Jakeli"},"dateModified":"2022-12-04T03:00:00+00:00","datePublished":"2022-12-04T03:00:00+00:00","description":"Background of A Telematic Experience","headline":"Making A Telematic Concert Happen - A Quick Technical Look","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_04_ahmetem_mid_semester_concert.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/12/04/ahmetem-making-a-telematic-concert-happen.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Emin Memis, Nino Jakeli"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/12/04/ahmetem-making-a-telematic-concert-happen.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Making A Telematic Concert Happen - A Quick Technical Look
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-12-04T03:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 4, 2022 •
+      </time>
+         
+      <a href="/authors/eminmemis.html">Emin Memis,</a>
+            Nino Jakeli   </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure>
+   <img src="/assets/image/2022_12_04_ahmetem_mid_semester_concert.jpg" />
+   <figcaption>A Telematic Experience</figcaption>
+</figure>
+
+<p>When it comes to telematic performances, there is always some technical processes in the bakcground, and a bunch of people taking care of all. This blog post is a brief technical overview of the 2022 fall mid-semester telematic concert performed by SMC students between two locations, <em>Salen</em> and <em>Portal</em> at UiO.</p>
+
+<h1 id="getting-ready">Getting Ready</h1>
+
+<p>As technicians, we gathered five times to determine technical needs and actions. In the first meeting, we gathered with the performers for the initial instrumentation plan and locations. Secondly, we did an internal session where we discussed our roles. On the 27th of September, we presented our final plans for the concert in the class. Next, we explored the venues with performers. After a final rehearsal on the last day before the show, we met on the concert day morning to prepare for an outstanding performance.</p>
+
+<h1 id="concert-setup">Concert Setup</h1>
+
+<h2 id="salen">Salen</h2>
+
+<p>A full backline and professional concert sound system were available in Salen to ensure flawless performance. Sounds fancy, right? Yup! These include the Midas M32 digital mixer, Hifi PA system, 24x input/output patching panel, and microphone stands. To enable musicians to perform together between Salen and Portal, we used a low-latency Audio/Video streaming system called LOLA. For this concert, Salen was considered the front of the house. Performers consisted of Alex on the synth and MPC sampler, Kristian on the E-drums and a mono synth, and Christian on the electric piano while also hosting the event. Technicians Emin, Fabian, and Masoud were eager to guarantee top-notch live-streaming, audio, and video service delivery.</p>
+
+<h2 id="portal">Portal</h2>
+
+<p>The audio setup in Portal was quite similar to Salen. On Both sites, we used portable LOLA racks instead of stationary pcs. In the Portal, two musicians were present: Jack on the violin and Iosif on the electric guitar. Olve, responsible for audio engineering aspects, did a fantastic job by making a multitrack recording of the entire performance, which we encourage for future events for documentation and audio post-production for the video recording. Nino helped with the video connection and ensured Portal musicians to see Salen performers in real-time.</p>
+
+<h2 id="network-connection">Network Connection</h2>
+
+<p>Video connection between two places was made using the <a href="https://lola.conts.it/">LoLa software</a>. We used Portal’s dedicated LoLa computer for connection. In the Salen, we used a portable LoLa pc. On both ends, a screen was routed to a monitor where performers were able to see other musicians. The network connection was flawless. The performers experienced a natural latency without any fluctuations.</p>
+
+<h2 id="live-streaming-the-concert-on-youtube">Live Streaming the Concert on YouTube</h2>
+
+<p>We live-streamed the whole concert from Salen on SMC’s YouTube channel. We used the cameras and the streaming station in Salen. We had scheduled the concert beforehand and our stream reached around 387 people online. The recording can be seen <a href="https://www.youtube.com/watch?v=IGkU3uVhr88">here</a>.</p>
+
+<figure>
+   <img src="/assets/image/2022_12_04_ahmetem_mid_semester_concert_2.jpg" />
+   <figcaption>"A Telematic Experience"</figcaption>
+</figure>
+
+<h1 id="final-thoughts">Final Thoughts</h1>
+
+<p>Making our first telematic concert happen was a great experience. We are very pleased that we were able to provide the necessary technical needs for that show. We are looking forward to diving into the next ones!</p>
+
+<h1 id="please-see-also">Please See Also</h1>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/SMC-master/portal-wiki/wiki/2022-Fall-Mid-Semester-Telematic-Concert-Salen-and-Portal-Documentation-(Technical)">2022 Fall Mid Semester Telematic Concert Salen and Portal Documentation (Technical)</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/SMC-master/portal-wiki/wiki/2022-Fall-Mid-Semester-Telematic-Concert-Salen-and-Portal-Documentation-(Performance)">2022 Fall Mid Semester Telematic Concert Salen and Portal Documentation (Performance)</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/SMC-master/portal-wiki/wiki/2022-Fall-End-Semester-Telematic-Concert-RITMO-and-Science-Library-Documentation-(Technical)">2022 Fall End Semester Telematic Concert RITMO and Science Library Documentation (Technical)</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/SMC-master/portal-wiki/wiki/2022-Fall-End-Semester-Telematic-Concert-RITMO-and-Science-Library-Documentation-(Performance)">2022 Fall End Semester Telematic Concert RITMO and Science Library Documentation (Performance)</a></p>
+  </li>
+</ul>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2022/12/04/ahmetem-making-a-telematic-concert-happen.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

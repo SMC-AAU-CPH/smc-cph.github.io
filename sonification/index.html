@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sonification | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Sonification" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC)." />
+<meta property="og:description" content="The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC)." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sonification/" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sonification/" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sonification" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC).","headline":"Sonification","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"}},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sonification/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="page-heading" align="left">Sonification</h1>
+  </header>
+
+  <div class="post-content"><p>The blog posts of this section relate to the <em>Sonification</em> module in the course <a href="https://www.uio.no/studier/emner/hf/imv/SMC4001/">SMC4001 Introduction to Music, Communication and Technology</a> (from 2022) and to the discontinued course <a href="https://web.archive.org/web/20210518095718/https://www.ntnu.edu/studies/courses/SMC4046">SMC4046 Sonification and Sound Design</a> (2019 to 2021). The aim of the course is to develop knowledge of and practical experience with sonification, including sound design, interface implementation and perceptual analysis. The interface design process extends from requirements in the problem domain to evaluation of the auditory display.<!-- <h2 class="post-list-heading">Posts</h2> --></p>
+<ul class="post-list"><li>
+  <a class="post-button" href="/sonification/2021/03/26/henrikhs-growing-monoliths-discovered-on-mars.html">
+    <div class="post-left"><img src="/assets/image/2021_03_25_henrikhs_marsgame.jpg" alt="Growing Monoliths Discovered On Mars" title="Growing Monoliths Discovered On Mars" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Growing Monoliths Discovered On Mars</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Mar 26, 2021 • Henrik Sveen, Stephen Gardener, Pedro Lucas
+      </div><p class="post-excerpt">Mars is a hot topic these days, and weather seems to always be a hot topic too. So how about making a project with both? We ended up gamifying the weather on Mars by discovering the musical potential it may have.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2021/03/26/abhishec-aurora-sonified.html">
+    <div class="post-left"><img src="/assets/image/2021_03_26_abhishec_valkyrie_synth.PNG" alt="Valkyrie: Aurora Sonified" title="Valkyrie: Aurora Sonified" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Valkyrie: Aurora Sonified</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Mar 26, 2021 • Abhishek Choubey, Lindsay Charles, Joel Vide Hynsjö
+      </div><p class="post-excerpt">The sound of Aurora sonified in a synth</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2021/03/25/anderlid-sonification.html">
+    <div class="post-left"><img src="/assets/image/2021_03_25_fractionMari_grumpy.png" alt="Pixel by pixel" title="Pixel by pixel" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Pixel by pixel</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Mar 25, 2021 • Anders Lidal, Mari Lesteberg, Sebastian Olsen
+      </div><p class="post-excerpt">The pixel sequencer is an interactive web app for sonification of images. Get online, upload your favorite picture, sit back and listen to it.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2020/04/13/soniweb2.html">
+    <div class="post-left"><img src="/assets/image/2020_04_13_jacksong_soniweb2-pd.png" alt="Soniweb: Epilogue" title="Soniweb: Epilogue" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Soniweb: Epilogue</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 13, 2020 • Jackson Goode
+      </div><p class="post-excerpt">An update to the Soniweb project featuring dynamic sonification!</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2020/03/09/Soniweb.html">
+    <div class="post-left"><img src="/assets/image/2020_03_09_aleksati_sonification.jpg" alt="Soniweb: An Experiment in Web Traffic Sonification and Ambisonics" title="Soniweb: An Experiment in Web Traffic Sonification and Ambisonics" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Soniweb: An Experiment in Web Traffic Sonification and Ambisonics</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Mar 9, 2020 • Jackson Goode, Thibault Jaccard, Thomas Anda
+      </div><p class="post-excerpt">For the course SMC4046 Sonification and Sound Design, our group was tasked to create a system that collects and sonifies data in real time. For this project, we went even further(!) and spatialized the network data that passes through a computer.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2020/03/09/weather-music.html">
+    <div class="post-left"><img src="/assets/image/2020_03_09_aleksati_sunset.jpg" alt="Weather Music" title="Weather Music" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Weather Music</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Mar 9, 2020 • Aleksander Tidemann, Jarle Steinhovden, Gaute Timian Dahl Wardenær, Tom Ignatius Wee
+      </div><p class="post-excerpt">Experiencing weather is a multi-sensory and complex experience. The objective of our sonification project was to sonify the weather through the use of online video streams.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2020/03/09/Sonifying-Corona.html">
+    <div class="post-left"><img src="/assets/image/2020_03_09_aleksati_CoronavirusPreview.png" alt="Sonifying The Coronavirus Pandemic" title="Sonifying The Coronavirus Pandemic" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Sonifying The Coronavirus Pandemic</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Mar 9, 2020 • Rayam Soeiro, Paul Koenig, Simon Sandvik, Donho Kwak
+      </div><p class="post-excerpt">Finding a voice for difficult data</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/05/20/NEO.html">
+    <div class="post-left"><img src="/assets/image/2019_04_18_varpe_NEO.jpg" alt="Sonification of Near Earth Objects" title="Sonification of Near Earth Objects" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Sonification of Near Earth Objects</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        May 20, 2019 • Jørgen Varpe, Guy Sion, Eigil Aandahl
+      </div><p class="post-excerpt">As a part of a two-week workshop in the Sonification and Sound design course, we worked on the development of a self-chosen sonification project. For three days we explored how to design and build an auditory model of Near-Earth Objects (NEO) with data collected from NASA.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/05/17/Blue-sky-visions-on-sonic-futures.html">
+    <div class="post-left"><img src="/assets/image/2019_05_17_aleksati_Pedro-Pestana.jpeg" alt="Blue sky visions on sonic futures" title="Blue sky visions on sonic futures" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Blue sky visions on sonic futures</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        May 17, 2019 • Karolina Jawad
+      </div><p class="post-excerpt">Pedro Duarte Pestana was the final guest speaker who joined us virtually with his presentation 'Career Management in Music Technology / Knowledge Engineering in Music Technology and Sonic Arts' from Porto. Pedro was the first student in Portugal who held a PhD in computer music. He works as a researcher and consulter for emerging audio technologies and intelligent systems.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/30/Sound-In-Space-Exhibition-A-Generic-Overview.html">
+    <div class="post-left"><img src="/assets/image/2019_04_30_stefanof_egg.jpg" alt="A generic overview to the 'Sound in Space' exhibition at KIT" title="A generic overview to the 'Sound in Space' exhibition at KIT" /></div>
+    <div class="post-right">
+      <h3 class="post-title">A generic overview to the &#39;Sound in Space&#39; exhibition at KIT</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 30, 2019 • Karolina Jawad
+      </div><p class="post-excerpt">Marking the final event before Easter and from our Sonification and Sound design course I was tasked to visit the group exhibition 'Sound in Space' that took place on the 11th of April at Gallery KIT, Trondheim. It was also the closing event for the sound art course in which music-technology and fine art academy students (NTNU) could participate.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/19/brexisonification.html">
+    <div class="post-left"><img src="/assets/image/2019_04_18_aleksati_brexit.jpg" alt="Brexisonification" title="Brexisonification" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Brexisonification</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 19, 2019 • Sam Roman, Sepehr Haghighi, Eirik Dahl
+      </div><p class="post-excerpt">The goal in the project is to sonify Brexit, in a way that the audience could interpret new insight from the data through audio.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/19/The_Sound_of_Traffic.html">
+    <div class="post-left"><img src="/assets/image/2019_04_19_aleksati_blog_header.JPG" alt="The Sound of Traffic - Sonic Vehicle Pathelormeter" title="The Sound of Traffic - Sonic Vehicle Pathelormeter" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Sound of Traffic - Sonic Vehicle Pathelormeter</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 19, 2019 • Ashane Silva, Karolina Jawad, Shreejay Shrestha
+      </div><p class="post-excerpt">Is it possible to transmit complex data-sets within an instance of a sound, so the content gets revealed? As communication and dissemination of information in our modern digital world has been highly dominated by visual aspects it led to the fact that the modality of sound got neglected. In order to test the hypothesis, the project presents a model for sonification of temporal-spatial traffic data, based on principle of Parametric Mapping Sonification (PMSon) technique.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/13/Edo-Fouilloux.html">
+    <div class="post-left"><img src="/assets/image/2019_04_14_stefanof_Edo-min.jpg" alt="MuX -playground for real-time sound exploration" title="MuX -playground for real-time sound exploration" /></div>
+    <div class="post-right">
+      <h3 class="post-title">MuX -playground for real-time sound exploration</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 13, 2019 • Ashane Silva
+      </div><p class="post-excerpt">It was so fascinating to have Edo Fouilloux in the SMC sonification seminar series. Edo is a visual innovator and a multidisciplinary craftsman of graphics, sound, computing, and interaction. He co-founded Decochon in 2015 to work with Mixed Reality (XR) technologies. MuX is a pioneering software in the field of interactive music in virtual reality systems. Edo demonstrated the concepts and philosophies inside Mux, where it is possible to build and play new instruments in the virtual space.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/12/Ole-Nieling-Portal-Lecture.html">
+    <div class="post-left"><img src="/assets/image/2019_04_12_aleksati_Ole_n_sam_portal.jpeg" alt="Ole Neiling Lecture" title="Ole Neiling Lecture" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Ole Neiling Lecture</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 12, 2019 • Guy Sion
+      </div><p class="post-excerpt">I had the pleasure of introducing Ole Neiling, a extradisciplinary 'life-style' artist. This was part of a series of lectures held over the portal in the sonification and sound design module.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/07/Pamela-Z.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_04_07_guysi_pamelaz.jpg" alt="Presentation by Pamela Z" title="Presentation by Pamela Z" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Presentation by Pamela Z</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 7, 2019 • Guy Sion
+      </div><p class="post-excerpt">As part of our Sonification and Sound Design course (SMC4046), we were fortunate enough to host scholars and artists which are well established within the sonification and sound design field. Pamela Z is a composer, performer and a media artist who is known for her work of voice with electronic processing. Pamela arrived in Norway for several workshops and performances, and we were lucky enough to have her for a short presentation on April 4th. After a brief introduction by Tone Åse who has been a long-time fan of Pamela’s work, Pamela started the session with a 10 minutes performance of a live improvised mashup of several existing pieces she often performs. While performing, Pamela is being circled by several self-made sensory devices that are connected to her laptop. On her hands, she wears sensors that send signals to her hardware setup. She sings and makes sounds with her voice, hands, and body and manipulates all that with hand gestures.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/05/Thomas-Hermann.html">
+    <div class="post-left"><img src="/assets/image/2019_04_05_aleksati_thermann-photo-2009.jpg" alt=" An Overview of Sonification by Thomas Hermann" title=" An Overview of Sonification by Thomas Hermann" /></div>
+    <div class="post-right">
+      <h3 class="post-title"> An Overview of Sonification by Thomas Hermann</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 5, 2019 • Shreejay Shrestha
+      </div><p class="post-excerpt">It was my privilege and honour to facilitate a guest lecture and introduce one of the 'Gurus' in the field of sonification, Dr. Thomas Hermann. He shared his enormous knowledge on sonification with hands on exercises for two days (March 28, and 29, 2019) through the SMC portal in Trondheim. I am quite excited to share my notes and will try to cover the summary of his talks in this blog.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/03/Daniel-Formo.html">
+    <div class="post-left"><img src="/assets/image/2019_04_03_varpe_Daniel_Formo.jpg" alt="Using Speech As Musical Material" title="Using Speech As Musical Material" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Using Speech As Musical Material</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 3, 2019 • Jørgen Varpe
+      </div><p class="post-excerpt">As a part of a three-week workshop in the course Sonification and Sound design at SMC, we were lucky to have Daniel Formo as a guest speaker.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/04/03/Advanced-collaborative-spaces-and-tele-immersive-systems.html">
+    <div class="post-left"><img src="/assets/image/2019_04_03_aleksati_nidaros_collage_leif.jpg" alt="Advanced collaborative spaces, tele-immersive systems and the Nidarøs Sculpture" title="Advanced collaborative spaces, tele-immersive systems and the Nidarøs Sculpture" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Advanced collaborative spaces, tele-immersive systems and the Nidarøs Sculpture</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Apr 3, 2019 • Karolina Jawad
+      </div><p class="post-excerpt">Leif Arne Rønningen introduced us to 'Advanced Collaboration Spaces, requirements and possible realisations' and to the 'Nidarø Sulpture', a dynamic vision and audio sculpture. In both parts Leif's main research areas on tele-immersive collaboration systems and low latency networks are at the forfront.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/03/27/%C3%98yvind.html">
+    <div class="post-left"><img src="/assets/image/2019_03_26_stefanof_AntennaOeyvind.jpg" alt="Composition and mapping in sound installations “Flyndre” and “VLBI Music”" title="Composition and mapping in sound installations “Flyndre” and “VLBI Music”" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Composition and mapping in sound installations “Flyndre” and “VLBI Music”</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Mar 27, 2019 • Eirik Dahl
+      </div><p class="post-excerpt">Øyvind Brandtsegg talks about the creation and life cycle of two art installations in this inspiring talk. Follow the link to read about the first lecture in a series about sonification.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sonification/2019/01/23/The-Sounds-We-Like.html">
+    <div class="post-left"><img src="/assets/image/2018_08_01_stefanof_SMC-master-630.jpg" alt="The Sounds We Like" title="The Sounds We Like" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Sounds We Like</h3>
+      <span class="post-meta-category">sonification
+      </span><div class="post-meta">
+        Jan 23, 2019 • Guy Sion
+      </div><p class="post-excerpt">For our first lesson in the Sonification and Sound Design course, we were asked to give a short presentation of a sonification or a sound design of choice. It was interesting to see the variety of examples among our classmates. Each of us brought a unique example and explained what is it about? why did they choose it? and how does it relate to our work at the SMC program?</p></div>
+  </a>
+</li>
+</ul>
+<!-- Hack from https://github.com/jekyll/jekyll/issues/2538 -->
+
+<p><!--  -->
+  <!-- ***No posts... yet.*** -->
+   <!-- Your code will now be dependent on page.tags being empty -->
+  <!--  --></p>
+</div>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

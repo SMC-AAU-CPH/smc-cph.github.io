@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Audio Latency in the Telematic Setting | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Audio Latency in the Telematic Setting" />
+<meta name="author" content="Abhishek Choubey" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Latency and its fundamentals in the telematic performance context." />
+<meta property="og:description" content="Latency and its fundamentals in the telematic performance context." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/abhishec-audio-latency-telematic-context.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/abhishec-audio-latency-telematic-context.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_abhishec_audio_latency.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-15T07:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_abhishec_audio_latency.jpg" />
+<meta property="twitter:title" content="Audio Latency in the Telematic Setting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Abhishek Choubey"},"dateModified":"2021-11-15T07:00:00+00:00","datePublished":"2021-11-15T07:00:00+00:00","description":"Latency and its fundamentals in the telematic performance context.","headline":"Audio Latency in the Telematic Setting","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_abhishec_audio_latency.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/abhishec-audio-latency-telematic-context.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Abhishek Choubey"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/abhishec-audio-latency-telematic-context.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+       Audio Latency in the Telematic Setting
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-15T07:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 15, 2021 •
+      </time>
+         
+      <a href="/authors/abhishekchoubey.html">Abhishek Choubey</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>To begin with, it makes sense to define what is a telematic performance and what do we mean by latency especially in the context of telematic performances. So,</p>
+
+<h3 id="what-is-a-telematic-performance-and-what-is-latency">What is a Telematic Performance and what is latency?</h3>
+
+<p><strong>Telematic performance</strong> is live performance via high-bandwidth internet by performers in different geographic locations</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_abhishec_telematic_performance.JPG" alt="" title="" width="auto" />
+   <figcaption>Telematic performance between UiO and NTNU</figcaption>
+</figure>
+
+<p><strong>Latency</strong>: Broadly defined, latency is the time delay between the input and output of a system.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_abhishec_lag.gif" alt="lag" title="" width="auto" />
+   <figcaption></figcaption>
+</figure>
+
+<p>BUT, how does this translates into the context of telematic performances?</p>
+
+<p>In the context of <strong>telematic music-making</strong>, this can be understood as the delay between the moment a musician in one location makes a sound and the moment a second musician in a different location hears that sound.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_abhishec_telematic.gif" alt="lag" title="" width="auto" />
+   <figcaption></figcaption>
+</figure>
+
+<h3 id="when-does-the-latency-becomes-a-problem">When does the latency becomes a problem?</h3>
+
+<p>To understand this, I have considered two situations:</p>
+<ol>
+  <li>Traditional Performances</li>
+  <li>Telematic Performances</li>
+</ol>
+
+<p><strong>Traditional performances</strong>: The traditional performances are the ones in which the performers are present in the same physical space along with the listener. In this kind of performance, the latency comes into effect when there is a considerable distance between the performers themselves and the listener as well, for example in a big concert hall. Some technical aspects like the distance between loudspeakers and the performer and also listener can also add to the latency in this case. On the other, if the performers are playing a score and are following the conductor, they follow the cue of the conductor and if that cue is misjudged the performer starts going out of time because of the delay.</p>
+
+<p><strong>Telematic Performances</strong>: Telematic performances as explained above are the ones in which the performers are in two different physical locations. Any attempt to perform music over a network requires a confrontation with the issue of latency. The latency becomes a major source of frustration while performing if it’s too much. Many technical aspects add to the latency as well, which are explained later below.</p>
+
+<p>Therefore, either latency needs to be reduced to the point where it is no longer noticeable or creative alternatives to working with latency need to be developed.</p>
+
+<h4 id="threshold-of-latency">Threshold of latency</h4>
+
+<p>But at what point does the latency becomes perceivably disturbing. Extensive research done by (Braasch - The Telematic Circle – a University-Based Collabor.Pdf, n.d.) shows that if the latency is somewhere between 25ms and 30ms, and above 30ms the delay between the signals produced at both the ends is so much that the latency takes over the synchronized playing.</p>
+
+<h3 id="major-factors-contributing-to-latency">Major Factors contributing to Latency:</h3>
+<p>The factors can be broadly classified into two elements: Transmission delay &amp; Signal processing delay, and are listed below:</p>
+<ol>
+  <li>Distance</li>
+  <li>Network Framework</li>
+  <li>Bandwidth</li>
+  <li>Network Traffic</li>
+  <li>Data Size</li>
+  <li>System latency</li>
+  <li>Computer Processing power</li>
+</ol>
+
+<figure style="float: none">
+     <img src="/assets/image/2021_11_15_abhishec_telematic_loop.PNG" alt="telematic loop" title="" width="auto" />
+     <figcaption></figcaption>
+  </figure>
+
+<p><strong>Distance:</strong> Distance is an inevitable cause of delay, considering the data is sent over an optical fibre network and it travels at the speed of light, there will be a delay in transmission, for instance, Trondheim to Oslo distance is ~400 km, so at the speed of light, the transmission time for a data packet to be sent between the two locations will be ~13ms.</p>
+
+<p><strong>Network Framework:</strong> Data is not transmitted entirely on Fibre optics, at both ends some part of the transmission will be on copper cables/Wi-Fi/ mobile network, etc, also routers/firewalls add to latency.</p>
+
+<p><strong>Bandwidth:</strong> The speed of the internet - how much data can be transferred from one point in a network to another within a specific amount of time?</p>
+
+<p><strong>Network Traffic:</strong> The number of users on the network at the given time.</p>
+
+<p><strong>Data Size:</strong> The size of data being sent affects the time taken for the transmission, large packets are broken into smaller packets - transmitted - and then recombined which adds to latency.</p>
+
+<p><strong>System Latency:</strong> This consists of all the signal processing being done at both the ends before the transmission and after the transmission. So, capturing of sound – Mixing – AtoD conversion – transmission – DtoA conversion – decompression – output to the speakers, all these processes add to latency.</p>
+
+<p><strong>Computer Processing Power:</strong> This is very obvious that higher speed computers will process the data quickly resulting in low latency values.</p>
+
+<h3 id="optimizing-latency-in-telematic-performances">Optimizing Latency in Telematic performances</h3>
+<p>So how can we optimize latency to be as minimum as possible? The first obvious choice is to optimize the system and the network connection we are using, by that I mean optimizing the determinant factors described above. The other option is to use an advanced system like LoLa, Jacktrip or similar, but we have to keep in mind that they have their requirements and are not easy to fulfil. Then comes the choice of embracing latency, by that I mean using latency in our favour, in the sense that performing music that does not require perfect time synchronization or learning to play with latency. We can also adjust some technical parameters like sampling rate, buffer size to achieve lower latencies. But even though we optimize all these values to their potentials, in principle, there will still be some latency that will be hard to eliminate.</p>
+<h3 id="testing-and-experiments">Testing and experiments</h3>
+<p>We in the portals at UiO and NTNU tried to do some experiments by changing the sampling rate on the Midas M32 mixer present at both sides and also changing the host system by which we are sending the audio back and forth to check the effect of it on audio latency. During the workshop in the portal lecture, we also measured latency between the portals, in three scenarios, sending the signal back to Oslo as we received it through the mixer, putting the microphone adjacent to the loudspeaker as shown in the image below and then placing the microphone where we normally sit in the Trondheim portal so that it also adds the latency due to the distance. I also did a test in audacity at my home, in which I created a loopback system, and then recorded the signal generated in another track. You can find all the results below.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_abhishec_setup_oslo.jpg" alt="telematic loop" title="" width="auto" />
+   <figcaption>Setup Oslo</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_abhishec_ntnu_setup.jpg" alt="telematic loop" title="" width="640" />
+   <figcaption>ntnu setup without the mic hooked, I did hook it later. </figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_abhishec_uio_ntnu_sr.PNG" alt="" title="" width="auto" />
+   <figcaption>UiO-NTNU test with different sampling rate on mixer</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_abhishec_workshop_test.PNG" alt="" title="" width="auto" />
+   <figcaption>Worskhop test between the portals</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_abhishec_home_test.PNG" alt="" title="" width="auto" />
+   <figcaption>Home audacity test</figcaption>
+</figure>
+
+<h3 id="video-presentation-and-slides">Video Presentation and Slides</h3>
+<p>If you wish to hear about the topic in more detail you can watch the below video lecture and the presentation slides.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_15_abhishec_audio_latency.mp4" type="video/mp4" />
+    Telematic Conducting Lecture
+  </video>
+  <figcaption>Audio latency lecture</figcaption>
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2021/11/15/abhishec-audio-latency-telematic-context.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

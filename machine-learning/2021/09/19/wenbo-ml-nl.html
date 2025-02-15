@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Classifying Classical Piano Music Based On Composer’s Native Language Using Machine Learning | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Classifying Classical Piano Music Based On Composer’s Native Language Using Machine Learning" />
+<meta name="author" content="Wenbo Yi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How does the language we speak help computers to classify classical music?" />
+<meta property="og:description" content="How does the language we speak help computers to classify classical music?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2021/09/19/wenbo-ml-nl.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2021/09/19/wenbo-ml-nl.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_19_wenbo_cover.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-19T14:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_19_wenbo_cover.jpg" />
+<meta property="twitter:title" content="Classifying Classical Piano Music Based On Composer’s Native Language Using Machine Learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wenbo Yi"},"dateModified":"2021-09-19T14:00:00+00:00","datePublished":"2021-09-19T14:00:00+00:00","description":"How does the language we speak help computers to classify classical music?","headline":"Classifying Classical Piano Music Based On Composer’s Native Language Using Machine Learning","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_19_wenbo_cover.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2021/09/19/wenbo-ml-nl.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Wenbo Yi"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2021/09/19/wenbo-ml-nl.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Classifying Classical Piano Music Based On Composer’s Native Language Using Machine Learning
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-09-19T14:00:00+00:00"
+        itemprop="datePublished"
+      >Sep 19, 2021 •
+      </time>
+         
+      <a href="/authors/wenboyi.html">Wenbo Yi</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction">Introduction</h2>
+
+<p>Music classification is a category of music information retrieval (Kassler, 1966), involves categorizing musical works into various classes, such as genre, composer, mood, and it can be present in the music recommendation system for listeners (Tzanetakis &amp; Cook, 2002), or research purposes such as its cognitive effects (Subramaniam, Verma, Chandrasekhar, NarendraK., &amp; George, 2018).</p>
+
+<p>Music classification usually involves extracting musical features from the audio files or scores to help the machine learning algorithm perform the categorization. However, in recent years linguists have discovered that the features of different musicians’ native languages can influence the music they compose. For example, Patel and Daniele (2003) compared 16 composers’ music work and found English and British music themes have a significantly higher nPVI (nPVI represents the durational contrast of continuous sequence) compared to French and French music themes.</p>
+
+<p>Therefore, this project aims to build a Machine Learning model to classify classical music based on the composer’s native language background, and also investigate whether linguistic features can contribute to the development of machine learning music classification algorithms.</p>
+
+<h2 id="dataset">Dataset</h2>
+<p><a href="https://github.com/bytedance/GiantMIDI-Piano">GiantMIDI-Piano dataset</a> (Kong, Li, Chen, &amp; Wang, 2020) was chosen based on the need to expand the number of composers and repertoire. GiantMIDI-Piano’s metadata is collected from the International Music Score Library Project (IMSLP) and audio files retrieved from Youtube, Piano solos recordings are transcribed to MIDI files using a high-resolution piano transcription system (Kong, Li, Song, Wan, &amp; Wang, 2020).</p>
+
+<p>After sorting through the original database, we have 5729 MIDI files composed by 877 composers from 12 countries speaking 6 languages for training.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_09_19_wenbo_table1.png" alt="Data distribution" title="Data distribution" width="75%" />
+   <figcaption><i>Data distribution</i></figcaption>
+</figure>
+
+<h2 id="features">Features</h2>
+<p>For linguistic features, we extracted the <em>nPVI</em> and <em>CV</em> from the melody line.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_09_19_wenbo_npvi.png" alt="Data distribution" title="Data distribution" width="75%" />
+   <figcaption><i>nPVI</i></figcaption>
+</figure>
+<figure style="float: none">
+   <img src="/assets/image/2021_09_19_wenbo_cv.png" alt="Data distribution" title="Data distribution" width="75%" />
+   <figcaption><i>CV</i></figcaption>
+</figure>
+
+<p>For Music features, we extracted 27 features through <em>music 21</em>(Cuthbert &amp; Ariza, 2010) and <em>jSymbolic</em> (McKay &amp; Fujinaga, 2006).</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_09_19_wenbo_features.png" alt="Data distribution" title="Music features" width="75%" />
+   <figcaption><i>Music features</i></figcaption>
+</figure>
+
+<h2 id="result">Result</h2>
+<p>we chose to use three supervised Machine Learning algorithms Support Vector Machine (SVM), K-Nearest Neighbors (KNN), and Gaussian Naive Bayes (GNB) as classifiers and Principal Component Analysis (PCA), Linear Discriminant Analysis (LDA) as dimensionality reduction techniques in Scikit-learn through Python for comparison. The numerical results of the experiments are below.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_09_19_wenbo_result.png" alt="Data distribution" title="Classification accruacy" width="75%" />
+   <figcaption><i>Classification accruacy</i></figcaption>
+</figure>
+
+<p>Through the accuracy, contrary to our expectations, we found that KNN applied to linguistic features alone had the highest accuracy of any combination at 57.4%, while both SVM and Naive Bayes were much less accurate at just over 30% accuracy when using only linguistic features. From an overall perspective, the KNN algorithm has the highest accuracy, followed by SVM and the worst is Naive Bayes.</p>
+
+<p>From the perspective of features combination, it appears that using only linguistic features was the least accurate under both SVM and Naive Bayes classifiers. However, using only linguistic features had the highest accuracy of all combinations under the KNN classifier, and the accuracy obviously improved when music features were combined with linguistic features compared to using music features alone.</p>
+
+<p>Last but not least, in terms of the choice of dimensionality reduction techniques, we found dimensionality reduction techniques played a degrading role on both KNN and SVM in our case. Nevertheless, for the Naive Bayes, both PCA and LDA provide significant improvements to accuracy, and LDA, as a supervised dimensionality reduction technique, provides the largest improvement when we applied more complex features (Music + Linguistic).</p>
+
+<p>In summary, the combination of applying linguistic features to the KNN classifier and not using dimensionality reduction techniques is the best combination for this comparison, such a combination also provided a good computational efficiency compared to other combinations.</p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>Nevertheless, the accuracy obtained in this experiment leaves us room for improvement. We suppose that the accuracy deficiency could be attributed mainly to two aspects: the imbalance of the dataset and the accruacy of melody line extraction.</p>
+
+<p>Firstly, the MIDI quantization and melody extraction used to extract the melodic lines lost a certain degree of rhythmic features from the original score, which had an impact on the calculation of nPVI.</p>
+
+<p>Secondly, only the English and German classes have approximately the same amount of samples and the other categories are only a third of their quantity in our dataset. Moreover, it is worth mentioning that in a less rigorous trial, we removed the smaller classes and left only the three largest classes, obtained a distinct increase in overall accuracy.</p>
+
+<p>Although we have used 27 musical features and 4 linguistic features, it is apparent that there are many more features also Machine Learning algorithms applicable to music classification that have not yet been addressed, which opens up the opportunity for working in the future.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>Kassler, M. (1966). Toward musical information retrieval. Perspectives of New Music, 59–67.</p>
+
+<p>Tzanetakis, G., &amp; Cook, P. (2002, July). Musical genre classification of audio signals. IEEE Transactions on Speech
+and Audio Processing, 10(5),</p>
+
+<p>Subramaniam, G., Verma, J., Chandrasekhar, N., NarendraK., C., &amp; George, K. (2018). Generating playlists on the
+basis of emotion. 2018 IEEE Symposium Series on Computational Intelligence (SSCI), 366-373.</p>
+
+<p>Patel, A. D., &amp; Daniele, J. R. (2003). An empirical comparison of rhythm in language and music. Cognition, 87(1),
+B35-B45. Retrieved from https://www.sciencedirect.com/science/article/pii/ S0010027702001877 doi:
+https://doi.org/10.1016/S0010-0277(02)00187</p>
+
+<p>Kong, Q., Choi, K., &amp; Wang, Y. (2020). Large-scale MIDI-based composer classification. ArXiv, abs/2010.14805.</p>
+
+<p>Kong, Q., Li, B., Chen, J., &amp; Wang, Y. (2020). GiantMIDI-piano: A large-scale MIDI dataset for classical piano music.
+arXiv preprint arXiv:2010.07061.</p>
+
+<p>Kong, Q., Li, B., Song, X., Wan, Y., &amp; Wang, Y. (2020). High-resolution piano transcription with pedals by
+regressing onsets and offsets times. arXiv preprint arXiv:2010.01815.</p>
+
+<p>Cuthbert, M. S., &amp; Ariza, C. (2010). music21: A toolkit for computer-aided musicology and symbolic music data.</p>
+
+<p>McKay, C., &amp; Fujinaga, I. (2006). jsymbolic: A feature extractor for MIDI files. In Icmc.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2021/09/19/wenbo-ml-nl.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

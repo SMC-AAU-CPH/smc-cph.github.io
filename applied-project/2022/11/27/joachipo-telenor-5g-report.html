@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exploration of 5G networks for Networked Musical Performances | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Exploration of 5G networks for Networked Musical Performances" />
+<meta name="author" content="Arvid Falch, Jakob Høydal, Joachim Poutaraud, Kristian Wentzel, Sofía González" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A latency optimization methodology for NMP." />
+<meta property="og:description" content="A latency optimization methodology for NMP." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2022/11/27/joachipo-telenor-5g-report.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2022/11/27/joachipo-telenor-5g-report.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_11_27_joachipo_p2p.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-27T06:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_11_27_joachipo_p2p.jpg" />
+<meta property="twitter:title" content="Exploration of 5G networks for Networked Musical Performances" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arvid Falch, Jakob Høydal, Joachim Poutaraud, Kristian Wentzel, Sofía González"},"dateModified":"2022-11-27T06:00:00+00:00","datePublished":"2022-11-27T06:00:00+00:00","description":"A latency optimization methodology for NMP.","headline":"Exploration of 5G networks for Networked Musical Performances","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_11_27_joachipo_p2p.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2022/11/27/joachipo-telenor-5g-report.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Arvid Falch, Jakob Høydal, Joachim Poutaraud, Kristian Wentzel, Sofía González"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2022/11/27/joachipo-telenor-5g-report.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Exploration of 5G networks for Networked Musical Performances
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-11-27T06:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 27, 2022 •
+      </time>
+         
+      <a href="/authors/arvidfalch.html">Arvid Falch,</a>
+           
+      <a href="/authors/jakobhoydal.html">Jakob Høydal,</a>
+           
+      <a href="/authors/joachimpoutaraud.html">Joachim Poutaraud,</a>
+           
+      <a href="/authors/kristianwentzel.html">Kristian Wentzel,</a>
+           
+      <a href="/authors/sofiagonzalez.html">Sofía González</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction">Introduction</h2>
+<p>The objective we had when carrying out this Network Music Performance (NMP) was to test the latency of Telenor’s 5G network so as to find out whether currently musicians could use 5G to execute this type of performance. In order to do that, we first needed to optimize the latency with the factors under our control: finding the best configuration that would lower or just not add latency. We tested different networks, settings and distances to prepare. Finally, we travelled to Telenor Fornebu and, more specifically, to their magnificent villa, did the final tests and experimented with our music performance.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_11_27_joachipo_harelokken.jpg" alt="Telenor Villa Hareløkken" title="" width="auto" />
+   <figcaption><i>Telenor Villa Hareløkken</i></figcaption>
+</figure>
+
+<h2 id="telenor-5g-experimental">Telenor 5G Experimental</h2>
+<p>As a concluding part of our test phase, we spent the two days at the Telenor Testbed doing measurements on the experimental 5G network as well as preparing for the final NMP. We were eager to test the possibilities (and limits) of a closed-off version of the 5G network, in which you have all the network bandwidth you could ever wish for available for yourself. Sadly, the experimental network was not yet stable enough for a NMP, as the connection lasted about 40 seconds before disappearing for 20 seconds. We hope to be invited back when it’s up and running!</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_11_27_joachipo_villa.jpg" alt="Testing Telenor 5G Experimental network" title="" width="auto" />
+   <figcaption><i>Testing Telenor 5G Experimental network</i></figcaption>
+</figure>
+
+<h2 id="latency">Latency</h2>
+
+<p>We conducted a total 144 audio test over different network configurations. The main network configurations were:</p>
+<ul>
+  <li>Ethernet</li>
+  <li>WiFi (LAN)</li>
+  <li>Commercial 5G</li>
+  <li>Telenor 5G experimental</li>
+</ul>
+
+<p>For each network configuration we tested three different sample rates (44kHz, 48kHz and 96kHz), with different buffer sizes (64, 128, 256, 512, 1024). The latency was measured in RoundTrip Time (RTT). <br />
+The values obtained from testing with ethernet was considered as our baseline, which enables us to show just how much latency each different network configuration and setup adds.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_11_27_arvidf_added_latency.jpg" alt="Added latency compared to ethernet baseline" title="" width="auto" />
+   <figcaption><i>Added latency compared to ethernet baseline</i></figcaption>
+</figure>
+
+<p>The commercial 5G causes latency way above what is considered acceptable for a NMP, while the Telenor 5G Experimental delivers promising results in terms of latency.</p>
+
+<h2 id="example-audio-quality-with-packet-loss">Example audio quality with packet loss</h2>
+
+<p>Besides of latency, the quality of the audio can be affected by the network transmission. The following examples are taken from 5G commercial network tests between Oslo and Svalbard. When packet loss affects the audio quality to this extent latency itself is not the only problem. Notice how it improves as the buffer size increases.</p>
+
+<p><strong>Buffer size 64</strong></p>
+
+<div class="waveform" id="buffer64"></div>
+
+<p><strong>Buffer size 128</strong></p>
+
+<div class="waveform" id="buffer128"></div>
+
+<p><strong>Buffer size 256</strong></p>
+
+<div class="waveform" id="buffer256"></div>
+
+<h2 id="network-music-performance-over-5g">Network Music Performance over 5G</h2>
+
+<p>On basis of the test results with the Telenor’s commercial and experimental 5G, the commercial network was chosen for the Networked Music Performance (NMP) even though latency was significantly higher, due to dropout problems with the experimental network.</p>
+
+<p>We used a Master Slave Approach (MSA) since the latency was greater than 25ms. This approach is a compromise for conventional rhythmical music, where one performer (Master) ignores the return signal from the other performer (Slave), as illustrated in the figure below. It can be hard for for the master and slave to be in musical sync, since the master has such a high latency back to them. It is also important that the master can perform independent form the slave.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_11_28_jakobhoydal_master-slave_approach.png
+" alt="Telenor Villa Hareløkken" title="" width="auto" />
+   <figcaption><i>Master-Slave approach</i></figcaption>
+</figure>
+
+<p>Clicks and pops were audible but can be acceptable when practicing or doing a small showcase. It is not pleasant to listen to a concert with constant popping. This ocurred due to the low buffersize in JackTrip. A higher buffersize will increase latency, but improve quality. Nonetheless, latency could have been further lowered on the experimental network at 48kHz sample rate, 128 bffer size.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_27_jakobhoydal_5Gnmp-Song1.mp4" type="video/mp4" />
+  </video>
+</figure>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_27_jakobhoydal_5gnmp-song2.mp4" type="video/mp4" />
+  </video>
+</figure>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The next generation of mobile communication - 5G can be used for network music performances. But the commercial standard today lacks the required low latency needed for communication without applying Master Slave Approaches or Latency Accepting Approaches. Telenor’s experimental 5G network performs much better than the commercial network in terms of latency and jitter, but it is too unstable to be used for an extended time.</p>
+
+<p>It is clear that the experimental network has advantages in comparison to the commercial network. A comparison between Oslo-Oslo vs. Oslo-Svalbard shows that it is the RANs contributes the most to the latency in the total system, and not the transport layer of the 5G network.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_11_28_jakobhoydal_Telenor5GTeams.jpg" alt="Telenor Villa Hareløkken" title="" width="auto" />
+   <figcaption><i>The team. From left to right: Kristian Wentzel, Joachim Poutaraud, Jakob Høydal, Arvid Falch,  Sofía González</i></figcaption>
+</figure>
+
+<h2 id="additional-ressources">Additional ressources</h2>
+<p>Source code for streaming audio over UDP and monitoring latency is available here: <a href="https://github.com/joachimpoutaraud/udp-audio-stream-latency">https://github.com/joachimpoutaraud/udp-audio-stream-latency</a>.</p>
+
+<!-- END OF BLOG POST -->
+
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+
+<script>
+
+const myAudio = [
+    {
+        path: "/assets/audio/2022_11_27_arvidf_64buffer.mp3",
+        anchor: "buffer64",
+        color: "#ffa600",
+        alert: false,
+    },
+    {
+        path: "/assets/audio/2022_11_27_arvidf_128buffer.mp3",
+        anchor: "buffer128",
+        color: "#ffa600",
+        alert: false,
+    },
+    {
+        path: "/assets/audio/2022_11_27_arvidf_256buffer.mp3",
+        anchor: "buffer256",
+        color: "#ffa600",
+        alert: false,
+    }
+];
+
+const addPlayText = (sample) => "Play" + (sample.alert ? "  ⚠️" : "");
+
+myAudio.forEach((sample) => {
+    const id = sample.anchor;
+    const waveformDiv = document.querySelector("#" + id);
+
+    const playButton = document.createElement("button");
+    playButton.id = "button-" + id;
+    playButton.style.margin = "auto";
+    playButton.classList = "btn btn-primary";
+    playButton.innerText = "Play";
+
+    const wavesurfer = WaveSurfer.create({
+        container: "#" + id,
+        mediaControls: true,
+        height: 64,
+        waveColor: sample.color,
+        splitChannels: true,
+    });
+    wavesurfer.load(sample.path);
+    wavesurfer.once("ready", () => {
+        waveformDiv.appendChild(playButton);
+        playButton.onclick = () => {
+            wavesurfer.playPause();
+            if (playButton.innerText.startsWith("Pause")) {
+                playButton.innerText = "Play";
+            } else if (playButton.innerText.startsWith("Play")) {
+                playButton.innerText = "Pause";
+            }
+        };
+    });
+    wavesurfer.once("finish", () => {
+        playButton.innerText = "Play";
+    });
+});
+
+</script>
+
+</div>
+
+  
+
+  <a class="u-url" href="/applied-project/2022/11/27/joachipo-telenor-5g-report.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

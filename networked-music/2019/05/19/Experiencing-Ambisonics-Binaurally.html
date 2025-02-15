@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Experiencing Ambisonics Binaurally | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Experiencing Ambisonics Binaurally" />
+<meta name="author" content="Guy Sion" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="During the SMC2022 Physical-virtual communication course we have had two sessions where we explored multichannel and ambisonic decoding. The first session, on February 27th, was mainly about recording a four channel A-format stream with an Ambisonic 360 sound microphone. We converted the A-format mic signal into a full-sphere surround sound format which was then decoded to 8 loudspeakers layout we placed evenly across the portal space. We have used the AIIRADecoder from the free and open source IEM plug-in suite." />
+<meta property="og:description" content="During the SMC2022 Physical-virtual communication course we have had two sessions where we explored multichannel and ambisonic decoding. The first session, on February 27th, was mainly about recording a four channel A-format stream with an Ambisonic 360 sound microphone. We converted the A-format mic signal into a full-sphere surround sound format which was then decoded to 8 loudspeakers layout we placed evenly across the portal space. We have used the AIIRADecoder from the free and open source IEM plug-in suite." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/05/19/Experiencing-Ambisonics-Binaurally.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/05/19/Experiencing-Ambisonics-Binaurally.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_ambisoniclogo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-05-19T07:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_ambisoniclogo.png" />
+<meta property="twitter:title" content="Experiencing Ambisonics Binaurally" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Guy Sion"},"dateModified":"2019-05-19T07:00:00+00:00","datePublished":"2019-05-19T07:00:00+00:00","description":"During the SMC2022 Physical-virtual communication course we have had two sessions where we explored multichannel and ambisonic decoding. The first session, on February 27th, was mainly about recording a four channel A-format stream with an Ambisonic 360 sound microphone. We converted the A-format mic signal into a full-sphere surround sound format which was then decoded to 8 loudspeakers layout we placed evenly across the portal space. We have used the AIIRADecoder from the free and open source IEM plug-in suite.","headline":"Experiencing Ambisonics Binaurally","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_ambisoniclogo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/05/19/Experiencing-Ambisonics-Binaurally.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Guy Sion"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/05/19/Experiencing-Ambisonics-Binaurally.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Experiencing Ambisonics Binaurally
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-05-19T07:00:00+00:00"
+        itemprop="datePublished"
+      >May 19, 2019 •
+      </time>
+         
+      <a href="/authors/guysion.html">Guy Sion</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_ambisoniclogo.png" alt="Logo" title="Logo" /></p>
+
+<p>During the SMC2022 Physical-virtual communication course we have had two sessions where we explored multichannel and ambisonic decoding. The first session, on February 27th, was mainly about recording a four channel A-format stream with an Ambisonic 360 sound microphone. We converted the A-format mic signal into a full-sphere surround sound format which was then decoded to 8 loudspeakers layout we placed evenly across the portal space. We have used the AIIRADecoder from the free and open source <a href="https://plugins.iem.at/" target="_blank">IEM plug-in suite</a>. Although the setup was not ideal, mostly because of the LOLA connection between the Trondheim and Oslo portals, and the fact that the loudspeakers were not at the same level of the listener’s head, we did manage to get a 3D spatial sound stream between the two campuses.</p>
+
+<p>For our second session on April 24th, we focused on decoding binaurally the input from four large diaphragm condenser microphones placed in a square formation. It required us to use headphones for a better perception of the sound stream and enhanced immersive environment. The decoding was done this time with <a href="http://www.envelop.us/software" target="_blank">E4L (Envelop for Live)</a> free collection of spatial audio production tools. We created four audio channels and placed the E4L Source Panner device on each of the audio tracks. On a fifth audio track, we set the E4L Master Bus device and directed all output from the four microphones into that channel. You can see the setup we have used in Ableton Live in the pictures below.</p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_amb1.png" alt="1" title="1" /></p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_amb2.png" alt="2" title="2" /></p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_amb3.png" alt="3" title="3" /></p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_amb4.png" alt="4" title="4" /></p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_amb5.png" alt="5" title="5" /></p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_05_19_guysi_amb6.png" alt="6" title="6" /></p>
+
+<p>We were given the time to experiment with this setup. Several class members have started to whisper, talk loudly or sing into their dedicated microphones, trying to create unique sonic material for the listeners who wore headphones in Trondheim and Oslo. I seized on the opportunity to play the saxophone with this ambisonic setup and resorted to the Giant Steps melody which seemed to be a recurring theme whenever I am being asked to play something (have you checked out my <a href="https://SMC-master.github.io/sound-programming/2019/02/11/Giant-Player.html" target="_blank">(Giant Steps Player already?).</a></p>
+
+<p>I stood in the middle of the four-microphone setup and played into each of the mics at a time. During the first round of the melody, I played segments of the song into each different mic, and for the second round of the tune, I played (almost) each note into a different mic. That resulted in an audio clip where you can hear me play parts of the melody in four positions (Front-Right, Front-Left, Back-Right, Back-Left). I would recommend listening to this audio clip with headphones to be able to clearly identify the direction I am playing from (from the listeners perspective).
+
+<figure align="middle">
+   <audio controls="">
+     <source src="https://docs.google.com/uc?export=download&amp;id=1xhMuN5UaaoMb17ZL2lCtVsPyNd4t_W4N" type="audio/mpeg" volume="1.0" />
+     Your browser does not support audio tag.
+   </audio>
+</figure>
+
+<p>When listening to it again in a quiet environment at home, I now wish I had more time to experiment with playing longer tones while moving between the microphones (maybe a ballade would fit better next time?). I wanted to hear the movement of my sound in the spatial environment.
+
+<p>In any case, I decided to continue the extermination at home with several sound effects like footsteps, a clock ticking and writing marker. I placed all sound samples on an audio track containing the E4L Source Panner device and mapped the Azimuth knob to a physical knob on my midi controller.
+
+<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/bTKGFT1Ivxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></center>
+
+<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/A5nIflG8a6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></center>
+
+<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/2Sh4TgIk4vY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></center>
+
+<p>Give it a listen (with headphones of course) and see what you think! The Envelop for Live free tool pack has some great collection of devices which can really utilize space as a compositional element, and it would be interesting to see how this type of devices can elevate my artistic output in the future.
+</p></p></p></p></p></p></p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2019/05/19/Experiencing-Ambisonics-Binaurally.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

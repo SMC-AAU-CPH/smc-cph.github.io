@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setting Levels in Virtual Communication | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Setting Levels in Virtual Communication" />
+<meta name="author" content="Jarle Steinhovden" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Inspired by how virtual communication has been adopted and integrated in daily life around the globe, this post looks at how simple control messages might help prevent acoustic feedback." />
+<meta property="og:description" content="Inspired by how virtual communication has been adopted and integrated in daily life around the globe, this post looks at how simple control messages might help prevent acoustic feedback." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/26/jarlefst-portal-feedback.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/26/jarlefst-portal-feedback.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_26_jarlefst_submix.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-26T19:51:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_26_jarlefst_submix.png" />
+<meta property="twitter:title" content="Setting Levels in Virtual Communication" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jarle Steinhovden"},"dateModified":"2021-11-26T19:51:00+00:00","datePublished":"2021-11-26T19:51:00+00:00","description":"Inspired by how virtual communication has been adopted and integrated in daily life around the globe, this post looks at how simple control messages might help prevent acoustic feedback.","headline":"Setting Levels in Virtual Communication","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_26_jarlefst_submix.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/26/jarlefst-portal-feedback.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jarle Steinhovden"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/26/jarlefst-portal-feedback.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Setting Levels in Virtual Communication
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-26T19:51:00+00:00"
+        itemprop="datePublished"
+      >Nov 26, 2021 •
+      </time>
+         
+      <a href="/authors/jarlesteinhovden.html">Jarle Steinhovden</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_25_jarlefst_midissineangle.gif" alt="fader_snake" style="width:100%;height:width/2.56px;" /></p>
+
+<h2 id="audio-feedback--lola--zoom---midi">Audio Feedback / LOLA / ZOOM / &amp; MIDI</h2>
+
+<hr />
+<p><br /></p>
+
+<h3 id="looking-back---and-feedback">Looking Back - and Feedback</h3>
+
+<p><strong>As 2021</strong> comes to an end, a particular virus might hopefully find its way to follow. A look back on all of what two years of special measures has brought to change - and without wish or patience to circle round any darker corners - it is apparent that <em>virtual communication</em> has arrived. It certainly had to - and also: it works.</p>
+
+<p><br /></p>
+
+<p><strong>SMC_Portal</strong> virtual communication persists in 2021 through lectures and seminars, group collaborations, and scattered non-academic pursuits. Well documented throughout this blog - the SMC_Portal is the audio/video link connecting students in Trondheim (NTNU) and Oslo (UiO) and part-takers from around the globe joining classes and workshops via ZOOM.</p>
+
+<p><strong>The particulars</strong> of the Portal audio-communication architecture engender some seemingly inherent artifacts. Seeking to squeeze every drop of intelligibility from the LOLA sound, anyone might be tempted to turn the volume up just a little too far. Resulting is the much dreaded <strong><em>Audio Feedback</em></strong>.</p>
+
+<figure align="center">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_25_jarlefst_portalfeedback.gif" alt="Audio Feedback in the SMC Portal" style="width:480px;height:auto;" />
+  <figcaption>fig. 1 - <i>Portal feedback is not usual feedback</i> -</figcaption>
+</figure>
+
+<p><strong>Rules of audio thumb</strong> dictate that microphones should not be routed to nearby loudspeakers if avoidable. The amplified signal from the loudspeakers potentially <em>bleeding</em> back into the microphones, and if gained to hot, causing a self-amplifying loop.</p>
+
+<p><strong>Where multiple microphones</strong> in Trondheim and Oslo are <em>live</em> by default - receiving and transmitting once the power is turned on - the SMC_Portal has its inherent feedback structure. Although local loudspeakers do not amplify local microphones - Oslo mics are not sent to Oslo speakers, Trondheim mics are not sent to Trondheim speakers - the system itself constitutes an augmented audio loop. As <em>fig.1</em> illustrates - if the gain staging done at both communication nodes is set too hot local microphones might very well receive their own amplified signal, only by the detour of the other nodes’ loudspeakers and microphones.</p>
+
+<p><strong>Complicating things</strong> further is the transitory latency governing the Trondheim/Oslo communication.  Once acoustic feedback has occurred in the system, the initial response is naturally: mute everything! Just make that howling noise disappear! To later establish what instigated the problem has proven particularly tricky. The Portal audio moves so counterintuitively that traditional approaches to feedback-reduction (EQing, Gating) have fallen short.</p>
+
+<p><strong>And yet,</strong> rules of thumb, again, dictate that if acoustic feedback occurs, it is because IT IS TOO LOUD! Gain the microphones DOWN by 6dB - or even 12dB - and that incessant ringing disappears.</p>
+
+<hr />
+<p><br /></p>
+
+<h3 id="looking-forward">Looking forward</h3>
+
+<p><strong>Cooperative communication</strong> in 2020 and 2021 has been exercised by speaking into a computer keyboard while looking at a small screen. Regardless of age, education,  ethnicity, gender - regardless of most any socio-cultural context or geographical divide - people have learned to adopt a new language allowing those communications to be good ones.</p>
+
+<p><strong>ZOOM, Teams, and Skype</strong> have some very impressive echo-canceling algorithms working to make the laptop meeting more pleasant. But more important still might be the <em>unmute</em> button. Simply turning the microphone off when not using it is an excellent idea. If everyone does their part - acoustic feedback becomes a non-issue.</p>
+
+<p><strong>Which has inspired</strong> this simple proposition:</p>
+
+<hr />
+<p><br /></p>
+
+<h3 id="fighting-audio-feedback-with-midi">Fighting Audio Feedback with MIDI</h3>
+
+<p><strong>The quickSet_TotalMix.pd</strong> patch is directly inspired by the mentioned unmute buttons of ZOOM et al. With simple, customizable keystrokes or similarly settable MIDI ControlChange messages - or MIDI notes - the patch sends six presets to safeguard against acoustic feedback. [<a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/code/2021_25_11_jarlefst_puredata_patch.zip" title="Download the folder including /abstractions for fully functioning patch - Patch is pure-vanilla.pd with no other dependencies">download_patch</a>]</p>
+
+<figure align="left">
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_jarlefst_totalmix_pd.jpg" alt="TotalMix and PureData" />
+  <figcaption>fig. 2 - <i>TotalMix submixes reflected in the quickSet_patch</i> </figcaption>
+</figure>
+
+<p><strong>This control is made</strong> possible by the technological backbones providing for the Portal virtual communication. <a href="https://lola.conts.it">LOLA</a>: the “Low Latency AV Streaming System” requires one of six <a href="https://www.rme-audio.de/home.html">RME</a> Audio Interfaces to operate. All of these sound cards utilize the MIDI programmable <em>TotalMix</em> software as the graphical user interface.</p>
+
+<p><strong>Selecting a TotalMix</strong> output operates similar to a <em>Sends On Fader</em> function - as found in many digital mixing consoles. <em>fig. 2</em> shows how the quickSet_patch has mapped the four input-faders directly corresponding to their output mix. This way, the quickSet_patch affords an intuitive hands-on control of any sub-mix fader. In turn, allowing for triggering six sub-mix presets affecting all outputs. Three of these presets are seen at the top of <em>fig. 2</em></p>
+
+<p><strong>The</strong> <strong><em>“… is talking”</em></strong> presets give that when one of the LOLA nodes is talking, the other nodes’ microphone outputs are attenuated by -20dB. A particularly safe buffer against that looping signal from <em>fig. 1</em>. If <em>“ZOOM is talking”</em> or <em>“MUSIC is playing”</em> both LOLA nodes microphone outputs are attenuated. A <em>“Default”</em> preset sets all microphone outputs to an equal level at -6dB - again, a safety buffer. Finally, there is a <em>“MUTE ALL”</em> preset - because, well… Just in case.</p>
+
+<p><br /></p>
+
+<figure align="left">
+
+### MIDI setup
+
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_25_jarlefst_midisettings_pd&amp;totmix.jpg" />
+  <figcaption>fig. 3 <i> MIDI-setup in PureData and TotalMix </i> </figcaption>
+
+</figure>
+
+<p><strong>Routing MIDI</strong> from the quickSet-patch to TotalMix and LOLA is relatively straightforward. Although LOLA is Windows only, and internal MIDI-routing can be cumbersome, all LOLA-compatible RME sound cards have dedicated MIDI-ports. This makes possible for the quickSet_PureData-patch to send its information through <em>any</em> MIDI interface that utilizes standard 5-pin DIN-cables directly into the LOLA operating RME-card as illustrated in <em>fig. 3</em>. Here: the TotalMix MIDI input port is set to its own Fireface UCX input. Set the PureData MIDI input to what controller one wishes to use</p>
+
+<p><strong>!<em>NOTE</em>!</strong> the <em>PureData MIDI Output</em> sending control messages to TotalMix must be set to the <strong>topmost</strong> of the <em>Output Devices</em> slots for the quickSet_patch to operate as intended straight out of the box (seen left in <em>fig. 3</em>).</p>
+
+<p><br /></p>
+
+<h3 id="for-the-future">For the Future…</h3>
+
+<p><strong>There is much</strong> still wanting in the quickSet_patch. A preset storing system… OSC routing… Optimizing MIDI timing… As it is, it also “requires” another fixture of the laptop meeting: <em>The Moderator.</em> Perhaps a path forward is with automating these tasks? Assuming that with use in real-world application, there might be arise more questions than answers…</p>
+
+<p>… but hopefully less <strong>Audio Feedback</strong></p>
+
+<hr />
+<p><br /></p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_25_jarlefst_fadersinewide.gif" alt="M32 fader Wave" style="width:100%;height:auto;" /></p>
+
+<p><strong>POST SCRIPT</strong>  — These somewhat hypnotizing silver sinewaves are the faders on a Midas M32 mixing console. Controlling the M32 - another fixture in the SMC_Portal setup - is another path to reducing feedback. Next year then…
+<strong>Though serving</strong> no sensible purpose for any audio - and disregarding the absolute racket emanating from twentyfive hardworking motorized faders - there is a particular satisfaction in sending some MIDI-messages from a <a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/code/2021_11_25_jarlefst_midasm32_midi.maxpat" title="set the MIDI-menu to correspond to the M32 and make waves!">MaxMSP_patch</a> to set some things in motion.</p>
+
+<p>… so a huge thanks to Joni Mok for all help, reflections, inspiration, and drive!!</p>
+
+<hr />
+<p><br /></p>
+
+<p><strong>FURTHER READING:</strong></p>
+
+<ul>
+  <li>A fantastic resource on DSP to minimize acoustic feedback:
+    <ul>
+      <li>https://www.ranecommercial.com/legacy/note158.html</li>
+    </ul>
+  </li>
+  <li>The TotalMix MIDI-implementation chart:
+    <ul>
+      <li>http://rmouneyres.free.fr/puredata/MIDI_Assignigation_TotalMix.pdf</li>
+    </ul>
+  </li>
+  <li>A 5-minute video explaining and demonstrating how to maximize signal quality from any speaking-microphone:
+    <ul>
+      <li><a href="https://www.ranecommercial.com/legacy/video-5-minute-gain-structure-part2.html">Sound Advice for Intelligible Audio</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /><br />
+<br /><br />
+<br /></p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_jarlefst_submix.png" alt="subMix" /></p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2021/11/26/jarlefst-portal-feedback.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Soniweb: An Experiment in Web Traffic Sonification and Ambisonics | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Soniweb: An Experiment in Web Traffic Sonification and Ambisonics" />
+<meta name="author" content="Jackson Goode, Thibault Jaccard, Thomas Anda" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For the course SMC4046 Sonification and Sound Design, our group was tasked to create a system that collects and sonifies data in real time. For this project, we went even further(!) and spatialized the network data that passes through a computer." />
+<meta property="og:description" content="For the course SMC4046 Sonification and Sound Design, our group was tasked to create a system that collects and sonifies data in real time. For this project, we went even further(!) and spatialized the network data that passes through a computer." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2020/03/09/Soniweb.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2020/03/09/Soniweb.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_03_09_aleksati_sonification.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-09T19:20:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_03_09_aleksati_sonification.jpg" />
+<meta property="twitter:title" content="Soniweb: An Experiment in Web Traffic Sonification and Ambisonics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jackson Goode, Thibault Jaccard, Thomas Anda"},"dateModified":"2020-03-09T19:20:00+00:00","datePublished":"2020-03-09T19:20:00+00:00","description":"For the course SMC4046 Sonification and Sound Design, our group was tasked to create a system that collects and sonifies data in real time. For this project, we went even further(!) and spatialized the network data that passes through a computer.","headline":"Soniweb: An Experiment in Web Traffic Sonification and Ambisonics","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_03_09_aleksati_sonification.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2020/03/09/Soniweb.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jackson Goode, Thibault Jaccard, Thomas Anda"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2020/03/09/Soniweb.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Soniweb: An Experiment in Web Traffic Sonification and Ambisonics
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-03-09T19:20:00+00:00"
+        itemprop="datePublished"
+      >Mar 9, 2020 •
+      </time>
+         
+      <a href="/authors/jacksongoode.html">Jackson Goode,</a>
+           
+      <a href="/authors/thibaultjaccard.html">Thibault Jaccard,</a>
+           
+      <a href="/authors/thomasanda.html">Thomas Anda</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction">Introduction</h2>
+
+<p>For the course SMC4046 Sonification and Sound Design, our group was tasked to create a system that collects data in real-time <em>and</em> to <a href="https://en.wikipedia.org/wiki/Sonification">sonify</a> this incoming data. Our initial plan was to filter network traffic exclusively from the web browser and then analyze the HTTP response headers for information regarding the resources that are loaded when one visits a webpage. From there, we would send that data over OSC to Pure Data, a visual audio programming language and generate sound from it.</p>
+
+<p>However, we found (after extensive testing with various programs) that HTTPS webpages encrypt the view of the pages’ resources (the s stands for the SSL protocol) - this should have been more obvious at the beginning. This prevents a 3rd party application like <a href="https://www.wireshark.org/">Wireshark</a> from spying in on the network activity and reading the data that is transferred. While this is a wonderful standard for the sake of security, it prevented us from going in that direction as Wireshark is unable to decrypt SSL layers. Another application, <a href="https://www.telerik.com/fiddler">Fiddler</a>, an alternative to Wireshark, can achieve this, however, its implementation has poor integration with Python and even less on macOS. So our vision broadened to include all possible network activity that is transmitted on a computer and we went with Wireshark as a tried and true staple of the data-sniffing community.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>We decided early on that it would be quite interesting if we were able to sonify the locations of the data packets that were being sent and received when one uses the computer. From a research-oriented position, the sonification and spatialization of web data might provide the computer user with insights into:</p>
+
+<ol>
+  <li>Where the data you see, while casually browsing the web or using a web-dependent application, actually originates from (<strong>digital-physical correspondence &amp; global network monopolies</strong>)</li>
+  <li>How one’s device is constantly sending and receiving information, even in a seemingly inactive state (<strong>the inextricable internet</strong>) and in contrast…</li>
+  <li>How some webpages and applications take much more aggressive approaches in making contact with your device (<strong>web tracking &amp; privacy overreach</strong>)</li>
+</ol>
+
+<p>These guided our development and led us to tailor the data manipulation towards a sonified experience that could encompass these ideas. This led us to look for databases that would provide a massive list of IPs with associated geodata (country, city and IP address). We ended up with one of <a href="https://dev.maxmind.com/geoip/geoip2/downloadable/">Geoip2’s</a> free databases, which appeared to be the most comprehensive, free collection of IP-to-coordinate entries available for this task. With their accompanying python package, we were able to import the database quite easily and look up the source and destination IP addresses of every packet that passed through our Wireshark server (tshark) that would be hosted in Python.</p>
+
+<p>Jackson and Thomas were tasked with the development of the network sniffing script in Python. This involved working with a Wireshark wrapper for Python called <a href="https://github.com/KimiNewt/pyshark">pyshark</a> which allows us to host a Wireshark instance and read and filter packet data completely within Python.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set up capture and filter by host IP and packet size
+</span><span class="n">capture</span> <span class="o">=</span> <span class="n">pyshark</span><span class="p">.</span><span class="nc">LiveCapture</span><span class="p">(</span><span class="n">interface</span><span class="o">=</span><span class="sh">"</span><span class="s">en0</span><span class="sh">"</span><span class="p">,</span>
+                              <span class="n">bpf_filter</span><span class="o">=</span><span class="sh">"</span><span class="s">host </span><span class="sh">"</span><span class="o">+</span><span class="n">host_ip</span><span class="o">+</span>
+                              <span class="sh">"</span><span class="s">&amp;&amp; length &gt; 60</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+<p>This snippet of code constructed the capture stream and specified the network we were listening to (the Wi-Fi), which IP addresses we wanted to filter into our stream (our machine’s host IP), and what size we wanted the packets to be (this was to reduce the torrents of data that may be less relevant to our network activity).</p>
+
+<p>There wasn’t too much documentation on pyshark’s full capabilities, so we spent a good portion of time getting familiar with the package as well as Wireshark, which the package relied upon. Once we had exhausted the aforementioned possibility of getting metadata from webpages, we began to program a simple packet to OSC script that would send OSC messages to <a href="https://puredata.info/">Pure Data</a>(Pd) when a packet was sent or received into the computer. We would have a Pd patch running simultaneously to the Python script to listen to our OSC messages with the port specified. Here’s the code that does this below</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set up OSC server
+</span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="nc">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="p">.</span><span class="nf">add_argument</span><span class="p">(</span><span class="sh">"</span><span class="s">--ip</span><span class="sh">"</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="sh">"</span><span class="s">127.0.0.1</span><span class="sh">"</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="sh">"</span><span class="s">The ip of the OSC server</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">parser</span><span class="p">.</span><span class="nf">add_argument</span><span class="p">(</span><span class="sh">"</span><span class="s">--port</span><span class="sh">"</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">8888</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="sh">"</span><span class="s">The port the OSC server is listening on</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="nf">parse_args</span><span class="p">()</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">udp_client</span><span class="p">.</span><span class="nc">SimpleUDPClient</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">ip</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">port</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Further development included generating longitude and latitude from the IP addresses and transforming them into ranges that we could eventually use in the Pd patch. We ended up splitting longitudinal values across 8 positions and 4 positions for latitude. This was a compromise due to the computational expense involved using 32 channels from which we would play multiple samples. Because we filtered in packets that either contained our host IP (the IP of the computer running the script) as the source IP or destination IP, we were able to send a single latitude and longitude pair along with a message giving the direction (sent or received). The protocol of the packet (TCP, UDP, TLS, DNS, other) and its length (or size) were also sent as OSC messages. Here are some of those details if the packet was sent from the host IP. It was also possible to retrieve the city and country as well.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Sent
+</span><span class="k">if</span> <span class="n">packet</span><span class="p">.</span><span class="n">ip</span><span class="p">.</span><span class="n">src</span> <span class="o">==</span> <span class="n">host_ip</span><span class="p">:</span>
+    <span class="n">dst_resp</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">city</span><span class="p">(</span><span class="n">packet</span><span class="p">.</span><span class="n">ip</span><span class="p">.</span><span class="n">dst</span><span class="p">)</span>
+    <span class="n">client</span><span class="p">.</span><span class="nf">send_message</span><span class="p">(</span><span class="sh">"</span><span class="s">/dest_name</span><span class="sh">"</span><span class="p">,</span> <span class="n">dst_resp</span><span class="p">.</span><span class="n">country</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">client</span><span class="p">.</span><span class="nf">send_message</span><span class="p">(</span><span class="sh">"</span><span class="s">/direction</span><span class="sh">"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">client</span><span class="p">.</span><span class="nf">send_message</span><span class="p">(</span><span class="sh">"</span><span class="s">/ip_lat</span><span class="sh">"</span><span class="p">,</span>
+                        <span class="nf">round</span><span class="p">((</span><span class="n">dst_resp</span><span class="p">.</span><span class="n">location</span><span class="p">.</span><span class="n">latitude</span><span class="o">+</span><span class="mi">90</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span><span class="p">))</span>
+                        <span class="c1"># 0 to 3 (4 degrees of differentiation)
+</span>    <span class="n">client</span><span class="p">.</span><span class="nf">send_message</span><span class="p">(</span><span class="sh">"</span><span class="s">/ip_long</span><span class="sh">"</span><span class="p">,</span>
+                        <span class="nf">round</span><span class="p">((</span><span class="n">dst_resp</span><span class="p">.</span><span class="n">location</span><span class="p">.</span><span class="n">longitude</span><span class="o">+</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="mf">51.43</span><span class="p">))</span>
+                        <span class="c1"># 0 to 7 (8 degrees of differentiation)
+</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Sent to </span><span class="sh">"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">dst_resp</span><span class="p">.</span><span class="n">country</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="sonification">Sonification</h2>
+
+<p>All the while, Thibault developed the Pd-patch simultaneous to our work in Python. He began with a sample handler that would play five different samples that corresponded to the protocol type, amplitude. We initially attempted ambisonics production through <a href="https://www.reaper.fm/">Reaper</a> as a DAW but found a wonderful (and actively developed updated) library for Pd called <a href="https://github.com/Spacechild1/vstplugin">vstplugin~</a> where we loaded the <a href="https://plugins.iem.at/">IEM</a> plugin suite for ambisonics. The library worked quite well for our purposes and we were able to load each of our 32 channel’s azimuth and elevations as an initialization process. Each of the “voice” sub-patches contain five “samplehandler” sub-patches to play any of the potential five sounds given the protocol message. Within these sub-patches is one “singlesample” sub-patch that plays the sample with “tabread4~”. However, this sub-patch is cloned for times for the possibility of a single channel playing a particular sample up to four times simultaneously. This was built in due to the high frequency of packet data that we receive during the python script’s playback.</p>
+
+<figure align="middle">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_03_09_thomasa_soniweb_pd.png" width="auto" height="auto" />
+   <figcaption>The main Pd patch</figcaption>
+</figure>
+
+<h2 id="summary">Summary</h2>
+
+<p>When running the script and patch simultaneously, the network activity that your current machine is relaying is sonified and located in a <a href="https://en.wikipedia.org/wiki/Ambisonics">5th order ambisonics</a> environment. The various bells ping around the listener as if they were sitting in the center of the Earth listening to the machines around them speak to one another. While we achieved our set goals, there are a few unanswered questions as to whether the packets that are being received are actually too quick to receive and process in real-time and may become backlogged over the course of a session. This may either have to do with limitations imposed by Pd, Python, Wireshark or the CPU power afforded by the user’s computer. In a recent update, converting one of the “if” statements to a dpf filter within pyshark’s instantiation actually made the incoming packets quite responsive to web browsing activity. However, it may be possible to mitigate these issues and enhance the actual sonification by generating the instruments within Pd rather than using sample files. This project has great potential for an extension into a live installation, one, perhaps, that asks the audience to connect their devices to a network hosted in the space so that they could listen to the network activity of their collective devices.</p>
+
+<figure align="middle">
+  <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_03_07_jacksong_soniweb_demo.mp4" width="768" height="432" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" alt="A demo of Soniweb (headphones required!)"></iframe>
+<figcaption>A demo of Soniweb (headphones required!)</figcaption>
+</figure>
+
+<h1 id="works-cited">Works Cited</h1>
+
+<p>“Fiddler - Free Web Debugging Proxy - Telerik.” <em>Telerik.com</em>, https://www.telerik.com/fiddler. Accessed 19 Apr. 2020.</p>
+
+<p><em>GeoIP2 Downloadable Databases « MaxMind Developer Site</em>. https://dev.maxmind.com/geoip/geoip2/downloadable/. Accessed 19 Apr. 2020.</p>
+
+<p>Green, Dor. <em>KimiNewt/Pyshark</em>. 2013. 2020. GitHub, https://github.com/KimiNewt/pyshark.</p>
+
+<p><em>Pure Data — Pd Community Site</em>. https://puredata.info/. Accessed 19 Apr. 2020.</p>
+
+<p><em>REAPER - Audio Production Without Limits</em>. https://www.reaper.fm/. Accessed 19 Apr. 2020.</p>
+
+<p>Ressi, Christof. <em>Spacechild1/Vstplugin</em>. 2019. 2020. GitHub, https://github.com/Spacechild1/vstplugin.</p>
+
+<p>Rudrich, Daniel. <em>IEM Plug-in Suite. plugins.iem.at</em>, https://plugins.iem.at/. Accessed 19 Apr. 2020.</p>
+
+<p><em>Wireshark · Go Deep</em>. https://www.wireshark.org/. Accessed 19 Apr. 2020.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sonification/2020/03/09/Soniweb.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

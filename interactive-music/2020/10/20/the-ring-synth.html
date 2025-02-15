@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Ring Synth | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="The Ring Synth" />
+<meta name="author" content="Thibault Jaccard" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Exploring speed as sound shaping parameter" />
+<meta property="og:description" content="Exploring speed as sound shaping parameter" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/20/the-ring-synth.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/20/the-ring-synth.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_20_thibault_the_ring_synth.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-20T10:01:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_20_thibault_the_ring_synth.png" />
+<meta property="twitter:title" content="The Ring Synth" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Thibault Jaccard"},"dateModified":"2020-10-20T10:01:00+00:00","datePublished":"2020-10-20T10:01:00+00:00","description":"Exploring speed as sound shaping parameter","headline":"The Ring Synth","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_20_thibault_the_ring_synth.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/20/the-ring-synth.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Thibault Jaccard"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/20/the-ring-synth.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      The Ring Synth
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-10-20T10:01:00+00:00"
+        itemprop="datePublished"
+      >Oct 20, 2020 •
+      </time>
+         
+      <a href="/authors/thibaultjaccard.html">Thibault Jaccard</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction">Introduction</h2>
+
+<p>The Ring Synth is a monophonic subtractive controlled by voice and finger movement. The finger data acquisition is done using an ATSAMD51 based microcontroller by Adafruit and the Trill Ring capacitive touch sensor by Bela. The sound engine is implemented in Pure Data.</p>
+
+<h2 id="design">Design</h2>
+
+<h4 id="overview">Overview</h4>
+
+<p>The system consists of three parts, the audio peripheral (sound card, microphone and heaphones), the finger gesture peripheral (microcontroller, Trill and LEDs) and the computer (mapping and synthesis in Pd). You can have a look to the pin diagram below.</p>
+
+<p align="center">
+  <img src="/assets/image/2020_10_20_trs_pin_diagram.svg" />
+</p>
+
+<h4 id="inputs">Inputs</h4>
+
+<p>From the voice, the fundamental frequency and the RMS are extracted in Pd.</p>
+
+<p>From the Trill sensor, the touch surface (pressure) and the finger displacement speed are extracted using a custom program implemented in the Arduino IDE (in C). These data are sent to the computer using MIDI CC over USB.</p>
+
+<h4 id="feedback">Feedback</h4>
+
+<p>An Adafruit NeoPixel 24 LEDs Ring surrounds the Trill Ring, and gives a useful feedback in order to develop expressive skills on the instrument. The touch surface is mapped to the size of an appearing strip and the speed to colour (see video below).</p>
+
+<h4 id="synthesis">Synthesis</h4>
+
+<p>This subtractive synthesizer has five parameters to control:</p>
+
+<ul>
+  <li>Subtractive synthesis (phasor~ -&gt; vcf~)
+    <ul>
+      <li>Harshness (q of vcf~)</li>
+      <li>Vibrato (moving f of vcf~)</li>
+    </ul>
+  </li>
+  <li>Noise (also subtractive, pink~ -&gt; vcf~)
+    <ul>
+      <li>Dry/wet</li>
+    </ul>
+  </li>
+  <li>Volume
+    <ul>
+      <li>Continuously changing envelope</li>
+    </ul>
+  </li>
+  <li>Reverb (freeverb~)
+    <ul>
+      <li>Dry/wet</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Below is the subpatch doing the first synthesis step.</p>
+
+<p align="center">
+  <img src="/assets/image/2020_10_20_trs_pd_patch.png" />
+</p>
+
+<p>See video below to hear it in action.</p>
+
+<h4 id="mapping">Mapping</h4>
+
+<p>The frequency extracted from the voice is mapped to the fundamental synthesis frequency in a one-to-one fashion. The rest (RMS, surface and speed) interact in a more complex many-to-many mapping shown below.</p>
+
+<p align="center">
+  <img src="/assets/image/2020_10_20_trs_mapping.png" />
+</p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Here is a video of the system in action. Last third of the video presents the instrument being used with random noise as audio input, so the pitch jumps all the time.</p>
+
+<p align="center">
+<iframe width="832" height="468" src="https://www.youtube.com/embed/G6x0lBIT2lw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>The interaction is interesting due to the speed parameter, it kinda ressembles a bow in a way, and is fun to play with. But the sensor’s sensitivity is high, and it is hard to stabilize the sound. Many improvements could be done on the data filtering process.</p>
+
+<p>Taking advantage of the possible voice virtuosity has proven to be a straightforward way to test the instrument in any track, genre and key.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2020/10/20/the-ring-synth.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

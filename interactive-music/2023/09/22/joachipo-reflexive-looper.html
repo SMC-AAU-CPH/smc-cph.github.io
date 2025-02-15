@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How to break out of the comping loop? | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="How to break out of the comping loop?" />
+<meta name="author" content="Joachim Poutaraud" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A critical review of the Reflexive Looper." />
+<meta property="og:description" content="A critical review of the Reflexive Looper." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/09/22/joachipo-reflexive-looper.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/09/22/joachipo-reflexive-looper.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_09_22_joachipo_loop.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-09-22T08:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_09_22_joachipo_loop.png" />
+<meta property="twitter:title" content="How to break out of the comping loop?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joachim Poutaraud"},"dateModified":"2023-09-22T08:00:00+00:00","datePublished":"2023-09-22T08:00:00+00:00","description":"A critical review of the Reflexive Looper.","headline":"How to break out of the comping loop?","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_09_22_joachipo_loop.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/09/22/joachipo-reflexive-looper.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joachim Poutaraud"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2023/09/22/joachipo-reflexive-looper.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      How to break out of the comping loop?
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-09-22T08:00:00+00:00"
+        itemprop="datePublished"
+      >Sep 22, 2023 •
+      </time>
+         
+      <a href="/authors/joachimpoutaraud.html">Joachim Poutaraud</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>“<a href="https://en.wikipedia.org/wiki/Comping_(jazz)">Comping</a>” is a term coined by jazz musicians, meaning accompaniment. Traditionally, this term is associated with musicians in the rhythm section, such as the pianist, bassist, guitarist or drummer, whose role is to accompany the soloist when the latter plays the theme of a jazz composition or standard, or improvises a solo. It is therefore necessary for jazz musicians to develop skills in different formations (duo, trio, quartet, etc.) in order to improve their ability to accompany a solo musician or to interact with the musicians of the rhythm section. This defines the very essence of jazz improvisation, which consists in spontaneously inventing solo melodic lines, or accompaniment parts, as part of a jazz performance.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_09_22_joachipo_canned.png" alt="Canned Music" title="" height="auto" />
+   <figcaption><i>A robot making canned music with musical instruments (November 3, 1930 Syracuse Herald)</i></figcaption>
+</figure>
+
+<p>Generally speaking, it’s not always possible for jazz musicians to rehearse as a group (i.e. difficulty in finding a rehearsal venue, difficulty in finding a schedule that suits everyone) and often means having to resort to alternative means of rehearsing alone. Loop pedals can be used to record a riff or chord sequence to create a “loop”. This enables musicians to play several tracks of music simultaneously. Nevertheless, this type of practice has the disadvantage of always playing the same content and generating the so-called “<em>canned</em> (boringly repetitive and unresponsive) <em>music effect</em>”, due to the systematic repetition of the recorded loop without any variation (<a href="https://dl.acm.org/doi/10.1145/2470654.2481303">Pachet et al., 2013</a>).</p>
+
+<p>Another possibility is to use “minus-one” recordings (i.e. <a href="https://www.jazz-play-a-longs.com/">Jamey Aebersold Play-A-Longs</a>) to play a piece with a recorded professional rhythm section. However, this does not take into account the style of the soloist, which may differ considerably from that of the recorded musicians, and this does not allow for interaction as the recording is totally unresponsive.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://content.alfred.com/catmp3/24-V94DS_!~01.mp3" type="audio/mpeg" />
+    Alternate Text
+  </audio>
+  <figcaption>Jamey Aebersold Jazz® Play-A-Longs</figcaption>
+</figure>
+
+<h1 id="the-reflexive-looper">The Reflexive Looper</h1>
+<p><br />
+Based on these observations, Pachet et al. (<a href="https://dl.acm.org/doi/10.1145/2470654.2481303">2013</a>) proposed the concept of “<em>reflexive interactions</em>” in a system called the Reflexive Looper (RLR). This aims to create “<em>copies of musical performances</em>” in order to tackle the limitations of traditional musical systems, such as generating stylistically consistent material or enabling Human-Computer Interaction (HCI). RLR consists of a system for playing “<em>copies of past musical performances</em>” of oneself (<a href="https://dl.acm.org/doi/10.1145/2470654.2481303">Pachet et al., 2013a</a>). In particular, this allows the system to develop a semblance of creative sense in order to generate an interaction between the musician and the system, based on the material produced by the musician. The aim here is to create enough of a transformation not to resemble direct imitation (<a href="https://www.tandfonline.com/doi/abs/10.1080/14626268.2018.1426613">Gifford et al., 2018</a>).</p>
+
+<figure style="float: none">
+   <iframe height="400" width="100%" src="https://www.youtube.com/embed/8YzPaCzDDzg" title="Reflexive Looper: François Pachet plays &quot;All the Things You Are&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+      </iframe>
+  <figcaption></figcaption>
+</figure>
+
+<h2 id="mapping">Mapping</h2>
+<p><br />
+In order to allow the correspondence between parameter control and sound synthesis parameters, several types of mapping can be used (<a href="http://recherche.ircam.fr/anasyn/wanderle/Gestes/Externe/Hunt_Towards.pdf">Hunt et al. 2000</a>). On the one hand, the use of systems producing a mapping strategy through internal adaptations of the system thanks to prior training, and on the other, the use of mapping strategies defining relationships explicitly. In the case of the RLR, the mapping strategy is based on the supervised learning of a multi-modal classification model (i.e. <a href="https://en.wikipedia.org/wiki/Support_vector_machine">Support Vector Machine</a>). Here, the model is trained on MIDI signals produced by a “<em>guitarist improvising with a Godin MIDI guitar on eight jazz standards with different tempos and rhythmical feels (Bluesette, Lady Bird, Nardis, Ornithology, Solar, Summer Samba, The Days of Wine and Roses, and Tune up)</em>”.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_09_22_joachipo_mapping.png" alt="Mapping of performer actions to synthesis parameters" title="" height="auto" />
+   <figcaption><i>Mapping of performer actions to synthesis parameters (Hunt et al. 2000)</i></figcaption>
+</figure>
+
+<p>Thus, from the system’s internal adaptations, it is possible to generate two principles:</p>
+<ol>
+  <li>the principle of interaction based on feature extraction</li>
+  <li>the principle of “<em>other members</em>”</li>
+</ol>
+
+<p>In the first case, the system can extract audio features specific to the musician (i.e. RMS, peaks count, and spectral centroid) and re-use them to generate an accompaniment according to the style of the musician’s playing. In the second case, the system can differentiate the musician’s playing mode and interact accordingly. For example, if the musician improvises a solo, the RLR interacts by playing the rhythm section (bass and chords). And conversely, if the musician plays chords, the RLR interacts by playing a solo with a bass line.</p>
+
+<h2 id="score-following">Score Following</h2>
+<p><br />
+The RLR is based on embedded knowledge of the tempo and overall structure of the jazz standards chord grid. This requires the system to interact with the musician while taking into account the correct chord of the grid. This functionality refers to the concept of score following (<a href="https://www.cs.cmu.edu/afs/cs.cmu.edu/Web/People/rbd/papers/icmc84accomp.pdf">Dannenberg 1984</a>; <a href="https://web.media.mit.edu/~bv/papers/synthetic%20performer.pdf">Vercoe 1984</a>), in which a system follows the progress of a live musician through a predetermined score, and “reacts’’ accordingly. According to Drummond (<a href="https://www.cambridge.org/core/journals/organised-sound/article/abs/understanding-interactive-systems/BF81A560B5C9D96355BC400065C7A1DF">2009</a>), this has the disadvantage of making the system more reactive than interactive, given that the system is initially programmed to follow the musician in all circumstances. So, although RLR can extract the features of the musician in real-time while applying an algorithmic transformation to generate “interactive” content, score following systems have been criticized as being “<em>a perfect example for intelligent but zero interactive music systems</em>” (<a href="http://mtg.upf.edu/node/449">Jordà 2005: 85</a>).</p>
+
+<h2 id="control-and-expression">Control and Expression</h2>
+<p><br />
+Finally, previous work has suggested that “<em>the expressivity of an instrument is dependent on the transparency of the mapping for both the player and the audience</em>” (<a href="https://www.cambridge.org/core/journals/organised-sound/article/abs/mapping-transparency-through-metaphor-towards-more-expressive-musical-instruments/6A0DCDB0E31E7C01AEEA29427EA7F42A">Fels et al., 2002</a>). The RLR has the advantage of being fully automatic and having no physical controllers (e.g. pedals). This eliminates the need for additional mental attention on the part of the musician, and allows greater availability for the expression necessary for jazz improvisation. Although the addition of physical controllers could eventually give more control over the audio generated by the RLR (<a href="https://dl.acm.org/doi/10.1145/2470654.2481303">Pachet et al., 2013</a>), the intelligent and automatic interpretation of the material produced by the musician nevertheless enhances its expressiveness by ensuring that the mapping between input and audio generation is located at the appropriate level of structural detail (<a href="https://escholarship.org/uc/item/8v0022bd">Dobrian et al., 2006</a>).</p>
+
+<p><strong>References</strong>
+<br /></p>
+<ul>
+<li><font size="3"><p>Pachet, F., Roy, P., Moreira, J., &amp; d'Inverno, M. (2013, April). Reflexive loopers for solo musical improvisation. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (pp. 2205-2208).</p></font></li>
+
+<li><font size="3"><p>Gifford, T., Knotts, S., McCormack, J., Kalonaris, S., Yee-King, M., &amp; d’Inverno, M. (2018). Computational systems for music improvisation. Digital Creativity, 29(1), 19-36.</p></font></li>
+
+<li><font size="3"><p>Hunt, A., Wanderley, M. M., &amp; Kirk, R. (2000, September). Towards a model for instrumental mapping in expert musical interaction. In ICMC.</p></font></li>
+
+<li><font size="3"><p>Dannenberg, R. B. (1984, October). An on-line algorithm for real-time accompaniment. In ICMC (Vol. 84, pp. 193-198).</p></font></li>
+
+<li><font size="3"><p>Vercoe, B. 1984. The Synthetic Performer in the Context of Live Performance. Proceedings of the 1984 International Computer Music Conference (ICMC84). Paris, France: International Computer Music Association, 199–200.</p></font></li>
+
+<li><font size="3"><p>Drummond, J. (2009). Understanding interactive systems. Organised Sound, 14(2), 124-133.</p></font></li>
+
+<li><font size="3"><p>Jordà, S. 2005. Digital Lutherie: Crafting Musical Computers for New Musics’ Performance and Improvisation</p></font></li>
+
+<li><font size="3"><p>Fels, S., Gadd, A., &amp; Mulder, A. (2002). Mapping transparency through metaphor: towards more expressive musical instruments. Organised Sound, 7(2), 109-126.</p></font></li>
+
+<li><font size="3"><p>Dobrian, C., &amp; Koppelman, D. (2006). The ‘E’in NIME: musical expression with new computer interfaces.</p></font></li>
+</ul>
+
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2023/09/22/joachipo-reflexive-looper.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

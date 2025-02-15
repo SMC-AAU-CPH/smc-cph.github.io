@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://smc-aau-cph.github.io/smc-cph.github.io/" rel="alternate" type="text/html" /><updated>2025-02-15T13:27:12+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml</id><title type="html">The SMC Blog</title><subtitle>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&apos;s programme in Sound and Music Computing (SMC).</subtitle><entry><title type="html">Zen Soundscape Installation/Sculpture</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2025/02/13/Eirini-Liapikou.html" rel="alternate" type="text/html" title="Zen Soundscape Installation/Sculpture" /><published>2025-02-13T21:01:42+00:00</published><updated>2025-02-13T21:01:42+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2025/02/13/Eirini-Liapikou</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2025/02/13/Eirini-Liapikou.html"><![CDATA[<p>##</p>
+
+<p>Tags:</p>
+<ul>
+  <li>installation</li>
+  <li>sculpture</li>
+  <li>sound art</li>
+  <li>tranquility</li>
+  <li>nature sounds</li>
+  <li>meditation</li>
+  <li>mindfulness</li>
+  <li>ADHD friendly</li>
+  <li>interactive art</li>
+  <li>sensory experience</li>
+</ul>
+
+<p>A sculpture, inspired by <a href="https://georgekoutsouris.com" title="Artist homepage">George Koutsouris</a> and <a href="https://www.artsy.net/artwork/takis-6-musicales" title="Artist homepage">Takis</a> creates a harmonious soundscape that transports listeners to a state of zen. As visitors interact with the sculpture, gentle sounds reminiscent of nature—such as rustling leaves, flowing water, strings vibrating and soft chimes—emerge, fostering a meditative atmosphere. The installation not only serves as a visual and auditory delight but also as a sanctuary for mindfulness, inviting individuals to pause, breathe, and reconnect with their inner peace. It is designed to reduce overstimulation to population with ADHD and other disorders.</p>
+
+<h3 id="haptic-vibration-api-for-weather-translation">Haptic Vibration API for Weather Translation</h3>
+
+<p>This innovative project aims to bridge the gap between weather conditions and the visually impaired community through the use of haptic vibrations and sound. By developing an API that translates real-time weather data into tactile and auditory signals, users can experience weather changes in a unique and accessible way. For instance, the sensation of wind might be conveyed through gentle vibrations accompanied by the sound of chimes, while rain could be represented by a rhythmic tapping and the sound of droplets. This system not only enhances accessibility but also enriches the sensory experience, allowing users to perceive and interact with their environment in a meaningful manner.</p>
+
+<p>Inspired by the work of Eirini Liapikou in this project <a href="[https://www.forsamlingshusene.dk/om-vaerket">https://www.forsamlingshusene.dk/om-vaerket</a>.</p>]]></content><author><name>Eirini Liapikou</name></author><category term="applied-project" /><summary type="html"><![CDATA[A serene installation that creates a harmonious soundscape transporting listeners to a state of zen.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://images.squarespace-cdn.com/content/v1/62443dc287929f177e702236/6d245db3-8494-44df-84de-5c4c8c60a789/1+black.png" /><media:content medium="image" url="https://images.squarespace-cdn.com/content/v1/62443dc287929f177e702236/6d245db3-8494-44df-84de-5c4c8c60a789/1+black.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">DDSP-FM</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2025/02/13/kristeic-screamscape.html" rel="alternate" type="text/html" title="DDSP-FM" /><published>2025-02-13T21:00:42+00:00</published><updated>2025-02-13T21:00:42+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2025/02/13/kristeic-screamscape</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2025/02/13/kristeic-screamscape.html"><![CDATA[<p>Master Thesis, May 2021
+Author: Juan Alonso
+Supervisor: Cumhur Erkut
+<a href="https://www.smc.aau.dk/">Sound and Music Computing</a> - Aalborg University, Copenhagen</p>
+
+<h3 id="visit-the-audio-examples-page-to-listen-to-the-results">Visit <a href="https://juanalonso.github.io/ddsp_fm/">the audio examples page</a> to listen to the results.</h3>
+
+<p>DDSP-FM is a fork of the <a href="https://github.com/magenta/ddsp">official DDSP library</a>. This version includes the following new features:</p>
+
+<ul>
+  <li>a differentiable 4-op FM synthesizer</li>
+  <li>a differentiable AM synthesizer</li>
+  <li>a new operator, <code class="language-plaintext highlighter-rouge">mult</code></li>
+  <li>a new TFRecord, suitable for future develpments, such as preset matching</li>
+  <li>a flag for stopping the training if losses are NaN</li>
+</ul>
+
+<h2 id="-timbre-matching-demo">💡 Timbre matching demo</h2>
+
+<p><a href="https://colab.research.google.com/github/juanalonso/ddsp_fm/blob/master/ddsp/colab/fm/Timbre_matching.ipynb"><img src="https://camo.githubusercontent.com/96889048f8a9014fdeba2a891f97150c6aac6e723f5190236b10215a97ed41f3/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667" alt="Open In Colab" /></a> This notebook will create a random preset for the FM synth, generate 48 pitches and train a NN that will create a patch as similar as possible as the original one, using only the spectrograms of the original preset.</p>]]></content><author><name>Juan Alonso, Cumhur Erkut</name></author><category term="masters-thesis" /><summary type="html"><![CDATA[Explore latent space for learning the parameters of a Differentiable FM Synthesizer]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://juanalonso.github.io/ddsp_fm/img/anim_vae01.gif" /><media:content medium="image" url="https://juanalonso.github.io/ddsp_fm/img/anim_vae01.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ben-SMC8-BrailleGuide</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/ben-smc8-brailleguide" rel="alternate" type="text/html" title="Ben-SMC8-BrailleGuide" /><published>2025-02-10T00:00:00+00:00</published><updated>2025-02-10T00:00:00+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/BrailleGuide</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/ben-smc8-brailleguide"><![CDATA[<p>I do not know if Roskilde already has something like this, but project would develop some kind of device similar to audio guides used in museums. In such a high noise environment, could be a physical device with a braille grid that displays words based on what the user is nearby using some kind of sensor or geo-marker. Could also have some sort of audio/earphone component as well. Perhaps similar to this exhibit at the Bauhaus museum: https://www.studiokamp.com/bauhaus-sound.</p>
+
+<p>Could also include some kind of vibrational feedback similar to this project https://www.notimpossible.com/projects/music-not-impossible for deaf/hearing impaired.</p>
+
+<ul>
+  <li>Accessibility</li>
+  <li>Blindness</li>
+  <li>AudioGuide</li>
+  <li>MEL</li>
+  <li>Braille</li>
+  <li>GeoLocation</li>
+  <li>VibrationFeedback</li>
+</ul>]]></content><author><name>Ben Stein</name></author><category term="applied-project" /><category term="Accessibility," /><category term="vibrotactile" /><category term="feedback," /><category term="Blindness" /><summary type="html"><![CDATA[Blind/visually impaired festival goers need an easy way to get information about things near them because it can enable a more autonomous experience for them.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://w3q4u7z4.delivery.rocketcdn.me/wp-content/uploads/2019/07/david_kamp_bauhaus_sound_bauhaussound_studiokamp_Bauhaus_dessau_museum_recording_sound_PMWO9607.webp" /><media:content medium="image" url="https://w3q4u7z4.delivery.rocketcdn.me/wp-content/uploads/2019/07/david_kamp_bauhaus_sound_bauhaussound_studiokamp_Bauhaus_dessau_museum_recording_sound_PMWO9607.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Puzzler: A Tectonic Interactive Music System</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/12/04/karenij-thePuzzler.html" rel="alternate" type="text/html" title="The Puzzler: A Tectonic Interactive Music System" /><published>2024-12-04T08:48:00+00:00</published><updated>2024-12-04T08:48:00+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/12/04/karenij-thePuzzler</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/12/04/karenij-thePuzzler.html"><![CDATA[<h3 id="introduction">Introduction</h3>
+
+<p>Introducing the Puzzler, a interactive music system that is designed with architecture in mind. Specifically the puzzler is designed to be a representation of how ideas from architectural tectonics can be realized in interactive music systems.</p>
+
+<p><br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_12_04_karenij_puzzler.jpg" width="80%" style="display: block; margin: auto;" />
+  <figcaption>The Puzzler</figcaption>
+</figure>
+
+<h3 id="the-model">The Model</h3>
+
+<p>The reason this idea in Architecture came to inspire this project was partly due to a visit my sister made in the summer. My sister is very interested in going into the field of Architecture and Design so she took a online class last summer. Because of this, I was able to listen in an learn a bit about architecture myself. I helped her out with a couple of projects but because of the delicate nature of the models she entrusted me with one of the models she made. As I was thinking about what kind of structure I would make for the Interactive Music Systems class, I imagined how this model could be used to house sensors to make an interactive system.</p>
+
+<p><br /></p>
+<figure style="float: none">
+  <img src="/assets/image/2024_12_04_karenij_mod.jpg" width="60%" style="display: block; margin: auto;" />
+  <figcaption>The Original Inspiration</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="what-the-heck-is-tectonics">WHat the Heck is Tectonics??</h3>
+
+<p>Architectural Tectonics is described as the art of construction, it focuses on taking the construction of an object and elevating it to an artistic form.  This idea is similar to the concept of ‘process over plans’ in interactive design, basically trusting that the process of creation itself bring out the creativity in a system. In his thesis, Robert Maulden specifies that the process is about bringing the physical material from physical to metaphysical, gathering both external and internal references.</p>
+
+<p><br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_12_04_karenij_tronic.jpg" width="80%" style="display: block; margin: auto;" />
+  <figcaption>The Brain of the system</figcaption>
+</figure>
+
+<h3 id="design-and-implementation">Design and Implementation</h3>
+
+<p>Because of these references, I started with an exercise I had seen previously in a project my sister completed for her architecture class. It involved creating several square frames from balsa wood, each with differing sizes, and creating a design that fit within an imaginary cube based on the dimensions of the biggest frame. In defining these borders, we are confined to a limited space in which we design our interactive interfaces. I wanted each side to look different when faced head-on and have a specific interaction or feedback type.</p>
+
+<p>I assembled the frames within the structure with glue and strengthened the design with supporting pieces of wood. As I went along with this process, I noticed how the various support beams inspired different spaces in which sensors or actuators could fit and how many they would support. As I continued with this plan, I completed the initial structure on which my panels would be placed. When designing the panels, I initially placed foam boards with tape to test different layouts. I enjoyed seeing the electronics within the structure as I went along, so I kept a lot of space between the panels open so the user could see them. The Puzzler is supposed to be a fun play on traditional MIDI controller input devices. The most popular of these models contains multiple kinds of controllers, including musical keys, push buttons, knobs, and sliders. For this project, I took the first three of these types of controls and experimented with creative ways to introduce this to a 6-sided irregular structure.</p>
+
+<p>Since the structure roughly resembles a cube, I chose six kinds of interactions, each representing the six different sides. These six interactions include:</p>
+
+<p>Accelerometer - equipped with machine learning, it changes the wave type depending on the side facing up on the puzzler</p>
+
+<p>Single Color Light Emitting Diodes (LED) - Gives Visual Feedback for Interaction. There is also a secret riddle that needs to be solved in order for the system to start playing based off of LED feedback, hence the name the puzzler.</p>
+
+<p>Momentary Buttons - changes the scale used in the sequence as well as the tempo</p>
+
+<p>Light Dependent Resistor - Manipulates the filtering of the sound</p>
+
+<p>Trill Craft Surface - Changes the notes played in the sequence</p>
+
+<p>Potentiometers - Control Attack and decay of the notes.</p>
+
+<h3 id="user-study">User study</h3>
+
+<p>Both participants exhibited positive impressions of the system. One immediately remarked that it looked like the Bop It toy, which was a popular toy from the late 2000s. Both of them, though, once they started experimenting with it, had difficulty turning it on by solving the ‘riddle’ that needed to be held for 5 seconds.  Because of this, I intervened for this part so that they could explore the other parts of the controls without spending too much time frustrated by the ‘riddle.’ 
+When talking about how it differed from their previous experiences with musical instruments, one described it as way more “techy” and felt different from the ways they are used to playing their instrument.</p>
+
+<p>The other participant described it as similar in some ways in that it reacted sonically to what the player was doing but “definitely different from a guitar.”  When talking about their favorite interaction, both participants found the accelerometer wave type changing to be very engaging and played with going back and forth between the different sides. One participant also commented that the potentiometers “were also fun to play with.”  For the last question, one participant was really interested in seeing the top surface working as it looked fun to play with. The other participant said that they would like to see it “play on its own” as opposed to needing to be plugged into the speaker so that it would be easier to play with.</p>
+
+<p><br /></p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>The inspiration for the Puzzler is what gives it its unique character. The exploration of interaction and sound through the Puzzler highlights the potential of blending architectural principles with interactive music design. Through the use of a non-traditional layout, which is uncommon in MIDI controller interfaces, we can provide users with new ways of musical expression. The combined use of Pure Data, Bela, and various sensors allowed for an engaging experience ripe with inspirations for iteration.  The process of creating the Puzzler highlights the importance of iteration, mapping diversity, and the balance of complexity vs. usability. The Puzzler is a model for the creative potential of interdisciplinary thought in the conversation about creativity and interaction.</p>
+
+<h3 id="references">References</h3>
+
+<p>P. R. Cook, “Re-Designing Principles for Computer Music Controllers: a Case Study of SqueezeVox Maggie,” in New Interfaces for Musical Expression, 2009. [Online]. Available: https://api.semanticscholar.org/CorpusID:5050967</p>
+
+<p>J. Drummond, “Understanding Interactive Systems,” Organised Sound, vol. 14, no. 2, pp. 124–133, 2009, doi: 10.1017/S1355771809000235.</p>
+
+<p>S. Holland et al., “Understanding Music Interaction, and Why It Matters,” in Springer Series on Cultural Computing. , Switzerland: Switzerland: Springer International Publishing AG, 2019, pp. 1–20. doi: 10.1007/978-3-319-92069-6_1.</p>
+
+<p>R. Maulden, “Tectonics in architecture : from the physical to the meta-physical,” Thesis (M. Arch.), Massachusetts Institute of Technology. Department of Architecture., 1986. Accessed: Dec. 02, 2024. [Online]. Available: https://dspace.mit.edu/handle/1721.1/78804</p>]]></content><author><name>Karenina Juarez</name></author><category term="interactive-music" /><summary type="html"><![CDATA[An IMS inspired by lessons in architecture]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_12_04_karenij_puzzler.jpg" /><media:content medium="image" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_12_04_karenij_puzzler.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Cosmic Clash!</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2024/11/24/thomaseo-cosmic_clash.html" rel="alternate" type="text/html" title="Cosmic Clash!" /><published>2024-11-24T08:48:00+00:00</published><updated>2024-11-24T08:48:00+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2024/11/24/thomaseo-cosmic_clash</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2024/11/24/thomaseo-cosmic_clash.html"><![CDATA[<h3 id="introduction">Introduction</h3>
+
+<p><strong>Can a game be used to help festival attendees do their physiotherapy exercises even during the festival?</strong></p>
+
+<ul>
+  <li><strong>Concept</strong> : Develop a game that integrates physiotherapy exercises into its mechanics, making it fun and engaging for participants.</li>
+  <li><strong>Implementation</strong> : Use wearable sensors to track movements and provide feedback, ensuring exercises are performed correctly.</li>
+  <li><strong>Benefits</strong> : Encourages adherence to physiotherapy routines, promotes physical well-being, and adds an element of fun to the festival experience.</li>
+</ul>
+
+<h3 id="the-biopoint-sensor">The Biopoint Sensor</h3>
+
+<p>SiFi Labs are currently developing their line of sensors called Biopoint. These are small, wearable devices containing an array of sensors which collect data from the body. These include an Inertial Measurement Unit (IMU), Electrocardiogram (ECG), Electromyography (EMG), Electrodermal Activity (EDA/GSR), Photoplethysmography (PPG) and Skin Temperature. Data is transmitted via Bluetooth to a computer running either the standalone application or an executable program which can be run from the terminal or in python.
+<code class="language-plaintext highlighter-rouge">&lt;br&gt;</code></p>
+
+<h3 id="cosmic-clash">Cosmic Clash!</h3>
+
+<p>Cosmic Clash! is the name of the game. It’s an arcade-style point-and-shoot game set in space. The objective is to shoot or avoid obstacles which damage the player whist trying to pick up lives and power ups which improve player abilities. Two of the sensors in the Biopoint - IMU and EMG - are put into action here to control movement and shooting mechanics.
+<code class="language-plaintext highlighter-rouge">&lt;br&gt;</code></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_11_24_thomaseo_cosmic_clash_6.png" width="70%" style="display: block; margin: auto;" />
+  <figcaption>Screenshot of the game</figcaption>
+</figure>
+<p><br />
+<br /></p>
+
+<h3 id="data-processing">Data Processing</h3>
+
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1; padding-right: 20px;">
+    <strong>IMU</strong>
+     <br />
+An IMU is a sensor used to measure motion and orientation. The BioPoint IMU, in this instance, integrates a 3-axis accelerometer and a 3-axis gyroscope, which allow it to measure linear acceleration and angular velocity. The IMU data packets from the BioPoint include a quaternion — a four-component representation of the device's orientation in 3D space. The sampling rate of the IMU is 100Hz. Check the diagram for a reminder of Euler (rotational) angles.
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/image/2024_11_24_thomaseo_cosmic_clash_2.png" alt="Credit: SiFiLabs" width="400" />
+    <figcaption>Image credit: machinedesign.com</figcaption>
+  </div>
+</div>
+<p><br />
+<br />
+The following equations are used to compute roll, pitch, and yaw from quaternion components (qw), (qx), (qy), and (qz):</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_11_24_thomaseo_cosmic_clash_7.png" width="70%" style="display: block; margin: auto;" />
+</figure>
+<p><br /></p>
+
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1; padding-right: 20px;">
+    <strong>EMG</strong>
+    <br />
+    EMG sensors detect the electrical activity produced by muscles during contraction, providing information about muscle activation levels, timing, and patterns. The EMG sensor in the Biopoint has a sample rate of 2 kHz. Similar to an audio waveform image, EMG data moves between positive and negative values - the further away from zero in either direction, the higher the signal level. To utilise this signal in our game, found the absolute value of a rolling average (across 8 samples in each data packet) and applied a threshold. When the signal goes over the threshold, a shoot command is sent.
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/image/2024_11_24_thomaseo_cosmic_clash_3.png" alt="Credit: SiFiLabs" width="400" />
+    <figcaption>Image credit: delsys.com</figcaption>
+  </div>
+</div>
+<p><br /></p>
+
+<h3 id="system-architecture">System Architecture</h3>
+
+<p>The game was developed using the node.js runtime. This environment allowed us to develop a browser-based game with the capability for two players to collaborate simultaneously. Currently, data is acquired and processed in python and passed to a node server using web sockets. In the project folder, java script files handle game mechanics and html files render objects in the browser.
+<code class="language-plaintext highlighter-rouge">&lt;br&gt;</code></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_11_24_thomaseo_cosmic_clash_4.png" width="70%" style="display: block; margin: auto;" />
+  <figcaption>System Architecture diagram</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="check-out-some-videos-from-the-development-process">Check out some videos from the development process</h3>
+
+<p><br />
+Inital tests using the gyroscope of a smart phone to control a player</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sKn7i4n7RXc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p><br />
+<br />
+Implementing two player functionality using node.js</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HCGVN_qteVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p><br />
+<br />
+One player using the EMG to shoot</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dohC859jXRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p><br />
+<br />
+Two players moving and shooting</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z_T9K8slcu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p><br />
+<br /></p>
+
+<h3 id="use-cases">Use Cases</h3>
+
+<p>So we made a fun game using the Biopoint device as a control interface, but what does this have to do with physiotherapy exercises? How can Cosmic Clash be applied to real world situations? Well, games have been used to great effect in the medical field. Take <a href="https://hopelab.org/case-study/re-mission/">Re-mission</a> or <a href="https://mindmaze.com/mindmotion-go/">MindMotion® GO</a> for example. What our system can offer is a take home experience for patients to use repeatedly and this fits rehabilitation treatments in the field of physiotherapy.</p>
+
+<p>According to this study from the <a href="https://go.gale.com/ps/i.do?id=GALE%7CA160592648&amp;sid=googleScholar&amp;v=2.1&amp;it=r&amp;linkaccess=abs&amp;issn=03037193&amp;p=AONE&amp;sw=w&amp;userGroupName=anon%7E890cb667&amp;aty=open-web-entry">University of Auckland</a>, as much as 65% of patients do not fully complete their physiotherapy exercise treatment plans. It is difficult to pin down the exact reasons for this as the situation of each patient is different, but a common problems seems to be motivation. A lack of motivation can occur for many reasons. Perhaps the patient thinks the exercises are boring or not challenging enough, or they experience pain whilst performing certain movements.</p>
+
+<p>This is where we believe our system could help! By gamifying exercise routines, patients could perform the movements more precisely with the correct timing and be distracted from pain or discomfort. Features such as a ‘streak’ reward system which incentivises consistent use over time, could enhance motivation, adherence, and long-term engagement with their therapy. Finally, raw data from sessions could be saved and used to track progress of patients, although there would be data protection rules to consider for this feature.
+<code class="language-plaintext highlighter-rouge">&lt;br&gt;</code></p>
+
+<h3 id="summary--future-work">Summary / Future Work</h3>
+
+<p>Cosmic Clash is a game prototype which utilises signals from IMU and EMG sensors to control the player. The game was developed in order to show how the Biopoint device could be used to gamify rehabilitation exercises in physiotherapy treatments. This could help to improve the quality of exercise and solve problems such as motivating patients to stick with their work out programs. In the future, we would like to implement other data types influencing the game such as ECG and skin temperature. Collaborating with experts in various medical fields would help us to design game mechanics which suit specific exercises. Finally, the Biopoint device contains a vibration motor which would be perfect for providing tactile feedback, responding to events within the game.</p>]]></content><author><name>Tom Oldfield, Cumhur</name></author><category term="applied-project" /><summary type="html"><![CDATA[Cosmic Clash - exploring gamification of physiotherapy exercises at Rosklde Festival using the Biopoint sensor]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_11_24_thomaseo_cosmic_clash_5.png" /><media:content medium="image" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_11_24_thomaseo_cosmic_clash_5.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The SlapBox: A DMI designed to last</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/11/24/karenij-Slapbox_review.html" rel="alternate" type="text/html" title="The SlapBox: A DMI designed to last" /><published>2024-11-24T08:48:00+00:00</published><updated>2024-11-24T08:48:00+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/11/24/karenij-Slapbox_review</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/11/24/karenij-Slapbox_review.html"><![CDATA[<h3 id="introduction">Introduction</h3>
+<p>While many Digital Musical Instruments (DMIs) today have been designed to showcase new ideas in research and academic spaces and offer us different perspectives on how to interact with sound, most of these DMIs lack the longevity of traditional instruments. This difference hinders many benefits of robust design in that it does not encourage long-lasting commitment to establishing the use of techniques and repertoire. The disconnect here, unfortunately, causes many of these instruments to be put on the shelf while the designers pursue new ideas or dismantle vital parts to be used in other projects. With conferences like NIME placing a lot of thought in recent years to sustainability in practices of DMI creation, The Slapbox offers us an example of what robust design built with prolonged performance in mind can produce.
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_11_28_karenij_slapbox1.jpg" width="80%" style="display: block; margin: auto;" />
+  <figcaption>Slapbox Design(1)</figcaption>
+</figure>
+
+<h3 id="the-concept">The Concept</h3>
+
+<p>The Slapbox is actually the second iteration of a DMI for percussionists, with the original iteration being named The Tapbox (1). The team behind the new iteration specifically chose to work on the Slapbox design based on The Tapbox to highlight how solving old problems on older designs can improve the product while also introducing future design. 
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_11_28_karenij_tapbox.png" width="60%" style="display: block; margin: auto;" />
+  <figcaption>The Tapbox(3)</figcaption>
+</figure>
+
+<h3 id="the-original-design">The Original Design</h3>
+<p>The design of this instrument takes its inspiration from commercial digital percussion controllers, which usually have some form of velocity-sensitive pads. When looking at the available examples of drum controllers, they noticed a lack of modulation gestures, which influenced the new elements they wanted in their design. The original Tapbox design was based on the Cajon instrument, and its multiple surfaces showcased how dynamic an instrument with multiple playable surfaces could be in performance. The main problems they saw in this original were the lack of sensitivity of some sensors as well as a lack of differing interaction types within the outside of the box.
+<br /></p>
+
+<h3 id="improvements-with-new-iteration">Improvements with New Iteration</h3>
+
+<p>The new iteration still retains many of the older parts, including front panel speakers, auxiliary controls, and most of the internal electronics.  The sensor pads on the Slap Box iteration require a unique solution capable of capturing extremely quick body movements. To find a solution that is commercially available and captured Velocity, Continuous Pressure, and Position, the team behind Slapbox decided to use a Force Sensitive Resistor with Velostat.
+The Velostat was paired with a configuration of conductive tape that allowed the pressure source to be estimated and mapped to synthesis parameters of sampled percussion sounds. 
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_11_28_karenij_gui.png" width="80%" style="display: block; margin: auto;" />
+  <figcaption>GUI of SlapBox</figcaption>
+</figure>
+
+<p>The new design also comes with a GUI that can be used as a visual representation of real-time strikes alongside visual feedback from the LEDs on the device itself
+<br /></p>
+
+<h3 id="testing">Testing</h3>
+
+<p>Performers were very quick to achieve interesting interactions almost immediately after picking it up for the first time. While initial trials exposed some false triggering this was quickly fixed with a new back panel. Those who used it appreciated its many unique features such as the gui, and modulation features. 
+<br /></p>
+
+<h3 id="what-makes-it-stand-out">What makes it stand out?</h3>
+
+<p>The Slapbox being designed around the Cajon makes for an instrument that many musicians, percussionists or not, have some idea of how to approach. Even so, the Slapbox is intrinsically its own thing, allowing the user to play this in a way unlike the average percussion set. It will enable the user to play in the way they want and develop the technique that suits their practice or setup. The sensitivity of the position estimation allows for the real-time synthesis to bring individuality to each strike. This can encourage users to develop a virtuosity with the Slapbox that might have yet to come about with synthesis less adept. 
+<br />
+Along with all the features, the Slapbox is very obviously made to last. Unlike other DMIs, the Slapbox’s design feels permanent. Although the ideas surrounding the synthesis and sound samples still loom, the structure appears to be made to withstand much experimentation. The GUI allows for another dimension of knowledge of the instrument that can encourage those weary of trying a sort of instrument to be drawn to seeing exactly what their actions translate to in the synthesized world. 
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_11_28_karenij_slapbox2.jpg" width="80%" style="display: block; margin: auto;" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="why-it-matters">Why it matters?</h3>
+
+<p>DMIs should be made to weather a lengthy musical career. The disconnect between the commercial market and academic spaces in terms of durability makes musicians weary of trying experimental products in research spaces. Nine times out of ten, if a musician thinks of adding new interactions into their daily practice, they will go with a product that can withstand a fall or two and still work. To observe research instruments in performance spaces, we need to make something that musicians are not afraid to use. Moreover, we need instruments that are able to establish confidence in the relationship between academics and performance. In order to see prolonged results and to make something worth more than just being a novelty, the user must be able to establish a habit with the object. Only then can DMIs be worthwhile to performers. 
+<br /></p>
+
+<h3 id="where-does-it-go-from-here">Where does it go from here?</h3>
+
+<p>Even though, according to Perry R. Cooks’s first Principle for Computer Music COntrollers list, “Programmability is a curse,” many evaluators of the Slapbox showed interest in the ability to load samples onto the instrument (3). This improvement would be an interesting implementation that could prolong the life cycle of this system after the preset sounds have been exhausted by prolonged users.  I’m excited to see where the next iteration is heading and hope more DMI designers prioritize durability in the way we see in the Slapbox.
+<br /></p>
+
+<h3 id="references">References</h3>
+<ol>
+  <li>Boettcher, B., Sullivan, J., &amp; Wanderley, M. M. (2021). Slapbox: Redesign of a Digital Musical Instrument Towards Reliable Long-Term Practice. NIME 2022. https://doi.org/10.21428/92fbeb44.78fd89cc
+<br /></li>
+  <li>Dobrian, C., &amp; Koppelman, D. (2006). The E in NIME: Musical Expression with New Computer Interfaces. Proceedings of the International Conference on New Interfaces for Musical Expression, 277–282. https://doi.org/10.5281/zenodo.1176893
+<br /></li>
+  <li>Cook, Perry R.. “Re-Designing Principles for Computer Music Controllers: a Case Study of SqueezeVox Maggie.” New Interfaces for Musical Expression (2009).
+<br /></li>
+</ol>]]></content><author><name>Karenina Juarez</name></author><category term="interactive-music" /><summary type="html"><![CDATA[A critical review of a durable digital musical instrument]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_11_28_karenij_slapbox1.jpg" /><media:content medium="image" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_11_28_karenij_slapbox1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Review of Sounding Brush: a graphic score IMS?</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/09/12/thomaseo-Sounding_Brush_review.html" rel="alternate" type="text/html" title="Review of Sounding Brush: a graphic score IMS?" /><published>2024-09-12T08:48:00+00:00</published><updated>2024-09-12T08:48:00+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/09/12/thomaseo-Sounding_Brush_review</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2024/09/12/thomaseo-Sounding_Brush_review.html"><![CDATA[<h3 id="introduction">Introduction</h3>
+<p>Graphic notation/scores have been used in experimental music composition since the 1950s, pioneered by notable composers such as John Cage, Karlheinz Stockhausen, Krzysztof Penderecki and Iannis Xenakis. The graphic score exemplifies a shift away from the rigidity of traditional western classical music towards a more interpretive and experimental style. Here, the doodles and written instructions of a composer become the music when performed by a musician, but what if the score could become the instrument too?
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_09_12_thomaseo_sounding_brush_1.png" width="80%" style="display: block; margin: auto;" />
+  <figcaption>An example of a graphic score from John Cage’s book: Notations (1)</figcaption>
+</figure>
+
+<h3 id="sounding-brush">Sounding Brush</h3>
+<p>For this, we must look to a more recent area of music research called Interactive Music Systems (IMS) and specifically, a work called Sounding Brush. The Sounding Brush is, in the words of it’s creators, a “tablet based musical instrument for drawing and mark making” (2). The instrument takes the form of an iOS application designed to be used with an iPad which harnesses the gestures of drawing to generate a variety of synthesised sounds and textures. Sounding Brush was developed by Sourya Sen, Koray Tahiroglu and Julia Lohmann working at Aalto University in Finland and was presented at the New Interfaces for Musical Expression (NIME) conference in 2020.
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_09_12_thomaseo_sounding_brush_2.png" width="60%" style="display: block; margin: auto;" />
+  <figcaption>A screenshot of Sounding Brush (3)</figcaption>
+</figure>
+
+<h3 id="but-is-it-an-instrument">But is it an ‘instrument’?</h3>
+<p>How can drawing on a tablet be considered a musical instrument? Well, according to Atau Tanaka an instrument can be described as an ‘Open-ended system’ made up of different parts; an input device, mapping algorithms, a sound synthesis engine, compositional structure and an output system (4). Sounding Brush definitely ticks these boxes. This diagram of a gestural controller for sound synthesis can help us to examine the Sounding Brush in more detail.
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_09_12_thomaseo_sounding_brush_3.png" width="80%" style="display: block; margin: auto;" />
+  <figcaption>A diagram of a gesturally controlled IMS (5)</figcaption>
+</figure>
+
+<p>In the top left, we have the incoming gestures. In our case, gestures of drawing/painting being captured by touchscreen of the iPad. The user has the additional control of choosing a particular ‘brush’ which represents a different synthesis technique alongside selections for colour and character. In addition to the capture of drawing/painting gestures, the Sounding Brush also utilises the accelerometer sensors within the iPad to manipulate sound whilst in a specific mode.
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_09_12_thomaseo_sounding_brush_4.png" width="80%" style="display: block; margin: auto;" />
+  <figcaption>UI menu of Sounding Brush (3)</figcaption>
+</figure>
+
+<p>In this case, the Primary feedback can be considered the visual representation of these gestures as the image on the screen (although some of these also undergo some additional processing to make them more representative of the type of brush used).
+<br /></p>
+
+<h3 id="mappings">Mappings</h3>
+<p>The Sounding Brush most commonly utilises a series of explicit mapping strategies in a ‘one-to-one’ relationship (6). In the image below, this is demonstrated by any arrow which begins at one performance action and arrives at one synthesis input without any splitting off or being influenced by another arrow. In our case, the Y coordinate of the pen on the tablet could be mapped to the frequency of a sinusoidal wave, for example.</p>
+
+<p>Generative mappings are employed in the more ‘textural’ brushes - Particles and Crackling. The gesture of painting with these brushes controls some elements of the sound generation but others are controlled by generating random values which also evolve over time. This can also be considered a ‘one-to-many’ mapping strategy as one action affects multiple synthesis parameters.
+<br /></p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_09_12_thomaseo_sounding_brush_5.png" width="60%" style="display: block; margin: auto;" />
+  <figcaption>A diagram of mapping strategies (6)</figcaption>
+</figure>
+
+<h3 id="thats-enough-diagrams-lets-talk-music">That’s enough diagrams. Let’s talk music.</h3>
+<p>The Sounding Brush makes different sounds depending on the selected mode. These modes are based on various synthesis/sound generation techniques such as: additive, subtractive, granular and proceedural (2). Sounds are both performed as the pen touches the touchscreen, and layered to create an overall soundscape-type composition. Sounds are mostly ‘frozen’ at the last point the pen touched the tablet (for each line) which, like painting on a canvas, encourages the user to draw a soundscape frozen in one particular moment in time.
+<br /></p>
+
+<h3 id="a-different-interface">A different interface?</h3>
+<p>One of the advantages of Sounding Brush is it’s user interface (UI) design which provides an alternative to the vast majority of available mobile music applications. More often than not, these are based on a pre-existing non-mobile instruments or music interfaces such as Digital Audio Workstations (DAWs), sequencers, pianos and analog synthesisers. The authors see this as a  democratisation of mobile music applications by removing labels like frequency or resonance and in fact, any remanence of traditional music interfaces and replacing it with an activity that almost everyone can relate to - drawing. Anyone from young children to adults, from zero musical training to professional musicians, doodlers to painters can generate audio-visual art using this device.
+<br /></p>
+
+<h3 id="summary">Summary</h3>
+<p>Despite being (relatively) conceptually straightforward, this work occupies an interesting intersection between audio and visual creative practice. The metaphor of a painter with a blank canvas, choosing colours and brush types, encourages the user to approach making music in a novel way and builds on the tradition of graphic scores in contemporary composition.</p>
+
+<p>The developers mention their ideas for improvements in (2) including the ability to save and load compositions and import samples to the granular synth engine. I would like to see further development on the motion control aspect. Currently this generates new sounds but would it be possible to use this as a way of manipulating the entire composition? This would give a greater separation to the functionality of the two different control methods where at the moment they essentially have similar results to using the pen in the granular synthesiser mode. Could global parameters such as dynamics, filtering, reverb/delay and other FX be controlled in this manner?</p>
+
+<p>Accessibility and low entry level aside, I would love to see a scaled up version of this, perhaps as an installation, or live performance piece, with a much larger touchscreen and greater controls over the colour and texture of the image.
+<br /></p>
+
+<h3 id="references">References</h3>
+<ol>
+  <li>’Notations’ by John Cage. Available <a href="https://monoskop.org/File:Cage_John_Notations.pdf">here</a>.
+<br /></li>
+  <li>S. Sen, K. Tahirog, and J. Lohmann, “Sounding Brush: A Tablet based Musical Instrument for Drawing and Mark Making”, Proceedings of the International Conference on New Interfaces for Musical Expression, 2020 DOI: 10.5281/zenodo.4813398<br />
+<br /></li>
+  <li>Presentation video for Sounding Brush. Available <a href="https://www.youtube.com/watch?v=7RkGbyGM-Ho">here</a>.<br />
+<br /></li>
+  <li>A. Tanaka, “Sensor-Based Musical Instruments and Interactive Music”, Oxford University Press, 2011. doi: 10.1093/oxfordhb/9780199792030.013.0012.<br />
+<br /></li>
+  <li>M. M. Wanderley and P. Depalle, “Gestural control of sound synthesis,” in Proceedings of the IEEE, vol. 92, no. 4, pp. 632-644, April 2004, doi: 10.1109/JPROC.2004.825882.<br />
+<br /></li>
+  <li>A. Hunt, M. M. Wanderley, and R. Kirk, “Towards a Model for Instrumental Mapping in Expert Musical Interaction”, In ICMC, 2000.</li>
+</ol>]]></content><author><name>Tom Oldfield</name></author><category term="interactive-music" /><summary type="html"><![CDATA[A critical review of a drawing-based interactive music system]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_09_12_thomaseo_sounding_brush_1.png" /><media:content medium="image" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_09_12_thomaseo_sounding_brush_1.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Deep Steps: A Generative AI Step Sequencer</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/alexanjw-DeepSteps.html" rel="alternate" type="text/html" title="Deep Steps: A Generative AI Step Sequencer" /><published>2024-05-14T10:00:00+00:00</published><updated>2024-05-14T10:00:00+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/alexanjw-DeepSteps</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/alexanjw-DeepSteps.html"><![CDATA[<p>Last year during the Music and Machine Learning course, I began explore incorporating the autoencoder into a musical step sequencer.  I wrote about this initial work <a href="https://SMC-master.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html">here</a> and <a href="https://SMC-master.github.io/machine-learning/2023/04/25/alexanjw-stacked-autoencoder.html">here</a>.  My jumping off point was the similarity between a step sequencer and using  many-hot encoding for representing music.  The work there used Pure Data for the sequencer and GUI interactions communicating with a Python script running the ML models.  My other intention was to provide a format, interface and dataset pipeline which could potentially be accessible for music producers.  As such, I chose audio loops as the format for training data due to their ubiquity in electronic music production workflows.</p>
+
+<h2 id="deep-steps">Deep Steps</h2>
+
+<p>For my SMC Masters thesis I chose to develop this work into a more unified implementation.  This meant bringing all the aspects together into a single interface that would be potentially usable for electronic music producers.  In doing so, the intention was to have model training and model generation being part of a real-time musical interaction.  Rather than provide a fixed pre-trained model, users would instead use their own training data to customise the model for their own intentions and styles.  I decided to call this combination of a deep learning model and a step sequencer, Deep Steps.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_14_alexanjw_DS_UI.png" width="50%" height="50%" />
+</figure>
+
+<h2 id="new-interactions">New Interactions</h2>
+
+<p>The traditional machine learning pipeline is to train and optimise a model and then deploy it for use.  This is appropriate for many situations where use of such a model is appropriate but it is debatable for applications involving creativity.  A comparison can be made to the evolution of drum machines from having fixed sounds and rhythms in their early days to now having full user control over programming and timbre.</p>
+
+<p>In developing Deep Steps as a GUI-based interactive system, the intention was to expose some machine learning parameters to user control.  Though numerous systems exist which use machine learning and deep learning models <a href="https://hal.science/hal-04075492">interactively</a>, these often focus on the means of control for triggering and steering a model’s generative output.  In creating an accessible framework for training an ML model on the user’s own data (audio loops), the intention is to explore the potential for this interaction as part of creativity.  In a similar way to how <a href="https://SMC-master.github.io/motion-capture/2023/05/09/alexanjw-generative-motion-control.html">Generative Music</a> is a practice of system building as a form of creativity, could the selection and use of training data and parameters for model training also become part of the creative process?</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_14_alexanjw_ds_grounding.png" width="70%" height="70%" />
+    <figcaption> The design principals for Deep Steps. </figcaption>
+</figure>
+
+<h2 id="implementation">Implementation</h2>
+<p>Deep Steps was developed as a stand alone application using the <a href="https://openframeworks.cc">openFrameworks</a> C++ creative toolkit.  This allowed for the creation of the GUI, embedding of Pure Data and the compiling of the application itself.  The machine learning model was an autoencoder as before.  Rather than use a large library like Tensorflow, I instead adapted code from the <a href="https://github.com/eriklindernoren/ML-From-Scratch">ML-From-Scratch</a> library which features examples of low-level implementations of ML algorithms using Numpy.  For audio analysis of onsets in the training data I used the <a href="{https://aubio.org">aubio</a> library’s C++ framework.</p>
+
+<p>The model generates material by having values fed through its decoder stage either through the GUI generate button or through the A, B, C, D sliders.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_15_alexanjw_ds_generate.png" width="70%" height="70%" />
+    <figcaption> Using Deep Steps to generate rhythms </figcaption>
+</figure>
+
+<p>The source code for Deep Steps is available <a href="https://github.com/ajwast/DeepSteps">here</a></p>
+
+<h2 id="evaluation">Evaluation</h2>
+<p>Deep Steps was evaluated two times.  After a first round of development, it was evaluated in a short workshop-based user study where 11 participants used the application under controlled conditions and then responded to questionnaires.  The intention of this was to test the core principals, functionality and usability of the system.  Thankfully, these were all mostly validated.</p>
+
+<p>Deep Steps was then distributed to three music producers to use as part of their music making for a week.  The participants were then interviewed to capture their user experiences.</p>
+
+<p>Overall, the findings from the evaluations found Deep Steps to be usable and indeed provided an accessible interface for interaction with machine learning parameters.  Training data as an engaging interaction and a part of the creative process was evident in the feedback.  The participants’ feedback also highlighted several areas where the software could be improved to make it more appealing for future adoption and long-term engagement.  A key theme here was the extra required to engage with the ML processes, especially when existing tools such as randomisers can potentially do a comparable job with less effort.  This is a recurring point of friction for these types of implementations which to some extent can be viewed as simply re-inventing an existing algorithmic process.</p>
+
+<p>In creating a GUI to make the ML processes accessible, what I had also done was to hide them away behind the interface.  One recommendation was to offer a visualisation of these processes.  For instance, the processing of the onset data could be visualised through waveform displays.  The feeding forward of the data through the decoder to generate material could also be visualised.  This could be used to illustrate the causal relationship of the sliders, which many users reported as feeling like an unsatisfying and arbitrary feeling interaction.</p>
+
+<p>The findings overall are generally positive with Deep Steps representing a functional proof-of-concept for its intentions and design principals.</p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Finally, here is Deep Steps in action.  Here, I am using Deep Steps for rhythmic triggers in my Eurorack modular synth.  I am not using the pitch controls in the application, instead looping random voltages from elsewhere in the modular system.  I am controlling the models generative output via a MIDI controller with knobs mapped to the four ‘‘latent dimension’’ sliders to pass values into the decoder.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2JSRgUECKNA?si=tSb-U4u2SQglzFrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>]]></content><author><name>Alexander Wastnidge</name></author><category term="masters-thesis" /><summary type="html"><![CDATA[A stand alone MIDI step sequencer application with a user-trainable generative neural network]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_14_alexanjw_DS_UI.png" /><media:content medium="image" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_14_alexanjw_DS_UI.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Strung Along: an extended violin for real-time accompaniment generation and timbral control</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/jackeh-Strung-Along.html" rel="alternate" type="text/html" title="Strung Along: an extended violin for real-time accompaniment generation and timbral control" /><published>2024-05-14T10:00:00+00:00</published><updated>2024-05-14T10:00:00+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/jackeh-Strung-Along</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/14/jackeh-Strung-Along.html"><![CDATA[<h1 id="introduction">Introduction</h1>
+
+<p>For my thesis project, I designed and developed <em>Strung Along</em>, a violin based interactive music system which can accompany the violinist (me) in real time by generating chords, while also allowing for timbral, volume and chord voicing control through modulating the force applied through the bow.</p>
+
+<p>The system is borne from my interest in two types of violin music; self-accompanying solo violin repertoire like <a href="https://www.youtube.com/watch?v=EmZ-BxN0Jow">this</a> and <a href="https://www.youtube.com/watch?v=cksvLRO8YaY">this</a>, and string chamber music like <a href="https://www.youtube.com/watch?v=FOjdoM27Wd8">this</a>. The system aims to offer something of the incredible feeling of being musically in synchrony with other musicians, while also offering the intimate control of timbre and volume that solo violin repertoire affords.</p>
+
+<p>Read on to find out how I went about it.</p>
+
+<h1 id="a-tale-of-two-sub-systems">A Tale of Two Sub-Systems</h1>
+
+<p><em>Strung Along</em> consists of two sub-systems, which are integrated into the final system. They are:</p>
+<ul>
+  <li>A chord generation sub-system, which generates chords as MIDI notes to accompany a melody played in real time.</li>
+  <li>A bow tracking sub-system, which allows for the way the violinist uses the bow to be tracked in real time, and then used to affect the timbre of the sound engine, and the chord generation.</li>
+</ul>
+
+<h2 id="chord-generation-sub-system">Chord Generation Sub-System</h2>
+
+<p>The premise of the chord generation sub-system is quite simple; one plays a note of a melody, and the system generates a suitable chord to go with it (and, hopefully, works with the ones it generated previously too). By repeating this process of multiple melody notes, we can generate a sequence of chords to accompany the melody. Even better, we get to do it in real time - it’s like a string orchestra in your pocket!</p>
+
+<h3 id="background">Background</h3>
+
+<p>Chord progressions are a fundamental aspect of many musical genres, and researchers have been developing systems to generate them using machine learning for decades. Such systems can be applied an a wide range of contexts, from harmonising existing melodies, suggesting alternative chords in pre-composed progressions, to use in interactive systems for live performance.</p>
+
+<p>Many early chord generation systems were designed to <a href="https://proceedings.neurips.cc/paper/1991/file/a7aeed74714116f3b292a982238f83d2-Paper.pdf">harmonise Bach Chorales</a>. These chorales (the very mention of which will raise the blood pressure of anyone who remembers learning figured bass in music theory classes) are a useful judge of chord generation systems, as they offer a very concrete set of rules that determine whether the harmony is correct. These systems were generally offline and static - the user would feed in a melody, and receive back a suitable harmony in some representation</p>
+
+<p>Many more recent systems generate chords for a variety of use cases. <a href="https://dl.acm.org/doi/10.1145/2856767.2856792"><em>ChordRipple</em></a> aims to help novice composers break outside of rigid harmonic boxes by suggesting alternative chords during composition, while a <a href="https://ieeexplore.ieee.org/document/9053992">system proposed by Garoufis et al.</a> for use in live performance allows users to direct an evolving chord progression by selecting a chord from multiple options.</p>
+
+<p>A common thread among these systems is the way in which they represent chords. Typically, this is done using a ‘chord vocabulary’ - effectively a pre-determined list of the chords known by the system, and which it is able to generate. These vocabularies can be very small, consisting of only 12 major and 12 minor chords in the case of <a href="https://arxiv.org/abs/1712.01011">Lim et al.</a>, or rather large, consisting of over 100 chords in the case of <em>ChordRipple</em>. In machine learning lingo, we call such systems ‘classification’ systems as their output is one or several options from a fixed set of ‘classes’, each of which represents a chord.</p>
+
+<h3 id="design--implementation">Design &amp; Implementation</h3>
+
+<p>The chord generation sub-system in <em>Strung Along</em> aims to buck this trend by instead representing chords using <strong>regression</strong> machine learning techniques. Rather than selecting an appropriate chord from a pre-defined set, a chord in this sub-system is represented using a chroma histogram, which is effectively a list of 12 floating point numbers, with each one corresponding to a degree of the chromatic scale (i.e., tonic, minor second, major second, minor third, etc) above a certain root note. Each value in the histogram is determined by the amount of that pitch class in a given set of notes over which the histogram is calculated. The image below shows a Cmaj7 chord, and how it is then represented as a chroma histogram.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_14_jackeh_chroma_histogram_example.png" width="80%" />
+  <figcaption>A Cmaj7 chord represented as sheet music, and as both a standard (length in beats), and normalised (ratios i.e., sums to 1) chroma histograms. Assume this example is in C major.</figcaption>
+</figure>
+
+<p>I propose two key advantages to such an approach.</p>
+
+<p>Firstly, this approach is not limited by a chord vocabulary, as all the information needed to reconstruct the chord is contained in some form in the chroma histogram. This makes the system more flexible, as it does not need to be retrained to add new chords, while also allowing the number of different chords it can generate to be theoretically endless.</p>
+
+<p>Secondly, the chroma histogram can also encode some basic information about how the chord was voiced, which is conspiciously absent from many of the other approaches mentioned above. The histogram can tell us not only which pitch classes are present in the music it represents, but also something about the quantity or presence of each in the music. In the example above, the C note is used twice in the chord as opposed to every other note which are only used once, so that note aquires double the value of the others in the chroma histogram. Assuming that notes that are used more often are more important to the chord, we can infer some aspects of chord voicing from the histogram, while using only a simple list of 12 numbers.</p>
+
+<p>The machine learning model at the core of this sub-system is trained to generate these chroma histograms. For each note of a melody, it generates a histograms for the chord to accompany that melody note, and then voices it into a set of MIDI notes which are sounded using a software synthesiser. Each newly generated chroma histogram is influenced by the eight previous melody notes and generated histograms. This allows the sub-system to not only generate a chord that works harmonically with a given melody note, but also one that fits with the chords that preceded it.</p>
+
+<h2 id="bow-tracking-sub-system">Bow Tracking Sub-System</h2>
+
+<p>For a violinist or other bowed string player, the way in which they use the bow is most often described through gestures and techniques, like <em>staccato</em>, <em>legato</em>, or <em>spiccato</em>. However, it is also possible to describe bowing technique in scientific terms through a set of positions, rotations, and forces that describe how the bow interacts with the strings of the instrument. These are visualised in the image below.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_14_jackeh_bowing_parameters_diagram.png" width="100%" />
+  <figcaption>The eight bowing parameters are: bow position, bow velocity, bow acceleration, bow force, bow bridge distance, bow tilt, bow inclination, and bow skew. Each is labelled on the diagram.</figcaption>
+</figure>
+
+<p>The bow tracking sub-system adapts an existing approach proposed by Pardue et al. to tracking bow position and bow force. This approach uses four distance sensors which are mounted to the underside of the bow stick at different positions along the bow length, facing towards the bow hair. As force is applied downwards through the bow onto the string, the bow deflects around the contact point, reducing the distance between the bow hair and bow stick at each sensor location. The amount of deflection at each point is determined by the combination of bow position and bow force, such that each combination theoretically results in a unique combination of sensor distances.</p>
+
+<p>We can leverage this fact to train a small machine learning model which, given the distances readings from the four sensors, predicts the bow position and bow force. The bow tracking sub-system of <em>Strung Along</em> does just this in real time, meaning it can be used as a mapping parameter in the combined system.</p>
+
+<h1 id="creating-strung-along">Creating <em>Strung Along</em></h1>
+
+<p>Coming soon…</p>
+
+<h1 id="evaluation">Evaluation</h1>
+
+<p>Coming soon…</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Coming soon…</p>
+
+<h1 id="see-it-in-action">See It In Action</h1>
+
+<p>Take a look at a brief performance using <em>Strung Along</em> here:</p>
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/WmNqu1j0jhs?si=BCx_nltepthVRTLB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<h1 id="see-also">See Also</h1>
+
+<ul>
+  <li>The codebase and implementation instructions for <em>Strung Along</em> are available on GitHub <a href="https://github.com/hathuwic/StrungAlong">here</a>.</li>
+  <li>I also built <em>CordChord</em>, a digital string instrument inspired by the bow tracking approach used in this thesis. You can read about it <a href="https://SMC-master.github.io/interactive-music/2023/12/01/jackeh-cordchord.html">here</a>.</li>
+</ul>]]></content><author><name>Jack Hardwick</name></author><category term="masters-thesis" /><summary type="html"><![CDATA[An extended violin for real-time chordal accompaniment generation and timbral control.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_14_jackeh_Strung_Along_thumbnail.jpg" /><media:content medium="image" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_14_jackeh_Strung_Along_thumbnail.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Cyclic Patterns and Spatial Orientations in Artificial Impulsive ASMR Sounds</title><link href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/11/henrikhs-asmr.html" rel="alternate" type="text/html" title="Cyclic Patterns and Spatial Orientations in Artificial Impulsive ASMR Sounds" /><published>2024-05-11T11:00:00+00:00</published><updated>2024-05-11T11:00:00+00:00</updated><id>https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/11/henrikhs-asmr</id><content type="html" xml:base="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/11/henrikhs-asmr.html"><![CDATA[<h2 id="abstract">Abstract</h2>
+<p>This thesis investigates the perception of Autonomous Sensory Meridian Re-
+sponse (ASMR) stimuli, focusing on the impact of different cyclic patterns and spatial orientations on inducing ASMR experiences. By employing statistical analysis, significant correlations were revealed between ASMR perception and other factors. The results demonstrate that both the type of cyclic pattern and spatial orientation significantly influence the intensity and nature of ASMR experiences. Furthermore, the study explores the synthesis of ASMR-inducing sounds while preserving key audio characteristics from acoustically recorded ASMR content. Through the analysis of survey data and regression modeling, distinct patterns emerge regarding the relationship between personality traits and ASMR perception. The findings contribute to a deeper understanding of ASMR as a sensory phenomenon and provide insights into the potential applications of artificially generated ASMR stimuli. Additionally, the research sheds light on the role of spatiality in ASMR experiences and the synthesis of ASMR-inducing sounds for future studies and practical applications.</p>
+
+<h2 id="primary-contributions">Primary Contributions</h2>
+<p>The thesis study of ASMR holds potential therapeutic benefits, particularly regarding mental health, where ASMR could be harnessed as affordable, and easily available, tool for the alleviation of anxiety and insomnia. Thus, by advancing the research on ASMR, this thesis contributes to the academic field and potential practical applications that could help individuals find solace in the simple act of listening to audio-based stimuli. New ways of creating audio-based ASMR is explored through the research’s implementation of synthesized ASMR stimuli. This can contribute to the field of ASMR by potentially making it more available to an audience who find the social aspects, introduced through the act of sounds being recorded by another human being, disturbing in the listening situation. The generative aspect of sound production can potentially introduce the use of sensors and data for personalized ASMR content generation.</p>
+
+<h2 id="background">Background</h2>
+<p>ASMR has garnered increasing attention due to its diverse effects on individuals, induced by auditory, visual, and tactile stimuli. This phenomenon is exemplified by the proliferation of ASMR content across various online platforms, where creators manipulate everyday objects to produce soothing sounds aimed at relaxation. At the core of ASMR lies a reaction generally referred to as <em>tingles</em>, an electrostatic-like feeling often emerging from the scalp and shooting down through the body (Barratt and Davis, 2015). Tingles play a central role in what usually facilitates the relaxed state of mind among ASMR recipients who may use ASMR to manage anxiety, stress and sleep, as well as for general relaxation.</p>
+
+<p>However, despite its growing popularity, ASMR remains enigmatic and polarizing. While some experience relaxation and comfort, others find the same sounds unsettling or irritating. This variability in responses has led to a social divide regarding the acceptance of ASMR. Consequently, there exists a stigma surrounding ASMR experiences in broader social contexts.</p>
+
+<p>The study explores the intersection of ASMR with personality traits, such as neuroticism and openness, shedding light on potential connections between ASMR experiences and psychological characteristics (Eid, 2022)(Fredborg, 2017). Additionally, it investigates the physiological similarities between ASMR-induced tingles and musical frisson, offering insights into the therapeutic potential of ASMR in promoting comfort and well-being (Lochte, 2018).</p>
+
+<p>Building upon the findings of Fang et.al. stating that artificially produced audio holds the potential of inducing ASMR sensations, the thesis research examines alternative ways of generating ASMR audio as well as investigating the impact of cyclic patterns and spatial orientations (Fang, 2023).</p>
+
+<p>Overall, this research contributes to advancing knowledge in the fields of music psychology and technology, offering new avenues for understanding how sensory experiences impact mood and cognition. It also holds potential for practical applications in mental health, where ASMR could serve as a tool for anxiety and insomnia relief.</p>
+
+<h2 id="methods">Methods</h2>
+<p>The methods employed in the thesis research constitute a combination of exploratory and quantitative, with some qualitative elements regarding testing the user survey and the development of sound examples. The combination creates a comprehensive image of how ASMR sounds are perceived. The exploratory part of the thesis emphasizes the inclusion of synthesized ASMR stimuli subject to perceptual survey study. The survey resembles the quantitative part of the research. The qualitative part was focused on the generation of the ASMR stimuli, both through the work on extracting audio features from source material recordings and through applying these in the sonification process while working with the sound engine.</p>
+
+<p>The selected cyclic patterns resemble different degrees of predictability in the way sound triggering events were organized rhythmically.</p>
+
+<h4 id="selection-of-cyclic-patterns-and-spatial-orientations">Selection of Cyclic Patterns and Spatial Orientations</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cyclic Pattern</th>
+      <th>Spatial Orientation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MIR</td>
+      <td>Stereophonic</td>
+    </tr>
+    <tr>
+      <td>RAN</td>
+      <td>Monophonic</td>
+    </tr>
+    <tr>
+      <td>FM</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>MIR was based on a source material recording of someone tapping long artificial nails on an acrylic board recorded using a stereophonic microphone setup.</p>
+
+<p>RAN and FM were algorithmically generated using Low Frequency Oscillators (LFO) with modulator speeds of 0.62 Hz (generating a new section of rhythms every 1.6 seconds). The RAN cyclic pattern generated a random rhythmical section, whereas the FM cyclic pattern generated a similar rhythmical pattern for every iteration.</p>
+
+<p>The spatial orientations were resembled as monophonic or stereophonic, while including specific motions in the stereophonic binaural field would have introduced implications when comparing the results regarding both cyclic patterns and spatial orientations. This remains a task for future work on the topic. The stereophonic spatial orientation was derived from stereophonic audio feature analysis on the same source material recording that laid the foundation for the MIR cyclic pattern. Utilizing the same spatial orientation data for all cyclic pattern was deemed beneficial for executing meaningful comparisons on the results.</p>
+
+<h4 id="generated-sound-examples">Generated Sound Examples</h4>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_mir_m.mp3" type="audio/mpeg" />
+    Error loading audio content
+  </audio>
+  <figcaption>MIR Monophonic</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_mir_s.mp3" type="audio/mpeg" />
+    Error loading audio content
+  </audio>
+  <figcaption>MIR Stereophonic</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_ran_m.mp3" type="audio/mpeg" />
+    Error loading audio content
+  </audio>
+  <figcaption>RAN Monophonic</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_ran_s.mp3" type="audio/mpeg" />
+    Error loading audio content
+  </audio>
+  <figcaption>RAN Stereophonic</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_fm_m.mp3" type="audio/mpeg" />
+    Error loading audio content
+  </audio>
+  <figcaption>FM Monophonic</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2024_05_15_henrikhs_fm_s.mp3" type="audio/mpeg" />
+    Error loading audio content
+  </audio>
+  <figcaption>FM Stereophonic</figcaption>
+</figure>
+
+<p>The online survey, published through gorilla.sc, asked for perceptual ratings of the generated ASMR stimuli, as well as including a shortform Big Five Index (BFI) questionnaire for personality traits mapping. The perceptual questions asked for physical and psychological reaction (Q1), focus during listening (Q2), whether the rhythmical content was perceived as natural or artificial (Q3), and the general experience being relaxing or stressful (Q4). Additionally, demographic questions and questions regarding prior knowledge and experience with ASMR were asked. 67 responses were gathered.</p>
+
+<h2 id="discussion">Discussion</h2>
+
+<p><strong>RQ1:</strong> In which ways do different cyclic patterns affect the perception of artificially generated ASMR? How do artificially generated cyclic patterns (generated using algorithms) compare to naturally occurring cyclic patterns (recorded from human interaction with objects) in ASMR stimulus? In which ways does this relate to personality traits?</p>
+
+<p><strong>RQ2:</strong> How does monophonic and stereophonic binaural spatial orientation impact ASMR stimulus? In which ways does this relate to personality traits?</p>
+
+<p><strong>RQ3:</strong> How can sound be generated and synthesized while maintaining key audio characteristics in acoustically recorded ASMR sounds to induce ASMR stimuli?</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2024_05_11_henrikhs_heatmap.png" alt="mage not showing? Will try to fix it." title="Image Title" width="auto" />
+   <figcaption>
+   Heatmap of response by cyclic pattern and spatial orientation for
+   Q1 reaction strength. The MIR and RAN cyclic patterns are pointed out as the most effective cyclic patterns, and the stereophonic spatial orientation is pointed out as the most effective spatial orientation, regarding reaction strength to all ASMR stimuli in the thesis research.
+   </figcaption>
+</figure>
+
+<p>Based on the results, a suggestion in this thesis is that the immersive properties in sound may be an important factor in inducing ASMR reactions. Immersiveness relates to the stereophonic spatial orientation’s impact on ASMR perception, eliciting the ability to navigate in sound and perceive different sound events at different levels of proximity.</p>
+
+<p>Increased immersiveness in sound could occupy more of the listener’s attention resources, explaining why some can find this relaxing and comforting while others find the same sound stressful and aversive.</p>
+
+<p>Concerning cyclic patterns, immersiveness could relate to rhythmic unpredictability, which was identified as yielding stronger reactions. A cyclic pattern with this character might require more reactive listening, taking up more of the listener’s attention resources. This relates to the sensation of occupancy of attention resources being highly subjective.</p>
+
+<p>Immersiveness could also contribute to explaining how people with high levels of neuroticism often are recipients of ASMR. As ASMR has gained a reputation for being an aid in managing anxiety and stress, it can by itself recruit people who struggle with these things as they might be likely to seek tools to help with their struggles. This could prime people characterized by high levels of neuroticism, such as in anchoring, biasing their introduction to the phenomenon and eliciting more ASMR recipient individuals among the high neuroticism population.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>The investigation into the impact of different cyclic patterns, spatial orientations, and the synthesis of ASMR sounds sheds light on several aspects influencing the perception of ASMR stimuli.</p>
+
+<h4 id="cyclic-patterns">Cyclic Patterns</h4>
+<p>The findings suggest a significant correlation between the predictability of cyclic patterns and the strength of ASMR reactions. Specifically, the more unpredictable cyclic patterns, such as MIR and RAN, were found to induce stronger ASMR responses compared to more predictable patterns like FM. This aligns with previous research suggesting that unpredictability plays a role in triggering ASMR and related sensory experiences. Additionally, the correlation between cyclic patterns and personality traits, such as extraversion and openness, offers insights into individual differences in ASMR responsiveness.</p>
+
+<h4 id="spatial-orientation">Spatial Orientation</h4>
+<p>The study highlights the importance of spatial orientation, particularly stereophonic audio, in enhancing the immersive quality of ASMR content. Stereophonic spatial orientation was found to positively correlate with the strength of ASMR reactions, indicating its role in creating a more immersive auditory experience. This finding resonates with existing literature on the significance of spatial audio cues in eliciting emotional and sensory responses in listeners. Furthermore, the correlation between spatial orientation and personality traits underscores the interplay between auditory stimuli and individual predispositions.</p>
+
+<h4 id="synthesis-of-asmr-sounds">Synthesis of ASMR Sounds</h4>
+<p>The results suggest that synthesized ASMR sounds, generated to replicate key audio characteristics present in acoustically recorded ASMR content, can effectively induce ASMR responses. This opens up possibilities for creative exploration in ASMR content creation, offering avenues for the development of novel stimuli and experiences. However, further research is needed to explore how different characteristics in synthesis affect ASMR perception and to compare synthesized artificial ASMR with conventionally recorded content.</p>
+
+<p>This study’s findings contribute to our understanding of the perceptual mechanisms underlying ASMR experiences and offer insights into the role of cyclic patterns, spatial orientation, and sound synthesis in shaping ASMR stimuli. By elucidating these factors, future research can advance our knowledge of ASMR and inform the development of tailored stimuli for therapeutic and recreational purposes.</p>
+
+<h4 id="references">References</h4>
+<ul>
+  <li>Barratt, E. and Davis, N. (2015). Autonomous Sensory Meridian Response (ASMR): A flow-like mental state. PeerJ, 3:e851.</li>
+  <li>Eid, C. M., Hamilton, C., and Greer, J. M. H. (2022). Untangling the tingle: Investigating the association between the Autonomous Sensory Meridian Response (ASMR), neuroticism, and trait &amp; state anxiety. PLOS ONE, 17(2):e0262668. Publisher: Public Library of Science.</li>
+  <li>Fang, Z., Han, B., Cao, C. C., and Schotten, H. D. (2023). Artificial ASMR: A Cyber-Psychological Approach. arXiv:2210.14321 [cs, eess].</li>
+  <li>Fredborg, B., Clark, J., and Smith, S. (2017). An Examination of Personality Traits Associated with Autonomous Sensory Meridian Response (ASMR). Frontiers in Psychology, 8:247.</li>
+  <li>Lochte, B. C., Guillory, S. A., Richard, C. A. H., and Kelley, W. M. (2018). An fMRI investigation of the neural correlates underlying the autonomous sensory meridian response (ASMR). BioImpacts : BI, 8(4):295–304.</li>
+</ul>]]></content><author><name>Henrik Sveen</name></author><category term="masters-thesis" /><summary type="html"><![CDATA[An exploratory study on the effects of cyclic patterns and spatial orientations in synthesized impulsive ASMR sounds.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_11_henrikhs_asmr.png" /><media:content medium="image" url="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_11_henrikhs_asmr.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

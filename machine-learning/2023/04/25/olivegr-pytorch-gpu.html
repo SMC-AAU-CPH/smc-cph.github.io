@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Pytorch GPU Setup Guide | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Pytorch GPU Setup Guide" />
+<meta name="author" content="Oliver Getz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Having trouble getting Pytorch to recognize your GPU? Try this!" />
+<meta property="og:description" content="Having trouble getting Pytorch to recognize your GPU? Try this!" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/olivegr-pytorch-gpu.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/olivegr-pytorch-gpu.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_olivegr_pytorch_gpu.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-25T18:11:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_olivegr_pytorch_gpu.jpg" />
+<meta property="twitter:title" content="Pytorch GPU Setup Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Oliver Getz"},"dateModified":"2023-04-25T18:11:00+00:00","datePublished":"2023-04-25T18:11:00+00:00","description":"Having trouble getting Pytorch to recognize your GPU? Try this!","headline":"Pytorch GPU Setup Guide","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_olivegr_pytorch_gpu.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/olivegr-pytorch-gpu.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Oliver Getz"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/olivegr-pytorch-gpu.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Pytorch GPU Setup Guide
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-25T18:11:00+00:00"
+        itemprop="datePublished"
+      >Apr 25, 2023 •
+      </time>
+         
+      <a href="/authors/olivergetz.html">Oliver Getz</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>Getting Pytorch to recognize my GPU is something I’ve spent more time on than should be necessary. Here are some things I learned while pulling my hair out.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_04_25_olivegr_pytorch_gpu.jpg
+" width="100%" height="100%" />
+</figure>
+
+<h1 id="setup">Setup</h1>
+
+<p>I’ll be using conda for both environment and package management, and I’m setting up a Windows 10 PC. If you install Pytorch through your command line interface (CLI) like so…</p>
+
+<pre>
+  <code>
+    conda install torch
+  </code>
+</pre>
+
+<p>…a CPU compiled version of pytorch will be installed. A CPU is much slower than a GPU, and can speed up both training and inference tenfold, so wouldn’t it be nice to be able to use a GPU instead? This is how:</p>
+
+<ol>
+  <li>Create a new environment with conda create -n “YOUR_ENVIRONMENT_NAME” python=”DESIRED_PYTHON_VERSION”
+    <ul>
+      <li>Note: Pytorch requires python=3.7 and above.</li>
+    </ul>
+  </li>
+  <li>Move into the new environment using conda activate “YOUR_ENVIRONMENT_NAME”</li>
+  <li>Go to the <a href="https://pytorch.org/get-started/locally/">Pytorch website</a>, enter your platform and package manager, and copy the resulting command.
+    <ul>
+      <li>Note: The conda command will look something like: conda install pytorch torchvision torchaudio pytorch-cuda=[CUDA_VERSION] -c pytorch -c nvidia</li>
+      <li>Note: The pip command will look something like: pip3 install torch torchvision torchaudio –index-url https://download.pytorch.org/whl/cu[CUDA_VERSION]</li>
+    </ul>
+  </li>
+  <li>Copy the command to your command line interface, and you should be good to go.</li>
+</ol>
+
+<p>“Now hold up a minute”, I hear you saying. “How do I know which CUDA_VERSION I need?” A web search will take you down a rabbit hole, so keep on reading and I will save you the trouble.</p>
+
+<h1 id="cuda-versions">CUDA Versions</h1>
+
+<p>CUDA has both a driver API and a runtime API, and their API versions can be entirely different. This CLI command:</p>
+
+<pre>
+  <code>
+    nvcc --version
+  </code>
+</pre>
+
+<p>will tell you the runtime API version, while</p>
+
+<pre>
+  <code>
+  nvidia-smi
+  </code>
+</pre>
+
+<p>will tell you the driver API version. This command points to the GPU driver, and it’s this CUDA version you need when installing Pytorch. This means the original command from the Pytorch website works just fine for most cases. Just double check with the command above if you’re running into issues.</p>
+
+<h1 id="troubleshooting">Troubleshooting</h1>
+
+<p>To check if Pytorch can find your GPU, use the following:</p>
+
+<pre>
+  <code>
+    import torch
+    torch.cuda.is_available()
+  </code>
+</pre>
+
+<p>This will return True if a GPU is found, False otherwise. If your GPU cannot be found, it would be helpful to get some more feedback. Try sending something to the GPU. It will fail, and give you the reason:</p>
+
+<pre>
+  <code>
+    torch.zeros(1).cuda()
+  </code>
+</pre>
+
+<p>Should you want to start over because Pytorch is still not communicating with your GPU, you can remove your current environment and packages through your command line interface like so:</p>
+
+<pre>
+  <code>
+    conda activate base
+    conda remove -n "YOUR_ENVIRONMENT_NAME" --all
+  </code>
+</pre>
+
+<p>You could start trying to downgrade one package and update another until you get the right configuration, but I think it’s just easier to start from a clean slate, and I had to do so a few times.</p>
+
+<h1 id="additional-notes">Additional notes</h1>
+
+<p>If any GPU is recognized, you can now get more info about them or even decide which tensors and operations should go on which GPU.</p>
+
+<pre>
+  <code>
+    torch.cuda.current_device()     # The ID of the current GPU.
+    torch.cuda.get_device_name(id)  # The name of the specified GPU, where id is an integer.
+    torch.cuda.device(id)           # The memory address of the specified GPU, where id is an integer.
+    torch.cuda.device_count()       # The amount of GPUs that are accessible.
+  </code>
+</pre>
+
+<p>Hopefully, that will resolve some issues for you. Happy hacking!</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2023/04/25/olivegr-pytorch-gpu.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

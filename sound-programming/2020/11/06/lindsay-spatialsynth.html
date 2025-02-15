@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Spaty Synthy | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Spaty Synthy" />
+<meta name="author" content="Lindsay Charles" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Attempt at modelling a Delay Repeating Spatial Synthesizer using Csound" />
+<meta property="og:description" content="Attempt at modelling a Delay Repeating Spatial Synthesizer using Csound" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/lindsay-spatialsynth.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/lindsay-spatialsynth.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_lindsay_spatialsynth_vst.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-06T09:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_lindsay_spatialsynth_vst.jpg" />
+<meta property="twitter:title" content="Spaty Synthy" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lindsay Charles"},"dateModified":"2020-11-06T09:00:00+00:00","datePublished":"2020-11-06T09:00:00+00:00","description":"Attempt at modelling a Delay Repeating Spatial Synthesizer using Csound","headline":"Spaty Synthy","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_lindsay_spatialsynth_vst.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/lindsay-spatialsynth.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Lindsay Charles"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/lindsay-spatialsynth.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Spaty Synthy
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-11-06T09:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 6, 2020 •
+      </time>
+         
+      <a href="/authors/lindsaycharles.html">Lindsay Charles</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction">Introduction</h2>
+
+<p>Introducing you to an attempt at creating a phasor modulation based Delay-Spatial synthesizer VST Plugin implemented in Csound and Cabbage.
+The synthesizer is tested out as a plugin synth on Ableton Live DAW, I’ve used two MIDI controllers, one to control the parameters and the other to play the notes.</p>
+
+<p>Below is the demo of the VST and its development.</p>
+
+<h3 id="demonstration">Demonstration</h3>
+
+<iframe width="1287" height="496" src="https://www.youtube.com/embed/Zfa50kyzJIg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h5 id="demo-video">Demo Video</h5>
+
+<h2 id="how-it-looks-like">How it looks like</h2>
+
+<p>The synthesizer has an oscillator  which generates 4 types of waves Sine, Saw, Square, Pulse where each can be selected from the drop down combo box.</p>
+
+<p><img src="/assets/image/2020_11_06_lindsay_spatialsynth_vst.jpg" alt="Spatial Synth" /></p>
+
+<p>The oscillator signal is routed to ADSR Envelope(Attack, Delay, Sustain, Release).
+I mapped the MIDI controls to Attack and Sustain. The sustain values can go really high for as long as 5 seconds making the notes repeat for longer times.
+It is then routed to the Butterworth band pass filter which has parameters of centre frequency and bandwidth, which are also mapped to midi controller knobs.
+Next in the chain is the phaser modulated signal used as the delay or repeater envelope, it sounds similar to an arpeggiator but with the same notes.</p>
+
+<p>The output of all these envelopes is fed into the spatial effect which has a numerous parameters, but I have decided to keep only one controllable variable which is the degree of rate of stereo change between the left and right.</p>
+
+<p>Finally, a Reverb is added at the end of it all.</p>
+
+<h3 id="whats-inside">What’s inside</h3>
+
+<p>As a Whole, the sound generator and the effects are bundled into one instrument in Csound using opcode ‘instr’ which has all the effects and the oscillator in it. The oscillator opcode used here is the ‘poscil’ which is a high precision oscillator.
+‘madsr’ is the opcode used as the ADSR Envelope described above which is multiplied with the band pass filter signal with opcode ‘butterbp’.</p>
+
+<p>The phasor signal opcode ‘phasor’ acts as the modulating wave to generate a delay signal or repeating signal, with a particular rate assigned to a knob which the user can change.</p>
+
+<p>For the logic of spatial sound, the opcode ‘spat3d’ is used which allows positions of the input sound in a 3D space, with optional simulation of room acoustics, in various output formats, spat3d allows moving the sound at k-rate, the parameters involved in this are X, Y, Z axes, the distance from sound source to microphones and other room size parameters.
+I have nulled out the Z axes for intensive purposes.</p>
+
+<h3 id="thoughts-and-conclusion">Thoughts and Conclusion</h3>
+<p>The conception of this synth idea is from the basic knowledge of Csound and Cabbage, and I would say that this VST is still under development and there’s definitely going to be an advanced version of this later.
+I may not have reached the goal which I had in my mind about the output in terms of sound and design but this VST is a good basic synth for a space kind of sounds which can be a compliment for scoring or adding a bit of spatial touch to your compositions or mixes.
+I am still exploring the sound textures from it, however it overloads my PC, probably due to the inefficient code or just too many effects routed all in one block.
+Csound is a very good tool which is particularly functional to my knowledge of Audio programming compilers.</p>
+
+<p>Here’s the files to the VST and the CSD file (make sure you place both the .csd and .dll files in the same folder with the same name)</p>
+
+<h2 id="click-to-download"><a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2020_11_06_lindsay_spatialsynth.rar">Click to Download!</a></h2>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/11/06/lindsay-spatialsynth.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

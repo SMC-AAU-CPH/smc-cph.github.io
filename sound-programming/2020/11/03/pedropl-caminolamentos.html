@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>‘El Camino de los Lamentos’: A performance using custom Csound VST Plugins | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="‘El Camino de los Lamentos’: A performance using custom Csound VST Plugins" />
+<meta name="author" content="Pedro Lucas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This performance is using two VST plugins produced in Cabbage through Csound. A synthesizer based on elemental waveforms, frequency modulation, and stereo delay, and an audio effect for pitch scaling and reverb." />
+<meta property="og:description" content="This performance is using two VST plugins produced in Cabbage through Csound. A synthesizer based on elemental waveforms, frequency modulation, and stereo delay, and an audio effect for pitch scaling and reverb." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/03/pedropl-caminolamentos.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/03/pedropl-caminolamentos.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_03_pedropl_caminolamentosfi.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-03T20:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_03_pedropl_caminolamentosfi.png" />
+<meta property="twitter:title" content="‘El Camino de los Lamentos’: A performance using custom Csound VST Plugins" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pedro Lucas"},"dateModified":"2020-11-03T20:00:00+00:00","datePublished":"2020-11-03T20:00:00+00:00","description":"This performance is using two VST plugins produced in Cabbage through Csound. A synthesizer based on elemental waveforms, frequency modulation, and stereo delay, and an audio effect for pitch scaling and reverb.","headline":"‘El Camino de los Lamentos’: A performance using custom Csound VST Plugins","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_03_pedropl_caminolamentosfi.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/03/pedropl-caminolamentos.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Pedro Lucas"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/03/pedropl-caminolamentos.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      &#39;El Camino de los Lamentos&#39;: A performance using custom Csound VST Plugins
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-11-03T20:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 3, 2020 •
+      </time>
+         
+      <a href="/authors/pedrolucas.html">Pedro Lucas</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>As part of the project for Digital Audio module regarding SMC4000 course, you will find below a video for a performance that uses an effect and a synthesizer implemented in <a href="https://csound.com">CSound</a>, which were exported through <a href="https://cabbageaudio.com/">Cabbage</a>. Besides, I used the looping capabilities of <a href="https://www.ableton.com/en/">Ableton Live</a> together with a specialized Ableton controller (AKAI APC40), a MIDI keyboard controller (AKAI MPK mini), an electric guitar, and my voice.</p>
+
+<p>I called this song in Spanish <strong>“El Camino de los Lamentos”</strong> (The Road of Lamentations) considering the mystery and feelings that, personally, they produce in me. I hope you like it. Later, I will explain the work behind the development of these plugins.</p>
+
+<figure style="float: none">
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_11_03_pedropl_caminolamentos.mp4" width="1024" height="576" frameborder="0" allowfullscreen=""></iframe>
+   <figcaption>The Performance</figcaption>
+</figure>
+
+<h2 id="the-performance">The Performance</h2>
+
+<p>This performance is a looping session that starts with a pre-recorded drums base, then, it continues with arpeggios from an electric guitar with a reverb given by the custom VST plugin effect with a little pitch scaling amount. The next part is a melody with the same schema, but in this case the pitch scaling is more noticeable because it has less reverb and a little modulation effect that makes a slightly change of pitch in time.</p>
+
+<p>After some guitar playing, I continue with the synthesizer VST plugin by using a square wave. Firstly, a chord base is played with a small value in the cut off frequency of the low pass filter and a high resonance, then I change those values to have more frequencies into that base. Here, the panning effect can be listened slightly.</p>
+
+<p>The next loop track is about a simple melody with a very noticeable moving panning regarding the delay. Here I change some parameters in real-time to demonstrate the effect of changes in the low pass filter and frequency modulation.</p>
+
+<p>Finally, I used the effect over my own voice by scaling the pitch on a fifth (+7) or a complete octave (+12) and sometimes back to normal (0). The performance ends with the same percussion as the beginning and the volume decaying slowly and manually.</p>
+
+<h2 id="plugins-development">Plugins Development</h2>
+
+<h3 id="the-synthesizer">The Synthesizer</h3>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_11_03_pedropl_syntheinterface.png" alt="Synthesizer Interface" title="Synthesizer Interface" width="auto" /> <figcaption>Synthesizer Interface</figcaption>
+</figure>
+
+<p>The image above depicts the interface for the synthesizer I implemented. It can be controlled directly with the mouse pointer or through a MIDI controller when used in a DAW and mapped properly. The following elements compose this plugin in two Csound instruments:</p>
+
+<h4 id="elements-of-instrument-1">Elements of Instrument 1:</h4>
+
+<ul>
+  <li>
+    <p><strong>Waveforms:</strong> The user can choose among a Sine, a Sawtooth, or a Square waveform as the sound source. For producing the last two, I used the <strong>ftgen</strong> opcode to obtain global variables and give them to an <strong>oscil</strong> as a parameter. It means that those waves are shaped by the sum of sine waves considering the right harmonics to generate them. The UI in Cabbage is a group of radio buttons that allow the user to select just one out of three options.</p>
+  </li>
+  <li>
+    <p><strong>ADSR Envelope:</strong> The <strong>madsr</strong> opcode is used to modulate the amplitude of the wave generated every time a key from a MIDI controller is pressed. Only the attack and release parameters are exposed as knobs, while the decay and sustain are fixed.</p>
+  </li>
+  <li>
+    <p><strong>Frequency Modulation:</strong> A sine LFO works as a modulator for the frequency of the source wave and is controlled via two parameters: <strong>Mod Amp</strong> and <strong>Mod Freq</strong>, which correspond to the amplitude and frequency of the modulation signal, respectively.</p>
+  </li>
+  <li>
+    <p><strong>Output and Display:</strong> The resulting signal is added to a global signal that is processed by instrument 2 as well as displayed in the interface as a waveform plot <strong>Time vs Amplitude</strong>.</p>
+  </li>
+</ul>
+
+<h4 id="elements-of-instrument-2">Elements of Instrument 2:</h4>
+
+<ul>
+  <li>
+    <p><strong>Delay:</strong> Here the <strong>vdelay</strong> opcode is used with an implementation strategy that considers feedback. In this case, instrument 2 is running constantly and parallelly to instrument 1 that is instantiated every time a NoteOn MIDI message is received. Instrument 2 defines a feedback signal that is weighted by the delay feedback amount provided by the user and is built considering the delay time also from a knob.</p>
+  </li>
+  <li>
+    <p><strong>Panning LFO:</strong> A sine LFO for panning the delayed signal is used with an amplitude and frequency of 1. This is mathematically manipulated such way the delayed signal is moved between left and right. After this process, a new signal is composed by the sum of the original signal from instrument 1 and the panned delayed signal.</p>
+  </li>
+  <li>
+    <p><strong>Resonant Low Pass Filter:</strong> The opcode <strong>moogladder</strong> is used for filtering the composed signal mentioned before. The cut off frequency and the resonance parameters are given by the user through knobs in the interface. This filtering is applied to both stereo signals and then sent to the output device.</p>
+  </li>
+  <li>
+    <p><strong>Global Output:</strong> It is important to keep a global output signal for the delay effect that can be used for both instruments. Also, this signal must be reset to zero after every execution in instrument 2 to receive data from new instances of instrument 1.</p>
+  </li>
+</ul>
+
+<p>The connections architecture for this plugin is shown below. Note that some arrows are colored differently in order to avoid confusion when they are crossed one each other and for the clear identification of the final part in which everything converge to the stereo output device.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_11_03_pedropl_synthediagram.png" alt="Synthesizer Connections Diagram" title="Synthesizer Connections Diagram" width="auto" /> <figcaption>Synthesizer Connections Diagram</figcaption>
+</figure>
+
+<h3 id="the-effect">The Effect</h3>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_11_03_pedropl_effectinterface.png" alt="Effect Interface" title="Effect Interface" width="auto" /> <figcaption>Effect Interface</figcaption>
+</figure>
+
+<p>The image above shows the interface for the effect I developed. It is built by using one only Csound instrument and consist of basically two main components that affect an input audio signal: the pitch scaling, and a reverb effect. They are explained as follows:</p>
+
+<h4 id="pitch-scaling">Pitch Scaling</h4>
+
+<p>The idea behind pitch scaling is producing a signal that mimic the input with a different pitch regarding a scale factor. For this case, the scale factor is a number between -12 and 12 which represents semitones below or above the original pitch.</p>
+
+<p>In order to do this, the scale factor (kPscale) is transformed to a different factor. This factor tells us that, when pitch scale is 2, the pitch will be one octave above the original, and when 0.5 an octave below. Numbers in between are given by a formula based on the relative semitone in which the user wants to scale. Thus, for values between -12 and 0, the new scaling factor is <code class="language-plaintext highlighter-rouge">1.5 – 0.5 * 2^(-kPscale/12.0)</code>, for the rest of values (0 to 12) is <code class="language-plaintext highlighter-rouge">2^(kPscale/12.0)</code>.</p>
+
+<p>After scaling, there is a modulation wave with an amplitude and frequency given by the user that is summed to the result pitch scale factor.</p>
+
+<p>This resulting modulated factor is included in the <strong>pvscale</strong> opcode that is used together with <strong>pvsanal</strong> and <strong>pvsynth</strong>  as described <a href="http://www.csounds.com/manual/html/pvscale.html">here</a>.</p>
+
+<p>After this process, the pitch amount parameter is used to weight the quantity of the signal effect that contributes to the output. Also, a gain scaling is applied to avoid the clipping of the signal.</p>
+
+<h4 id="reverb">Reverb</h4>
+
+<p>The signal explained in the previous section is sending to the <strong>reverbsc</strong> opcode. This same signal is used for stereo processing. The feedback and cut off frequency for the low pass filter associated with this reverb opcode are given by the user.
+The result is the generation of two signals for stereo. These signals are summed with the original signal and weighted according to the Dry/Wet parameter that allows to increase or decrease the presence of the reverb effect in the original signal.</p>
+
+<p>The connections for this plugin are illustrated below. Note that some calculations are computed in one only box to avoid an overwhelming representation for this solution.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_11_03_pedropl_effectdiagram.png" alt="Effect Connections Diagram" title="Effect Connections Diagram" width="auto" /> <figcaption>Effect Connections Diagram</figcaption>
+</figure>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The development of a digital instrument or effect is a challenging task because it needs a mental capacity to think in terms of a real-time system, that is, a process that is constantly running in time. This is easier after training your mind about the way of thinking solutions that runs in a loop, and it happens in Csound for audio.</p>
+
+<p>It could be difficult at the beginning to think in this way, but it is important to know the basis of the platform that is being used and explore the tools that it provides in order to build interesting applications.</p>
+
+<p>I tried to implement these plugins as general-purpose components for a performance. Despite they have particular elements, I think they are useful for several compositions. In the case of the synthesizer, various type of waves can be used and shaped in a smooth or harsh way, or even deformed it completely by the frequency modulation feature. The effect also can be regulated according to the needs of the musician, both can be easily modified for live performance or a recording session.</p>
+
+<h2 id="get-the-plugins">Get the Plugins</h2>
+
+<p>You can download these plugins for Windows <a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2020_11_03_pedropl_pedrosynthewin.zip">here</a>. (Copy the two folders in your VST folder). Users from other OS can use the .csd files from the Windows folder and <a href="https://cabbageaudio.com/docs/exporting/">export the plugin in Cabbage</a></p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/11/03/pedropl-caminolamentos.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

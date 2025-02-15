@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Intuitive Robotics | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Intuitive Robotics" />
+<meta name="author" content="Emin Memis, Fabian Stordalen, Masoud Niknafs, Theo Griffin Halvorsen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Controlling a robot arm with medical sensors" />
+<meta property="og:description" content="Controlling a robot arm with medical sensors" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2023/11/27/fabianst-intuitive-robotics.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2023/11/27/fabianst-intuitive-robotics.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_25_fabianst_blogcover.png?alt=original" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-27T05:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_25_fabianst_blogcover.png?alt=original" />
+<meta property="twitter:title" content="Intuitive Robotics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emin Memis, Fabian Stordalen, Masoud Niknafs, Theo Griffin Halvorsen"},"dateModified":"2023-11-27T05:00:00+00:00","datePublished":"2023-11-27T05:00:00+00:00","description":"Controlling a robot arm with medical sensors","headline":"Intuitive Robotics","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_25_fabianst_blogcover.png?alt=original","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2023/11/27/fabianst-intuitive-robotics.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Emin Memis, Fabian Stordalen, Masoud Niknafs, Theo Griffin Halvorsen"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/applied-project/2023/11/27/fabianst-intuitive-robotics.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Intuitive Robotics
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-11-27T05:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 27, 2023 •
+      </time>
+         
+      <a href="/authors/eminmemis.html">Emin Memis,</a>
+           
+      <a href="/authors/fabianstordalen.html">Fabian Stordalen,</a>
+           
+      <a href="/authors/masoudniknafs.html">Masoud Niknafs,</a>
+            Theo Griffin Halvorsen   </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
+<p>For our project we collaborated with <a href="https://sifilabs.com/">SiFi Labs</a> to create and implement a system to showcase how you can use their <a href="https://sifilabs.com/biopoint/">BioPoint</a> biosensors to control a robotic arm. This was quite an ambitious and daring project. As this project was a collaboration between us SMC students and the informatics department we wanted to work on a project which could combine our different fields of expertise.</p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_23_fabianst_workinghard.jpg?alt=original" height="500" width="400" />
+  <figcaption>
+    <span class="caption">Hard at work trying to figure out an optimal control interface</span>
+  </figcaption>
+</figure>
+
+<h2 id="what-will-the-robot-arm-do">What will the robot arm do?</h2>
+
+<p>With the powerful combination of SiFi Labs’ BioPoint biosensors and the Universal Robots UR10e, we aimed to showcase the precision and versatility of our robotic system through a visually engaging task: painting 🎨. By harnessing the data from BioPoint’s IMU sensors, we can translate the movements captured by the user into the movement of the robot arm.</p>
+
+<h2 id="the-biopoint">The BioPoint</h2>
+<p>The <a href="https://sifilabs.com/biopoint/">BioPoint</a> is a powerful and lightweight device developed by SiFi labs featuring 6 different sensors capable of recording almost any biosignal imaginable. For our use case we were mostly interested in utilizing the <a href="https://en.wikipedia.org/wiki/Inertial_measurement_unit">Intertial Measurement Unit sensors (IMU)</a> on the device. Multiple of our team members had previous experience using these sensors for <a href="https://SMC-master.github.io/motion-capture/">artistic applications</a> so we thought it would be fitting for our project.</p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_27_fabianst_biopoint.jpg?alt=original" height="500" width="400" />
+  <figcaption>
+    <span class="caption">The BioPoint Biosensor</span>
+  </figcaption>
+</figure>
+
+<h2 id="introducing-the-robot">Introducing the Robot</h2>
+<p>Meet the robot we worked on for this project. The <a href="https://www.universal-robots.com/products/ur10-robot/">Universal Robots UR10e</a>. This is a medium sized industrial robot, and is also quite large as you can see! This big guy is known for its robust capabilities and ease of integration into various applications - it opens up a world of possibilities for automation in diverse industries.</p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_27_ahmetem_robotarm01.jpg?alt=original" height="500" width="400" />
+  <figcaption>
+    <span class="caption">The UR10e Robot Arm</span>
+  </figcaption>
+</figure>
+
+<figure style="float: none">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GYB5D0WIcmQ?si=mEKbO0NLhAFNZpW7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+    </iframe>
+  <figcaption> The first move matters! </figcaption>
+</figure>
+
+<h1 id="navigating-the-project-from-concept-to-reality">Navigating the Project: From Concept to Reality</h1>
+
+<p>Embarking on a three-month project, we knew time was of the essence, guiding us to keep our goals practical and achievable. Our chosen task, to get the robot to paint, offered a balanced challenge that aligned with our timeframe. To map out our journey, we utilized proven planning and project management tools.</p>
+
+<h2 id="project-network-diagram-pnd">Project Network Diagram (PND)</h2>
+
+<p>With the Project Network Diagram (PND), we visualized the sequential tasks, always having a clear next step in sight. This dynamic tool provided a bird’s-eye view of our progress, ensuring we stayed on track and understood the needs and evolving aspects of our project.</p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_23_faibanst_pnd.png?alt=original" height="300" width="700" />
+  <figcaption>
+    <span class="caption">Project Network Diagram</span>
+  </figcaption>
+</figure>
+
+<h1 id="implementation">Implementation</h1>
+
+<p>Our team recently embarked on a complex project involving the programming and maneuvering of a robot. We kicked off this endeavor by plunging deep into the mechanics of robotics control, learning the intricacies of tech pendant manipulation, and slowly mastering manual control using Joint and TCP actions. Although initially, we were tethered by local networks, later, we successfully tapped into the world of remote control through the Universal Robots ROS driver, which was quite a hurdle given our unfamiliarity with a ROS environment.</p>
+
+<p>We persisted, exploring UR’s predefined protocols for communication over TCP/IP. We examined only two among the six communication interfaces available - the Primary/Secondary and RTDE interfaces. While the Primary/Secondary interface made it possible to transmit data to the robot and alter specific state changes, the weak link was its low frequency, manifesting in choppy motion. Thus, we advanced towards the RTDE interface with a higher frequency and, in turn, smoother motion. This improvement came with the added burden of managing data on the robot’s end, which was handled by developing a custom program to interpret and act upon the data.</p>
+
+<p>Simultaneously, we implemented other necessary software for handling data streaming and processing from the BioPoint devices. With rigorous research, planning, and trials, we created a Python program that established a seamless and efficient connection with the devices, streamed the IMU data, and processed it to extract purposeful parameters for robot control.</p>
+
+<figure>
+  <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_11_27_ahmetem_diagram01.jpg?alt=original" />
+  <figcaption>
+    <span class="caption">The Control Pipeline for the System</span>
+  </figcaption>
+</figure>
+
+<h1 id="the-robot-arm-in-action">The Robot Arm in Action</h1>
+
+<figure style="float: none">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cqzUbot4i0c?si=4Z1wLm5yeVKEAEF6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+  <figcaption> Robot moving in harmony with the arm! </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>Looking ahead, our project sets the stage for exciting future endeavors and advancements in the realm of intuitive robotics. As we refine our system based on real-world feedback and continue to address challenges, the door opens to explore applications beyond painting. Future work can involve further enhancing the precision of our robotic system, incorporating machine learning algorithms for adaptive control, and expanding the compatibility with additional sensors for a richer user experience. We originally indented to implement haptics for this project which we sadly did not have time for, but this is also a possiblity in regards to future work.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/applied-project/2023/11/27/fabianst-intuitive-robotics.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Slicing and Dicing Audio Samples | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Slicing and Dicing Audio Samples" />
+<meta name="author" content="Leigh Murray" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Slicing up two songs and re-joining them with RMS and Spectral Centroid values." />
+<meta property="og:description" content="Slicing up two songs and re-joining them with RMS and Spectral Centroid values." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/02/leigh-slicing-and-dicing.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/02/leigh-slicing-and-dicing.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_02_leigh_slicing_dicing.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-02T13:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_02_leigh_slicing_dicing.png" />
+<meta property="twitter:title" content="Slicing and Dicing Audio Samples" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Leigh Murray"},"dateModified":"2020-12-02T13:00:00+00:00","datePublished":"2020-12-02T13:00:00+00:00","description":"Slicing up two songs and re-joining them with RMS and Spectral Centroid values.","headline":"Slicing and Dicing Audio Samples","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_02_leigh_slicing_dicing.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/02/leigh-slicing-and-dicing.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Leigh Murray"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/02/leigh-slicing-and-dicing.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Slicing and Dicing Audio Samples
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-12-02T13:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 2, 2020 •
+      </time>
+         
+      <a href="/authors/leighmurray.html">Leigh Murray</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="the-task">The Task</h1>
+
+<p>The task for the final exam for scientific computing was to create a python program that splits up two songs into segments, analyses particular
+audio qualities of these segments, then uses this analysis to determine the order when reassembling these segments back into a single audio file.
+The final audio file then needs to be displayed in a plot, with some indication of the audio samples used and audio feature values.</p>
+
+<h1 id="the-implementation">The Implementation</h1>
+
+<p>My Idea was to combine two features, RMS and Spectral Centroid.</p>
+
+<p>The program calculates the Spectral Centroid value (brightness of a sound) and average RMS (loudness)
+of each segment. It then multiplies these values together so that we can order the samples from
+high loudness and high brightness to low loudness and low brightness.</p>
+
+<p>I chose to use two songs I created myself. They are both cover versions of the same song, but in very different styles,
+so the tempo, chords and overall structure are the same but all the instrumentation is different.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_12_02_leigh_song_one.wav" type="audio/mpeg" />
+    Song One
+  </audio>
+  <figcaption>Song One</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_12_02_leigh_song_two.wav" type="audio/mpeg" />
+    Song Two
+  </audio>
+  <figcaption>Song Two</figcaption>
+</figure>
+
+<p>Rather than just reconstructing the samples from bright/loud to dull/soft, the samples are re-orderd so
+that each consecutive sample is a bright/loud sample followed by a dull/soft sample. In this way it is a
+bit more “musical” since the final output has a kind of loud beat followed by soft off-beat feel.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_12_02_leigh_slicing_output.wav" type="audio/mpeg" />
+    Output Song
+  </audio>
+  <figcaption>Output Song</figcaption>
+</figure>
+
+<p>It’s interesting to note that there is no clear indication of what sound is on the beat and what sound is on
+the off-beat, allowing the listener to change their focus, which creates quite a different experience
+based on whether you choose the soft or loud segments as the beat.</p>
+
+<p>In the visualisation I chose to colour code the samples based on which song they originally came from.
+Overlayed on top of the samples is the RMS * Spectral Centroid values for each sample, and since this value
+alternates from high to low, the vertical line this creates indicates the end of the previous sample and
+the start of a new sample.</p>
+
+<p>This visualisation can be seen below. Open in a new tab or download to see the full resolution image.</p>
+
+<p><img src="/assets/image/2020_12_02_leigh_slicing_full_output.png" alt="Slicing Audio Output" /></p>
+
+<h1 id="final-thoughts">Final Thoughts</h1>
+
+<p>It’s interesting to notice the difference in “dynamics” between the two versions of the song.  As can
+be seen in the output image, song two is mostly placed at the start of the output audio file and
+contains significantly brighter/louder and duller/softer segments than song one, which has much less
+contrast between its bright/loud and dull/soft segments.</p>
+
+<p>This was also interesting for me to hear how many segments of my two songs are literally identical.
+When placed within the context of the original songs this isn’t as noticable but when similar segments of a song
+are grouped together based on audio features that they have in common, it really stands out how repetitive
+some of these beats are. I think I will take this knowledge on board and try to incorporate some more variables
+in my future tracks to make them sound a bit more “human”.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/12/02/leigh-slicing-and-dicing.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

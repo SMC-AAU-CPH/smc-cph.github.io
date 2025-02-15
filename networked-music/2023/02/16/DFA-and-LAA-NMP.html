@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Designing DFA and LAA Network Music Performances | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Designing DFA and LAA Network Music Performances" />
+<meta name="author" content="Alexander Wastnidge, Fabian Stordalen, Henrik Sveen, Masoud Niknafs, Nino Jakeli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Music Performances in High Latency" />
+<meta property="og:description" content="Music Performances in High Latency" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/02/16/DFA-and-LAA-NMP.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/02/16/DFA-and-LAA-NMP.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_02_17_fabianst_dfa.png?alt=original" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-02-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_02_17_fabianst_dfa.png?alt=original" />
+<meta property="twitter:title" content="Designing DFA and LAA Network Music Performances" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexander Wastnidge, Fabian Stordalen, Henrik Sveen, Masoud Niknafs, Nino Jakeli"},"dateModified":"2023-02-16T00:00:00+00:00","datePublished":"2023-02-16T00:00:00+00:00","description":"Music Performances in High Latency","headline":"Designing DFA and LAA Network Music Performances","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_02_17_fabianst_dfa.png?alt=original","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/02/16/DFA-and-LAA-NMP.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alexander Wastnidge, Fabian Stordalen, Henrik Sveen, Masoud Niknafs, Nino Jakeli"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/02/16/DFA-and-LAA-NMP.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Designing DFA and LAA Network Music Performances
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-02-16T00:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 16, 2023 •
+      </time>
+         
+      <a href="/authors/alexanderwastnidge.html">Alexander Wastnidge,</a>
+           
+      <a href="/authors/fabianstordalen.html">Fabian Stordalen,</a>
+           
+      <a href="/authors/henriksveen.html">Henrik Sveen,</a>
+           
+      <a href="/authors/masoudniknafs.html">Masoud Niknafs,</a>
+            Nino Jakeli   </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="two-configurations-for-network-music-performances-in-high-latency-environments">Two Configurations for Network Music Performances in High Latency Environments</h1>
+
+<p>Much time, effort and research in the field of NMPs goes into the reduction of latency.  For seamless musical performances over a network, latency needs to be imperceptible to musicians.  Due to the nature of many remote solutions, especially those available at a consumer level, this is often not possible and latency can be at levels making synchronised music performance unworkable.</p>
+
+<p>In their paper linked below, Alexander Carôt and Christian Werner propose several configurations for working with situations where latency is unavoidably high.  These revolve around, rather than attempting to reduce latency, to accept its presence and potentially use it to form part of the music or synchronisation.  These are often based on one location being termed the “master” for the sake synchronisation, with the second being the “slave”.  Here we will instead use the terms primary and secondary nodes to denote this.  Our groups attempted to implement the following two configurations for musical performance:</p>
+
+<p><strong>Delayed Feedback Approach</strong> involves delaying the primary node’s signal relevant to the roundtrip latency as to sound the same as how the secondary node will experience it.</p>
+
+<p><strong>Latency Accepting Approach</strong> revolves around not attempting to improve or optimise latency in any way and instead absorb it into the creative content of the performance.</p>
+
+<h2 id="delayed-feedback-approach-dfa">Delayed Feedback Approach (DFA)</h2>
+
+<p>For this designed performance we used a drum machine at the primary node playing sequenced drum patterns and a synthesizer at the secondary node played by a human musician.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_02_15_alexanjw_roundtrip_diagram.jpg" style="max-height:600px; width:auto;" />
+   <figcaption> </figcaption>
+</figure>
+
+<p>The design of this configuration was that the drum machine would be transmitted across the network in its latency-rich state to the secondary node.  The performer at the secondary node would play along with the drum machine, transmitting the output from the synthesizer back to the primary node, again with unaffected high latency.</p>
+
+<p>With the synthesizer signal being returned to the primary with latency, we added a sample delay to the monitor path of the drum machine which was equal to half of to the total latency in the system.  As such, as the synthesizer was only travelling one way across the network, when the secondary node’s signal and the delayed drum machine monitor signal played together, they sounded in time.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_02_15_alexanjw_waveforms.png" style="max-height:600px; width:auto;" />
+   <figcaption>Roundtrip latency was measured by sending a click through the system and recording its return.  The distance between the two was then measured in milliseconds and samples.</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_02_15_alexanjw_roundtrip.png" style="max-height:600px; width:auto;" />
+   <figcaption>Taking the average lengths between the two clicks gave the total roundtrip latency.  This was 109ms or 5245 samples.</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_02_15_alexanjw_delay.png" style="max-height:600px; width:auto;" />
+   <figcaption>Using a sample delay set to half the roundtrip latency in order to delay to drum machine monitorr signal</figcaption>
+</figure>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-Og_EoKAVhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+<p>Here is the performance using the DFA configuration.  The audio is recorded from the mixer at the primary node with a mix of the returned synthesizer signal and the delayed drum machine monitor signal.  As you can hopefully see, this audio lines up perfectly with the footage from the secondary node, implying that the delayed monitor path was configured correctly.</p>
+
+<h2 id="latency-accepting-approach">Latency Accepting Approach</h2>
+<p>For the LAA (Latency Accepting Approach) Fabian and Henrik used SonoBus over a wifi connection to create a latency-rich environment. Roundtrip latency averaged at just above 200ms, giving a good foundation to try LAA.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2023_02_16_fabianst_latency_sonobus.png?alt=original" />
+   <figcaption>Sonobus settings</figcaption>
+</figure>
+
+<p>As noted by Carôt and Werner, a latency accepting approach, lends itself best to ambient music with slow movements giving performers time to react to each other.  As such, this is what was attempted here.  A video of the performance is  below:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vyFz8AhbwlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>DFA and LAA lend themselves well to different forms of telematic musiking in latency-rich environments.  The more percussive music style was appropriate for the DFA while LAA was better suited to a beatless ambient approach.</p>
+
+<p>For the DFA performance, while this approach worked well with the use of the drum machine, the monitoring delay would have made live playing difficult.  This approach would be more feasible if all participants were playing to a ‘delayed feedback’ metronome, allowing all participants to, in effect, play to a single, synchronised timing source.</p>
+
+<p>In practice, despite  very high latency and having a lot of audio packet drops, LAA felt fairly seamless for the performers to play ambient music. We did not attempt to play rhythmically-based music with this approach as the high-latency would have rendered it impractical.</p>
+
+<p>While neither of these approaches represent a generally applicable solution, they do offer technical and creative routes to allow for effect music performance in latency-rich environments.  While DFA represents a route for more conventional, rhythmic music, LAA forces the musicians to work in an unconventional manner.  This has the potential to open them up to greater creativity and different, new modes to work within its limitations.</p>
+
+<h2 id="references">References</h2>
+
+<p>[1] A. Carôt and C. Werner, ‘Fundamentals and principles of musical telepresence’, <em>Journal of Science and Technology of the Arts</em>, pp. 26–37, Jan. 2009, doi: 10.7559/CITARJ.V1I1.6.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2023/02/16/DFA-and-LAA-NMP.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

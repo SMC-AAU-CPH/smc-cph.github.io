@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Classifying Urban Sounds in a Multi-label Database | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Classifying Urban Sounds in a Multi-label Database" />
+<meta name="author" content="Jackson Goode" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How well does a convolution neural network perform at detecting multiple classes within a single sample? This experiment explores augmenting the UrbanSound8K database to test a well performing CNN architecture in a multi-label, multi-class scenario." />
+<meta property="og:description" content="How well does a convolution neural network perform at detecting multiple classes within a single sample? This experiment explores augmenting the UrbanSound8K database to test a well performing CNN architecture in a multi-label, multi-class scenario." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/20/classifying-urban-sounds.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/20/classifying-urban-sounds.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://miro.medium.com/max/700/1*D_yXVrrJD1Y46Z1T0OTOVA.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-20T18:30:20+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://miro.medium.com/max/700/1*D_yXVrrJD1Y46Z1T0OTOVA.png" />
+<meta property="twitter:title" content="Classifying Urban Sounds in a Multi-label Database" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jackson Goode"},"dateModified":"2020-09-20T18:30:20+00:00","datePublished":"2020-09-20T18:30:20+00:00","description":"How well does a convolution neural network perform at detecting multiple classes within a single sample? This experiment explores augmenting the UrbanSound8K database to test a well performing CNN architecture in a multi-label, multi-class scenario.","headline":"Classifying Urban Sounds in a Multi-label Database","image":"https://miro.medium.com/max/700/1*D_yXVrrJD1Y46Z1T0OTOVA.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/20/classifying-urban-sounds.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jackson Goode"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/20/classifying-urban-sounds.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Classifying Urban Sounds in a Multi-label Database
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-09-20T18:30:20+00:00"
+        itemprop="datePublished"
+      >Sep 20, 2020 •
+      </time>
+         
+      <a href="/authors/jacksongoode.html">Jackson Goode</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="environmental-sound-classification-over-concurrent-samples">Environmental Sound Classification over Concurrent Samples</h1>
+
+<p>Given the short two week span to develop a machine learning model, I decided instead of beginning anew, to repurpose some pre-existing methods in approaching environmental sound classification.  Environmental sound classification (ESC) is a field that benefits well from machine learning techniques, as the data examined will always be unique and noisy. Two well known databases, UrbanSound8K (US8K) [5] and ESC-50 [9] provide recordings from <a href="https://freesound.org">Freesound.org</a>, trimmed, labeled and grouped into categories for analysis. This system attempts to utilise a <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">convolutional neural network</a> (CNN) on an augmented UrbanSound8K dataset for multi-label classification.</p>
+
+<p><a href="https://urbansounddataset.weebly.com/urbansound8k.html">UrbanSound8K</a> contains over 8000 sound files separated by categories of sounds typically found in an urban setting. Instead of exclusive categorical labels in its original state, the dataset has been recreated with the purpose of exploring how a successful architecture might perform on multi-label samples rather than simply uni-label, multi-class sounds. Thus, this project investigates how techniques in classifying an environmental noise database might generalize to a multi-label scenario with a new database composed of overlaid sound pairs.</p>
+
+<figure>
+    <img alt="UrbanSound8K classes" src="/assets/image/2020_09_20_jacksong_us8k_spec.jpg" />
+    <figcaption>Spectrograms of three UrbanSound8K classes</figcaption>
+</figure>
+
+<p>The initial code that I forked was sourced from <a href="https://github.com/aqibsaeed/Urban-Sound-Classification">Aapid Saeed’s implementation</a> which was in turn inspired by Karol Piczak’s 2015 paper that provides a scientific example of ENC using a CNN [4]. The experiment tested here provides some insight into the obstacles that appear when shifting this problem space both in terms of performance but also how features and parameters must be resituated.</p>
+
+<h2 id="overview-of-dataset-and-fabrication">Overview of dataset and fabrication</h2>
+
+<p>The original dataset, UrbanSound8K, contains 8732 .wav sounds sourced from Freesound.org across 10 classes of urban sounds:</p>
+
+<ol>
+  <li>air conditioner</li>
+  <li>car horn</li>
+  <li>children playing</li>
+  <li>dog bark</li>
+  <li>drilling</li>
+  <li>engine idling</li>
+  <li>gun shot</li>
+  <li>jackhammer</li>
+  <li>siren</li>
+  <li>street music</li>
+</ol>
+
+<p>All are separated into 10 folds (each containing an equal distribution selection of the classes). These sounds are all less than 4s but vary in length, recording device, sample rate and perceptual loudness. Many of the sounds were generated as slices from longer sounds - meaning that many sounds share the same sound file source.</p>
+
+<p>For creating a new dataset, I composed of multiple tracks of audio from UrbanSound8K. Using the library pydub, I created a separate script to use a randomized list of each fold’s files and overplayed each file with a randomized gain reduction between -6 and 0. This enabled a more authentic mixture of sound in a live context and would also contribute to the robustness of the model and its consequent difficulty during training (10 classes to 45 conceptual classes (or 10 choose 2)).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">...</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">multi_num</span><span class="p">):</span> <span class="c1"># number of samples to mix
+</span>    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="s">Processing: </span><span class="si">{</span><span class="n">samples</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="sh">'</span><span class="p">)</span>
+
+    <span class="n">labels</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">samples</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="sh">'</span><span class="s">-</span><span class="sh">'</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># get label
+</span>    <span class="n">sounds</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">effects</span><span class="p">.</span><span class="nf">normalize</span><span class="p">(</span><span class="n">sounds</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="c1"># normalize
+</span>    <span class="n">sounds</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">sounds</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">rand_gain</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># add random gain reduction
+</span>    <span class="n">p_ratio</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nf">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">rand_gain</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># convert to power
+</span>    <span class="n">names</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">'</span><span class="s">-</span><span class="si">{</span><span class="n">labels</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="s">(</span><span class="si">{</span><span class="nf">round</span><span class="p">(</span><span class="n">p_ratio</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s">)</span><span class="sh">'</span> <span class="c1"># label file with params
+</span>
+<span class="n">combined</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">combined</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">sounds</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">overlay</span><span class="p">(</span><span class="n">sounds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">times</span><span class="o">=</span><span class="mi">20</span><span class="p">))</span> <span class="c1"># overlay sound (repeat if base sound is longer)
+</span><span class="bp">...</span>
+</code></pre></div></div>
+
+<p>Two tracks of audio were chosen after testing the capabilities with three concurrent sounds, which appeared even too difficult to discern by ear - however, the script was written with the possibility of any number of overlays. This brings up another point - some of these classes of sound like ‘air conditioner’ and ‘engine idling’ closely resembled white noise, something that every recording ultimately contains due to the nature of recording sound. The final “multi” database is a little less than half the size of US8K as some of the samples of US8K were unreadable and were skipped.</p>
+
+<h2 id="implementation-of-model">Implementation of model</h2>
+
+<p>In addition to the creation of a script to fabricate and label a multi-labeled dataset, I augmented the scripts used to evaluate a CNN on the original UrbanSound8K database to suit this new multi-label scenario. The actual feature processing was identical to the one-sound-per-sample database. The audio data’s features (mel-spectrogram) were extracted and filtered with <a href="https://librosa.org/doc/latest/generated/librosa.feature.melspectrogram.html?highlight=mel#librosa.feature.melspectrogram">librosa</a>.</p>
+
+<figure>
+    <img width="560px" alt="One example of the mel-spectrogram feature" src="/assets/image/2020_09_20_jacksong_spec_1.png" />
+    <figcaption>One example of the mel-spectrogram feature</figcaption>
+</figure>
+
+<figure>
+    <img width="560px" alt="Another example" src="/assets/image/2020_09_20_jacksong_spec_2.png" />
+    <figcaption>Another example</figcaption>
+</figure>
+
+<p>Most of my efforts here went into changing how the labels were being processed. The network used to train and test the data was fashioned with the Keras wrapper for TensorFlow and other ML backends. Keras was chosen as it offers the ability to construcasdast neural networks at a lower level than the sklearn package whilst being fairly novice-friendly.</p>
+
+<h2 id="model-tuning-for-new-dataset">Model tuning for new dataset</h2>
+
+<p>Parameters that were previously provided by Saeed needed to be adjusted considering the new multi-label problem space. The first major change needed to happen at the label encoding level as labels were no longer a number from 0-9, an array of n values from 0-9. To resolve this, the labels were transformed into one-hot binary encoding. This allowed multiple simultaneous classes to be represented in an array of the same length.</p>
+
+<p>Another major change concerned the end of the network, where predictions and evaluations are made on the training data. The final dense layer was set to the softmax activation function which was <a href="https://glassboxmedicine.com/2019/05/26/classification-sigmoid-vs-softmax/">inappropriate for a non-exclusive multi-label scenario</a>. The softmax function outputs probabilities for classes that sum to one, making it impossible for multiple classes to reach a binary activation. In this case, sigmoid offers probability distributions that are unconstrained, enabling multiple classes to reach binary classification.</p>
+
+<figure>
+    <img width="560px" alt="Applications of softmax vs. sigmoid" src="https://miro.medium.com/max/1268/1*-fADiyqSH9AHPPO7VB4XaQ.png" />
+    <figcaption>Applications of softmax vs. sigmoid - <a href="https://medium.com/aidevnepal/for-sigmoid-funcion-f7a5da78fec2">Credit to Ashis Parajuli</a></figcaption>
+</figure>
+
+<p>In parallel, the loss function needed to be changed from categorical cross entropy to binary cross-entropy for this binary data.</p>
+
+<h2 id="evaluation-of-performance">Evaluation of performance</h2>
+
+<p>During training, the accuracy score increased to around 44% after 15 epochs while the loss continuously decreased. However, the last 10 epochs showed only a 4% increase in accuracy, suggesting the model was approaching convergence of the weight values and perhaps over-fitting (I had also attempted with longer training sessions with similar outcomes).</p>
+
+<figure>
+    <img alt="Categorical accuracy over epochs" src="/assets/image/2020_09_20_jacksong_cat_acc.png" width="560px" />
+    <figcaption>Categorical accuracy over epochs</figcaption>
+</figure>
+
+<figure>
+    <img alt="Model loss over epochs" src="/assets/image/2020_09_20_jacksong_model_loss.png" width="560px" />
+    <figcaption>Model loss over epochs</figcaption>
+</figure>
+
+<p>In testing the data, again the migration from a single categorical label to a one hot binary array means that the accuracy metric (a mean average of predictions on the test set) does not give us the whole picture. Moving to <a href="https://en.wikipedia.org/wiki/Hamming_distance">hamming loss</a>, an estimate that shows use what percent of our answer’s elements were correct, is a much better metric when predicting on a multi-label sample.</p>
+
+<p>The average accuracy was quite poor, as expected, sitting at 18%, however, the hamming loss (less is better) was 15%, meaning that 85% of the model’s label predictions were correct. These metrics are in sharp contrast to the performance of the untampered UrbanSound8K dataset, which was observed to have an accuracy of around 75-85% for most state of the art models [1, 2, 4, 8].</p>
+
+<figure>
+    <img alt="Confusion matrix across the ten classes" src="/assets/image/2020_09_20_jacksong_confusion_matrix.png" width="480px" />
+    <figcaption>Confusion matrix across the ten classes</figcaption>
+</figure>
+
+<p>The confusion matrix and classification report, of one training instance, also provide interesting insights into how the test data was predicted. One major point to note is the time scale of some of these classes. It appears that those sounds that appear briefly with high impulses like the car honk, dog bark, and gunshot (1, 3, 6) are some of the most precisely predicted classes (low-false positives).</p>
+
+<p>And as one might expect, the classes most difficult to label correctly turn out to be the noisiest and likely most organic and spectrally dynamic sounds within US8K: children playing, air conditioner and street music corresponding to 2, 0, 9. Of course, these metrics would need to be compared to the performance of the model on the raw UB8K database for one to make clear conclusions about how the shift into a multi-labeled dataset</p>
+
+<h2 id="reflections">Reflections</h2>
+
+<p>Not all of the details of the network employed have been fully elaborated and it may be that some transformations of the input data have been overlooked. Given the provided window of time and simultaneous introduction to techniques in machine learning, this investigation fulfils, at least, a tentative exploration into the field of ML based ENC.</p>
+
+<p>One obvious challenge in mixing sounds as was performed in this experiment is the perceptual presence of the sound within the sample. This is actually accounted for by a subjective estimate in the taxonomy of the UrbanSound8K database where they determine if the category was a foreground or background sound. For categories like “air_conditioner” and “engine_idling”, poor classification performance would be expected when mixing sounds of these classes due to their lack of a sonic shape - they mostly consist of white noise. One might predict then that these categories were over-predicted on average across all sounds. Indeed, that does appear to be the case and this can be seen through the confusion matrix.</p>
+
+<p>Another issue tied to the source database was its sheer size. The total time required to load around 9000 .wav files makes it prohibitively expensive when tuning parameters, or in this case, adapting the processing of files for a new problem space. K-fold validation would have been helpful in estimating the average accuracy of the model and providing greater confidence in our reflections of the model but there was not enough time to do so.</p>
+
+<p>Code and instructions for setting up this project can be found <a href="https://github.com/jacksongoode/enc-multi-label">here</a>.</p>
+
+<h1 id="references">References</h1>
+
+<ol>
+  <li>
+    <p>Abdoli, S., Cardinal, P., &amp; Koerich, A. L. (2019). End-to-End Environmental Sound Classification using a 1D Convolutional Neural Network. <em>ArXiv:1904.08990 [Cs, Stat]</em>. <a href="http://arxiv.org/abs/1904.08990">http://arxiv.org/abs/1904.08990</a></p>
+  </li>
+  <li>
+    <p>Mushtaq, Z., &amp; Su, S.-F. (2020). Environmental sound classification using a regularized deep convolutional neural network with data augmentation. <em>Applied Acoustics</em>, <em>167</em>, 107389. <a href="https://doi.org/10.1016/j.apacoust.2020.107389">https://doi.org/10.1016/j.apacoust.2020.107389</a></p>
+  </li>
+  <li>
+    <p>Piczak, K. J. (2020). <em>Karolpiczak/ESC-50</em> [Python]. <a href="https://github.com/karolpiczak/ESC-50">https://github.com/karolpiczak/ESC-50</a> (Original work published 2015)</p>
+  </li>
+  <li>
+    <p>Piczak, K. J. (2015a). Environmental sound classification with convolutional neural networks. <em>2015 IEEE 25th International Workshop on Machine Learning for Signal Processing (MLSP)</em>, 1–6. <a href="https://doi.org/10.1109/MLSP.2015.7324337">https://doi.org/10.1109/MLSP.2015.7324337</a></p>
+  </li>
+  <li>
+    <p>Piczak, K. J. (2015b). ESC: Dataset for Environmental Sound Classification. <em>Proceedings of the 23rd ACM International Conference on Multimedia</em>, 1015–1018. <a href="https://doi.org/10.1145/2733373.2806390">https://doi.org/10.1145/2733373.2806390</a></p>
+  </li>
+  <li>
+    <p>Saeed, A. (n.d.). <em>Urban Sound Classification, Part 2</em>. Retrieved 18 September 2020, from <a href="http://aqibsaeed.github.io/2016-09-24-urban-sound-classification-part-2/">http://aqibsaeed.github.io/2016-09-24-urban-sound-classification-part-2/</a></p>
+  </li>
+  <li>
+    <p>Aaqib. (2020). <em>Aqibsaeed/Urban-Sound-Classification</em> [Jupyter Notebook]. <a href="https://github.com/aqibsaeed/Urban-Sound-Classification">https://github.com/aqibsaeed/Urban-Sound-Classification</a> (Original work published 2016)</p>
+  </li>
+  <li>
+    <p>Su, Y., Zhang, K., Wang, J., &amp; Madani, K. (2019). Environment Sound Classification Using a Two-Stream CNN Based on Decision-Level Fusion. <em>Sensors</em>, <em>19</em>(7), 1733. <a href="https://doi.org/10.3390/s19071733">https://doi.org/10.3390/s19071733</a></p>
+  </li>
+  <li>
+    <p><em>UrbanSound8K</em>. (n.d.). Urban Sound Datasets. Retrieved 23 August 2020, from <a href="https://urbansounddataset.weebly.com/urbansound8k.html">https://urbansounddataset.weebly.com/urbansound8k.html</a></p>
+  </li>
+</ol>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2020/09/20/classifying-urban-sounds.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

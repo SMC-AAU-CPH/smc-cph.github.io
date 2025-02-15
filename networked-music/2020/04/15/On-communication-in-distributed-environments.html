@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>On communication in distributed environments | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="On communication in distributed environments" />
+<meta name="author" content="Karolina Jawad" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Photo by Dr. Andrea Glang-Tossing. At ISE Europe, a trade fair in Amsterdam ( 11.02.-14.02. 2020) I was presenting together with SALTO the SMC course at the AVIXA Higher Education Conference. Researchers and students were invited to highlight emerging innovative methods that enhance learning and teaching experiences through AV technologies. The ISE Europe is the world’s biggest pro AV event for integrated systems, with 80000 visitors and 1400 vendors, spread over a dozens of halls. For the conference I was specifically asked to contrast the overall technically curated program with social aspects from a student perspective. A retrospective from current conditions." />
+<meta property="og:description" content="Photo by Dr. Andrea Glang-Tossing. At ISE Europe, a trade fair in Amsterdam ( 11.02.-14.02. 2020) I was presenting together with SALTO the SMC course at the AVIXA Higher Education Conference. Researchers and students were invited to highlight emerging innovative methods that enhance learning and teaching experiences through AV technologies. The ISE Europe is the world’s biggest pro AV event for integrated systems, with 80000 visitors and 1400 vendors, spread over a dozens of halls. For the conference I was specifically asked to contrast the overall technically curated program with social aspects from a student perspective. A retrospective from current conditions." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/15/On-communication-in-distributed-environments.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/15/On-communication-in-distributed-environments.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_15_aleksati_ise_karolina.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-15T12:20:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_15_aleksati_ise_karolina.jpg" />
+<meta property="twitter:title" content="On communication in distributed environments" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Karolina Jawad"},"dateModified":"2020-04-15T12:20:00+00:00","datePublished":"2020-04-15T12:20:00+00:00","description":"Photo by Dr. Andrea Glang-Tossing. At ISE Europe, a trade fair in Amsterdam ( 11.02.-14.02. 2020) I was presenting together with SALTO the SMC course at the AVIXA Higher Education Conference. Researchers and students were invited to highlight emerging innovative methods that enhance learning and teaching experiences through AV technologies. The ISE Europe is the world’s biggest pro AV event for integrated systems, with 80000 visitors and 1400 vendors, spread over a dozens of halls. For the conference I was specifically asked to contrast the overall technically curated program with social aspects from a student perspective. A retrospective from current conditions.","headline":"On communication in distributed environments","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_15_aleksati_ise_karolina.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/15/On-communication-in-distributed-environments.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Karolina Jawad"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/15/On-communication-in-distributed-environments.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      On communication in distributed environments
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-04-15T12:20:00+00:00"
+        itemprop="datePublished"
+      >Apr 15, 2020 •
+      </time>
+         
+      <a href="/authors/karolinajawad.html">Karolina Jawad</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure text-align="center">
+    <img src="/assets/image/2020_04_15_aleksati_group_pic_ise.jpg" width="600px" />
+    <figcaption>The presenters and the host Gill Ferrell</figcaption>
+</figure>
+
+<p>At <a href="iseurope.org/">ISE Europe</a>, a trade fair in Amsterdam ( 11.02.-14.02. 2020) I was presenting together with <a href="https://www.ntnu.edu/salto">SALTO</a>
+the SMC course at the <a href="https://www.avixa.org">AVIXA</a> Higher Education Conference. Researchers and students were
+<a href="https://www.iseurope.org/show-event/avixa-higher-education-av-conference/">invited to highlight emerging innovative methods</a> that enhance learning and teaching
+experiences in distributed environments through audiovisual (AV) technologies. The ISE Europe is the world’s biggest pro AV event for integrated systems, with 80000 visitors and 1400
+vendors, spread over a dozens of halls. For the conference I was specifically asked to contrast the overall technically curated program with
+social aspects from a student perspective. A retrospective from current conditions.</p>
+
+<p>The benefits and challenges of learning and teaching in distributed environments like SMC’s cross campus study collaboration are
+currently very much at display. Communication is always important, but in the light of the current situation,
+our dependency on technology that connects us is even more exposed. I always had the feeling that we at SMC were in so many ways researching
+ourselves in a microcosmos set-up that at some point would turn into a mega sized social laboratory. Among many other questions, we have
+asked ourselves by what audiovisual means we can increase mediated presence and the feeling of social connectedness online.
+In mid February most of us had no clue that a globally applied lockdown could force the entire higher education system in our promoted study
+format and these questions became large scale issues in times of physical distancing. For the interested potential applicants out there -
+with the difference that SMC still has co-located students in each city’s Portal, a physical existent space that unites virtually both
+campuses to one class room. But even that seems now like a relict from another life. When everything we consider essential for a diverse and
+human practise (gathering in the same room for musiking, theater…) is currently on ice, the necessity to improve AV solutions that enable
+close to face to face situations is invaluable to keep societies’ sanity. At least our children will grow up in a totally different world
+and most likely will not have to bother with the same questions and suffer under transition periods and accustoming. So we have to do a
+good job now and we need especially more women for it!</p>
+
+<h2 id="language-in-av">Language in AV</h2>
+
+<p>In my presentation ‘Technical AV Roles and the Glass Ceiling’ I could highlight some of the challenges that can occur while studying and
+working in AV environments like music technology. While we are a diverse group in terms of nationalities and age variation, being currently
+the only active female student poses questions to this circumstance. There are indeed many reasons for the imbalance of gender presence in
+tech-heavy study programs and industries. Some of them are well known, other less. They can be very obvious, or less noticeable.
+I was focussing on how biases can reveal themselves in the language of music technology. At the same time exemplifying how language can
+become when actively applied, a mean for inclusion again. Underlying my statements by reversing ideas of functionality of certain devices
+which are used for music technological practises seemed to help to see the tendencies. Like stating the Midas Mixer would be a hyper emotional instrument for example.</p>
+
+<p>Of course it was important to mention there can occur more obvious (often subtle applied) means of exclusion as well. Hostile language or
+even harassment is independent from the distribution of gender an ongoing practise. However, the means are getting better
+<a href="https://innsida.ntnu.no/wiki/-/wiki/English/Sexual+harassment">to articulate</a> and if necessary to report them. It must be said that just because an environment is male dominated, it does not mean this is
+automatically going to happen. The women I interviewed for <a href="http://wonomute.no/interviews/">WoNoMute</a> for example did not share these experiences.</p>
+
+<h2 id="the-glass-ceiling">The Glass Ceiling</h2>
+
+<p>Nonetheless aforementioned factors most likely result in what is called <a href="https://www.investopedia.com/terms/g/glass-ceiling.asp">the Glass Ceiling</a>,
+which becomes even more “visible” under current conditions, when many women fall back into traditional roles at home.
+The Glass Ceiling is a metaphor which describes the invisible barriers that prevent women or minorities from “elevated professional success”
+namely holding high job positions in the private but also in the public sector.
+The necessity to find strategies for women’s exit from the current situation into an active participation not only in the so
+called system relevant occupations is getting obvious, as they are so much effected by it. Or maybe the term must be adjusted, their role
+in caring for, designing and coordinating technologies that are valuable for societies must become stronger, if not guiding.</p>
+
+<p>Finally, the expo itself was quite overwhelming. It took all the days to visit the halls and to get a gripe of the materialised dimensions
+of electronic systems integration and IT for AV. For the future of the Portal it is definitely the venue to gather ideas to push new
+developments. I had also the chance to visit an inspiring talk at the <a href="https://www.youtube.com/watch?v=BlTMjtbiIo0&amp;feature=youtu.be">AVIXA diversity council</a> and learned about large professional
+networks that mentor and support young <a href="http://womeninav.com/">women in AV</a>. As this is my last semester at SMC, I hope the conversation and activities on diversity
+and inclusion will continue and expand.</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>Thanks a lot to AVIXA and SALTO for enabling me to follow up Gill Ferrel invitation, who gave me the chance to share my perspectives.
+Thanks to you all and I hope the collaboration will continue at SMC on these matters.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://en-de.sennheiser.com/businessblog-avixa-higher-education-conference-2020">How AV technology enriches the user experience in Higher Education, by Andrea Glang-Tossing / Sennheiser</a></li>
+  <li><a href="https://padlet.com/gillferrell/ISE20">Higher Education Conference at ISE 2020, Gill Ferrell</a></li>
+</ul>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2020/04/15/On-communication-in-distributed-environments.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Recognizing and Predicting Individual Drumming Groove Styles Using Artificial Neural Networks | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Recognizing and Predicting Individual Drumming Groove Styles Using Artificial Neural Networks" />
+<meta name="author" content="Joseph Clemente" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Can we teach an algorithm to groove exactly like a specific drummer?" />
+<meta property="og:description" content="Can we teach an algorithm to groove exactly like a specific drummer?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/josephcl-recognizing-and-predicting-groove.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/josephcl-recognizing-and-predicting-groove.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_josephcl_groove_thumbnail.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-20T08:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_josephcl_groove_thumbnail.jpeg" />
+<meta property="twitter:title" content="Recognizing and Predicting Individual Drumming Groove Styles Using Artificial Neural Networks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joseph Clemente"},"dateModified":"2022-05-20T08:00:00+00:00","datePublished":"2022-05-20T08:00:00+00:00","description":"Can we teach an algorithm to groove exactly like a specific drummer?","headline":"Recognizing and Predicting Individual Drumming Groove Styles Using Artificial Neural Networks","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_josephcl_groove_thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/josephcl-recognizing-and-predicting-groove.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joseph Clemente"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/josephcl-recognizing-and-predicting-groove.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Recognizing and Predicting Individual Drumming Groove Styles Using Artificial Neural Networks
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-05-20T08:00:00+00:00"
+        itemprop="datePublished"
+      >May 20, 2022 •
+      </time>
+         
+      <a href="/authors/josephclemente.html">Joseph Clemente</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2022_05_19_josephcl_beat_equation.png" alt="Alternate Text" width="auto" />
+</figure>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>As shown in the picture above, a MIDI drum beat can be divided into two sections: the score, which is the quantized notes that the drummer plays, and the groove, which is how the drummer plays the notes. In this blog post, we’ll be examining groove and attempting repliacte a groove style an individual drummer. First, we have to define what the elements of a groove are.</p>
+
+<h1 id="background-information">Background Information</h1>
+
+<h2 id="what-is-groove">What is Groove?</h2>
+
+<p>Groove can be defined as a combination of velocity, which is how hard a note is played, and microtiming, which is how far a note is off of a quantization grid. When microtiming and velocity are applied to a quantized drum score, it creates a sense of humanization for listeners.</p>
+
+<h2 id="previous-work">Previous Work</h2>
+
+<p>In 2019, Google’s <a href="https://magenta.tensorflow.org/">Magenta</a> project created <a href="https://magenta.tensorflow.org/groovae">GrooVAE</a>, which they define as a “class of models for generating and controlling expressive drum performances” using machine learning. Through this project, they were able to sucessfully apply a realistic, human sounding groove to any drum score.</p>
+
+<h2 id="data-set">Data Set</h2>
+
+<p>While creating GrooVAE, the team also developed the <a href="https://magenta.tensorflow.org/datasets/groove">Groove MIDI Dataset</a>. For this project, we will be using an expanded version of this data set, known as the 
+<a href="https://magenta.tensorflow.org/datasets/e-gmd">Expanded Groove MIDI Dataset</a> (E-GMD), which features 444 hours of MIDI data from 9 different drummers.</p>
+
+<h1 id="project-description">Project Description</h1>
+
+<p>This project design can be broken down into five sections: extracting data from the MIDI database, training a <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron">multilayer perceptron</a> (MLP) <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">classifier</a> to recognize a drummer’s unique groove, training MLP <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">regressors</a> to generate microtiming histogram bins based on each drummer’s MIDI velocity while playing, generating MIDI based on the regressor’s output, and testing if the previously trained classifier can recognize the drummers based on the MIDI that was generated.</p>
+
+<h2 id="midi-data-extraction">MIDI Data Extraction</h2>
+
+<p>The Python package <a href="https://mido.readthedocs.io/en/latest/">Mido</a> was used in this project to extract relevant data from MIDI files, which includes the velocity and timing of each note played. Additional features, such as tempo and beat type (<a href="https://en.wikipedia.org/wiki/Drum_beat">beat</a> or <a href="https://en.wikipedia.org/wiki/Fill_(music)">fill</a>), were extracted through the name of each file in the E-GMD (ex. “4_latin-brazilian-samba_89_beat_4-4_6.midi”). These features were extracted into a series of <a href="https://www.w3schools.com/python/python_classes.asp">classes</a>, including a class for each drummer, MIDI file, and MIDI note.</p>
+
+<h2 id="training-the-classifier-and-regressors">Training the Classifier and Regressors</h2>
+
+<h3 id="feature-extraction">Feature Extraction</h3>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_josephcl_hihat_microtiming.png" alt="Alternate Text" width="auto" />
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_josephcl_hihat_velocity.png" alt="Alternate Text" width="auto" />
+</figure>
+
+<p>The features that the classifier and regresors use are histogram bins generated by analyzing microtiming and velocity for each snare, bass drum, and hi-hat note of every file. When extracting features, the system iterates through all files for every drummer and place the velocity and the microtiming in their respective histogram bins. The bins for velocity are in increments of 8 on a scale of 0 to 127, corresponding to the velocity value supplied by the MIDI note, resulting in 16 total velocity histogram bins. The microtiming section requires a few more steps to get histogram bins. Since there is no guarantee that the <a href="https://mido.readthedocs.io/en/latest/midi_files.html">ticks per beat</a> of each file are the same, the values must be normalized. This was accomplished by creating a function that computed the percentage of how far off beat each note was from a perfect sixteenth note using a given tick per beat value. Ostensibly, this function showed how far a note is from a thirty-second note, since the furthest a note can be away from sixteenth note quantization is a thirty-second note. Once we have a percentage ranging from -50 (directly on the thirty-second note behind the sixteenth note) to 50 (directly on the thirty-second note ahead of the sixteenth note), the value is placed into one of 10 histogram bins, each of which corresponds to 10 percent of the quantization percentage range.</p>
+
+<h3 id="classifier-testing">Classifier Testing</h3>
+
+<p>The features that the classifier is trained on are the microtiming and velocity histogram bin values of each file and target value is the drummer. Once the features are extracted, the classifier is trained and tested with 10 <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html">k-folds</a>. Through testing, I found that the classifier could predict a drummer based on these features with 90-97% accuracy.</p>
+
+<h3 id="regression-testing">Regression Testing</h3>
+
+<p>The features that the regressors are trained on are the histogram values for velocity, while the target values that it is trying to predict are the histogram values for microtiming. For each drummer, we will create a new drummer and train and test it with 10 k-folds. The <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html">R2 score</a> and varience for each drummer’s regressor can be seen on the table below.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_josephcl_r2_scores.png" alt="Alternate Text" width="auto" />
+</figure>
+
+<h2 id="midi-generation">MIDI Generation</h2>
+
+<p>As we can see from the table, drummers 3, 7, and 9 had the best results, so from here on out we will only be focusing on these three drummers. To generate MIDI, I used the python package <a href="https://github.com/MarkCWirt/MIDIUtil">MIDIUtil</a>. The generated MIDI files consist of constant sixteenth notes for the bass drum, hi-hat, and snare to ensure each instrument is equally weighted when evaluated with the classifier in the next step. Each of these notes have a random velocity and microtiming applied to it based upon an array generated using weighted random values based on the microtiming and velocity histogram inputs, which were supplied to us from the regressor. For velocity, each histogram bin percentage is divided by 8 and applied to every velocity value, so that 0 through 127 all have a probability of being selected. The microtiming histogram uses the same system, but there is a probability for every 1 percent off a sixteenth note (from -50 percent to 50 percent) and each histogram value is divided by 10 to accomplish this. These audio files will be used to test with the previously trained classifier. An example audio file for each drummer can be found below.</p>
+
+<p>Drummer 3 Generated MIDI Classifier Input</p>
+<audio controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_19_josephcl_drummer3_classifier.mp3" type="audio/mpeg" />
+</audio>
+
+<p>Drummer 7 Generated MIDI Classifier Input</p>
+<audio controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_19_josephcl_drummer7_classifier.mp3" type="audio/mpeg" />
+</audio>
+
+<p>Drummer 9 Generated MIDI Classifier Input</p>
+<audio controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_19_josephcl_drummer9_classifier.mp3" type="audio/mpeg" />
+</audio>
+
+<h2 id="testing-generated-midi-files">Testing Generated MIDI Files</h2>
+
+<p>After the MIDI files are generated, they are then fed into the previously trained classifier to evaluate if it can accurately classify our generated MIDI files. Unfortunately this ended up not working that well, with accuracy scores around 40-66%.</p>
+
+<h1 id="final-thoughts">Final Thoughts</h1>
+
+<p>Through testing, we found that an MLP classifier can reliably predict an individual’s drumming groove using microtiming and velocity histogram values alone. However, we also found that only some drummers had accurate R2 scores for MLP regressors predicting microtiming histogram values based on velocity histogram values. When examining the input files for each drummer, the common link between each drummer with good R2 scores was relative consistancy in playing style. For example, drummer 3 played mostly rock beats, with a few jazz and hip hop beats as well, and had excellent R2 scores. Meanwhile, drummer 5 was trained on a significant amount of MIDI files, but due to the diversity of different styles they played, which included samba, blues shuffle, funk, rock, afro cuban jazz, and more, R2 results were significantly lower than other drummers that were trained on the same number of files. Therefore, future studies on individual groove should focus on specific styles of music.</p>
+
+<p>In terms of the generated MIDI files, you can listen to a more “normal” 4/4 beat generated with the same aformentioned techniques below.</p>
+
+<p>Drummer 3 Generated MIDI</p>
+<audio controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_19_josephcl_drummer3_normal.mp3" type="audio/mpeg" />
+</audio>
+
+<p>Drummer 7 Generated MIDI</p>
+<audio controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_19_josephcl_drummer7_normal.mp3" type="audio/mpeg" />
+</audio>
+
+<p>Drummer 9 Generated MIDI</p>
+<audio controls="">
+  <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_19_josephcl_drummer9_normal.mp3" type="audio/mpeg" />
+</audio>
+
+<p>As we can see, the MIDI files sound pretty random and there are no distinguishing characteristics between each drummer to the naked ear. Future studies may have to use a windowing function to create more human and less roboting sounding MIDI files.</p>
+
+<h1 id="files">Files</h1>
+
+<p>You can view the GitHub repository with the files for this project <a href="https://github.com/jpclemente97/SMC4052FinalProject">here</a>.</p>
+
+<h1 id="image-sources">Image Sources</h1>
+
+<p>https://magenta.tensorflow.org/assets/groovae/score-groove.png</p>
+
+<p>https://i.pinimg.com/originals/b7/db/69/b7db69a654b84e86467d5aa0b28ee35d.jpg</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2022/05/20/josephcl-recognizing-and-predicting-groove.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

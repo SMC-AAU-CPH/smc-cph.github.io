@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Testing Latency in the Portal | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Testing Latency in the Portal" />
+<meta name="author" content="Thomas Anda, Jackson Goode, Paul Koenig, Rayam Luna, Jarle Steinhovden, Aleksander Tidemann, Gaute Wardenær, Ulrik Halmøy, Tom Ignatius, Thibault Jaccard, Simon Sandvik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We ‘officially’ test some the latency in the Oslo and Trondheim Portal" />
+<meta property="og:description" content="We ‘officially’ test some the latency in the Oslo and Trondheim Portal" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/01/27/testing-latency-portal.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/01/27/testing-latency-portal.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_01_27_aleksati_latency.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-27T10:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_01_27_aleksati_latency.jpg" />
+<meta property="twitter:title" content="Testing Latency in the Portal" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Thomas Anda, Jackson Goode, Paul Koenig, Rayam Luna, Jarle Steinhovden, Aleksander Tidemann, Gaute Wardenær, Ulrik Halmøy, Tom Ignatius, Thibault Jaccard, Simon Sandvik"},"dateModified":"2020-01-27T10:00:00+00:00","datePublished":"2020-01-27T10:00:00+00:00","description":"We ‘officially’ test some the latency in the Oslo and Trondheim Portal","headline":"Testing Latency in the Portal","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_01_27_aleksati_latency.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/01/27/testing-latency-portal.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Thomas Anda, Jackson Goode, Paul Koenig, Rayam Luna, Jarle Steinhovden, Aleksander Tidemann, Gaute Wardenær, Ulrik Halmøy, Tom Ignatius, Thibault Jaccard, Simon Sandvik"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/01/27/testing-latency-portal.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Testing Latency in the Portal
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-01-27T10:00:00+00:00"
+        itemprop="datePublished"
+      >Jan 27, 2020 •
+      </time>
+         
+      <a href="/authors/thomasanda.html">Thomas Anda,</a>
+           
+      <a href="/authors/jacksongoode.html">Jackson Goode,</a>
+           
+      <a href="/authors/paulkoenig.html">Paul Koenig,</a>
+           
+      <a href="/authors/rayamluna.html">Rayam Luna,</a>
+           
+      <a href="/authors/jarlesteinhovden.html">Jarle Steinhovden,</a>
+           
+      <a href="/authors/aleksandertidemann.html">Aleksander Tidemann,</a>
+           
+      <a href="/authors/gautewarden%C3%A6r.html">Gaute Wardenær,</a>
+           
+      <a href="/authors/ulrikhalmoy.html">Ulrik Halmøy,</a>
+           
+      <a href="/authors/tomignatius.html">Tom Ignatius,</a>
+           
+      <a href="/authors/thibaultjaccard.html">Thibault Jaccard,</a>
+           
+      <a href="/authors/simonsandvik.html">Simon Sandvik</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="internal-latency">Internal Latency</h2>
+
+<p>For the internal latency tests, we used the <a href="https://manual.audacityteam.org/man/latency_test.html">Audacity tutorial</a> but keeping the distance from the mics to speakers the same. The basic idea is that we opened an instance of Audacity and generated a click-track to send through the speakers which was then recorded by the mics and received into Audacity as another track. We then measured the average difference in time between these two tracks.</p>
+
+<figure text-align="center">
+    <img src="/assets/image/2020_01_27_aleksati_latencycorrection.png" width="75%" />
+    <figcaption>Measuring latency in Audacity</figcaption>
+</figure>
+
+<h3 id="oslo">Oslo</h3>
+
+<p>In Oslo, it was fairly easy to install Audacity on the LOLA machine and properly route the inputs and outputs and send some click-tracks through. After ten measurements, we found the latency to be around 27-28 ms. This was quite similar in Trondheim, however, the latency of the mixer and LOLA computer is something to consider here, along with the distance between the speakers and microphones mounted above (about 2m).</p>
+
+<h3 id="trondheim">Trondheim</h3>
+
+<p>As Audacity doesn’t accept Asio as audio driver, very few audio device manipulations are possible. We discovered that the audio is routed to the Analog 1/2 channel in Oslo, while in Trondheim the sound is coming from ADAT 1/2. Without Asio, it was impossible to choose the latter as audio input in Audacity. For that reason, we had to download and use Reaper in Trondheim. But the latency testing process was the same. We obtained a latency of 25 ms.</p>
+
+<figure text-align="center">
+    <img src="/assets/image/2020_01_27_aleksati_totalmix.png" width="50%" />
+    <figcaption>Differences in the TotalMix</figcaption>
+</figure>
+
+<h2 id="zoom-latency">Zoom latency</h2>
+<p>We measured the latency in Zoom using Zoom’s <a href="https://support.zoom.us/hc/en-us/articles/202920719-Meeting-and-phone-statistics">built-in utility for “Meeting and Phone statistics”</a>. We connected a client from the Portal in Oslo to a separate client in Trondheim, through Ulrik’s computer. We then measured different data, i.e. audio latency, bitrate, jitter, packet loss, etc. over time and averaged the results. As we were primarily interested in audio latency, we did some brief notes on the variance in the measurements. We also experimented by adding more clients to see how that affected the latency.</p>
+
+<p>The constants that we used to measure the end to end latency:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>m</th>
+      <th>ms</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Midas</td>
+      <td> </td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Distance mouth to mics Oslo</td>
+      <td>2</td>
+      <td>5.8</td>
+    </tr>
+    <tr>
+      <td>Distance mouth to mics Trondheim</td>
+      <td>1.5</td>
+      <td>4.4</td>
+    </tr>
+    <tr>
+      <td>Distance speakers to ears Oslo</td>
+      <td>3</td>
+      <td>8.7</td>
+    </tr>
+    <tr>
+      <td>Distance speakers to ears Trondheim</td>
+      <td>5.2</td>
+      <td>15.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="results">Results</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Zoom condition</th>
+      <th>Only Zoom</th>
+      <th>Zoom + distance (mic and speakers)</th>
+      <th>Zoom + distance + Midas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Trondheim sending (AVG)</td>
+      <td>35.5</td>
+      <td>39.9</td>
+      <td>40.9</td>
+    </tr>
+    <tr>
+      <td>Trondheim receiving (AVG)</td>
+      <td>38</td>
+      <td>51.5</td>
+      <td>52.5</td>
+    </tr>
+    <tr>
+      <td>Oslo sending (AVG)</td>
+      <td>25.8</td>
+      <td>31.8</td>
+      <td>32.8</td>
+    </tr>
+    <tr>
+      <td>Oslo receiving (AVG)</td>
+      <td>23.5</td>
+      <td>32.3</td>
+      <td>33.2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As can be seen in the table above, the total end to end latency ranges from 32.8 ms - 52.5 ms, depending on the local configuration.</p>
+
+<p>Regarding the other data measurements (jitter, packet loss, video resolution etc.), we noticed that latency varied the least. It seems like Zoom’s algorithms prioritize maintaining a constant low latency over e.g. good video resolution.</p>
+
+<p>One surprising result that came up during these measurements were the acoustic latencies from the speaker/listener to microphone/loudspeakers, respectively. The distance from the speakers to the audience in Trondheim is approximately equal to half of latency of sending that same audio between the two cities. While our minds have been focused on optimizing network latency, it suddenly became apparent that there are obvious acoustic latencies that could be optimized as well. The long distance from loudspeaker to ear in Trondheim can be improved by sending the incoming Lola audio to some loudspeakers that are closer to our ears (around 1.5 meters), which would reduce the end to end latency for the audience in Trondheim by close to 12 ms, from the calculation (5.5 - 1.5)/340 * 1000 = 11.76 ms.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2020/01/27/testing-latency-portal.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

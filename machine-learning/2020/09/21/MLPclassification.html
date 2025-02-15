@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Multilayer Perceptron Classification | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Multilayer Perceptron Classification" />
+<meta name="author" content="Simon Rønsholm Sandvik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multi-layer Perceptron classification. Big words for a big task. During this two-week course in machine learning all my brain cells were allocated in solving this task. Initially I wanted something simple to do for my project since wrapping my head around ML was a daunting enough task. I soon realized there really is no such thing as simple in machine learning." />
+<meta property="og:description" content="Multi-layer Perceptron classification. Big words for a big task. During this two-week course in machine learning all my brain cells were allocated in solving this task. Initially I wanted something simple to do for my project since wrapping my head around ML was a daunting enough task. I soon realized there really is no such thing as simple in machine learning." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/21/MLPclassification.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/21/MLPclassification.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_21_simonrs_mlpheaderimg.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-21T19:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_21_simonrs_mlpheaderimg.png" />
+<meta property="twitter:title" content="Multilayer Perceptron Classification" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Simon Rønsholm Sandvik"},"dateModified":"2020-09-21T19:00:00+00:00","datePublished":"2020-09-21T19:00:00+00:00","description":"Multi-layer Perceptron classification. Big words for a big task. During this two-week course in machine learning all my brain cells were allocated in solving this task. Initially I wanted something simple to do for my project since wrapping my head around ML was a daunting enough task. I soon realized there really is no such thing as simple in machine learning.","headline":"Multilayer Perceptron Classification","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_21_simonrs_mlpheaderimg.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/21/MLPclassification.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Simon Rønsholm Sandvik"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/21/MLPclassification.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Multilayer Perceptron Classification
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-09-21T19:00:00+00:00"
+        itemprop="datePublished"
+      >Sep 21, 2020 •
+      </time>
+          Simon Rønsholm Sandvik   </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="multilayer-perceptron-classification-of-drums">Multilayer Perceptron Classification of Drums</h1>
+
+<h2 id="overview">OVERVIEW</h2>
+<p>For my project I have worked with drum samples and respectively classified them into snare, kick, tom, ride, crash etc… There has been done quite a bit of research into this field, as drum classification is a vital part in auto transcription of music, as well as its commonplace within software to handle and organize large sample libraries.</p>
+
+<h2 id="the-data-set">THE DATA SET</h2>
+<p>The dataset I used for this site I collected from <a href="http://www.mattprockup.com/percussion-dataset">this</a> site.
+It consists of a whopping 10 600 files. Albeit some are these are different microphones of the same recordings. Every drum is struck from different positions, heights and intensities making it a great dataset to work with. I used the three 10 seconds of each sample, and loaded it at 44,1 kHz as I came to the conclusion that a higher sample rate would help better define the relatively short and large frequencies drums will get you.
+<img src="/assets/image/2020_09_21_simonrs_datasetimg.png" alt="Overview of the dataset." title="Overview of dataset." /></p>
+
+<h2 id="features">FEATURES</h2>
+<p>What soon became apparent working with such a large dataset, was the amount of time spent on extracting features and training. Of course I just got to have it all, so the first time around I extracted literally every feature librosa had to offer. A whopping 99% accuracy! Looking at the CSV file of all my features, it was getting close to 2GB, so obviously I got to working with reducing the amount of features, and basically going back to scratch. I came up with a process where I tested each of the features to see what kind of accuracies, they alone would give me, for some indication as to their importance. Zero crossing rate, is for many a given when working with drums and it gave me decent results, ranging in the 80% accuracy just from the mean of the ZCR. The other two I identified as important were the melspectrum and the chroma energy normalized distribution statistics. I quickly also realized I were extracting a whole lot of unnecessary data of nothing and reduced the duration to three seconds. Using only these three features I reduced the amount of data to a fraction of my starting point but was able to preserve accuracies in the high 90’s.
+As a learning experience this was a valuable course. But the time constraints really did limit the scope of the project. Despite this, the course was an excellent introduction to librosa, and how powerful it can be, if only put in the right hands!</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2020/09/21/MLPclassification.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

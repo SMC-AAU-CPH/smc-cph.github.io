@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Mixing a multitrack project in Python | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Mixing a multitrack project in Python" />
+<meta name="author" content="Joachim Poutaraud, Kristian Wentzel, Sofía González, Arvid Falch" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Attempting to mix a multitrack song with homemade FX in our very own mini PythonDAW" />
+<meta property="og:description" content="Attempting to mix a multitrack song with homemade FX in our very own mini PythonDAW" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/11/24/arvidf-mixing-in-python.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/11/24/arvidf-mixing-in-python.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_23_arvidf_crazyrig.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-24T17:24:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_23_arvidf_crazyrig.jpg" />
+<meta property="twitter:title" content="Mixing a multitrack project in Python" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joachim Poutaraud, Kristian Wentzel, Sofía González, Arvid Falch"},"dateModified":"2021-11-24T17:24:00+00:00","datePublished":"2021-11-24T17:24:00+00:00","description":"Attempting to mix a multitrack song with homemade FX in our very own mini PythonDAW","headline":"Mixing a multitrack project in Python","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_23_arvidf_crazyrig.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/11/24/arvidf-mixing-in-python.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joachim Poutaraud, Kristian Wentzel, Sofía González, Arvid Falch"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/11/24/arvidf-mixing-in-python.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Mixing a multitrack project in Python
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-24T17:24:00+00:00"
+        itemprop="datePublished"
+      >Nov 24, 2021 •
+      </time>
+         
+      <a href="/authors/joachimpoutaraud.html">Joachim Poutaraud,</a>
+           
+      <a href="/authors/kristianwentzel.html">Kristian Wentzel,</a>
+           
+      <a href="/authors/sofiagonzalez.html">Sofía González,</a>
+           
+      <a href="/authors/arvidfalch.html">Arvid Falch</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction"><strong>Introduction</strong></h1>
+
+<p>Being students at the SMC program is now a condition we’ve gotten accustomed to as our first term is gradually coming to an end. Usually we get some sort of assignments to solve every week, and most likely we will spend way too much time solving it. So when the last assignment was announced we decided to get extra ambitious and spend even more time on it, making sure our personal lives and sanity would be completely ruined come Christmas.</p>
+
+<p>We decided to use our recently acquired Python skills to build a program that could mix a multitrack recording. With homebrew FX and everything you’d need, basically making a tiny Python-DAW except for a nice GUI. That would have made it too slick, we wanted this to be pure code.</p>
+
+<p>The code for this project is available <a href="https://github.com/wnetzel/SMC-teamA-2021/tree/main/Python%20Assignment%205/Part%202">here.</a></p>
+
+<h1 id="the-music"><strong>The Music</strong></h1>
+
+<p>In order to mix anything, we needed some music. And as our sanity was already slipping, we skipped this part until we had a program up and running. When time came to create the music our minds was so entrenched in lines of code that we almost had to write a Python program which could write music for us.</p>
+
+<p>The solution was to pick some files from an old unreleased project of Arvid’s band Misha Non Penguin, and then take away all processing and writing them out as mono files.</p>
+
+<p>We ended up with five tracks:</p>
+
+<ul>
+  <li>two drum tracks</li>
+  <li>one bass synth</li>
+  <li>one synth brass stabs</li>
+  <li>one plucked lead synth.</li>
+</ul>
+
+<p>On purpose we chose poorly sounding synth patches, completely unprocessed. We also had a midifile containing all the midi. The challenge was on.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_org_mix.mp3" type="audio/mpeg" />
+    Mixed
+  </audio>
+  <figcaption>The original unprocessed music</figcaption>
+</figure>
+
+<h1 id="the-program"><strong>The Program</strong></h1>
+
+<p>Segmenting and rejoining segments of audio has somehow become the bread and butter of the SMC program, so the assignment required us to do this. But this was also going to enable us to apply different processing on each segment of any track, which turned out to be an interesting option in the end result.</p>
+
+<p>The basic thing needed whenever things are sliced up and pasted back together are some short overlap and fading functions, in order to avoid clicks and artifacts in the sound. Our approach to achieve this was the following:</p>
+
+<ol>
+  <li>
+    <p>Creating an empty array of zeros called results, with the same size as the audio we’d segment.</p>
+  </li>
+  <li>
+    <p>Running the audio file in a for loop</p>
+  </li>
+  <li>
+    <p>Based on MIDI which gave us the downbeat of every measure, we would slice out one measure of the audio.</p>
+  </li>
+  <li>
+    <p>The segment would be given a short fade in and fade out (equal to the length of our overlap, see further down)</p>
+  </li>
+  <li>
+    <p>This segment would then be processed with whatever effects we wanted.</p>
+  </li>
+  <li>
+    <p>The segment would be zero padded (adding zeros) in the front of the segment and in the back, making the segment the same size as the original audio and our result array.</p>
+  </li>
+  <li>
+    <p>Finally the segment would be cut in the beginning by an amount equal to our overlap (set to 1024 samples in this project) and zeros were added in the end to make up for the samples removed in the beginning.</p>
+  </li>
+  <li>
+    <p>The overlap value would then be updated for the next loop, in which it had to be equal to it’s former value + itself in order to work.</p>
+  </li>
+  <li>
+    <p>Eventually we would sum the result with the segment, and repeating this process until the whole track had been mixed.</p>
+  </li>
+</ol>
+
+<p>We’ll come back to this gloriously inefficient way of processing audio later, but whenever we refer to our for loop from now on, this is what we are talking about. As an example it could look something like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Creating the result array we will add all signals back into
+</span><span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">)</span>
+
+<span class="c1"># Temporary arrays used in the for loop
+</span><span class="n">segment</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([])</span>
+<span class="n">seg</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([])</span>
+
+<span class="c1"># Setting parameters for the loop
+</span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">current_beat</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">overlap</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">overlap_length</span> <span class="o">=</span> <span class="mi">1024</span>
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">downbeats_sample_time</span><span class="p">:</span>
+    <span class="c1"># To check computational time and where it struggles, uncomment print(i).
+</span>    <span class="c1">#print(i)
+</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Slicing the segment from current_beat to the sample position i
+</span>    <span class="n">seg</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">current_beat</span><span class="p">:</span><span class="n">i</span><span class="p">]</span>    
+    <span class="c1"># adding fade ins and outs to the segment
+</span>    <span class="n">segment</span> <span class="o">=</span> <span class="nf">fade</span><span class="p">(</span><span class="n">seg</span><span class="p">,</span> <span class="n">overlap_length</span><span class="p">)</span>
+
+    <span class="c1"># Processing segments one by one with different FX and signal processing
+</span>    <span class="k">if</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+
+        <span class="n">segment</span> <span class="o">=</span> <span class="nf">compressor</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">seg_fx</span> <span class="o">=</span> <span class="nc">IRDelay</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="n">segment_padded</span> <span class="o">=</span> <span class="nf">padder</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">current_beat</span><span class="p">)</span>
+        <span class="n">segment_fx</span> <span class="o">=</span> <span class="nf">padder</span><span class="p">(</span><span class="n">seg_fx</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">current_beat</span><span class="p">)</span>
+
+        <span class="n">segment_padded</span> <span class="o">=</span> <span class="p">(</span><span class="n">segment_padded</span> <span class="o">+</span> <span class="n">segment_fx</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">segment</span> <span class="o">=</span> <span class="nf">compressor</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">segment</span> <span class="o">=</span> <span class="nf">softClipper</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+        <span class="n">segment_padded</span> <span class="o">=</span> <span class="nf">padder</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">current_beat</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">segment</span> <span class="o">=</span> <span class="nf">compressor</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">seg_fx</span> <span class="o">=</span> <span class="nc">IIRReverb</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mi">1700</span><span class="p">,</span> <span class="mf">0.68</span><span class="p">)</span>
+        <span class="n">segment_padded</span> <span class="o">=</span> <span class="nf">padder</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">current_beat</span><span class="p">)</span>
+        <span class="n">segment_fx</span> <span class="o">=</span> <span class="nf">padder</span><span class="p">(</span><span class="n">seg_fx</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">current_beat</span><span class="p">)</span>
+
+        <span class="n">segment_padded</span> <span class="o">=</span> <span class="p">(</span><span class="n">segment_padded</span> <span class="o">+</span> <span class="n">segment_fx</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+
+        <span class="n">segment</span> <span class="o">=</span> <span class="nf">compressor</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">segment</span> <span class="o">=</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">segment</span><span class="p">)</span>
+        <span class="n">segment_padded</span> <span class="o">=</span> <span class="nf">padder</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">current_beat</span><span class="p">)</span>
+
+    <span class="c1"># updating the current beat for the next loop
+</span>    <span class="n">current_beat</span> <span class="o">=</span> <span class="n">current_beat</span> <span class="o">+</span> <span class="n">seg</span><span class="p">.</span><span class="n">size</span>    
+    <span class="n">segment_overlapped</span> <span class="o">=</span> <span class="n">segment_padded</span><span class="p">[</span><span class="n">overlap</span><span class="p">:</span><span class="n">segment_padded</span><span class="p">.</span><span class="n">size</span><span class="p">]</span>
+
+    <span class="c1"># getting the size right again by adding zeros to the end:
+</span>    <span class="n">segment_final</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">pad</span><span class="p">(</span><span class="n">segment_overlapped</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">overlap</span><span class="p">])</span>
+
+    <span class="c1"># Increasing overlap for next round of for loop
+</span>    <span class="n">overlap</span> <span class="o">=</span> <span class="n">overlap</span> <span class="o">+</span> <span class="n">overlap_length</span>
+
+    <span class="c1"># Just making sure the sizes are allright
+</span>    <span class="n">segment_final</span> <span class="o">=</span> <span class="nf">sizecheck</span><span class="p">(</span><span class="n">segment_final</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="c1"># Resetting the counter when it reaches 4
+</span>    <span class="k">if</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># pasting the segments back in, one by one
+</span>    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">segment_final</span>
+
+
+<span class="c1"># Plotting the original track compared to the result after mixing it
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">librosa</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="nf">waveplot</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="n">sr</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">librosa</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="nf">waveplot</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="n">sr</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+<span class="n">hihats</span> <span class="o">=</span> <span class="n">result</span>
+
+<span class="n">ipd</span><span class="p">.</span><span class="nf">display</span><span class="p">(</span><span class="n">ipd</span><span class="p">.</span><span class="nc">Audio</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">sr</span><span class="p">))</span>
+<span class="n">ipd</span><span class="p">.</span><span class="nf">display</span><span class="p">(</span><span class="n">ipd</span><span class="p">.</span><span class="nc">Audio</span><span class="p">(</span><span class="n">hihats</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">sr</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="our-processing-tools"><strong>Our Processing Tools</strong></h3>
+
+<p>Our tiny Python-DAW needed processing tools, and we set about to program the usual suspects in a DAW. We would need compressors, reverb, delay, saturation and filters for EQ-ing. Easy! One week until deadline? No stress.</p>
+
+<figure style="float: middle">
+   <img src="/assets/image/2021_11_23_arvidf_stupid.png" alt="" title="" height="75%" /> <figcaption>
+
+   Challenge accepted.</figcaption>
+
+</figure>
+
+<h3 id="compressors"><strong>Compressors</strong></h3>
+
+<p>How does a compressor really work? Not like our first attempt. Our first compressor went through every sample checking if it’s absolute value was above a set threshold. Then it would check how much the sample amplitude exceeded the threshold, and finally multiplying it with a hardcoded value below 1. This was done in a for loop which could be ran multiple times depending on an argument in the function. After the for loop it eventually multiplied the whole signal with a makeup gain, enabling us to first compress the peaks, then turning the whole signal up a bit. In theory this little thingy did everything a compressor should do, but it did it in it’s own very time consuming way.</p>
+
+<p>So it had to be improved, and that’s when we made our framecompressor. It uses a hanning window turned upside down as it’s compression envelope and analyses and compresses frames of the audio instead of sample by sample. We used a window of 2048 samples for our frames and then jumped back 1024 samples before analyzing the next frame in order to have some overlap and avoid pumping in the compression. It’s not too slow and did the job when we needed compression.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_23_arvidf_hanning.png" alt="" width="auto" align="middle" /> <figcaption>
+
+   Upside down Hanning window with ratio set to -0.4, resulting in 0.4 compression at the most.</figcaption>
+
+</figure>
+
+<h3 id="reverbs-and-delay"><strong>Reverbs and Delay</strong></h3>
+
+<p>We made an IIR filter on the basis of Schroeder’s very first algorithm for creating an artificial reverberator.</p>
+
+<p><a href="https://medium.com/the-seekers-project/coding-a-basic-reverb-algorithm-part-2-an-introduction-to-sound-programming-4db79dd4e325">Read more about the Schroeder reverb here</a></p>
+
+<p>It uses a set up of four parallel comb filters which then runs into two cascading allpass filters. Setting the parameters takes a little guessing and praying to the binary gods, and it’s not a reverb you would recommend to your favorite pop star, but it’s an actual reverb and we proudly used it in our mix.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_drysound.mp3" type="audio/mpeg" />
+    Unprocessed sine tone
+  </audio>
+  <figcaption>Dry sound</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_wetsound.mp3" type="audio/mpeg" />
+    Sine tone with our IIR Reverb
+  </audio>
+  <figcaption>Wet sound</figcaption>
+</figure>
+
+<p>Our delay was a FIR filter impulse response generating function, which does the processing in the frequency domain and therefore is much quicker to use. By choosing a number of impulses the audio signal would then be repeated as many times as the number of impulses, with a decreasing gain. It is definitely not an all purpose delay, as it works best on small segments of audio.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_delay.mp3" type="audio/mpeg" />
+    Brass stabs
+  </audio>
+  <figcaption>Brass stabs with our FIR Delay</figcaption>
+</figure>
+
+<h3 id="filters-and-saturation"><strong>Filters and saturation</strong></h3>
+
+<p>For filters we chose to make a function that created a FIR filter which could be either <code class="language-plaintext highlighter-rouge">lowpass</code> or <code class="language-plaintext highlighter-rouge">highpass</code>, and which did the short time fourier transform (STFT) of the signal and applied it’s filtering in the frequency domain. This ensured it would be quick, and you could set parameters for passband, stopband and order of the filter in the arguments.</p>
+
+<p>The saturation function (aptly named softClipper) uses <code class="language-plaintext highlighter-rouge">numpy.arctan</code> and some creative math to apply saturation (or distortion if turned up):</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">softClipper</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="n">drive</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span>
+
+    <span class="sh">"""</span><span class="s">audio = Source to be SoftClipped
+    drive = Amount of SoftClipping (Try between 10-40)
+    output = Output volume
+
+    The signal is normalized before output attenuation for better control.
+    </span><span class="sh">"""</span>
+
+    <span class="c1"># Drive can not be set to 0
+</span>    <span class="k">if</span> <span class="n">drive</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">drive</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">piDivisor</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span>
+    <span class="n">driver</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arctan</span><span class="p">(</span><span class="n">audio</span> <span class="o">*</span> <span class="n">drive</span><span class="p">)</span>
+
+    <span class="n">softclip</span> <span class="o">=</span> <span class="n">piDivisor</span> <span class="o">*</span> <span class="n">driver</span>
+
+    <span class="n">normalized</span> <span class="o">=</span> <span class="n">softclip</span><span class="o">/</span><span class="n">np</span><span class="p">.</span><span class="nf">max</span><span class="p">(</span><span class="n">softclip</span><span class="p">)</span>
+    <span class="n">softClipped</span> <span class="o">=</span> <span class="n">softclip</span> <span class="o">*</span> <span class="n">output</span>
+
+    <span class="k">return</span> <span class="n">softClipped</span>
+</code></pre></div></div>
+
+<p>As the last of our fx we made a small function to reverse an audio segment. This maybe the only function that Python would do quicker and easier than it’s more user friendly counterparts. Just <code class="language-plaintext highlighter-rouge">numpy.flip(audio)</code> and the Beatles would have been sold.</p>
+
+<h3 id="instruments"><strong>Instruments</strong></h3>
+
+<p>Our program also needed some instruments, or rather functions that could create sound. Why? Because DAWs have that. And we wanted to make a DAW in Python. Did we use any of them? Hardly. Just one of them. But it’s there and maybe someone else would one day feel the need to enter the abyss of doom and attempt to use our program to mix some music.</p>
+
+<p>We made sine, square, sawtooth and triangle oscillators, and even a pulsewidth modulated oscillator with it’s own LFO. There’s also an ADS amplitude envelope.</p>
+
+<h1 id="mixing-the-music"><strong>Mixing the music</strong></h1>
+
+<p>With our Python DAW up and running, we set about to actually process the audio files. At this point of time our deadline was a point in the distant past and sleep deprivation had kicked in, but the joy of mixing in Python kept us going through the night for a couple of days in a row.</p>
+
+<p>The process would be something like this:</p>
+
+<ol>
+  <li>Load one track using <code class="language-plaintext highlighter-rouge">librosa</code>.</li>
+  <li>Applying some filtering, reverb and saturation in the for loop. Maybe set up some conditional processing or change parameters in a FX every time the for loop iterated.</li>
+  <li>Hit the run cell command in Jupyter notebook and wait for a couple of minutes before finally hearing the result.</li>
+  <li>Changing some parameters in the FX.</li>
+  <li>Repeat process from 3.</li>
+</ol>
+
+<p>It might sound like a walk in the park but don’t be fooled. The computation would be deadly slow for some of our FX, and it could take hours of testing until we would achieve anything close to a pleasing result. Sometimes we’d get lucky and find some nice settings for our FX early on, while most of the time it would sound disastrously bad and require endless fiddling with the parameters and waiting for the code to run.</p>
+
+<p>But at last you could end up with something interesting, and then say some prayers hoping it would work in the final mix.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_pluck_org.mp3" type="audio/mpeg" />
+    Unprocessed
+  </audio>
+  <figcaption>Pluck synth unprocessed</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_pluck_mix.mp3" type="audio/mpeg" />
+    Mixed
+  </audio>
+  <figcaption>Pluck Synth processed by our tiny Python DAW</figcaption>
+</figure>
+
+<h3 id="music-visualization"><strong>Music visualization</strong></h3>
+
+<p>Finally, all we needed was a nice visualization of our waveforms freshly processed… Based on the most popular DAWs GUI, we could generate two waveforms style:</p>
+
+<ul>
+  <li>one similar to <em>Audacity</em> (with RMS &amp; waveform overlapped)</li>
+  <li>one similar to <em>Traktor/Serato</em> DJ software (with vertical lines of the waveform color-coded by spectral centroid)</li>
+</ul>
+
+<p>To acheive this, we first had to design spectral features functions based on mathematical formulas in order to extract the features we were interested in.</p>
+
+<p><strong>Root mean square</strong>, defined as the square root of the mean square (the arithmetic mean of the squares of a set of numbers).</p>
+
+<p><br /><img src="https://render.githubusercontent.com/render/math?math={\huge%20RMS=\sqrt{\frac{1}{n}\sum_{i}{x_{i}^2}}}" style="border: None; box-shadow: None;" /><br /></p>
+
+<p><img src="https://render.githubusercontent.com/render/math?math={n=\text{frame length in samples}}" style="border: None; box-shadow: None;" /></p>
+
+<p><img src="https://render.githubusercontent.com/render/math?math={x_{i}=\text{each frame}}" style="border: None; box-shadow: None;" /><br /></p>
+
+<p><strong>Spectral Centroid</strong>, as the name suggests, a spectral centroid is the location of the center of mass of the spectrum. Since the audio files were digital signals and the spectral centroid is a measure, this appears useful in the characterization of the spectrum of our processed audio file signal.</p>
+
+<p><br /><img src="https://render.githubusercontent.com/render/math?math={\huge%20Centroid=\frac{\sum_{n=0}^{N-1}f(n)x(n)}{\sum_{n=0}^{N-1}x(n)}}" style="border: None; box-shadow: None;" /><br /></p>
+
+<p><img src="https://render.githubusercontent.com/render/math?math={x(n)=\text{the weighted frequency value, or magnitude}}" style="border: None; box-shadow: None;" /></p>
+
+<p><img src="https://render.githubusercontent.com/render/math?math={f(n)=\text{the center frequency of the frequency bin}}" style="border: None; box-shadow: None;" /></p>
+
+<p><img src="https://render.githubusercontent.com/render/math?math={n=\text{the bin number}}" style="border: None; box-shadow: None;" /><br /></p>
+
+<p>Furthermore, coloring a waveform with spectral centroid required that we</p>
+
+<ul>
+  <li>
+    <p>Compute an onset-detection function in order to locate note onset events by picking peaks in an onset strength envelope</p>
+  </li>
+  <li>
+    <p>Detect peaks in the onset-detection function to get the position of note onsets</p>
+  </li>
+  <li>
+    <p>Compute the spectral centroid over all the time segments delimited by the detected onsets</p>
+  </li>
+  <li>
+    <p>And finally, reshape the segments and time line values together and use a color gradient based on the range of the minimum and maximum centroid values of each segment</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Reshape the values for the plot
+</span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="n">times</span><span class="p">,</span> <span class="n">segments</span><span class="p">]).</span><span class="n">T</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">segments_reshaped</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">concatenate</span><span class="p">([</span><span class="n">points</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">:]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Plot multiple colored lines on the figure using line collection
+</span><span class="n">norm</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nc">Normalize</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nf">max</span><span class="p">(</span><span class="n">cents</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># normalize centroid frequency
+</span><span class="n">lc</span> <span class="o">=</span> <span class="nc">LineCollection</span><span class="p">(</span><span class="n">segments_reshaped</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="sh">'</span><span class="s">jet_r</span><span class="sh">'</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
+<span class="n">lc</span><span class="p">.</span><span class="nf">set_array</span><span class="p">(</span><span class="n">centroid</span><span class="p">)</span> <span class="c1"># use centroid values to determine the lines
+</span><span class="n">lc</span><span class="p">.</span><span class="nf">set_linewidth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">ax</span><span class="p">.</span><span class="nf">add_collection</span><span class="p">(</span><span class="n">lc</span><span class="p">)</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">colorbar</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">"</span><span class="s">Frequency (Hz)</span><span class="sh">"</span><span class="p">)</span> <span class="c1"># colorbar
+</span><span class="n">cbar</span><span class="p">.</span><span class="nf">set_label</span><span class="p">(</span><span class="sh">"</span><span class="s">Frequency (Hz)</span><span class="sh">"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sh">'</span><span class="s">#f4f4f4</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">cbar</span><span class="p">.</span><span class="n">ax</span><span class="p">.</span><span class="nf">tick_params</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="sh">'</span><span class="s">#f4f4f4</span><span class="sh">'</span><span class="p">)</span>
+</code></pre></div></div>
+<p>At last we could end up with something quite nice and informative.</p>
+
+<figure>
+  <img src="/assets/image/2021_12_12_joachipo_vizserato.png" alt="the misty jungle" width="100%" align="middle" />
+
+<figcaption align="center">Coloring a waveform with spectral centroid</figcaption>
+
+</figure>
+
+<p>After a few nights of this ordeal we then had six tracks we could sum together. (We re-synthesized the lead synth with pretty midi’s built in <code class="language-plaintext highlighter-rouge">synthesize()</code> function, and applied our usual processing to the track in order to have two different lead synths which we could pan). We set different amplitude values for two tracks, the <code class="language-plaintext highlighter-rouge">mixL</code> and <code class="language-plaintext highlighter-rouge">mixR</code>, and then merged them together to form a <code class="language-plaintext highlighter-rouge">stereo_file</code>. And closed our eyes and felt asleep over our computers to the sound of our very own and very first Python DAW mix.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_24_arvidf_stereomix.mp3" type="audio/mpeg" />
+    Mixed
+  </audio>
+  <figcaption>Our final mix</figcaption>
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2021/11/24/arvidf-mixing-in-python.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

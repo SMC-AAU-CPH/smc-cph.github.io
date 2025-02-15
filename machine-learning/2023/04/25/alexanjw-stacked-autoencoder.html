@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A Rhythmic Sequencer Driven by a Stacked Autoencoder | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="A Rhythmic Sequencer Driven by a Stacked Autoencoder" />
+<meta name="author" content="Alexander Wastnidge" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sometimes you need to leave room for the musician" />
+<meta property="og:description" content="Sometimes you need to leave room for the musician" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/alexanjw-stacked-autoencoder.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/alexanjw-stacked-autoencoder.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_alexjw_ae_seq.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-25T12:47:42+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_alexjw_ae_seq.png" />
+<meta property="twitter:title" content="A Rhythmic Sequencer Driven by a Stacked Autoencoder" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexander Wastnidge"},"dateModified":"2023-04-25T12:47:42+00:00","datePublished":"2023-04-25T12:47:42+00:00","description":"Sometimes you need to leave room for the musician","headline":"A Rhythmic Sequencer Driven by a Stacked Autoencoder","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_alexjw_ae_seq.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/alexanjw-stacked-autoencoder.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alexander Wastnidge"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/alexanjw-stacked-autoencoder.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      A Rhythmic Sequencer Driven by a Stacked Autoencoder
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-25T12:47:42+00:00"
+        itemprop="datePublished"
+      >Apr 25, 2023 •
+      </time>
+         
+      <a href="/authors/alexanderwastnidge.html">Alexander Wastnidge</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="a-partially-automated-autoencoder-driven-generative-step-sequencer">A Partially-Automated, Autoencoder-Driven, Generative Step-Sequencer</h2>
+
+<p>Following on from the previous blog posts on autoencoders, this post will take a look at implementing a step sequencer for melodic musical parts but with its rhythmic aspect driven by a generative “stacked autoencoder” model.  Beyond the technicalities, the project also aimed to explore methods whereby generative AI in music could be made more accessible to music practitioners.  This meant that firstly, the training data pipeline needed to be simple and accessible for the average music producer to use. Secondly, it necessitated a structure which was computationally light enough that training and inference could be run on a consumer computer and was fast enough to not interfere with the creative process.</p>
+
+<h3 id="stacked-autoencoder">Stacked Autoencoder</h3>
+
+<p>Simply put, a “stacked” autoencoder can be thought of as a traditional autoencoder architecture with a greater number of hidden layers.  This means that the data goes through several stages of encoding before it reaches the latent layer and a corresponding greater number of decoding layers until it reaches the output.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_04_25_alexjw_stacked_ae.png" width="60%" />
+   <figcaption>Stacked Autoencoder from Briot(2020) </figcaption>
+</figure>
+
+<p>Briot (2020), explains the advantage of this for music generation as,</p>
+
+<p><em>“The chain of encoders will increasingly compress data and extract higher-level features… They are also useful for music generation… This is because the innermost hidden layer, sometimes named the bottleneck hidden layer, provides a compact and high-level encoding (embedding) as a seed for generation (by the chain of decoders)”</em></p>
+
+<p>This technique of feeding new, user input-able information into the “bottleneck layer” is the basis for the generative aspect of this project.</p>
+
+<h3 id="training">Training</h3>
+<p>The training data pipeline for this project needed to represent a methodology which could be made accessible to on-the-ground music producers.  Most electronic music practioners will cite having extensive libraries of audio samples and loops.  There are also huge amounts free and commercially products of royalty-free loops available to practioners.</p>
+
+<p>Training a neural network on audio presents challenges however.  Feeding a neural network with raw digital audio is inappropriate as the computational load is too large.  Furthermore extracting meaningful, musical and useful features from audio is a task requiring expertise beyond the expectation of the average music practioner.</p>
+
+<p>As the sole concern of the model is rhythm, the training data was processed to extract rhythmic transient/onset information.  This was then encoded as a symbolic representation of two musical bars with a resolution of 16th notes. This resulted in binary lists representing 32-step sequences where a 1 denoted a rhythmic event and a 0 denoted a “rest”.</p>
+
+<p>An example from my dataset of this:
+[1. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]</p>
+
+<p>We usually imagine step-sequences moving horizontally left-to-right.  Returning to Briot’s diagram above of the stacked autoencoder, if you imagine the sequence turned vertically and each step fed in as a separate input to that structure, then you have an idea of how the model is given this representation of the data.</p>
+
+<p>The result of this is two-fold.  Firstly, a format of training data which is freely accessible to music practioners can be used to train the model.  Secondly, the architecture of the autoencoder is computationally very light and can be trained and utilised very quickly.</p>
+
+<h3 id="the-human-aspect">The Human Aspect</h3>
+<p>In opposition to systems employing AI for the creation of more and more complete systems for automatic music generation, this project aimed to instead purposely leave room for the human musician.</p>
+
+<p>As such, this sequencer offers only a “partially-automated” functionality.  While the AI model is responsible for generating rhythmic information, pitch information is left for the human, as are several ways of altering how the inferred data is used.  Below is the current user-interface for the sequencer and an explanation of the various controls.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_04_25_alexjw_ae_seq.png" width="60%" />
+   <figcaption>Sequencer UI in Pure Data </figcaption>
+</figure>
+
+<p><strong>X, Y</strong>
+These are the primary AI-focused user controls. These are for the values to be passed into the “bottleneck layer” and thus generate the rhythmic information.  This layer was purposely kept to 2-dimensions as it presents an intuitive representation to the user.  Another term for the ‘bottleneck layer” is “latent space”, connoting ideas of a physical space of possibility.  This concept is also used in the now-discontinued but open source <a href="https://pichenettes.github.io/mutable-instruments-documentation/modules/grids/">Mutable Instruments Grids</a>  Eurorack module, where it is referred to as “Topographical” sequencing.</p>
+
+<p><strong>Thresh</strong>
+When generating new rhythmic patterns, the model outputs values between 0 and 1.  Therefore, the output has a threshold value for what is and is not considered a rhythmic event.  By default, this is 0.5 but by opening the parameter to the user, they are able a further level of control over the sequence.</p>
+
+<p><strong>Pitches &amp; Num Steps</strong>
+These represent controls often found on conventional step-sequencers.  The user inputs the musical pitches to be stepped through as well as the length in steps of the repeated sequence.</p>
+
+<h2 id="future-work">Future Work</h2>
+<p>In order for this process to be truly accessible and implementable for the wider world of electronic music practioners, further work is required.  Currently the model’s training and inference happen in Python via Jupyter Notebook, while the UI exists in Pure Data with OSC being used to communicate between the two.  Ideally, the entire process would exist within a single environment with the addition of a user interface for the training process.</p>
+
+<p>This project has however achieved many of the primary goals set out for it.  Furthermore, the need for lightweight, rapidly trainable and accessible models will likely continue as generative AI becomes more commonplace and more musicians become open to the idea of “AI assistants” being involved in the creative process.</p>
+
+<h3 id="references">References</h3>
+<p>Briot, J.-P., Hadjeres, G., &amp; Pachet, F.-D. (2020). Deep Learning Techniques for Music Generation (1st ed. 2020., p. 1 online resource (XXVIII, 284 p. 143 illu, 91 illu in color.)). Springer International Publishing. Available from: https://link.springer.com/book/10.1007/978-3-319-70163-9</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2023/04/25/alexanjw-stacked-autoencoder.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

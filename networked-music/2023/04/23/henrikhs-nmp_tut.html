@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>NMP kit Tutorial | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="NMP kit Tutorial" />
+<meta name="author" content="Henrik Sveen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A practical tutorial on the NMP kits." />
+<meta property="og:description" content="A practical tutorial on the NMP kits." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/23/henrikhs-nmp_tut.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/23/henrikhs-nmp_tut.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_22_henrikhs_mrnmp.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-23T17:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_22_henrikhs_mrnmp.jpg" />
+<meta property="twitter:title" content="NMP kit Tutorial" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Henrik Sveen"},"dateModified":"2023-04-23T17:00:00+00:00","datePublished":"2023-04-23T17:00:00+00:00","description":"A practical tutorial on the NMP kits.","headline":"NMP kit Tutorial","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_22_henrikhs_mrnmp.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/23/henrikhs-nmp_tut.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Henrik Sveen"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/23/henrikhs-nmp_tut.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      NMP kit Tutorial
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-23T17:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 23, 2023 •
+      </time>
+         
+      <a href="/authors/henriksveen.html">Henrik Sveen</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2023_04_22_henrikhs_nmpkit.jpg" alt="Alternate Text" title="Image Title" width="auto" />
+   <figcaption>NMP Kit</figcaption>
+</figure>
+
+<p>This is a tutorial for getting started with the NMP (Network Music Performance) kits. It focuses on practical use of the kits and does not go into theoretical detail on what a NMP is and how the different softwares (LoLa, JackTrip, SonoBus etc.) works. Audio signal flow and solutions for routing audio in the system is covered, however - there are many solutions to this, so consider the ways shown in the video as a starting point for understanding audio routing in the NMP kit.</p>
+
+<p>To start with, we need to take off the flight case lids and store them somewhere safe. The kit comes with an audio cable case and a computer cable case. From the computer cable case, grab the ethernet cable and connect to the ethernet PCI on the back of the computer. Do not connect to the motherboard.
+There are two screens. One of them is an ultra fast gaming monitor for stage performers to see the network performers. The other one is for the NMP engineer to use with the rack computer. There is also an ultra fast projector to project network performers together with local performers. Connect to the GPU PCI on the back of the computer using HDMI or DisplayPort.</p>
+
+<p>Be careful when getting the Ximea camera from the rack drawer. Mount it on the Manfrotto camera stand and connect the camera USB to the camera and to the computer’s USB 3.0 PCI on the back.
+Grab the mouse and keyboard from the rack drawer and turn on the computer power supply (back) and on/off button (front right side). Log in.
+Launch TotalMix and LoLa and adjust buffer settings and options to optimize your network connection.</p>
+
+<p>The mixer can be used to mix down input sources to a stereo mix which can be sent over the network. It’s also possible to send multiple channels, by using group output 1-2 and 3-4. This gives a total of six channels. ADAT inputs can also be used directly, but this requires splitting the input signal to the mixer, or that these signals get mixed to the speakers connected to the mixer’s main outputs using TotalMix. There are many workarounds, so use the ones needed for your setup.</p>
+
+<p>Network audio 1-2 is received on channel 15-16 on the mixer. For receiving more channels, network audio 3-4 can be routed via the headphone amplifier, and ADAT outputs 5-8 are idle and ready to be used. Though it might not be the easiest setup to mix with, as the mixer has stereo channels from channel 9-16.</p>
+
+<p>Cable management is important for maintaining the kit during use. Fold the cable by following the natural bend of the cable. Both audio and computer cables should be wrapped using the attached cable straps before putting them back in the designated cable cases.</p>
+
+<h4 id="nmp-kit-tutorial---getting-started">NMP Kit Tutorial - Getting Started</h4>
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2023_04_22_henrikhs_nmp_tut.mp4" type="video/mp4" />
+  </video>
+</figure>
+
+<p>For more and detailed information, please see the <a href="https://github.com/SMC-master/NMP-Portable-Kits/wiki">NMP Wiki</a>.</p>
+
+<p>Thank you.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2023/04/23/henrikhs-nmp_tut.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

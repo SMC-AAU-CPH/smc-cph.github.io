@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Ambisonics: Under the Hood | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Ambisonics: Under the Hood" />
+<meta name="author" content="Arvid Falch, Hugh Alexander von Arnim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What happens when we encode/decode Ambisonics" />
+<meta property="og:description" content="What happens when we encode/decode Ambisonics" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/04/24/hughav-ambisonics-mix.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/04/24/hughav-ambisonics-mix.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_04_24_hughav_spherical_harmonics.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-04-24T19:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_04_24_hughav_spherical_harmonics.jpg" />
+<meta property="twitter:title" content="Ambisonics: Under the Hood" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arvid Falch, Hugh Alexander von Arnim"},"dateModified":"2022-04-24T19:00:00+00:00","datePublished":"2022-04-24T19:00:00+00:00","description":"What happens when we encode/decode Ambisonics","headline":"Ambisonics: Under the Hood","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_04_24_hughav_spherical_harmonics.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/04/24/hughav-ambisonics-mix.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Arvid Falch, Hugh Alexander von Arnim"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/04/24/hughav-ambisonics-mix.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Ambisonics: Under the Hood
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-04-24T19:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 24, 2022 •
+      </time>
+         
+      <a href="/authors/arvidfalch.html">Arvid Falch,</a>
+           
+      <a href="/authors/hughalexandervonarnim.html">Hugh Alexander von Arnim</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h3 id="introduction"><strong>Introduction</strong></h3>
+
+<p><a href="https://www.google.com/search?client=firefox-b-d&amp;q=ambisonics">Ambisonics</a> is a spatial audio format that enables a quick and easy creation of a 3D audio mix. We created a video tutorial to show you how to create an Ambisonics mix using <a href="https://www.reaper.fm/">Reaper</a> and the <a href="https://plugins.iem.at/">IEM plugin suite</a>, which you can watch below.</p>
+
+<figure style="float: none">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/CejOR83X6lM" title="YouTube video player" frameborder="0" allow="accelerometer;
+100%play;
+clipboard-write;
+encrypted-media;
+gyroscope;
+picture-in-picture" allowfullscreen="">
+</iframe>
+<figcaption>Video tutorial.</figcaption>
+</figure>
+
+<p>This blog post goes into a little more detail in how exactly Ambisonics works and why Ambisonics is speaker independent, for those interested in what is going on ‘under the hood’.</p>
+
+<h3 id="the-channel-based-approach"><strong>The Channel Based Approach</strong></h3>
+
+<p>When traditionally mixing, we assign track information to a channel of audio, and each channel is reproduced over a speaker. This approach is carried over for traditional surround formats. So in a 7.1 setup, for example, we mix using eight channels, assigning our different channels to each track to create the spatialisation effect that we desire, and then sending each track to an individual loudspeaker. This is called a channel based approach. However, this can lead to problems when we don’t have 8 loudspeakers to playback our mix. What do we do with the extra channels if we have fewer speakers? And what if they’re in a different configuration to the setup on which the mix was created? Ambisonics offers a solution, in that the mix is speaker independent. This means that your mix can be played back over whatever loudspeaker configuration you have available. Let’s examine how this is possible!</p>
+
+<h3 id="the-ambisonics-approach"><strong>The Ambisonics Approach</strong></h3>
+
+<p>In contrast to a channel based approach, in Ambisonics we don’t mix by assigning a track to a channel, but rather we mix by placing a sound source on the surface of a spherical soundfield. We then encode this soundfield into a format called b-format where each channel carries the information of a spherical harmonic of the soundfield. These can be used to reconstruct the soundfield onto our loudspeaker array through the use of a decoder. A useful way of thinking about this is that when mixing, we’re creating a virtual soundfield, and through the use of the encoder we are ‘recording’ portions of this soundfield that we then reproduce for playback when decoding. Let’s look at an example of this.</p>
+
+<h3 id="recording-the-soundfield"><strong>Recording the Soundfield</strong></h3>
+
+<p>In the visual below, we can see the spherical harmonics up to the seventh order.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_04_24_hughav_spherical_harmonics_1.gif" alt="" title="" width="auto" />
+   <figcaption><i>Spherical Harmonics up to seventh order</i></figcaption>
+</figure>
+
+<p>If you’ve had experience with microphones, the zeroeth and first order spherical harmonics should look familiar, resembling an omnidirectional and figure-of-eight polar pattern respectively.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_04_24_hughav_omni_8.jpg" alt="Network Performance Word Cloud" title="" width="auto" />
+   <figcaption><i>Omindirectional and Figure-of-Eight Polar Patterns</i></figcaption>
+</figure>
+
+<p>And this is correct! If we placed an omnidirectional microphone and three figure-of-eight microphones (each pointing along a different Cartesian axis) at the same point, we would record the spherical harmonics of the soundfield up to the first order, and could then decode this as Ambisonics! So if we encode our soundfield to preserve the first four spherical harmonics, we are in effect ‘recording’ our virtual soundfield using the microphone setup described above. As the order of the spherical harmonics increases, these ‘polar patterns’ become more complex, but can still fundamentally be thought of as the portion of our soundfield that we are ‘recording’.</p>
+
+<p>Intuitively, the more spherical harmonics we have, the more accurately we can reproduce our soundfield, thereby increasing the ease of sound source localisation and the size of the ‘sweet spot’. When choosing the order of Ambisonics, we are actually deciding the number of spherical harmonics that we are ‘recording’. So if we choose to encode in first order Ambisonics, we are ‘recording’ the first four spherical harmonics, in third order the first 16, and so on. As we need a channel for each harmonic, we can find the number of channels we need for an order by using the following formula:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\Large&space;N_\mathrm{Channels}=(N_\mathrm{Order}+1)^2" alt="\Large N_\mathrm{Channels}=(N_\mathrm{Order}+1" /></p>
+
+<p>So to encode seventh order Ambisonics, we would require</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\Large&space;(7+1)^2=64" alt="\Large (7+1)^2=64" /></p>
+
+<p>channels.</p>
+
+<h3 id="soundfields-in-2d"><strong>Soundfields in 2D</strong></h3>
+
+<p>If we only want to reproduce a 2D soundfield, the number of required channels is dramatically reduced. We don’t need to ‘record’ any of the vertical information, and so only need to encode the spherical harmonics which include horizontal information. If we take a seventh order encoding as an example, we would only need the harmonics highlighted below.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_04_24_hughav_spherical_harmonics_highlight.gif" alt="" title="" width="auto" />
+   <figcaption><i>Required harmonics to represent a 2D soundfield</i></figcaption>
+</figure>
+
+<p>We can find the number of channels we need for a 2D encoding using the following formula:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\Large&space;N_\mathrm{Channels}=2N_\mathrm{Order}+1" alt="N_\mathrm{Channels}=2N_\mathrm{Order}+1" /></p>
+
+<p>So for a seventh order encoding, we need</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\Large&space;2\times7+1=15" alt="\Large (7+1)^2=64" /></p>
+
+<p>channels.</p>
+
+<p>However, remember that even in 2D, for first order, you still need a minimum of four channels.</p>
+
+<h3 id="summing-up"><strong>Summing Up</strong></h3>
+
+<ul>
+  <li>When we mix for Ambisonics, we place objects in a virtual spherical soundfield.
+<br /></li>
+  <li>We then decide which spherical harmonics of the soundfield we wish to preserve by encoding the soundfield into b-format at a desired Ambisonics order. We can think of this as ‘recording’ portions of the soundfield with microphones that have polar patterns corresponding to the harmonic.
+<br /></li>
+  <li>As each harmonic requires a channel for encoding, we can use the formulas above to find how many channels we require for the order that we have chosen.
+<br /></li>
+  <li>When we decode the b-format, we are choosing which harmonics to reproduce. We can decode at a lower order (and therefore for fewer speakers) than we encoded in because the information of the lower order harmonics is still contained in the b-format signal.</li>
+</ul>
+
+<h3 id="sources-and-further-reading"><strong>Sources and Further Reading</strong></h3>
+
+<p>Arteaga, D. (2015). Introduction to Ambisonics.</p>
+
+<p>Zotter, F., &amp; Frank, M. (2019). ‘XY, MS, and First-Order Ambisonics’. Ambisonics: A Practical 3D Audio Theory for Recording, Studio Production, Sound Reinforcement, and Virtual Reality, pp. 1–22. Springer International Publishing: Cham. DOI: 10.1007/978-3-030-17207-7_1</p>
+
+<h3 id="image-sources"><strong>Image Sources</strong></h3>
+
+<p>https://upload.wikimedia.org/wikipedia/commons/7/74/Real_Spherical_Harmonics_Figure_Table_Complex_Radial_Magnitude.gif</p>
+
+<p>https://dt7v1i9vyp3mf.cloudfront.net/styles/news_large/s3/imagelibrary/Q/QA_4-0811-qSuciyY05bdnpJjU8IQDmj8ZBfB.PaBl.jpg</p>
+
+<h3 id="video-tutorial-media-sources"><strong>Video Tutorial Media Sources</strong></h3>
+
+<h4 id="audio"><strong>Audio</strong></h4>
+
+<p>Angels in Amplifiers - I’m Alright; From https://www.cambridge-mt.com/ms/mtk/</p>
+
+<h4 id="images"><strong>Images</strong></h4>
+
+<p>https://notam.no/wp-content/uploads/2019/10/siriusoriginal-studio3Web.jpg</p>
+
+<p>https://notam.no/wp-content/uploads/2016/09/SiriusstWeb.jpg</p>
+
+<p>https://blog.bestbuy.ca/wp-content/uploads/2016/07/44354i9E45BD1951EE047B.jpg</p>
+
+<p>https://dxarts.washington.edu/sites/dxarts/files/styles/large_full_width/public/images/dxarts_media_lab1_sm.jpg?itok=UlD5573s</p>
+
+<p>https://upload.wikimedia.org/wikipedia/en/f/f6/AmbisonicLogo.svg</p>
+
+<p>https://www.researchgate.net/publication/341128068/figure/fig1/AS:887453950939143@1588596918992/Ambisonics-spherical-harmonics-for-orders-up-to-three-FOA-includes-the-top-two-lines-of.png</p>
+
+<p>https://ocl-steinberg-live.steinberg.net/_storage/asset/60417/storage/JPG_large_2000px/60417-large.jpg</p>
+
+<p>https://i.imgur.com/Ts2fWMx.png</p>
+
+<p>https://i.ytimg.com/vi/l0sxyrAuB0k/maxresdefault.jpg</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2022/04/24/hughav-ambisonics-mix.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

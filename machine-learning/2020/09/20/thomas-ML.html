@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Classification of guitar playing techniques | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Classification of guitar playing techniques" />
+<meta name="author" content="Thomas Anda" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An attempt at making a model which can classify 6 different playing techniques on the guitar" />
+<meta property="og:description" content="An attempt at making a model which can classify 6 different playing techniques on the guitar" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/20/thomas-ML.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/20/thomas-ML.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_20_thomasanda_ml_cluster.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-20T14:30:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_20_thomasanda_ml_cluster.png" />
+<meta property="twitter:title" content="Classification of guitar playing techniques" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Thomas Anda"},"dateModified":"2020-09-20T14:30:00+00:00","datePublished":"2020-09-20T14:30:00+00:00","description":"An attempt at making a model which can classify 6 different playing techniques on the guitar","headline":"Classification of guitar playing techniques","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_20_thomasanda_ml_cluster.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/20/thomas-ML.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Thomas Anda"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/20/thomas-ML.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Classification of guitar playing techniques
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-09-20T14:30:00+00:00"
+        itemprop="datePublished"
+      >Sep 20, 2020 •
+      </time>
+         
+      <a href="/authors/thomasanda.html">Thomas Anda</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="classification-of-guitar-playing-techniques">Classification of guitar playing techniques</h1>
+<p>In this blog post, I will describe a ML-project where I have attempted to classify different types of playing techniques performed on an electric guitar. The model is based on the use of a support vector machine with an RBF-kernel and linear discriminant analysis (LDA) as a dimensionality reduction-algorithm. The algorithm has been tuned with a grid-search and gone through 10-fold cross-validation. Where the best results average somewhere between 67% and 70% accuracy with the complete dataset used.</p>
+
+<h2 id="why-do-you-want-to-spend-your-valueable-time-training-a-model-to-distinguish-between-a-bend-and-a-slide">Why do you want to spend your valueable time training a model to distinguish between a bend and a slide?</h2>
+
+<p>Great question! The guitar is a complicated instrument. First of all it has a tuning system which really doesn´t make any sense. You also have the ability to play the same note in different positions on the neck. An E4 can be played on five different strings if you have a guitar with less than 24 frets. So, if you want to transcribe a guitar solo you need to figure out what notes are being played, on which strings they are being played, if the note is played with a pick or with a finger, is it a bended note, pre-bend, vibrato etc etc. So, why am I rambling on about this? Well, being able to classify different techniques is a building block in the art of automatic guitar transcription. If this sounds interesting you can have a look at <a href="https://github.com/srviest/SoloLa">this</a> or <a href="https://www.semanticscholar.org/paper/Automatic-Tablature-Transcription-of-Electric-by-of-Kehling-Abe%C3%9Fer/b697dde224ef2894a129398b7e528a6feae2cf0c">this</a>. Since I am in no way an expert at machine learning I put my focus on only one of the aspects of automatic guitar transcription.</p>
+
+<h2 id="collecting-data">Collecting data</h2>
+
+<p>For me to be able to perform this task I needed a bunch of audio clips. Luckily for me some people in Taiwan had compiled a nice <a href="http://mac.citi.sinica.edu.tw/GuitarTranscription/">dataset</a> consisting of 6580 unique audio clips demonstrating 7 different playing techniques. If you want to have a look at this data I don´t recommend going to this website and try downloading it. The site is not being maintained and the download took me aprox. 12 hours. So just contact me instead and I will help you out. The dataset is divided into 7 main folders where different guitar sounds are used in order to emulate a “real-world” situation. And make the task of classifying stuff a bit more challenging.</p>
+
+<h2 id="the-algorithm">The algorithm</h2>
+
+<p>As I hinted at in my intro the classifier I used for this project was a Support Vector Machine algorithm(SVM). SVMs gives you great flexibility, computational efficiency, capacity to handle high dimensional data. By conducting a grid search I did some fine tuning of the hyper-parameters and came to the conclusion that it performed okay with these parameters:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">svm</span> <span class="o">=</span> <span class="nc">SVC</span><span class="p">(</span><span class="n">C</span> <span class="o">=</span> <span class="mf">1.4</span><span class="p">,</span> <span class="n">decision_function_shape</span> <span class="o">=</span> <span class="sh">'</span><span class="s">ovo</span><span class="sh">'</span><span class="p">,</span> <span class="n">gamma</span> <span class="o">=</span> <span class="sh">'</span><span class="s">scale</span><span class="sh">'</span><span class="p">,</span> <span class="n">kernel</span> <span class="o">=</span> <span class="sh">'</span><span class="s">rbf</span><span class="sh">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The kernel is the Gaussian RBF kernel with gamma set to scale. The gamma-parameter makes the bell-shaped curve of the RBF narrower and when it is set to scale the gamma is calculated depending on the size of the features. OvO stands for one-versus-one strategy. In the case of this particular dataset with 6 classes, the OvO decision function end up training 15 binary classifiers on the training set.</p>
+
+<p>The features I choose to extract from the audio files were: Melspectrogram, MFCC, spectral centroid and spectral roll-off. The melspectrogram and MFCC were the most efficient features to extract. And both of these are for good reasons popular features when it comes to timbral tasks like this in speech recognition, music genre classification and other MIR-stuff.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this 2-week intensive workshop I have gained a little insight into the world of machine learning. Although I didn´t manage to build a perfect model I got to experience the confusing and difficult task of classifying audio. If I were to continue on this project I would first and foremost spend more time understanding the basic concepts of meachine learning, dive a bit more into how the librosa library actually works and try to compare different approaches to this specific task. It would also by interesting to look at other components in the transcription process. And over time try to build a complete functioning transcribing system.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2020/09/20/thomas-ML.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

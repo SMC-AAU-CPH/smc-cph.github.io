@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>NINJAM, TPF and Audiomovers | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="NINJAM, TPF and Audiomovers" />
+<meta name="author" content="Simon Sandvik, Tom Ignatius, Jarle Steinhovden" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="During these last few weeks of “quarantine” during the COVID-19 outbreak, we have tested out several TCP/UDP audio transmission software’s from home to check for latency and user-friendliness. Our group consisting of Simon, Iggy, and Jarle, were tasked with looking into NINJAM and TPF." />
+<meta property="og:description" content="During these last few weeks of “quarantine” during the COVID-19 outbreak, we have tested out several TCP/UDP audio transmission software’s from home to check for latency and user-friendliness. Our group consisting of Simon, Iggy, and Jarle, were tasked with looking into NINJAM and TPF." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/17/NINJAM.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/17/NINJAM.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_04_17_simosa_ninjam.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-17T18:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_04_17_simosa_ninjam.png" />
+<meta property="twitter:title" content="NINJAM, TPF and Audiomovers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Simon Sandvik, Tom Ignatius, Jarle Steinhovden"},"dateModified":"2020-04-17T18:00:00+00:00","datePublished":"2020-04-17T18:00:00+00:00","description":"During these last few weeks of “quarantine” during the COVID-19 outbreak, we have tested out several TCP/UDP audio transmission software’s from home to check for latency and user-friendliness. Our group consisting of Simon, Iggy, and Jarle, were tasked with looking into NINJAM and TPF.","headline":"NINJAM, TPF and Audiomovers","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_04_17_simosa_ninjam.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/17/NINJAM.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Simon Sandvik, Tom Ignatius, Jarle Steinhovden"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/17/NINJAM.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      NINJAM, TPF and Audiomovers
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-04-17T18:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 17, 2020 •
+      </time>
+         
+      <a href="/authors/simonsandvik.html">Simon Sandvik,</a>
+           
+      <a href="/authors/tomignatius.html">Tom Ignatius,</a>
+           
+      <a href="/authors/jarlesteinhovden.html">Jarle Steinhovden</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>During these last few weeks of “quarantine” during the COVID-19 outbreak, we have tested out several TCP/UDP audio transmission software’s from home to check for latency and user-friendliness. Our group consisting of Simon, Iggy, and Jarle, were tasked with looking into NINJAM and TPF.</p>
+
+<h1 id="ninjam">NINJAM</h1>
+<p>NINJAM is an open-source software to send audio over the internet with the TCP protocol. It uses OGG Vorbis audio compression and beatmatching, relatively increasing latency for everyone to give a level latency for jamming. Its main prerequisite is the Reaper DAW and a server. Out of the box, there are several public servers available that are open to anyone. If, however, you need a private connection, you have to set up a server yourself, which is not necessarily a straightforward task. The server requires adequate bandwidth but has no firewall or NAT issues. NINJAM has clients available for Mac OS X, Linux, and Windows.
+In all honesty, the server setup is complicated, and the results are subpar to other similar software that is easier to set up. Tentatively, our group gives this solution a thumbs down.</p>
+
+<h1 id="tpf">TPF</h1>
+<p>TPF is a swiss software made for low latency telematic performances. It uses Pure Data and Jacktrip protocol. TPF consists of two PD patches, a server PD patch, and a client patch contained in an application through a .dmg. It requires a computer running the server PD patch with a public IP address and Jacktrip. The (macOS) JackTrip installation alone requires workings in Terminal, including sudo- commands that might seem cryptical to the inexperienced user. Though this will seem mundane to someone well versed in networking IP, that is something that does not apply to most of the musicking public, ourselves included. 
+The initial installation then (and solely just for JackTrip) seems an obstacle fit to dissuade any user from engaging in any immediately intuitive musical network-collaboration.</p>
+
+<p>To run the client, Pure Data is required along with three additional externals, *iemnet, *osc and *slip.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>With none of these solutions coming close to being plug and play, TPF and Ninjam would be impractical for the majority of musicians attempting to use either form of telematic software.</p>
+
+<h1 id="audiomovers">Audiomovers</h1>
+<p>An alternative suggested by Iggy was to use Audiomovers Listento, which essentially creates a plug and play solution to online musicking, which requires simple routing concepts and a DAW that accepts VST, AU, and AAX plugins. The latency created by Listento can be very minimal and workable. The only setback of Listento is the requirement of bandwidth if higher bit depth formats are used, such as PCM audio.</p>
+
+<p>Our experience with Audiomovers was very positive. You install the VST’s (a send and a receive), login, and connect. It’s as simple as it gets, plug, and play in a pleasing UI in a DAW of your choosing. It gives you the option to choose between different qualities that you can switch in real-time and on both ends. We tried recording in serial with excellent results. By sending through the regular beat keeping hierarchy of drums to bass to guitar and recording on the endpoint. This will keep everything in perfect time with the downside of introducing more chances of dropouts. Playing in parallel, however, has its apparent limits inherently in terms of latency. What sold us on this software is the usability, quality, and multipurpose of the software. If you are willing to cash out for it, you’ll have a great way of sending audio over the internet. We give it a big thumbs up.</p>
+
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2020/04/17/NINJAM.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

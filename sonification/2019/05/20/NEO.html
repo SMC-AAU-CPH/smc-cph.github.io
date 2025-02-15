@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sonification of Near Earth Objects | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Sonification of Near Earth Objects" />
+<meta name="author" content="Jørgen Varpe, Guy Sion, Eigil Aandahl" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As a part of a two-week workshop in the Sonification and Sound design course, we worked on the development of a self-chosen sonification project. For three days we explored how to design and build an auditory model of Near-Earth Objects (NEO) with data collected from NASA." />
+<meta property="og:description" content="As a part of a two-week workshop in the Sonification and Sound design course, we worked on the development of a self-chosen sonification project. For three days we explored how to design and build an auditory model of Near-Earth Objects (NEO) with data collected from NASA." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2019/05/20/NEO.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2019/05/20/NEO.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_04_18_varpe_NEO.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-05-20T12:15:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_04_18_varpe_NEO.jpg" />
+<meta property="twitter:title" content="Sonification of Near Earth Objects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jørgen Varpe, Guy Sion, Eigil Aandahl"},"dateModified":"2019-05-20T12:15:00+00:00","datePublished":"2019-05-20T12:15:00+00:00","description":"As a part of a two-week workshop in the Sonification and Sound design course, we worked on the development of a self-chosen sonification project. For three days we explored how to design and build an auditory model of Near-Earth Objects (NEO) with data collected from NASA.","headline":"Sonification of Near Earth Objects","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_04_18_varpe_NEO.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2019/05/20/NEO.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jørgen Varpe, Guy Sion, Eigil Aandahl"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2019/05/20/NEO.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Sonification of Near Earth Objects
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-05-20T12:15:00+00:00"
+        itemprop="datePublished"
+      >May 20, 2019 •
+      </time>
+         
+      <a href="/authors/j%C3%B8rgenvarpe.html">Jørgen Varpe,</a>
+           
+      <a href="/authors/guysion.html">Guy Sion,</a>
+           
+      <a href="/authors/eigilaandahl.html">Eigil Aandahl</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure>
+<img src="/assets/image/2019_04_18_varpe_NEO.jpg" width="50%" align="center" />
+</figure>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>How can we sonify data about objects in space passing by Earth over a chosen timespan, in a way that conveys characteristics of the objects?</p>
+
+<p>As a part of a two-week workshop in the Sonification and Sound design course, we worked on the development of a self-chosen sonification project. For three days we explored how to design and build an auditory model of Near-Earth Objects (NEO) with data collected from NASA.</p>
+
+<p>We intend to make future NEO events accessible for people by turning it into an auditory composition. As they orbit the Sun, NEOs can occasionally approach close to Earth. A “close” passage astronomically can be very far away in human terms: millions or even tens of millions of kilometers. These immense distances in space are hard to grasp for us living on earth. We hope that our auditory display will provide a unique (sonic) view on near-earth objects as they pass by earth. To do this, we need to overcome the challenges of getting data from an online source, parse the data in a way that creates a sound at the right time and design a sound that conveys the characteristics of each data point in a clear manner. Ideally, our auditory composition should be self-explanatory upon listening, but we are aware that without having any background describing the composition and its elements, listeners might experience difficulty knowing what they are listening to.</p>
+
+<p>The user of the system will be able to select a timespan into the future, and then listen to a composition generated from the data. As the selected timespan could be a year or more, we decided to scale one year of events down to 6 minutes (30 seconds per month). As a user of the system, you will be listening to the events happening over time with physical parameters like velocity, magnitude and distance of the NEO shaping the sound of the object.</p>
+
+<h2 id="theory-background-and-similar-work">Theory, background and similar work</h2>
+
+<p>Sonification is described by <a href="https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1443&amp;context=psychfacpub" target="_blank">Gregory Kramer and colleagues (2010)</a> as “the use of non-speech audio to convey information”, and the sonification criteria specified by <a href="http://www.icad.org/Proceedings/2008/Hermann2008.pdf" target="_blank">Thomas Hermann (2008)</a> are met by our project:</p>
+
+<ul>
+  <li>Sound has to reflect properties and/or relations in the input data.
+    <ul>
+      <li>Magnitude → tone quality</li>
+      <li>Nominal approach data + velocity → amplitude/doppler effect</li>
+    </ul>
+  </li>
+  <li>A precise definition of how interactions and data cause the sound to change must be provided.
+    <ul>
+      <li>Our blog post provides this additional information.</li>
+    </ul>
+  </li>
+  <li>Sonification has to be reproducible so that the same data and interactions/triggers must result in structurally identical sound, which does not imply sample-based identity.
+    <ul>
+      <li>Our model can be reproduced and is not sample-based.</li>
+    </ul>
+  </li>
+  <li>The system can intentionally be used with different data, as well as in repetition with the same data.
+    <ul>
+      <li>Our model is meant to be used for any time frame extracted from the API</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Our work was inspired by a sound installation made by Øyvind Brandtsegg called VLBI Music which also uses astronomical observations as a source for sonification. Please take a look at <a href="https://SMC-master.github.io/sonification/2019/03/27/%C3%98yvind.html" target="_blank">this blog</a>, written by our fellow student Eirik Dahl, which describes Brandtsegg’s installation.</p>
+
+<h2 id="system">System</h2>
+
+<p>For our project, we chose to work with data provided by the <a href="https://ssd-api.jpl.nasa.gov/doc/cad.html" target="_blank">SBDB Close-Approach Data API</a>. This API contains a database with all the future NEOs, and we are able to sort and filter the data with query parameters when building the URL.</p>
+
+<figure>
+<img src="/assets/image/2019_04_18_varpe_system.png" width="100%" align="center" />
+<figcaption><strong>Fig. 1 - System flow</strong></figcaption>
+</figure>
+
+<p>We decided to use Max/MSP together with Node for Max. Node for Max was used for data retrieval and extraction, and Max/MSP for data processing and sound generation. We have been able to retrieve the selected data from the API using HTTPS requests. The parameters we extracted from the data were time and date, velocity, magnitude and distance (Fig. 2). We then sent them as arrays to Max/MSP for further processing (Fig. 3).</p>
+
+<figure>
+<img src="/assets/image/2019_04_18_varpe_nodeScript.png" width="100%" align="center" />
+<figcaption><strong>Fig 2.  - Data to arrays with JavaScript</strong></figcaption>
+</figure>
+
+<figure>
+<img src="/assets/image/2019_04_18_varpe_maxProcessing.png" width="100%" align="center" />
+<figcaption><strong>Fig 3.  - Data processing in Max/MSP</strong></figcaption>
+</figure>
+
+<p>The sound from our system gets generated as each entry in the dataset gets passed to a synth voice in Max/MSP. Here, the distance and velocity gets used to create a model of the sound passing by, creating a doppler effect, much like the sound of a car going past at high speed. The magnitude of the object gets mapped to the pitch of an oscillator, creating a single tone for each object.</p>
+
+<h2 id="timeline">Timeline</h2>
+
+<figure>
+<img src="/assets/image/2019_04_18_varpe_timeline.png" width="100%" align="center" />
+<figcaption><strong>Fig 4. Timeline</strong></figcaption>
+</figure>
+
+<h2 id="progress-after-the-end-of-the-course">Progress after the end of the course</h2>
+
+<p>The last day of the course, we presented an example of our system using randomly generated mock data played at slightly varying intervals. We still had not cracked how to read each entry of data at the correct time, so the sounds were only slightly varying and were not based on real world data. After the end of the course, we continued to develop a solution that would create a sort of timestamp based on the date of each object. With this we could calculate the delay between each entry to the next and pass the data to the sound generation in Max/MSP at those intervals.</p>
+
+<p>In the end, we managed to use a naive conversion of the date in Max/MSP (Fig. 5) to get the number of minutes after the start of each year and then scale it to get the delay in milliseconds. The solution isn’t generally applicable, meaning it only works for 2019 and 2020, but it is possible to improve the function to make it usable with any year and give the correct time, even with leap years.</p>
+
+<p>This solution made it possible to use the correct data for sonification and is the key for the end result presented in this blogpost. In addition, the scaling of data to sound parameters was tuned to create more distinct sounds based on the object’s characteristics.</p>
+
+<figure>
+<img src="/assets/image/2019_04_18_varpe_dateConv.png" width="100%" align="center" />
+<figcaption><strong>Fig 5 - Date conversion</strong></figcaption>
+</figure>
+
+<p>Here you can hear an example of how the NEO data is sonified by our system:</p>
+
+<figure align="middle">
+<audio controls="">
+  <source src="https://docs.google.com/uc?export=download&amp;id=170PbicG6bGx7HgFuDcrNS235QSTAqWfE" type="audio/mp3" volume="0.2" />
+  Your browser does not support the audio element.
+</audio>
+  <figcaption><strong>Audio demo of NEO sounds</strong></figcaption>
+</figure>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>The main challenges for the project were the use of the unfamiliar tool Node for Max and the data file (JSON) format which made it difficult to work within Max/MSP. It is important to mention that the decisions we made regarding the relations between the NGO parameters and the sound parameters, were based on a short discussion we conducted within our group. We decided to go with what seemed, at least to us, to be a clear and obvious connection of sound elements and NGO parameters. We view the presentation of a clear dataset, being able to implement the data with Node.js and developing the sound generator within Max/MSP, as our main achievements. In the end, we made the system work mostly as intended, resulting in sound from data.</p>
+
+<p>Please take a look at our project files in the <a href="https://github.com/MeltingPlanet/SonifiGroupProj" target="_blank">Code repository</a>.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sonification/2019/05/20/NEO.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

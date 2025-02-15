@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Ambisonics! | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Ambisonics!" />
+<meta name="author" content="Mari Lesteberg, Elias Andersen, Ashane Silva" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="On 27 February 2019, we had a workshop on Ambisonics in the portal course. Anders Tveit gave us a lecture on how to encode and decode sound inputs from Lola, using the AIIRADecoder in Reaper." />
+<meta property="og:description" content="On 27 February 2019, we had a workshop on Ambisonics in the portal course. Anders Tveit gave us a lecture on how to encode and decode sound inputs from Lola, using the AIIRADecoder in Reaper." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/02/27/Ambisonics.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/02/27/Ambisonics.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_27_aleksati_2702scrsh.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-27T14:40:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_27_aleksati_2702scrsh.png" />
+<meta property="twitter:title" content="Ambisonics!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mari Lesteberg, Elias Andersen, Ashane Silva"},"dateModified":"2019-02-27T14:40:00+00:00","datePublished":"2019-02-27T14:40:00+00:00","description":"On 27 February 2019, we had a workshop on Ambisonics in the portal course. Anders Tveit gave us a lecture on how to encode and decode sound inputs from Lola, using the AIIRADecoder in Reaper.","headline":"Ambisonics!","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_27_aleksati_2702scrsh.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/02/27/Ambisonics.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Mari Lesteberg, Elias Andersen, Ashane Silva"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2019/02/27/Ambisonics.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Ambisonics!
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-02-27T14:40:00+00:00"
+        itemprop="datePublished"
+      >Feb 27, 2019 •
+      </time>
+         
+      <a href="/authors/marilesteberg.html">Mari Lesteberg,</a>
+           
+      <a href="/authors/eliasandersen.html">Elias Andersen,</a>
+           
+      <a href="/authors/ashanesilva.html">Ashane Silva</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="portal-workshop-on-ambisonics-27-february-2019">Portal workshop on Ambisonics, 27 February 2019</h2>
+
+<p>On 27 February 2019, we had a workshop on Ambisonics and the SoundField microphone in the portal course. Anders Tveit gave us a lecture on how to encode and decode sound inputs from Lola, using the AIIRADecoder in Reaper. He talked about different formats, and that we had to convert A format to B format with software. And then convert it to Ambic format.</p>
+
+<p>We made a session in Reaper with bus tracks for the purpose of encoding and decoding the signals.  The inputs from the soundfiled SPS200 microphone was converted from A-format to B-format using the “surroundZone2 plugin” which is completely free to use.</p>
+
+<p><img src="/assets/image/2019_02_27_aleksati_sourrondzoneB.png" width="80%" height="80%" /></p>
+
+<p>The next was to convert the B-format to B-format (ambix) by using the “soundfield plugin” by “RODE”</p>
+
+<p><img src="/assets/image/2019_02_27_aleksati_rode.PNG" width="80%" height="80%" /></p>
+
+<p>Later in the chain we used the AIRADecoder to decode the audio in to the speaker setup.</p>
+
+<p><img src="/assets/image/2019_02_27_aleksati_2702scrsh.png" width="80%" height="80%" /></p>
+
+<p>We learned that you can have as many speakers as you like, but at least 4 speakers. Then we discussed what microphone shape/pattern to use, like omni, heart-shape etc.</p>
+
+<h3 id="binaural-decoding">Binaural Decoding.</h3>
+
+<p>We managed to tryout the “MultiEncoder” from IEM plugin suite to encode multiple input and also used the “binauraldecoder” to decode and listen to the audio with headohones.</p>
+
+<p><img src="/assets/image/2019_02_27_aleksati_multiencoderIEM.PNG" width="40%" height="40%" /></p>
+
+<p><img src="/assets/image/2019_02_27_stefanof_Binural.PNG" /></p>
+
+<p>This was the chain flow: Midas mixer - &gt; Computer - &gt; mixer - &gt; Lola - &gt; Speakers</p>
+
+<p>After the lecture, we started to set up the portals with eight speakers, that had to be placed with the right angle relative to each other. In Oslo, we chose not to mount the speakers in the sealing, but to set up a non-permanent with speaker stands instead. It is important to set the speakers at the correct spot with right angle and the same distance from where we set the middle point. It is also important to set the same volume for all the speakers. The reason why this is important is that the volume and the distance to the speakers will interfer with Ambisonic, since volume is the main factor to make this immersive space.</p>
+
+<p><img src="/assets/image/2019_02_27_aleksati_speakersetup_portalAmbisonic.jpg" width="80%" height="80%" /></p>
+
+<h2 id="experimenting-with-e4l-reverb">Experimenting with E4L Reverb</h2>
+
+<p>In Oslo we tried out using some of the binaural effects included with the E4L plugin suite. One of the more striking effects we tried was the E4L B-format convolution reverb. This reverb used to the extreme, when paired with the binaural setup had a strong, alien washed out effect on the voices spoken into the microphone. This by itself ws pretty spooky, and falls into the catagory of augmented reality. (no natural reverb can ever last that long!)The settings on the reverb size was a massive 300% and higher!</p>
+
+<h2 id="challenges-about-the-set-up">Challenges about the set-up:</h2>
+
+<p>Next time we should clear the floor completely before setting up all the equipment. As you can see from the picture above there was a lot of cables laying around. It might have been easier if we had a proper speaker setup in the sealing. Since this was a short time solution and was lacking speakers mounts for the sealing, we went for the floor option.</p>
+
+<p>To get the angle and the distance between the speakers was not as easy as we first thought. Since every time you move one speaker, the other once have to be moved to. In case you do not set it at the right position from the start, which we had trouble with. Here a laser meter would have been useful. Since we could then print out a paper which we lay in the middle of the setup. On this paper we could have eight direction, one for each speaker, and then point the laser in the right dirction for each speaker and then the measure the right distance.</p>
+
+<p><em>Trying to measure up the dictance between the speakers in the middle of a cable jungle</em></p>
+
+<p><img src="/assets/image/2019_02_27_aleksati_27feb2.jpg" /></p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2019/02/27/Ambisonics.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

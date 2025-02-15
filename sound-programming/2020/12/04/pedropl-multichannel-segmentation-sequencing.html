@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Segmentation and Sequencing from and to Multichannel Audio Files | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Segmentation and Sequencing from and to Multichannel Audio Files" />
+<meta name="author" content="Pedro Lucas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The strategy explained here considers the slicing of stereo audio files and the production of a new stereo output file based on a multichannel solution. The spectral centroid is used to reorder and intercalate segments in an ascending or descending order according to some rules." />
+<meta property="og:description" content="The strategy explained here considers the slicing of stereo audio files and the production of a new stereo output file based on a multichannel solution. The spectral centroid is used to reorder and intercalate segments in an ascending or descending order according to some rules." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/04/pedropl-multichannel-segmentation-sequencing.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/04/pedropl-multichannel-segmentation-sequencing.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_03_pedropl_multichannel_segmentation_sequencing.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-04T04:30:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_03_pedropl_multichannel_segmentation_sequencing.png" />
+<meta property="twitter:title" content="Segmentation and Sequencing from and to Multichannel Audio Files" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pedro Lucas"},"dateModified":"2020-12-04T04:30:00+00:00","datePublished":"2020-12-04T04:30:00+00:00","description":"The strategy explained here considers the slicing of stereo audio files and the production of a new stereo output file based on a multichannel solution. The spectral centroid is used to reorder and intercalate segments in an ascending or descending order according to some rules.","headline":"Segmentation and Sequencing from and to Multichannel Audio Files","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_12_03_pedropl_multichannel_segmentation_sequencing.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/04/pedropl-multichannel-segmentation-sequencing.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Pedro Lucas"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/12/04/pedropl-multichannel-segmentation-sequencing.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Segmentation and Sequencing from and to Multichannel Audio Files
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-12-04T04:30:00+00:00"
+        itemprop="datePublished"
+      >Dec 4, 2020 •
+      </time>
+         
+      <a href="/authors/pedrolucas.html">Pedro Lucas</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="overview">Overview</h1>
+
+<p>The segmentation and sequencing solution proposed here takes multiple audio files of any number of channels, then it extracts segments per each channel based on the detection of onset points. The mean of the spectral centroid is calculated for each segment, which is used as a parameter to sort the slices in an ascending or descending order. Those segments are organized in a data structure that is used later for a sequencing process that merges the segments in an intercalated way to compose a new multichannel output file.</p>
+
+<p>An implementation of this strategy was developed in Python. Two audio stereo files were used for testing purposes, corresponding to the following songs:</p>
+
+<figure style="float: none">
+    <iframe width="auto" height="240" src="https://www.youtube.com/embed/jda_k6r9R1A" frameborder="0" allowfullscreen=""></iframe>
+    <figcaption>L'Impératrice - AGITATIONS TROPICALES</figcaption>
+</figure>
+
+<figure style="float: none">
+    <iframe width="auto" height="240" src="https://www.youtube.com/embed/djV11Xbc914" frameborder="0" allowfullscreen=""></iframe>
+    <figcaption>a-ha - Take On Me</figcaption>
+</figure>
+
+<p>The resulting output is the next one:</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_12_03_pedropl_segmentation_sequencing_output.mp3" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>Output Audio File</figcaption>
+</figure>
+
+<h1 id="the-strategy">The Strategy</h1>
+
+<h2 id="segmentation-and-analysis">Segmentation and Analysis</h2>
+
+<p>The whole algorithm is developed to take into account multiple channels, that is, the input could be mono, stereo, or have more than two channels. Moreover, the output could be a multichannel audio file built from the input channels. It is possible to have different number of channels for the output regarding the input files.</p>
+
+<p>The algorithm takes every channel and manages it as a single signal. Firstly, segments and relevant data are extracted per each channel by following the next procedure:</p>
+
+<ol>
+  <li>Obtain onset points.</li>
+  <li>The user could decide to reduce the number of onsets, which means a kind of merging of contiguous segments. They could be merged in groups of N segments. This step is indented to reduce the number of segments if needed (which reduces execution time).</li>
+  <li>The collection of onsets is iterated to define the segments by the start and end points. It considers that onsets could not be exactly in index 0 or the last point of the signal. Segments are accumulated in a collection.</li>
+</ol>
+
+<p><strong>Analyzing:</strong></p>
+
+<ol>
+  <li>While onsets are iterated and segments are defined, each segment is analyzed by getting its spectral centroid mean.</li>
+  <li>The centroids are sorted from lowest to highest, nevertheless, it could be configured to sort from highest to lowest depending of the rules explained later in the sequencing part. The output of the sorting is an array that contains the indexes ordered according to the selected criteria, which is useful for accessing in that order to the whole data structure in which the segment is associated.</li>
+  <li>Useful output parameters are obtained for the later sequencing process(segments, start points from onsets, spectral centroids, sorted indexes)</li>
+</ol>
+
+<h2 id="structuring-the-whole-segmentation">Structuring the whole segmentation</h2>
+
+<p>A data structure collection is shaped in this step. This collection contains the relevant data for each channel from each audio file. For each channel, it obtains the output data given by the process explained above, that is, segments and relevant data. The sorting is inverted (from highest to lowest) when the target input signal is in an odd position (starting from zero) considering the order in which it is processed, that is, the first file (zero) will not be inverted in the sorting of its segments, and the second file (one) will be, and so on.</p>
+
+<p>Also, this process collects the <em>maximum number of segments that could be found in a channel</em>, which is used in the sequencing strategy.</p>
+
+<p>At the end, a complete data structure will contain all the segments and their data organized properly in order to be sequenced later.</p>
+
+<h2 id="sequencing-algorithm">Sequencing Algorithm</h2>
+
+<p>The number of channels for the complete output signal is defined initially, in the example was established a stereo (2 channels) signal. A new output signal is constructed for each channel. This strategy takes all the segments from the same channel that corresponds to the input signals, that is, assuming that channels are numbered from zero, if the output channel is 0, then all the segments to be merged will be from channel 0 of the input signals, in case that the number of channels mismatch, the strategy will take channels in a circular way, for instance, if the output channel is 3 and there are only 2 channels in the input, channel 3 will take segments from channel 0.</p>
+
+<p>The segments are taken from the complete data structure. As the exact number of segments in this particular iteration process is not known initially, the <em>maximum number Of segments in a channel</em> calculated previously is used, then each signal is iterated and the segments and their data is retrieved by using the number of the channel that is being filled. Segments are accessed via the sorted collection of indexes based in the spectral centroid, which ensures a merging order considering the criteria explained previously. Note that indexes must be validated to be within the range of the number of segments since the general segment index per each iteration is limited by <em>maximum number Of segments in a channel</em> and not all channels has that number of segments, they could have fewer of them.</p>
+
+<p>This merging process intercalates between signals for each channel, for example, segment 0 from file 0 is merge with segment 0 from file 1, then segment 1 from file 0 and segment 1 from file 1, and so on. Also, the order of the segments is inverted for odd channels, which gives a very noticeable effect in the channels when they are heard simultaneously.</p>
+
+<p>The effect of this strategy is reflected in the image below. It represents the output generated that used the input songs mentioned previously. Here, each slice is differentiated within the waveform according to the corresponding input, also it is noticeable how the spectral centroid is increasing or decreasing per each channel. Considering that this is a vector-based image,  you can open a new tab and zoom in <a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_12_03_pedropl_multichannel_segmentation_sequencing_plot.svg" target="_blank" rel="noopener">here</a></p>
+
+<figure style="float: auto">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_12_03_pedropl_multichannel_segmentation_sequencing_plot.svg" alt="Output Visualization" title="Output Visualization" width="auto" /> <figcaption>Output Visualization</figcaption>
+</figure>
+
+<h1 id="reflection">Reflection</h1>
+
+<p>This strategy is an interesting process to perform a kind of concatenative synthesis over multichannel files and for generating a multichannel output. The feature used (Spectral Centroid) can be combined with other features, or the sequencing solution could be modified in favor of a better aesthetical result.</p>
+
+<p>The output is highly variated in both ears when it is heard, I do not consider that is aesthetically appealing, but that is a subjective judgment. However, it is noticeable that the effect of slicing by using onsets is present per each segment in the resulting output, and the influence of the sorting regarding the spectral centroid could be appreciated when there are some smooth segments when values are lower, or a high concentration of segments and more rich sounds when values are higher, at the end, this feature is related perceptually with the ‘timbre’, that is, the ‘brightness’, and one can argue that variations of this parameter are changing in a more or less way across the output.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/12/04/pedropl-multichannel-segmentation-sequencing.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Scientific Computing Midterm | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Scientific Computing Midterm" />
+<meta name="author" content="Alena Clim, Leigh Murray, Abhishek Choubey" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Team A’s reflection on the midterm scientific computing assignment. Shortly, this had a purpose of creation of a general python program that would read audio files from a specified folder based on a csv file and would output another csv file with an added values for each individual audio file: the average Root Mean Square, Zero Crossing Rate, Spectral Centroid. Moreover, the program displays and saves to a file several scatterplots." />
+<meta property="og:description" content="Team A’s reflection on the midterm scientific computing assignment. Shortly, this had a purpose of creation of a general python program that would read audio files from a specified folder based on a csv file and would output another csv file with an added values for each individual audio file: the average Root Mean Square, Zero Crossing Rate, Spectral Centroid. Moreover, the program displays and saves to a file several scatterplots." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/10/14/alena-programming-team-a.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/10/14/alena-programming-team-a.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_15_abhishec_pythonlogo.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-14T14:16:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_15_abhishec_pythonlogo.jpeg" />
+<meta property="twitter:title" content="Scientific Computing Midterm" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alena Clim, Leigh Murray, Abhishek Choubey"},"dateModified":"2020-10-14T14:16:16+00:00","datePublished":"2020-10-14T14:16:16+00:00","description":"Team A’s reflection on the midterm scientific computing assignment. Shortly, this had a purpose of creation of a general python program that would read audio files from a specified folder based on a csv file and would output another csv file with an added values for each individual audio file: the average Root Mean Square, Zero Crossing Rate, Spectral Centroid. Moreover, the program displays and saves to a file several scatterplots.","headline":"Scientific Computing Midterm","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_15_abhishec_pythonlogo.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/10/14/alena-programming-team-a.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alena Clim, Leigh Murray, Abhishek Choubey"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/10/14/alena-programming-team-a.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Scientific Computing Midterm
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-10-14T14:16:16+00:00"
+        itemprop="datePublished"
+      >Oct 14, 2020 •
+      </time>
+         
+      <a href="/authors/alenaclim.html">Alena Clim,</a>
+           
+      <a href="/authors/leighmurray.html">Leigh Murray,</a>
+           
+      <a href="/authors/abhishekchoubey.html">Abhishek Choubey</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="assignment-description">Assignment description</h1>
+
+<h3 id="input-components">Input components</h3>
+
+<p>A folder with several audio files (.wav) and a CSV file containing the descriptions of each audio file (i.e. labels) - each file is a recording of one acoustic musical instrument of different length and formal (i.e. sampling rate and number of channels).</p>
+
+<h3 id="tasks">Tasks</h3>
+
+<p>Write a python program which creates (and saves) another CSV file with extra columns for each audio file:</p>
+<ul>
+  <li>the average Root Mean Square (rms)</li>
+  <li>the average Zero Crossing Rate (zcr)</li>
+  <li>the average Spectral Centroid (cent)</li>
+  <li>a positive integer number representing each label (e.g., 0 for all instruments X, etc.)</li>
+</ul>
+
+<p>The program should also display (and save to a file) scatter plots with color code entries per instrument, labeled axis and a legend of:</p>
+<ul>
+  <li>Root Mean Square (rms) vs Zero Crossing Rate (zcr)</li>
+  <li>Zero Crossing Rate (zcr) vs Spectral Centroid (cent)</li>
+  <li>Root Mean Square (rms) vs Spectral Centroid (cent)</li>
+</ul>
+
+<h3 id="submissions">Submissions</h3>
+
+<ul>
+  <li>Submit once immediately after class.</li>
+  <li>Submit one more time the whole code after a few days.</li>
+  <li>Submit the final version after reviewing the reference solution with documented additional changes (if any).</li>
+</ul>
+
+<h2 id="alenas-reflection">Alena’s reflection</h2>
+
+<p>I consider this assignment a good mix of the things we were taught so far. It also offered flexibility regarding the libraries to be used and the programming styles. This is particularly important since all members of our team come from different backgrounds and approached the tasks accordingly.</p>
+
+<p>Leigh’s used with software de development so his code was closer to what I’d call low-level programming - he used lists and did not try to put the CSV file into a DataFrame (such as pandas). It was educational to see how the same things can be done without many external libraries. Choubey is pretty new to programming so his style was more unstructured and repetitive (such as when calling the plots), but it was good to see how he, having a “fresh perspective”, solved the tasks. I sometimes feel like the more one programs the bigger their bias regarding programming styles, libraries, functions and other preferences. Having had some experience before with these libraries, this assignment was an opportunity for me to learn how to use new functions of the aforementioned libraries such as pandas.unique and to learn to think of arrays as audio files.</p>
+
+<p>After reviewing the referenced solution I realised it’s easier to use built-in matplotlib.style for styling the appearance of the plots instead of manually setting up colors, axis styles and markers’ shapes. I wrote my code with functions, so there wasn’t much else to change to make it more efficient.</p>
+
+<h2 id="leighs-reflection">Leigh’s reflection</h2>
+
+<p>Choubey’s programming has more of an unstructured programming style, with less functions overall which results in a bit of repetition of code, for example when multiple plots have to be drawn with different data. Alena’s programming style uses functions and appears to be from an analytical programming background, with more knowledge of the pandas library and plotting functions.  I come from a software development background so I prefer classes and functions, but have not used any analytical or statistical libraries, so my code tends to rely on built-in object types.</p>
+
+<p>After reviewing the example solution and my teammates original submissions I learnt about the usefulness of pandas when working with structured data.  I changed my code to stop using python Lists and instead to use Pandas Data Frames.  Pandas Data Frames have built-in functions for working with tabulate data, which made it relatively easy for me to transfer my knowledge of working with SQL databases to working with Pandas.  I was able to simplify my code for retrieving unique values from a column, filtering or <em>selecting</em> specific data, and in turn resulted in a much cleaner process for plotting the individual instruments on the graphs. Originally, there was no way for matplotlib to know which dots related to which instrument, as I passed all the plot coordinates at once and provided another array of colours that associated them with their instrument. This taught me how to create a custom legend but is much less reusable than providing different sets of plot coordinates for each instrument, as I did when using Pandas, and letting matplotlib handle the display itself.</p>
+
+<h2 id="choubeys-reflection">Choubey’s reflection</h2>
+
+<p>This was a fun assignment to work upon, perfectly summing up all the things we have learned midway through the course. There were three submissions in total, and my code improved a lot after every submission. After submitting a very abstract Jupyter with tons of things happening in it in the first submission, and putting all of my weekend in it, I felt a sense of fulfilment when the code finally worked. Since I don’t have an adequate programming background, I wanted to have a working program which satisfies all the conditions first not worrying about the efficacy much, and without taking help or inspiration from my teammates or other people’s code, therefore I made a choice of not looking at the codes of my teammates until I was able to do so. Which didn’t turn out to be a comforting decision, as I had to really work hard to convert my logic or the algorithm that I had in my mind into code. After having made the program to work and seeing how Leigh and Alena approached the assignment, I understood what the code I made needed in the next iteration (the third submission), the areas of improvement rightly noted by both of my teammates - a proper structure and the redundancy fact. I needed functions upon which I effectuated in the last submission. This assignment helped to realize where I am at, things I am good at and areas I need to work upon, also completing it have made me confident and optimistic towards the enchanting world of Scientific Computing.</p>
+
+<p>Talking about the programming style of my teammates, both Leigh &amp; Alena have a similar one in my opinion, whereas Leigh’s approach maintains a low level programming, Alena’s style is more open. I believe I have a lot to learn and my teammates’ high level knowledge will help me a lot to become a sound programmer (pun intended).</p>
+
+<h2 id="other-thoughts">Other thoughts</h2>
+
+<p>Overall, the content of this course has been well structured to bring newcomers up to speed while still offering challenges and new technologies for experienced software developers.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/10/14/alena-programming-team-a.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sonification of plants through Pure Data | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Sonification of plants through Pure Data" />
+<meta name="author" content="Gaute Wardenær" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I am not sure if I am going crazy or if I am actually interacting with plants, but here me out here" />
+<meta property="og:description" content="I am not sure if I am going crazy or if I am actually interacting with plants, but here me out here" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/11/plant-interface.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/11/plant-interface.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_gtwarden_patch_2.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-11T21:10:42+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_gtwarden_patch_2.png" />
+<meta property="twitter:title" content="Sonification of plants through Pure Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gaute Wardenær"},"dateModified":"2020-02-11T21:10:42+00:00","datePublished":"2020-02-11T21:10:42+00:00","description":"I am not sure if I am going crazy or if I am actually interacting with plants, but here me out here","headline":"Sonification of plants through Pure Data","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_gtwarden_patch_2.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/11/plant-interface.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Gaute Wardenær"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/11/plant-interface.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Sonification of plants through Pure Data
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-02-11T21:10:42+00:00"
+        itemprop="datePublished"
+      >Feb 11, 2020 •
+      </time>
+         
+      <a href="/authors/gautewarden%C3%A6r.html">Gaute Wardenær</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
+<p>For this project I wanted to do something I had heard was possible, but never had experienced for myself. The consept has often been used as an explanation for “plant intelligence” and proned as i am to thinking in those ways, I am not totally convinced. Yet…</p>
+
+<p>I wrote a journal throughout the project and have chosen to publish the entire thing here as a way of capturing the essence of the creative process. Feel free to skip to the bottom where I have written a more comprehensive summary of the project, including the performance.</p>
+
+<h2 id="journal">Journal</h2>
+
+<p>Ok, my goal now is to make this thing sound a bit more “humane”, maybe to the point that it could be used as a legit instrument.</p>
+
+<p>What I really miss from the original idea is some sort of percussion and melody.</p>
+
+<p>That’s why I decided to implement a step sequencer. I found some inspiration on the internet and made a very simple one from a metro, a selector and a lot of sliders to control the pitch of the oscillator.</p>
+
+<p>I don’t know what happened just now, but it suddenly struck me that I wanted to do something with binaural audio. It should be very simple, just having two oscillators (one for each ear) and pitching one up a couple of hertz. (this was a total digression, but the patch is still in the folder).</p>
+
+<p>Day two of actually working on this!</p>
+
+<p>The step sequencer I added suddenly got a purpose: I want it to make random melodies from different scales, according to the input value!</p>
+
+<p>Aaaaaand creativity struck!</p>
+
+<p>I had the idea that I wanted to make some sort of melody, but I didn’t know what it should be. I figured that I might use five different pre-determined melodies for the five different states of the amplitude on the input, but somehow the idea of making this pre-determined didn’t seem right.</p>
+
+<p>Then I figured that I would make it random. Not just a little random, but very random. Like a “random” object feeding into another “random” object kind of random! But still, it would need to reflect some sort of “mood” in the output of the thing. What if I restricted the randomness to scales? This way, state one could be major, state two could be phrygian, state three could be minor, and so on and so forth.</p>
+
+<p>WOW!</p>
+
+<p>The weirdest thing just happened.</p>
+
+<p>I am not sure if I am going crazy or if I am actually interacting with plants, but here me out here:</p>
+
+<p>I soldered the pins of an XLR-plug to three leads, connected to alligator clips. The XLR was then connected to the input of the sound card in order to capture the differing conductivity in the material connected to the leads.</p>
+
+<p>I touched the ends of the clips together, and sure enough, the signal spiked.</p>
+
+<p>Since I have a large plant right by my desk anyways, I immediately connected the clips to this plant to find out once and for all if they really do have intelligence. Expecting to be disappointed, I calibrated the input so that the baseline current floated around 0 and 1 on the output and held my breath as I started interacting with the plant.</p>
+
+<p>To my great surprise and delight, the signal started fluctuating once I touched the plant and the more volatile the interaction, the greater the fluctuation in the signal. WHAT?!</p>
+
+<p>Ok, there has to be a good explanation for this.</p>
+
+<p>Of course! The noise I get on the signal comes from the cables I attached to the plant hitting each other and therefore creating “mechanical” noise! I tried to mess around with the cables, shaking them; nothing… No major fluctuations in the signal.</p>
+
+<p>Aha! I was the one who interfered with the signal with the conductivity of my skin, that must be it! So I put on a pair of plastic gloves and repeated the process. I almost did not believe that the fluctuations in the voltage still occurred at the input!</p>
+
+<p>Maybe the fact that I rattle the plant made the change, so that the teeth on the clips grinded on the stem of the plant and thereby caused the reaction? That had to be it. I therefore preceded to pinch my green friend while still wearing the rubber gloves, making sure not to rattle the leaves or cause any form of movement in the leaves. Still, there was a reaction! The graph in the array and the sound produced corresponded perfectly with how hard I pinched, almost like a pressure sensor.</p>
+
+<p>I am sure there has to be a good explanation for this, but right now I am too ecstatic from the results to have any sort of critical opinion on this.</p>
+
+<p>Allright.</p>
+
+<p>After the initial excitement of achieving interspecies communication, I proceeded to do two things:</p>
+
+<p>1: Clean up the patch from something resembling a drunken bird’s nest to something a lot neater. It is truly amazing what one can do with some “send” and “receive” boxes and nudging objects around to be symmetrical.</p>
+
+<p>2: Making the thing sound nice.</p>
+
+<p>The original patch used a very basic sawtooth oscillator as the sound-generator for the instrument, but since I decided that I wanted only one voice, this started to sound a bit thin by its own. A fuller sound was achieved by adding more oscillators and multiplying them slightly, to spread them out in the frequency spectrum.</p>
+
+<p>I wouldn’t call the sound it makes now “beautiful” but I deem it a lot better than when I started.</p>
+
+<h2 id="the-performance">The performance</h2>
+
+<p>To be honest I was very nervous before presenting for the class, since all the other presentations before me (all the other presentations before me) involved patches that were so much more complex and sophisticated than mine. I want blame the lack of time I had to prepare for this due to the seeming conspiration made by the rest of the universe to sabotage my work in PD up to this point, but it was probably a bit of my planning as well.</p>
+
+<p>Despite my nervousness, I thought the performance went pretty well.</p>
+
+<p>This might be flattering myself, but I think that me not focusing too much on making the patch any more complicated or overly technical than absolutely necessary was of great help to the creative process and facilitated “out of the box” thinking.</p>
+
+<p>I guess that the act of bringing a live plant as as the interface for my instrument to class and showing that the patch really worked helped a lot as emotional support during the performance.</p>
+
+<figure>
+<img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_gtwarden_performance.jpg" width="80%" height="80%" align="center" frameborder="0" allowfullscreen="true" alt="Mesmerising GUI" />&lt;/img&gt;
+<figcaption>Photo credit to the great Thomas Anda</figcaption>
+</figure>
+
+<h2 id="reflections-on-the-process-of-learning-pure-data">Reflections on the process of learning Pure Data</h2>
+
+<p>Although I had experience in PD from earlier projects done here at SMC and some knowledge of MAX MSP from my bachelor’s degree, the last two weeks has been a quantum leap when it comes to learning the software.</p>
+
+<p>I quickly adopted the process of figuring out where I wanted to go with the idea and then making a patch for it, not the other way around. Having creativity drive innovation has been my preferred way of thinking ever since I in 4th grade refused to learn to do division on paper until the teacher presented me with a real life situations where I had to and this was no exception.</p>
+
+<p>I feel like so many examples on the internet of the use of Pure Data are done only for the sake of making a patch in Pure Data. In my opinion, the reason for making a patch in PD and not using some product that already exists on the internet should be because the solution to what you want to do does not already exist. The patches presented by my classmates today really reflect the same idea by almost exclusively being original and novel ideas.</p>
+
+<video width="640" height="480" controls="" align="middle"><source src="https://docs.google.com/uc?export=download&amp;id=13QrYcxNAPrM8ajX87oTciom28arylcuA" type="video/mp4" /></video>
+<p>A video of me demonstrating the patch</p>
+
+<h2 id="about-the-patch">About the patch</h2>
+
+<p>The patch is made entirely out of PD Vanilla -objects.</p>
+
+<p>Event the reverbs are plain vanilla, so do I need to credit them? If so I will credit the entire Pure Data community.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/02/11/plant-interface.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

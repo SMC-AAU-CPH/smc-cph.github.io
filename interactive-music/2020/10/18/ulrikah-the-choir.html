@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Voice augmentation with sensors | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Voice augmentation with sensors" />
+<meta name="author" content="Ulrik Halmøy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Trying to achieve a choir-like effect by augmenting microphone input with sensory features" />
+<meta property="og:description" content="Trying to achieve a choir-like effect by augmenting microphone input with sensory features" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/18/ulrikah-the-choir.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/18/ulrikah-the-choir.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_18_ulrikah_ims_cover.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-18T10:01:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_18_ulrikah_ims_cover.png" />
+<meta property="twitter:title" content="Voice augmentation with sensors" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulrik Halmøy"},"dateModified":"2020-10-18T10:01:00+00:00","datePublished":"2020-10-18T10:01:00+00:00","description":"Trying to achieve a choir-like effect by augmenting microphone input with sensory features","headline":"Voice augmentation with sensors","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_18_ulrikah_ims_cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/18/ulrikah-the-choir.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Ulrik Halmøy"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/18/ulrikah-the-choir.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Voice augmentation with sensors
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-10-18T10:01:00+00:00"
+        itemprop="datePublished"
+      >Oct 18, 2020 •
+      </time>
+         
+      <a href="/authors/ulrikhalmoy.html">Ulrik Halmøy</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>For this project, I wanted to create an interactive music system based on my own voice. Being inspired like Holly Herndon’s SPAWN, I tried to investigate ways of making one monophonic voice sound like a full choir. Spoiler alert: it ended up sounding more like a detuned alien than anything else.</p>
+
+<h2 id="design">Design</h2>
+
+<p>The figure below shows a rough sketch of the signal flow in the application.</p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_10_18_ulrikah_ims_design_overview.png" alt="Overview of the signal flow in the system" title="Signal flow" /></p>
+
+<p>In short, the microphone input is routed through an effect rack containing five individually tuned voices of a pitch shifter, a distortion and a delay line with feedback. The pressure sensor is mapped to the dry/wet mix of both the pitch shifter and the distortion, with the idea being that <em>the more force you apply to the microphone, the more extreme the sound</em>. A soft membrane potentiometer was mapped to the delay time of the delay effect. At last, the piezo microphone triggers an envelope when it picks up signal above a certain threshold. The threshold was set so that you have to hit the surface on which the piezo is lying relatively hard in order to trigger the output. The envelope was mapped to the dry/wet mix of the delay line, creating bursts of a delay/feedback effect.</p>
+
+<h2 id="result">Result</h2>
+
+<p>The short timestamped snippet below shows how the system sounds.</p>
+
+<figure>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gEq9EnWrApc?start=1025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+    </iframe>
+    <figcaption>Small snippet from the performance</figcaption>
+</figure>
+
+<p>The figure below show how the hardware was connected in my system.</p>
+
+<p><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_10_18_ulrikah_ims_hardware.jpg" alt="Hardware connections in the system" title="Hardware connections in the system" /></p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>Due to various circumstances, I didn’t get to work as much with this project as I would like to. One of the things I realised too late that I should have set aside more time to design the physical system. Almost until the deadline, I worked only with the software, and with the sensors loosely coupled together on the breadboard, as you can see in the image detailing the hardware connections above. For the next physical interface I’m making, I think I will try to start in the other end - by first sketching out how I want the system to look and feel, and design the audio engine based on the affordances of that physical interface.</p>
+
+<p>Overall, I wasn’t too satisfied with the otucome of this project. I would love to spend more time on making more natural sounding choir effects, even though this wasn’t the main goal of the course. I also realise that I should have explored more embodied ways of interacting with this instrument, as the current setup don’t afford a lot of playability.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2020/10/18/ulrikah-the-choir.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

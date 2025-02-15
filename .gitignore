@@ -1,8 +1,0 @@
-.DS_Store
-Gemfile.lock
-_site
-.sass-cache
-node_modules/
-.jekyll-metadata
-.vscode/
-_posts/2022-11-29-masoudn-blackhole.md

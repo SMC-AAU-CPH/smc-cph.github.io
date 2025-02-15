@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>FAM Synthesizer | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="FAM Synthesizer" />
+<meta name="author" content="Henrik Sveen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A simple digital synthesizer with the potential of sounding big, complex and kind of analog. Screenless menudiving included." />
+<meta property="og:description" content="A simple digital synthesizer with the potential of sounding big, complex and kind of analog. Screenless menudiving included." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/11/10/henrikhs-FAM-synth.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/11/10/henrikhs-FAM-synth.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_11_10_henrikhs_famLogo.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-10T07:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_11_10_henrikhs_famLogo.jpg" />
+<meta property="twitter:title" content="FAM Synthesizer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Henrik Sveen"},"dateModified":"2022-11-10T07:00:00+00:00","datePublished":"2022-11-10T07:00:00+00:00","description":"A simple digital synthesizer with the potential of sounding big, complex and kind of analog. Screenless menudiving included.","headline":"FAM Synthesizer","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_11_10_henrikhs_famLogo.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/11/10/henrikhs-FAM-synth.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Henrik Sveen"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/11/10/henrikhs-FAM-synth.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      FAM Synthesizer
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-11-10T07:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 10, 2022 •
+      </time>
+         
+      <a href="/authors/henriksveen.html">Henrik Sveen</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2022_11_10_henrikhs_fffamfinal2.jpg" alt="mage not showing? Will try to fix it." title="Image Title" width="auto" />
+   <figcaption>Final version of FAM.</figcaption>
+</figure>
+
+<p>For my SMC4054 Interactive Music Systems midway project I made a FM/AM synthesizer with analog modulation. FM and AM can be very digital sounding, so I wanted to explore and expand some features in this specific synthesis model. Everything was made in Pure Data.</p>
+
+<h4 id="sound-engine">Sound Engine</h4>
+<p>It consists of one carrier oscillator, one FM modulator and one AM modulator which i quitesimole, though the combination of FM and AM in itself opens for some new sonic possibilities as they have different sonic attributes. Ratio is selected from a set of harmonic intervals and modulation amount can be set from 0 to 100 %. To expand on this concept I have added stereo detune for all oscillators, which widens the sound and makes the modulation feel quite different from regular mono signal path modulation. This is also a way to access the non-harmonic ratio parameters for the modulators creating bell and metal like sounds. Lastly there is an ADSR for each of the oscillators and a distortion on the summed output for some analog ish grit.</p>
+
+<h4 id="screenless-menu">Screenless Menu</h4>
+<p>One thing is that I don’t know exactly how to integrate a screen into a setup. Another thing is that I in general feel like the screen is distracting me as a user from interacting with the sounds that I sculpt. So I wanted to make a menu system so I could have one encoder control many parameters, but without having to put information on a screen for feedback. The solution for this was using LED lights. At the end I got three buttons with integrated LEDs. Before this I used regular buttons and LEDs seperately. One button for “FM” menu, one for “AM” menu and one for “Amp” menu. Firstly I wanted to detect which button is pressed first to enter one of these three main menus. When the first button is pushed down, then the other buttons will enter the sub menus. The submenu is accessed once a held button is released. The button LEDs are indicating the main menu (FM, AM or Amp) and a RGB LED is indicating which submenu is active.The system is mapped as this:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Button Combination</th>
+      <th>Main Menu</th>
+      <th>Parameter</th>
+      <th>LED</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>B1</td>
+      <td>FM</td>
+      <td>Amount</td>
+      <td>Turquoise</td>
+    </tr>
+    <tr>
+      <td>B1  + B2</td>
+      <td>FM</td>
+      <td>Ratio</td>
+      <td>Pink</td>
+    </tr>
+    <tr>
+      <td>B1 + B3</td>
+      <td>FM</td>
+      <td>Detune</td>
+      <td>Yellow</td>
+    </tr>
+    <tr>
+      <td>B1 + B2 + B3</td>
+      <td>FM</td>
+      <td>ADSR</td>
+      <td>Red</td>
+    </tr>
+    <tr>
+      <td>B2</td>
+      <td>AM</td>
+      <td>Amount</td>
+      <td>Turquoise</td>
+    </tr>
+    <tr>
+      <td>B2  + B1</td>
+      <td>AM</td>
+      <td>Ratio</td>
+      <td>Pink</td>
+    </tr>
+    <tr>
+      <td>B2 + B3</td>
+      <td>AM</td>
+      <td>Detune</td>
+      <td>Yellow</td>
+    </tr>
+    <tr>
+      <td>B2 + B1 + B3</td>
+      <td>AM</td>
+      <td>ADSR</td>
+      <td>Red</td>
+    </tr>
+    <tr>
+      <td>B3</td>
+      <td>Amp</td>
+      <td>Cassette Analog FM Amount</td>
+      <td>Turquoise</td>
+    </tr>
+    <tr>
+      <td>B3  + B1</td>
+      <td>Amp</td>
+      <td>Stereo Modulation Overdrive and Filter</td>
+      <td>Pink</td>
+    </tr>
+    <tr>
+      <td>B3 + B2</td>
+      <td>Amp</td>
+      <td>Detune</td>
+      <td>Yellow</td>
+    </tr>
+    <tr>
+      <td>B3 + B1 + B2</td>
+      <td>Amp</td>
+      <td>ADSR</td>
+      <td>Red</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note that there is a relationship between which button is pressed first and the main menu.</p>
+
+<p>I found that the gestural control of menu accessing was more intuitive than I expected it to be. Of course this may have to do with the fact that I designed the menu system, so I tested it on a friend and didn’t give any information in advance. At first the menu system wasn’t very understandable, but after a few minutes it seemed like it became clearer that the buttons were directing the encoder. This was at a stage in the design process where the buttons needed to be held down for the encoder to actually send data to the desired parameter. Also I should mention that the encoder was a potentiometer at this stage. Based on the feedback from our half our session I changed from holding buttons to pushing buttons and swapping the potentiometer for an encoder. These were the major feedback points on the instrument, and it really improved the experience of using the menuless button system for accessing parameter control. It benefits on using muscle memory to navigate on the instrument which can be very effective once you spend the time needed to learn the button combinations. One obvious downside is that there is no way to control multiple parameter at once, so it calls for programming a sound to be played.
+On that note I should mention how expressive the synthesizer is. Both FM and AM modulation amount as well as amp velocity is full range MIDI velocity responsive. This gives the keyboard player a very large dynamic range regarding how hard each note is hit. Almost like playing a mallett. In addition to this I made the velocity impact the release of all envelopes so that hard hit notes have longer release and decay times than the ones played carefully. These mappings afford experimenting with expressive playing styles.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_11_10_henrikhs_famdemo.mp4" type="video/mp4" />
+  </video>
+  <figcaption>FAM - Audio Demo</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_11_10_henrikhs_fffam_schematic_comp.jpg" alt="mage not showing? Will try to fix it." title="Image Title" width="auto" />
+   <figcaption>Schematics for the hardware integration.</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_11_10_henrikhs_fffamfinal.jpg" alt="mage not showing? Will try to fix it." title="Image Title" width="auto" />
+   <figcaption>Solderboard.</figcaption>
+</figure>
+
+<h4 id="current-state-and-future-potential">Current state and future potential</h4>
+<p>For further development some sort of feedback on the encoder should be implemented, like a LED ring or strip showing the current value of the selected parameter. Without it the performer is left with listening at the sound and then assuming the current value. An interesting outcome of not knowing the value of every parameter is that the performer could rather spend energy on listening to the sound instead of thinking about the values shown for the parameter. Personally I find that when given information about the technical state of an instrument it can drag my attention away from the actual sound and towards the technical aspects of data and sound synthesis. This matter is highly subjective.
+Soundwise I enjoy the stereo FM and AM modulation. A very simple expansion on an established concept providing quite new sonic results. Musically it creates big textures that are easy to fit into mixes in subtle or aggressive ways. It can create subtle pads that can hide behind other sounds and work in the background to create a stereo room feel without adding reverb, or it can act as lead instrumentation. It naturally creates mallet type sounds of different kinds due to its modulation synthesis basis.</p>
+
+<p>The analog cassette modulation source immediately gives the sound some dustyness and serves as a very effective way to create nostalgic sounds with a good amount of personality. The benefit of using this modulation instead of sampling is that the modulation can happen globally and not on a note basis, and it excludes the matter of noise accumulation when sampling tones through old analog gear. Another aspect of this that I value is how the magnetic tape serves as a sensor for physical degradation over time when the tape is exposed for different environments like heat, humidity and so on.
+I hope to further develop this instrument so I can test it more in my own work and maybe also have my friends use it to see how others use it.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2022/11/10/henrikhs-FAM-synth.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

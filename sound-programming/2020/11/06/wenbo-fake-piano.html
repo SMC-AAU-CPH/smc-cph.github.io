@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A fake Steinway made by Csound | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="A fake Steinway made by Csound" />
+<meta name="author" content="Wenbo Yi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How to use Csound to create a digital Steinway?" />
+<meta property="og:description" content="How to use Csound to create a digital Steinway?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/wenbo-fake-piano.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/wenbo-fake-piano.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_wenbo_piano.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-06T09:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_wenbo_piano.jpg" />
+<meta property="twitter:title" content="A fake Steinway made by Csound" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wenbo Yi"},"dateModified":"2020-11-06T09:00:00+00:00","datePublished":"2020-11-06T09:00:00+00:00","description":"How to use Csound to create a digital Steinway?","headline":"A fake Steinway made by Csound","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_11_06_wenbo_piano.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/wenbo-fake-piano.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Wenbo Yi"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/11/06/wenbo-fake-piano.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      A fake Steinway made by Csound
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-11-06T09:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 6, 2020 •
+      </time>
+         
+      <a href="/authors/wenboyi.html">Wenbo Yi</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction">Introduction</h2>
+
+<p><img src="/assets/image/2020_11_06_wenbo_vst.png" alt="Acoustic Piano" /></p>
+
+<p>This VST plugins is a sound synthesizer for simulating real acoustic piano in <a href="https://csound.com">CSound</a> environment. I was inspired to make this synthesizer by the SMC entrepreneurship course where Group C was trying to develop a remote music therapy App, and the technical core of this app was playing with music using a built-in lightweight sound synthesizer. Therefore, I tried to use Csound to simulate a real instrument in a way that would use the least amount of resources.</p>
+
+<p>Below is my Demo:</p>
+<h2 id="demo">Demo</h2>
+
+<figure style="float: none">
+    <iframe width="800" height="480" src="https://www.youtube-nocookie.com/embed/T2XVUEAWKZw" frameborder="0" allowfullscreen=""></iframe>
+    <figcaption>Demo with Scale</figcaption>
+</figure>
+
+<h2 id="method">Method</h2>
+
+<p>After referring the works of others, reading some papers and <a href="https://csound.com">CSound</a> documentation, I decided to use some real piano sound files as samples to reconstruct the sound. This was done for two main reasons: First, <a href="https://csound.com">CSound</a> has excellent tools for analyzing and reconstructing FFTs to construct very realistic sounds. Second, instead of requiring 88 samples, this method requires less than 10 samples to build, which is enough lightweight to implement in an App.</p>
+
+<p>In more detail, I used <a href="https://csound.com/docs/manual/pvanal.html">Pvanal</a> to analyze the sample files from C4 to B4 in the piano to get the .pvx file, and then used the <a href="https://csound.com/docs/manual/pvoc.html">Pvoc</a> opcode to restore the tone. The specific method is that through the IF Statement, all the C note except C4 are reshaped through FFT files according to C4, all the D note are reshaped according to D4, and so on, thus reshaping the entire piano sound range. However, the FFT reconstruction is rather stilted and not realistic enough in the release part of the piano sound, probably due to the fact that real pianos have echo sound from piano cavity reflections, and in order to mimic the residual sound of the piano cavity, I used the delay to add a brief echo effect to make the Release part of the piano sound more realistic.</p>
+
+<p>In addition to the sound timbre, the sound image of a real piano need to be imitated as well, otherwise the piano will change from a surface sound source to a point source. After some guidance from teacher, I chose to use <a href="http://www.csounds.com/manual/html/notnum.html">notnum</a> to get the midi note number input from the midi keyboard, and through a simple calculation, I controlled the pan range from 0.1 to 0.9, arranged linearly from left to right in order to make it more realistic.
+<img src="/assets/image/2020_11_06_wenbo_pan.png" alt="pan" /></p>
+
+<p>Last but not least, In order to give the VST plugins more plasticity and independence, I used <a href="https://cabbageaudio.com/">Cabbage</a> to add interactive and adjustable reverb and delay plug-ins, using opcodes of <a href="http://www.csounds.com/manual/html/reverbsc.html">reverbsc</a> and <a href="http://www.csounds.com/manual/html/deltapi.html">deltapi</a> controlled by slides in Cabbage, which can shape the sense of spatial for the synthesizer piano, more closely resembling a real piano in its natural state.</p>
+
+<h2 id="reflections">Reflections</h2>
+
+<p>All in all, the sound of fake “Steinway” is not as smooth as I expected at the beginning. Obviously the sound is more realistic around the sampling points (C4-B4), but the further away from the sampled source the higher the distortion of the sound is, especially in the high and low regions of the piano. It still far away from a real Steinway.</p>
+
+<p>After discussing this with instructor, I learned that using <a href="http://www.csounds.com/manual/html/sprintf.html">Sprintf</a> to match the sample file to the keyboard without limiting the file size is definitely a more mature solution. If it sill need to use partial samples, <a href="http://www.csounds.com/manual/html/pvscale.html">pvscale</a> also seems to be a better solution than <a href="https://csound.com/docs/manual/pvoc.html">Pvoc</a>, because it fixes the harmonic ratio and makes the sound more realistic. Also, I have read in some papers that synthesis piano can also be modeled using algorithms to simulate piano hammers hitting string vibrations to make the piano sound more realistic, and I think this is a great direction I could improve on in the future.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/11/06/wenbo-fake-piano.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

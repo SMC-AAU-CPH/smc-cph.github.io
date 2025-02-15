@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Chorale Rearranger: Chopping Up Bach | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Chorale Rearranger: Chopping Up Bach" />
+<meta name="author" content="Joseph Clemente, Hugh Alexander von Arnim, Jakob Høydal, Oliver Getz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Can we use Midi data to rearrange a recording of a Bach chorale?" />
+<meta property="og:description" content="Can we use Midi data to rearrange a recording of a Bach chorale?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/11/26/josephcl-chorale-rearranger.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/11/26/josephcl-chorale-rearranger.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_26_josephcl_bach.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-26T08:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_26_josephcl_bach.png" />
+<meta property="twitter:title" content="Chorale Rearranger: Chopping Up Bach" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joseph Clemente, Hugh Alexander von Arnim, Jakob Høydal, Oliver Getz"},"dateModified":"2021-11-26T08:00:00+00:00","datePublished":"2021-11-26T08:00:00+00:00","description":"Can we use Midi data to rearrange a recording of a Bach chorale?","headline":"Chorale Rearranger: Chopping Up Bach","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_26_josephcl_bach.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/11/26/josephcl-chorale-rearranger.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joseph Clemente, Hugh Alexander von Arnim, Jakob Høydal, Oliver Getz"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2021/11/26/josephcl-chorale-rearranger.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Chorale Rearranger: Chopping Up Bach
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-26T08:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 26, 2021 •
+      </time>
+         
+      <a href="/authors/josephclemente.html">Joseph Clemente,</a>
+           
+      <a href="/authors/hughalexandervonarnim.html">Hugh Alexander von Arnim,</a>
+           
+      <a href="/authors/jakobhoydal.html">Jakob Høydal,</a>
+           
+      <a href="/authors/olivergetz.html">Oliver Getz</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_jakobhoydal_bachsliser.jpg" alt="" title="" width="auto" />
+   <figcaption>Bach, chopped</figcaption>
+</figure>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>It’s interesting to think about the ways in which we store musical information digitally. Different media all provide different levels of access to different precepts of a piece of music. A PDF of the score provides us with information laid out in a logical manner in case we would like to perform it ourselves; however it’s difficult to obtain information about the overall structure at a cursory glance. In comparison, a waveform of a recording of the piece allows us to quickly see the overall structure of the piece’s dynamics, but good luck trying to perform it yourself with only the waveform to work with!</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_26_josephcl_master_of_puppets_score.png" alt="" title="" width="auto" />
+</figure>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_26_josephcl_master_of_puppets_waveform.jpeg" alt="" title="" width="auto" />
+   <figcaption> The score and the waveform of Metallica's Master of Puppets. One allows us to quickly see the dynamic range, and one allows us to perform it ourselves. </figcaption>
+</figure>
+
+<p>None of these digital representations provide a complete picture of what is happening in the musical work, in fact we might actually receive quite a different impression of a piece depending upon the medium in which it’s presented to us. So what happens if we take the information provided in one medium and start using it to alter the information provided in another? Can we access precepts that are more hidden in one of the types of media? And can we change it to make something completely new?These are the questions that fuelled the development of the chorale rearranger.</p>
+
+<p>If you want to access our Python and Pure Data code it can be found <a href="https://github.com/jpclemente97/SMC-teamb-2/tree/main/python%20assignment%205/TeamB_Assignment5_Creative%20Final">here.</a></p>
+
+<h1 id="i-hear-voices">I Hear Voices</h1>
+
+<p>Bach’s chorales are settings of Lutheran hymns, with polyphonic harmonisations split between Soprano, Alto, Tenor, and Bass (SATB) voices. When listening to a performance, these voices meld together, forming rich and complex harmony. (As an aside, the chorales were also the focus of a quite well-known computational music project, Deep Bach, where an algorithm was trained to compose music using solely the chorales as input data. Check it out <a href="https://www.flow-machines.com/history/projects/deepbach-polyphonic-music-generation-bach-chorales/">here.</a>)</p>
+
+<p>In a digital representation of a chorale in the form of an audio file, information on the individual voices is inaccessible. We are presented with the complex harmonic and rhythmic interplay of the ensemble, but to pull out information on just one of the voices is an extremely difficult task. And we can completely forget about changing it.</p>
+
+<p>However, there is another digital representation where all of the information on the individual voices is freely available: MIDI. MIDI is simply a way of representing music as a series of note objects, with each note having assigned values on when it should start and end, how loud it should be, and what pitch it is. If you feed this information into a synthesiser capable of parsing MIDI, you will have the piece of music played back to you. However, all of the notes aren’t just jumbled together, but rather are split into separate ‘instrument’ objects, based upon what should be playing them too. So by looking at the MIDI data of a chorale, the information on what each of the voices is doing is immediately clear.</p>
+
+<p>So we came up with a plan: We would take an audio recording and the MIDI representation of one of Bach’s chorales, and based upon the information provided in the MIDI data, attempt to cut into the audio and recreate the individual voices. However, there’s a catch! We would repeat the chorale four times, and in each repetition, we would switch around some of the information in the MIDI data between the voices. Through each repetition we would shift over the pitch of each note by one voice, so that, for example, in the first run through the chorale, the soprano notes would be assigned the soprano pitches, then in the second the alto pitches, then the tenor pitches, then the bass. We hoped that this would reframe the harmonic and rhythmic relationships, and offer a new perspective on the chosen chorale.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image2.png" alt="" title="" width="auto" />
+   <figcaption>Our plan for the chorale rearranger</figcaption>
+</figure>
+
+<h1 id="piece-and-reconciliation">Piece and Reconciliation</h1>
+<p>As we were going to be repeating the chorale four times, we decided to use a relatively short one. We settled upon the 3rd movement from the Matthäus-Passion, which uses the text Herzliebster Jesu, was hast du verbrochen, written by Johann Heermann, set to a melody by Johann Crüger.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image3.jpg" alt="" title="" width="auto" />
+   <figcaption>The score of the 3rd movement from the Matthäus-Passion</figcaption>
+</figure>
+
+<p>We found an audio recording performed by the Collegium Vocale Gent which you can listen to <a href="https://www.youtube.com/watch?v=1AnEuCJpcCE">here.</a></p>
+
+<p>We also found a MIDI file <a href="https://www.cpdl.org/wiki/images/2/26/Ws-bwv-mp03.mid">here,</a> which we’ve played back through a synthesiser so that you can listen to it:</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_26_josephcl_audio1.wav" type="audio/wav" />
+  </audio>
+  <figcaption>Synthesised version of the MIDI version</figcaption>
+</figure>
+
+<p>The first thing that jumps out is that, even though these are two representations of the same piece, they are actually quite different. They vary in several musical precepts, including tempi, phrasing, and even key! So before we could start cutting into the audio, we had to reconcile these differences.</p>
+
+<p>The first precept we attempted to reconcile was the key. What’s interesting here is that we weren’t interested in the objective key of each of the representations, but rather in the respective difference between the two. And because the pitch information for each note is easily accessible in the MIDI data, if we found this difference then we could simply add it to or subtract it from all of this pitch information to put it into the key we want. We also realised that, as this difference in pitch is valid across the whole piece, we didn’t need to find it for the whole, but rather simply for the first chord. So, based upon the start and end times of the first note of the MIDI file, we cut out the first chord from the audio.</p>
+
+<p>As we already had the pitch information of the MIDI data, we now needed to find it for the audio. We realised that if we looked at the audio in the frequency domain, there would be peaks at the fundamentals of the pitches being sung. So we took the <a href="https://en.wikipedia.org/wiki/Periodogram">periodogram</a> of the audio, calculated the highest peak, then looked at which of the pitches in the MIDI file was closest, calculated the difference, and subtracted it from all of the pitches in the entire MIDI data.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image4.png" alt="" title="" width="auto" />
+   <figcaption>Periodogram of the first chord in the audio. The peak is marked by the red dotted line</figcaption>
+</figure>
+
+<p>We then re-synthesised the entire MIDI file and layered it on to the audio to check if our method worked. You can listen to this and hear the results yourself!</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_26_josephcl_audio2.wav" type="audio/wav" />
+  </audio>
+  <figcaption>The pitch altered MIDI file layered upon the audio</figcaption>
+</figure>
+
+<p>The next precept that we attempted to reconcile was the tempo. Again, the objective tempi were of no interest but rather the difference. So after applying tempo estimation functions to the audio and the MIDI and calculating the ratio between them, we then multiplied the duration of each note in the MIDI file by it and then once again layered the two to hear if our method was successful.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_26_josephcl_audio3.wav" type="audio/wav" />
+  </audio>
+  <figcaption>The tempo altered MIDI file layered upon the audio</figcaption>
+</figure>
+
+<p>The final precept, and by far the most difficult, that we attempted to reconcile was the phrasing. If you listen to the audio, you can hear that between the four main phrases of the chorale, the choir takes long, expressive pauses. In contrast, the MIDI file just barrels on through, meaning that the alignment of the notes between the two drifts in and out. If we could also tell the MIDI file to make these pauses, they would theoretically better align.</p>
+
+<p>After trying and failing many times to come up with a method to do this, we settled on taking the amplitude envelope of the audio file and again attempting to find the peaks. However, as we only wanted four peaks, after setting starting parameters, we then iterated over the envelope slowly changing these parameters until only four peaks remained.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image5.png" alt="" title="" width="auto" />
+   <figcaption>The amplitude envelope of the audio data. It’s possible to see where pauses are at the end of each phrase. The peaks we calculated are the red dotted lines.</figcaption>
+</figure>
+
+<p>After doing this, we found the MIDI note which had the nearest starting point to the peak, calculated the difference in time between them, and then added or subtracted this difference from all the subsequent MIDI notes’ start and end values. We repeated this step for each peak. Although this method wasn’t entirely successful, you can listen to the layered results below.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_26_josephcl_audio4.wav" type="audio/wav" />
+  </audio>
+  <figcaption>The phrasing altered MIDI file layered upon the audio</figcaption>
+</figure>
+
+<p>With the audio and MIDI reconciled as best we could, we could then start with the rearranging!</p>
+
+<h1 id="shifting-pitches">Shifting Pitches</h1>
+
+<p>The method that we used to chop up the audio for each voice was as follows:</p>
+
+<ol>
+  <li>
+    <p>Slice the audio between the start and end times of the MIDI note.</p>
+  </li>
+  <li>
+    <p>Apply a narrow <a href="https://en.wikipedia.org/wiki/Band-pass_filter">band-pass filter</a> to the audio at the pitch of the MIDI note.</p>
+  </li>
+  <li>
+    <p>Pass the audio segment through a saturation function. As the filtering removed a lot of the spectral content, we needed some way to add something back in, and this saturator did the job.</p>
+  </li>
+  <li>
+    <p>Apply a sigmoid window and pad the segment to ensure that there were no clicks when joining the segments back together.</p>
+  </li>
+</ol>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image6.png" alt="" title="" width="auto" />
+   <figcaption>Sigmoid window</figcaption>
+</figure>
+
+<ol>
+  <li>Append the segment onto the previous segment.</li>
+</ol>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image7.png" alt="" title="" width="auto" />
+   <figcaption>Our method for chopping the audio</figcaption>
+</figure>
+
+<p>We repeated this process for each of the repetitions, each time shifting the pitch values that we took for the filter by one voice. In addition, with each repetition, we widened the pass band of the band-pass filter to allow more of the original audio through over the course of the piece, hopefully providing the final piece with some more energy over its course.</p>
+
+<p>There was a problem however. Each voice doesn’t contain the same number of notes, so when taking the pitches from the notes of one voice and applying them to the segments sliced using the note durations from another we had to decide how to assign them and what to do with the excess values.</p>
+
+<p>Our first idea was to relate the assignment to the timing of the original piece. This would mean that if there were subdivisions in the note duration of one voice in relation to a single note in the voice that the pitches were being taken from, both of these subdivided notes would be assigned the pitch of the single note. This would also be the case in reverse, so that if the voice from which the pitches were being taken had subdivisions, only the pitch from the first of these subdivided notes would be applied to the longer note in the voice in which the pitch was being assigned to.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image8.png" alt="" title="" width="auto" />
+   <figcaption>Our first idea on how to assign pitches</figcaption>
+</figure>
+
+<p>However, we realised that if we did this, there wouldn’t be so much shifting in the harmonic contexts of our final piece. So we came up with another idea.We would just run through each of the pitches in turn, with each note being assigned the following pitch sequentially. If the voice being assigned the pitches had fewer notes than the voice from which the pitches were being taken from, the last of these pitch values would be discarded. In the opposite case, the final notes would just hold on the final pitch.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image9.png" alt="" title="" width="auto" />
+   <figcaption>How we ended up assigning pitches</figcaption>
+</figure>
+
+<p>This resulted in the harmonies shifting for each repetition, sometimes building dissonances and sometimes creating new consonances.You can listen to the result here:</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_26_josephcl_audio5.wav" type="audio/wav" />
+  </audio>
+  <figcaption>The result of our Chorale Rearrangement</figcaption>
+</figure>
+
+<p>However, this still sounds a little raw. So we decided to apply some processing to make it sound a little more like we imagined.</p>
+
+<h1 id="trust-the-process">Trust the Process</h1>
+
+<p>The first step we took to process the audio was to underlay it with pure sine tones at a low volume. We did this by using the same steps as we did to process the audio, except instead of using the information provided by the MIDI file to chop the audio, we used it to generate the sine waves. This made the pitches become clearer and the consonances and dissonances easier to follow.</p>
+
+<p>After this, we passed the audio file through to <a href="https://en.wikipedia.org/wiki/Pure_Data">Pure Data</a> to apply some light reverb and parallel filters with shifting centre frequencies to create some subtle movement.</p>
+
+<p>After passing the audio back into Python, we <a href="https://en.wikipedia.org/wiki/Convolution">convolved</a> our piece with the impulse response (<a href="https://www.archaeoacousticsscotland.org/about.html">recorded by Nick Green</a>) of the silo of a Maltese citadel in order to provide an ethereal, open sense of space.</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_26_josephcl_audio6.wav" type="audio/wav" />
+  </audio>
+  <figcaption>Impulse response of the Gozo Citadel Silo</figcaption>
+</figure>
+
+<p>Our final, rearranged chorale sounds like this:</p>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_11_26_josephcl_audio7.wav" type="audio/wav" />
+  </audio>
+  <figcaption>The rearranged chorale</figcaption>
+</figure>
+
+<p>The first variation sounds similar to the original, but as the variations continue, the textural consonances and dissonances start shifting, recontextualising what we just heard. We were pretty happy with the results!</p>
+
+<p>We then created some waveforms in different styles, allowing us another view on the musical information of our piece. We wanted to visualize the frequency content of the stereo waveform, so we created 6 new waveforms from the originals and discarded any frequencies above, between, or below two thresholds (one between high and mid, the other between mid and low). Low frequencies are coloured red, mids are green, and blue represents high frequencies relative to the frequency content of the file. There is little blue in this plot because there is little to no audio information in the highs of the audio input as defined by our program. The light green areas are overlaps between red and green. Three tracks for each channel were then layered on top of each other to show which parts were predominantly bright, mellow, or dark in relation to time.</p>
+
+<p>Another way we visualized the audio was through layering the waveform with its own RMS, which gives a more accurate representation of loudness over time.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_11_26_josephcl_image12.png" alt="" title="" width="auto" />
+   <figcaption>The waveform with the RMS visualised within</figcaption>
+</figure>
+
+<h1 id="informed-by-information">Informed by Information</h1>
+<p>So what do the many different ways of representing musical information digitally enable us to do? We hope that through our project we’ve shown that through synthesizing many sources, it is possible to get varying views and perspectives on a musical work, and to continue on to create something new, beyond what is possible when only considering a single source.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2021/11/26/josephcl-chorale-rearranger.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Pointilator Sequence Synthesizer | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="The Pointilator Sequence Synthesizer" />
+<meta name="author" content="Eigil Aandahl" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Pointilator sequence synth is an experimental instrument that can be played directly from a web browser! It is tested to work with Opera and Chrome, but does not work in Safari. It is based around entering a sequence of notes as points on a Canvas that registers each click and draws a circle where the note was put. It can then play back the notes from left to right with the height of the click translating to pitch. The result is a sequencing synthesizer that has a finely detailed scope in both time and pitch, although it is not easy to control based on traditional musical scales or rhythmic time." />
+<meta property="og:description" content="The Pointilator sequence synth is an experimental instrument that can be played directly from a web browser! It is tested to work with Opera and Chrome, but does not work in Safari. It is based around entering a sequence of notes as points on a Canvas that registers each click and draws a circle where the note was put. It can then play back the notes from left to right with the height of the click translating to pitch. The result is a sequencing synthesizer that has a finely detailed scope in both time and pitch, although it is not easy to control based on traditional musical scales or rhythmic time." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/The-Pointilator.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/The-Pointilator.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_aleksati_pointilator.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-11T15:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_aleksati_pointilator.png" />
+<meta property="twitter:title" content="The Pointilator Sequence Synthesizer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eigil Aandahl"},"dateModified":"2019-02-11T15:00:00+00:00","datePublished":"2019-02-11T15:00:00+00:00","description":"The Pointilator sequence synth is an experimental instrument that can be played directly from a web browser! It is tested to work with Opera and Chrome, but does not work in Safari. It is based around entering a sequence of notes as points on a Canvas that registers each click and draws a circle where the note was put. It can then play back the notes from left to right with the height of the click translating to pitch. The result is a sequencing synthesizer that has a finely detailed scope in both time and pitch, although it is not easy to control based on traditional musical scales or rhythmic time.","headline":"The Pointilator Sequence Synthesizer","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_aleksati_pointilator.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/The-Pointilator.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Eigil Aandahl"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/The-Pointilator.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      The Pointilator Sequence Synthesizer
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-02-11T15:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 11, 2019 •
+      </time>
+         
+      <a href="/authors/eigilaandahl.html">Eigil Aandahl</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure align="middle">
+<img src="/assets/image/2019_02_11_aleksati_pointilator.png" alt="The Pointilator GUI." width="70%" />
+</figure>
+
+<h3 id="introduction">Introduction</h3>
+<p>During the first week of the sound-programming workshop, we were tasked with making an individual project incorporating some of the skills and tools learned as we progressed through the week. Having had some experience with web technologies, <a href="https://www.w3.org/wiki/The_web_standards_model_-_HTML_CSS_and_JavaScript">HTML, CSS and JavaScript</a>, I was quite confident, but not necessarily that sure of what I wanted to do.</p>
+
+<p>After experimenting a bit with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> and how to achieve playback of audio samples, I went back to things I knew from before using the <a href="https://www.w3schools.com/html/html5_canvas.asp">HTML5 Canvas element</a> to draw and log clicks on a digital surface.</p>
+
+<p>This led me to make The Pointilator sequence synth, which I will describe in further detail below.</p>
+
+<h3 id="description">Description</h3>
+<p><a href="http://folk.ntnu.no/eigilaa/public_html/webaudio/index.2.html">The Pointilator sequence synth</a> is an experimental instrument that can be played directly from a web browser! It is tested to work with Opera and Chrome, but does not work in Safari.
+	It is based around entering a sequence of notes as points on a Canvas that registers each click and draws a circle where the note was put. It can then play back the notes from left to right with the height of the click translating to pitch. This is done by pressing the ‘Play’ button. The sequence will loop, and a ‘reset’ button can stop the audio by muting it and then reset the Canvas.
+	Further control is added by using controllers from <a href="https://nexus-js.github.io/ui/">NexusUI</a>, a library for making graphical user interfaces for JavaScript. These include changing the values of three sliders for ‘Timescale’, ‘Envelope Level’ and ‘Note Length’. The ‘Timescale’ refers to the length of the sequence in seconds. The volume envelope of each note can be somewhat controlled by a ten-values multi slider that creates a curve for note’s volume over time.
+  The result is a sequencing synthesizer that has a finely detailed scope in both time and pitch, although it is not easy to control based on traditional musical scales or rhythmic time.</p>
+
+<p>I will come back to how this was achieved, but first I will provide a quick timeline for the project development.</p>
+
+<h3 id="timeline">Timeline</h3>
+
+<figure align="middle">
+<img src="/assets/image/2019_02_11_aleksati_pointilatordiagram.png" alt="Diagram showing the development of the project over 4 days." width="80%" />
+</figure>
+
+<p>When I started out on the first day of the workshop, I worked on a sampler instrument that would use a Convolver node to create reverb, but this proved less inspiring than I had thought, and after just achieving sound and some improvements in the program structure, I abandoned this angle for the project.</p>
+
+<p>On the second and third day, I worked on what would become The Pointilator, focusing mostly on the graphics and interactivity on day 2 and adding sounds on day 3. Much of the work was put into how the sequence of notes was generated and controlled.</p>
+
+<p>The last day was spent updating the visuals of the instrument to reflect its somewhat refined state having gotten more control of the notes using <a href="https://nexus-js.github.io/ui/">Nexus UI</a>.</p>
+
+<h3 id="achievements">Achievements</h3>
+
+<p>The main achievements of the project as I see them are connected to how I was able to make the information from the Canvas element and clicks translate into a playing sequence of notes. The signal processing and sound of the instrument is however quite basic, being a collection of single oscillators per note. This gives the instrument a somewhat boring sounding timbre and audio quality.</p>
+
+<p>I will now give a more detailed description of some of the code to explain how each part works.</p>
+
+<p>Clicks on the Canvas element are registered by the code and draws based on the coordinates. Since the vertical range of the Canvas starts at 0 at the top, this value has to be reversed.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Eventlistener for click on Canvas</span>
+<span class="nx">c</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">pageX</span> <span class="o">-</span> <span class="nx">c</span><span class="p">.</span><span class="nx">offsetLeft</span><span class="p">,</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">pageY</span> <span class="o">-</span> <span class="nx">c</span><span class="p">.</span><span class="nx">offsetTop</span><span class="p">;</span>
+  <span class="c1">//Draw dots</span>
+  <span class="nf">drawDot</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+<span class="c1">// Add note event by click coordinate to array</span>
+<span class="nx">noteEvents</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="k">new</span> <span class="nf">noteEvent</span><span class="p">(</span><span class="nx">x</span><span class="o">/</span><span class="nx">width</span><span class="p">,</span> <span class="nf">reverseRangeOfCanvasScale</span><span class="p">(</span><span class="nx">y</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)));</span>
+
+<span class="kd">function</span> <span class="nf">drawDot</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+  <span class="nx">ctx</span><span class="p">.</span><span class="nf">beginPath</span><span class="p">();</span>
+<span class="nx">ctx</span><span class="p">.</span><span class="nf">arc</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+<span class="nx">ctx</span><span class="p">.</span><span class="nf">stroke</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>A note event is then created as an object with the coordinates of the clicks and added to an array.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Note events</span>
+<span class="kd">let</span> <span class="nx">noteEvent</span> <span class="o">=</span> <span class="kd">class</span> <span class="err">{
+  </span><span class="nc">constructor</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">time</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">pitch</span> <span class="o">=</span> <span class="nx">y</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">noteEvents</span> <span class="o">=</span> <span class="p">[];</span>
+</code></pre></div></div>
+<p>The array can then be iterated through using a for loop which generates the oscillators and sounds each time the loop starts.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">scheduler</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">running</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="nx">playedOnce</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// to make it work in no looping mode</span>
+<span class="k">while </span><span class="p">((</span><span class="nx">nextLoopTime</span> <span class="o">&lt;</span> <span class="nx">context</span><span class="p">.</span><span class="nx">currentTime</span><span class="o">+</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="nx">playedOnce</span> <span class="o">||</span> <span class="nx">loopingbool</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">stopper</span><span class="p">)</span> <span class="c1">// Keep playing if loop.</span>
+  <span class="p">{</span>
+    <span class="k">for </span><span class="p">(</span><span class="nx">event</span> <span class="k">in</span> <span class="nx">noteEvents</span><span class="p">)</span>  <span class="c1">// play note events</span>
+      <span class="p">{</span>
+      <span class="nf">playTone</span><span class="p">(</span><span class="nx">noteEvents</span><span class="p">[</span><span class="nx">event</span><span class="p">]);</span>
+      <span class="p">}</span>
+    <span class="nx">loopStartTime</span> <span class="o">=</span> <span class="nx">context</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">;</span>
+    <span class="nx">playedOnce</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">timerID</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nf">setTimeout</span><span class="p">(</span><span class="nx">scheduler</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>More of the code can be found in my <a href="https://github.com/Eigil94/Web-audio-individual-project">Github repository.</a></p>
+
+<h3 id="challenges">Challenges</h3>
+
+<p>Making the sequencer play in the way I wanted to proved to be a challenge, because of the time-sensitive nature of audio programming.
+I mostly did not use prebuilt libraries to handle the scheduling of all audio events, which meant some things were happening asynchronously and before real-time. That meant adding notes while the sequence was playing would only manifest after the current loop was finished.
+I was however able to overcome this by calculating when the note should play based on the current loop’s start and when the Canvas was clicked.</p>
+
+<p>The way I did it was however mostly a workaround than revorking how the scheduling basically functioned, which could have been better, but as I was working on it, I became somewhat intrigued by the limitations and challenges this entailed.
+Another thing was that I locked myself in using basic elements from HTML and Web Audio compared to using premade GUI and audio libraries since I would have had to just redo a lot of what I had done to switch over to the libraries.
+This might have been a poor decision since it made much of the programming more cumbersome.</p>
+
+<h3 id="further-development">Further development</h3>
+
+<p>There are still many bugs and issues with the instrument, but I am satisfied with what I achieved during the week. Further improvements could be made to the audio quality, scheduling of note events and control over pitch. Quantizing the pitch and time would also be interesting to explore, as well as functionality for editing and undoing steps added to the sequencer.</p>
+
+<p>The working prototype is hosted at my <a href="http://folk.ntnu.no/eigilaa/public_html/webaudio/index.2.html">NTNU web space</a> and the source code is available at my <a href="https://github.com/Eigil94/Web-audio-individual-project">repository on Github</a>.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2019/02/11/The-Pointilator.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Blackhole, Open Source MacOS Virtual Audio Device Solution for Telematic Performance | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Blackhole, Open Source MacOS Virtual Audio Device Solution for Telematic Performance" />
+<meta name="author" content="Masoud Niknafs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="MacOS guide to Blackhole" />
+<meta property="og:description" content="MacOS guide to Blackhole" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/11/29/masoudn-blackhole.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/11/29/masoudn-blackhole.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_bbc_masoudn_.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-29T05:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_bbc_masoudn_.jpg" />
+<meta property="twitter:title" content="Blackhole, Open Source MacOS Virtual Audio Device Solution for Telematic Performance" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Masoud Niknafs"},"dateModified":"2022-11-29T05:00:00+00:00","datePublished":"2022-11-29T05:00:00+00:00","description":"MacOS guide to Blackhole","headline":"Blackhole, Open Source MacOS Virtual Audio Device Solution for Telematic Performance","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_bbc_masoudn_.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/11/29/masoudn-blackhole.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Masoud Niknafs"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2022/11/29/masoudn-blackhole.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Blackhole, Open Source MacOS Virtual Audio Device Solution for Telematic Performance
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-11-29T05:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 29, 2022 •
+      </time>
+         
+      <a href="/authors/masoudniknafs.html">Masoud Niknafs</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="blackhole">Blackhole</h2>
+
+<p>BlackHole is a modern MacOS virtual audio driver that allows applications to pass audio to other applications with zero additional latency. As a newly migrated user from Windows to Mac I found Blackhole, pretty reliable, easy to use, and easy to map between platforms, So I decided to share the features and make an installation and user guide! Enjoy!</p>
+
+<ul>
+  <li>Supports 2 , 16 , and 64audio channels.</li>
+  <li>Customizable to 256+ channels if you think your computer can handle it.</li>
+  <li>Supports 44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz, and 192kHz sample rates.</li>
+  <li>No additional driver latency. BlackHole is also available using brew cask install blackhole</li>
+  <li>It is Also available for Windows but here we only introduce the MacOS version</li>
+</ul>
+
+<h2 id="benefits">Benefits:</h2>
+
+<ul>
+  <li>Versatile user interface</li>
+  <li>Stable working with no crashes (Also on Apple Silicon)</li>
+  <li>Different versions available for specific needs</li>
+  <li>It is possible to rename the Blackhole</li>
+  <li>Customizing Channels, Latency, and Sample Rates</li>
+</ul>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_1_masoudn.jpg" style="max-height:600px; width:auto;" />
+</figure>
+
+<h2 id="installation-of-macos">Installation of MacOS:</h2>
+
+<p>https://existential.audio/blackhole/</p>
+
+<h2 id="installation-guide">Installation guide:</h2>
+
+<p>Approach 1: Download Installer
+1.Download the latest installer</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_2_masoudn.jpg" />
+   <figcaption></figcaption>
+</figure>
+
+<p>You must subscribe for the free version</p>
+
+<p>2.Close all running audio applications</p>
+
+<p>3.Open and install package</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_3_masoudn.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>Press continue</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_3_masoudn.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>select its destination</figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_5_masoudn.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>Finalize your installation</figcaption>
+</figure>
+
+<p>Approach 2: Install via Homebrew</p>
+
+<ol>
+  <li>2ch: brew install blackhole-2ch</li>
+  <li>16ch: brew install blackhole-16ch</li>
+  <li>64ch: brew install blackhole-64ch</li>
+</ol>
+
+<h2 id="features">Features:</h2>
+
+<p>It has the following routing options for Logic Pro X</p>
+
+<ul>
+  <li>Logic Pro X to FaceTime</li>
+  <li>Logic Pro X to Google Meet</li>
+  <li>Logic Pro X to Skype</li>
+  <li>Logic Pro X to Zoom</li>
+</ul>
+
+<p>It has the following routing options for GarageBand</p>
+
+<ul>
+  <li>GarageBand to FaceTime</li>
+  <li>GarageBand to Google Meet</li>
+  <li>GarageBand to Skype</li>
+  <li>GarageBand to Zoom</li>
+</ul>
+
+<p>It has the following routing options for Reaper</p>
+
+<ul>
+  <li>Reaper to Zoom</li>
+</ul>
+
+<p>It has the following routing options toRecord System Audio</p>
+
+<ol>
+  <li>Setup Multi-Output Device</li>
+  <li>In Audio Midi Setup → Audio Devices right-click on the newly created Multi-Output and select “Use This Device For Sound Output”</li>
+  <li>Open digital audio workstation (DAW) such as GarageBand and set input device to “BlackHole”</li>
+  <li>Set track to input from channel 1-2</li>
+  <li>Play audio from another application and monitor or record in your DAW</li>
+</ol>
+
+<p>Route Audio Between Applications</p>
+
+<ol>
+  <li>Set output driver to “BlackHole” in sending application</li>
+  <li>Output audio to any channel</li>
+  <li>Open receiving application and set input device to “BlackHole”</li>
+  <li>Input audio from the corresponding output channels</li>
+</ol>
+
+<p>Creating Aggregate device on mac:
+In this example zoom H5 recorder is used as a sound card in combination with Blackhole to be used in Ableton</p>
+
+<ol>
+  <li>Open Audio Midi Setup</li>
+</ol>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_masoudn_8.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>2) You can modify I/O and audio settings of the blackhole here </figcaption>
+ </figure>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_masoudn_9.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>3)	Or create an aggregate device by hitting the plus Icon on the bottom left </figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_11_29_bh_masoudn_10.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>4)	You can use this aggregate device in all DAW or Musical programming languages or communication software </figcaption>
+</figure>
+
+<p>For Further exploration visit:</p>
+
+<p>https://github.com/ExistentialAudio/BlackHole#readme</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2022/11/29/masoudn-blackhole.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

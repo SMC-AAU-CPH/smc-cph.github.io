@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Out-Of-The-Box Sound Sources for your IMS | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Out-Of-The-Box Sound Sources for your IMS" />
+<meta name="author" content="Kristian Wentzel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Exploring alternatives for generating sounds with your interactive music system." />
+<meta property="og:description" content="Exploring alternatives for generating sounds with your interactive music system." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/07/kriswent-external-sounds-for-ims.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/07/kriswent-external-sounds-for-ims.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_kriswent_ims.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-07T14:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_kriswent_ims.jpeg" />
+<meta property="twitter:title" content="Out-Of-The-Box Sound Sources for your IMS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kristian Wentzel"},"dateModified":"2022-12-07T14:00:00+00:00","datePublished":"2022-12-07T14:00:00+00:00","description":"Exploring alternatives for generating sounds with your interactive music system.","headline":"Out-Of-The-Box Sound Sources for your IMS","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_kriswent_ims.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/07/kriswent-external-sounds-for-ims.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Kristian Wentzel"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2022/12/07/kriswent-external-sounds-for-ims.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Out-Of-The-Box Sound Sources for your IMS
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-12-07T14:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 7, 2022 •
+      </time>
+         
+      <a href="/authors/kristianwentzel.html">Kristian Wentzel</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>Sometimes you don’t want to design the audio generating source completely from scratch in your up-coming Interactive Music System (IMS). Sometimes you’ve already put enough weight on your shoulders in knitting and stuffing your kawaii panda-shaped instrument or planing and polishing your pieces of oak for your pirate treasure chest-themed music box. Don’t despair! There is vendors making synthesizers who speak openly in voltages – just patch in and have a listen. Maybe you’d like some of them to produce the soothing sounds lacking in your system?</p>
+
+<p>Below is a non-exhaustive survey of a few embedded systems and synthesizers who could possibly speak together through jumper cables.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_07_kriswent_bela.jpeg" alt="Bela" title="" height="auto" width="70%" />
+   <figcaption><i>The beloved Bela.</i></figcaption>
+</figure>
+
+<h1 id="embedded-systems">Embedded Systems</h1>
+<p>Embedded systems are small computer systems consisting of computer processor and memory along with I/O pins for communication with the outside world. These pins could be dedicated analog inputs, dedicated analog outputs, or digital I/O’s. An embedded system would typically have a combination of different <em>general-purpose input/output</em> (<a href="https://en.wikipedia.org/wiki/General-purpose_input/output">GPIO</a>) pins. These connectors typically operate with voltages of either 5V or 3.3V.</p>
+
+<p>Let us not forget that audio in/out jacks essentially are analog I/O connectors as well!</p>
+
+<p>Pssst – Keep in mind that it can be possible to simulate extra analog outputs by applying <em>Pulse Width Modulation</em> (PWM) to a digital output (which has a state of either 0 or 1). You can read more about PWM <a href="https://www.allaboutcircuits.com/technical-articles/introduction-to-microcontroller-timers-pwm-timers/">here</a>.</p>
+
+<h2 id="bela">Bela</h2>
+<p><a href="https://bela.io/">Bela</a> is the embedded system of choice at SMC, because of it’s super low latency (0.5ms action-to-sound latency), and a generous amount of I/O pins. This is a complete system for creating an IMS, where <a href="https://puredata.info/">Pure Data</a> is one of the programming languages supported.</p>
+
+<h3 id="io">I/O</h3>
+<ul>
+  <li>2x Audio Inputs</li>
+  <li>2x Audio Outputs</li>
+  <li>8x 16-bit Analog Inputs</li>
+  <li>8x 16-bit Analog Outputs</li>
+  <li>16x Digital I/O</li>
+  <li>2x 1W 8ohm Speaker Outputs</li>
+</ul>
+
+<p>The Bela is capable of software PWM on all 16 digital outputs (at once). But since the Bela’s internal “clock” is set to 44.1 kHz, this would work best for control voltage (CV) signals.</p>
+<blockquote>
+  <p>If you want 8-bit resolution you would need to allow 256 samples per PWM period, for a PWM frequency of roughly 172 Hz.</p>
+
+  <p>– <a href="https://forum.bela.io/d/1009-basic-pwm-question">ryjobil</a></p>
+</blockquote>
+
+<h3 id="sampling-rates-and-bit-depth">Sampling Rates and Bit Depth</h3>
+<p>Below is a table of the sampling rates and bit depths of the Bela’s different I/O pins.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>I/O</th>
+      <th style="text-align: center">Sampling Rate</th>
+      <th style="text-align: right">Bit Depth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Audio</td>
+      <td style="text-align: center">44.1 kHz</td>
+      <td style="text-align: right">16-bit</td>
+    </tr>
+    <tr>
+      <td>Analog</td>
+      <td style="text-align: center">22.05 kHz</td>
+      <td style="text-align: right">16-bit</td>
+    </tr>
+    <tr>
+      <td>Digital</td>
+      <td style="text-align: center">44.1 kHz</td>
+      <td style="text-align: right">n/a</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="voltage-levels">Voltage Levels</h3>
+<p>It is <em>extremely</em> important to keep voltage ranges in mind, and know the voltage tolerances of the different connector types, as to not <a href="https://en.wikipedia.org/wiki/Philip_J._Fry">fry</a> anything!</p>
+
+<p>In plain words: Do <strong>not</strong> connect 5V directly to a digital input!</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Signal</th>
+      <th style="text-align: center">Voltage Range</th>
+      <th style="text-align: right">Voltage Tolerance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Digital I/O</td>
+      <td style="text-align: center">0-3.3V</td>
+      <td style="text-align: right">3.3V</td>
+    </tr>
+    <tr>
+      <td>Analog Input</td>
+      <td style="text-align: center">0-4.096V</td>
+      <td style="text-align: right">5V</td>
+    </tr>
+    <tr>
+      <td>Analog Output</td>
+      <td style="text-align: center">0-5V</td>
+      <td style="text-align: right">5V</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="other-systems">Other Systems</h2>
+<p>There are alternatives to Bela, in which I’ll mention a few embedded systems with GPIO pins for inter-connectivity.</p>
+
+<h4 id="arduino-uno"><a href="https://docs.arduino.cc/hardware/uno-rev3">Arduino Uno</a></h4>
+<ul>
+  <li>14x Digital I/O (of wich 6 provide PWM output)</li>
+  <li>6x Analog Input</li>
+</ul>
+
+<p>The Arduino Uno operates within 5V.</p>
+
+<h4 id="raspberry-pi-4"><a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/">Raspberry Pi 4</a></h4>
+<ul>
+  <li>26x Digital I/O (of which 4 provide PWM output)
+There are two channels of PWM which also can provide audio output</li>
+</ul>
+
+<p>The Raspberry Pi 4 operates within 3.3V.</p>
+
+<h4 id="flipper-zero"><a href="https://flipperzero.one/">Flipper Zero</a></h4>
+<ul>
+  <li>8x Digital I/O
+    <ul>
+      <li>of which 6 inputs can be assigned to a 12-bit ADC channel</li>
+      <li>of which 8 outputs provide PWM</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The Flipper Zero operates within 3.3V.</p>
+
+<h1 id="external-synthesizers">External Synthesizers</h1>
+
+<p>Synthesizers use Control Voltage (CV) between it’s internal modules to operate – a perfect match for our embedded systems! Let’s look into the specifications of a few pocket-sized (give or take) semi-modular synthesizers which uses jumper cables for patching.</p>
+
+<h2 id="korg-volca-modular">Korg Volca Modular</h2>
+
+<p>The <a href="https://www.korg.com/us/products/dj/volca_modular/">Korg Volca Modular</a> is a West Coast (Buchla) style analog synthesizer. To connect with Eurorack-style synthesizers, it supports two CV inputs through a 3.5mm TRS with the following channels:</p>
+
+<p>1) Left: Clipped to +/-5V and converted to +/-3.3V
+2) Right: Expects a 1V/octave signal (0-6V) converted to internal pitch offset voltage control</p>
+
+<p>However, we’ll just bypass that limited and connect straight to one of the 50 patch points.</p>
+
+<p>The Korg Volga Modular operates within 3.3V.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_07_kriswent_volca.jpeg" alt="Korg Volca Modular" title="" height="auto" width="70%" />
+   <figcaption><i>Korg Volca Modular</i></figcaption>
+</figure>
+
+<h2 id="moog-werkstatt-01">Moog Werkstatt-01</h2>
+
+<p>The <a href="https://www.moogmusic.com/products/werkstatt-01-cv-expander">Moog Werkstatt-01</a> is an traditional East Coast style analog semi-modular synthesizer that comes shipped as a kit. This instrument uses jumper cables for patching, although it usually ships with a mountable CV expander, who’ll transform the 20x pin I/O interface to one with 12x 3.5mm TS jack connectivity. Of course we’ll keep all 20 of them, not just <em>“12 of the most useful inputs”</em>.</p>
+
+<p>For the adventurous, there’s an easter egg under the hood:</p>
+<blockquote>
+  <p>Test Points, Jumpers, and a mini 16 x 6 Experimenter’s pad are provided on the Werkstatt Printed Circuit Board.</p>
+</blockquote>
+
+<p>The Moog Werkstatt-01 operates within 5V.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_07_kriswent_moog.jpeg" alt="Moog Werkstatt-01" title="" height="auto" width="70%" />
+   <figcaption><i>Moog Werkstatt-01</i></figcaption>
+</figure>
+
+<h2 id="bastl-kastle--bastl-kastle-drum">Bastl Kastle &amp; Bastl Kastle Drum</h2>
+
+<p>The <a href="https://bastl-instruments.com/instruments/kastle">Bastl Kastle</a> &amp; <a href="https://bastl-instruments.com/instruments/kastle-drum">Bastl Kastle Drum</a> essentially share the same internal hardware, but with different firmware and exterior design. These are strange, noisy, glitchy, experimental digital modular synthesizers made for exploration. They’re controlled by two <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf">Attiny 85</a>’s, one acting as a VCO (for sound generation) and the other as a LFO (for sound modulation). These can be reprogrammed with an Arduino.</p>
+
+<p>For traditional CV sharing, they sport a 3.5mm TRS jack I/O which can be freely routed. For our purpose, we’ll make use of the 36 pin I/O’s (of which two are linked to the jack I/O).</p>
+
+<p>The Kastl’s operate within 5V.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_07_kriswent_bastl.jpeg" alt="Bastl Kastle" title="" height="auto" width="70%" />
+   <figcaption><i>Bastl Kastle</i></figcaption>
+</figure>
+
+<h1 id="start-connecting">Start Connecting</h1>
+
+<p>Now you have some ideas for “out-of-the-box” sound generation in your IMS. In an upcoming <a href="https://SMC-master.github.io/interactive-music/2022/12/09/kriswent-towards-a-claptrap-speaking-kastle-maus.html">blogpost</a> for my IMS project, I will present how I made use of a Bela and a Bastl Kastle in beautiful(?) harmony!</p>
+
+<h2 id="disclaimer">Disclaimer</h2>
+<p>Don’t try this at home! Or, well, please do. But play with this at your own discretion.</p>
+
+<p>The information and specifications presented in this blogpost is correct to the best of the authors knowledge, but the they take no responsibility for any fried Bela-boards or any other damage caused by applying this information to the real synthesized world. Respect voltage tolerances!</p>
+
+<p><strong>Happy patching!</strong></p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2022/12/07/kriswent-external-sounds-for-ims.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

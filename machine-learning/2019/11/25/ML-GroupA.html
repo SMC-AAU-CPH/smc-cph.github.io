@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Music and machine learning - Group A | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Music and machine learning - Group A" />
+<meta name="author" content="Rayam Luna, Gaute Wardenær, Thibault Jaccard, Ulrik Halmøy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using machine learning for performance and for classifying sounds" />
+<meta property="og:description" content="Using machine learning for performance and for classifying sounds" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/11/25/ML-GroupA.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/11/25/ML-GroupA.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_11_25_aleksati_wekinator_groupA_cover.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-25T15:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_11_25_aleksati_wekinator_groupA_cover.png" />
+<meta property="twitter:title" content="Music and machine learning - Group A" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rayam Luna, Gaute Wardenær, Thibault Jaccard, Ulrik Halmøy"},"dateModified":"2019-11-25T15:00:00+00:00","datePublished":"2019-11-25T15:00:00+00:00","description":"Using machine learning for performance and for classifying sounds","headline":"Music and machine learning - Group A","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_11_25_aleksati_wekinator_groupA_cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/11/25/ML-GroupA.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Rayam Luna, Gaute Wardenær, Thibault Jaccard, Ulrik Halmøy"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/11/25/ML-GroupA.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Music and machine learning - Group A
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-11-25T15:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 25, 2019 •
+      </time>
+         
+      <a href="/authors/rayamluna.html">Rayam Luna,</a>
+           
+      <a href="/authors/gautewarden%C3%A6r.html">Gaute Wardenær,</a>
+           
+      <a href="/authors/thibaultjaccard.html">Thibault Jaccard,</a>
+           
+      <a href="/authors/ulrikhalmoy.html">Ulrik Halmøy</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="performing-with-the-wekinator">Performing with the Wekinator</h2>
+
+<p>We started out with choosing an input method, and later discussed how to make the algorithm learn behaviour from the input and transform it into meaningful audio. The final system consisted of a web camera feed as its input (100 averaged pixel values) and drum machine patterns as targets. The Wekinator was used to classify colors from the web camera feed, and map those color classes to trigger pre-determined patterns in the drum machine, i.e. “blue” corresponds to pattern A and “red” corresponds to pattern B. In total there were four patterns to trigger in the drum machine, which suggested choosing four as the number of classes for the classification algorithm.</p>
+
+<p>Part of our plan was to send the web camera from Oslo to Trondheim, and then to train a model in Trondheim. Although we initially managed to set up an OSC stream over UiO’s VPN over the UDP protocol, something with the routing failed on the presentation day. The presentation of the model was therefore done locally, but with the same ML principles.</p>
+
+<figure>
+ 	<img src="/assets/image/2019_11_25_aleksati_wekinator_groupA_webcam.png" alt="Wekinator training process" width="80%" />
+	<figcaption> Wekinator during training </figcaption>
+</figure>
+
+<p>Due to the development context of the system, there were certain aspects of the system that were easier to deal with than it would be in a real world application. The problem of overfitting did not apply in this context, because the model would only be used for a one-time scenario. Another implication of the context was that the amount of training data needed was fairly small. After several rounds of testing, the conclusion was that only around half a minute of web camera recording (800 frames of 30 FPS) in total were needed to train a rough classifier on four different color states. Most of these seconds were used to record the background, to establish a stable base class for the classifier. If the system were to be regularized and made production ready, e.g. as a DAW plugin, a lot more effort would have had to be put into training the model with different kinds of data. Inferring the model with new data from a separate testing and validating set would be a high priority before deploying such a system in production.</p>
+
+<h2 id="classifying-sounds-with-scikit-learn">Classifying sounds with scikit-learn</h2>
+
+<p>We explored the Python library scikit-learn to learn more about how machine learning algorithms can be used for classification of different sounds.</p>
+
+<h3 id="audio-data-classifier">Audio Data Classifier</h3>
+
+<p>Divided into three groups, each team got the task to classify a set of 200 audio files in four distinct classes. To implement the data classification, we used <code class="language-plaintext highlighter-rouge">scikit-learn</code> library. Each of the four classes was equally divided into 50 files, previously defined by the team members based on audio features that could be distinguished by humans, not requiring special expertise in audio analysis.</p>
+
+<p>Our group selected the following classes: <em>modular synths, orchestral, nature environment</em>, and <em>birds</em>. We had to classify the dataset that we created, and also, the dataset provided by the group B, with the classes <em>glass, stone, wood, metal</em>.</p>
+
+<h3 id="methods">Methods</h3>
+
+<p>In the beginning of this process, we had a shallow acknowledgment on how the parameters would affect the machine learning performance, so the first step was to make individual changes for each parameter that we had a previous understanding on the correlation with relevant audio features for the task.</p>
+
+<p>Starting the tests with the Group A dataset, we chose key parameters such as <em>sample rate</em>, and the number of <em>max iterations</em>, making notes on how each setting affected the performance of the classifier. After that, we gradually increased the complexity of the parameters changed, diving into a deeper interaction with the machine learning process. Thus, we started to adjust parameters such as <em>activation</em>, <em>hidden_layer_sizes</em>, and <em>extract feature</em>’s.</p>
+
+<p>One important decision was to always try to use the <strong>minimum computing process power reasonable</strong> for the <strong>maximum accuracy goal</strong>, meaning that for each parameter tweaked, we considered only meaningful changes, <strong>avoiding overfeeding</strong> the model with irrelevant audio information, and consequently, confusions in the learning process.</p>
+
+<p>In this way, it was noticeable that for the dataset A, <strong>increasing the sample rate</strong> to 24kHz, <strong>improved the accuracy</strong> of the results, since some audio sets, such as birds, for example, have relevant frequency information relying above 10kHz. Next, we started to interact with the machine demands. From changing the activation parameter, we could observe how effective was to increase or decrease the max_iter values. The <strong>tanh activation</strong> combined with max_iter=3300, worked well to the demand, and when increased the iterations to values above 3500, the results got less precise.</p>
+
+<p>Arranging the <strong>neural network</strong>, we observed that the results improved when increased the number of layers and neurons from hidden_layer_sizes=(2,2) to (6,8,4), but more than that did not give me better results. After enlarging the size of the network, consequently, the machine required more iterations, becoming <strong>max_iter=8800</strong> an optimal value.</p>
+
+<p>At this stage of the process, after testing different features in parallel with the previous settings, we realized the best combination of features that fit better for each dataset.</p>
+
+<p>We used the same method to achieve satisfactory results with the dataset B, but with a bit more experience with the parameters, we could use a more objective approach.</p>
+
+<h3 id="results--discussion">Results / Discussion</h3>
+
+<p>In the case of the <strong>dataset A</strong>, the best feature arrangement was <strong>spectral_centroid</strong> and <strong>spectral_bandwidth</strong>, delivering better results than the default setting (zero_crossing_rate). It is probably due to the distinct spectral characteristics of the classes, having different located mass of energy in the spectrum.</p>
+
+<p>As you can see in the graph below, the <strong>worst precision result came from class 4 (Birds)</strong>. Probably due to the <strong>inconsistency among the duration of the audio files</strong> of this set, in addition to the <strong>background noise</strong> captured in the recordings.</p>
+
+<figure>
+ 	<img src="/assets/image/2019_11_25_aleksati_scikit_groupA_classification1.png" alt="Convergence of learning rate" width="80%" />
+	<figcaption> Dataset - group A </figcaption>
+</figure>
+
+<p>For the <strong>dataset B</strong>, the sample rate optimal value had to be much higher to deliver better results, ending up with <strong>44.1kHz</strong>. The activation and the neural network were very similar to the ones selected to the dataset A, but the <strong>max_iter</strong> of <strong>5500</strong> fit better, delivering worse results if increased.</p>
+
+<p>However, the feature extraction required to dataset B was way different. The best combination of features was <strong>spectral_ bandwidth</strong> with <strong>spectral_ flatness</strong>. It makes sense, considering that spectral flatness is a tonality coefficient and combined with the spectral bandwidth, they can be very effective to distinguish sounds that have peculiar and clearly distinct tonal characteristics such as glass, stone, wood, and metal.</p>
+
+<p>With dataset B, we got the <strong>best accuracy results, relying around 92%</strong> as you can see in the graph below. Also, the <strong>worst precision came from class 04 (Metal)</strong>. Probably because the <strong>spectral bandwidth variety among the audio samples was large</strong>, being hard to identify a standard pattern regarding the wavelength.</p>
+
+<figure>
+ 	<img src="/assets/image/2019_11_25_aleksati_scikit_groupA_classification2.png" alt="Convergence of learning rate" width="80%" />
+	<figcaption> Dataset - group B </figcaption>
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2019/11/25/ML-GroupA.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

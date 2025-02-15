@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Approaches Toward Algorithmic Interdependence in Musical Performance | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Approaches Toward Algorithmic Interdependence in Musical Performance" />
+<meta name="author" content="Joseph Clemente" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Is it possible to program interdependent algorithms to perform with each other?" />
+<meta property="og:description" content="Is it possible to program interdependent algorithms to perform with each other?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/09/22/josephcl-algorithmic-interdependence.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/09/22/josephcl-algorithmic-interdependence.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_22_josephcl_algorithm.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-22T08:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_22_josephcl_algorithm.jpg" />
+<meta property="twitter:title" content="Approaches Toward Algorithmic Interdependence in Musical Performance" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joseph Clemente"},"dateModified":"2021-09-22T08:00:00+00:00","datePublished":"2021-09-22T08:00:00+00:00","description":"Is it possible to program interdependent algorithms to perform with each other?","headline":"Approaches Toward Algorithmic Interdependence in Musical Performance","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_22_josephcl_algorithm.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/09/22/josephcl-algorithmic-interdependence.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joseph Clemente"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/09/22/josephcl-algorithmic-interdependence.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Approaches Toward Algorithmic Interdependence in Musical Performance
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-09-22T08:00:00+00:00"
+        itemprop="datePublished"
+      >Sep 22, 2021 •
+      </time>
+         
+      <a href="/authors/josephclemente.html">Joseph Clemente</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
+
+<p>One of the first lines of the paper “Interconnected Musical Networks: Toward a Theoretical Framework,” states that “music performance is an interdependent art form” (Weinberg, 2005, p. 23). As the paper goes on, it becomes clear that their definition of “interdependence” almost exclusively involves human to human interactions. However, this leaves out many new opportunities afforded by recent advances in music technologic, specifically those without any humans involved. In the article “The Aesthetics of Interactive Computer Music,” the author theorizes that the closest thing we have to music with “no subject, no human performer, nor even any composer, conveying anything” was algorithmically generated tape music (Garnett, 2001, p. 28). However, with the dawn of machine learning and more powerful algorithms, I believe that it is possible to create music with artistic value using only algorithms communicating interdependently. In this review, I will be refuting claims from “The Aesthetics of Interactive Computer Music” about the limits and artistic merit of algorithmically generated music, and use the approaches for musical collaboration over the internet from “Interconnected Musical Networks: Toward a Theoretical Framework” to theorize about ways algorithmically generated music could be created.</p>
+
+<h1 id="discussion">Discussion</h1>
+
+<p>Throughout the sections of “The Aesthetics of Interactive Computer Music” that refer to algorithmically generated music, it seems that the author is generally negative toward the concept. After theorizing about algorithmically generated tape music, it states that “a counterpart to the extreme precision and elaborate formalisms that this genre enables is the tendency for it to become further and further removed from anything anyone else actually wants to endure in concert” (Garnett, 2001, p. 29). While this may have been true in 2001 when this article was written, machine learning has made it easier than ever to create coherent music through the use of algorithms. Prime examples of this can be found using Magenta, which is a Python library using TensorFlow that “includes utilities for manipulating source data (primarily music and images), using this data to train machine learning models, and finally generating new content from these models (Magenta, 2021). With this highly intelligent tool alone, Garnett’s claim that “it is relatively easy to create algorithms that generate sounds whose qualities as music are inscrutable, beyond the cognitive or perceptive abilities of listeners,” (Garnett, 2001, p. 26) can easily be disproven without even mentioning other open-source machine learning tools that exist online now. Of course, algorithmic approaches definitely lose some qualities compared to human performance that will be hard to overcome. After playing around with demos from Magenta, I agree with the claim that algorithmic music “can lead to an over-emphasis on precision, a mistaking of precision as an end rather than as a means to an end as it ought to be” (Garnett, 2001, p. 29). However, I can only hope in the decades to come after I write this, more sophisticated machine learning algorithms will be developed that will give greater nuance to algorithmic music.</p>
+
+<p>Weinberg offers four approaches for musical collaboration with other people through the internet: the server approach, the bridge approach, the shaper approach, and the construction kit approach. In this next section, I will be going through each approach and commenting on how algorithms could be used in theory. The shaper approach is by far the most straightforward of the bunch. The approach is described as “a means to send musical data to disconnected participants and does not take advantage of the opportunity to interconnect and communicate among players” (Weinberg, 2005, p. 26). This approach is quite simply file sharing, but there are plenty of ways to make this approach more interesting with algorithms. I could imagine a scenario where a machine learning algorithm could generate sheet music, which will then be given to players to perform. The next approach, the bridge approach, is used “to connect distanced players so that they can play and improvise as if they were in the same space” (Weinberg, 2005, p. 27). In a few ways, algorithms playing with each other actually seems easier than human to human interaction using the bridge approach. If you have two machine learning algorithms that are trained to react to MIDI input and output MIDI information as well, this eliminates the need for processing power to send the larger audio data, as opposed to the much smaller MIDI values. As for the next two approaches, I will be grouping them together because, using an algorithmic approach, they become essentially the same. The shaper approach “takes a more active musical role by algorithmically generating musical materials and allowing participants to collaboratively modify and shape these materials” (Weinberg, 2005, p.27), while the construction kit approach allows skilled musicians “to contribute their music to multiple-user composition sessions, manipulate and shape their own and other players’ music, and take part in a collective creation” (Weinberg, 2005, p.28). A purely algorithmic approach to both of these approaches would involve a more complicated machine learning algorithm than the one in the theoretical algorithmic bridge approach, but the results would be much more fruitful. Instead of just sending MIDI data, algorithms can control other algorithms in every aspect of music performance, making the end result much more dynamic.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>In conclusion, I believe that interdependence among algorithms will be an interesting topic to keep investigating for years to come. In the past, people like Garnett may not have seen a way forward for this kind of music creation, but recent advances in music technology like Magenta make algorithmically generated music easier than ever to execute. While I acknowledge the theoretical approaches to online algorithmic interdependence is ambitious, and the end result may not be incredibly satisfying due to the loss of human interaction, there are many ways we can base algorithmic interdependence in human-to-human approaches to music creation. I believe that this is a worthwhile area to research further and could one day create  adventurous, unpredictable music performances.</p>
+
+<h1 id="sources">Sources</h1>
+
+<p>Garnett, G. E. (2001). The Aesthetics of Interactive Computer Music. Computer Music Journal, 25(1), 21–33. http://www.jstor.org/stable/3681632</p>
+
+<p>Magenta. (2021). What is Magenta? https://magenta.tensorflow.org</p>
+
+<p>Weinberg, G. (2005). Interconnected Musical Networks: Toward a Theoretical Framework. Computer Music Journal 29(2), 23-39. https://www.muse.jhu.edu/article/184257.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2021/09/22/josephcl-algorithmic-interdependence.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

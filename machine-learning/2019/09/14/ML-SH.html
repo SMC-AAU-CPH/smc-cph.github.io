@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Triggering effects, based on playing style | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Triggering effects, based on playing style" />
+<meta name="author" content="Sepehr Haghighi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Technology in collaboration with art could create creative solutions and achievements. In here we use machine learning in order to ease the work of player while playing an instrument." />
+<meta property="og:description" content="Technology in collaboration with art could create creative solutions and achievements. In here we use machine learning in order to ease the work of player while playing an instrument." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/09/14/ML-SH.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/09/14/ML-SH.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_09_14_aleksati_SML0.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-14T11:25:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_09_14_aleksati_SML0.jpeg" />
+<meta property="twitter:title" content="Triggering effects, based on playing style" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sepehr Haghighi"},"dateModified":"2019-09-14T11:25:00+00:00","datePublished":"2019-09-14T11:25:00+00:00","description":"Technology in collaboration with art could create creative solutions and achievements. In here we use machine learning in order to ease the work of player while playing an instrument.","headline":"Triggering effects, based on playing style","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_09_14_aleksati_SML0.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/09/14/ML-SH.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Sepehr Haghighi"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/09/14/ML-SH.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Triggering effects, based on playing style
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-09-14T11:25:00+00:00"
+        itemprop="datePublished"
+      >Sep 14, 2019 •
+      </time>
+         
+      <a href="/authors/sepehrhaghighi.html">Sepehr Haghighi</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>Technology in collaboration with art could create creative solutions and achievements.
+In here we use machine learning in order to ease the work of player while playing an instrument.</p>
+
+<h3 id="introduction-and-background">Introduction and background</h3>
+<p>As a guitar player, while playing live, I can feel that it could be very useful to have a system in which engages and disengages the necessary effects, based on my playing style. This lead me to creation of a system, based on machine learning, which engages and disengages reverberation based on my playing style.
+For that the machine needs to learn how to differ between playing styles.</p>
+
+<h3 id="feature-extraction">Feature Extraction</h3>
+<p>For the so called matter stated above, some samples were needed. Therefore I reorded two sets of 52 samples, with each 5 seconds lenght. A group of them represented the rhythm guitar playing style and the other represented the solo playing style. Also, I have to mention that since aesthetically having the reverb on Arpeggios was more efficient as well, I mixed some arpeggios with the solos.
+Here you can hear a sample, from each group of the files:</p>
+
+<ul>
+  <li>Rhtyhm sample:</li>
+</ul>
+<audio controls="controls">
+  <source type="audio/wav" src="https://docs.google.com/uc?export=download&amp;id=1pgf_d2Akn8QChNX3Qeqx1bTPkQHB6zvb" />&lt;/source&gt;
+  <p>Your browser does not support the audio element.</p>
+</audio>
+
+<ul>
+  <li>Solo/Arpeggio sample:</li>
+</ul>
+<audio controls="controls">
+  <source type="audio/wav" src="https://docs.google.com/uc?export=download&amp;id=1-EDdU5ACHL8I704pH5j36ILDeXeiHlsx" />&lt;/source&gt;
+  <p>Your browser does not support the audio element.</p>
+</audio>
+
+<p>After that, we have to consider the fact that, the machine needs to analyze and understand the audio files. For that there were few features extracted from the files and presented to the machine, so the machine could identify the audio files for itself.
+The language that was used for programming the system was <a href="https://www.python.org/">python</a> and the package that was used in the script to work with audio files was <a href="https://Librosa.github.io/librosa/">LibROSA</a>.
+The main features extracted from the samples included RMS, Spectral Flatness and Chromagram stft (indicating the power of the playing).
+These features were extracted and were fed into the system.
+The files were clustered by an algorithm called PCA (principle component analysis). The reason for that, was to reduce the set of variables (features) to a small set that still contains most of the information in the original one.
+Below you can observe the graph that projects the two group of samples, based on their features.</p>
+
+<figure>
+<img src="/assets/image/2019_09_14_aleksati_SML1.png" width="85%" align="center" />
+<figcaption><strong></strong></figcaption>
+</figure>
+
+<h3 id="classification-training-and-prediction">Classification, training and prediction:</h3>
+
+<p>For the classification and learning processs, a system called Support Vector Machine was used. This is a supervised learning system which is very efficient system for classification of such data. It finds a hyperplane in an N-dimensional space (N = the number of features) that distinctly classifies the data points.
+As it is shown below, it could classify the samples with a high accuracy.</p>
+
+<figure>
+<img src="/assets/image/M" width="85%" align="center" />
+<figcaption><strong></strong></figcaption>
+</figure>
+
+<h3 id="future-work">Future work</h3>
+<p>The next step is implementing the system on a real situation. Although after implementation there is going to be a bit of latency in live situations, but in the case that more features could be added to the system, in regards to the automation of the effects, it definitely will worth going through it.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2019/09/14/ML-SH.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

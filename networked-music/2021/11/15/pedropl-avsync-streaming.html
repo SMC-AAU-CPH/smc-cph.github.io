@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Audio-Video Synchronization for Streaming | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Audio-Video Synchronization for Streaming" />
+<meta name="author" content="Pedro Lucas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This approach considers a streaming solution from multiple sources and different locations (Salen, Video Room, Portal)" />
+<meta property="og:description" content="This approach considers a streaming solution from multiple sources and different locations (Salen, Video Room, Portal)" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/pedropl-avsync-streaming.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/pedropl-avsync-streaming.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_pedropl_avsync_obsall.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-15T02:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_pedropl_avsync_obsall.jpg" />
+<meta property="twitter:title" content="Audio-Video Synchronization for Streaming" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pedro Lucas"},"dateModified":"2021-11-15T02:00:00+00:00","datePublished":"2021-11-15T02:00:00+00:00","description":"This approach considers a streaming solution from multiple sources and different locations (Salen, Video Room, Portal)","headline":"Audio-Video Synchronization for Streaming","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_pedropl_avsync_obsall.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/pedropl-avsync-streaming.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Pedro Lucas"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/pedropl-avsync-streaming.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Audio-Video Synchronization for Streaming
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-15T02:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 15, 2021 •
+      </time>
+         
+      <a href="/authors/pedrolucas.html">Pedro Lucas</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>In order to provide the best perceptual quality in a multimedia transmission, the synchronization between audio and video (AV-Sync) has to be preserved. If that does not happen, theses inaccuracies can be perceived, affecting the visual and auditory experience (Yang et. al. 2007).</p>
+
+<p>There is research that suggests that errors in Audio and Video synchronization can be identified in around 185 ms with a variance of approximately 42 ms (Younkin and Corrieau 2008). Additionally, we have other studies in which errors can be perceived near to 200 ms for audio ahead of video and 320 ms for audio delayed with respect to video (Staelens et. al. 2012). The goal is to reduce these inaccuracies as much as possible to improve the multimedia experience.</p>
+
+<h2 id="streaming-scenarios">Streaming Scenarios</h2>
+
+<p>In the case of Audio and Video synchronization, I considered three of the main locations that we usually use on the SMC Program: Salen, the Video Room, and the Portal. The objectives are:</p>
+
+<ul>
+  <li>Measure Audio and Video synchronization errors for these three places.</li>
+  <li>Fix the errors by introducing latency, which will happen mostly regarding the audio.</li>
+  <li>Stream on YouTube sources from these three places at the same time.</li>
+</ul>
+
+<p>The idea is to setup a streaming system within the Portal and receive the audio and video from a source placed on each location. These sources will be received via internet from Salen and the video room to the streaming system in the portal, and the local signals in the portal itself will be sent to this system. Finally, all these sources are streamed to a service, that in this case, will be YouTube. The picture below illustrates this setup.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_pedropl_avsync_complete.jpg" alt="Complete Streaming Scenario." title="Complete Streaming Scenario." width="100%" />
+   <figcaption><i>Complete Streaming Scenario.</i></figcaption>
+</figure>
+
+<p>Next you will find a description for every location.</p>
+
+<h3 id="salen">Salen</h3>
+
+<p>In Salen, we have a source which is an Audio and Video synchronization test that is used on every location. The audio is capture by a microphone connected to a MIDAS mixer which sends a stereo analog signal to a PC in which we have OBS ninja running. We create in this PC an instance of OBS ninja for sending audio and video. For video, we point a camera to the source, which is connected to a video mixer. The video feed is sent to the PC through a capture card, and finally this video feeds the OBS ninja instance which is transmitted to the internet considering both, audio and video.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_pedropl_avsync_salen.jpg" alt="Salen Diagram" title="Salen Diagram." width="100%" />
+   <figcaption><i>Salen Diagram.</i></figcaption>
+</figure>
+
+<h3 id="video-room">Video Room</h3>
+
+<p>In the video room we have a similar source. We capture the audio through a microphone connected to the analog mixer and we sent this signal to the LOLA PC and then to internet. We have a camera that is connected directly to the Zoom PC through USB. In this PC we are running an instance of OBS ninja, but in this case, we are just sending the video. As you can notice, we have two different sources for audio and video going to the network.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_pedropl_avsync_dungeon.jpg" alt="Video Room Diagram" title="Video Room Diagram." width="100%" />
+   <figcaption><i>Video Room Diagram.</i></figcaption>
+</figure>
+
+<h3 id="portal">Portal</h3>
+
+<p>In the portal we use the same video source. The audio is capture by a microphone that goes to the MIDAS mixer. The video is capture through a camera. Both, audio and video are sent to the ATEM mini. It allows to feed the Streaming PC as one source that represents the local setup. The Streaming PC collects all the source in OBS Studio, in which the synchronization corrections happen.
+The audio from the Video room is received through the LOLA PC which sends the signal to the MIDAS mixer. The audio signal is capture by the streaming PC through the sound card from the mixer so that we can have a separated source.
+The video feed from the video room is received from OBS ninja. We get both, audio and video from Salen through a different OBS ninja source. Once we have the three sources in terms of audio and video we can perform measurements and corrections regarding AV-Sync and stream to YouTube.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_pedropl_avsync_portal.jpg" alt="Portal Diagram." title="Portal Diagram." width="100%" />
+   <figcaption><i>Portal Diagram.</i></figcaption>
+</figure>
+
+<h2 id="measurement-technique">Measurement Technique</h2>
+
+<p>For performing the measurements, we record the multiple video feed in OBS Studio but we mute all the sources except the one that we are interested in, so that we can measure the difference between audio and video in a video editing software. OBS looks like the next image when all sources are integrated.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_pedropl_avsync_obsall.jpg" alt="All sources in OBS Studio" title="All sources in OBS Studio." width="75%" />
+   <figcaption><i>All sources in OBS Studio.</i></figcaption>
+</figure>
+
+<p>Once we have the recording, we identify the closest frame to the sound, and we check the approximate number that is given in the video test as it is shown in the picture below. We do that with all the three sources several times and we average the value.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_pedropl_avsync_measure.jpg" alt="Measuring in video editor" title="Measuring in video editor." width="75%" />
+   <figcaption><i>Measuring in video editor.</i></figcaption>
+</figure>
+
+<h2 id="results">Results</h2>
+
+<p>The results are individual per each location. For Salen we have 250 ms, for the video room 200 ms, and for the portal 50 ms. Note that in the Portal, according to previous research we can say that the synchronization error will not be perceived. But for the other ones is necessary to do a correction.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_pedropl_avsync_results.jpg" alt="AV-Sync errors per location" title="AV-Sync errors per location." width="100%" />
+   <figcaption><i>AV-Sync errors per location.</i></figcaption>
+</figure>
+
+<h2 id="correction">Correction</h2>
+
+<p>OBS Studio allows us to introduce latency for the audio sources through a parameter called “Sync offset”. We just have to write the measured numbers and we will get every individual source synchronized in terms of audio and video. The interface that OBS offers is shown in the next picture.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_11_15_pedropl_avsync_obscorrection.jpg" alt="OBS audio correction." title="OBS audio correction." width="100%" />
+   <figcaption><i>OBS audio correction.</i></figcaption>
+</figure>
+
+<h2 id="comparisons-between-before-and-after-correction">Comparisons between before and after correction.</h2>
+
+<p>In the following video you will find the presentation of this topic. From minute 5:30 there is a set of videos showing the test source and the comparisons when the audio latency is introduced for synchronization.</p>
+
+<figure style="float: none">
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_11_15_pedropl_video_lecture_avsync.mp4" width="1024" height="576" frameborder="0" allowfullscreen=""></iframe>
+   <figcaption>Presentation</figcaption>
+</figure>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>Values can be affected regarding AV-Sync errors by changing quality settings. It can be focused on audio and/or video in terms of resolution, bitrate, sample rate, network and others. In that case is recommendable to measure every time we need to assemble this kind of application.
+Errors can be introduced locally. It means that we can have local latency and we could fix locally and then send, but still, we probably will need to fix in the other end. In that sense, we must preserve the solution we choose, that is, fixing synchronization errors locally and in the streaming system or just in the streaming system. The goal is to reduce these errors in the final end.
+A Correction is not needed if the latency is not perceived. In this case we could skip the correction for the portal because it was within an acceptable value for human perception.</p>
+
+<p>Measurement and fixing techniques can be extended outside SMC, as well as external sources. For example, Salen can be considered an external source in the SMC portals, so we can add as many sources as we want by using, for example, OBS ninja to transmit audio and video and apply the same techniques.</p>
+
+<p>Finally, future work considers synchronization of the sources after the individual correction of each one. It can be managed by having a way to centralize a source or deal with an actual telematic performance in real time so that we can try to run events synchronized among all the sources.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>
+    <p>Yang, M., Bourbakis, N., Chen, Z., &amp; Trifas, M. (2007). An efficient audio-video synchronization methodology. Proceedings of the 2007 IEEE International Conference on Multimedia and Expo, ICME 2007, 767–770. https://doi.org/10.1109/icme.2007.4284763</p>
+  </li>
+  <li>
+    <p>Younkin, A. C., &amp; Corriveau, P. J. (2008). Determining the amount of audio-video synchronization errors perceptible to the average end-user. IEEE Transactions on Broadcasting, 54(3), 623–627. https://doi.org/10.1109/TBC.2008.2002102</p>
+  </li>
+  <li>
+    <p>Staelens, N., De Meulenaere, J., Bleumers, L., Van Wallendael, G., De Cock, J., Geeraert, K., … Demeester, P. (2012). Assessing the importance of audio/video synchronization for simultaneous translation of video sequences. Multimedia Systems, 18(6), 445–457. https://doi.org/10.1007/s00530-012-0262-4</p>
+  </li>
+</ul>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2021/11/15/pedropl-avsync-streaming.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Improvised electronica with TouchOSC | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Improvised electronica with TouchOSC" />
+<meta name="author" content="Stephen Gardener" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this project, I wanted to explore the options available when performing electronic music live with no pre-recorded / pre-sequenced material." />
+<meta property="og:description" content="In this project, I wanted to explore the options available when performing electronic music live with no pre-recorded / pre-sequenced material." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/stephedg-phys-comp-project.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/stephedg-phys-comp-project.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://hexler.net/gfx/_software/touchosc-15.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-16T15:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://hexler.net/gfx/_software/touchosc-15.png" />
+<meta property="twitter:title" content="Improvised electronica with TouchOSC" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Stephen Gardener"},"dateModified":"2020-10-16T15:00:00+00:00","datePublished":"2020-10-16T15:00:00+00:00","description":"In this project, I wanted to explore the options available when performing electronic music live with no pre-recorded / pre-sequenced material.","headline":"Improvised electronica with TouchOSC","image":"https://hexler.net/gfx/_software/touchosc-15.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/stephedg-phys-comp-project.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Stephen Gardener"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/stephedg-phys-comp-project.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Improvised electronica with TouchOSC
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-10-16T15:00:00+00:00"
+        itemprop="datePublished"
+      >Oct 16, 2020 •
+      </time>
+         
+      <a href="/authors/stephengardener.html">Stephen Gardener</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>In this project, I wanted to explore the options available when performing electronic music live with no pre-recorded / pre-sequenced material.</p>
+
+<p>In a band or orchestra, you have multiple musicians, each focusing on a particular instrument. For electronic music makers, we have an entire suite of sound generators (instruments) and sequencers (the performers) in our laptop, and the question becomes - how can we translate an electronic composition on a laptop into something that can be performed in a live situation? The obvious answer would be to assemble a band, with each person controlling a single part on their laptop or with a synth, in order to keep the one-to-one ratio of performer and instrument. Another option is to look upon the laptop as an orchestra of musicians, with each sequencer / synth combination being a part controlled by an individual ‘performer’. In this way, you become the conductor, directing the musicians (sequencers) at a higher level. Such a system, designed correctly, could allow for a great deal of compositional and improvisational freedom in a performance context, and my project was a first attempt at looking into some of the options that would be available to such a performer.</p>
+
+<p>As I wanted individual control over all parts at the same time, I limited the number of parts to four - two melodic parts, a harmony part and a rhythm section. I put together a system using Reason Players (Dual Arpeggio, Scales &amp; Chords, Beat Map and Note Echo) which I could feed with single notes, and let them generate the melodies, harmonies and beats.</p>
+
+<figure style="float: none">
+    <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_10_16_stephedg_reason_rack.gif" width="430" height="500"></iframe>
+    <figcaption>I used Reason Rack to turn singles notes into melodies</figcaption>
+</figure>
+
+<h1 id="introducing-touchosc">Introducing TouchOSC</h1>
+
+<p>After an initial test using a Playstation 4 DualShock controller, I decided to build a custom TouchOSC interface. TouchOSC Editor allows you to put together a control interface consisting of wide variety of sliders, buttons, rotary knobs and various other controls. Each control can be configured to send an OSC message, MIDI data including note on/off, or a keystroke.</p>
+
+<p>My custom layout included buttons 1 - 7 for triggering the notes in a D mixolydian mode (hard coded in this example), plus part specific controls for the melody, harmony and rhythm sections.</p>
+
+<p><img src="/assets/image/2020_10_16_stephedg_touchosc.png" alt="TouchOSC layout" /></p>
+
+<p>The two melody parts were handled by Native Instruments Monark and U-he Repro-1 soft synths. The note received from TouchOSC was turned into a 4 note chord and sent through two arpeggios set at two different rates and lengths in order to generate an interesting rhythm.</p>
+
+<p>The first group of sliders controlled these melody parts - one I assigned to the Note Echo (MIDI echo) device, allowing me to introduce additional notes which would vary in pitch (a subsequent player mapped these notes back to the D7 scale). The other slider I assigned to the Monarks third oscillator, allowing me to shift the octave up and down, in essence introducing an additional note/voice to the melody.</p>
+
+<p>The second group of controls were for the harmony part. This was a synth pad played by U-he Repro-5 soft synth, and the note received from TouchOSC was mapped to a chord using the Chords &amp; Scales player. I used the sliders to adjust sound parameters (cutoff frequency and the introduction of a tremolo effect) rather than notes for this part.</p>
+
+<p>The final group of controls controlled the bass and drums, with a slider for a beat-repeat effect, and a button for muting / unmuting the part.
+I used Ableton Live as the host for the VSTs and the Reason rack plugins. TouchOSC on the phone connected via the TouchOSC Bridge app to the Max for Live Connection Kit device running in Ableton, which then allowed me to map the TouchOSC controls to Ableton.</p>
+
+<h1 id="in-practice">In practice</h1>
+
+<figure style="float: none">
+    <iframe width="800" height="480" src="https://www.youtube-nocookie.com/embed/VhKo2_FoRFs" frameborder="0" allowfullscreen=""></iframe>
+    <figcaption>Performing with TouchOSC</figcaption>
+</figure>
+
+<p>I feel there is a lot of potential in a setup like this. Once you have an idea of how you would like things to work, creating a TouchOSC layout and mapping it to elements in an Ableton session is quick and straight forward. I could easily imagine a whole live set being performed using this method. TouchOSC lets you store multiple pages of controls within a layout, and so makes it easy to switch layouts depending on the needs of the song. I used a mobile phone for this particular project, but I suspect the screen real estate of a tablet would feel more comfortable and offer more space to organise the layout.</p>
+
+<h1 id="the-future">The future</h1>
+<p>The basic idea presented here could be extended in a number of ways:</p>
+<ul>
+  <li>sending notes individually to each part</li>
+  <li>allowing the choice of root note and scale/mode, for on-the-fly key changes</li>
+  <li>being able to tap in rhythms for the melody parts to follow</li>
+  <li>the ability to change the flavour of the chords - adding 7ths, 9ths, suspended 4ths, inverting chords, etc.</li>
+  <li>use the Beat Map player to generate and manipulate beats on the fly</li>
+  <li>adding more sound sculpting parameters for each part</li>
+</ul>
+
+<p>I feel there is a danger of getting carried away when adding more controls however - I would be worried it could increase the distance between me and the performance, as the number of controls I can manipulate at one time is limited, and so the temptation could be to start to automate more and play less. For me, the key would be selecting a small but effective number of parameters to control, and for the focus of those parameters to be on manipulating the melodic, harmonic and rhythmic elements of the song, with a few well chosen sound sculpting controls thrown in.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2020/10/16/stephedg-phys-comp-project.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

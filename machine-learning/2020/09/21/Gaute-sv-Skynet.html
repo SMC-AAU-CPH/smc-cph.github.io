@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ML something creative | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ML something creative" />
+<meta name="author" content="Gaute Wardenær" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Intuition tells me that a larger network should be better. More is more, as Yngwie says, but that is definitely not the case." />
+<meta property="og:description" content="Intuition tells me that a larger network should be better. More is more, as Yngwie says, but that is definitely not the case." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/21/Gaute-sv-Skynet.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/21/Gaute-sv-Skynet.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_21_gtwarden_robotreading.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-21T20:41:01+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_21_gtwarden_robotreading.jpg" />
+<meta property="twitter:title" content="ML something creative" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gaute Wardenær"},"dateModified":"2020-09-21T20:41:01+00:00","datePublished":"2020-09-21T20:41:01+00:00","description":"Intuition tells me that a larger network should be better. More is more, as Yngwie says, but that is definitely not the case.","headline":"ML something creative","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_09_21_gtwarden_robotreading.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/21/Gaute-sv-Skynet.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Gaute Wardenær"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2020/09/21/Gaute-sv-Skynet.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      ML something creative
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-09-21T20:41:01+00:00"
+        itemprop="datePublished"
+      >Sep 21, 2020 •
+      </time>
+         
+      <a href="/authors/gautewarden%C3%A6r.html">Gaute Wardenær</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="10th-of-september">10th of September</h2>
+
+<p>When starting this course i decided on giving it my best, following 100% and trying to learn as much as possible. I knew that it would be hard, but I also knew that I would be very satisfied when completing it and handing in something i was proud of.</p>
+
+<p>Since the first step after having decided on what to do in my project is to gather a dataset, I did this. I also have to cut the dataset into</p>
+
+<h2 id="11th-of-september">11th of september</h2>
+
+<p>I have finally gotten an algorithm to run on my own dataset!
+I have hesitated quite a bit to actually go ahead and try because I wanted to understand EVERY aspect of the code before I do so. Not that I understand nearly every aspect of it, but I feel a bit more confident now.</p>
+
+<p>I really wish that I had more knowledge of Python before starting this, right now I feel like I am trying to write map directions or a cookbook in German (I don’t speak German).</p>
+
+<p>The algorithm that I fanally got tu run was the one from “Workshop 2a”.
+The first time around I got the astounding result of 29% accuracy! Meaning that it is just slightly better than random guessing…</p>
+
+<p>What should I do to improve this?</p>
+
+<p>Allright!</p>
+
+<p>It’s getting pretty late here and I have had a few beers, but things are starting to look better!</p>
+
+<p>I managed to get the “workshop 4a” -patch to work after just a few modifications. I don’† know why, but I get this weird error when trying to write to anything other than a .CSV file (like in “workshop3b”).</p>
+
+<p><code class="language-plaintext highlighter-rouge">ValueError: could not broadcast input array from shape (13545) into shape (1)</code></p>
+
+<p>It obviously has something to do with the formatting of the array that i am storing to, but I cannot manage to figure out what it is.</p>
+
+<p>One very strange observation is what the “random starte” value does to the result of the algorithm. I changed it from the initial 50 -something to 3, then the accuracy dropped from 50% to arround 30% after that, I started with 200 and it raised up to over 60%. How could the seed for a random number have so much to say for the outcome of this?!?</p>
+
+<h2 id="12th-of-september">12th of September</h2>
+
+<p>I wondered if why I got such bad results from my algorithm was because I had been sloppy with processing of my training data. So today I took the time to go through every single file, cutting them to the same length and normalize them all. Now, inconcistensies in the samples should not be a problem. Still I have very bad results! This is getting ridiculous.</p>
+
+<p>I now feel very stuck on this.
+Mostly because my knowledge of Python is so limited that I don’t have the ability to see where the mistake is made in the first place. What to do now? Learn Python! Where to start? I have no idea.
+Maybe the best thing to do is to run through all the code in the notebooks and stop if there is anything that is unclear, learn it and go further. This way I will know where the problem is.</p>
+
+<h3 id="six-hours-later">Six hours later</h3>
+
+<p>Well, have I learned Python yet?
+No.</p>
+
+<p>But I have come a whole lot closer!
+There is still so much to learn before I feel comfortable with understanding what I am doing with these notebooks, so better keep at it.</p>
+
+<h2 id="14th-of-september">14th of September</h2>
+<p>I have fiddeled around a bit with different features and structures of the algorithm and it struck me that the MLPclassifier in “tanh” -mode is SO much slower than the others. Being that much slower, one would guess that it is much better as well? Not the case.
+After leaving it for about 10 minutes it produced results that were slightly worse than those of the default “relu” -setting. Why?</p>
+
+<p>Number of mislabeled samples 10 out of 21
+Accuracy: 0.5238095238095238
+              precision    recall  f1-score   support</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     0.0       0.00      0.00      0.00         2
+     1.0       1.00      0.75      0.86         4
+     2.0       0.50      1.00      0.67         2
+     3.0       0.50      0.67      0.57         3
+     4.0       0.75      0.60      0.67         5
+     5.0       0.50      0.33      0.40         3
+     6.0       0.00      0.00      0.00         2
+
+accuracy                           0.52        21    macro avg       0.46      0.48      0.45        21 weighted avg       0.56      0.52      0.52        21
+</code></pre></div></div>
+
+<p>confusion matrix
+[[0 0 0 0 1 0 1]
+ [0 3 1 0 0 0 0]
+ [0 0 2 0 0 0 0]
+ [0 0 0 2 0 1 0]
+ [0 0 0 0 3 0 2]
+ [1 0 0 1 0 1 0]
+ [0 0 1 1 0 0 0]]</p>
+
+<p>300,3000,3000,10000,2000,200), max_iter=2000, activation=’tanh’</p>
+
+<p>Number of mislabeled samples 8 out of 21
+Accuracy: 0.6190476190476191
+              precision    recall  f1-score   support</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     0.0       0.00      0.00      0.00         2
+     1.0       0.60      0.75      0.67         4
+     2.0       0.67      1.00      0.80         2
+     3.0       0.50      0.67      0.57         3
+     4.0       1.00      1.00      1.00         5
+     5.0       0.50      0.33      0.40         3
+     6.0       0.00      0.00      0.00         2
+
+accuracy                           0.62        21    macro avg       0.47      0.54      0.49        21 weighted avg       0.56      0.62      0.58        21
+</code></pre></div></div>
+
+<p>confusion matrix
+[[0 2 0 0 0 0 0]
+ [0 3 1 0 0 0 0]
+ [0 0 2 0 0 0 0]
+ [1 0 0 2 0 0 0]
+ [0 0 0 0 5 0 0]
+ [1 0 0 1 0 1 0]
+ [0 0 0 1 0 1 0]]</p>
+
+<p>## Tuesday 15th of September
+ Dang it!
+ I had let the system sit on my computer overnight with these settings:
+ #Import the classifier</p>
+
+<blockquote>
+  <p>mlp = MLPClassifier(hidden_layer_sizes=(300,10000,10000,10000,10000,2000), max_iter=2000, activation=’tanh’, verbose=True)</p>
+</blockquote>
+
+<p>It took forever to go through just one cycle and I was really excited to check with it in the morning to see how it had done, but when I did it said that “the Kernel has stopped”</p>
+
+<p>Today I realized that I have to expand my dataset to include more samples. So I have gathered a lot more samples on some of the instruments and am very eager to see if it makes a difference!
+Since I eave downloaded more samples in only two categories, I predict that the results that I get from those categories will be much better than those from the others, it’s time to find out.</p>
+
+<p>Success!
+It really got better for most of the samples.
+Which kind of is to be expected since when more samples get classified correctly, that leaves less to chance.</p>
+
+<h2 id="wednesday-16th-of-september">Wednesday 16th of September</h2>
+<p>Sooo
+I have been very intreagued with the question of why an ANN does what it does. I have tried many different setups in the structure of the network and found some very interresting results.</p>
+
+<p>Intuition tells me that a larger network should be better, “more is more” as Yngwie says, but that is definitely not the case. Some of the best results that I have gotten has come from fairly simple networks of 20,300,300,300,20. This configuration has given me up to 80% success rates, which I think is pretty good for my case.</p>
+
+<h3 id="much-much-later-the-same-day">Much, much later the same day</h3>
+<p>Allright!
+Finally I feel that I have some kind of grip on what all the aspects of the algorithms do. I have this thing where I can’t really settle for working with something that I don’t know exactly how works down to every little detail. This is a great ability when learning something that builds “on top of” prior knowledge on a subject, but in this project? Well…
+I don’t know Python™ that well, so stopping and looking up what a line of code does every two minutes is very tiresome. What is even more tiresome is looking up what an MCFF, spectral centroid or spectral rollof is/does and reading about it untill I have no more questions and can explain this to anyone if they ask. It takes so much time away from coding, it’s ridiculous.</p>
+
+<p>It is very hard to try to conceptualize where the values are stored, how the arrays look, what the sequence of precesses are and so on before one has a good understanding of the language used. I now feel that I have the basic knowledge of Python™ that is needed to get someting useful out of this project, which is so frustrating! I really wish that I had this knowledge when starting the course, then I wouldn’t have to both understand how machine learning works and the language, I could have focused only on machine learning, making the learning outcome much greater.</p>
+
+<p>Found out that the “adam” -solver works much better than the “lbfgs” -solver. Which is weird, since the litterature states that lbfgs should be better for smaller datasets, which I judge my dataset to be.</p>
+
+<h2 id="thursday-the-17th-of-september">Thursday the 17th of September</h2>
+<p>Interesting.
+When I was thinking of what to do for my project I had the idea of making the algorithm recognize feedback to be an automatic feedback spupressor that will not effect the audio signal the way conventional feedback supressors do. After tweeking and training my algorithm a few times, I noticed that it almost always recognized feedback correctly. Maybe this would be the best application for what I have made here. A machine that shouts “FEEDBACK!!!” and the name of the channel that it feeds back on is a thing that would be really helpfull in a live audio setting.</p>
+
+<h3 id="deep-into-the-night">Deep into the night</h3>
+<p>Well, I have done what I can on this project and will hope for the best.
+One very interesting discovery was how much better I work and how much better I feel when I am on cmapus! Today I went to the portal to ask Stefano some questions and ended up sitting there with my fellow students for a little while. The feeling I had afterwards was so much better than the one I have had the last two weeks! It must be seing people. Yes, I do like working from home from time to time, but being in the physical presence of others really help me get better work done by putting me in a better mood.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2020/09/21/Gaute-sv-Skynet.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

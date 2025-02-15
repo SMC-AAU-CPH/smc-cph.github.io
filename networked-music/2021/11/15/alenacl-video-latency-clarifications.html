@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Video latency: definition, key concepts, and examples | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Video latency: definition, key concepts, and examples" />
+<meta name="author" content="Alena Clim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blogpost is made after the video lecture on the same topic and it includes a definition of video latency and other related key concepts, as well as concrete examples from the SMC portals." />
+<meta property="og:description" content="This blogpost is made after the video lecture on the same topic and it includes a definition of video latency and other related key concepts, as well as concrete examples from the SMC portals." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/alenacl-video-latency-clarifications.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/alenacl-video-latency-clarifications.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_alena_test_latency.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-15T16:30:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_alena_test_latency.png" />
+<meta property="twitter:title" content="Video latency: definition, key concepts, and examples" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alena Clim"},"dateModified":"2021-11-15T16:30:00+00:00","datePublished":"2021-11-15T16:30:00+00:00","description":"This blogpost is made after the video lecture on the same topic and it includes a definition of video latency and other related key concepts, as well as concrete examples from the SMC portals.","headline":"Video latency: definition, key concepts, and examples","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_11_15_alena_test_latency.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/alenacl-video-latency-clarifications.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alena Clim"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2021/11/15/alenacl-video-latency-clarifications.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Video latency: definition, key concepts, and examples
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-11-15T16:30:00+00:00"
+        itemprop="datePublished"
+      >Nov 15, 2021 •
+      </time>
+         
+      <a href="/authors/alenaclim.html">Alena Clim</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h3 id="introducing-video-latency">Introducing Video Latency</h3>
+
+<p>The aim of this blogpost is to explain and clarify concepts and processes rather than introduce new ideas or recommendations. Audio latency or the problem of audio-video synchronization is not discussed here.</p>
+
+<p>Let’s start with the beginning. <strong>Video Latency</strong> is the difference between the time of capturing and that of displaying whatever video was captured.</p>
+
+<p>The total time difference between source and viewer is called <strong>glass-to-glass latency</strong>, or <strong>end-to-end</strong>. Other terms like “capture latency”, “encoding latency” only refer to the lag added at a specific step of the workflow.</p>
+
+<p>Each user case has its own latency requirements. One-way streams of live events to large audiences can have up to 45 seconds of delay without any bad consequences, whereas in the live stream of a football match, for example, so much delay would be problematic (think about social media spoiling an important goal you haven’t seen yet…)</p>
+
+<p>It is even more important to have low video latency in a two-way conference, real-time device control, or, of course, <em>telematics performances</em> (think about playing together… and missing all the visual cues and feedback!)</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_15_alena_streaming_latency.JPG" alt="" title="Use case based latency" width="auto" /> <figcaption>Wowza Media Systems video latencies</figcaption>
+</figure>
+
+<h3 id="live-streaming">Live Streaming</h3>
+<p>Let’s quickly discuss the most important components of the streaming chain with regards to video latency (aka the ones that usually add the most lag).</p>
+
+<p><strong>Video encoding</strong> is the process of compressing raw video for it to be later transported over the internet. At this step, the encoder needs to compress the content according to the available bandwidth of the network.</p>
+
+<p>There are two types of video encoding, <strong>file-based</strong> and <strong>live</strong>. In the first case, encoders are used to compress and reduce the size of video content so that it uses less storage space and is easier to transfer. Since the video files are not live, the latency is rarely a key problem here.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_15_alena_video_latency_chain.JPG" alt="" title="Streaming workflow" width="auto" /> <figcaption>Haivision representation of the streaming workflow</figcaption>
+</figure>
+
+<p><strong>Live video encoding</strong> is the process of compressing real-time video and audio content prior to streaming – significantly reducing bandwidth while maintaining picture quality. However, depending on the type of encoder used, compressing live video can add to the glass-to-glass latency, negatively impacting the overall experience quality.</p>
+
+<p><strong>Video decoding</strong> is the process opposite of encoding. It can output uncompressed video through SDI for further video processing or over HDMI for displaying directly on a screen.</p>
+
+<p>To keep latency low in a video streaming workflow, it’s important to work on each step at a time – e.g., if the video encoder is adding latency, there won’t be a way to “catch up” on that delay later in the streaming process.</p>
+
+<h3 id="codecs">CODECs</h3>
+
+<p>Another critical step that adds to the glass-to-glass latency is compressing and decompressing data into files or real-time streams. This process is done following video protocols known as the <strong>codecs</strong>. The term codec is a portmanteau of the words <em>enCOding</em> and <em>DECoding</em>.</p>
+
+<p>Most codecs use a <strong>“lossy” compression</strong> method – some redundant spatial and temporal information is lost. <strong>“Lossless” compression</strong> is used when the goal is to reduce file and stream sizes by only a slight amount in order to keep picture quality identical to the original source.</p>
+
+<p>Codecs for live video (mainly H.264/AVC or H.265/HEVC) can reduce raw content data by as much as <em>a thousand times</em>, saving much needed bandwidth – e.g., a typical uncompressed HD stream is about 1.5 gigabits, but compressed it gets to around 5 megabits for live broadcast television.</p>
+
+<p><strong>Network transport protocols</strong> are also influencing the end-to-end latency. Different protocols will introduce different amounts of latency to the streaming workflow, so, for live applications a transport protocol with as low latency as possible should be chosen. <strong>Encrypting</strong> data for security purposes is another lag-adding parameter. “Packet loss” and following <strong>error correction</strong> methods also adds latency.</p>
+
+<p>Depending on each use case, the image quality or the low-latency will be more important. For applications where latency is critical, such as <strong>telematic performances</strong>, picture quality can often be exchanged in favor of minimizing latency. However, if the video quality is of importance one has to accept extra latency. Ultimately, the optimal combination of bitrate, picture quality, and latency settings will result in a great live experience over any network.</p>
+
+<h3 id="practical-examples-from-the-smc-portals">Practical examples from the SMC Portals</h3>
+
+<p><strong>Protocols</strong></p>
+
+<p>On a daily basis we use <strong>Zoom</strong> to communicate between Trondheim and Oslo, at least visually. For a better performance, this technology combines the two codecs:</p>
+<ul>
+  <li>The <strong>Advanced Video Coding (AVC)</strong> codec has a fast encoding speed and is very efficient for HD videos. However, as the demand for 4K continues, it is slowly being replaced with the <strong>High Efficiency Video Coding (HEVC)</strong> protocol, which can deliver the same quality at half the bitrate (while using significant processing power).</li>
+  <li><strong>FFMPEG (Fast Forward MPEG)</strong> is an open source, command-line based, multimedia project for encoding and decoding a variety of media formats (both audio and video) – essentially an upgrade of the grandpa <strong>MPEG</strong>.</li>
+</ul>
+
+<p>Both the Trondheim and the UiO portal are equipped with two very good cameras: the <em>Logitech Pro</em> and <em>Minrray PTZ</em>, both supporting AVC. The Minrray PTZ camera even supports the better HEVC (too bad Zoom doesn’t support it).</p>
+
+<p>Once a semester or so, for our awesome telematic performances, we need to set up a stream that feeds several camera perspectives (and audio!) to the Internet, mostly to Youtube. For this we use <strong>OBS Studio</strong> – which also uses AVC. For a transport protocol, it uses <strong>SRT (Secure Reliable Transport)</strong> – open source streaming protocol that enables encryption and utilizes packet recovery to maintain high quality over unreliable networks without compromising latency.</p>
+
+<p><strong>Video Latency in the SMC Portals</strong></p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_15_alena_2_way_latency_zoom.jpg" alt="" title="Testing 2 way connection latency" width="auto" /> <figcaption>Testing 2-way connection over zoom</figcaption>
+</figure>
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_15_alena_3_way_latency_google_meet.jpg" alt="" title="Testing 3 way connection latency" width="auto" /> <figcaption>Testing 3-way connection over Google Meet</figcaption>
+</figure>
+
+<p>Using a fun method of filming a web clock from more locations and then calculating the time difference, we tested some actual latencies:</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_11_15_alena_SMC_portals_video_latencies.JPG" alt="" title="Video latencies tested in the SMC portals" width="auto" /> <figcaption>Video latencies tested in the UiO and NTNU portal</figcaption>
+</figure>
+
+<p>What is this telling us? Firstly, <strong>the latency between Trondheim and Oslo is not <em>that</em> terrible!</strong> And secondly, even in the same room there’s latency to consider.</p>
+
+<h3 id="closing-remarks">Closing remarks</h3>
+
+<p>Remember, when working with video latency, to:</p>
+<ul>
+  <li>choose hardware that is engineered to keep latency as low as possible even when using a standard internet connection;</li>
+  <li>choose equipment that supports high efficiency video codecs;</li>
+  <li>make sure the transport protocols are suitable for your task;</li>
+  <li>find the balance between latency, picture quality and bandwidth depending on the use case.</li>
+</ul>
+
+<p>If you’re searching for <strong>inspiration for another latency test</strong> consider this use cases: during one of our SMC courses you need to use several camera perspectives: one for the lecturer, one for the class, one for the mixer view. Calculate the video latencies (and perhaps also video quality) between all cameras and compare them. Based on your findings decide which cameras should be placed where. Hint: perhaps it is more important to have a high quality stream of the mixer view rather than the other angles…</p>
+
+<p>As a last thought… have you considered that <strong>latency can be a good thing</strong>? For example to prevent obscenities from airing, for live subtitling, or closed captioning.</p>
+
+<p>Congratulations to all SMC students and teacher that set up our portals – despite our constant complaining the “worst” latency was still <em>under 50 ms</em>! Great job!</p>
+
+<h4 id="references-and-further-reading">References and further reading</h4>
+<p>Eberlein, P. (n.d.). Understanding Video Latency. U.S. Tech. http://www.us-tech.com/RelId/1490479/ISvars/default/Understanding_Video_Latency.htm
+Haivision. (n.d.). The Essential Guide to Video Encoding: From Video Compression and Codecs, to Latency and Transport Protocols. Retrieved November 1, 2021 from https://www.haivision.com/resources/white-paper/the-essential-guide-to-low-latency-video-streaming/
+Nikols, L. (2021). Video Encoding Basics: What is Latency and Why Does it Matter? Haivision. https://www.haivision.com/blog/all/video-encoding-basics-video-latency/
+Ubik, S, &amp; Pospíšilík, J. (2021). Video Camera Latency Analysis and Measurement. IEEE Transactions on Circuits and Systems for Video Technology, vol. 31, no. 1, pp. 140-147, doi: 10.1109/TCSVT.2020.2978057.
+Wowza Media Systems. (2021). What Is Low Latency and Who Needs It? (Update). https://www.wowza.com/blog/what-is-low-latency-and-who-needs-it</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2021/11/15/alenacl-video-latency-clarifications.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

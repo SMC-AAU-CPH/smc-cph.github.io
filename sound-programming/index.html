@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sound Programming | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Sound Programming" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC)." />
+<meta property="og:description" content="The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC)." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sound Programming" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master’s programme in Sound and Music Computing (SMC).","headline":"Sound Programming","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"}},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="page-heading" align="left">Sound Programming</h1>
+  </header>
+
+  <div class="post-content"><p>The blog posts of this section relate to the course <a href="https://www.uio.no/studier/emner/hf/imv/SMC4001/">SMC4001 Sound and Music Programming</a> (from 2021), and to the discontinued course <a href="https://web.archive.org/web/20210414104443/https://www.ntnu.edu/studies/courses/SMC4048">SMC4048 Audio Programming</a> (2019 to 2021). This section also includes posts from the <em>Digital Audio</em> and <em>Scientific Computing</em> modules of the discontinued course <a href="https://web.archive.org/web/20210419143616/https://www.ntnu.edu/studies/courses/SMC4000">SMC4000 Introduction to Music, Communication and Technology</a> (from 2018 to 2020). The aim of these course is to develop audio signal processing and sound design knowledge as well as skills with general-purpose and audio-specific programming.<!-- <h2 class="post-list-heading">Posts</h2> --></p>
+<ul class="post-list"><li>
+  <a class="post-button" href="/sound-programming/2022/12/10/ninojak-masoudn-markovchain_pd_masoudn_ninoJ.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_5.jpg" alt="Markov Chain Core in PD" title="Markov Chain Core in PD" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Markov Chain Core in PD</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 10, 2022 • Masoud Niknafs, Nino Jakeli
+      </div><p class="post-excerpt">Markov Chain Core in PD</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/12/10/ninojak-masoudn-make-the-stock-sound.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_stock.jpg" alt="Make The Stocks Sound" title="Make The Stocks Sound" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Make The Stocks Sound</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 10, 2022 • Masoud Niknafs, Nino Jakeli
+      </div><p class="post-excerpt">Make The Stocks Sound</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/12/09/ahmetem-mct-blog-sonified.html">
+    <div class="post-left"><img src="/assets/image/2022_12_09_ahmetem_SMC_blog_sonified_cover.jpg" alt="SMC Blog Sonified!" title="SMC Blog Sonified!" /></div>
+    <div class="post-right">
+      <h3 class="post-title">SMC Blog Sonified!</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 9, 2022 • Emin Memis
+      </div><p class="post-excerpt">Making sound out of this blog.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/12/09/kristeic-jackeh-ahmetem-sonification.html">
+    <div class="post-left"><img src="/assets/image/2022_12_09_kristeic_ahmetem_jackeh_dido_in_space_small.jpg" alt="Sonifying the Northern Lights: Two Approaches in Python &amp; Pure Data" title="Sonifying the Northern Lights: Two Approaches in Python &amp; Pure Data" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Sonifying the Northern Lights: Two Approaches in Python &amp; Pure Data</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 9, 2022 • Jack Hardwick, Kristian Eicke, Emin Memis
+      </div><p class="post-excerpt">Making 'music' from the Aurora Borealis.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/12/09/aysimab-sonification-over-rain-data.html">
+    <div class="post-left"><img src="/assets/image/2022_12_07_aysimab_dataset_cover.jpg" alt="The sound of rain" title="The sound of rain" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The sound of rain</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 9, 2022 • Alexander Wastnidge, Aysima Karcaaltincaba, Fabian Stordalen
+      </div><p class="post-excerpt">How we sonified the rainfall data.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/12/08/kristeic-cellular-automata.html">
+    <div class="post-left"><img src="/assets/image/2022_12_07_kristeic_blinker.gif" alt="Cellular Automata - Implementation in Pure Data" title="Cellular Automata - Implementation in Pure Data" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Cellular Automata - Implementation in Pure Data</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 8, 2022 • Kristian Eicke
+      </div><p class="post-excerpt">Check out the concept of Cellular Automata and my implementation in Pure Data.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/12/08/aysimab-clean-code.html">
+    <div class="post-left"><img src="/assets/image/2022_12_06_aysimab_cleancode_unclebob.jpg" alt="Clean code" title="Clean code" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Clean code</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 8, 2022 • Aysima Karcaaltincaba
+      </div><p class="post-excerpt">Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/12/07/jackeh-python_pure_data_biquad_filters.html">
+    <div class="post-left"><img src="/assets/image/2022_12_07_jackeh_filters_blog_post_preview_image.jpg" alt="Creating Complex Filters in Pure Data with Biquad~" title="Creating Complex Filters in Pure Data with Biquad~" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Creating Complex Filters in Pure Data with Biquad~</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 7, 2022 • Jack Hardwick
+      </div><p class="post-excerpt">One approach to building/rebuilding complex filters in Pure Data, with a little help from Python.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/10/21/alexanj-euclidean-sequencers-pd.html">
+    <div class="post-left"><img src="/assets/image/2022_28_11_alexanjw_euclid_cover.jpg" alt="Euclidean Rhythms in Pure Data" title="Euclidean Rhythms in Pure Data" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Euclidean Rhythms in Pure Data</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Oct 21, 2022 • Alexander Wastnidge
+      </div><p class="post-excerpt">What are Euclidean Rhythms and how can you program them?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2022/10/01/fabianst-no-input-mixing-pd.html">
+    <div class="post-left"><img src="/assets/image/2022_11_01_fabianst_toshimaru.jpg" alt="How to do No-Input Mixing in Pure Data" title="How to do No-Input Mixing in Pure Data" /></div>
+    <div class="post-right">
+      <h3 class="post-title">How to do No-Input Mixing in Pure Data</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Oct 1, 2022 • Fabian Stordalen
+      </div><p class="post-excerpt">No-Input Mixing in Pure Data</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2021/11/26/josephcl-chorale-rearranger.html">
+    <div class="post-left"><img src="/assets/image/2021_11_26_josephcl_bach.png" alt="Chorale Rearranger: Chopping Up Bach" title="Chorale Rearranger: Chopping Up Bach" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Chorale Rearranger: Chopping Up Bach</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 26, 2021 • Joseph Clemente, Hugh Alexander von Arnim, Jakob Høydal, Oliver Getz
+      </div><p class="post-excerpt">Can we use Midi data to rearrange a recording of a Bach chorale?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2021/11/24/arvidf-mixing-in-python.html">
+    <div class="post-left"><img src="/assets/image/2021_11_23_arvidf_crazyrig.jpg" alt="Mixing a multitrack project in Python" title="Mixing a multitrack project in Python" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Mixing a multitrack project in Python</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 24, 2021 • Joachim Poutaraud, Kristian Wentzel, Sofía González, Arvid Falch
+      </div><p class="post-excerpt">Attempting to mix a multitrack song with homemade FX in our very own mini PythonDAW</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2021/10/27/team-a-python-3.html">
+    <div class="post-left"><img src="/assets/image/2021_10_25_team_a_pyhton_3_thumbnail.jpg" alt="Audio Blending in Python" title="Audio Blending in Python" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Audio Blending in Python</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Oct 27, 2021 • Hugh Alexander von Arnim, Joachim Poutaraud, Sofía González, Oliver Getz
+      </div><p class="post-excerpt">Blending audio tracks based on transients in Python.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2021/02/19/henrikhs-DT20.html">
+    <div class="post-left"><img src="/assets/image/2021_02_19_henrikhs_DT20front_cassette.png" alt="Tapeloop DT-20" title="Tapeloop DT-20" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Tapeloop DT-20</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 19, 2021 • Henrik Sveen, Anders Lidal, Pedro Lucas, Stephen Gardener
+      </div><p class="post-excerpt">For the SMC4048 we wanted to make some looper with layers and FX. But what did we get? The DT-20, a 4-track inspired digital tape looper with FX channels and a 'WASD'-mixer. Enjoy! - Stephen, Pedro, Anders &amp; Henrik</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2021/02/19/joni-stress-less.html">
+    <div class="post-left"><img src="/assets/image/2021_02_19_joni_stressless.png" alt="Get unstressed with Stress-less" title="Get unstressed with Stress-less" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Get unstressed with Stress-less</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 19, 2021 • Joni Mok, Dongho Kwak
+      </div><p class="post-excerpt">Acoustically-triggered heart rate entrainment (AHRE)</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2021/02/18/abhishec-Trinity.html">
+    <div class="post-left"><img src="/assets/image/2021_02_18_abhishec_trinity_trinity.png" alt="Trinity: Triple Threat" title="Trinity: Triple Threat" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Trinity: Triple Threat</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 18, 2021 • Abhishek Choubey, Tom Ignatius, Lindsay Charles
+      </div><p class="post-excerpt">Trinity: What happens when you combine Grain shimmer + Chorus + Stereo Width? Click to find.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2021/02/17/alenacl-funky-balls.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_02_19_leigh_funkyballs.gif" alt="Funky Balls" title="Funky Balls" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Funky Balls</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 17, 2021 • Alena Clim, Leigh Murray
+      </div><p class="post-excerpt">Want a more organic and dynamic way of mixing and applying effects? Experiment with funky balls!</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/08/lindsay-strange-fragmenty-song.html">
+    <div class="post-left"><img src="/assets/image/2020_12_08_lindsay_rms.png" alt="Strange Fragmented Music" title="Strange Fragmented Music" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Strange Fragmented Music</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 8, 2020 • Lindsay Charles
+      </div><p class="post-excerpt">A strange song from Sequencing fragments of stranger things and Astronomia </p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/05/abhishec-slopy-chops.html">
+    <div class="post-left"><img src="/assets/image/2020_12_05_abhishec_chop_excerpt.jpg" alt="A new season of chopped music" title="A new season of chopped music" /></div>
+    <div class="post-right">
+      <h3 class="post-title">A new season of chopped music</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 5, 2020 • Abhishek Choubey
+      </div><p class="post-excerpt">The arbitrary mixing of two seasons (two songs representing seasons)</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/05/alena-chopping-chopin_and-kapustin.html">
+    <div class="post-left"><img src="/assets/image/2020_12_05_alena_preludes.jpg" alt="Chopping Chopin and Kapustin preludes" title="Chopping Chopin and Kapustin preludes" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Chopping Chopin and Kapustin preludes</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 5, 2020 • Alena Clim
+      </div><p class="post-excerpt">Chopping a prelude by Chopin and one by Kapustin and then merging the slices based on their loudness (RMS) and tonality (Spectral Flatness).</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/05/wenbo-slices.html">
+    <div class="post-left"><img src="/assets/image/2020_12_05_wenbo_output.png" alt="Chaotic Battle of Music Slices" title="Chaotic Battle of Music Slices" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Chaotic Battle of Music Slices</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 5, 2020 • Wenbo Yi
+      </div><p class="post-excerpt">Slicing up the music and reorganize them with four kinds of Librosa features.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/05/henrikhs-merrySlicemas.html">
+    <div class="post-left"><img src="/assets/image/2020_12_05_henrikhs_chopmas.jpg" alt="Merry slicemas" title="Merry slicemas" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Merry slicemas</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 5, 2020 • Henrik Sveen
+      </div><p class="post-excerpt">Let it slice, let it slice, let it sequence.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/04/anderlid-graphic-no-7.html">
+    <div class="post-left"><img src="/assets/image/2020_12_04_anderlid_exam_front.jpg" alt="Graphic score no. 7" title="Graphic score no. 7" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Graphic score no. 7</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 4, 2020 • Anders Lidal
+      </div><p class="post-excerpt">So … it’s 00:01 in Oslo, December 1st, and the final SciComp assignment is here … And … it’s a though one … 2345 words … AI must be involved here …</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/04/williakm-merging-ockeghem-and-shostakovich.html">
+    <div class="post-left"><img src="/assets/image/2020_12_04_williakm_scissors.jpeg" alt="Chop it Up: Merging Rearranged Audio" title="Chop it Up: Merging Rearranged Audio" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Chop it Up: Merging Rearranged Audio</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 4, 2020 • Willie Mandeville
+      </div><p class="post-excerpt">Taking beautiful music and making it less so.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/04/stephedg-my-bloody-zerox.html">
+    <div class="post-left"><img src="/assets/image/2020_12_04_stephedg_my_bloody_zerox.png" alt="My Bloody Zerox" title="My Bloody Zerox" /></div>
+    <div class="post-right">
+      <h3 class="post-title">My Bloody Zerox</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 4, 2020 • Stephen Gardener
+      </div><p class="post-excerpt">So the plan was to take two audio files, chop them up in some random way, mix up the pieces and stitch them back together again in a totally different order. Doesn’t have to be musical, they said. Well, just to make sure, I decided to chose two pieces of music that weren’t particularly musical to begin with - Only Shallow by shoegaze band My Bloody Valentine, and Zerox, by post punk combo Adam and the Ants.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/04/pedropl-multichannel-segmentation-sequencing.html">
+    <div class="post-left"><img src="/assets/image/2020_12_03_pedropl_multichannel_segmentation_sequencing.png" alt="Segmentation and Sequencing from and to Multichannel Audio Files" title="Segmentation and Sequencing from and to Multichannel Audio Files" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Segmentation and Sequencing from and to Multichannel Audio Files</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 4, 2020 • Pedro Lucas
+      </div><p class="post-excerpt">The strategy explained here considers the slicing of stereo audio files and the production of a new stereo output file based on a multichannel solution. The spectral centroid is used to reorder and intercalate segments in an ascending or descending order according to some rules.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/02/joni-dark-tetris.html">
+    <div class="post-left"><img src="\assets\image\2020_12_03_joni_dark_tetris.jpg" alt="Dark Tetris" title="Dark Tetris" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Dark Tetris</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 2, 2020 • Joni Mok
+      </div><p class="post-excerpt">Scientific Computing assignment for a non-programmer, please don't expect anything special when you see the title about DARK Tetris, even I really want to create that...</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/12/02/leigh-slicing-and-dicing.html">
+    <div class="post-left"><img src="/assets/image/2020_12_02_leigh_slicing_dicing.png" alt="Slicing and Dicing Audio Samples" title="Slicing and Dicing Audio Samples" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Slicing and Dicing Audio Samples</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Dec 2, 2020 • Leigh Murray
+      </div><p class="post-excerpt">Slicing up two songs and re-joining them with RMS and Spectral Centroid values.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/06/anderlid-SYNTHa.html">
+    <div class="post-left"><img src="/assets/image/2020_11_07_anderlid_SYNTHa.jpg" alt="SYNTHa" title="SYNTHa" /></div>
+    <div class="post-right">
+      <h3 class="post-title">SYNTHa</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 6, 2020 • Anders Lidal
+      </div><p class="post-excerpt">While this is not a clone of the classic EMS Synthi A, it might have a trick or two up it's sliders, this one to: A softsynth with hard features.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/06/short-williakm-vst.html">
+    <div class="post-left"><img src="/assets/image/2020_11_06_williakm_piano.jpg" alt="Everything's Out of Tune (And Nothing Is)" title="Everything's Out of Tune (And Nothing Is)" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Everything&#39;s Out of Tune (And Nothing Is)</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 6, 2020 • Willie Mandeville
+      </div><p class="post-excerpt">Who says that Csound and early music can't mix? Building a VSTi for swappable historical temperaments.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/06/abhishec-butter.html">
+    <div class="post-left"><img src="/assets/image/2020_11_06_abhisec_butter.jpg" alt="Butter: a multi-effect plugin" title="Butter: a multi-effect plugin" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Butter: a multi-effect plugin</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 6, 2020 • Abhishek Choubey
+      </div><p class="post-excerpt">An easy to use and fun plugin to make your sound smooth as butter.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/06/wenbo-fake-piano.html">
+    <div class="post-left"><img src="/assets/image/2020_11_06_wenbo_piano.jpg" alt="A fake Steinway made by Csound" title="A fake Steinway made by Csound" /></div>
+    <div class="post-right">
+      <h3 class="post-title">A fake Steinway made by Csound</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 6, 2020 • Wenbo Yi
+      </div><p class="post-excerpt">How to use Csound to create a digital Steinway?</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/06/lindsay-spatialsynth.html">
+    <div class="post-left"><img src="/assets/image/2020_11_06_lindsay_spatialsynth_vst.jpg" alt="Spaty Synthy" title="Spaty Synthy" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Spaty Synthy</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 6, 2020 • Lindsay Charles
+      </div><p class="post-excerpt">Attempt at modelling a Delay Repeating Spatial Synthesizer using Csound</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/05/stephedg-dafx.html">
+    <div class="post-left"><img src="/assets/image/2020_11_05_stephedg_plugin.jpg" alt="Phade - a phaser delay FX" title="Phade - a phaser delay FX" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Phade - a phaser delay FX</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 5, 2020 • Stephen Gardener
+      </div><p class="post-excerpt">A swirly, shimmery shoegazey multi-fx.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/05/alenacl-beethoven-under-moonlight.html">
+    <div class="post-left"><img src="/assets/image/2020_11_05_alenacl_moonlight.jpg" alt="Beethoven under Moonlight" title="Beethoven under Moonlight" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Beethoven under Moonlight</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 5, 2020 • Alena Clim
+      </div><p class="post-excerpt">Creating a CSound project that uses Frequency Modulation synthesis (carrier and modulating oscillator) and plays the first few bars of the Moonlight Sonata by Beethoven based on a score.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/05/joni-DA-orangecabbage.html">
+    <div class="post-left"><img src="/assets/image/2020_11_05_joni_occover.jpg" alt="Ondes Martenot's brother - Orange Cabbage" title="Ondes Martenot's brother - Orange Cabbage" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Ondes Martenot&#39;s brother - Orange Cabbage</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 5, 2020 • Joni Mok
+      </div><p class="post-excerpt">The evolution of Ondes Martenot.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/03/pedropl-caminolamentos.html">
+    <div class="post-left"><img src="/assets/image/2020_11_03_pedropl_caminolamentosfi.png" alt="'El Camino de los Lamentos': A performance using custom Csound VST Plugins" title="'El Camino de los Lamentos': A performance using custom Csound VST Plugins" /></div>
+    <div class="post-right">
+      <h3 class="post-title">&#39;El Camino de los Lamentos&#39;: A performance using custom Csound VST Plugins</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 3, 2020 • Pedro Lucas
+      </div><p class="post-excerpt">This performance is using two VST plugins produced in Cabbage through Csound. A synthesizer based on elemental waveforms, frequency modulation, and stereo delay, and an audio effect for pitch scaling and reverb.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/03/kovid-keyboard.html">
+    <div class="post-left"><img src="/assets/image/2020_11_03_leigh_kovid_keyboard.png" alt="Kovid Keyboard" title="Kovid Keyboard" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Kovid Keyboard</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 3, 2020 • Leigh Murray
+      </div><p class="post-excerpt">A web based CSound Synth letting you play together online!</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/11/02/henrikhs-shaaape.html">
+    <div class="post-left"><img src="/assets/image/2020_11_02_henrikhs_shaaapefront.png" alt="Shaaape" title="Shaaape" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Shaaape</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Nov 2, 2020 • Henrik Sveen
+      </div><p class="post-excerpt">Distorting signals with ghost signals.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/10/15/stephedg-teamc-scientific-midterm.html">
+    <div class="post-left"><img src="/assets/image/2020_08_21_stephedg_group_c.jpg" alt="Team C's reflections on Scientific Computing" title="Team C's reflections on Scientific Computing" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Team C&#39;s reflections on Scientific Computing</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Oct 15, 2020 • Joni Mok, Stephen Gardener, Wenbo Yi, Lindsay Charles
+      </div><p class="post-excerpt">Despite our diverse professional backgrounds, three of us are pretty much beginner pythonista.
+All of our code seems pretty readable. Joni’s code is very clean, possible because she’s a designer, with good commenting. Wenbo favoured a single cell for his code. Upon the review on everyone’s submissions, we agreed that our team activity in the future has to increase.
+Meister Stephen will have to be more patient with us!
+</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/10/15/henrikhs-teamb-scientific-midterm.html">
+    <div class="post-left"><img src="/assets/image/2020_08_21_anderlid_B_Team_2020.jpg" alt="Reflections on Scientific Computing (The B Team Bares All)" title="Reflections on Scientific Computing (The B Team Bares All)" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Reflections on Scientific Computing (The B Team Bares All)</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Oct 15, 2020 • Pedro Lucas, Willie Mandeville, Henrik Sveen, Anders Lidal
+      </div><p class="post-excerpt">Team B reflects on a week of coding ups and downs.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/10/14/alena-programming-team-a.html">
+    <div class="post-left"><img src="/assets/image/2020_10_15_abhishec_pythonlogo.jpeg" alt="Scientific Computing Midterm" title="Scientific Computing Midterm" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Scientific Computing Midterm</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Oct 14, 2020 • Alena Clim, Leigh Murray, Abhishek Choubey
+      </div><p class="post-excerpt">Team A's reflection on the midterm scientific computing assignment. Shortly, this had a purpose of creation of a general python program that would read audio files from a specified folder based on a csv file and would output another csv file with an added values for each individual audio file: the average Root Mean Square, Zero Crossing Rate, Spectral Centroid. Moreover, the program displays and saves to a file several scatterplots.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/02/13/The-Loop-Station.html">
+    <div class="post-left"><img src="/assets/image/2020_02_11_rayaml_blog-cover-small.jpg" alt="[ pd Loop Station ]" title="[ pd Loop Station ]" /></div>
+    <div class="post-right">
+      <h3 class="post-title">[ pd Loop Station ]</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 13, 2020 • Rayam Luna
+      </div><p class="post-excerpt">This is an attempt to create a Loop Station with features that I wish I had in such a pedal / software.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/02/11/Making-Noises.html">
+    <div class="post-left"><img src="/assets/image/2020_02_12_paulgk_ProgrammingParadise.jpg" alt="Making Noises With |noise~|" title="Making Noises With |noise~|" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Making Noises With |noise~|</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2020 • Paul Koenig
+      </div><p class="post-excerpt">Wherein I attempt to either program paradise or just make bacon-frying noises, which could be the same thing, actually</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/02/11/plant-interface.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2020_02_11_gtwarden_patch_2.png" alt="Sonification of plants through Pure Data" title="Sonification of plants through Pure Data" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Sonification of plants through Pure Data</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2020 • Gaute Wardenær
+      </div><p class="post-excerpt">I am not sure if I am going crazy or if I am actually interacting with plants, but here me out here</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/02/10/osc-guitar.html">
+    <div class="post-left"><img src="/assets/image/2020_02_10_jacksong_oscguitar-logo.png" alt="Strumming through space and OSC" title="Strumming through space and OSC" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Strumming through space and OSC</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 10, 2020 • Jackson Goode
+      </div><p class="post-excerpt">A gesture-driven guitar built in Puredata and utilizing OSC</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/02/10/Practice-Toolbox-for-guitar.html">
+    <div class="post-left"><img src="/assets/image/2020_02_11_aleksati_thomas_pd.png" alt="Practice-Toolbox-for-students-of-music" title="Practice-Toolbox-for-students-of-music" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Practice-Toolbox-for-students-of-music</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 10, 2020 • Thomas Anda
+      </div><p class="post-excerpt">In our audio programming course we were tasked to make a PD-patch without any restrictions on what it should be. I wanted to make something useful I could incorporate in my daily practice routine, and also distribute to some of my guitar students.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/02/10/Sampler.html">
+    <div class="post-left"><img src="/assets/image/2020_02_10_ulrikah_ulrik_sampler.jpg" alt="Multi voice mobile sampler" title="Multi voice mobile sampler" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Multi voice mobile sampler</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 10, 2020 • Ulrik Halmøy
+      </div><p class="post-excerpt">A mobile tool to dabble with small audio recordings wherever you encounter them</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/02/09/The-Delay-Harmonizer.html">
+    <div class="post-left"><img src="/assets/image/2020_02_09_aleksati_delay_harmonizer.jpg" alt="The Delay Harmonizer" title="The Delay Harmonizer" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Delay Harmonizer</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 9, 2020 • Thibault Jaccard
+      </div><p class="post-excerpt">This chord generator uses a variable length delay fed by a microphone input as sound source.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2020/02/08/The-MIDI-Remixer.html">
+    <div class="post-left"><img src="/assets/image/2020_02_08_aleksati_bach.jpg" alt="The MIDI Remixer" title="The MIDI Remixer" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The MIDI Remixer</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 8, 2020 • Aleksander Tidemann
+      </div><p class="post-excerpt">This sequencer based poly FM-synthesizer invites its users to remix and play with some of Johann Sebastian Bach's most famous preludes and fuges.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/08/24/Gaute-testpost.html">
+    <div class="post-left"><img src="/assets/image/2019_08_24_stefanof_SMAART.jpeg" alt="It's not just phase, mom!" title="It's not just phase, mom!" /></div>
+    <div class="post-right">
+      <h3 class="post-title">It&#39;s not just phase, mom!</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Aug 24, 2019 • Gaute Wardenær
+      </div><p class="post-excerpt">Why phase coherency in loudspeakers matters.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/22/TouchTheAlien.html">
+    <div class="post-left"><img src="/assets/image/2019_02_22_aleksati_touch_the_alien.png" alt="Touch the Alien" title="Touch the Alien" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Touch the Alien</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 22, 2019 • Eigil Aandahl, Jonas Bjordal, Mari Lesteberg, Sam Roman
+      </div><p class="post-excerpt">The web audio synth 'Touch the Alien', a project by Eigil Aandahl, Sam Roman, Jonas Bjordal and Mari Lesteberg at the master's programme Music, Communication and Technology at Aalborg University and Norwegian University of Science and Technology. The application offers touchscreen functionality, Oscillators, FM Oscillator &amp;  Delay, phaser, Chorus &amp; Filter on Dry/wet slider,Canvas UI with follow visual FX	and it's alien themed for your pleasure!</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/22/The-Magic-Piano.html">
+    <div class="post-left"><img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2019_02_22_guysi_magicpiano.png" alt="The Magic Piano" title="The Magic Piano" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Magic Piano</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 22, 2019 • Jørgen Varpe, Ashane Silva, Guy Sion
+      </div><p class="post-excerpt">During our second week learning about Audio programing and web Audio API we were divided into groups and had to come up with an idea for a final project. The main challenges were to find an idea that is doable within 4 days, to code collaboratively and to prepare for the presentation of our project. Guy had an Idea for building a piano keyboard that will help beginners play a simple melody and Ashane and Jørgen agreed to collaborate and join forces in creating 'The Magic Piano'.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/19/Convolverizer.html">
+    <div class="post-left"><img src="/assets/image/2019_02_19_stefanof_Convolverizer1.png" alt="Convolverizer" title="Convolverizer" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Convolverizer</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 19, 2019 • Eirik Dahl, Karolina Jawad, Shreejay Shrestha, Sepehr Haghighi
+      </div><p class="post-excerpt">Convolverizer, Real-time processing of ambient sound, voice or live instruments, utilizing the convolution effect.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/11/Giant-Player.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_stefanof_giantplayer.PNG" alt="The Giant Steps Player" title="The Giant Steps Player" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Giant Steps Player</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2019 • Guy Sion
+      </div><p class="post-excerpt">As part of the SMC master program we are being introduced to a variety of technologies for creating music and sounds. We have just finished a week long workshop learning about Audio programing and web audio API. The benefits of this technology are helpful and relevant in areas like art, entertainment or education. We were introduced to several ways for creating and manipulating sound, follow tutorials and experiment on our own during the days. I must admit that I do not have intensive knowledge in programing in general and javaScript in particular. Many failures accrued while trying, from simple syntax errors to flawed design. But understanding the idea behind each process and striving towards the wanted result was an important progress.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/11/SpaghettiPlayer.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_aleksati_Spaghetti2.jpg" alt="The Spaghetti Code Music Player" title="The Spaghetti Code Music Player" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Spaghetti Code Music Player</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2019 • Mari Lesteberg
+      </div><p class="post-excerpt">The Spaghetti Code Music Player is a simple music player that is loaded with one of my own tracks. The player allows you to play and stop the tune, turn on and off a delay effect and control a filter with your computer mouse. The player also has a volume control.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/11/Odyssey.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_aleksati_odyssey_2.jpg" alt="Odyssey" title="Odyssey" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Odyssey</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2019 • Shreejay Shrestha
+      </div><p class="post-excerpt">Odyssey is a simple prototype of a Web Audio API envisioned to immerse users into a misty jungle environment. Besides soundscape of a jungle, the application adds bits of flavour of few domestic animals and mix them all together with a piece of jazz music. The web audio application is developed using HTML5 and javascript.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/11/Catch-the-sound-First-week's-dive-into-web-audio-programming.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_stefanof_darft1_audio_website.png" alt="Catch the wave – First week's dive into web audio programming" title="Catch the wave – First week's dive into web audio programming" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Catch the wave – First week&#39;s dive into web audio programming</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2019 • Karolina Jawad
+      </div><p class="post-excerpt">It is possible to create simple, but effective applications on the web browser, even without prior knowledge. However, it took way longer to implement those ideas, but luckily there was always someone around to ask.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/11/The-Pointilator.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_aleksati_pointilator.png" alt="The Pointilator Sequence Synthesizer" title="The Pointilator Sequence Synthesizer" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Pointilator Sequence Synthesizer</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2019 • Eigil Aandahl
+      </div><p class="post-excerpt">The Pointilator sequence synth is an experimental instrument that can be played directly from a web browser! It is tested to work with Opera and Chrome, but does not work in Safari. It is based around entering a sequence of notes as points on a Canvas that registers each click and draws a circle where the note was put. It can then play back the notes from left to right with the height of the click translating to pitch. The result is a sequencing synthesizer that has a finely detailed scope in both time and pitch, although it is not easy to control based on traditional musical scales or rhythmic time.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/11/SineWave-Pad.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_aleksati_Synthwave_pad.jpg" alt="SineWave Pad" title="SineWave Pad" /></div>
+    <div class="post-right">
+      <h3 class="post-title">SineWave Pad</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2019 • Ashane Silva
+      </div><p class="post-excerpt">It was a wonderful journey we had for a week getting hands-on experience with Web audio API and JavaScript. In the beginning, I was tensed about the way that I will handle coding with zero prior experience. But, at the end of the week, I was happy about what I have managed to achieve. I was lacking ideas to start a project for the week but after getting introduced to oscillators, I thought of making a synthesizer or a drum pad that works on the browser. So it was either to work with Oscillators or sound loops.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/11/Alien-Reese.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_stefanof_alienwareplus.jpg" alt="Reese da Alien!" title="Reese da Alien!" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Reese da Alien!</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2019 • Sam Roman
+      </div><p class="post-excerpt">The project I have developed on over the first week of web audio based programing is called Reese da Alien - a web based synth of sorts with mouse functionality. The idea is that the program presents a relatively novel way of producing a reese, by the user moving around the mouse on the the page to find different sweet spots as they affect the pitch and amplitude of two oscillators with the movements. The persona of the application came after early in development I likened the sounds to an alien talking – I felt it a fitting title for the weird, abrasive sounds that the program creates.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/11/FreakShow.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_stefanof_freakshow.jpg" alt="Freak Show" title="Freak Show" /></div>
+    <div class="post-right">
+      <h3 class="post-title">Freak Show</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 11, 2019 • Sepehr Haghighi
+      </div><p class="post-excerpt">As my first experience working with Web Audio API, utilizing JS, HTML and CSS; it was quite a challenge, but a pleasant one that lead to the outcome that I wanted and also broadened my perspective, in regards of my future plans.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/10/MonoSynth.html">
+    <div class="post-left"><img src="/assets/image/2019_02_11_aleksati_Monosynth.jpg" alt="The Mono Synth" title="The Mono Synth" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Mono Synth</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 10, 2019 • Eirik Dahl
+      </div><p class="post-excerpt">This blog post outlines the production of the MonoSynth. The Mono Synth is drawn by Jørgen N. Varpe, who also wrote a lot of the code. The objective of this prototype was to improve my familiarity with coding, and at the same time be able to have a working chromatic instrument. Working with a cromatic instrument is interesting because it allows me to have a less abstract understanding of what happens in the code - behind the scenes if you will.</p></div>
+  </a>
+</li>
+<li>
+  <a class="post-button" href="/sound-programming/2019/02/10/The-Wavesynth.html">
+    <div class="post-left"><img src="/assets/image/2019_02_10_aleksati_wavesynth.jpg" alt="The Wavesynth" title="The Wavesynth" /></div>
+    <div class="post-right">
+      <h3 class="post-title">The Wavesynth</h3>
+      <span class="post-meta-category">sound-programming
+      </span><div class="post-meta">
+        Feb 10, 2019 • Jørgen Varpe
+      </div><p class="post-excerpt">During the first workshop week in the course Audio Programming, I have been working on a project which I have called "The Wavesynth". I have called it this because I have chosen to use wavetables to shape the output of an oscillator. I have not made a wavetable synthesizer like for instance Ableton's Wavetable, where you can interpolate between waves. instead I use some wavetables created by Google Chrome Labs to make it sound like "real" instruments. The synth is played by using the computer keyboard, and the user can choose the output sound, and adjust three different effects to shape the it the way they want. The synthesizer is made using web technologies, including HTML, JavaScript, Web Audio API, and more.</p></div>
+  </a>
+</li>
+</ul>
+<!-- Hack from https://github.com/jekyll/jekyll/issues/2538 -->
+
+<!--  -->
+<!-- ***No posts... yet.*** -->
+<p><!-- Your code will now be dependent on page.tags being empty -->
+<!--  --></p>
+</div>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

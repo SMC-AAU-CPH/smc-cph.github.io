@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CLAP Models and How To Make Them | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="CLAP Models and How To Make Them" />
+<meta name="author" content="Oliver Getz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Is there anything CLAP models can’t do?" />
+<meta property="og:description" content="Is there anything CLAP models can’t do?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/08/olivegr-clap_model_evaluation.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/08/olivegr-clap_model_evaluation.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_09_olivegr_clap_thumbnail.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-08T18:11:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_09_olivegr_clap_thumbnail.jpg" />
+<meta property="twitter:title" content="CLAP Models and How To Make Them" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Oliver Getz"},"dateModified":"2024-05-08T18:11:00+00:00","datePublished":"2024-05-08T18:11:00+00:00","description":"Is there anything CLAP models can’t do?","headline":"CLAP Models and How To Make Them","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2024_05_09_olivegr_clap_thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/08/olivegr-clap_model_evaluation.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Oliver Getz"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2024/05/08/olivegr-clap_model_evaluation.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      CLAP Models and How To Make Them
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2024-05-08T18:11:00+00:00"
+        itemprop="datePublished"
+      >May 8, 2024 •
+      </time>
+         
+      <a href="/authors/olivergetz.html">Oliver Getz</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>As the meeting point between machine learning, language, and audio, Contrastive Language-Audio Pre-Trained models (CLAP) has potential for a plethora of language-aligned audio applications, including:</p>
+
+<ol>
+  <li>Zero-Shot Classification
+    <ul>
+      <li>Instruments, Voice Emotion, Music Genres, Counting Speakers and much more!</li>
+    </ul>
+  </li>
+  <li>Class Separation</li>
+  <li>Music Retrieval</li>
+  <li>Automatic Captioning</li>
+  <li>Audio Content Filtering</li>
+  <li>Sound Event Detection</li>
+</ol>
+
+<p>Additionally, contrastive representations have been used for conditioning Text-To-Audio systems. So, if CLAPs are so great, how do they work?</p>
+
+<h1 id="contrastive-representation-learning">Contrastive Representation Learning</h1>
+<p>The bad news is that such an architecture is quite complex to build from the ground up. The good news is that we can use pre-trained models within our contrastively pre-trained model, which can then be trained pre-integration in larger audio systems. Neat! All we need is a language model (BERT, RoBERTa, or T5 are common choices) and an audio model (HTSAT or PANN for instance). Projecting their logits into the same latent space using an appropriate loss function will give us the desired result.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_09_olivegr_clap.jpg" width="100%" height="100%" />
+</figure>
+
+<p>A contrastive loss function will be able to pull text logits and audio logits that belong together closer (positive pairs), but repell those that do not (negative pairs). What does such a loss function look like? I’m glad you asked! You can find code to get you started on my <a href="https://github.com/olivergetz/UCS-CLAP">UCS-CLAP Github</a>.</p>
+
+<h1 id="clap-comparison">CLAP Comparison</h1>
+<p>I recently compared two CLAP models through the embeddings they produce, and through my experiments I can safely say that I am 76% confident that inspecting the proximity of CLAP embeddings through a 2D PCA plot gives a solid estimate of classification accuracy!</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2024_05_09_olivegr_clap_pca.jpg" width="100%" height="100%" />
+</figure>
+
+<p><strong>Disclaimer</strong>: these findings are<sub>not backed by the <sub>statistical power necessary<sub>to say for certain :(</sub></sub></sub></p>
+
+<h1 id="dataset--code">Dataset &amp; Code</h1>
+<p>Should you want to recreate my results, you may get audio embeddings <a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/other/2024_05_09_olivegr_thesis_dataset.zip">here</a>. Notebooks for the project and a reproduction guide may be found on <a href="https://github.com/olivergetz/thesis">Github</a>.</p>
+
+<h1 id="acknowledgements">Acknowledgements</h1>
+<p>My thesis was made possible with help from Stian Aagedal and Peder Jørgensen of <a href="https://hance.ai">HANCE.AI</a>. I would like to thank them for their continued support and for granting me access to the entire Soundly audio collection for my work.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/masters-thesis/2024/05/08/olivegr-clap_model_evaluation.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

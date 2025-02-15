@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Emulating analog guitar pedals with Recurrent Neural Networks | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Emulating analog guitar pedals with Recurrent Neural Networks" />
+<meta name="author" content="Arvid Falch" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using LSTM recurrent neural networks to model two analog guitar pedals." />
+<meta property="og:description" content="Using LSTM recurrent neural networks to model two analog guitar pedals." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/19/arvidf-ml-guitareffect-modeling.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/19/arvidf-ml-guitareffect-modeling.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_arvidf_pedals.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-19T22:30:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_arvidf_pedals.png" />
+<meta property="twitter:title" content="Emulating analog guitar pedals with Recurrent Neural Networks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arvid Falch"},"dateModified":"2022-05-19T22:30:00+00:00","datePublished":"2022-05-19T22:30:00+00:00","description":"Using LSTM recurrent neural networks to model two analog guitar pedals.","headline":"Emulating analog guitar pedals with Recurrent Neural Networks","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_19_arvidf_pedals.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/19/arvidf-ml-guitareffect-modeling.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Arvid Falch"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/19/arvidf-ml-guitareffect-modeling.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Emulating analog guitar pedals with Recurrent Neural Networks
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-05-19T22:30:00+00:00"
+        itemprop="datePublished"
+      >May 19, 2022 •
+      </time>
+         
+      <a href="/authors/arvidfalch.html">Arvid Falch</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="using-a-recurrent-neural-network-to-model-two-analog-guitar-effects"><strong>Using a Recurrent Neural Network to model two analog guitar effects</strong></h1>
+
+<p>As a music producer and guitarist, I love distortion. It’s a bit like champagne, it goes with everything. So for my Machine Learning (ML) project I chose to emulate two analog guitar effects using Recurrent Neural Networks (RNNs).  <br />
+An analog effect is a non-linear system which changes some of the sonic characteristics of an audio source. The <em>dry</em> sound is input into the unit, and the resulting output is the <em>wet</em> audio. My chosen effects where the <strong>Boss SD-1</strong> distortion pedal and the <strong>Wampler Black ‘65</strong> tube saturator.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_pedals.png" alt="Pedals" title="" width="auto" />
+   <figcaption><i>The Boss Sd-1 and Wampler Black 65'</i></figcaption>
+</figure>
+
+<p>Audio examples of a dry sound and how it sounds after being processed through the effects:</p>
+
+<p><strong>Dry Sound</strong></p>
+
+<div class="waveform" id="Dry_1"></div>
+
+<p><strong>SD-1</strong></p>
+
+<div class="waveform" id="SD1_1"></div>
+
+<p><strong>Black 65’</strong></p>
+
+<div class="waveform" id="B65_1"></div>
+
+<p><br /></p>
+
+<p>Using ML techniques, we are able to emulate an effect without having any prior knowledge of the effect we emulate. This is called black-box modeling. By feeding raw dry audio to a neural network, we can train it to predict the wet audio. More specific; we feed it a segment of dry audio and the model predict the value of the target sample of wet audio.
+<br /></p>
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_feature_input.png" alt="Input" title="" width="auto" />
+   <figcaption><i>Frame of samples as input and one sample of wet audio as target output</i></figcaption>
+</figure>
+
+<p>Normal fully connected feed forward neural networks aren’t very good at this, because they are not able to keep any memory of former events. Even though my chosen effects had very short time-variances, they still affect the audio source in ways that needs to be understood in the time domain. RNNs are able to keep some memory of former events in their cell state which makes them quite good at learning how a non-linear system like an analog distortion effect works.<br />
+RNNs come in many forms, from the simple recurrent unit to the Gated Recurrent Unit (GRU). But the most popular and successful when it comes to audio effect modeling is the <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Long Short Term Memory unit</a> (LSTM).</p>
+
+<p>During my preliminary tests I quickly realized that the LSTM networks performed much better than the other RNNs. I also found that LSTMs had some peculiar challenges with audio prediction which I decided to explore. The result of this exploration was a comparative study of different LSTM architectures and different hyperparameters and how they performed modeling my chosen effects.</p>
+
+<h2 id="dataset"><strong>Dataset</strong></h2>
+
+<p>I created an 8 minute audio file consisting of different audio material. This audio was then recorded both dry and wet through my two effects. 20% of the recorded audio were set aside to be used for evaluation (The test set). The remaining 80% were the foundation for the dataset used for training the models.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_DatasetDryNotated.png" alt="Dataset" title="" width="auto" />
+   <figcaption><i>The full dataset used in the project</i></figcaption>
+</figure>
+
+<h2 id="training-the-models"><strong>Training the models</strong></h2>
+
+<p>I made five different model structures, which has either one or two LSTM layers, 16 or 32 hidden units (inside the LSTM), and accepts as input either a frame of 32 samples or 64 samples. These different structures were then trained on different dataset sizes and different number of epochs, and compared to see who performed the best.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_models.png" alt="Models" title="" height="auto" width="70%" />
+   <figcaption><i>The five model structures.</i></figcaption>
+</figure>
+
+<p>Using <a href="https://www.tensorflow.org/">Tensorflow</a> with the <a href="https://keras.io/">Keras API</a>, I trained hundred of models, and collected evaluation metrics from all of them which I used for analysis. <br />
+It took quite some time.<br />
+And every week or so I would come up with a tiny improvement and as a result I had to redo everything from scratch.</p>
+
+<h2 id="results"><strong>Results</strong></h2>
+
+<p>To put it simple, the results can be explained this way:</p>
+
+<ol>
+  <li>The models performed better on the SD-1 than the Black 65’ when we look at the evaluation metrics. But when you audition the predicted audio and the target output it’s hard to tell which effect is most similar.<br />
+(<em>The following examples are one layer, 32 hidden units trained on 40k frames of audio.</em>)</li>
+</ol>
+
+<p><strong>SD-1 True output</strong></p>
+
+<div class="waveform" id="SD1_True"></div>
+
+<p><strong>SD-1 Predicted Output</strong></p>
+
+<div class="waveform" id="SD1_Predicted"></div>
+
+<p><strong>Black 65’ True Output</strong></p>
+
+<div class="waveform" id="B65_True"></div>
+
+<p><strong>Black 65’ Predicted Output</strong></p>
+
+<div class="waveform" id="B65_Predicted"></div>
+
+<ol>
+  <li>The bigger the model structure, the better the evaluation metric scores. Evaluation metrics are the Mean Absolute Error (Mae), Coefficient of Determination (R2) and Error to Signal Ratio (ESR).</li>
+  <li>The bigger the dataset, the better the evaluation metric scores gets.
+All the best performing models were trained on 500k frames of either 32 or 64 samples.</li>
+</ol>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_SD1_perf.png" alt="SD1 Performance" title="" height="auto" width="65%" />
+   <figcaption><i>Evaluation metrics for the best performing models on the SD-1.</i></figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_B65_perf.png" alt="B65 Performance" title="" height="auto" width="65%" />
+   <figcaption><i>Evaluation metrics for the best performing models on the B 65'.</i></figcaption>
+</figure>
+
+<ol>
+  <li>The evaluation metric scores do not necessarily correspond to my subjective perception of the similarity of the predicted versus the target output.</li>
+  <li>The longer the models train, evaluation metric scores improves, but the more they added unwanted high frequency material (noise and aliasing).</li>
+  <li>Visually inspecting spectrograms and waveforms often tells a different story than the evaluation metrics.</li>
+</ol>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_waveformcompare 2.png" alt="Waveforms" title="" width="auto" />
+   <figcaption><i>Waveforms of dry audio, target output and predicted output.</i></figcaption>
+</figure>
+
+<h3 id="noise-and-aliasing"><strong>Noise and aliasing</strong></h3>
+
+<p>In ML, an epoch is one training iteration through the whole training set. The number of epochs then determines for how long the model is allowed to train. Training for too many epochs can result in overfitting, or in the case of this project; noise and aliasing.
+Here you can see how the models first learn to emulate the low frequency content, then slowly learn to add the high frequency content. After 50+ epochs they start to add erroneous high frequent noise and aliasing artifacts.
+These examples were made with a dataset of 116 seconds of dry audio, rather small compared to the biggest datasets used for my experiments. However bigger datasets would cause the same behaviour:</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_target_output.png" alt="Target" title="" width="auto" />
+   <figcaption><i>Spectrogram of Target Output.</i></figcaption>
+</figure>
+
+<h3 id="true-output"><strong>True output</strong></h3>
+<div class="waveform" id="Target_output"></div>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_20epochs.png" alt="20epochs" title="" width="auto" />
+   <figcaption><i>Spectrogram of prediction after 20 epochs.</i></figcaption>
+</figure>
+
+<h3 id="predicted-output-after-20-epochs"><strong>Predicted output after 20 epochs</strong></h3>
+
+<div class="waveform" id="a20_epochs"></div>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_35epochs.png" alt="35epochs" title="" width="auto" />
+   <figcaption><i>Spectrogram of prediction after 35 epochs.</i></figcaption>
+</figure>
+
+<h3 id="predicted-output-after-35-epochs"><strong>Predicted output after 35 epochs</strong></h3>
+<div class="waveform" id="a35_epochs"></div>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_50epochs.png" alt="50epochs" title="" width="auto" />
+   <figcaption><i>Spectrogram of prediction after 50 epochs.</i></figcaption>
+</figure>
+
+<h3 id="predicted-output-after-50-epochs"><strong>Predicted output after 50 epochs</strong></h3>
+<div class="waveform" id="a50_epochs"></div>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_80epochs.png" alt="80epochs" title="" width="auto" />
+   <figcaption><i>Spectrogram of prediction after 80 epochs.</i></figcaption>
+</figure>
+
+<h3 id="predicted-output-after-80-epochs"><strong>Predicted output after 80 epochs</strong></h3>
+<div class="waveform" id="a80_epochs"></div>
+<p><br /></p>
+<figure style="float: none">
+   <img src="/assets/image/2022_05_19_arvidf_200epochs.png" alt="200epochs" title="" width="auto" />
+   <figcaption><i>Spectrogram of prediction after 200 epochs.</i></figcaption>
+</figure>
+
+<h3 id="predicted-output-after-200-epochs"><strong>Predicted output after 200 epochs</strong></h3>
+<div class="waveform" id="a200_epochs"></div>
+<p><br /></p>
+
+<p>This could however be because the LSTMs are doing a great job emulating the analog effects. All analog effects are non-linear, and non-linear systems will always produce content above the <a href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist Frequency</a>, called the intermodulation product. Whenever audio goes through the process of Analog-to-Digital conversion, this is handled by a low pass filter filtering out the information around and above the Nyquist frequency. However because the high frequency content predicted by the models happens inside the digital domain, no such filtering is possible.</p>
+
+<h2 id="takeaways"><strong>Takeaways</strong></h2>
+
+<ol>
+  <li>LSTM networks are pretty good at modeling analog effects with short time-variances. However they don’t work that well if the effect has longer time-variances (phasers, chorus) or memory (delay, reverb).</li>
+  <li>It’s hard to evaluate how similar a predicted audio signal is to its target audio signal. Evaluation metrics underestimate low energy high frequency information, in other words they don’t “hear” the noisy stuff.</li>
+  <li>Smaller and less computationally expensive models can produce pretty good results. The performance gain achieved by adding layers or more hidden units to a LSTM network are not necessarily worth it compared to the added computational cost and increased inference time.</li>
+</ol>
+
+<p>The code for this project is available at <a href="https://github.com/arvidfalch/blackboxRNNmodeling">Github</a>.</p>
+
+<!-- END OF BLOG POST -->
+
+<style>
+
+.btn {
+  color: #fff;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+code {
+  color: #e83e8c;
+  /* word-wrap: break-word; */
+}
+
+.waveform {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+</style>
+
+<!-- external lib used to display waveforms -->
+<!-- <script src="https://unpkg.com/wavesurfer.js"></script> -->
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+
+<script>
+
+const audioSamples = [
+
+    {
+        path: "/assets/audio/2022_05_19_arvidf_Dry_ex.mp3",
+        anchor: "Dry_1",
+        color: "#ffa600",
+        alert: false,
+    },
+    {
+        path: "/assets/audio/2022_05_19_arvidf_SD1_ex.mp3",
+        anchor: "SD1_1",
+        color: "#328d78",
+        alert: false,
+    },
+
+    {
+        path: "/assets/audio/2022_05_19_arvidf_B65_ex.mp3",
+        anchor: "B65_1",
+        color: "#D93821",
+        alert: false,
+    },
+    {
+        path: "/assets/audio/2022_05_19_arvidf_True_SD1.mp3",
+        anchor: "SD1_True",
+        color: "#1869ca",
+        alert: false,
+    },
+
+    {
+       path: "/assets/audio/2022_05_19_arvidf_predictedSD1.mp3",
+       anchor: "SD1_Predicted",
+       color: "blue",
+       alert: false,
+     },
+     {
+         path: "/assets/audio/2022_05_19_arvidf_True_B65.mp3",
+         anchor: "B65_True",
+         color: "#ffa600",
+         alert: false,
+     },
+     {
+         path: "/assets/audio/2022_05_19_arvidf_predictedB65.mp3",
+         anchor: "B65_Predicted",
+         color: "#328d78",
+         alert: false,
+     },
+
+     {
+         path: "/assets/audio/2022_05_19_arvidf_original_wet_epochs.mp3",
+         anchor: "Target_output",
+         color: "#D93821",
+         alert: false,
+     },
+
+     {
+         path: "/assets/audio/2022_05_19_arvidf_20epochs.mp3",
+         anchor: "a20_epochs",
+         color: "#1869ca",
+         alert: false,
+     },
+
+     {
+        path: "/assets/audio/2022_05_19_arvidf_35epochs.mp3",
+        anchor: "a35_epochs",
+        color: "blue",
+        alert: false,
+      },
+      {
+         path: "/assets/audio/2022_05_19_arvidf_50epochs.mp3",
+         anchor: "a50_epochs",
+         color: "blue",
+         alert: false,
+       },
+       {
+           path: "/assets/audio/2022_05_19_arvidf_80epochs.mp3",
+           anchor: "a80_epochs",
+           color: "#ffa600",
+           alert: false,
+       },
+       {
+           path: "/assets/audio/2022_05_19_arvidf_200epochs.mp3",
+           anchor: "a200_epochs",
+           color: "#328d78",
+           alert: false,
+       },
+
+
+];
+
+const addPlayText = (sample) => "Play" + (sample.alert ? "  ⚠️" : "");
+
+audioSamples.forEach((sample) => {
+    const id = sample.anchor;
+    const waveformDiv = document.querySelector("#" + id);
+
+    const playButton = document.createElement("button");
+    playButton.id = "button-" + id;
+    playButton.style.margin = "auto";
+    playButton.classList = "btn btn-primary";
+    playButton.innerText = "Play";
+
+    const wavesurfer = WaveSurfer.create({
+        container: "#" + id,
+        mediaControls: true,
+        height: 64,
+        waveColor: sample.color,
+    });
+    wavesurfer.load(sample.path);
+    wavesurfer.once("ready", () => {
+        waveformDiv.appendChild(playButton);
+        playButton.onclick = () => {
+            wavesurfer.playPause();
+            if (playButton.innerText.startsWith("Pause")) {
+                playButton.innerText = "Play";
+            } else if (playButton.innerText.startsWith("Play")) {
+                playButton.innerText = "Pause";
+            }
+        };
+    });
+    wavesurfer.once("finish", () => {
+        playButton.innerText = "Play";
+    });
+});
+
+</script>
+
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2022/05/19/arvidf-ml-guitareffect-modeling.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

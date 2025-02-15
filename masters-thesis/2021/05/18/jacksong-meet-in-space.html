@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Toward a Telepresence of Sound: Video Conferencing in Spatial Audio | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Toward a Telepresence of Sound: Video Conferencing in Spatial Audio" />
+<meta name="author" content="Jackson Goode" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Teleconferencing in spatial audio with the help of Jitsi Meet and Web Audio" />
+<meta property="og:description" content="Teleconferencing in spatial audio with the help of Jitsi Meet and Web Audio" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/05/18/jacksong-meet-in-space.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/05/18/jacksong-meet-in-space.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_05_18_jacksong_orientations.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-18T10:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_05_18_jacksong_orientations.jpg" />
+<meta property="twitter:title" content="Toward a Telepresence of Sound: Video Conferencing in Spatial Audio" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jackson Goode"},"dateModified":"2021-05-18T10:00:00+00:00","datePublished":"2021-05-18T10:00:00+00:00","description":"Teleconferencing in spatial audio with the help of Jitsi Meet and Web Audio","headline":"Toward a Telepresence of Sound: Video Conferencing in Spatial Audio","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_05_18_jacksong_orientations.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/05/18/jacksong-meet-in-space.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jackson Goode"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/05/18/jacksong-meet-in-space.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Toward a Telepresence of Sound: Video Conferencing in Spatial Audio
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-05-18T10:00:00+00:00"
+        itemprop="datePublished"
+      >May 18, 2021 •
+      </time>
+         
+      <a href="/authors/jacksongoode.html">Jackson Goode</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="meet-in-space">Meet in Space</h1>
+<h2 id="video-conferencing-in-spatial-audio">Video Conferencing in Spatial Audio</h2>
+
+<h3 id="abstract">Abstract</h3>
+
+<p>Digital communications technologies have developed at an increasingly rapid pace, with the COVID-19 pandemic accelerating its recent adoption. This shift over the last few decades has seen a mass migration online, where utilities like video conferencing software have become essential to entire industries and institutions. This thesis proposes the integration of binaural spatialized audio within a web-based video conferencing platform for distributed conversations. The proposed system builds upon findings on the benefits of spatial audio in video conferencing platforms and is guided by the tenets of telepresence. The developed implementation is based on Jitsi Meet, a robust open-source conferencing system. It localizes participant’s voices through sound spatialization methods provided by the Web Audio API.</p>
+
+<p>This project treads new ground in exploring how localized audio can be conceptualized within an accessible telecommunications platform, proposing a novel integration of HRTF-based binaural spatialization within a standard video conferencing layout. System design and experimental questions used in a technical evaluation and user study are informed from a review of audio and video conference systems found in the literature and commercial market. The system evaluation suggests its viability from a compatibility and performance perspective. Perceptual metrics of cognitive load, social presence, and intelligibility are further investigated by a user study where four remote subjects were asked to engage in a short group discussion on a live deployment of the system. Results find support for improvements across all defined metrics as well as increased opinion scores regarding the preference of conferencing with a spatial audio system.</p>
+
+<h2 id="teleconferencing-is-here-to-stay">Teleconferencing is Here to Stay</h2>
+
+<p>But is often a tiring affair…</p>
+<ul>
+  <li>“Zoom” fatigue</li>
+  <li>Reduced dimensionality</li>
+  <li>Poor and inconsistent quality</li>
+</ul>
+
+<p>Teleconferencing has become apart of many of our daily rituals, either a result of the COVID epidemic or the rapid digitization of communication. However, most of us have experienced some symptom of fatigue as a result of our extended use of the system. Latency, network reliability, visual and audio fidelity can all contribute to a fatiguing experience, but software can also play a major role.</p>
+
+<h2 id="issues-in-teleconferencing">Issues in Teleconferencing</h2>
+
+<p>My take:</p>
+<ul>
+  <li>Don’t reinvent the wheel - instead focus on one critical component</li>
+  <li>How can the treatment of audio bring us to the goal of telepresence, and closer to realistic conversations</li>
+</ul>
+
+<p>There is a striking lack of realism in our video meetings, especially in how our voices are conveyed through digital exchange. This project is guided by the principles of telepresence, or the goal of conveying our sensory interactions in high fidelity, as we would in a face-to-face interaction. Every acoustic interaction we experience is spatial so aren’t our digital interactions?</p>
+
+<h2 id="replicating-face-to-face-interactions">Replicating Face-to-face Interactions</h2>
+
+<ul>
+  <li>Spatial model, spatial audio
+    <ul>
+      <li>Visual-aural coherency</li>
+      <li>Binaural audio</li>
+    </ul>
+  </li>
+  <li>Benefits from the literature
+    <ul>
+      <li>Lateralizing audio can improve intelligibility</li>
+      <li>Disentangle double-talk</li>
+      <li>And more: reduce cognitive load, improve comprehension, and is generally more favorable</li>
+    </ul>
+  </li>
+</ul>
+
+<p>There are many issues that ought to be addressed in the field from a software and user experience perspective. Given that audio appears the most critical medium in task oriented communication, I chose to work on integrating spatial audio within a teleconferencing system. Spatial audio within telecommunication has a number of cool benefits and has not yet been integrated within a standard video conferencing platform.</p>
+
+<h2 id="jitsi-meet-and-web-audio">Jitsi Meet and Web Audio</h2>
+
+<p>Jitsi Meet is one of the most popular FOSS video conferencing applications that requires no sign up or installation. It works cross browser and has a great support community.</p>
+
+<p>To achieve spatial audio, the only current possibility for high-fidelity reproduction of sound is through binaural production of sound via headphones. Fortunately, WebAudio, a standardized method supported on all browsers, is able to faciliate full HRTF based binaural audio.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<ul>
+  <li>Capturing participants’ audio streams (WebRTC)</li>
+  <li>Head-related transfer functions via PannerNode</li>
+  <li>Dynamic processing of participants</li>
+</ul>
+
+<p>With this, I integrated dynamic, toggle-able, spatial audio for each participant audio stream in a meeting. The voices of the participants appear coherent with the video streams as participants appear and disappear.</p>
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/548286337?title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<p><a href="https://vimeo.com/548286337">Demo of Meet in Space</a></p>
+
+<h2 id="validating-with-a-user-study">Validating with a User Study</h2>
+
+<p>After a technical evaluation of the system suggested its ability to scale at least to 5 concurrent participants, I ran a user study consisting of students from SMC as well as other’s who were experienced with conferencing on a daily basis. The experiment consisted of a brief conversation among 4 users, with and without spatial audio. The results, while preliminary, were promising and appear to support previous findings in the literature.</p>
+
+<p>There was support for four hypothesis of perceived metrics:</p>
+<ul>
+  <li>Decreased cognitive effort</li>
+  <li>Increased social presence</li>
+  <li>Increased vocal intelligibility</li>
+  <li>Increase in opinion score</li>
+</ul>
+
+<h2 id="and-the-future">And the future?</h2>
+
+<p>Spatial audio is being adopted at a rapid pace, but has still yet to be introduced in small group interactions like the ones presented here. Hopefully, this thesis can provide a valid proof of concept for the benefits of spatial audio in video conferencing platforms.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/masters-thesis/2021/05/18/jacksong-meet-in-space.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

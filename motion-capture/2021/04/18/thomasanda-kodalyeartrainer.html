@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Kodaly EarTrainer-App | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Kodaly EarTrainer-App" />
+<meta name="author" content="Thomas Anda" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="App for training your ears based on old Hungarian methodolgy" />
+<meta property="og:description" content="App for training your ears based on old Hungarian methodolgy" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2021/04/18/thomasanda-kodalyeartrainer.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2021/04/18/thomasanda-kodalyeartrainer.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_04_08_thomasanda_fingersOverlay.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-18T13:50:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_04_08_thomasanda_fingersOverlay.jpeg" />
+<meta property="twitter:title" content="Kodaly EarTrainer-App" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Thomas Anda"},"dateModified":"2021-04-18T13:50:00+00:00","datePublished":"2021-04-18T13:50:00+00:00","description":"App for training your ears based on old Hungarian methodolgy","headline":"Kodaly EarTrainer-App","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_04_08_thomasanda_fingersOverlay.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2021/04/18/thomasanda-kodalyeartrainer.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Thomas Anda"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/motion-capture/2021/04/18/thomasanda-kodalyeartrainer.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Kodaly EarTrainer-App
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-04-18T13:50:00+00:00"
+        itemprop="datePublished"
+      >Apr 18, 2021 •
+      </time>
+         
+      <a href="/authors/thomasanda.html">Thomas Anda</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
+
+<p>For the final project in SMC4043 I decided to work on an iOS-application
+where i utilised computer vision and machine learning to extract hand
+poses from a live camera feed and map Kodaly hand signs to the different
+scale degrees of the C-major scale. The purpose of this project was to
+create a prototype of a possible ear training app which teaches the
+ability to recognize each natural scale degree of a major scale and tie
+each degree of the scale to a specific hand sign. Although I didn’t
+manage to complete the task, I have made the framework for the app
+readily available once I have gathered enough data to train a usable
+model. The bulk of my time was spent getting the app up and running,
+something which turned out to be a quite intricate process. At least
+considering that I don’t have a background in Computer Science and have
+done little programming previously. But thanks to the internet and good
+documentation I was able to get a bare bones prototype up and running.
+Even though I have not thought about or seen anyone combine ear training
+with hand signs before I discovered the Kodaly method, I think it is an
+interesting concept. For me as a guitar player my approach to ear
+training is quite visual. Since I imagine how the intervals looks on the
+guitar and I associate the different scale degrees and intervals with
+how I would play them on my instrument. It makes the process of ear
+training a bit less abstract. Mapping the different intervals to these
+hand signs can potentially be useful as a pedagogical tool.</p>
+
+<h1 id="methodology">Methodology</h1>
+
+<p>As I see the use of motion capture devices in musical applications, the
+most important part is the mapping. Making meaningful connections
+between the musical output and the movement of the body. In my case, I
+had to figure out how I could connect the different scale degrees to a
+specific movement. In my first prototype I have drawn one point on each
+of the finger tips, as you can see in the illustration below.</p>
+<figure style="float: auto">
+   <img src="/assets/image/2021_04_08_thomasanda_fingersOverlay.jpeg" alt="" title="Fingers Overlay" width="auto" /> <figcaption>Overlay on the TIP of each finger</figcaption>
+</figure>
+
+<p>When you hit the “Play Sound”-button a random note gets produced in the
+range of 1-7. The application counts the number of fingers it detects,
+and if the fingers are the same as the number of the scale degree an
+image appears with the correct number displayed on the screen.</p>
+
+<pre><code class="language-{.swift}">struct FingersOverlay: Shape {
+    let points: [CGPoint]
+    private let pointsPath = UIBezierPath()
+    
+    init(with points: [CGPoint]) {
+        self.points = points
+    }
+    
+    func path(in rect: CGRect) -&gt; Path {
+        for point in points {
+            pointsPath.move(to: point)
+            pointsPath.addArc(withCenter: point, radius: 5, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
+        }
+        
+        return Path(pointsPath.cgPath)
+    }
+}
+</code></pre>
+
+<p>In the code snippet above you can see how each point has been drawn on
+the fingertips of every finger recognized. The recognized finger tips
+comes from another part of the project where I have used the Vision
+framework from Apple by using the function VNRecognizedPoints to detect
+only the fingertips of the hand. Each point of the fingertips are stored
+in an array.</p>
+
+<pre><code class="language-{.swift}">if  overlayPoints.count == audioPlayer.soundPlayed {
+                Image(systemName: "\(audioPlayer.soundPlayed!).circle.fill")
+                    .resizable()
+                    .imageScale(.large)
+                    .foregroundColor(.white)
+                    .frame(width: 200, height: 200)
+                    .shadow(radius: 5)
+                    .animation(
+                        Animation.easeInOut(duration: 5)
+                            .delay(3))
+            } else {
+                EmptyView()
+            }
+</code></pre>
+
+<p>In the ContentView.swift-file, which is the View that displays
+everything you can see on the iPhone-screen, I just count the number of
+arrays that are being displayed and compare them to a number I get from
+a seperate class I have defined in AudioPlayer.swift. If the number of
+fingerpoint arrays are the same as the number of the note that was
+played, an image appears on the screen. The content of AudioPlayer.swift
+looks like this:</p>
+
+<pre><code class="language-{.swift}">import AVFoundation
+
+class AudioPlayer: ObservableObject {
+
+    var player: AVAudioPlayer?
+    var soundPlayed: Int?
+
+    func playSound() {
+            let sounds = ["1","2","3","4","5","6","7"]
+            guard let sound = sounds.randomElement() else { return }
+            let url = Bundle.main.url(forResource: sound, withExtension: "wav")
+            
+            self.soundPlayed = Int(sound)
+            print(soundPlayed!)
+        
+            guard url != nil else {
+                return
+            }
+            do {
+                player = try AVAudioPlayer(contentsOf: url!)
+                player?.play()
+            } catch {
+                print("Could not find file")
+            }
+        }
+}
+</code></pre>
+
+<p>As you can see in the code snippet above, I have made a function called
+playSound(). This function gets triggered by the “Play Sound”-button you
+can see at the bottom of Figure 1. It picks a random sound from the
+array called “sounds” and stores the name of the file as an optional Int
+in the soundPlayed variable. The sounds I created myself in Ableton
+Live.</p>
+
+<p>However, even though this works perfectly fine, the mapping is not that
+interesting or meaningful. It is not completely arbitrary as it
+corresponds to the actual scale degree and the concept of thinking of
+notes as numbers in relation to the tonic of the scale is a really
+powerful tool if you want to develop your ears. To take this project a
+step further I therefore decided to implement the Kodaly hand signs in
+my app.</p>
+
+<h2 id="the-kodaly-method">The Kodaly Method</h2>
+
+<p>The Kodaly Method is an approach to music education developed in Hungary
+by the Hungarian ethnomusicologist, composer, pedagogue, linguist and
+philosopher Zoltan Kodaly. His method was developed as a result of his
+view that the current music education system in the Hungarian school
+system was of poor quality. Among all of the methods he developed was
+the method for solfege hand signs. The idea was borrowed from an English
+educator called John Curwen and the technique assigns to each scale
+degree a hand sign that shows its particular tonal function.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_04_18_thomasanda_kodaly.jpeg" alt="" title="Kodaly Hand Signs" width="auto" /> <figcaption>Kodaly Hand Signs</figcaption>
+</figure>
+
+<h2 id="implementing-the-hand-signs">Implementing the hand signs</h2>
+
+<p>This approach seemed like a good fit for my project. And was helpful in
+creating a meaningful connection between sound and action. To implement
+the hand signs I chose to train a ML-model using CreateML, which is
+Apple´s own plug-and-play software for creating custom machine learning
+models. The software is quiet straight forward to use. You just
+drag-and-drop your dataset divided into predefined folders (classes),
+the application automatically splits your data and starts the training.
+You have some options for cropping, blurring, rotation etc, and you can
+choose the maximum number of iterations. But apart from that there is no
+real options for tweaking. The feature extractions are pre-defined and
+you can´t really fine tune your model as you my like if the results you
+get are not up to the standards you would like. For some strange reason
+the training always stopped after 10 iterations, and I was not able to
+troubleshoot this issue. We have a saying in Norwegian that goes like
+this “Det enkle er ofte det beste”. I don´t know if that was true in
+this particular case. The good thing about this application is that the
+output you get is a class object. Which makes it really easy to
+implement into your application. I tried to collect as much data as I
+could, but it turned out to not be sufficient for my purpose. I would
+guess that the hand signs might be to similar and it would require much
+more data than I was able to assemble in the short time I had available.
+A better approach to this would probably be to drop the machine learning
+and take a more heuristic approach and just hard code in the values of
+the different hand signs. I could f.ex measure the values of the
+overlaypoints when my hand makes the fist sign and map it to the
+“Do”-value. This would probably be sufficient, but I was not completely
+sure how to accomplish this, but for later development this can be an
+approach to explore.</p>
+
+<h1 id="results-and-conclusion">Results and conclusion</h1>
+
+<p>I was able to make a prototype of an app which plays a randomly selected
+note and compares the scale degree of the note with the amount of
+fingers displayed on the screen. Even though this implementation was not
+my final goal it was quite satisfying and fun to play around with.
+However, for a final product where all of the possible intervals would
+have been implemented this would not suffice. Unless you are one of the
+lucky persons born with 11 fingers. Therefore, the Kodaly-approach is
+much more suitable for this particular task.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_04_18_thomasanda_kodalyChromatic.jpeg" alt="" title="Kodaly Hand Signs" width="auto" /> <figcaption>Kodaly Hand Signs Chromatic</figcaption>
+</figure>
+
+<p>Because as you can see in figure 3 the whole chromatic scale has been
+implemented and the system is usable in a context where all of the 11
+scale degrees are being used. Even though I did not fully complete the
+challenges I had set up for myself, I think the idea and concept is
+quite interesting, and should be explored further.</p>
+
+<p>As a final conclusion I would say that the course in itself has been a
+great learning experience. Although the course was more generic in its
+approach to motion capture and not particularly focused on the musical
+applications of motion capture, it was fascinating to see each students
+different approach to the task we were given. An although I did not
+manage to complete my project I got an opportunity to explore the world
+of computer vision, which I had not been exposed to earlier. The
+application of computer vision in musical contexts are endless, and will
+be explored further. I also find it more rewarding exploring easily
+available tools. Rather than having to rely upon expensive closed off
+systems, I find the cheap and open resources much more attractive.</p>
+
+<iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_04_18_thomasanda_kodaly.mp4" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen=""></iframe>
+
+<p>Resources used in this project:</p>
+
+<p>https://www.raywenderlich.com/19454476-vision-tutorial-for-ios-detect-body-and-hand-pose</p>
+
+<p>https://developer.apple.com/documentation/vision/detecting_hand_poses_with_vision</p>
+
+<p>https://developer.apple.com/videos/play/wwdc2020/10043</p>
+</div>
+
+  
+
+  <a class="u-url" href="/motion-capture/2021/04/18/thomasanda-kodalyeartrainer.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

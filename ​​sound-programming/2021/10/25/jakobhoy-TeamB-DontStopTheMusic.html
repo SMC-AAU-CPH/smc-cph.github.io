@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Don’t stop the music please, but please do | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Don’t stop the music please, but please do" />
+<meta name="author" content="Arvid Falch, Joseph Clemente, Kristian Wentzel, Jakob Høydal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How we stopped the music, sliced, and restarted it to make a re-synthesized song using onset detection and spectral centroid." />
+<meta property="og:description" content="How we stopped the music, sliced, and restarted it to make a re-synthesized song using onset detection and spectral centroid." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/%E2%80%8B%E2%80%8Bsound-programming/2021/10/25/jakobhoy-TeamB-DontStopTheMusic.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/%E2%80%8B%E2%80%8Bsound-programming/2021/10/25/jakobhoy-TeamB-DontStopTheMusic.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_10_25_jakobhoy_StopTheMusicFavicon.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-25T20:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_10_25_jakobhoy_StopTheMusicFavicon.png" />
+<meta property="twitter:title" content="Don’t stop the music please, but please do" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arvid Falch, Joseph Clemente, Kristian Wentzel, Jakob Høydal"},"dateModified":"2021-10-25T20:00:00+00:00","datePublished":"2021-10-25T20:00:00+00:00","description":"How we stopped the music, sliced, and restarted it to make a re-synthesized song using onset detection and spectral centroid.","headline":"Don’t stop the music please, but please do","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_10_25_jakobhoy_StopTheMusicFavicon.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/%E2%80%8B%E2%80%8Bsound-programming/2021/10/25/jakobhoy-TeamB-DontStopTheMusic.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Arvid Falch, Joseph Clemente, Kristian Wentzel, Jakob Høydal"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/%E2%80%8B%E2%80%8Bsound-programming/2021/10/25/jakobhoy-TeamB-DontStopTheMusic.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+       Don&#39;t stop the music please, but please do 
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-10-25T20:00:00+00:00"
+        itemprop="datePublished"
+      >Oct 25, 2021 •
+      </time>
+         
+      <a href="/authors/arvidfalch.html">Arvid Falch,</a>
+           
+      <a href="/authors/josephclemente.html">Joseph Clemente,</a>
+           
+      <a href="/authors/kristianwentzel.html">Kristian Wentzel,</a>
+           
+      <a href="/authors/jakobhoydal.html">Jakob Høydal</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure>
+  <img src="/assets/image/2021_10_25_jakobhoy_StopTheMusicHeader.png" alt="Figure 1" width="100%" allign="middle" />
+  <figcaption> </figcaption>
+</figure>
+
+<h1 id="introduction">Introduction</h1>
+<p><br />
+<b>This blog post will describe the process of taking two audio files and writing a Python program to slice and join the segments from both audio files based on the <a href="http://librosa.org/doc/main/generated/librosa.feature.spectral_centroid.html">spectral centroid</a> mean.</b>
+<br /></p>
+
+<p>“Don’t stop the music” was first recorded and released in 2007 <a href="https://open.spotify.com/embed/track/0ByMNEPAPpOR5H69DVrTNy">by Rihanna</a>. The song was written by Tawanna Dabney and Norwegian production team StarGate. Jamie Cullum recorded <a href="https://open.spotify.com/embed/track/7hMPR0V7cC0hln0SN2afLL">a cover of the song</a> in 2009, and it is these two versions that our team decided to chop up and put together based on features of the audio.</p>
+
+<p>To combine these files, we started by using librosa to <a href="https://librosa.org/doc/main/generated/librosa.decompose.hpss.html">separate the harmonic and percussive content</a> of the songs. This allowed us to more accurately use <a href="https://librosa.org/doc/main/generated/librosa.onset.onset_detect.html#librosa.onset.onset_detect">onset detection</a> on our audio files using the percussive tracks, which then let us slice up into segments based on the onsets. The harmonic versions of the segments were used to find the <a href="http://librosa.org/doc/main/generated/librosa.feature.spectral_centroid.html">spectral centroid</a> of each segment, and we then each segment for both songs in ascending order based on the average value of the spectral centroid.</p>
+
+<p>In the end we added the segments together one by one based upon spectral centroid average, creating a new audio file with all the segments from the two original tracks, but rejoined in a completely new way. You can view a block diagram of our process below.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2021_12_09_josephcl_python3_block_diagram.png" alt="" title="" width="auto" />
+   <figcaption>Block diagram of our process</figcaption>
+</figure>
+
+<p>In our design, we decided to create a class for each song and stored a list of segment classes, which includes the audio array and the spectral centroid average value, in each song class. After creating a class for each segment, we sorted each segment based on the spectral centroid average value in a combined <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">Pandas DataFrame</a>, then used the indexes in the DataFrame to extract the correct audio segment from the class array.
+<br />
+<br /></p>
+
+<h1 id="results">Results</h1>
+
+<p style="text-align:center;">The two songs chosen for our re-synthesis:</p>
+
+<figure>
+    <iframe src="https://open.spotify.com/embed/track/0ByMNEPAPpOR5H69DVrTNy" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <figcaption><i> Rihanna - Don’t Stop The Music </i> </figcaption>
+</figure>
+
+<figure>
+    <iframe src="https://open.spotify.com/embed/track/7hMPR0V7cC0hln0SN2afLL" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <figcaption><i>Jamie Cullum - Don’t Stop The Music (Cover)</i></figcaption>
+</figure>
+
+<p>By using two songs that are not really that similar but have the same foundation, we get some interesting artefacts in the re-synthesised audio. Since Rihanna’ original song is a dance-song, it emphasises the quarter notes. Cullum’s version uses sub-divisions to carry the song. This leads to the snare-drum from Cullum’s song appearing in some interesting places.</p>
+
+<p>Since the re-synthesized song is arranged in ascending order based on the spectral centroid, it leads to sounding a bit musical and rhythmic. It sounds like a duet between Rihanna and Cullum, fighting each other for the spotlight. The duet-fight ends with Rihanna naturally winning the battle by bringing a dance song to the fight.
+<br /></p>
+
+<figure align="middle">
+    <audio controls="">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_10_24_josephcl_dont_stop_the_music_combined_sample.mp3
+" type="audio/wav" />
+      Don’t Stop The Music, combined.
+    </audio>
+    <figcaption> <i> A thirteen seconds audio sample of our combined audio, taken in the middle of the full audio where there is more of a balance between Rihanna and Cullum’s contributions.</i></figcaption>
+  </figure>
+<p><br /></p>
+
+<h1 id="challenges">Challenges</h1>
+
+<figure>
+  <img src="/assets/image/2021_10_25_kriswent_ZeroesMusic.png" alt="Plot attempt 1" width="100%" allign="middle" />
+  <figcaption><i> Here you can see how each new segment also consists of the previous one(s). Rihanna's first segments shown in red, with opacity set to 5%. (Cullums segments in gush green are still on top of each other.)</i> </figcaption>
+</figure>
+<p><br /></p>
+
+<p>We had an idea to plot the final audio as a traditional waveform, but with each segment color-coded to show it’s origin. This happened to be a much more complex task than anticipated. In the lack of managing to offset the coordinates along the X-axis so each new segment started where the previous left off, we approached it by filling in lots of zeros to offset them instead. Those zeros seemed so innocent, but oh my, how they teamed up against the CPU. It would often result in the code crashing. We later figured out that even if we could find a way to process and plot it all, which seemed close in sight several times, it would take too much time in the end.</p>
+
+<figure>
+  <img src="/assets/image/2021_10_25_kriswent_SubplotsStop.png" alt="Plot attempt 2" width="100%" allign="middle" />
+  <figcaption><i> 5 subplots with 100 segments each. The timer above shows that it processed each subplot in good time. But below the plot you can see it took a lot of time to actually show the final plot.</i> </figcaption>
+</figure>
+
+<p><br /></p>
+
+<p>We tried different approaches. They were all based on using subplots with parts of the whole, to “reset” the ever-ascending pile of zeros lurking behind the scenes. In the figure above you can see how displaying 500 segments was doable, but this was almost as far as we could go without the code crashing. There were 987 segments in total, and we managed to plot 600 of them in about 3:30 minutes. We actually got confirmation – by printing a message for every 100 segments – that we were able to process them all. But there was no way it would show us the plot in the end. It took about 4:00 minutes to process, and small artifacts started to appear across the screen showing the struggle. Another approach was to make the subplots aligned horizontally without an axis and as close to each other as possible (with just a slight gap). This was the aesthetically most pleasing approach, and ended up being the way we visualized it in our code. Though for our final version, we thought it looked best with a “zoomed in” plot of only 100 segments. We found that different approaches had slight variations in time spent, but they all faced the same limits in the end. The process of finding a solution to make it work taught us a valuable lesson regarding CPU and time-consumption, and it forced us to think more cost-efficient overall.</p>
+
+<figure>
+  <img src="/assets/image/2021_10_25_kriswent_SubplotsMusic.png" alt="Plot attempt 3" width="100%" allign="middle" />
+  <figcaption><i> 2 subplots of 100 segments each, with their axis removed. You can see a slight gap between the subplots. We thought this approach was the most aesthetically appealing.</i></figcaption>
+</figure>
+
+<p>The source code for this assignment can be viewed <a href="https://github.com/jpclemente97/pleaseDontStopTheMusic/blob/main/Python%20Team%20B%20Assignment%203%20Part%201%20Portfolio.ipynb">here.</a> To use this program for different sound files, you must first place two new wav files in a folder called “Files” in the same directory as the code. Once this is done, change the strings “song1” and “song2” to accurately reflect the files you want to process.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/%E2%80%8B%E2%80%8Bsound-programming/2021/10/25/jakobhoy-TeamB-DontStopTheMusic.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

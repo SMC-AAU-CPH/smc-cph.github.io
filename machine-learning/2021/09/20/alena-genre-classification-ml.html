@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Ensemble algorithms and music classification | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Ensemble algorithms and music classification" />
+<meta name="author" content="Alena Clim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Playing around with some supervised machine learning - genre classification is hard!" />
+<meta property="og:description" content="Playing around with some supervised machine learning - genre classification is hard!" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2021/09/20/alena-genre-classification-ml.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2021/09/20/alena-genre-classification-ml.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_20_alena_musical_genres.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-20T16:10:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_20_alena_musical_genres.jpg" />
+<meta property="twitter:title" content="Ensemble algorithms and music classification" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alena Clim"},"dateModified":"2021-09-20T16:10:00+00:00","datePublished":"2021-09-20T16:10:00+00:00","description":"Playing around with some supervised machine learning - genre classification is hard!","headline":"Ensemble algorithms and music classification","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_09_20_alena_musical_genres.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2021/09/20/alena-genre-classification-ml.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alena Clim"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2021/09/20/alena-genre-classification-ml.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Ensemble algorithms and music classification
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-09-20T16:10:00+00:00"
+        itemprop="datePublished"
+      >Sep 20, 2021 •
+      </time>
+         
+      <a href="/authors/alenaclim.html">Alena Clim</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>After a long sunny summer, we started our autumn semester with a very compact and interesting course - <strong>Machine Learning (ML)</strong>! The course was no joke, it’s great that we are done with a course by the 20th of September, but these past weeks were interse after the lethargy of the hot season. We’ve learnt a lot during this time, thought, and parts of that is the fact that ML is not the answer to anything. It’s a very good technique for <em>some</em> questions but not <em>all</em>…</p>
+
+<p>Luckily, music information retrieval (MIR) is a problem for which ML has been proven to help. (Automatic) genre classification is a subproblem of MIR. It is a widely studies application of ML and the topic of my project. The state of the art results of genre classification are using by (music) tech giants such as Apple (iTunes) of Spotify and I didn’t believe I had a chance against their performances. That is why I decided to focus half of my time on some literature search and find out more about the problem at hand before writing a program that would attempt to classify music.</p>
+
+<p>From the literature search I learned about two relevant phenomena:</p>
+
+<ul>
+  <li>
+    <p><strong>Genre taxonomy is criticized</strong>: Some researchers are debating whethear genre classification is a task worth investing so much resources into, as it has to be based on a genre taxonomy - that is, genres are labels created and decided by humans who are prone to subjectivism. The classification is based on people’s opinions of similarities in harmony and or rhythm or a cultural context but it is not an universal truth. That is why the usefulness of working toward an automatic genre classification based on human defined lables is debated.</p>
+  </li>
+  <li>
+    <p><strong>Artist and album effect</strong>: Through trial and error it has been discovered that the performance of a ML algorithm is inaccurately high if songs from the same artist are in both the training and the test set. The reason for that is simple - the model learns to recognize the songs of that artist rather than generalize to other songs from the same genre.</p>
+  </li>
+</ul>
+
+<p>After the literature search I went on to creating some code. I decided to use the <a href="https://github.com/mdeff/fma">Free Music Archive (FMA)</a> dataset. It is a great resource for a multitude of ML tasks; it provides the full audio, it provides a large subset with all songs but only 30 seconds taken from the middle, a medium subset with only the songs labeled with only one genre (16 root genres), and a small subset with a balanced sub-subset (?!) of the medium set (8 root genres). It also provides very comprehensie metadata abouut the track, the artist and the album, as well as audio features extracted with <a href="https://librosa.org/doc/latest/index.html">librosa</a> from all the songs, all separately in .csv files, which facilitates a quick start on any task. They also published a comprehensive manifest together with the data, where they tested the performance of several ML algorithms on several combinations of features extracted from their data - the medium subset.</p>
+
+<p>Due to limited computational power, I chose to work on the small subset. It onsists of 1000 tracks of the top represented root genres: Hip-Hop, Pop, Folk, Experimental, Rock, International, Electronic, Instrumental. In total there were 8000 fragments of 30 seconds. To split the data into training and test sets I used their defined splits, because theymade sure the artist and album effect would not occur; however, I combined the training and validation sets, with a resulting distribution of 90%-10%. I also decided to work directly from the csv file with the extracted features.</p>
+
+<p>In total, I tested 3 ML algorithms with one variation:</p>
+
+<ul>
+  <li>Logistic Regression</li>
+  <li>K-Nearest Neighbor (k = 120)</li>
+  <li>Support Vector Machine (SVM)</li>
+  <li>SVM with additional Linear Discriminant Analysis (LDA) dimensionality reduction.</li>
+</ul>
+
+<p>I tested the performance of each of these algorithms on the following (combination of) features:</p>
+
+<ul>
+  <li>
+    <p><strong>Mel-Frequency Cepstral Coefficients (MFCC)</strong>: of the spectral shape features, this seems to convey the most meaning with the least dimensionality; instead of the usual 15 or 20 coefficients, only the first 10 were chosen here;</p>
+  </li>
+  <li>
+    <p><strong>MFCC + Tempo</strong> (manually assigned tempo);</p>
+  </li>
+  <li>
+    <p><strong>MFCC + Spectral Centroid</strong> (indicator of “brighter” musical textures) + <strong>Spectral Contrast</strong> (the difference between the peaks and valleys of the audio spectrum).</p>
+  </li>
+</ul>
+
+<p>The models were evaluated based on their accuracy and the results of the analysis can be seen in the Table below. As you can notice, not great performances! In line with previous research, the SVM model perfrmed best. Interestingly, the simpler Logistic Regression Classifier performed as “good”.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_09_20_alena_ML_table.jpg" alt="" title="Test set accuracies of several feature sets fed to several classifiers for genre recognition" width="auto" /> <figcaption>Test set accuracies</figcaption>
+</figure>
+
+<p>How badly did it actually perform, though? Below is the confusion matrix of the performance of the SVM model trained on MFCC + spectral contrast + spectral centroid. Aside from Hip-Hop, Rock, and Electronic, the rest of the genres are mostly misclassified. For example, Folk songs have been classified as Pop, Folk, International and Instrumental almost equally. Same with Pop, it was classified mostly as Folk, Hip-Hop, and equally between Pop and Electronic. So you see, the existing genre txonomy is very subjective (what is “internationl” as a genre anyways?!).</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_09_20_alena_confusion_matrix_svm.jpg" alt="" title="Confusion matrix of SVM fed with MFCC, spectral centroid and spectral contrast" width="auto" /> <figcaption>Confusion matrix for SVM</figcaption>
+</figure>
+
+<p>Why did it perform so badly? Well… there’s several reasons that can be the case. Firstly, I used a small dataset. Secondly, the features I chose might not have been the best representations of the data; I could have also used the 30 seconds of audio. And thirdly, look below how the data is almost one big cluster! I used a 2D representation of the spectral contrast and centroid and it looks like each genre is just a layer on top of other layers in almost the same place! Possibly these two were not the best features to use for a visual representation, but it’s giving a rought idea of the complexity of the problem.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2021_09_20_alena_scatterplot_contrast_centroid.jpg" alt="" title="2D Scatter plot of the spectral contrast x spectral centroid color coded based on genre" width="auto" /> <figcaption>Scatter plot of centroid vs contrast</figcaption>
+</figure>
+
+<p>In conclusion, this project was a complex, but fun idea! I never thought how complex it is to classify genres, but I should have known given that I’m very bad at telling the genre of a song myself! There’s so much subjectivity and it’s all based on our own opinions afterall. If I were to continue with this project, I would test other features as well, and I would work with the large if not full dataset. A classification of subgenres might also be interesting to look into. If there are fewer outliners it might also be cool to look into which song specifically or genre got mislabelled often - as my classmate Stephen was saying, why is shoegaze so hard to classify? I am personally amazed at the fact that there is a genre called “international”, huh (and it has a subgenre called Juju!)</p>
+
+<p>If you would like to read the whole technical report or take a look at the code, email me at alenacl@uio.no!</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2021/09/20/alena-genre-classification-ml.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

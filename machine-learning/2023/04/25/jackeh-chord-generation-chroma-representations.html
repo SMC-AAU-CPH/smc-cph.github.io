@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Chroma Representations of MIDI for Chord Generation | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Chroma Representations of MIDI for Chord Generation" />
+<meta name="author" content="Jack Hardwick" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding two ways of representing and generating chords in machine learning." />
+<meta property="og:description" content="Understanding two ways of representing and generating chords in machine learning." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/jackeh-chord-generation-chroma-representations.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/jackeh-chord-generation-chroma-representations.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_jackeh_ABBA_chroma_histogram_thumbnail.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-25T19:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_jackeh_ABBA_chroma_histogram_thumbnail.jpg" />
+<meta property="twitter:title" content="Chroma Representations of MIDI for Chord Generation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jack Hardwick"},"dateModified":"2023-04-25T19:00:00+00:00","datePublished":"2023-04-25T19:00:00+00:00","description":"Understanding two ways of representing and generating chords in machine learning.","headline":"Chroma Representations of MIDI for Chord Generation","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_25_jackeh_ABBA_chroma_histogram_thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/jackeh-chord-generation-chroma-representations.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jack Hardwick"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/25/jackeh-chord-generation-chroma-representations.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Chroma Representations of MIDI for Chord Generation
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-25T19:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 25, 2023 •
+      </time>
+         
+      <a href="/authors/jackhardwick.html">Jack Hardwick</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2023_04_25_jackeh_ABBA_chroma_histogram.png" width="75%" />
+   <figcaption>An example of a chroma histogram.</figcaption>
+</figure>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Using AI to generate new music, or art of any sort for that matter, can instil wonder in some and disdain in others. For some, it’s an exciting new frontier of technology while for others, we are simply giving away some of our best ways of making sense of the world around us to computers which can never truly appreciate the world, only predict it.</p>
+
+<p>I can’t solve that ethical dilemma in this post, but I can at least highlight one way in which we can use machine learning to augment, rather than supplant, our musical creativity.</p>
+
+<p>When I set out to conceptualise my machine learning project this semester, I started from a project I made several years ago in which a patch in Max/MSP synthesises a harmony in real time to a violinist playing a melody. In this project the harmony generated was quite static, working with largely fixed musical intervals. What if this project could be expanded with machine learning? What if, instead of using a deterministic rules-based system for generating harmony, I could leverage machine learning to generate harmony that was constantly surprising to both the performer and the audience?</p>
+
+<h1 id="the-what--why-of-chroma-representations">The What &amp; Why of Chroma Representations</h1>
+
+<p>Many researchers have developed machine learning-based systems for generating or suggesting chords to accompany melodies. Most of these system work by analysing incoming music as harmony and melody, and then suggesting a suitable next chord in the sequence. In machine learning we call this classification algorithms, because it is determining the most suitable option from a set of discrete chords. Most of these systems select from a small subset of possible chords, such as just the 24 major and minor chords.</p>
+
+<p>This works well for offline systems such as composition aids, in which the composer can take the suggestion and play around voicings, chord extensions, and instrumentation. What about real-time systems, where we need complete harmony as quickly as possible?</p>
+
+<p>To tackle this issue, in my project I work with different method of representing harmony to a machine learning algorithm, called chroma histograms. Chroma representations of music are those which remove octave information. For example, in a chroma representation, all C notes are counted as the chroma pitch C, regardless of whether they are high or low. A chroma histogram is therefore the ratios of each of the 12 chroma pitch in a given set of notes, displayed as a list of numbers which add up to 1.</p>
+
+<p><strong>Chord label representation:</strong></p>
+
+<p>‘C major’</p>
+
+<p><strong>Chroma histogram representation:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>C</strong></th>
+      <th><strong>C#</strong></th>
+      <th><strong>D</strong></th>
+      <th><strong>D#</strong></th>
+      <th><strong>E</strong></th>
+      <th><strong>F</strong></th>
+      <th><strong>F#</strong></th>
+      <th><strong>G</strong></th>
+      <th><strong>G#</strong></th>
+      <th><strong>A</strong></th>
+      <th><strong>A#</strong></th>
+      <th><strong>B</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.33</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.33</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.33</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="interpreting-chroma-histograms">Interpreting Chroma Histograms</h1>
+
+<p>When training my machine learning model, I show it chords and ask it to generate chords as chroma histograms. As a result, the output is not a single chord such as ‘C major’, but instead a set of probabilities that describe what notes should and shouldn’t work in the current context. I can then use this information to work out which, and how many, notes to include in the chord.</p>
+
+<p>The idea behind choosing chroma histogram representations is that while they can represent a C major, such as in the example above, they can also represent any collection of notes which do or do not form part of a standard chord.</p>
+
+<p>I propose this is preferable for a real-time scenario such as the one I describe above because it should allow my machine learning model to generate diverse and interesting harmony that isn’t limited to a small selection of possible chords.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Of course, this is all well and good as conjecture. I’m currently in the process of finalising my machine learning model which puts chroma histograms into action. This section will be updated with some listening samples and concrete results soon!</p>
+
+<p>The real-time implementation of this algorithm is also beyond the scope of this project. However, it takes only around 30-50 milliseconds to generate a suitable chroma histogram in my testing with a preliminary version of the model. I am therefore optimistic that it will be applicable for deployment as part of a real-time harmony generation system soon.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2023/04/25/jackeh-chord-generation-chroma-representations.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

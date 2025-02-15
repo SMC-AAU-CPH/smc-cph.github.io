@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A Human-Machine Music Performance System based on Autonomous Agents | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="A Human-Machine Music Performance System based on Autonomous Agents" />
+<meta name="author" content="Pedro Lucas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Let’s make music with virtual fellows in mixed reality." />
+<meta property="og:description" content="Let’s make music with virtual fellows in mixed reality." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2022/05/15/pedropl-human-machine-impro.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2022/05/15/pedropl-human-machine-impro.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_15_pedropl_thesis_featured_image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-15T21:59:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_15_pedropl_thesis_featured_image.jpg" />
+<meta property="twitter:title" content="A Human-Machine Music Performance System based on Autonomous Agents" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pedro Lucas"},"dateModified":"2022-05-15T21:59:00+00:00","datePublished":"2022-05-15T21:59:00+00:00","description":"Let’s make music with virtual fellows in mixed reality.","headline":"A Human-Machine Music Performance System based on Autonomous Agents","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_15_pedropl_thesis_featured_image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2022/05/15/pedropl-human-machine-impro.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Pedro Lucas"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2022/05/15/pedropl-human-machine-impro.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      A Human-Machine Music Performance System based on Autonomous Agents
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-05-15T21:59:00+00:00"
+        itemprop="datePublished"
+      >May 15, 2022 •
+      </time>
+         
+      <a href="/authors/pedrolucas.html">Pedro Lucas</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>This blog post presents a brief summary of my thesis. The main intention is to provide an overview of this work and multimedia material (video, audio, source code) for a complete understanding of how the system works and the results obtained from the research process. For more details you can read the <a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2022_05_15_pedropl_master_thesis_manuscript.pdf">full manuscript</a>.</p>
+
+<h2 id="abstract">Abstract</h2>
+
+<blockquote>
+  <p>This thesis proposes the design and implementation of a multimodal system for human-machine music performances in real-time. The machine behavior is modeled under the concepts and paradigms related to an artificial Swarm of Autonomous Agents. The system used three advanced technologies as subsystems: Motion Capture, Spatial Audio, and Mixed Reality.  These subsystems are integrated in one only solution that is evaluated regarding ‘system measurements’ and ‘music improvisation sessions’. The ‘system measurements’ determine the advantages and limitations in terms of effectiveness and efficiency; and the ‘music improvisation sessions’ evaluate user interaction through the analysis of data recording and a survey. The results provide latency, jitter and other real-time parameters that are contrasted with user data. Moreover, the user analysis shows that the system is easy-to-use and highly enjoyable. These findings indicate that the strategy to conceive the system is validated and can be used for further investigation for autonomous agents and musicology aspects.</p>
+</blockquote>
+
+<h2 id="background">Background</h2>
+
+<p>This system is based on concepts and paradigms related to <em>Musical Agents</em> (Tatar &amp; Pasquier 2019),  <em>Live Algorithms</em> (Blackwell et al. 2012), <em>Swarm Intelligence</em> (Blackwell 2007), and <em>Music in Extended Realities (Musical XR)</em> (Turchet et al. 2021). The relevance of this topics relies in bringing the interaction with artificial musicians in a physical space, which requires to know how they react to the human musician and among themselves, how they can work collectively (as simple individuals) so that complex behaviors emerges, how to structure a solution in an architecture for music improvisation, and how to perceive and participate with them in a physical-virtual environment that foster an effective and efficient communication.</p>
+
+<p>The main technologies that were integrated to this systems are: <em>Motion Capture</em>, <em>Spatial Audio</em>, and <em>Mixed Reality (MR)</em>. There are related works described in the manuscript that used the concepts and technologies mentioned before in an implicit or explicit way, nevertheless, at the moment of the conception of this work, there was no a system that integrates those paradigms and technologies as one only solution for a human-machine music improvisation.</p>
+
+<h2 id="system-overview">System Overview</h2>
+
+<p>The design is supported by the three cutting-edge technologies mentioned above (Motion Capture, Spatial audio, and Mixed Reality) and a musical input source through a MIDI controller. These components are connected to the core of the solution, which means that there are five elements that assemble the complete platform as shown in the figure below. An <em>agent</em> is the representation of a <em>sound source</em> located in space that contains musical material from the performer and is able to adopt an autonomous behavior when the user decides it.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_15_pedropl_thesis_design.png" alt="design" title="System Design Overview" width="auto" />
+   <figcaption>System Design Overview. The wider arrows represent inputs and outputs from the component to the system and the thinner ones show inputs provided by the user and outputs received from the system.</figcaption>
+</figure>
+
+<p>The technologies illustrated above allow the user to interact with the system and receive feedback in real-time. An <em>agent</em> (sound source) is initially an audio track that is created when the human performer finishes a musical line that is input from the MIDI controller and looped it. The sound source can be moved in space through a trackable object called <em>rigid body</em> whose position is detected by an <em>optical motion capture system</em> (OptiTrack). The position is fed into the system to place the agent in space in terms of sound and image. For the audio output, a <em>spatial audio system</em> (SMC Portal) composed of a circular array of loudspeakers reflects the location of the sound source. For visualization, a <em>mixed reality</em> headset (Microsoft HoloLens) is used to render the agent (as a 3D colored sphere) in the physical space where the performer is, also the headset allows to interact with simple gestures to select the agent to control it or let it to behave autonomously (generate new musical material and move independently), that is why the mixed reality device receives and sends data to the main system.</p>
+
+<p>The communication between components depends of the technology that is using. For the spatial audio system, the infrastructure from the SMC portal (8-channel loudspeakers array) is used. The motion capture system and the mixed reality headset are connected through a local network (LAN) over a router. The motion capture uses a wired (Ethernet) connection while the mixed reality headset uses the wireless network.</p>
+
+<p>These interconnections have an impact in the size, time, and rate of data transmission back and forth, which is significant for the user experience in a real-time setting. That is why it is relevant to take system measurements as part of the methodology to evaluate this system, since those measurements can help to improve and find a balance between the experience and the system efficiency, or identify the feasibility for music performances under these limitations.</p>
+
+<p>The video below demonstrates the operation of the system from several perspectives.</p>
+
+<h3 id="video-demo">Video Demo</h3>
+
+<figure style="float: none">
+    <iframe width="1038" height="584" src="https://www.youtube.com/embed/6wm24BC5NLg" frameborder="0" allowfullscreen=""></iframe>
+    <figcaption>System operation from 4 perspectives for a human-machine music improvisation session.</figcaption>
+</figure>
+
+<h2 id="evaluation">Evaluation</h2>
+
+<p>The system was evaluated for a number of 8 agents. This size was chosen from several experimentations considering the trade-off between latency and audio dropouts. The summary for the measurements based on this size is shown in the table below.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_15_pedropl_thesis_systemmeasurements.jpg" alt="measurements" title="system measurements" width="auto" />
+   <figcaption>Summary of system measurements for an agent size of 8.</figcaption>
+</figure>
+
+<p>Seven users tested the system. In a testing session a user had to familiarize with the equipment, improvise a musical piece as long as he or she decided (relevant anonymize data was captured on each music performance), and complete a survey. These user testing sessions demonstrated that the previous measurements do not produce significant issues, except for the <em>MIDI controller to sound output latency</em> when a high tempo (BPM) is set. Moreover, the system was stable on every performance and tolerated a long music improvisation of 43 minutes (the longest time that a participant spent).</p>
+
+<p>Comparisons were established between the system measurements, the captured user data, and the survey applied to the participants. In general, the system provided to the users a positive unconventional experience that was considered enjoyable.</p>
+
+<p>You will find below an excerpt of 1 minute for the audio that the musicians produced. This is a binaural render taken from the ambisonic output that they experienced in the room.</p>
+
+<h3 id="audio-excerpts-from-participants">Audio Excerpts from Participants</h3>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user0.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>User 0</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user1.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>User 1</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user2.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>User 2</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user3.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>User 3</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user4.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>User 4</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user5.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>User 5</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_15_pedropl_user6.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>User 6</figcaption>
+</figure>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>The results obtained validates the <em>way-of-making</em> for the system, and the research question about <em>how to design and implement</em> such system is answered with the endorsement of the key findings of this work. Therefore, it is possible the conception of the envisioned system as an integrated solution for human-machine musical performances.</p>
+
+<p>The contributions of this work are: the design and implementation of the proposed system, the evaluation strategies, and the results of this study.</p>
+
+<p>The limitations are related with: equipment (low resolution for spatial audio, limited field of view for HoloLens, PC no powerful enough for supporting more than 8 agents), measurement equipment (low frame rate cameras), and time restrictions (not enough participants for generalization, and there is still more data that can be analyzed). Despite of these limitations, the findings are relevant to validate the system and answer the research question.</p>
+
+<p>It is recommendable to address the limitations described above, reduce latency and packet loss values, and search for more efficient implementations. For future work it is considered the exploration of other strategies for multi-agent behaviour and their level of participation in human-machine musical performances. Besides, a further evaluation of human aspects in the musicology field can be conducted by using this system.</p>
+
+<h2 id="source-code">Source Code</h2>
+
+<p>The core system was implement in <em>Max/MSP</em> and the source code can be found below:</p>
+
+<ul>
+  <li><a href="https://github.com/pedro-lucas-bravo/agent_music_improviser">https://github.com/pedro-lucas-bravo/agent_music_improviser</a></li>
+</ul>
+
+<p>The mixed reality application was developed in <em>Unity3D</em> for the <em>Microsoft HoloLens version 1</em>. The source code is placed in:</p>
+
+<ul>
+  <li><a href="https://github.com/pedro-lucas-bravo/mr_agent_visualizer">https://github.com/pedro-lucas-bravo/mr_agent_visualizer</a></li>
+</ul>
+
+<p>The data analysis was carried out in <em>Python</em>. The data sets and code can be found in the following repository:</p>
+
+<ul>
+  <li><a href="https://github.com/pedro-lucas-bravo/master_thesis_data_analysis">https://github.com/pedro-lucas-bravo/master_thesis_data_analysis</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>Tatar, K., &amp; Pasquier, P. (2019, 1). Musical agents: A typology and state of the art towards Musical Metacreation. Journal of New Music Research, 48 (1), 56–105.</li>
+  <li>Blackwell, T., Bown, O., &amp; Young, M. (2012). Live Algorithms: Towards Autonomous Computer Improvisers. In Computers and creativity. Berlin, Heidelberg: Springer Berlin Heidelberg.</li>
+  <li>Blackwell, T. (2007). Swarming and Music. In Evolutionary computer music (pp.194–217). London: Springer London.</li>
+  <li>Turchet, L., Hamilton, R., &amp; Camci, A. (2021). Music in Extended Realities. IEEE Access, 9 , 15810–15832.</li>
+</ul>
+</div>
+
+  
+
+  <a class="u-url" href="/masters-thesis/2022/05/15/pedropl-human-machine-impro.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

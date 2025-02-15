@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Group C Learns to Think about how Machines Learn to Think | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Group C Learns to Think about how Machines Learn to Think" />
+<meta name="author" content="Paul Koenig, Aleksander Tidemann, Tom Ignatius, Thomas Anda" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Wherein we describe the denouement of SMC4000, Module #9: Machine Learning." />
+<meta property="og:description" content="Wherein we describe the denouement of SMC4000, Module #9: Machine Learning." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/11/25/Machine-Learning-Group-C.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/11/25/Machine-Learning-Group-C.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_11_25_stefanof_cat.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-25T15:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_11_25_stefanof_cat.png" />
+<meta property="twitter:title" content="Group C Learns to Think about how Machines Learn to Think" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Paul Koenig, Aleksander Tidemann, Tom Ignatius, Thomas Anda"},"dateModified":"2019-11-25T15:00:00+00:00","datePublished":"2019-11-25T15:00:00+00:00","description":"Wherein we describe the denouement of SMC4000, Module #9: Machine Learning.","headline":"Group C Learns to Think about how Machines Learn to Think","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_11_25_stefanof_cat.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/11/25/Machine-Learning-Group-C.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Paul Koenig, Aleksander Tidemann, Tom Ignatius, Thomas Anda"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2019/11/25/Machine-Learning-Group-C.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Group C Learns to Think about how Machines Learn to Think
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-11-25T15:00:00+00:00"
+        itemprop="datePublished"
+      >Nov 25, 2019 •
+      </time>
+         
+      <a href="/authors/paulkoenig.html">Paul Koenig,</a>
+           
+      <a href="/authors/aleksandertidemann.html">Aleksander Tidemann,</a>
+           
+      <a href="/authors/tomignatius.html">Tom Ignatius,</a>
+           
+      <a href="/authors/thomasanda.html">Thomas Anda</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="machine-learning-a-very-brief-primer">Machine Learning, a (very) brief primer</h2>
+
+<p>Our final module in SMC4000 was in Machine Learning. ML is a sub-discipline of Artificial Intelligence.</p>
+
+<p>ML can be described this way:</p>
+
+<p>“<em>A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</em>”  - Tom Mitchell</p>
+
+<p>There were several ways we explored this formula. The first was via a program designed by Rebecca Fiebrink called the Wekinator. More on this later, but basically, the Wek is a supervised machine learning program. It uses a polynomial regression algorithm (among others) to train itself to infer outputs from unknown data inputs, by using explicitly-mapped examples as training data.</p>
+
+<p>Next up in the toolkit is Scikit Learn. Scikit is a free Python machine-learning library that contains numerous classification, regression, and clustering algorithms for testing data.</p>
+
+<p>With this program, we were able to implement a neural network to train a ML algorithm to classify data into four sets, or classes. Data was compiled by the group and consisted of sound files in four classes: Cats, birds, handclaps, and guns(!). Would the algorithm be able to distinguish between these sounds? As we discovered, sometimes it’s not that easy…</p>
+
+<h2 id="machine-learning-with-wekinator">Machine Learning with Wekinator</h2>
+
+<p>On the last day of the ML workshop, we had to perform with our Wekinator programs. We’ve all decided to use the same input and output to compare how different each of our programs work after we did some recordings with Wekinator. We decided as a group that all of us will use the XY cursor input into an FM synthesizer through Wekinator.</p>
+
+<p>One of the observations we noticed is that despite the XY value being linear, the machine learning done would be far from it. As we were using basically a two dimensional, two axis graph, we were using the regression method. In the picture below, we see that after plotting just three initial points that the graph starts to non-linearly flatten out at the end without any recorded points.</p>
+
+<p><img src="/assets/image/2019_11_25_stefanof_wek.png" alt="image" /></p>
+
+<p>Which leads on to our next observation of the training of the program. Our team member, Tom (Iggy), tried plotting three points with the left and right of the bottom of the Y axis changing pitch and the top right changing the filter. However the machine couldn’t logically presume that he wanted the top left hand corner of the screen to filter the lowest pitch from the initial plots.</p>
+
+<p>After plotting more points, we could use the XY plot to have linear and nonlinear curves to adjust our different parameters to allow for more expression.</p>
+
+<p>Overall its been a great learning experience understand how regression works with Wekinator</p>
+
+<h2 id="training-a-classifier-with-sci-kit-learn">Training a classifier with Sci-kit learn</h2>
+
+<p>On day 3 of our ML workshop, we got introduced to a python library called Sci-kit learn. Our task was to collect and use a set of labeled data with a specific program in Sci-kit learn to train two classifiers with supervised techniques. The goal was to build highly accurate classifiers and reflect on why certain configurations generated these levels of accuracy.</p>
+
+<p>The data sets consisted of 4 classes with a total of 200 audio files. Our first training set had examples of cats, guns, birds, and handclaps, while the other featured modular synth-shots, orchestral, nature, and bird sounds. As shown in images below, the complete training procedure resulted in two models with an average classifier accuracy of eighty percent.</p>
+
+<p><img src="/assets/image/2019_11_25_stefanof_teamcaccuracy.jpg" alt="teamC" /> <img src="/assets/image/2019_11_25_stefanof_teamaaccuracy.jpg" alt="teamA" /></p>
+
+<p>Much to our surprise, it was much harder to achieve higher accuracy with the first training set then with the second. It seems that audio with similar frequency density and sonic characteristics are more demanding to classify. The findings, therefore, indicate that a diversity of labeled data can be beneficial when using these techniques and tools. This provided insight into the possible structural limitations of our program as well as knowledge about the connection between accurate machine learning classifiers and training procedures.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2019/11/25/Machine-Learning-Group-C.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

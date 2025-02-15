@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>MIDI music generation, the hassle of representing MIDI | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="MIDI music generation, the hassle of representing MIDI" />
+<meta name="author" content="Trym Bø" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A brief guide of the troubles with MIDI representation for generative AI" />
+<meta property="og:description" content="A brief guide of the troubles with MIDI representation for generative AI" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/19/tryb-midi-hassle-copy.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/19/tryb-midi-hassle-copy.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_19_thumbnail.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_19_thumbnail.jpeg" />
+<meta property="twitter:title" content="MIDI music generation, the hassle of representing MIDI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Trym Bø"},"dateModified":"2023-04-19T00:00:00+00:00","datePublished":"2023-04-19T00:00:00+00:00","description":"A brief guide of the troubles with MIDI representation for generative AI","headline":"MIDI music generation, the hassle of representing MIDI","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_19_thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/19/tryb-midi-hassle-copy.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Trym Bø"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/19/tryb-midi-hassle-copy.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      MIDI music generation, the hassle of representing MIDI
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-19T00:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 19, 2023 •
+      </time>
+         
+      <a href="/authors/trymboe.html">Trym Bø</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2023_04_19_thumbnail.jpeg" width="60%" />
+   <figcaption></figcaption>
+</figure>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>As there has been advances in generative AI, there has also been a lot of research in generative music using Neural Networks. But if you want to generate music, you need to represent music. The two main methods are using symbolic music representation or audio representation. In audio representation, you represent sound as frequencies. This can be challenging due to the fact that audio is sampled using frequencies at several thousand hertz. This requires a huge amount of computational power to be able to train on a big amount of data. The other option is to represent music symbolically. Here, a large amount of music can be represented with a lot less data. Simple, right? No..</p>
+
+<h1 id="midi-the-bohemyth">MIDI: The bohemyth</h1>
+
+<p>MIDI (Musical Instrument Digital Interface) was made in the early 1980s as a way to connect electronic musical instruments and computers. The ease of use made it so that it became the leading way of symbolic music representation. So why isn’t this then fed to the Neural Network? Well, one of the problems is that MIDI both has a lot of redundant information, it is noisy and complex. Neural Networks also experience a lot of trouble with keeping track of sequences with the way MIDI uses note-on events, and a corresponding note-off event to keep track of playing notes. It becomes a 1D representation to represent 2D information. This is shown to be challenging for Neural Networks. So instead of representing symbolic music as raw MIDI, we need to preprocess it, doing some feature extraction.</p>
+
+<h1 id="lets-clean-up-midi">Let’s clean up MIDI</h1>
+
+<p>Since MIDI is too noisy and complex, a solution can be to strip it down a bit. A lot of redundant information about the track can be removed, and the information can be stripped down to just the note events that MIDI represents. TensorFlow teaches this in their generative MIDI guide (source). They also remove the note-on and note-off events and instead use step and duration to represent the time between notes, and duration of a note being played. This is due to the fact that every note-on event needs to be closed by a note-off event. This can cause trouble since a note-on event without a corresponding note-off event will cause an error. This method works, and works better than raw MIDI data, but it is still considered a 1D representation, where the values of step and duration dictate the timing information. So it suffers from the same challenges that raw MIDI data does.</p>
+
+<h1 id="adding-time-dimension-with-piano-roll">Adding time dimension with piano roll</h1>
+
+<p>To solve the problem of having 1D representation, we need to convert the 1D midi data to 2D data. The most common method to do this is piano roll. In piano roll, instead of representing each note by a group of values, it quantifies time into time steps and represents each time step as a vector. Each of these vectors will normally have up to 128 numbers, where each represents one pitch. These numbers are often ‘1’ for active notes and ‘0’ for inactive notes. This quantification is done in fixed intervals in contrast to 1D representations which only samples on notes. When doing this over several time steps, we get a matrix where each column represents the time axis, and each row represents the pitch played at each time step. Now we have a 2D representation. It now has a more structured sequence representation, due to the constant time interval between two successive columns.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_04_19_piano_roll.png" width="80%" />
+   <figcaption>MIDI notes represented as a piano roll</figcaption>
+</figure>
+
+<h1 id="piano-roll-the-perfect-choice">Piano roll, the perfect choice?</h1>
+
+<p>So this is it, we now have the perfect way to represent MIDI? Of course not.. There are several problems with piano roll as well. Some have workarounds like the fact that there is no way to represent silence, or that there is no difference between a sustained note and two rapidly played notes. Silence can be represented by adding a row that is active when no note is played, and sustained notes can be represented by another symbol like ‘_’ in the matrix instead of ‘1’.</p>
+
+<p>But some problems are not solvable with quick fixes, like the fact that piano roll has very high memory consumption. This leads to a need for powerful equipment needed to train models using large amounts of data. In my research I use a low sampling rate when sampling the piano roll. But still for every number 1D representation uses, standard piano roll uses over 330 numbers.</p>
+
+<h1 id="what-other-2d-representations-are-there">What other 2D representations are there?</h1>
+
+<h2 id="relative-pitch">Relative pitch</h2>
+
+<p>Since piano roll is imperfect, a lot of clever ways to reduce memory consumption have been introduced. One of them is often called relative pitch. With relative pitch the goal is to reduce the size of the piano roll. It relies on transition data. You can simply make a piano roll that only looks at the transition in pitch between the current note and the previous. If no transition is made, the middle row is active. If the transition is 4 half steps, the row at index (middle row + 4) is active. If the transition is down 3 half steps, the row at index (middle row - 3) is active.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2023_04_19_relative_pitch.png" width="80%" />
+   <figcaption>MIDI notes represented as a relative pitch</figcaption>
+</figure>
+
+<p>No transition is normally not bigger than one octave up or down, and if it is it is kept in range with a modulus 12 operation. Therefore it only needs 12 + 12 + 1 = 25 values to represent an octave up, an octave down and remaining at the same pitch. This is less than 20% of what a full piano roll uses.</p>
+
+<h2 id="character-based">Character based</h2>
+
+<p>The reason why both piano roll and relative pitch uses a vector of numbers either ‘0’ or ‘1’ is because Neural Networks learn using numbers. For instance learning using ‘0’ to show inactive ones and ‘1’ to show activeness in a vector of length 128 (called one hot encoding) has been found to be a lot easier for a Neural Network than learning to predict a number between 1 and 128. But there are some networks called character-based networks that can learn characters. Using them, you can represent advanced musical structures, using characters. This is an entirely different field, deserving a blog post in itself, but it has also become popular. Instead of needing a vector for each timestep, you can use letters.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>To conclude, sequence music representation sounds simple, but it is not. When we want to represent complex data like sound, using as little memory as possible, we often lose something. The key is to find a compromise between being what we get and what we lose.</p>
+
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2023/04/19/tryb-midi-hassle-copy.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

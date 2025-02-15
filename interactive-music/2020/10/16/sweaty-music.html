@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Chance Operations, Rudimentary Pure Data (PD), and a Bunch of Spinning in Circles | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Chance Operations, Rudimentary Pure Data (PD), and a Bunch of Spinning in Circles" />
+<meta name="author" content="Willie Mandeville" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sometimes you want to compose and get your workout. Experience a chance composition that may leave the performer sweating." />
+<meta property="og:description" content="Sometimes you want to compose and get your workout. Experience a chance composition that may leave the performer sweating." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/sweaty-music.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/sweaty-music.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_williakm_puredata.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-16T16:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_williakm_puredata.png" />
+<meta property="twitter:title" content="Chance Operations, Rudimentary Pure Data (PD), and a Bunch of Spinning in Circles" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Willie Mandeville"},"dateModified":"2020-10-16T16:00:00+00:00","datePublished":"2020-10-16T16:00:00+00:00","description":"Sometimes you want to compose and get your workout. Experience a chance composition that may leave the performer sweating.","headline":"Chance Operations, Rudimentary Pure Data (PD), and a Bunch of Spinning in Circles","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_williakm_puredata.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/sweaty-music.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Willie Mandeville"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/sweaty-music.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Chance Operations, Rudimentary Pure Data (PD), and a Bunch of Spinning in Circles
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-10-16T16:00:00+00:00"
+        itemprop="datePublished"
+      >Oct 16, 2020 •
+      </time>
+         
+      <a href="/authors/williemandeville.html">Willie Mandeville</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="this-is-sweaty-music">This is <em>Sweaty Music</em></h1>
+
+<p>In recent weeks the SMC 2020 intake has been exploring physical computing ideas and tools. As a concluding activity, each one of us was instructed to develop a composition or tool utilizing some of the materials about which we’d learned.  While in more normal times that might mean hands-on manipulation of specialized equipment, the Covid era forced some real adjustments. Individual projects instead became an exercise in determining what could be done with a phone, ipad, or whatever else each student might have in his or her home. Necessity is the mother of invention, of course.</p>
+
+<p>For me, it was clear that this assignment was a chance to compose something quirky and outside of my traditional comfort zone in acoustic art music. While electronics have not been explicitly my musical enemy historically, neither have they been an ally.</p>
+
+<h3 id="the-composition">The Composition:</h3>
+
+<p>I decided to produce a five-minute chance composition structured around pitch shifting in three musical elements (or voices) created via manipulation of non-musical data. Less technically, I wanted to build the composition solely around materials and gestures coming from my own physical motion (because I’ll take any excuse I can get to run in circles). The data I used came from a Garmin running watch and consisted of a .fit file and a .csv file generated on a run in Bymarka and subsequently stretched and altered for aural aesthetic purposes. The pitch variations in these voices were then controlled by different types of Gyrosc motion data generated by the movement of my phone. Since the phone was worn in a tight vest pocket on my body, the pitch-controlling motions were essentially the motions of my  torso. One voice of the texture was functionally static, with pitch level assigned by GPS latitudinal data from an ipad, while the other two ‘melodic’ voices were modified by compass data and gyroscopic data.The compass voice was additionally modified by inputted heart rate data drawn throughout the performance from the running watch responsible for the original files. If perceived as two voices engaged in counterpoint over a drone accompaniment, the piece makes a weird sort of sense as stochastic polyphony. At least that’s what I told myself…</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_10_16_williakm_puredata.png" alt="The Score" title="The Pure Data File and Score" width="auto" /> <figcaption>The "Score" and Pure Data Process</figcaption>
+</figure>
+
+<p>For the selection of movements (essentially the score in this case) I chose five bodily movements and three numbers of iterations that would likely yield compelling sounds and then wrote a simple program for random selection of these variables. A more PD-capable human would likely have been able to plant this code in the Pure Data ‘score’, but for my purposes having it in Python was acceptable.</p>
+
+<figure style="float: auto">
+   <img src="/assets/image/2020_10_16_williakm_chancepython.png" alt="The Score" title="The Pure Data File and Score" width="auto" /> <figcaption>Random Motions Assigned</figcaption>
+</figure>
+
+<p>To perform the piece (see the ‘score’ image above for further context), the performer (me!) starts the audio files, enters his or her heart rate in the relevant PD object and runs the python program to randomly determine the first minute of motions. This sequence of heart rate, python program, and enthusiastic movements is then repeated four additional times or until the audio completes (human motions may lead to inexact 1-minute intervals).</p>
+
+<h3 id="the-performance">The Performance:</h3>
+<p>Sound ridiculous? Yes, it does! However, as an exercise in process/chance-driven music, I actually felt that the composition could succeed if performed in the proper way (maybe not in a dimly lit living room). Enough elements are performer-specific (location, relative fitness, body shape and motion) that there would certainly be a level of audible, varied personality in further performances by different individuals.</p>
+
+<p>Enjoy this footage of a 1-minute subset of this piece. The sounds are fairly compelling, and how often do you get to watch a “composer” run in circles in the name of art?</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_16_williem_sweatymusic.mp4" type="video/mp4" />
+    Alternate Text
+  </video>
+  <figcaption>In which a composer/performer flails about. Willie performs an excerpt from Sweaty Music.</figcaption>
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2020/10/16/sweaty-music.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Real-time audio processing with oscHook and Reaper | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Real-time audio processing with oscHook and Reaper" />
+<meta name="author" content="Alena Clim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fun and not too complicated interactive audio processing.Using oscHook to transmit sensordata from an Android phone to OSC Router and then to Reaper to control the values of certain effects’ parameters." />
+<meta property="og:description" content="Fun and not too complicated interactive audio processing.Using oscHook to transmit sensordata from an Android phone to OSC Router and then to Reaper to control the values of certain effects’ parameters." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/alena-oscHook-oscRouter.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/alena-oscHook-oscRouter.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_alena_reaper.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-16T10:39:36+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_alena_reaper.jpg" />
+<meta property="twitter:title" content="Real-time audio processing with oscHook and Reaper" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alena Clim"},"dateModified":"2020-10-16T10:39:36+00:00","datePublished":"2020-10-16T10:39:36+00:00","description":"Fun and not too complicated interactive audio processing.Using oscHook to transmit sensordata from an Android phone to OSC Router and then to Reaper to control the values of certain effects’ parameters.","headline":"Real-time audio processing with oscHook and Reaper","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_alena_reaper.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/alena-oscHook-oscRouter.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alena Clim"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/alena-oscHook-oscRouter.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Real-time audio processing with oscHook and Reaper
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-10-16T10:39:36+00:00"
+        itemprop="datePublished"
+      >Oct 16, 2020 •
+      </time>
+         
+      <a href="/authors/alenaclim.html">Alena Clim</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="introduction-task--idea">Introduction (task + idea)</h2>
+
+<p>For our Physical Computing project we had to use sensor data to control certain parameters of audio processing using already-built software, in order to get a basic understanding of data sources and the linkup to musical parameters.</p>
+
+<p>Having had no previous experience in this field, and (very) limited knowledge on how to use a DAW, my idea was to transmit data from my phone’s sensors, using <strong>oscHook</strong>, through the <strong>OSC Router</strong> to <strong>Reaper</strong> and controll some of the effects applied on different tracks of a song in real-time. A simple enough idea… if you know what you’re doing, which I was not.</p>
+
+<p>For this assignment I used the following softwares:</p>
+<ul>
+  <li><a href="https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&amp;hl=en_US">oscHook</a> (for Android)</li>
+  <li><a href="https://github.com/ETCLabs/OSCRouter">OSCRouter</a></li>
+  <li><a href="https://www.reaper.fm/">Reaper</a></li>
+</ul>
+
+<h2 id="setup-technical">Setup (technical)</h2>
+
+<p>As a novice regardig both parts of this task - on one hand seding sensordata to a DAW in real-time to control parameters’ values and on the other hand tweaking parameters and effects in a DAW for audio processing purposes - I had to approach things systematically.</p>
+
+<p>First step was to send data from my phone to the <strong>OSC Router</strong> and then in <strong>Reaper</strong>. After installing the necessary software and with some help, I managed to do it successfully, but I found it important to document the process - if nothing else, for future reference since it’s likely that I will forget some steps and get frustrated if I ever try to do it again from scratch. Also because it was a substantial step, taking me almost as much time as the other part of the task. So, in this section I will write a few important steps that shouldn’t be skipped and some troubleshooting notes.</p>
+
+<h4 id="oschook">oscHook</h4>
+
+<ol>
+  <li>
+    <p>Go to <code class="language-plaintext highlighter-rouge">IP/port setup</code> and write the IP address (e.g. 192.168.1.51) and the port you want to use (e.g. 7400). An easy way to find this is to open a command window (on Windows) and type “ipconfig” and it will show there.</p>
+  </li>
+  <li>
+    <p>Go to <code class="language-plaintext highlighter-rouge">OSC address setup</code> to select which sensor data you want to transmit (e.g. the <code class="language-plaintext highlighter-rouge">Compass</code> and <code class="language-plaintext highlighter-rouge">Light</code> data) and see the related paths/parameters for each sensor (e.g. <code class="language-plaintext highlighter-rouge">/orientation/azimuth</code>).</p>
+  </li>
+</ol>
+
+<p><img src="/assets/image/2020_10_16_alena_oscHook.jpg" alt="oscHook" /></p>
+
+<h4 id="oscrouter-and-reaper">OSCRouter and Reaper</h4>
+
+<p>The <strong>OSC Router</strong> interface shows the incoming data on the left (info about the <strong>oscHook</strong> app) and the outgoing data (info about <strong>Reaper</strong>) on the right.</p>
+
+<p><img src="/assets/image/2020_10_16_alena_osc_empty_line.jpeg" alt="OSCRouter Interface" /></p>
+
+<h6 id="incoming-ip">Incoming IP</h6>
+
+<ol>
+  <li>Defining the <code class="language-plaintext highlighter-rouge">Label</code> and the <code class="language-plaintext highlighter-rouge">Incoming IP</code> is optional.</li>
+  <li>The port has to be the same as the one used in the <strong>oscHook</strong> app (e.g. 7400).</li>
+  <li>The <code class="language-plaintext highlighter-rouge">path</code> depends on the sensor and the parameter data you’ll be sending from the  <strong>oscHook</strong> and can be found under <code class="language-plaintext highlighter-rouge">OSC address setup</code> (e.g. <code class="language-plaintext highlighter-rouge">/orientation/azimuth</code>)</li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">Min</code> and <code class="language-plaintext highlighter-rouge">Max</code> values refer to the scalling of the sensors’ parameters (e.g. for <code class="language-plaintext highlighter-rouge">Compass</code>, the <code class="language-plaintext highlighter-rouge">azimuth</code> parameter is scalled between -180 and 180).</p>
+  </li>
+  <li>Add another line for each different sesorsdata (e.g. if you want to use all parameters of the <code class="language-plaintext highlighter-rouge">Compass</code> you need to fill them in separately).</li>
+</ol>
+
+<p><img src="/assets/image/2020_10_16_alena_osc_parameters.jpeg" alt="OSCRouter Example" /></p>
+
+<h6 id="reaper-settings">Reaper settings</h6>
+
+<ol>
+  <li>Open <strong>Reaper</strong>, go to Preferences and then to Control/OSC/web.</li>
+  <li>Add a Control Surface Mode = OSC (Open Source Control).</li>
+  <li>Give a name to the device (e.g. “Test”) and set the mode to Local Port.</li>
+  <li>Set a port for the <code class="language-plaintext highlighter-rouge">local listen port</code> (e.g. 8000) and write your <code class="language-plaintext highlighter-rouge">Local IP</code> (e.g. 193.157.251.241).</li>
+</ol>
+
+<p><img src="/assets/image/2020_10_16_alena_reaper_preferences.jpg" alt="Reaper Preferences" /></p>
+
+<h6 id="outgoing-ip">Outgoing IP</h6>
+
+<ol>
+  <li>Use the 127.0.0.1 IP address for the <code class="language-plaintext highlighter-rouge">Outgoing IP</code> (that’s an “internal IP”, because you’re sending the data between two apps/softwares on the same computer).</li>
+  <li>Write the port you chose in <strong>Reaper</strong> in the <code class="language-plaintext highlighter-rouge">Port</code> (e.g. 8000).</li>
+  <li>In the folder you saved <strong>Reaper</strong> (probably in the C: partition) find a document with setup information for defining paths for editing audio effects of certain tracks. The only one I used is “n/track/@/fx/@/fxparam/@/value”, where you will need to remove the “n” at the beginning and for each “@” write the number of the track, the effect and the parameter respectively. See the photo with the <strong>OSC Router</strong> Incoming IP example from earlier, the Outgoing IP details are also visible.</li>
+  <li>For the <code class="language-plaintext highlighter-rouge">Min</code> and <code class="language-plaintext highlighter-rouge">Max</code> write the scaling of the effects’ parameter (e.g. between 0-1).</li>
+</ol>
+
+<h4 id="troubleshooting-and-other-notes">Troubleshooting and other notes</h4>
+
+<ol>
+  <li>
+    <p>For a more reliable data trasmission try to change the <code class="language-plaintext highlighter-rouge">OSC timing</code> (e.g. re-sending data every 100 ms) in the <strong>oscHook</strong> app.</p>
+  </li>
+  <li>
+    <p>To minimalize the delay between the movement of the phone (so the sensor data) and the change in effect parameters (in <strong>Reaper</strong>), only send the data for the sensor that you need. This can be chose in <code class="language-plaintext highlighter-rouge">OSC address setup</code> in the <strong>oscHook</strong> app (e.g. only the <code class="language-plaintext highlighter-rouge">Compas</code> data).</p>
+  </li>
+  <li>
+    <p>Remember to connect both devices (your phone where you have <strong>oscHook</strong> and the computer where you have the <strong>OSCRouter</strong>) to the same wi-fi.</p>
+  </li>
+  <li>
+    <p>If you are changing the wi-fi you’re connected to, you most likely have to restart the <strong>OSCRouter</strong>, to change the network permissions.</p>
+  </li>
+</ol>
+
+<h2 id="daw-audio-effects-parameters-and-scaling">DAW audio effects, parameters and scaling</h2>
+
+<p>As I mentioned before, I have no previous experience with audio processing, so I couldn’t create a song from scratch. I searched for one on <a href="https://www.cambridge-mt.com/ms/mtk/">Mixing Secrets</a> and downloaded Sun Drenched by Mike Skalandunas.</p>
+
+<p>In terms of effects, I downloaded the <a href="https://www.soundhack.com/freeware/">Sound Hack Delay Trio</a> and used the <code class="language-plaintext highlighter-rouge">bubbler</code>, the <code class="language-plaintext highlighter-rouge">delay</code> and <code class="language-plaintext highlighter-rouge">pitch delay</code>. I also used <strong>Reaper</strong>’s built-in Cockos <code class="language-plaintext highlighter-rouge">ReaPitch</code>. I used certain sensors and parameters transmitted by <strong>oscHook</strong> to control parameters of these effects. See below more details of each effect, how it was controlled and the scaling.</p>
+
+<h3 id="audio-tracks-with-their-effects">Audio tracks with their effects</h3>
+
+<p>Checking each track individually, and knowing the effects I wanted to use, I decided which effect would be paired with what track. The scaling of each parameter was decided experimentally - setting up the (scaling) boundaries for each parameter allowed me to controll more parameters at the same time. See the “sheet” presented further down for more details on what effects were used at what times.</p>
+
+<h5 id="track-1-french-horn-2">Track 1: French Horn 2</h5>
+
+<ul>
+  <li>Effect: Pitch Delay (Sound Hack) — Pitch Factor</li>
+  <li>Sensor: Rotation Vector — r4</li>
+</ul>
+
+<h5 id="track-4-malaysian-djembe">Track 4: Malaysian Djembe</h5>
+
+<ul>
+  <li>Effect: Pitch Delay (Sound Hack) — Octave</li>
+  <li>Sensor: Rotation Vector — r4</li>
+</ul>
+
+<h5 id="track-5-percussion-1">Track 5: Percussion 1</h5>
+
+<ul>
+  <li>Effect: ReaPitch (Cockos) — Volume</li>
+  <li>Sensor: Rotation Vector — r1</li>
+</ul>
+
+<h5 id="track-11-psaltery">Track 11: Psaltery</h5>
+
+<ul>
+  <li>Effect: Delay (Sound Hack) — Resonance</li>
+  <li>Sensor: Light</li>
+</ul>
+
+<h5 id="track-12-pad-1">Track 12: Pad 1</h5>
+
+<ul>
+  <li>Effect: Delay (Sound Hack) — Time</li>
+  <li>Sensor: Compass — azimuth</li>
+</ul>
+
+<h5 id="track-13-pad-2">Track 13: Pad 2</h5>
+
+<ul>
+  <li>Effect: Bubbler (Sound Hack) — Grain Size</li>
+  <li>Sensor: Compass — roll</li>
+</ul>
+
+<h5 id="track-15-violas">Track 15: Violas</h5>
+
+<ul>
+  <li>Effect: ReaPitch (Cockos) — Volume</li>
+  <li>Sensor: Rotation Vector — r1</li>
+</ul>
+
+<h3 id="scaling">Scaling</h3>
+
+<p>For a smoother control of the parameters’ values, I changed the scaling manually for each effect. Below it’s a screenshot of my final <strong>OSCRouter</strong> settings.</p>
+
+<p><img src="/assets/image/2020_10_16_alena_osc_final.jpg" alt="OSCRouter Final" /></p>
+
+<h2 id="performance-demo--time-axis-sheet">Performance demo + (time axis sheet)</h2>
+
+<p><strong>Important note!</strong> After scaling the parameters, try to keep the exact same light conditions before recording or working on it again. You might notice that the scalling is totally off if you scale the parameters in the middle of the day, near a window, and then record a demo at midnight with only a lamp for light (as it was my case).</p>
+
+<p>Here is the video of the final performance. On the front camera view you can see the way I’m moving the phone to control the parameters’ values. In <strong>Reaper</strong> you can notice the effects’ windows and how the bars are moving based on the phone’s movements.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_16_alena_demo.mp4" type="video/mp4" />
+  </video>
+  <figcaption>Interactive OSC-Reaper Performance</figcaption>
+</figure>
+
+<p>Here is the “sheet” I used to know when to use what effect, based on the time axis of the song. In order to minimize the delay between transmitting the data to the <strong>OSC Router</strong> and then to <strong>Reaper</strong> to control the effects’ parameters, I sent the <code class="language-plaintext highlighter-rouge">Compass</code> data and the <code class="language-plaintext highlighter-rouge">Rotation Vector</code> only when needed it - aproximatively halfway through the song I went to the <code class="language-plaintext highlighter-rouge">OSC address setup</code>, unchecked <code class="language-plaintext highlighter-rouge">Compass</code> and check <code class="language-plaintext highlighter-rouge">Rotation Vector</code>. The <code class="language-plaintext highlighter-rouge">Light</code> sensor was always on, since it was not taking that much bandwidth.</p>
+
+<p><img src="/assets/image/2020_10_16_alena_sheet.jpg" alt="Movements sheet." /></p>
+
+<h2 id="usability">Usability</h2>
+
+<p>Originally, I thought of a way to make classical music performances more interactive and interesting (especially for the youth). In the example described in this blog post I didn’t use a classical song, but the concepts are the same.</p>
+
+<p>The way I imagined it, each audience member would get the <strong>oscHook</strong> app and get control over an instrument. Then, during the performance, there would be specific times when the can send data to the <strong>OSC Router</strong> on the (let’s call it) conductor’s compuetr who has everything set up from before: what sensor controls what effect and parameter.</p>
+
+<p>Of course, there would be hard to have control over when the audience members are using their phones to influence the performance. However, this can be solved if the effects controlled by the sensors would be time-bounded - for example the <code class="language-plaintext highlighter-rouge">Rotation Vector</code> would have control of the <code class="language-plaintext highlighter-rouge">bubbler</code> effect on track 5 only between second 1:21 - 1:35. In my view in would make for a highly interactive, messy, and maybe sloppy but amazing performance.</p>
+
+<h3 id="limitations-and-final-thoughts">Limitations and final thoughts</h3>
+
+<p>The biggest limitation of this project was probably my own lack of knowledge regarding audio processing. Have I known more about audio effects and how to use them, the tasks would have been easier and the demo nicer. While playing with it I had many ideas of how I wanted to make it sound like, but I didn’t know how to do it. That’s why the order of the steps I took might seem a bit  strange: I found some effects I liked and then looked for a track they would fit on, intead of thinking “ah, this track needs a bit of this and a bit of that to sound better”.</p>
+
+<p>Overall, this project was a gread opportunity for me to dip my toes in the audio processing world as well as exploring how to use accessible technologies to apply real-time interactive systems for music performance.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2020/10/16/alena-oscHook-oscRouter.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

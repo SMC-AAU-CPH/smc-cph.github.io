@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Convolverizer | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Convolverizer" />
+<meta name="author" content="Eirik Dahl, Karolina Jawad, Shreejay Shrestha, Sepehr Haghighi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Convolverizer, Real-time processing of ambient sound, voice or live instruments, utilizing the convolution effect." />
+<meta property="og:description" content="Convolverizer, Real-time processing of ambient sound, voice or live instruments, utilizing the convolution effect." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/19/Convolverizer.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/19/Convolverizer.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_19_stefanof_Convolverizer1.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-19T01:59:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_19_stefanof_Convolverizer1.png" />
+<meta property="twitter:title" content="Convolverizer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eirik Dahl, Karolina Jawad, Shreejay Shrestha, Sepehr Haghighi"},"dateModified":"2019-02-19T01:59:00+00:00","datePublished":"2019-02-19T01:59:00+00:00","description":"Convolverizer, Real-time processing of ambient sound, voice or live instruments, utilizing the convolution effect.","headline":"Convolverizer","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_19_stefanof_Convolverizer1.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/19/Convolverizer.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Eirik Dahl, Karolina Jawad, Shreejay Shrestha, Sepehr Haghighi"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/19/Convolverizer.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Convolverizer
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-02-19T01:59:00+00:00"
+        itemprop="datePublished"
+      >Feb 19, 2019 •
+      </time>
+         
+      <a href="/authors/eirikdahl.html">Eirik Dahl,</a>
+           
+      <a href="/authors/karolinajawad.html">Karolina Jawad,</a>
+           
+      <a href="/authors/shreejayshrestha.html">Shreejay Shrestha,</a>
+           
+      <a href="/authors/sepehrhaghighi.html">Sepehr Haghighi</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure align="middle">
+<img src="/assets/image/2019_02_19_stefanof_Convolverizer2.png" alt="Convolverizer" width="100%" />
+</figure>
+
+<h2 id="introduction">Introduction</h2>
+<p>Real-time processing of ambient sound, voice or live instruments. We are several string instrument players and sound artists, but would like to prototype something modular that extends our artistic expressions, which is always at hand and instantly available. Create hidden gems that don’t require additional expensive equipment. Get your laptop, convolve it, <strong><a href="https://folk.ntnu.no/shreejas/Mini_Project_2/">GO</a>!</strong></p>
+
+<p>Development team, why are we doing this:</p>
+<ul>
+  <li><strong><a href="https://www.facebook.com/eirikdahl">Eirik</a>:</strong> wants to do/learn something new</li>
+  <li><strong><a href="https://sepehrhaghighi.com">Sepehr</a>:</strong> likes to extend his guitar and other sonical productions</li>
+  <li><strong><a href="https://cv2c.noblogs.org/">Karolina</a>:</strong> has little space in her room and therefore wants a fancy mobile application</li>
+  <li><strong><a href="https://shreejayshrestha.wixsite.com/musical-portfolio">Shreejay</a>:</strong> loves live visualization</li>
+</ul>
+
+<h2 id="technologies-used">Technologies used</h2>
+<p><strong>Working tools</strong></p>
+<ul>
+  <li>Visual studio code</li>
+  <li><a href="https://p5js.org/">p5.js</a></li>
+  <li><a href="https://zoom.us/">Zoom</a></li>
+  <li><a href="https://discordapp.com/">Discord</a></li>
+</ul>
+
+<p><strong>Performance</strong></p>
+<ul>
+  <li>Sound card / audio interface</li>
+  <li>Guitar</li>
+  <li><a href="http://www.shure.com/americas/products/microphones/sm/sm57-instrument-microphone">Shure SM57 Microphone</a></li>
+  <li>Prototype of our Code</li>
+</ul>
+
+<h2 id="research-and-development-journal">Research and development journal</h2>
+<p><strong>DAY 1</strong><br />
+On the first day, all groups have formed up, different from other groups our final product was not 100 percent defined. We had a working idea, developed a concept and agreed on an application model:</p>
+<ul>
+  <li>Two independent audio sources that influence each other in real-time</li>
+  <li>Mobile application to extend the prototype in another environment</li>
+  <li>Having a modular application that is accessible which does not require a bulk of technological hardware and software</li>
+</ul>
+
+<figure align="middle">
+<img src="/assets/image/2019_02_19_stefanof_Fig1.jpg" alt="Audio Signal flow diagram that we first aimed for" width="70%" />
+</figure>
+
+<p>Since the level of programming expertise was more or less equally low distributed throughout the group, we left the division of the roles open. Sepehr suggested right after we formed as a group to work with the <a href="https://p5js.org/">p5.js</a> library, and showed some examples. Shreejay again suggested going for web audio API. Karolina and Eirik assisted in research for both ways. We agreed to try building the model with the Web Audio API library first.</p>
+
+<p><strong>DAY 2</strong><br />
+During our research, we realized that we would have to trim our concept a little bit more and take it step by step. We were struggling to get two audio inputs as two separate channels using Web Audio API. After that, we thought about recording one input and obtain the convolution reverb from the recorded piece. Finally, the idea was to mix the resulting output with another live audio input and send it to the main output. We spent a lot of time to find the right code snippets to make the convolver listen to the microphone. Soon after we found a code that gets the media stream, enabling audio and video. We then manipulated the code so as not to include video.<br />
+In the first feedback round, Anna recommended us to build a more modular system for situations where the live input cannot be activated, and would then activate a pre-recorded audio sample.</p>
+
+<p><strong>DAY 3</strong><br />
+We took the advice to heart and divided the workload into sub-tasks:</p>
+<ul>
+  <li>Getting the sound from the mic and having the sound file as the convolver input</li>
+  <li>Getting the sound from the mic recorded and save it → being implemented on the real-time mic</li>
+  <li>Load the sound file and implement it on another sound file (as an effect)</li>
+  <li>Creating visuals with <a href="https://p5js.org/">p5.js</a> or CSS</li>
+</ul>
+
+<figure align="middle">
+<img src="/assets/image/2019_02_19_stefanof_Fig2.jpg" alt="Signal flow diagram day 2 &amp; 3" width="70%" />
+</figure>
+
+<p>We were a bit overwhelmed by the complexity of our initial idea and the backup solution we wanted to implement proved to be a project in itself. Shreejay suggested going for something else instead, to simplify things and would make it suitable for our level of expertise. In the end, we all agreed to continue our project but within the p5.js library, step by step. We were reassured it would make things easier since many examples were given and we would only have to find out how to connect them in the code. We considered at some point to work without the mic and only load two sounds that could be used as an effect on one another. We agreed on two scenarios for the application, each divided into different sub-steps. Sepehr and Eirik worked on fusing the impulse response to the live input and Karolina and Shreejay worked on integrating the recording function.</p>
+
+<p><strong>DAY 4</strong>
+After we had some guided cleaning of the code and more guided coding sessions, we were able to finish the prototype and make it work both visually and sonically. In the process, we replaced the idea of using live recorded sound with a preloaded soundfile. Fig 3 shows the final audio signal flow diagram of the prototype. We were able to perform together with almost all developers and everything went well, fortunately. You can read about our performance below.</p>
+
+<figure align="middle">
+<img src="/assets/image/2019_02_19_stefanof_Fig3.jpg" alt="Signal flow diagram day 3 &amp; 4" width="70%" />
+</figure>
+
+<h2 id="performance">Performance</h2>
+<p>The performance was set-up in Trondheim. We used a guitar and a microphone for the live input. As far for the guitar, the notes played began with low notes and gradually changed to high notes. In our experience, high pitches can lead to a better result for this convolution effect.  In the convolution process, the low notes are overemphasized and produce a muddy sound profile. Therefore the sounds produced by the microphone were lost in the mix and could not be convoluted properly.
+Also, sustained notes should let the effect be more prominent, since the sound coming out of the convolution process goes on in a loop. Using sustained notes could lead to more control over the generated sound. Although, if anyone is interested in a chaotic atmosphere, there would be no limits to the playing style. Also, that could potentially involve any other sound sources as well, not only instruments.
+Since the sound that we used for convolution was an intense Drums solo, the dynamics of the effect were pretty intense as well. This has led us to a clearer and more visible convolution effect. Therefore, in any case, if you intend to have an intense and very dynamic convolution effect on the input sound; try to use a more vivid and high dynamic source for the convolution as well.<br />
+<br />
+However, we missed the opportunity to make our performance (including positioning us within more camera resources, a clear announcement of the start of the event) more demonstrative for lack of time, which ultimately affected our performativity. In the feedback round the audience reported a glitch in sound during the performance, we suspect that in connection with the process of buffering and dry gain. In addition, the connected (old) computer was no longer in good condition during the performance after a few hours of coding. When we performed again for the live demo, which you can see below, the glitch was almost not audible anymore.<br />
+<br /></p>
+
+<figure align="middle">
+<video width="640" height="480" controls="">
+  <source src="https://docs.google.com/uc?export=download&amp;id=1U4RPrFbGGsFwFvYulBRb_0NFe2QqM05x" type="video/mp4" />
+  Your browser does not support video tag.
+</video>
+</figure>
+
+<h2 id="working-style">Working Style</h2>
+<p>Research, design and programming were carried out in collaboration so that the prototype developed in a constant discussion and joint evaluation of the application. We established a main hub in one of the group rooms and put the code from <a href="https://code.visualstudio.com/">Visual Studio Code</a> on the screen. From there, we brainstormed and prototyped together.
+The strategy we used has the advantage of being a very open and collaborative working style. With our group dynamics in terms of previous knowledge, we could risk that one person did most of the work and the others did less. With a shared screen and open dialogue, we prevented that.</p>
+
+<figure align="middle">
+<img src="/assets/image/2019_02_19_stefanof_Group2.jpg" alt="The Team Working in the Group Room " width="90%" />
+<figcaption><strong>The Team Working in the Group Room </strong></figcaption>
+</figure>
+
+<h2 id="decoding-convolvorizer">Decoding Convolvorizer</h2>
+<p>The code of Convolverizer has mainly two parts. First, the toggle button operation and slider function, which provides the user to control the application. Second, the role of canvas and creation of live visualization. We have tried to comment on each line of the code so that you could easily figure out what is what. You can check the full code with relevant files and libraries in the <a href="https://github.com/shreejayshrestha/Convolvorizer">github repo</a>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Part I - Eventlistener for click on Canvas</span>
+    <span class="kd">function</span> <span class="nf">togglebutton</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">if </span><span class="p">(</span><span class="nx">playing</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// start getting live audio input</span>
+        <span class="nx">mic</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">p5</span><span class="p">.</span><span class="nc">AudioIn</span><span class="p">();</span> <span class="c1">// this function is setting mic as mic input</span>
+        <span class="nx">mic</span><span class="p">.</span><span class="nf">start</span><span class="p">();</span> <span class="c1">// mic input can now play sounds</span>
+        <span class="nx">cVerb</span> <span class="o">=</span> <span class="nf">createConvolver</span><span class="p">(</span><span class="dl">"</span><span class="s2">recorded/drumsolo.mp3</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// This function takes the Impulse Response</span>
+        <span class="c1">// from the soundfile and uses it to recreate sound of that space. The sound is convolved</span>
+        <span class="c1">// with different impulse response every time the start/stop button is pressed.</span>
+
+        <span class="nx">mic</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="nx">cVerb</span><span class="p">);</span>
+        <span class="nx">mic</span><span class="p">.</span><span class="nf">disconnect</span><span class="p">();</span>
+        <span class="nx">cVerb</span><span class="p">.</span><span class="nf">process</span><span class="p">(</span><span class="nx">mic</span><span class="p">);</span>
+        <span class="nx">playing</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// stating that its now playing</span>
+
+        <span class="c1">// Following 3 lines are for visualization</span>
+        <span class="c1">// Fast Fourier Transform (fft) function analyses individual audio frequency in a waveform</span>
+        <span class="nx">fft</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">p5</span><span class="p">.</span><span class="nc">FFT</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mi">1024</span><span class="p">);</span> <span class="c1">// 0.9 refers to smoothing &amp; 1024 refers to bin array length.</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">width</span> <span class="o">/</span> <span class="mi">350</span><span class="p">;</span> <span class="c1">// w = width of each rectangle in the visualization</span>
+        <span class="nx">fft</span><span class="p">.</span><span class="nf">setInput</span><span class="p">(</span><span class="nx">cVerb</span><span class="p">.</span><span class="nf">process</span><span class="p">(</span><span class="nx">mic</span><span class="p">));</span> <span class="c1">// cVerb.process(mic) is being used for visualization</span>
+
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="k">if </span><span class="p">(</span><span class="nx">playing</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// stop playing sounds</span>
+        <span class="nx">mic</span><span class="p">.</span><span class="nf">stop</span><span class="p">();</span>
+        <span class="nx">cVerb</span><span class="p">.</span><span class="nf">disconnect</span><span class="p">();</span>
+        <span class="nx">playing</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nx">start</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="nx">i</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Part II - Drawing Canvas &amp; Creating Visualization    </span>
+<span class="kd">function</span> <span class="nf">draw</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">if </span><span class="p">(</span><span class="nx">playing</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">start</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//show the image when stop button is pressed</span>
+    <span class="nf">drawimage</span><span class="p">();</span> <span class="c1">// it is a function defined in other part of the code which simply shows the image on canvas</span>
+
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if </span><span class="p">(</span><span class="nx">playing</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//stop showing the image and start the visualization</span>
+    <span class="nf">createCanvas</span><span class="p">(</span><span class="mi">1275</span><span class="p">,</span> <span class="mi">350</span><span class="p">);</span> <span class="c1">// created fo the panasonic monitor in the group room at Trondheim campus</span>
+    <span class="nf">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span> <span class="c1">// white background</span>
+
+    <span class="kd">var</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">slider</span><span class="p">.</span><span class="nf">value</span><span class="p">();</span>
+    <span class="nx">valnorm</span> <span class="o">=</span> <span class="nx">val</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span> <span class="c1">// defining intensity of the slider</span>
+    <span class="nx">cVerb</span><span class="p">.</span><span class="nf">drywet</span><span class="p">(</span><span class="nx">valnorm</span><span class="p">);</span> <span class="c1">// setting the slider as the drywet gain controller</span>
+
+    <span class="nf">noStroke</span><span class="p">();</span> <span class="c1">// setting lines of each rectangles as normal</span>
+    <span class="kd">var</span> <span class="nx">spectrum</span> <span class="o">=</span> <span class="nx">fft</span><span class="p">.</span><span class="nf">analyze</span><span class="p">();</span> <span class="c1">// define spectrum as array of amplitude values across the frequency spectrum</span>
+    <span class="c1">//console.log(spectrum.length);</span>
+
+    <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">spectrum</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// loops for i = 1 to spectrum length</span>
+      <span class="kd">var</span> <span class="nx">amp</span> <span class="o">=</span> <span class="nx">spectrum</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="c1">// gets amplitude of each spectrum</span>
+      <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="nx">amp</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span><span class="c1">// defining value of y-coordinate as amplitudes</span>
+      <span class="nf">rect</span><span class="p">(</span><span class="nx">i</span> <span class="o">*</span> <span class="nx">w</span>  <span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">w</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span> <span class="c1">// rect(x-coordinate, y-coordinate, width, height)</span>
+      <span class="nf">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="mi">180</span><span class="p">);</span> <span class="c1">// filling each rectangle with color</span>
+
+      <span class="c1">// x-axis refers frequency from low in the left to high to the right</span>
+      <span class="c1">//y - axis refers to the aplitude</span>
+    <span class="p">}</span>
+      <span class="p">}</span>
+ <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="design-and-interactivity">Design and interactivity</h2>
+<p>When it comes to design and interaction, the most important thing is that the user interface is easy to use and understand. Therefore one button for starting and stopping the process would do the job. Also, we have the visualization in the middle of the page to have the visual balance maintained. To regulate the level of the convolution effect, we’ve added a slider next to the Start/Stop button to give the user more control over the effect.</p>
+
+<h2 id="challenges">Challenges</h2>
+<p><strong>Group challenges:</strong>
+Our group was put together of people who did not have any previous knowledge in programming prior to joining the SMC program. This proved to be a very big challenge since we had to research the very basics of the programming syntax for us to be able to progress. Programmers talk about “Languages” when referring to the syntax that is used when writing computer programs. We had to Talk when we, in all honesty, struggled to stutter.</p>
+
+<p><strong>Conceptualizing and deciding on the final product:</strong>
+Our plan was always to use the Convolver, but how to actually achieve it was much discussed within our group. We first wanted to run a live audio signal into the convolver (e.g. voice), and make that affect another audio signal (e.g. guitar). We found out that it was hard, and for this prototype, we decided to use a recording of a Drum solo as the audio input that the convolver would be fed with.</p>
+
+<p><strong>Familiarizing ourselves with Libraries and code:</strong>
+We decided to use p5.js as an additional library. That involved working with a new environment. This was a bit challenging, but luckily there are a lot of videos and tutorials online that are tied to the p5.js community.</p>
+
+<h2 id="achievements">Achievements</h2>
+<p>All in all, the most significant achievement of ours is the gained exposure and understanding of coding in music. We were hitting a near vertical learning curve these two weeks, and to end up with a working prototype after this course is very pleasing. There was a bit of frustration tied with the difficulty of the task we had at hand, but through that, we managed to have a good working relationship and good teamwork. We also achieved a greater understanding of the use and implications of technologies used in coding, and also with the p5.js Library.<br /></p>
+
+<p><strong>Lesson Learned:</strong>
+While aiming to get two live audio input from two separate channels, we noticed that both p5.js and Web Audio API do not have functions in order to support two parallel inputs or more. For example, by using the <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode">MediaStreamAudioSourceNode &amp; getUserMedia</a></strong> functions, it is only possible to get one audio and one video input channels. Similarly, by using the <strong><a href="https://p5js.org/examples/sound-mic-input.html">p5.js AudioIn &amp; mic.start()</a></strong> functions, it is only possible to get one audio input channel.</p>
+
+<h2 id="future-development--what-is-next">Future development / What is next</h2>
+<p>The next step would be developing the whole project for different platforms. It is a Web Audio API project, browser-based and we can use it the way it is in a smartphone right now. But with further development, which is going to be mentioned further on, it would be more challenging to present it on smartphones as well. Also, since none of us in the group is a professional developer, we didn’t manage to reach our ideal result. As it was mentioned, below are the future steps and prototypes that we may want to achieve later: <br />
+Developing the project so that the user can choose between several different sounds, so the project can use the selected sound to create a convolution effect.
+Developing the project in a way that it would record the surrounding or any sound source that the user intends to record; save it and use it as the source for convolution process for the live input.
+Regarding the first option, it is not going to be a challenging matter. But when it comes to the second option, since the project should be able to save the recorded sound in a server and then download it and use it as the convolution source, the whole process gets more complicated. In other words, we have to develop the server side code in order to achieve this goal; and that requires more practice and experience in developing.
+In terms of interactivity, we overall we tried to create a simple, user-friendly interface, in order to create a more pleasurable experience for the user. The next step is to make it adaptable for various devices and screen sizes.</p>
+
+<h2 id="acknowledgement">Acknowledgement</h2>
+<p>Our heartfelt gratitude to <a href="https://github.com/axambo">Anna Xambo</a> for guiding us all through the process from Day 1 to Day 4. Thank you so much for your support and patience which helped us learn and practice coding in Web Audio API, Html, javascript, CSS and p5.js. Similarly, thanks to all our peers and audience for their constructive feedbacks and suggestions.
+Also, we would like to take this opportunity to thank <a href="https://www.facebook.com/hamed.kazemi">Hamed Kazemi</a> wholeheartedly for heping us to solve and own his code for our complex plan shown in <strong>Fig.2</strong> above. His <strong><a href="https://github.com/sepehrhaghighi/The-Convolverizer-In-collaboration-with-Hamed-Kazemi-">creative code</a></strong> could record live audio input in cache memory and rout it as an input to the convolution process using <a href="https://nodejs.org/en/">Node.js</a>. Following live demo shows the collaborative work with Hamed:</p>
+
+<figure align="middle">
+        <video height="100%" width="100%" controls="">
+        <source src="https://docs.google.com/uc?export=download&amp;id=1BVE9rWsimhfvxb_aNzqbUBRF0JF0KYLJ" type="video/mp4" />
+</video>
+</figure>
+
+<p><br />
+ And last but not the least, a big thanks to shiffman from
+ <a href="https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw">The Coding Train</a>
+for sharing his huge collection of tutorials on YouTube. The
+<a href="https://www.youtube.com/watch?v=2O3nm0Nvbi4">Sound Visualization tutorial</a> in particular,  gave us insights in creating a similar kind of visualization for this project.</p>
+
+<p><br /></p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2019/02/19/Convolverizer.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

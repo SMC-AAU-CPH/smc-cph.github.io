@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Reverb Classification of wet audio signals | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Reverb Classification of wet audio signals" />
+<meta name="author" content="Jakob Høydal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Differenciating reverberation times of wet audio signals using machine learning." />
+<meta property="og:description" content="Differenciating reverberation times of wet audio signals using machine learning." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/jakobhoydal-Reverb_classification.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/jakobhoydal-Reverb_classification.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_20_jakobhoydal_mffcc.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-20T16:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_20_jakobhoydal_mffcc.png" />
+<meta property="twitter:title" content="Reverb Classification of wet audio signals" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jakob Høydal"},"dateModified":"2022-05-20T16:00:00+00:00","datePublished":"2022-05-20T16:00:00+00:00","description":"Differenciating reverberation times of wet audio signals using machine learning.","headline":"Reverb Classification of wet audio signals","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_20_jakobhoydal_mffcc.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/jakobhoydal-Reverb_classification.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Jakob Høydal"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/jakobhoydal-Reverb_classification.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Reverb Classification of wet audio signals
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-05-20T16:00:00+00:00"
+        itemprop="datePublished"
+      >May 20, 2022 •
+      </time>
+         
+      <a href="/authors/jakobhoydal.html">Jakob Høydal</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2022_05_20_jakobhoydal_mffcc.png" alt="MFCC " tite="" width="auto" />
+</figure>
+
+<p><strong>Machine learning is hard</strong>, and it takes a lot of time. It’s a lot of ups and down to figure out how to actually create a working program, or to find the data you are searching for. In this blogpost, I will talk about my trial of classification of reverberation times using machine learning.</p>
+
+<p>Classification of reverberation time is usually done by measuring a reverberant rooms RT60 value; the time multiple echoes uses to drop 60 decibels from the end of the transmitting audio. But when measuring a stream of continuous audio containing reverberation, this is not possible. Therefore, I wanted to see if it was possible to train a classifier using 21 reverberation lengths, applies to 100 random audio samples. Spoiler-alert: It did not work as intended.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_jakobhoydal_figure1_and2.png" alt="Fig 1 and 2 " tite="" width="auto" />
+      <figcaption><i>Figure 1 and 2</i></figcaption>
+</figure>
+
+<p><strong>The existing literature</strong> that seeks to predict RT60 vary in design. But the similarities in most of the systems are that most of them want to create a machine that can predict RT60 times from blind samples, meaning reverberate recording that the model has not seen. The most common papers found, was from researchers that participated in the ACE Challenge - Corpus Description and perfor- mance evaluation[1]. It is a competition to identify the most promising and non-intrusive Direct-to-Reverberant Ratio (DRR) and RT60 estimations in noisy reverberant speech. They offer a dataset that researchers can compete with, to accomplish the best RT60 and DRR measurements.</p>
+
+<p>One paper that seeks to accomplish the ACE challenge [2] suggests that Attention-CRNNs are best suited for classification of reverb, where an attention vector is present in lower amplitudes of the signal, such as tails after peaks. As the other ACE-challenges, this is done on human speech and not music. In another paper [3], the authors hypothesise that using both temporal features in combination with spectral features is the best way to train a CNN to estimate RT60. Their results show that the estimation can be modelled as a regression problem and implement with a convolutional neural network. Their neural network outperform state-of-the-art algorithms form the ACE Challenge evaluation corpus for T60 estimation.</p>
+
+<p>When looking at previous research that focuses on music related problems, one paper tried to match artificial reverb settings to unknown room recordings [4]. This can be a useful application, since matching organic reverberant recordings with artificial reverb is a time-consuming task. They have used MFCC as feature extraction, in a Gaussian Mixture Model (GMM). Existing recordings gets recommended reverberation settings from three selected plugins.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_jakobhoydal_table1.png" alt="Table 1 " tite="" width="auto" />
+      <figcaption><i>Table 1</i></figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_jakobhoydal_ir01_af01.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>Class 0, Audiofile 1
+</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_jakobhoydal_ir09_af01.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>Class 9, Audiofile 1
+</figcaption>
+</figure>
+
+<figure style="float: none">
+  <audio controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2022_05_20_jakobhoydal_ir18_af01.wav" type="audio/mpeg" />
+    Output Audio File
+  </audio>
+  <figcaption>Class 18, Audiofile 1
+</figcaption>
+</figure>
+
+<p><strong>The database</strong> constructed had its main origin from the OpenAir library of impulse responses[6]. Choosing 20 suitable reverberations from their library of 100 impulse responses, was done on the basis of their length and general quality. The audio-samples was sourced from different dry audio signals mainly from the apples loops library [5], [7]. As we can see in the graph below, the 100 audio-samples was a large mix of everything available with limited reverberation. Other audio-samples were sourced from anechoic recording databases with high quality recordings.
+If you want to try this database yourself, you can find it <a href="https://uio-my.sharepoint.com/:u:/g/personal/stefanof_uio_no/EbNELPT3tE5Jn9l4qpr8ffkB9gr0wmG-KXHYV8pgEVqWyQ?e=hIig3J">here</a>.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_jakobhoydal_diagram2.png" alt="Distrobution of instruments " tite="" width="auto" />
+      <figcaption><i>Diagram 2: Source of audio-samples</i></figcaption>
+</figure>
+
+<p><strong>Feature extraction</strong> was done with librosa’s MFCC. Originally developed for automated speech recognition, it can be used as a temporal feature in music analysis. The chosen size of the MFCC was 40 mels, over a frame size of 2048 samples (42ms) and a window-length of 512 samples (10ms). The main problem with using MFCCs is that they are not robust to noise. Therefore a filter was applied at 400Hz to try to remove as much of the fundamental tones in the music as possible.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_jakobhoydal_figure3.png" alt="MFCC " tite="" width="auto" />
+      <figcaption><i>Figure 3: Unfiltered MFCC</i></figcaption>
+</figure>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_jakobhoydal_figure4.png" alt="MFCC " tite="" width="auto" />
+      <figcaption><i>Figure 4: Filtered MFCC</i></figcaption>
+</figure>
+
+<p><strong>The model</strong> that I created had some flaws. As you can see in the diagram below, the LDA does most of the work. The tensorflow-model is trained on the basis of how the LDA is projecting the data, and the blind-samples was fed into the same transformation as the train-data.  This is an issue when validating the data with the test data, since its projected in a way from the LDA where it already has been classified on the basis of the label given in the labelling-process (true label). The realisation of this fundamental issue came too late, mouthing in poor performance.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_jakobhoydal_diagram1.png" alt="architecture " tite="" width="auto" />
+      <figcaption><i>Diagram 1: System architecture</i></figcaption>
+</figure>
+
+<p>When running the LDA projection through a separate test-set with the same audio-samples that the model had seen, but different impulse responses, the model was able to predict the samples fairly well. But with blind samples that the model had not seen before that was similar but not the same, the model was not able to predict much. In diagram 4, we can se that the overfitting that happened in diagram 3 in class 5 is the fault for this.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_20_jakobhoydal_diagram_3and4.png" alt="architecture " tite="" width="auto" />
+      <figcaption><i>Diagram 3 and 4: Normalized matrix </i></figcaption>
+</figure>
+
+<p><strong>In conclusion</strong>, the model created suggest that it is possible to differentiate between reverberation-times in wet audio-signal from monophonic instruments, opera, percussion, to quartets playing music together. But the model doesn’t work well with samples that is has not been trained on (blind-samples).</p>
+
+<p>The model performs well when given impulse responses that are different from each other, both in length and in timbre. But with samples that are too similar, the model starts overfitting or under-fitting one of the similar classes. Compared to state of the art papers, this model is both of lower quality, and does not show the same results.</p>
+
+<p>All in all, machine learning is hard. The joy of having a «working» model did that I didn’t validate the results. This lead to a later realisation that the model did not work at all.</p>
+
+<h4 id="references">References</h4>
+
+<p>[1] J. Eaton, N. D. Gaubitch, A. H. Moore and P. A. Naylor «ACE Challenge - Corpus Description and Performance evaluation» in 2015 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics October 18-21, 2015, New Paltz, NY</p>
+
+<p>[2] C, Papayiannis, C. Evers, P. A. Naylor «End-to-End Classification of Reverberant Rooms using DNNs» in IEEE/ACM Transactions on Audio, Speech and Language Processing Volume 28 2020</p>
+
+<p>[3] H. Gamper and I. J. Tashev «Blind Reverberation Time Estimation Using a Convolutional Neural Network» in 2018 16th International Workshop on Acoustic Signal Enhancement (IWAENC)</p>
+
+<p>[4] N. Peters, J. Choi, and H. Lei, “Matching Artificial Reverb Settings to Unknown Room Recordings: A Recommendation System for Reverb Plugins,” Paper 8700, (2012 October.) AES Convenction 133</p>
+
+<p>[5] Apple, «Apple Loops Library» last modified 04 December 2022 https://support.apple.com/en-gb/ HT201907</p>
+
+<p>[6] Open Air Library, «Anechoic and IR Data», visited 04 April 2022 https://www.openair.hosted.york.ac.uk/</p>
+
+<p>[7] AVAD-VR «Audio/Video Anechoic Database», visited 04 April 2022 http://www.lam.jussieu.fr/ Projets/index.php?page=AVAD-VR</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2022/05/20/jakobhoydal-Reverb_classification.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

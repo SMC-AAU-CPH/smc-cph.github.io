@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A Live Mixer made from mobile devices | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="A Live Mixer made from mobile devices" />
+<meta name="author" content="Wenbo Yi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How does it look to control audio effects in real-time using gestures?" />
+<meta property="og:description" content="How does it look to control audio effects in real-time using gestures?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/wenbo-live-mixer.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/wenbo-live-mixer.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_wenbo_title.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-16T18:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_wenbo_title.png" />
+<meta property="twitter:title" content="A Live Mixer made from mobile devices" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wenbo Yi"},"dateModified":"2020-10-16T18:00:00+00:00","datePublished":"2020-10-16T18:00:00+00:00","description":"How does it look to control audio effects in real-time using gestures?","headline":"A Live Mixer made from mobile devices","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_10_16_wenbo_title.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/wenbo-live-mixer.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Wenbo Yi"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/16/wenbo-live-mixer.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      A Live Mixer made from mobile devices
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-10-16T18:00:00+00:00"
+        itemprop="datePublished"
+      >Oct 16, 2020 •
+      </time>
+         
+      <a href="/authors/wenboyi.html">Wenbo Yi</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="the-expectation">The expectation</h2>
+
+<p>For this project, my dream of using my phone as a sensor to perform electro-acoustic music was ended by the frustrating stability of the latest OSX. So I tried to build a system that could change the audio effects with gestures for real-time interaction. I think it would make the EDM live concert even more frenetic if I could incorporate more physical performance into the shows.</p>
+
+<h2 id="the-demo">The Demo</h2>
+
+<figure style="float: none">
+    <iframe width="800" height="480" src="https://www.youtube-nocookie.com/embed/_h7xlSXgVPU" frameborder="0" allowfullscreen=""></iframe>
+    <figcaption>Demo with Chi Dao</figcaption>
+</figure>
+
+<h2 id="the-construction-of-a-simple-interactive-system">The construction of a simple interactive system</h2>
+
+<p>In general, I use the OSCRouter and TouchOSC Bridge on the computer to implant the Reaper as a central hub for transmitting OSC information from the mobile device. On the mobile side, on the one hand, I use my Android phone’s oscHook to transmit light sensor and gyroscope data as part of signals, controlling the bypass of some plug-ins and the amount of reverberation of the track; on the other hand, I use my iPad’s TouchOSC to control parameters that need to be precisely controlled, such as Pan, Pitch, EQ, etc. In the Demo, you can see that my left hand primarily controls the TouchOSC on the iPad, and my right hand holds the phone’s light sensor and gyroscope.</p>
+
+<p><img src="/assets/image/2020_10_16_wenbo_reaper.png" alt="Plug-ins on Reaper" /></p>
+
+<p>More specifically, I connected oscHook to the desktop and linked the OSC data to Wekinator, a user-friendly machine learning application for classifying data; the reason for this is that the range of data emitted by the sensor is very large; also, delays usually higher than 100ms which make real-time control difficult to achieve. But in the Wekinator, the software processed a wide range of data in different lighting conditions classifying the data as 0 and 1, corresponding to plug-ins on and off. At the beginning of the music, my hand covered the sensor, and this bypassed the EQ and compressor, making the drum sounds soft; and as the development of the music, I released my hand, and the EQ and compression were applied to the track, thus making the music more exciting; Besides, the change in the phone’s gyroscope data corresponds to the amount of track sent to the reverb track, and when I flipped the phone over, the amount of reverb increased with the phone’s rotation.</p>
+
+<p><img src="/assets/image/2020_10_16_wenbo_wekinator.png" alt="Wekinator" /></p>
+
+<p>I originally wanted to control more of the effect through sensors. Sadly, I found out through practice that the application latency made it challenging to guarantee the result, so I abandoned that idea in favor of controlling more of the tracks in real-time through TouchOSC, a sophisticated OSC control app with multiple presets. It allows user to control the parameters of the PAN and some of the plug-ins precisely with the button. The sound image and pitch shifts in the Demo are all controlled by TouchOSC.</p>
+
+<p><img src="/assets/image/2020_10_18_wenbo_oscrouter.png" alt="OSCRouter" /></p>
+
+<h2 id="the-problems">The problems</h2>
+
+<p>As an audio engineer accustomed to using Pro Tools and Logic Pro X, neither of the two well-known DAWs could support different OSC applications well. Obviously, Reaper and Abelton Live are better answers for this project. Meanwhile, I found that when passing OSC data using different platform applications, it often failed to link (e.g., Android to Mac OSX), and my attempts to use FaceOSC to recognize facial movements failed due to my OSX system version. Moreover, when using the light sensor, data that is used during the day does not usually work well in the evening. After spent a lot of time testing different application. I realized the sensors and applications on consumer electronics don’t work well for this kind of professional needs, so perhaps using more common tools like Wii controller, digital pad, and custom sensors would be a better choice for this project.</p>
+
+<h2 id="the-reflection">The reflection</h2>
+
+<p>Honestly, this project didn’t work out the way I wanted it to for some reason, and when I using gestures to modify sound effects, results was never quite what I was looking for. From my perspective, lower latency and better ways to handle OSC data is what I need to improve in the future. As a fan of electronic music, in my imagination, I’m very looking forward to the possibility of collaborating with a visual designer to design a set of visually aesthetically movements to match the various parameters of music mixing, combining electronic music and dance, which will make electronic music live concert even more exciting!</p>
+
+<p>All in all, the project was quite an interesting experience for me this week, and I hope to have more time to complete a more interesting project in the future!</p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2020/10/16/wenbo-live-mixer.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

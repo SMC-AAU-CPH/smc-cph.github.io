@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Estimating the repertoire size in birds | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Estimating the repertoire size in birds" />
+<meta name="author" content="Joachim Poutaraud" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimating the repertoire size in birds using unsupervised clustering techniques" />
+<meta property="og:description" content="Estimating the repertoire size in birds using unsupervised clustering techniques" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/joachipo-estimating-repertoire-size.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/joachipo-estimating-repertoire-size.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_11_joachipo_chloris.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-20T06:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_11_joachipo_chloris.jpg" />
+<meta property="twitter:title" content="Estimating the repertoire size in birds" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joachim Poutaraud"},"dateModified":"2022-05-20T06:00:00+00:00","datePublished":"2022-05-20T06:00:00+00:00","description":"Estimating the repertoire size in birds using unsupervised clustering techniques","headline":"Estimating the repertoire size in birds","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_05_11_joachipo_chloris.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/joachipo-estimating-repertoire-size.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joachim Poutaraud"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/05/20/joachipo-estimating-repertoire-size.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Estimating the repertoire size in birds
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-05-20T06:00:00+00:00"
+        itemprop="datePublished"
+      >May 20, 2022 •
+      </time>
+         
+      <a href="/authors/joachimpoutaraud.html">Joachim Poutaraud</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="introduction"><strong>Introduction</strong></h1>
+
+<p>Unsupervised learning algorithms search for structures or patterns in a dataset without requiring labels. In the context of bird song recognition, this approach can be useful to draw inferences when manual labelling is inaccesible or too expensive. For example, unsupervised learning can be used to find hidden structures in bird songs <a href="#References">[1]</a>.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_11_joachipo_chloris.jpg" alt="European Greenfinch" title="" width="auto" />
+   <figcaption><i>European Greenfinch ©<a href="https://ebird.org/species/eurgre1"> Rogério Rodrigues</a>, accessed 11 May 2022</i></figcaption>
+</figure>
+
+<p>In this blogpost, we will focus on the greenfinch songs (<em>Chloris Chloris</em>). They are organized in a variation of elements which may go on for more than one minute. More precisely, the song of a male greenfinch has been characterized by having groups of tremolos, repetitions of tonal units, nasal chewlee and a buzzing nasal wheeze, which could be uttered on its own and categorized into four phrases classes <a href="#References">[2]</a>:</p>
+
+<ol>
+  <li>A trill</li>
+  <li>A pure tone</li>
+  <li>A nasal tone</li>
+  <li>A nasal “tswee”</li>
+</ol>
+
+<p>The goal is to use an unsupervised method to estimate the repertoire size in the greenfinch songs. The proposed method follows five main steps which requires to (i) download audio recordings from an online collaborative database, (ii) segment the audio recordings, (iii) convert them into a reduced representation set called a feature vector, (iv) use <a href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html">t-SNE</a>, a dimensionality reduction algorithm, to reduce the dimensionality of the data <a href="#References">[3]</a>, and (v) automatically form homogenous groups using the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html">DBSCAN</a> algorithm <a href="#References">[4]</a>.</p>
+
+<h1 id="estimating-the-size-of-the-repertoire"><strong>Estimating the size of the repertoire</strong></h1>
+
+<p>Estimating the size of the repertoire can be a challenging
+task as it needs to perform syllable classification from audio
+recordings. Therefore, there are many problems we can encounter:</p>
+
+<ul>
+  <li><strong>Data set issues</strong> — the data can be highly imbalanced due to bigger popularity of one species over another, there is a large number of different species and recordings can have different length, quality of recordings (volume, cleanliness)</li>
+  <li><strong>Multi-label classification problem</strong> — when there are many species singing at the same time</li>
+  <li><strong>Background noise</strong> — road, rail, and air traffic</li>
+  <li><strong>Different types of bird songs</strong> - elements, syllables, phrases, calls, and songs</li>
+  <li><strong>Inter-species variance</strong> — there might be a difference in birdsong between the same species living in different regions or countries</li>
+</ul>
+
+<p>To minimize these problems, we can start by (i) downloading only high quality recordings from the <a href="https://xeno-canto.org/">Xeno-Canto database</a>, according to its quality ratings ranging from <strong>A</strong> (highest quality) to <strong>E</strong> (lowest quality), and (ii) removing recordings that have an other specie referenced in the background using <a href="https://xeno-canto.org/explore/api">Xeno-Canto’s Application Programming Interface (API v2)</a> and the following fields of the recording object:</p>
+
+<ul>
+  <li><strong>q:</strong> the current quality rating for the recording</li>
+  <li><strong>also:</strong> an array with the identified background species in the recording</li>
+</ul>
+
+<h2 id="segmenting"><strong>Segmenting</strong></h2>
+
+<p>Moreover, to reduce the size of the dataset and facilitate computer processing, we segment the audio recordings into individual syllables. However, the detection of boundaries for the bird syllables is quite challenging because adjacent syllables can overlap in time and frequency and the onset/offset detection can occur below the background noise level.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_12_joachipo_syllables.jpg" alt="Bird syllables" title="" width="auto" />
+   <figcaption><i>Segmentation of bird syllables</i></figcaption>
+</figure>
+
+<p>The common approach is to convert audio recordings into a spectrogram and apply image processing techniques to pick out the signal of interest. Here, we use the <a href="https://en.wikipedia.org/wiki/Wavelet_transform">Wavelet Transform</a> (WT) over the <a href="https://en.wikipedia.org/wiki/Fourier_transform">Fourier Transform</a> (FT) as it allows a better temporal resolution and is well adapted for non-stationary signals such as bird songs <a href="#References">[5]</a>.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_05_12_joachipo_wavelets.jpg" alt="Wavelet Transform" title="" width="auto" />
+   <figcaption><i>A schematic overview of the time and frequency resolutions of the different transformations in comparison with the original time-series. The size and orientations of the block gives an indication of the resolution size,<a href="https://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/"> A guide for using the Wavelet Transform in Machine Learning</a>, accessed 12 May 2022</i></figcaption>
+</figure>
+
+<p>The Fourier transform is mainly used for stationary signals which are represented as a sum of sinusoids, meaning that the standard transform is only localized in frequency. Conversely, wavelets are localized both in time and frequency increasing the performance of our syllables segmentation because we are dealing with non-stationary signals.</p>
+
+<h2 id="filtering"><strong>Filtering</strong></h2>
+
+<p>Furthermore, the WT is also useful to remove background noise as it allows to decompose the signal into <em>details</em> (high) and <em>approximation</em> (low) parts. At some scale, the details contain mostly the insignificant noise and can be filtered or zeroed out using thresholding without affecting the signal <a href="#References">[6]</a>. Using the free library for the Python programming language <a href="https://pypi.org/project/PyWavelets/">PyWavelets</a> it is quite easy to implement.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">filtering</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="n">wavelet</span><span class="o">=</span><span class="sh">'</span><span class="s">db6</span><span class="sh">'</span><span class="p">):</span>
+    <span class="c1"># Calculate decomposition and reconstruction filter values 
+</span>    <span class="n">dec_lo</span><span class="p">,</span> <span class="n">dec_hi</span><span class="p">,</span> <span class="n">rec_lo</span><span class="p">,</span> <span class="n">rec_hi</span> <span class="o">=</span> <span class="n">pywt</span><span class="p">.</span><span class="nc">Wavelet</span><span class="p">(</span><span class="n">wavelet</span><span class="p">).</span><span class="n">filter_bank</span>  
+    <span class="c1"># Apply high-pass decomposition filter along one-dimension
+</span>    <span class="n">y</span> <span class="o">=</span> <span class="n">scipy</span><span class="p">.</span><span class="n">signal</span><span class="p">.</span><span class="nf">lfilter</span><span class="p">(</span><span class="n">dec_hi</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">signal</span><span class="p">)</span> 
+    <span class="k">return</span> <span class="n">y</span>
+</code></pre></div></div>
+
+<p>Before filtering</p>
+<div class="waveform" id="original"></div>
+<p>After filtering</p>
+<div class="waveform" id="filtered"></div>
+<p><br /></p>
+
+<h2 id="extracting"><strong>Extracting</strong></h2>
+
+<p>Furthermore, we convert each syllable into a reduced representation set called a feature vector. Since bird sounds are musical in nature, time and frequency-based features used in audio and music retrieval can be extracted. More precisely, we extract <a href="https://en.wikipedia.org/wiki/Mel-frequency_cepstrum">Mel-Frequency Cepstral Coefficients</a> (MFCCs) and Descriptive Features (DFs) <a href="#References">[7]</a> as they are representative of the way humans hear.</p>
+
+<ul>
+  <li>
+    <p><strong>Time domain features</strong></p>
+
+    <blockquote>
+      <p>Energy (EN)</p>
+    </blockquote>
+
+    <blockquote>
+      <p>Zero Crossing Rate (ZCR)</p>
+    </blockquote>
+
+    <blockquote>
+      <p>Duration of the Syllable (DUR)</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Frequency domain features</strong></p>
+    <blockquote>
+      <p>Spectral Centroid (SC)</p>
+    </blockquote>
+
+    <blockquote>
+      <p>Spectral Bandwidth (SB)</p>
+    </blockquote>
+
+    <blockquote>
+      <p>Spectral Flux (SF)</p>
+    </blockquote>
+
+    <blockquote>
+      <p>Spectral Roll Off (SR)</p>
+    </blockquote>
+
+    <blockquote>
+      <p>Spectral Flatness (SF)</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h1 id="implementing-the-model"><strong>Implementing the model</strong></h1>
+
+<h2 id="classification"><strong>Classification</strong></h2>
+
+<p>Because we are dealing with high-dimensional feature vector, we facilitate the classification process by applying the non-metric dimensionality reduction technique <a href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html">t-SNE</a> to project the data in two dimensions.</p>
+<figure style="float: none">
+   <img src="/assets/image/2022_05_12_joachipo_tsne.jpg" alt="t-SNE algorithm" title="" width="auto" />
+   <figcaption><i>Exploratory visualization using the t-SNE algorithm</i></figcaption>
+</figure>
+
+<p>Additionally, we cluster the samples rapidly and objectively using the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html">DBSCAN</a> algorithm. This algorithm is useful to find core samples with high density and expand clusters from them. One of the significant attributes of this algorithm is noise cancellation which is helpful to discard the noisy samples as well as the capacity to find the number of clusters while coping with unbalanced classes.</p>
+<figure style="float: none">
+   <img src="/assets/image/2022_05_12_joachipo_dbscan.jpg" alt="DBSCAN algorithm" title="" width="auto" />
+   <figcaption><i>Unsupervised bird song syllable classification
+using the DBSCAN algorithm</i></figcaption>
+</figure>
+
+<p>However, the biggest challenge with the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html">DBSCAN</a> algorithm is to find the right parameters (<code class="language-plaintext highlighter-rouge">eps</code> and <code class="language-plaintext highlighter-rouge">min_samples</code> values) to model the algorithm. This requires to find the minimum <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidean distance</a> between each samples and to identify the “knee” point, or the point of maximum curvature of the curve. That way, we can find the optimal <code class="language-plaintext highlighter-rouge">eps</code> parameter.</p>
+
+<h2 id="evaluation"><strong>Evaluation</strong></h2>
+
+<p>Finally, we evaluate the model through various ranges of <code class="language-plaintext highlighter-rouge">min_samples</code> values and find the right value according to the highest <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html">Silhouette score</a>. Silhouette score always ranges between -1 to 1 with a high score suggesting that the objects are well matched to their own cluster and poorly matched to their neighborhood clusters. This is computed as follows:</p>
+
+<p><br /><img src="https://render.githubusercontent.com/render/math?math={\huge%20s = \frac{b - a}{max(a, b)}}" style="border: None; box-shadow: None;" /><br /></p>
+
+<p>In this study, we iterate over minimum samples values ranging from 20 to 75 and find a maximum <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html">Silhouette score</a> of <strong>~0.88</strong> for a minimum sample value of <strong>75</strong>. This made it possible to estimate the size of the greenfinch song repertoire  at four syllables, corresponding to the previous observations that had been established in <a href="#References">[2]</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">min_samples</code></th>
+      <th style="text-align: center">Number of clusters</th>
+      <th style="text-align: right">Silhouette score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: right">-0.177</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: right">-0.165</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td style="text-align: center">11</td>
+      <td style="text-align: right">-0.043</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td style="text-align: center">15</td>
+      <td style="text-align: right">0.131</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td style="text-align: center">24</td>
+      <td style="text-align: right">0.269</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td style="text-align: center">25</td>
+      <td style="text-align: right">0.336</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td style="text-align: center">27</td>
+      <td style="text-align: right">0.491</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: right">0.541</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td style="text-align: center">14</td>
+      <td style="text-align: right">0.679</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td style="text-align: center">11</td>
+      <td style="text-align: right">0.734</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: right">0.870</td>
+    </tr>
+    <tr>
+      <td><strong>75</strong></td>
+      <td style="text-align: center"><strong>4</strong></td>
+      <td style="text-align: right"><strong>0.878</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Code and instructions for setting up this project can be found <a href="https://github.com/joachimpoutaraud/estimating-repertoire-size-in-birds">here</a>.</p>
+
+<h2 id="references"><a name="References"><b>References</b></a><br /><br /></h2>
+
+<p><b>[1]</b> Ranjard, L., &amp; Ross, H. A. (2008). <em>Unsupervised bird song syllable classification using evolving neural networks</em>. The Journal of the Acoustical Society of America, 123(6), 4358-4368.</p>
+
+<p><b>[2]</b> Hans R. Güttinger. <em>Variable and Constant Structures in Greenfinch Songs (Chloris chloris) in Different Locations</em>. In: Behaviour 60.3/4 (1977), pp. 304–318.</p>
+
+<p><b>[3]</b> Maaten, L. van der, &amp; Hinton, G. (2008). <em>Visualizing data using t-SNE</em>. Journal of Machine Learning Research, 9(Nov), 2579–2605.</p>
+
+<p><b>[4]</b> Ester, M., Kriegel, H.-P., Sander, J., &amp; Xu, X. (1996). <em>A density-based algorithm for discovering clusters in large spatial databases with noise</em>. Proceedings of the 2nd International Conference on Knowledge Discovery and Data Mining, 96(34), 226–231.</p>
+
+<p><b>[5]</b> LI, J., ZHENG, J. M., WU, Y., &amp; XING, F. (2006). <em>AUDIO SEGMENTATION BASED ON THE WAVELET TRANSFORMATION</em>. In Wavelet Active Media Technology And Information Processing: (In 2 Volumes) (pp. 319-324).</p>
+
+<p><b>[6]</b> Priyadarshani, N., Marsland, S., Castro, I., &amp; Punchihewa, A. (2016). <em>Birdsong denoising using wavelets</em>. PloS one, 11(1), e0146790.</p>
+
+<p><b>[7]</b> Arti V Bang and Priti P Rege. <em>Evaluation of various feature sets and feature selection towards automatic recognition of bird species</em>. In: International Journal of Computer Applications in Technology 56.3 (2017), pp. 172–184.</p>
+
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+
+<script>
+
+const myAudio = [
+    {
+        path: "/assets/audio/2022_05_12_joachipo_bird_syllable_original.mp3",
+        anchor: "original",
+        color: "#1869ca",
+        alert: false,
+    },
+    {
+        path: "/assets/audio/2022_05_12_joachipo_bird_syllable_filtered.mp3",
+        anchor: "filtered",
+        color: "#ffa600",
+        alert: false,
+    }
+];
+
+const addPlayText = (sample) => "Play" + (sample.alert ? "  ⚠️" : "");
+
+myAudio.forEach((sample) => {
+    const id = sample.anchor;
+    const waveformDiv = document.querySelector("#" + id);
+
+    const playButton = document.createElement("button");
+    playButton.id = "button-" + id;
+    playButton.style.margin = "auto";
+    playButton.classList = "btn btn-primary";
+    playButton.innerText = "Play";
+
+    const wavesurfer = WaveSurfer.create({
+        container: "#" + id,
+        mediaControls: true,
+        height: 64,
+        waveColor: sample.color,
+        splitChannels: true,
+    });
+    wavesurfer.load(sample.path);
+    wavesurfer.once("ready", () => {
+        waveformDiv.appendChild(playButton);
+        playButton.onclick = () => {
+            wavesurfer.playPause();
+            if (playButton.innerText.startsWith("Pause")) {
+                playButton.innerText = "Play";
+            } else if (playButton.innerText.startsWith("Play")) {
+                playButton.innerText = "Pause";
+            }
+        };
+    });
+    wavesurfer.once("finish", () => {
+        playButton.innerText = "Play";
+    });
+});
+
+</script>
+
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2022/05/20/joachipo-estimating-repertoire-size.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

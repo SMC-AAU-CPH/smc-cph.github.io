@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Spotlight: AutoEncoders and Variational AutoEncoders | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Spotlight: AutoEncoders and Variational AutoEncoders" />
+<meta name="author" content="Fabian Stordalen, Alexander Wastnidge, Kristian Eicke" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A simple generative algorithm" />
+<meta property="og:description" content="A simple generative algorithm" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_26_fabianst_perceptron.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-26T08:13:42+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_26_fabianst_perceptron.jpg" />
+<meta property="twitter:title" content="Spotlight: AutoEncoders and Variational AutoEncoders" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Fabian Stordalen, Alexander Wastnidge, Kristian Eicke"},"dateModified":"2023-04-26T08:13:42+00:00","datePublished":"2023-04-26T08:13:42+00:00","description":"A simple generative algorithm","headline":"Spotlight: AutoEncoders and Variational AutoEncoders","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_26_fabianst_perceptron.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Fabian Stordalen, Alexander Wastnidge, Kristian Eicke"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Spotlight: AutoEncoders and Variational AutoEncoders
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-26T08:13:42+00:00"
+        itemprop="datePublished"
+      >Apr 26, 2023 •
+      </time>
+         
+      <a href="/authors/fabianstordalen.html">Fabian Stordalen,</a>
+           
+      <a href="/authors/alexanderwastnidge.html">Alexander Wastnidge,</a>
+           
+      <a href="/authors/kristianeicke.html">Kristian Eicke</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="spotlight-autoencoders-and-variational-autoencoders">Spotlight: AutoEncoders and Variational AutoEncoders</h1>
+<p>Since we all prayed to the Autoencoder god this semester we thought about giving you an introduction to the architecture and capabilities of autoencoders and their sibling the variational autoencoder. Especially VAE’s have become extremely popular over the last years, capable of creating <a href="https://www.thispersondoesnotexist.com/">entirely non-existing human faces</a> and purely synthetic music.</p>
+
+<h2 id="to-generate-or-not-to-generate">To generate or not to generate</h2>
+<p>Generative deep learning models are a type of artificial neural network that can learn to generate new data samples similar to the training data provided. These models are designed to learn the underlying patterns and structure of the data, which can then be used to create new samples. If you dive a little bit deeper into the matter you will find the information on the internet that the vanilla autoencoder cannot be used for generative purposes. If we define “generative” as the ability to create data then it is absolutely true that an autoencoder can be used for generative purposes. The thing is that it is just does not work very well with creating continuous data. That’s were VAE’s come in.</p>
+
+<h2 id="autoencoders">Autoencoders</h2>
+<p>An autoencoder is a neural network structure with an equal number of inputs and outputs and at least one hidden layer which is smaller in size. It’s two main purposes are <a href="https://www.machinecurve.com/index.php/2019/12/19/creating-a-signal-noise-removal-autoencoder-with-keras/">signal</a> or image denoising and dimensionality reduction.</p>
+<figure style="float: none">
+   <img src="/assets/image/2023_04_25_alexanjw_Autoencoder.jpg" width="60%" />
+   <figcaption>Autoencoder architecture</figcaption>
+</figure>
+
+<p>The structure of the AE effectively acts as a form of “compression” and “decompression” of the data.  Importantly, these stages mirror each other.  Many purposes use these to map one value to another. In a musical context, this can be used for accompaniment, mapping inputs of musical parts to desired outputs of accompanying parts, such as in the case of <a href="https://github.com/napulen/MiniBach">MiniBach</a>.</p>
+
+<p>This can also be used for purely generative purposes, if the desired output of the system is set to be the input.  Here the system would essentially “learn” how to construct the input data via its encoder/decoder stages.  In this way, an autoencoder is able to “learn” the rules of a dataset.</p>
+
+<p>The smallest layer in the system, is often referred to as the “latent layer” or “bottleneck layer”.  After training, we can use only the decoder layer to generate material by giving values into the bottleneck layer and having them fed-forward through the decoder stage generating new material based on the training data.</p>
+
+<h2 id="variational-autoencoders">Variational Autoencoders</h2>
+<p>A variational autoencoder is very similar to a traditional autoencoder but with an important twist. Traditional autoencoder map the encoded data to a fixed point in the latent space which, when reconstructed by the decoder, will ideally produce a 1-to-1 reconstruction of the input data. That’s why autoencoders solely optimize reconstruction loss.</p>
+
+<p>In a variational autoencoder the encoded data does not get mapped to a fixed point but to a probability distribution. This is were the true generative capability of a VAE lies. When this distribution is sampled and ran through the decoder it will generate a new sample resembling the input data, or anything you specify that lies in-between. Simplified, if you have a dataset that contains flute and guitar recordings, with sampling the latent space correctly you could essentially create an instrument that sounds a bit like a flute and a bit like a guitar.</p>
+
+<p>To do this the model needs it’s own specialized loss function. The most common way of calculating loss in a VAE is by combining the reconstruction loss and <a href="https://towardsdatascience.com/understanding-kl-divergence-f3ddc8dff254">Kullback-Leibler divergence</a>. This divergence, which is also called KL divergence, essentially computes the “divergence” between two probability distributions (i.e., how much they look not like each other).</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In summary, while both AEs and VAEs are neural networks that can be used for data compression and dimensionality reduction, VAEs go one step further by explicitly modeling the probability distribution of the latent space. This allows VAEs to generate new data samples from the learned distribution, making them particularly useful for generative tasks.</p>
+<h2 id="sources">Sources</h2>
+
+<p>Dhinakaran, Aparna. 2023. “Understanding KL Divergence.” Medium. March 22, 2023. https://towardsdatascience.com/understanding-kl-divergence-f3ddc8dff254.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2023/04/26/fabianst-autoencoders-and-variationalautoencoders.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Generating Music Based on Webcam Input | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Generating Music Based on Webcam Input" />
+<meta name="author" content="Arvid Falch, Hugh Alexander von Arnim, Jakob Høydal, Joachim Poutaraud" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Do you miss PS2 EyeToy? Then you have to check this out!" />
+<meta property="og:description" content="Do you miss PS2 EyeToy? Then you have to check this out!" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/03/23/jakobhoydal_posturiser.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/03/23/jakobhoydal_posturiser.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_03_23_jakobhoydal_webcamThumbnail.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-23T09:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_03_23_jakobhoydal_webcamThumbnail.jpg" />
+<meta property="twitter:title" content="Generating Music Based on Webcam Input" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arvid Falch, Hugh Alexander von Arnim, Jakob Høydal, Joachim Poutaraud"},"dateModified":"2022-03-23T09:00:00+00:00","datePublished":"2022-03-23T09:00:00+00:00","description":"Do you miss PS2 EyeToy? Then you have to check this out!","headline":"Generating Music Based on Webcam Input","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_03_23_jakobhoydal_webcamThumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/03/23/jakobhoydal_posturiser.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Arvid Falch, Hugh Alexander von Arnim, Jakob Høydal, Joachim Poutaraud"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/machine-learning/2022/03/23/jakobhoydal_posturiser.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Generating Music Based on Webcam Input
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-03-23T09:00:00+00:00"
+        itemprop="datePublished"
+      >Mar 23, 2022 •
+      </time>
+         
+      <a href="/authors/arvidfalch.html">Arvid Falch,</a>
+           
+      <a href="/authors/hughalexandervonarnim.html">Hugh Alexander von Arnim,</a>
+           
+      <a href="/authors/jakobhoydal.html">Jakob Høydal,</a>
+           
+      <a href="/authors/joachimpoutaraud.html">Joachim Poutaraud</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure style="float: none">
+   <img src="/assets/image/2022_03_23_jakobhoydal_webcamHeader.jpg" alt="Alternate Text" width="auto" />
+</figure>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>For people, recognising if somebody is giving a thumbs up is easy. The arm might be a bit higher or lower, or it might be viewed from a slightly different angle, but we can instantly recognise the posture. To programme a computer to do this, however, is a lot of work. Every combination of pixels that can form a thumbs up has to be programmed individually, which requires a lot of time and effort. And even after that, there will probably be a lot of edge cases that aren’t recognised.</p>
+
+<p>However, through the use of machine learning techniques, this becomes a lot simpler. The programme can just be provided with a lot of examples of various thumbs up postures, and after training, will be able to infer that a new posture that it has never seen before is also a thumbs up. The problem here is finding and collecting all of these examples. But what if we could just generate them on the fly, and spontaneously train our programme to recognise new postures? And moreover, what if we associated these postures with sound generation parameters, enabling the flexible programming of posture-controlled music generation systems? This is one of the use cases of the <a href="http://www.wekinator.org/">Wekinator</a>, developed by Rebecca Fiebrink [1]. And to really get an idea of how the system works, we created our own simplified version of this.</p>
+
+<h3 id="how-it-works">How it works</h3>
+<p>Our system is based around a <a href="https://towardsdatascience.com/machine-learning-classifiers-a5cc4e1b0623">classifier</a>, a machine learning technique that involves the programme learning to sort input examples into discrete classes. It takes the input from the computer’s webcam, and allows the user to provide examples of up to 5 classes of posture by pressing the ‘q’, ‘w’, ‘e’, ‘r’, or ‘t’ keys while holding the posture that they want the programme to learn. When this has been done, the user can press the ‘spacebar’ and a <a href="https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47">Support Vector Classifier</a> algorithm is trained on the postures and classes. When the user then holds the posture again, the programme should recognise which class it is. This information is then sent to a Pure Data patch via <a href="https://pypi.org/project/python-osc/">OSC</a>, which triggers one of 5 sounds. By default, this is just 5 sine waves spread over 5 octaves, but if the user wishes they can alter these to be any desired sounds or parameters for sound generation in the PD patch.</p>
+
+<p>In the video below, you can watch Arvid providing a short demo.</p>
+
+<h3 id="video-demo">Video Demo</h3>
+<iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_03_23_arvidaf_mldemo.mp4" width="640" height="480" allow="autoplay"></iframe>
+
+<p>If you want to try it out or modify the code, it can be found <a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/code/2022_03_23_jakobhoydal_posturizer.zip">here</a> !</p>
+
+<h1 id="references">References</h1>
+<p>[1]R. Fiebrink and P. R. Cook, <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwiHnMjF6tz2AhXIRvEDHT9WAPEQFnoECAMQAQ&amp;url=http%3A%2F%2Fismir2010.ismir.net%2Fproceedings%2Flate-breaking-demo-13.pdf&amp;usg=AOvVaw2GOYHdwxeFO_Z6RwbEHNe0">“The Wekinator: a system for real-time, interactive machine learning in music.”</a>, 2010, vol. 3.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/machine-learning/2022/03/23/jakobhoydal_posturiser.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

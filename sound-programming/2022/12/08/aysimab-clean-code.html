@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Clean code | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Clean code" />
+<meta name="author" content="Aysima Karcaaltincaba" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Any fool can write code that a computer can understand. Good programmers write code that humans can understand." />
+<meta property="og:description" content="Any fool can write code that a computer can understand. Good programmers write code that humans can understand." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/08/aysimab-clean-code.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/08/aysimab-clean-code.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_06_aysimab_cleancode_unclebob.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_06_aysimab_cleancode_unclebob.jpg" />
+<meta property="twitter:title" content="Clean code" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aysima Karcaaltincaba"},"dateModified":"2022-12-08T00:00:00+00:00","datePublished":"2022-12-08T00:00:00+00:00","description":"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.","headline":"Clean code","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_06_aysimab_cleancode_unclebob.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/08/aysimab-clean-code.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Aysima Karcaaltincaba"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/08/aysimab-clean-code.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Clean code
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-12-08T00:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 8, 2022 •
+      </time>
+         
+      <a href="/authors/aysimakarcaaltincaba.html">Aysima Karcaaltincaba</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p><em>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”</em> 
+–Martin Fowler-</p>
+
+<h2 id="what-is-clean-code">What is clean code?</h2>
+
+<p>Coding is part of all scientific work nowadays. Sometimes we need to write short scripts, sometimes we end up having a huge application with many files of code. We usually focus on getting the correct result or having the correct logic in our code but what about readability?</p>
+
+<p>We all at least read someone else’s code or shared our code with others before. Especially for developers like us who are developing solutions which can be reused in scientific or artistic contexts, it is even more crucial to share the code we develop or reuse a module someone else developed.</p>
+
+<p>Do you recall having difficulty while reading someone else’s code? Every developer spends way more time reading code then writing the code. It means spending a bit more time to write a more readable code saves a lot of time at the end! It even saves time for the code owner because many of us also struggle reading our own code which we wrote just a while ago!</p>
+
+<p>So writing understandable and readable code is a very big responsibility for us, maybe as important as writing a working code.</p>
+
+<figure>
+   <img src="/assets/image/2022_12_06_aysimab_cleancode_unclebob.jpg" style="max-height:400px; width:auto;" />
+   <figcaption>From a clean code lesson of Uncle Bob, Robert Martin.</figcaption>
+</figure>
+
+<p>Then what should we be careful while writing code? Lets talk about some small things that can change a lot!</p>
+
+<h3 id="name-wisely">Name wisely</h3>
+
+<p>How we name our variable, functions and classes are the most important things to pay attention. So you should be understanding a code and what each variable &amp; function does by only reading it.</p>
+
+<p>We mostly find ourselves adding lots of comments to our code but ideally a code should be self explanatory. If you need to add lots of comments, then probably you have some room for improvement.</p>
+
+<p><em>“A name should tell you why it exists, what it does, and how it is used. If a name requires a comment, then the name does not reveal its intent.”</em>        <br />
+<em>–Uncle Bob Lessons-</em></p>
+
+<p>Most SMC students are using a jupyter notebook to develop. I can imagine most of us running cells in a different order and noticing weird behaviours because of having many variables with the same names in different cells like x or y. However if we give variables very clear names about what they are, why they are different, this wouldn’t be an issue.</p>
+
+<h3 id="avoid-disinformation">Avoid disinformation</h3>
+
+<p>Only use specific words if they apply to your case. For example, only have a variable named <em>signalArray</em> if the variable is an “array” or <em>signalNp</em> if the variable is a “numpy array”. If you do otherwise, you will create a wrong impression and it will be harder to follow the code.</p>
+
+<h3 id="keep-your-functions--classes-short">Keep your functions &amp; classes short</h3>
+
+<p>Having a very huge class or function will make everyone’s life very miserable. Instead, be councious about having functions that only does one single thing. So that you can also reuse them easier and you wouldnt need to read every line of code in order to understand what a class or function do.</p>
+
+<p><em>“The first rule of functions is that they should be small. The second rule of functions is that they should be smaller than that.”</em> 
+<em>—Uncle Bob, Robert C. Martin-</em></p>
+
+<p>Not everything has to be in a class. If a function doesn’t need to know anything from a class then keep it outside. Instead of having very big classes, decide the responsibility of each recipe and create multiple. Divide them into files, classes and functions as if you are composing music.</p>
+
+<figure>
+   <img src="/assets/image/2022_12_06_aysimab_cleancode_book.jpg" style="max-height:400px; width:auto;" />
+   <figcaption>Clean Code Book of Robert Martin, strongly recommended if you are interested!</figcaption>
+</figure>
+
+<p>If you are interested to hear more and like youtube more than reading, then you can also try <a href="https://www.youtube.com/watch?v=mA5jCZ6nBW4">Uncle Bob’s youtube videos</a> about clean code principles.</p>
+
+<p>In summary,
+Keep in mind these checkpoints for your code:</p>
+<ul>
+  <li>Easy to read</li>
+  <li>Easy to change</li>
+  <li>Well tested</li>
+  <li>Every function does what you expect them to do</li>
+  <li>The Boy Scout Rule: Always leave the code better than you found</li>
+</ul>
+
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2022/12/08/aysimab-clean-code.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

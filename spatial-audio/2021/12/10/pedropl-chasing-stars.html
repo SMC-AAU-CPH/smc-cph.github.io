@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>‘Chasing Stars’: An interactive spatial audio application | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="‘Chasing Stars’: An interactive spatial audio application" />
+<meta name="author" content="Pedro Lucas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Let’s explore an interactive 3D-audio application under an ethereal sound landscape." />
+<meta property="og:description" content="Let’s explore an interactive 3D-audio application under an ethereal sound landscape." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/spatial-audio/2021/12/10/pedropl-chasing-stars.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/spatial-audio/2021/12/10/pedropl-chasing-stars.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_12_10_pedropl_chasing_stars_art.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-10T16:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_12_10_pedropl_chasing_stars_art.jpg" />
+<meta property="twitter:title" content="‘Chasing Stars’: An interactive spatial audio application" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pedro Lucas"},"dateModified":"2021-12-10T16:00:00+00:00","datePublished":"2021-12-10T16:00:00+00:00","description":"Let’s explore an interactive 3D-audio application under an ethereal sound landscape.","headline":"‘Chasing Stars’: An interactive spatial audio application","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_12_10_pedropl_chasing_stars_art.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/spatial-audio/2021/12/10/pedropl-chasing-stars.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Pedro Lucas"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/spatial-audio/2021/12/10/pedropl-chasing-stars.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      &#39;Chasing Stars&#39;: An interactive spatial audio application
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-12-10T16:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 10, 2021 •
+      </time>
+         
+      <a href="/authors/pedrolucas.html">Pedro Lucas</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>This project is an interactive spatial audio application considering an artistic approach as a starting point for its development. A description of the design and implementation is provided as well as the interaction of several subsystems in the development chain (motion capture, remote control, system behavior, audio generation, spatialization, and sound playback).</p>
+
+<h2 id="the-concept">The Concept</h2>
+
+<p>The music and sound composition is based on an <em>Ethereal</em> environment, I interpret this concept as sounds “out of this world” that have to do with a <em>fantasy experience</em>.</p>
+
+<p>The inspiration for this type of composition comes from the way in which artists have depicted the outer space regarding color and shapes, and their translation with “non-existing” sounds that can be achieved by the human imagination through sound synthesis. Additionally, I believe that this kind of composition can be also focused on a human perspective in terms of emotions. The picture below shows an <a href="https://www.deviantart.com/mrperv/art/Chasing-stars-562098006">illustration</a> that tries to describe the concept of this project considering the fantasy component (art style), emotions (character expression), and situation (trying to reach a star).</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_12_10_pedropl_chasing_stars_art.jpg" alt="chasing stars" title="chasing stars" width="50%" />
+   <figcaption><i>'Chasing Stars' by MrPerv</i></figcaption>
+</figure>
+
+<p>As such, the goal of this application is to reflect the situation shows in the illustration mentioned before, which is <em>Chasing Stars</em>. The idea is to fill an immersive sound ambience based on the <em>space</em> theme with some sonic elements moving around. In this environment, a participant is able to listen sounds that come from random directions and he or she should approach towards the right direction so that a new sound is triggered, this new sound informs you that a “star” has been caught.</p>
+
+<p>In order to implement this application, a <em>motion capture</em> system was used. The next video shows a demo performance and the data from the motion capture regarding the position of the <em>participant</em> (red circle), and the position of the <em>guidance sound</em> that calls the user to a specific direction (green circle). The participant is trying to go to the place where he or she thinks the sound is coming from, and move the hand towards the guessed direction. Note that the participant is holding an object which is tracked by the motion capture system so that the position can be sent to the controller to confirm whether it is close to the right direction or not.</p>
+
+<figure style="float: none">
+   <iframe src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_12_10_pedropl_chasing_stars_video_demo.mp4" width="1024" height="576" frameborder="0" allowfullscreen=""></iframe>
+   <figcaption>Video Demo</figcaption>
+</figure>
+
+<h2 id="sound-elements">Sound Elements</h2>
+
+<p>The sound elements that are part of the application are the following ones:</p>
+
+<ul>
+  <li><strong>“Strings-like” sound:</strong> This is the base sound that fills the soundscape and is present from all directions. It is a chord progression that leads the musical motif.</li>
+  <li><strong>Reverse Hi Hat:</strong> This is a rhythmical sound that is composed of two sources (each stereo signal) traveling around the space. It sets the musical tempo and the spatial perception of two elements in motion.</li>
+  <li><strong>Guidance sound:</strong> This a soft but strong sound that is triggered in the random direction to localize. It is a random musical note from the A minor scale (440Hz to 880Hz)</li>
+  <li><strong>“Vibraphone-like” sound:</strong> This is a sharp and percussive sound that represents a “hit” when the guidance sound is localized and is also triggered as a musical note as the guidance sound.</li>
+  <li><strong>“Sparks-like” sound:</strong> This is a continuous sound that is played in the direction in which the performer move the tracking object. It receives the same chords from the “Strings-like” sound but synthesized differently.</li>
+</ul>
+
+<h2 id="spatial-features">Spatial Features</h2>
+
+<p>Una spatial audio technique used is <em>pairwise amplitude panning</em>, in which the relative amplitude of two adjacent loudspeakers is adjusted to create a phantom image between them. The figure below shows the contribution for a pair of speakers depending on the angle position in an 8-loudspeakers array. This configuration was implemented in order to increase the spatial resolution so that the participant can identify the direction more precisely.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_12_10_pedropl_pairwise_panning.png" alt="Pairwise amplitude panning" title="Pairwise amplitude panning" width="75%" />
+   <figcaption><i>Pairwise amplitude panning</i></figcaption>
+</figure>
+
+<p>The sounds that use this strategy are: <em>guidance</em>, <em>vibraphone-like (hit)</em>, and <em>sparks-like (continuous)</em>, which are the ones that are closely related to the interactive part. Although this technique depends on the speaker configuration, it is possible to translate to a different setup. The following picture depicts the complete solution that was used for a 8-loudspeaker array and a binaural setup. Note that an encoding and decoding process is needed for the binaural format, which basically consists in treating the speakers as sources placed in a space where the stereo system is located.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_12_10_pedropl_pairwise_enc_dec.png" alt="Pairwise amplitude panning - Encoding and decoding process" title="Pairwise amplitude panning - Encoding and decoding process" width="75%" />
+   <figcaption><i>Pairwise amplitude panning - Encoding and decoding process</i></figcaption>
+</figure>
+
+<p>Other strategy that was used is <em>High Order Ambisonics (HOA)</em> for the <em>string-like (base)</em>, and <em>reverse hi hat</em> sounds. The next figure shows how every channel of these sources is placed in the sound field. Note that these two sounds are composed of a stereo signal in which source 1 and 2 are the ones corresponding to the hi hat sound and are constantly moving around the center in a epicycloid and cardioid path respectively. Sources 3 and 4 are the ones for the base and are placed permanently in the same positions to fill the environment.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_12_10_pedropl_ambisonic_solution.png" alt="Base and Hi hat sources placed in the sound field" title="Base and Hi hat sources placed in the sound field" width="100%" />
+   <figcaption><i>Base and Hi hat sources placed in the sound field</i></figcaption>
+</figure>
+
+<p>The process to encode and decode to the 8-loudspeakers array and the binaural setup is shown below. The four sources and the loudspeakers are positioned in the sound field and then encoded into a <em>third order ambisonics</em> format. The trajectories act over the sound field and are part of the encoding, then, two decoders are used for each setup.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_12_10_pedropl_ambisonics_enc_dec.png" alt="Ambisonics - Encoding and Decoding process" title="Ambisonics - Encoding and Decoding process" width="100%" />
+   <figcaption><i>Ambisonics - Encoding and Decoding process</i></figcaption>
+</figure>
+
+<p>This model is used for the mentioned sources because it reinforces the spatial environment, and a high spatial precision is not required. The advantage of this configuration is the management of any loudspeakers array. The final mix of the whole application is the sum of the pairwise sources and the ambisonics ones into one only multi-signal output according to the required setup (8-loudspeakers or binaural).</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>The overall implementation is illustrated in the next diagram. The main framework for the development was <a href="https://cycling74.com/products/max">Max/MSP</a> with the interconnection of several modules explained below:</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2021_12_10_pedropl_chasing_stars_implementation.png" alt="System Implementation: Modules and Subsystems" title="System Implementation: Modules and Subsystems" width="100%" />
+   <figcaption><i>System Implementation: Modules and Subsystems</i></figcaption>
+</figure>
+
+<ul>
+  <li><strong>Motion Capture (MoCap):</strong> The <a href="https://optitrack.com/">OptiTrack</a> motion capture system was used to detect a specific object in space. This object is called <em>rigidbody</em> and is an element that provides position ( X, Y, Z), and rotation (roll, pitch, yaw). The application uses the position projected to the plane (X, Y) that is parallel to the floor to control the ‘vibraphone-like (hit)’ and ‘sparks (continuous)’ sound position in real time. The data is sent from the PC that runs the software that controls the MoCap (<a href="https://optitrack.com/software/motive/">Motive</a>), to the machine that runs the application, through OSC messages over the local network. An implementation used from the <a href="https://www.uio.no/ritmo/english/news-and-events/events/conferences/2021/RPPW/performances/telematic-etudes/index.html">N-Place project</a> to take the data streamed from <em>Motive</em> to an OSC module in the MoCap PC was used to transmit the data from machine to machine.</li>
+  <li><strong>Remote Control from Smartphone:</strong> There are toggle controls sent by a smartphone to <em>start and stop the application</em> and, <em>start and stop the guidance sounds and the game behavior</em>. This remote control can be used with any mobile application that sends OSC messages. The spatial application just needs to take the right path for every trigger.</li>
+  <li><strong>System behavior (Controller):</strong> The controller implements the logic for the interactive behavior. It generates the random angles for the guidance sound and triggers them every four beats when it is started. It receives the position data from the motion capture and translates the cartesian coordinates to spherical coordinates, then it takes the azimuth angle which is compared with the random angle to trigger the hit sound if necessary. Additionally, this azimuth angle is mapped to the “sparks-like” continuous sound so that it can follows the rigidbody.</li>
+  <li><strong>Audio Generation:</strong> All the sounds, except the hi hat (an audio sample), are synthesized by the plugin <a href="https://www.airmusictech.com/product/hybrid-3">Hybrid3</a>. There is a pre-recorded MIDI score for playing back the chords through this synthesizer. Moreover, the application manages an array of numbers that represents an A minor scale, which is converted to MIDI notes that feed corresponding instances of the same plugin.</li>
+  <li><strong>Spatialization:</strong> The spatial features used in the implementation are detailed before. The library <a href="https://forum.ircam.fr/projects/detail/spat/">Spat</a> for <em>Max/MSP</em> was used for ambisonics, and a custom implementation for the pairwise panning was developed by the author. The solution takes into account an 8-loudspeakers configuration and a stereo setup, both simultaneously. There are several streams of audio that are mixed to compose one only output as shown in the implementation diagram.</li>
+  <li><strong>Sound Playback:</strong> <em>Max/MSP</em> is capable of sending audio signals to independent channels in a sound card. This implementation considers 3 type of outputs that are assembled at the same time: Two set of 8 signals (two 8-loudspeakers array), and one set of two signals (stereo).</li>
+</ul>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>As an interactive spatial audio application, this project demanded to solve technical challenges for its development. One of them was to use the right set of tools in order to reduce complexity and increase reliability. Thus, it is important to study the problem carefully to choose the platforms that best fits the application.</p>
+
+<p>Choosing the proper spatialization techniques is crucial according to the problem. In this work, as explained, a pairwise panning approach was used instead of an ambisonic one to have full control of the gain sent to the loudspeakers, so that it has a higher spatial resolution to easily identify the guidance sound. However, due to perceptual reasons, it is unclear if there is a major difference between both techniques for this specific application, thus it can be part of a future testing.</p>
+
+<p>A personal remark regarding the whole process to build this application is that a combination in sound exploring and spatialization techniques can be a source of inspiration for artistic work, and it can easily become in a never-ending creative workflow.</p>
+
+<p>As future work, the musical composition can be enriched with more spatialized sounds and musical layers, however there is a trade-off that should be considered if the interactivity is affected by a dense sound environment. The interaction can be increased by adding more degrees of freedom and mappings, which has to take into account principles for human-machine interaction. This application can be scaled to an <em>interactive music system</em> by exploring music-making capabilities in terms of gestures and movements. Finally, visual feedback by using technologies such as virtual or mixed reality can improve a complete 3D experience for a user.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/spatial-audio/2021/12/10/pedropl-chasing-stars.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

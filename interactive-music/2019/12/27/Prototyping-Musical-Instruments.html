@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Prototyping musical instruments | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Prototyping musical instruments" />
+<meta name="author" content="Rayam Luna, Gaute Wardenær, Thibault Jaccard, Ulrik Halmøy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Prototyping musical instruments in the name of recycling - exploring Orchestrash from an HCI point of view" />
+<meta property="og:description" content="Prototyping musical instruments in the name of recycling - exploring Orchestrash from an HCI point of view" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/12/27/Prototyping-Musical-Instruments.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/12/27/Prototyping-Musical-Instruments.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_12_27_stefanof_recycle_orchestra_thumb.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-27T10:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_12_27_stefanof_recycle_orchestra_thumb.jpg" />
+<meta property="twitter:title" content="Prototyping musical instruments" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rayam Luna, Gaute Wardenær, Thibault Jaccard, Ulrik Halmøy"},"dateModified":"2019-12-27T10:00:00+00:00","datePublished":"2019-12-27T10:00:00+00:00","description":"Prototyping musical instruments in the name of recycling - exploring Orchestrash from an HCI point of view","headline":"Prototyping musical instruments","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_12_27_stefanof_recycle_orchestra_thumb.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/12/27/Prototyping-Musical-Instruments.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Rayam Luna, Gaute Wardenær, Thibault Jaccard, Ulrik Halmøy"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2019/12/27/Prototyping-Musical-Instruments.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Prototyping musical instruments
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-12-27T10:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 27, 2019 •
+      </time>
+         
+      <a href="/authors/rayamluna.html">Rayam Luna,</a>
+           
+      <a href="/authors/gautewarden%C3%A6r.html">Gaute Wardenær,</a>
+           
+      <a href="/authors/thibaultjaccard.html">Thibault Jaccard,</a>
+           
+      <a href="/authors/ulrikhalmoy.html">Ulrik Halmøy</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>During the HCI course, we examined the instruments prototypes built as part of the physical computing hackathon. This blog post is a summary of our reflections of prototyping musical instruments in the name of recycling, a project we called <em>Orchestrash</em>. Where <a href="https://SMC-master.github.io/interactive-music/2019/10/24/Orchestrash.html">the previous blog post</a> discuss the technicalities of prototyping instruments in a physical computing environment, this one will examine Orchestrash from an HCI point of view.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The accessibility of open source platforms such as Bela and Pure Data is boosting the creation of new musical instruments. The relationship between sensor technologies and visual programming provide great possibilities in the conception of interactivity, having an expressive impact on the contemporary music production (Poupyrev et al., 2001). Creative uses of such technologies arise from the versatility in the user experience while developing with these tools. Equally important, the simplicity of these mechanisms tend to decentralise the production of devices to the artistic expression, giving more democratic perspectives to the production of musical devices.</p>
+
+<h2 id="the-system">The system</h2>
+
+<p>The system presented here consists of a four instruments ensemble aiming to make music out of trash. The instruments were designed to be simple interactive interfaces, with distinct roles and frequency bandwidths, and consisted of a looper/sequencer, bass, drone and a synth. To make sure everyone was playing in the same key, we constrained the three melodic instruments to play within the C minor scale.</p>
+
+<p>Our interpretation of the theme was to a large extent related to the notion of reusing sounds, through techniques such as feedback, sampling and looping. We decided that we also should try to use recyclable materials as sound sources and controllers as much as possible, e.g. by recording sounds from a plastic water bottle and a cleaned-out yoghurt tray. Using objects that don’t traditionally belong in music performance turned out to foster different creative approaches during prototyping and while performing. Looking back, this could very well be related to Cook’s principle that “Everyday objects suggest amusing controllers” (Cook, 2017). Moving away from traditional controllers and sounds liberated us in the creative process, and also augmented the improvisational structure of the performance.</p>
+
+<figure>
+ <img src="/assets/image/2019_12_27_stefanof_drone_diagram.png" align="center" alt="Diagram of the drone instrument" />
+ <figcaption>Component diagram of the drone instrument</figcaption>
+</figure>
+
+<h2 id="performance">Performance</h2>
+
+<p>Considering that the telematic system we used when performing the music (networked musical performance over LOLA) had such a high impact on the musical expression, it is fair to say that the inherent properties of the telematic system became a big part of the performance in total. This builds on the idea of “musicking” elaborated in Small (1998), where it is not only the musical performance of the artists, but all the properties of the system that play into the action-perception loop and thereby plays a part in the entire “musicking” performance.</p>
+
+<figure>
+ <img src="/assets/image/2019_12_27_stefanof_lola_orchestrash.png" align="center" alt="Networked music performance over LOLA" />
+ <figcaption>Networked music performance over LOLA</figcaption>
+</figure>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>Ivan Poupyrev, Michael J Lyons, Sidney Fels, et al. New interfaces for musical expression. In <em>CHI’01 Extended Abstracts on Human Factors in Computing Systems</em>, pages 491–492. ACM, 2001.</li>
+  <li>Christopher Small. Musicking. In <em>Musicking: The Meanings of Performing and Listening.</em> University Press of New England. p. 9. ISBN 978-0-8195-2257-3, 1998</li>
+  <li>Perry Cook. Principles for designing computer music controllers. In Alexander Refsum Jensenius and Michael J Lyons, editors, <em>A NIME Reader: Fifteen Years of New Interfaces for Musical Expression</em>, pages 1–13. Springer, 2017</li>
+</ul>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2019/12/27/Prototyping-Musical-Instruments.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

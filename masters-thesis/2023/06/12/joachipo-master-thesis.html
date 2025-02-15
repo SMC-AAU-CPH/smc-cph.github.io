@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unsupervised Meta-Embedding for Bird Songs Clustering in Soundscape Recordings | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Unsupervised Meta-Embedding for Bird Songs Clustering in Soundscape Recordings" />
+<meta name="author" content="Joachim Poutaraud" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A case study on nocturnal and crepuscular tropical bird songs." />
+<meta property="og:description" content="A case study on nocturnal and crepuscular tropical bird songs." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2023/06/12/joachipo-master-thesis.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2023/06/12/joachipo-master-thesis.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_06_14_joachipo_common_potoo.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-12T23:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_06_14_joachipo_common_potoo.jpg" />
+<meta property="twitter:title" content="Unsupervised Meta-Embedding for Bird Songs Clustering in Soundscape Recordings" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joachim Poutaraud"},"dateModified":"2023-06-12T23:00:00+00:00","datePublished":"2023-06-12T23:00:00+00:00","description":"A case study on nocturnal and crepuscular tropical bird songs.","headline":"Unsupervised Meta-Embedding for Bird Songs Clustering in Soundscape Recordings","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_06_14_joachipo_common_potoo.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2023/06/12/joachipo-master-thesis.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Joachim Poutaraud"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2023/06/12/joachipo-master-thesis.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Unsupervised Meta-Embedding for Bird Songs Clustering in Soundscape Recordings
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-06-12T23:00:00+00:00"
+        itemprop="datePublished"
+      >Jun 12, 2023 •
+      </time>
+         
+      <a href="/authors/joachimpoutaraud.html">Joachim Poutaraud</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><blockquote>
+  <p>Code available on <a href="https://github.com/joachimpoutaraud/darksound">GitHub</a></p>
+</blockquote>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Amazonian forests are threatened by numerous anthropogenic pressures not visible by satellite imagery, such as over-hunting or undercover forest degradation. Knowledge of the effects of these degradations is essential for an effective local conservation policy. However, these effects can only be assessed using quantitative methods for monitoring biodiversity in the field. In recent years, ecoacoustics has offered an alternative to traditional techniques with the development of Passive Acoustic Monitoring (PAM) systems allowing, among other things, to automatically monitor species that are difficult to identify by observers, such as crepuscular and nocturnal tropical birds. Although the use of such systems makes it possible to acquire large sets of data collected in the field, it is often difficult to process these data because they generally represent several thousand hours of recordings that need to be annotated and validated manually by an expert with in-depth knowledge of the phenology and behavior of the species studied. The objective of this thesis is to develop a new method to facilitate the work of ecoacousticians in managing large unlabeled acoustic datasets and to improve the identification of potential new taxa. Based on the advancement of Meta-Learning methods and unsupervised learning techniques integrated into the Deep Learning (DL) framework, the Meta Embedded Clustering (MEC) method is proposed to progressively discover and improve the inherent structure of unlabeled data.</p>
+
+<h2 id="background">Background</h2>
+
+<p><strong>Ecoacoustics</strong></p>
+
+<p>This thesis mainly relies on a recent discipline called ecoacoustics that studies sound along a broad range of spatial and temporal scales in order to tackle biodiversity and other ecological questions. This discipline has been introduced in 2015 in <strong>[1]</strong>.</p>
+
+<p>In this thesis, <em>soundscape</em> recordings are used in order to analyze sounds produced by animals (e.g. biophony). Soundscape are generally defined by three components:</p>
+
+<ul>
+  <li><strong>Geophony</strong> (i.e. sounds generated by physical events such as waves, earthquakes, or rain)</li>
+  <li><strong>Biophony</strong> (i.e. sounds produced by animals)</li>
+  <li><strong>Anthropophony</strong> (i.e. sounds associated with human activity)</li>
+</ul>
+
+<figure>
+  <img src="/assets/image/2023_06_14_joachipo_soundscape_recording.jpg" alt="A soundscape recording." width="100%" align="middle" />
+  <figcaption align="center">A soundscape recording with Regions Of Interest (ROIs) (source: https://scikit-maad.github.io)</figcaption>
+</figure>
+
+<h2 id="objectives">Objectives</h2>
+<p>This thesis was carried out in the Muséum National d’Histoire Naturelle (<a href="https://www.mnhn.fr/fr">MNHN</a>) de Paris with the EcoAcoustics Research (<a href="https://ear.cnrs.fr/">EAR</a>) team. The objective was to develop a framework useful for a better understanding and visualization of highly dynamic and complex sound scenes in tropical environments in order to tackle the following problems:</p>
+
+<ul>
+  <li>National biodiversity inventories not carried out yet (e.g. in developing countries)</li>
+  <li>Rare species are targeted (e.g. nocturnal and crepuscular bird species)</li>
+  <li>Absence of experts</li>
+  <li>Large amount of unlabeled data (i.e. many hours of recordings)</li>
+</ul>
+
+<p>Therefore, the main problem is <em>how to get around the problem of lack of large labeled datasets in challenging acoustic environments</em>?</p>
+
+<h2 id="meta-embedded-clustering-mec">Meta-Embedded Clustering (MEC)</h2>
+<p>For this purpose, the Meta-Embedded Clustering (MEC) method was proposed to facilitate the issues of discovering and gradually improving the inherent structure of unlabeled data. This method is mainly based on Meta-Learning algorithms and more specifically on Unsupervised Meta-Learning (UML) techniques <strong>[2]</strong> that have the advantage to improve few-shot image classification by learning features into clustering space.</p>
+
+<figure>
+  <img src="/assets/image/2023_06_14_joachipo_unsupervised_meta_learning.jpg" alt="Unsupervised Meta-Learning (UML)." width="100%" align="middle" />
+  <figcaption align="center">Unsupervised Meta-Learning (UML). From “Unsupervised few-shot image classification by learning features into clustering space”, by S. Li et. al, Conference, Tel Aviv, Israel, October 23, 2022, Springer.</figcaption>
+</figure>
+
+<p>The MEC method is performed in five successive steps where (i) the data is passed through the initialized model, (ii) initial estimate of the non-linear mappings are computed to avoid the curse of dimensionality, (iii) a clustering algorithm (<a href="https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html">HDBSCAN</a>) is performed on the latent space, (iv) a pseudo-labeled dataset is built from the clustering algorithm’s predictions and (v) the model is fine-tuned on the pseudo-labeled dataset for <em>n</em> episodic tasks.</p>
+
+<figure>
+  <img src="/assets/image/2023_06_14_joachipo_meta_embedded_clustering.jpg" alt="Meta Embedded Clustering (MEC)." width="100%" align="middle" />
+  <figcaption align="center">Meta Embedded Clustering (MEC)</figcaption>
+</figure>
+
+<h2 id="results--discussion">Results &amp; Discussion</h2>
+<p>Three research questions were asked in this thesis:</p>
+
+<ul>
+  <li><strong>Q1:</strong> How well does episodic training improve the performance of a Meta-Learning algorithm compared to classical training?</li>
+  <li><strong>Q2:</strong> To what extent can Meta-Learning algorithms fine-tuned on pseudo-labeled data classify classes that were not used during training?</li>
+  <li><strong>Q3:</strong> To what extent Meta-embeddings can improve the clustering quality of unlabeled data?</li>
+</ul>
+
+<p>In this blogpost, particular attention is paid to the research question <strong>Q3</strong> because it is at the core of this thesis and is closely related to the MEC method. When performing clustering on the latent space, results presented in the following table show that Meta-embeddings compared to baseline embeddings (ResNet18) improve the quality of the clustering.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Embedding</th>
+      <th>Number of clusters</th>
+      <th>Accuracy</th>
+      <th>NMI</th>
+      <th>ARI</th>
+      <th>DBCV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Baseline</em></td>
+      <td>4</td>
+      <td>30.58%</td>
+      <td>0.1201</td>
+      <td>0.0212</td>
+      <td>-0.0949</td>
+    </tr>
+    <tr>
+      <td><em>Meta</em></td>
+      <td><strong>13</strong></td>
+      <td><strong>67.48%</strong></td>
+      <td><strong>0.8142</strong></td>
+      <td><strong>0.5813</strong></td>
+      <td><strong>-0.2029</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The goal in this thesis was to find a ground truth number of 21 clusters. Results presented in the following table show that performing iterative clustering on the Meta-embeddings can help refine the clusters and further improve the clustering quality (from 17 to 19 clusters with 69.10% to 76.60% accuracy).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Iteration</th>
+      <th>Number of clusters</th>
+      <th>Accuracy</th>
+      <th>NMI</th>
+      <th>ACI</th>
+      <th>DBCV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>17</td>
+      <td>69.10%</td>
+      <td>0.8460</td>
+      <td>0.5650</td>
+      <td>-0.3547</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><strong>19</strong></td>
+      <td><strong>76.60%</strong></td>
+      <td><strong>0.8681</strong></td>
+      <td><strong>0.6842</strong></td>
+      <td><strong>-0.0920</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The global objective of this thesis has been to facilitate the work of ecoacousticians in their management of acoustic data and identification of potential new taxa, by discovering and gradually improving the inherent structure of unlabeled data. Based on nsupervised clustering-based methods, the Meta Embedded Clustering (MEC) method turned out to progressively improve the inherent structure of unlabeled data. This method has eventually allowed to further improve the accuracy of the data clustering (69.10% vs. 76.60%) and, in this way, contribute to determine a number of clusters closer to the actual number of clusters expected. In conclusion, the use of unsupervised Meta-embedding has proven to be an effective solution for improving the clustering of bird songs in soundscape recordings. These technological methods can therefore bring forward novel research in developing countries that can facilitate the identification of species as well as the detection of potential new rare bird species.</p>
+
+<p><strong>References</strong></p>
+
+<font size="2"><p><b>[1] </b> Sueur, et. al (2015). Ecoacoustics: the ecological investigation and interpretation of environmental sound. Biosemiotics, Springer. <a href="https://link.springer.com/article/10.1007/s12304-015-9248-x">https://link.springer.com/article/10.1007/s12304-015-9248-x</a></p></font>
+
+<font size="2"><p><b>[2] </b> S. Li et. al (2022). Unsupervised few-shot image classification by learning features into clustering space. BConference, Tel Aviv, Israel, October 23, Springer. <a href="https://link.springer.com/chapter/10.1007/978-3-031-19821-2_24">https://link.springer.com/chapter/10.1007/978-3-031-19821-2_24</a></p></font>
+
+</div>
+
+  
+
+  <a class="u-url" href="/masters-thesis/2023/06/12/joachipo-master-thesis.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

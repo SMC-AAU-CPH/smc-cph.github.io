@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Giant Steps Player | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="The Giant Steps Player" />
+<meta name="author" content="Guy Sion" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As part of the SMC master program we are being introduced to a variety of technologies for creating music and sounds. We have just finished a week long workshop learning about Audio programing and web audio API. The benefits of this technology are helpful and relevant in areas like art, entertainment or education. We were introduced to several ways for creating and manipulating sound, follow tutorials and experiment on our own during the days. I must admit that I do not have intensive knowledge in programing in general and javaScript in particular. Many failures accrued while trying, from simple syntax errors to flawed design. But understanding the idea behind each process and striving towards the wanted result was an important progress." />
+<meta property="og:description" content="As part of the SMC master program we are being introduced to a variety of technologies for creating music and sounds. We have just finished a week long workshop learning about Audio programing and web audio API. The benefits of this technology are helpful and relevant in areas like art, entertainment or education. We were introduced to several ways for creating and manipulating sound, follow tutorials and experiment on our own during the days. I must admit that I do not have intensive knowledge in programing in general and javaScript in particular. Many failures accrued while trying, from simple syntax errors to flawed design. But understanding the idea behind each process and striving towards the wanted result was an important progress." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Giant-Player.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Giant-Player.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_stefanof_giantplayer.PNG" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-11T19:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_stefanof_giantplayer.PNG" />
+<meta property="twitter:title" content="The Giant Steps Player" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Guy Sion"},"dateModified":"2019-02-11T19:00:00+00:00","datePublished":"2019-02-11T19:00:00+00:00","description":"As part of the SMC master program we are being introduced to a variety of technologies for creating music and sounds. We have just finished a week long workshop learning about Audio programing and web audio API. The benefits of this technology are helpful and relevant in areas like art, entertainment or education. We were introduced to several ways for creating and manipulating sound, follow tutorials and experiment on our own during the days. I must admit that I do not have intensive knowledge in programing in general and javaScript in particular. Many failures accrued while trying, from simple syntax errors to flawed design. But understanding the idea behind each process and striving towards the wanted result was an important progress.","headline":"The Giant Steps Player","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_02_11_stefanof_giantplayer.PNG","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Giant-Player.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Guy Sion"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2019/02/11/Giant-Player.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      The Giant Steps Player
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-02-11T19:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 11, 2019 •
+      </time>
+         
+      <a href="/authors/guysion.html">Guy Sion</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="background">Background</h2>
+<p>As part of the SMC master program we are being introduced to a variety of technologies for creating music and sounds. We have just finished a week long workshop learning about Audio programming and web audio API. The benefits of this technology are helpful and relevant in areas like art, entertainment or education. We were introduced to several ways for creating and manipulating sound, follow tutorials and experiment on our own during the days. I must admit that I do not have intensive knowledge in programing in general and javaScript in particular. Many failures accrued while trying, from simple syntax errors to flawed design. But understanding the idea behind each process and striving towards the wanted result was an important progress.</p>
+
+<p>For some unknown reason, I managed to get stuck on a tutorial from our second day. The tutorial was dealing with timing of an oscillator events. I wrote the melody notes of John Coltrane’s tune ‘Giant Steps’ with this <a href="http://pages.mtu.edu/~suits/notefreqs.html" target="_blank">frequency to midi note converter.</a></p>
+
+<p>Later on, I have tried to develop this into a player that will play the same melody with an option to choose the waveform (Sine, Sawtooth, Triangle and Square). I wanted to add a pre-recorded percussion soundwave that would sync with the melody of each oscillator. And of course, the last but not least, a functioning stop button that would let me stop this mad experiment.</p>
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/30FTr6G53VU?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</p>
+
+<h2 id="code-rundown">Code Rundown</h2>
+
+<p>This is a short description of the code. A much more detailed description can be viewed within the code itself which is available at <a href="https://github.com/guysion/Giant-Steps-Player" target="_blank">my Github repo.</a>
+I added the Tone.js to my source code and created the buttons in the body of the page. Later, I have added a CSS file to set the style of my document. I Added the variables for context, Audio buffering for the audio file, 4 oscillators and 4 players. In the stop button function I’ve used an <em>if</em> statement to ensure the stop of all oscillators playing at any time. Setting the initialization of the audio context to include the buffer initialization, decoding the audio data and initializing the player was not an easy task but thanks to friends, teachers and students I managed to do so. Next came the actual melody set awkwardly with parameters for frequency value (instead of note names) and time value in seconds (instead of using a transport time). This meant that the player plays the melody in 120 bpm. Four Oscillator buttons were then created with the functionality of initializing the player and oscillator together.</p>
+
+<h2 id="what-ive-learned">What I’ve Learned</h2>
+<p>Besides the fact that almost everything was new to me, the most important points that will continue with me are:</p>
+<ol>
+  <li>It is extremely important to plan your design before jumping into implementation mode. Sketching it out on a piece of paper is a helpful way.</li>
+  <li>Learn how to find your mistakes in the code, use the console.</li>
+  <li>Don’t be afraid to (miserably) fail, it’s part of the process.</li>
+  <li>Keep your friend close but your programmer friends even closer.</li>
+</ol>
+
+<h2 id="resources">Resources</h2>
+<p>During the week I was introduced to many great sites, tutorials and videos which really helped me understand the potential of Web Audio and the implementation of objects within my code. Using the web-browser’s view source option is another helpful tool for figuring out the coding behind many of the available examples online.</p>
+
+<p>For Web Audio API I recommend checking out <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" target="_blank">the API itself</a> and <a href="https://www.toptal.com/web/web-audio-api-tutorial" target="_blank">this Web Audio API tutorial.</a>
+This <a href="https://www.w3schools.com/js/" target="_blank">JavaScript website</a> was very useful as well as this site for the <a href="https://tonejs.github.io/" target="_blank">Tone.js API, examples and demos.</a></p>
+
+<h2 id="work-in-progress">Work in Progress</h2>
+<p>Now that my giant player is working properly I can continue experimenting with applying filters, a fancier UI with NexusUI.js, learning how to use notes instead of frequencies, change the way I handle the timing and scheduling of the melody and add a change tempo slider. The Giant Step player in itself is a non-interesting piece of code in my opinion, and I would have loved to invest more time in creating a more interactive system with a much more interesting result. I am happy that I got introduced to the Tone.js library because I could utilize this library together with several Max/MSP patches I am currently working on.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2019/02/11/Giant-Player.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

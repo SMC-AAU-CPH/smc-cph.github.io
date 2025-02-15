@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Cellular Automata - Implementation in Pure Data | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Cellular Automata - Implementation in Pure Data" />
+<meta name="author" content="Kristian Eicke" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Check out the concept of Cellular Automata and my implementation in Pure Data." />
+<meta property="og:description" content="Check out the concept of Cellular Automata and my implementation in Pure Data." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/08/kristeic-cellular-automata.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/08/kristeic-cellular-automata.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_kristeic_blinker.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-08T10:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_kristeic_blinker.gif" />
+<meta property="twitter:title" content="Cellular Automata - Implementation in Pure Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kristian Eicke"},"dateModified":"2022-12-08T10:00:00+00:00","datePublished":"2022-12-08T10:00:00+00:00","description":"Check out the concept of Cellular Automata and my implementation in Pure Data.","headline":"Cellular Automata - Implementation in Pure Data","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_12_07_kristeic_blinker.gif","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/08/kristeic-cellular-automata.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Kristian Eicke"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/08/kristeic-cellular-automata.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Cellular Automata - Implementation in Pure Data
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-12-08T10:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 8, 2022 •
+      </time>
+         
+      <a href="/authors/kristianeicke.html">Kristian Eicke</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><blockquote>
+  <p>“If you couldn’t predict what it did, then probably that’s because it was capable of doing anything.”
+<br /> – John Conway on his 2-D grid Cellular Automaton called “The Game of Life”</p>
+</blockquote>
+
+<p><img align="right" width="100" height="100" src="/assets/image/2022_12_07_kristeic_Figureeight.gif" /></p>
+
+<p>Years ago I stumbled upon an idea in mathematics which caught my attention: Cellular Automata - simple,
+easy to understand systems which are observed to produce complex behavior. I researched on it, had some
+fun with its gamy applications on the web but soon put it in the category ‘filed for memory’. The day came, and
+ while I was programming my synthesizer for the course in Pure Data, I remembered. Could this be applied in PD?
+ At the end of this blog you can see my Pure data patch in action.
+ But wait, what are Cellular Automata
+ (CA)?</p>
+
+<h2 id="cellular-automata-explained">Cellular Automata Explained</h2>
+<p><a href="https://de.wikipedia.org/wiki/Stanisław_Marcin_Ulam">Stanisław Ulam</a> and <a href="https://de.wikipedia.org/wiki/John_von_Neumann">John Von Neumann</a> conceived the idea. In an effort to formulate a theoretical model to describe <a href="https://fab.cba.mit.edu/classes/865.18/replication/Sipper.pdf">self-replicating robots</a>(!!!), von Neumann looked for a concept that would work. The  model wasn’t complete until his colleague Ulam suggested using a cell-based approach - Cellular Automata were born. I’ll go over the fundamentals with you in the following.</p>
+
+<p>Consider the idea of a theoretical robot that is a collection of cells on an n-dimensional grid.
+Each cell can be in a finite number of states and has a specific number of neighbours.
+The state of a cell is determined by the state of its neighbours. If we apply discrete-time steps
+(like generations) each cell state will change in relation to its neighbour states.</p>
+
+<p>Let’s try to imagine the simplest form of a Cellular Automaton.</p>
+
+<p>A one-dimensional grid with cells</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>a cell can either be dead (1) or alive (0)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>each cell’s state depends on its two neighboring cells</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_07_kristeic_neighbours.jpg" style="max-height:400px; width:auto;" />
+   <figcaption></figcaption>
+</figure>
+
+<p>Let’s summarize: a CA in its simplest form is a one-dimensional grid of cells that evolves over time.
+Each cell has a state, 0 or 1, dead or alive, and a neighborhood consisting of two other cells.
+<a href="https://de.wikipedia.org/wiki/Stephen_Wolfram">Stephen Wolfram</a> initially described this most simplest of CA’s in his gigantic groundbreaking book <a href="https://www.wolframscience.com/nks/">‘A New Kind of Science’</a> ,which you can access online for free if you dare.</p>
+
+<p>But, depending on the neighbour cells, how do we decide a cell’s state? If we look closely, we see that three cells represent a 3-digit number in binary, so 2³ = 8 possible combinations.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_07_kristeic_binary_combinations.jpg" style="max-height:400px; width:auto;" />
+   <figcaption></figcaption>
+</figure>
+
+<p>Now, we need to define a ruleset to determine the middle cell’s state for the next generation.
+We use each combination from above once and determine an 8-bit number.</p>
+<figure style="float: none">
+   <img src="/assets/image/2022_12_07_kristeic_ElementaryCA30Rules.jpg" style="max-height:600px; width:auto;" />
+   <figcaption></figcaption>
+</figure>
+
+<p>Turns out there are 256 combinations - 2⁸ – and Stephen Wolfram systematized them by their corresponding binary number.</p>
+
+<figure style="float: none">
+   <img src="/assets/image/2022_12_07_kristeic_ElementaryCARules.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>Excerpt of the Wolfram Code numbering system</figcaption>
+</figure>
+
+<p>If we now add time to the equation and iterate over the grid and change each cell’s state with a new generation we get this. The starting condition is a single cell with a 1 - a seed.</p>
+
+<figure>
+   <img src="/assets/image/2022_12_07_kristeic_rule90_evolving.gif" style="max-height:400px; width:auto;" />
+   <figcaption>20 generation of Rule 90 in one row</figcaption>
+</figure>
+
+<p>We could also add a new row for each new generation and we get the following for rule 90.</p>
+
+<figure>
+   <img src="/assets/image/2022_12_07_kristeic_rule90.gif" style="max-height:400px; width:auto;" />
+   <figcaption>40 generations of Rule 90 </figcaption>
+</figure>
+
+<p>The grid evolves a pattern over time! It is an example of a set of simple rules that can produce
+complex behavior and I think the idea is beautiful.</p>
+
+<figure>
+   <img src="/assets/image/2022_12_07_kristeic_Elementary.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>Excerpt of Wolfram's code over 16 generations</figcaption>
+</figure>
+<p> </p>
+<h2 id="conways-game-of-life">Conway’s game of life</h2>
+<p><img align="right" width="100" height="100" src="/assets/image/2022_12_07_kristeic_Glider.gif" /></p>
+
+<p>I want to introduce an implementation – certainly the most famous one- of the idea on a 2 -dimensional grid – the Game of Life (<a href="https://www.youtube.com/watch?v=R9Plq-D1gEk">listen to</a> John Conway’s retrospective on his creation.)
+It is fun watching it evolve over time, and most importantly,  it is <a href="https://en.wikipedia.org/wikiConway%27s_Game_of_Life">Turing complete</a> which allows it to do <a href="https://www.youtube.com/watch?v=xP5-iIeKXE8">this</a>. With a balanced but simple set of rules it is capable of universal computation!</p>
+
+<p>The following table shows Stephen Wolfram’s behaviour classification for the elementary rule sets according to their outcome over time. The same classification can be applied to 2-D Cellular Automata.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">Class1 : Stable</th>
+      <th style="text-align: center">Class 2: Repetitive or Stable</th>
+      <th style="text-align: center">Class 3: Random</th>
+      <th>Class 4: Complex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1 D</td>
+      <td style="text-align: center">Rule 222 <img src="/assets/image/2022_12_07_kristeic_rule222.jpg" alt="" /></td>
+      <td style="text-align: center">Rule 90 <img src="/assets/image/2022_12_07_kristeic_rule90.jpg" alt="" /></td>
+      <td style="text-align: center">Rule 30 <img src="/assets/image/2022_12_07_kristeic_rule30.jpg" alt="" /></td>
+      <td>Rule 110 <img src="/assets/image/2022_12_07_kristeic_rule110.jpg" alt="" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 D</td>
+      <td style="text-align: center">Aircraft Carrier <img src="/assets/image/2022_12_07_kristeic_aircraftcarrier.png" alt="" /></td>
+      <td style="text-align: center">Gosper Glidergun<img src="/assets/image/2022_12_07_kristeic_Gosperglidergun.gif" alt="" /></td>
+      <td style="text-align: center"> </td>
+      <td>Switch Engine (initial state)<img src="/assets/image/2022_12_07_kristeic_Switchengine.png" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The concept of Cellular Automata has extensive usecases, for example in pattern recognition,
+theoretical modelling, encoding (Rule 30 as a pseudorandom number generator) or – Music.</p>
+
+<p>Cellular Automata represent a type of computational thinking I can really relate to.
+My Pure Data patch is a prototype for a final module I like to use for composition. It can only produce rule 90 at the moment, which is a Class 2 CA so it’s repetitive, and consists of 16 cells, but I aim at making it generic depending on input and give it more cells. Anyway, the current state is great for defining rhythmic patterns or melody lines without having too much randomness in there. And it blinks quite nice. Give it a listen down below.</p>
+
+<figure>
+   <img src="/assets/image/2022_12_07_kristeic_CA_module.gif" style="max-height:600px; width:auto;" />
+   <figcaption>My CA module alone in the wild</figcaption>
+</figure>
+
+<p>CA module and parts of other patches play together. Check my <a href="https://github.com/shx-vhs/pd-cellular-automaton">github</a> for the file.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2022_12_07_kristeic_presentation.mp4" type="video/mp4" />
+  </video>
+</figure>
+
+<h2 id="references">References</h2>
+<p><a href="https://mathworld.wolfram.com/CellularAutomaton.html">https://mathworld.wolfram.com/CellularAutomaton.html</a></p>
+
+<p><a href="https://playgameoflife.com">Game of Life online</a></p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2022/12/08/kristeic-cellular-automata.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

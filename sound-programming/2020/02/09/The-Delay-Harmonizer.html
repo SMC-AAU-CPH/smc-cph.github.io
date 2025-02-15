@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Delay Harmonizer | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="The Delay Harmonizer" />
+<meta name="author" content="Thibault Jaccard" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This chord generator uses a variable length delay fed by a microphone input as sound source." />
+<meta property="og:description" content="This chord generator uses a variable length delay fed by a microphone input as sound source." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/09/The-Delay-Harmonizer.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/09/The-Delay-Harmonizer.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_09_aleksati_delay_harmonizer.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-09T18:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_09_aleksati_delay_harmonizer.jpg" />
+<meta property="twitter:title" content="The Delay Harmonizer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Thibault Jaccard"},"dateModified":"2020-02-09T18:00:00+00:00","datePublished":"2020-02-09T18:00:00+00:00","description":"This chord generator uses a variable length delay fed by a microphone input as sound source.","headline":"The Delay Harmonizer","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_02_09_aleksati_delay_harmonizer.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/09/The-Delay-Harmonizer.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Thibault Jaccard"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2020/02/09/The-Delay-Harmonizer.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      The Delay Harmonizer
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-02-09T18:00:00+00:00"
+        itemprop="datePublished"
+      >Feb 9, 2020 •
+      </time>
+         
+      <a href="/authors/thibaultjaccard.html">Thibault Jaccard</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="overview">Overview</h2>
+
+<p>This project consists of a four notes chord generator, using a microphone feeding a variable-length delay. The length of the delay is determined by the desired MIDI pitch, and four delays are used to generate the four notes. The sound source (microphone) is then used to choose the timbre of the resulting sound. Indeed, even if the fundamental frequency and so the pitch is independent of the sound source, the harmonics are determined by which sound is fed into the microphone. The same sound source is used to feed all four delays, so the whole chord has a common timbre.</p>
+
+<h2 id="system">System</h2>
+<h1 id="chord-selection">Chord selection</h1>
+
+<p>To choose the chord(s), two methods are possible. The first is using the chord selector, which consist of three selectors, the key (arranged in fifths, Db = 0, Ab = 1, …, F# = 11), the type (major = 0 and melodic minor = 1) and the degree (I = 0, II = 1, …, VII = 6). The latter defines which chord within the chosen scale will be sent. For example, let’s consider the C major key. The degree I will be the C major quadriad (Cmaj7), the degree II will be Dm7, then III = Em7, IV = Fmaj7, V = G7, VI = Am7 and VII = Bm7b5. Those three selectors can be found in the middle left part of the patch shown in the image below. One limitation of this system is that sixth, ninth, eleventh and thirteenth chords cannot be accessed, as well as diminished seventh, sus, and any other types. But as every key is available, there are still a lot of chord progression possibilities. Those three selectors can either be accessed in the patch or using a Launchpad Pro, for which the pads are mapped to show colors corresponding to the PD selectors. The latter is the best solution, as it does not require the use of a mouse, and is therefore way more playable.</p>
+
+<figure>
+ <img src="/assets/image/2020_02_09_aleksati_delay_harmonizer.jpg" align="center" alt="Pure Data patch" />
+ <figcaption>Pure Data patch (UI) of the Delay Harmonizer</figcaption>
+</figure>
+
+<p>The second chord selection method is by programming a sequence, shown in the bottom part of the patch image. The chord sequencer is eight steps long (but could easily be extended), and consists of three voices (key, type, and degree). For sake of clarity, the degree numbers are offset by 1, in order to have the correspondence I = 1, II = 2, etc. The tempo can also be determined, by changing the metro object’s creation argument (inside the subpatch content). Once the sequencer messages are changed, one has to click the set sequence button in order to update the values in the sequencer. The logic for the chord selection is in the chordselector subpatch.</p>
+
+<h1 id="other-elements">Other elements</h1>
+
+<p>Each delay voice has a limiter, in order to avoid saturation. Thes are then mixed together, and the user is given the possibility to change the volume of each voice independently (middle right of the patch). The total mix of then sent to a flanger effect (frequency and depth can be modulated), and finally a VCF (frequency and Q can be modulated).</p>
+
+<p>The other accessible parameters are the minimum MIDI note, which basically corresponds to the octave at which the chords are played (the root note can be up to 2 octaves lower than the rest, in order to have a bass sound), and the delay gain, whose modification leads to changing reverb time of chords. Both these paramters are modified on the UI patch, as shown on the patch picture. A gain of one gives infinite droning chord. A gain of 0.9 lets the user play chords rhythmically.
+The main use case of this patch is to harmonize a percussive track, like beatboxing of just claps. Other good sounds can be obtained too. For instance, with my cheap PC microphone, I obtained a very interesting sound by moving a cup around on the table. It’s also great to tap on the microphone or to click your tongue. A demonstration of the resulting sound generated by these excitation can be heard in the following recording.</p>
+
+<p align="center">
+  <iframe frameborder="0" width="500" height="100" src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2020_02_09_thibaulj_delayharmonizer.mp3">
+  </iframe>
+</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2020/02/09/The-Delay-Harmonizer.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

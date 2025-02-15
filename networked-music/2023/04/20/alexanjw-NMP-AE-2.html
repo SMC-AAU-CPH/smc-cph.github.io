@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Audio Engineering for NMPs: Part 2 | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Audio Engineering for NMPs: Part 2" />
+<meta name="author" content="Alexander Wastnidge" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A deeper dive into mixer work for NMPs" />
+<meta property="og:description" content="A deeper dive into mixer work for NMPs" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/20/alexanjw-NMP-AE-2.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/20/alexanjw-NMP-AE-2.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_23_alexjw_nmps_ae_equip.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_23_alexjw_nmps_ae_equip.jpg" />
+<meta property="twitter:title" content="Audio Engineering for NMPs: Part 2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexander Wastnidge"},"dateModified":"2023-04-20T00:00:00+00:00","datePublished":"2023-04-20T00:00:00+00:00","description":"A deeper dive into mixer work for NMPs","headline":"Audio Engineering for NMPs: Part 2","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2023_04_23_alexjw_nmps_ae_equip.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/20/alexanjw-NMP-AE-2.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Alexander Wastnidge"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2023/04/20/alexanjw-NMP-AE-2.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Audio Engineering for NMPs: Part 2
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2023-04-20T00:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 20, 2023 •
+      </time>
+         
+      <a href="/authors/alexanderwastnidge.html">Alexander Wastnidge</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p>Building on the previous <a href="https://SMC-master.github.io/portal/2022/11/24/alexanjw-audio-engineering-nmps.html">blog post</a>, which offers a high level overview of the extra considerations for audio engineers working with Network Music Performances (NMPs), this post will take a detailed look at examples for audio routing, with particular focus on the mixer and ADC/DAC.</p>
+
+<h4 id="video-tutorial">Video Tutorial</h4>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ifYwDc8nebI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p>This video tutorial covers the details and considerations for two key methods of audio routing for NMPs.  These are summarized below:</p>
+
+<h5 id="sending-via-auxiliary-sends">Sending Via Auxiliary Sends</h5>
+<p>Using auxiliary sends for audio routing represents a simple and efficient method for sending audio over a network.  Using one or a pair of aux sends results in a mono or stereo summed signal, akin to sending a monitor/foldback mix to performers.</p>
+
+<p>Receiving this signal requires only a single mono or stereo input on the receiving mixing desk, which can be bussed to FOH or foldback as needed.</p>
+
+<p>Being only a mono or stereo audio feed, its load on the network connection is minimal.  This does however, come at the expense of flexibility and control for the engineer receiving it.  They cannot control the relative volumes of instruments in the feed, meaning that if changes to the mix are need they must contact the remote engineer to alter it.</p>
+
+<h5 id="sending-via-sub-groups">Sending Via Sub-Groups</h5>
+<p>Sending via sub-groups on the other hand, offers greater flexibility for the corresponding audio engineer at the expense of greater network load.  In the video demonstration, four channels of audio are sent over the network, doubling the amount of audio information compared to the first example. Whether this is a viable approach will depend on the network system being used, as well as its stability and latency, which is outside the scope of this tutorial.</p>
+
+<p>The advantage of this method is that the receiving engineer is given separate instrument feeds which can be patched into the mixer and processed in a way similar to any of the other local sources present.  This does however, also necessitate a mixer with a channel count able to accommodate both the local and remote sound sources.</p>
+
+<h4 id="conclusion-and-further-considerations">Conclusion and Further Considerations</h4>
+<p>This tutorial and blog post has looked at the specifics of working with the mixer and ADC/DAC in the context of NMPs, demonstrating two key methods and concepts for sending and receiving audio over a network.</p>
+
+<p>As stated, the two methods shown do not have to be used in isolation.  They can be used asynchronously across the two locations for a “best of both worlds” scenario taking the techniques most appropriate for each engineer’s needs.  For more complex sessions they can also be combined to provide control over a greater number  of channels.</p>
+
+<p>An alternative for more advanced users, would be to split the incoming signals. One feed would be sent to the mixer but would only be used for FOH mixing and foldback. The second feed would be sent directly to the ADC, bypassing the mixer and any need to send network audio via it at all.  This represents a setup with the greatest amount of flexibility and complexity.  It essentially builds on the concept of having separate FOH and foldback engineers in that it adds another separate stream of audio which would ideally be handled by another dedicated member of personnel.  Again, this method would only be recommended where ensembles are large enough that the added channel count is necessary, the network system used is robust enough to carry the higher number of audio streams, and where engineers are suitably familiar with the previously covered techniques for audio engineering for NMPs.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2023/04/20/alexanjw-NMP-AE-2.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

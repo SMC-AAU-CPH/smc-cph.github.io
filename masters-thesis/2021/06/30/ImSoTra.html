@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ImSoTra | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ImSoTra" />
+<meta name="author" content="Shreejay Shrestha" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Footfall induced noise in buildings is traditionally assessed with Impact Sound Transmission (IST) measurements following diffuse field model of the receiving room which is not valid below Schröder frequency neither it facilitates auralization. This master thesis aims to create a method to estimate low frequency (LF) sound pressure in the receiving room below Schröder frequency based on modal sum theory in room acoustics followed by measurement of IST, impulse response of the receiving room and acceleration of the main floor at two fixed position in two vertically adjacent laboratories." />
+<meta property="og:description" content="Footfall induced noise in buildings is traditionally assessed with Impact Sound Transmission (IST) measurements following diffuse field model of the receiving room which is not valid below Schröder frequency neither it facilitates auralization. This master thesis aims to create a method to estimate low frequency (LF) sound pressure in the receiving room below Schröder frequency based on modal sum theory in room acoustics followed by measurement of IST, impulse response of the receiving room and acceleration of the main floor at two fixed position in two vertically adjacent laboratories." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/06/30/ImSoTra.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/06/30/ImSoTra.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_06_30_shreejas_intro.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-30T08:15:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_06_30_shreejas_intro.jpg" />
+<meta property="twitter:title" content="ImSoTra" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shreejay Shrestha"},"dateModified":"2021-06-30T08:15:00+00:00","datePublished":"2021-06-30T08:15:00+00:00","description":"Footfall induced noise in buildings is traditionally assessed with Impact Sound Transmission (IST) measurements following diffuse field model of the receiving room which is not valid below Schröder frequency neither it facilitates auralization. This master thesis aims to create a method to estimate low frequency (LF) sound pressure in the receiving room below Schröder frequency based on modal sum theory in room acoustics followed by measurement of IST, impulse response of the receiving room and acceleration of the main floor at two fixed position in two vertically adjacent laboratories.","headline":"ImSoTra","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2021_06_30_shreejas_intro.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/06/30/ImSoTra.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Shreejay Shrestha"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/masters-thesis/2021/06/30/ImSoTra.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      ImSoTra
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-06-30T08:15:00+00:00"
+        itemprop="datePublished"
+      >Jun 30, 2021 •
+      </time>
+         
+      <a href="/authors/shreejayshrestha.html">Shreejay Shrestha</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure>
+    <img src="/assets/image/2021_06_30_shreejas_intro.jpg" width="71%" align="center" />
+    <figcaption>Figure 1: IST from footfal in buildings</figcaption>
+</figure>
+
+<p>This blog post contains an overview of my master thesis. For more detail explanation, please check my <a href="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/document/2021_06_30_shreejas_final_thesis_2021.pdf">final report</a>. Digital files associated with the study including matlab scripts, original recording of sound pressure in the receiving room and the corresponding auralized sound pressure for the three sound sources can be found <a href="https://github.com/shreejayshrestha/Master_Thesis_SMC_2021">here</a>. A video demonstrating measurement process is also included at the end of the blog post.</p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Footfall induced noise in buildings is traditionally assessed with Impact Sound Transmission (IST) measurements following diffuse field model of the receiving room which is not valid below Schröder frequency neither it facilitates auralization. This master thesis aims to create a method to estimate low frequency (LF) sound pressure in the receiving room below Schröder frequency based on modal sum theory in room acoustics followed by measurement of IST, impulse response of the receiving room and acceleration of the main floor at two fixed position in two vertically adjacent laboratories. The study also aims to create monoaural auralization of the sound pressure with a hypothesis that the impulse response of the combined system of floor and receiving room can be used to synthesize the acoustic sound pressure at listening positions in the receiving room.</p>
+
+<p>The method to create the LF-sound pressure in the receiving room was found to be working to some degree with the main floor showing comparatively higher modal density. More accurate results can be achieved by measuring acceleration of the floor at multiple points. Similarly, the auralization method worked between 20-200Hz with some errors and more accurate results can be accomplished by measuring force signals at higher sampling rate and a more precise calculation of impulse response of the coupled system.</p>
+
+<h2 id="background--introduction">Background &amp; Introduction</h2>
+
+<p>Sound can be a pleasing music or a disturbing noise which can also be hazardous to human health. Sound and noise are often used interchangeably. Although the average human hearing ability is very weak towards <em>low frequencies</em>, studies have found that Low Frequency (LF) noise can cause serious health effects even at low sound pressure levels. Sounds produced from engines, fans or traffic are few examples of Low Frequency (LF) sounds that are in abundance in urban environment. LF-noise are also common in apartments and multi-unit dwellings which are produced through <em>Impact Sound Transmission</em> (IST) from human footfall. Residents in apartments and multi-unit dwellings often complain such LF-noise from neighbouring apartments.</p>
+
+<p>The measurement of IST in buildings is traditionally done while following the diffuse-field model of the receiving room. Sound field in rooms at low frequencies do not fall under the domain of diffuse-field. Therefore the sound pressure levels estimated by such models may not be accurate at very low frequencies. Moreover, the traditional approach do not facilitate <em>auralization</em> that allows to perceive/analyse sounds through listening.</p>
+
+<p>The title of my master thesis is <strong>Study of Low Frequency Impact Sound Transmission For Auralization</strong>. The focus is on the study of Low Frequency (LF) noise induced by footsteps in buildings based on measurements of IST and acceleration of the floor followed by auralization of the measured sound pressure in the receiving room. The study estimates the LF-sound pressure/ sound pressure spectrum in the receiving room based on the modal sum theory in room acoustics. A hypothesis that the impulse response of the combined system of floor and receiving room can be used to synthesize the acoustic sound pressure at listening positions in the receiving room, is cosidered for the auralization.</p>
+
+<h2 id="method-and-implementation">Method and Implementation</h2>
+
+<figure style="float: none">
+<img src="/assets/image/2021_06_30_shreejas_Measurement_scheme.jpg" width="60%" align="center" />
+<figcaption>Figure 2: Measurement and Analysis Scheme</figcaption>
+</figure>
+
+<p>A sketch of the measurement and analysis method opted in this study is presented in figure 2. The measurements of IST were followed by analytical estimation of the sound pressure level/sound pressure spectrum as well as auralization of the transmitted sound in the receiving room. Theoretical sound pressure and resonance frequency of the receiving room were estimated by applying the <em>modal sum</em> theory. The room resonance frequencies were validated by measuring the <em>Impulse Response</em> (IR) of the receiving room. Finally, subjective analysis of the auralization was performed by presenting author’s reflection on the percieived sounds through headphones while comparing the measured (original) and the corresponding auralized sounds.</p>
+
+<h3 id="measurement-of-ist--ir">Measurement of IST &amp; IR</h3>
+
+<p>For specification/ list of the equipment used in this study, please refer table 4.1 in the final report.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2021_06_30_shreejas_laboratories.jpg" width="70%" align="center" />
+  <figcaption>Figure 3: Laboratories used for the IST measurment</figcaption>
+</figure>
+
+<p>The measurements of IST were conducted at two vertically adjacent laboratories at the Gløshaugen campus, NTNU in Trondheim namey Lydrom 2 and Lydrom 3 on upper and lower level respectively (figure 3). Three sound sources were selected which are; 1) medisin ball (a type of rubber ball), 2) Footstep with shoes (soft sole sport shoes) and 3)Footstep without shoes. For auralization, the ground force reaction of each of the sound sources were measured with a vernier force plate at a sampling rate of 1000 Hz as shown in figure 4.</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2021_06_30_shreejas_Force_measure.jpg" width="50%" align="center" />
+  <figcaption>Figure 4: Ground force reaction measurement</figcaption>
+</figure>
+
+<p>Similalry, five excitation points and two accelerometer positions (figure 5a) were marked on the floor in the sending room (figure 5b). Each sound source was used to excite the floor at each excitation point. The acceleration of the floor was measured at the two fixed points while the induced sound pressure was measured at a corner position in the receiving room (figure 5c).</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2021_06_30_shreejas_Floorplan_excitation_pts.jpg" width="60%" align="center" />
+  <figcaption>Figure 5: Floor plan and positions of excitation points and accelerometers</figcaption>
+</figure>
+
+<p>The IST measurements were taken in three sessions, one for each of the three sound sources. Each session included ten sets of measurements of both sound pressure in the receiving room and acceleration of the floor in the sending room at each of the five excitation points for the corresponding sound source. One such set of measurement was taken by exciting the floor at an excitation point followed by a silence of 12-15 seconds. In the case of medisin ball, excitation was made by dropping the ball manually (figure 6a), on each point and catching it on the rebound. All three sessions (except measurement of acceleration) were repeated on a small section of floating floor that consisted of two layers of rockwool (20mm thick) and two layers of Expanded polystyrene (EPS) (one with 20mm and another with 25mm thickness).</p>
+
+<figure style="float: none">
+  <img src="/assets/image/2021_06_30_shreejas_measuring_IR_imsotra.jpg" width="70%" align="center" />
+  <figcaption>Figure 6: Measuring IST and IR</figcaption>
+</figure>
+
+<p>The IR was measured by placing a microphone at 5 different source positions on the ceiling and a homemade looudspeaker at a corner in the receiving room (figure 6b). The source and the listening positions were replicated from the corresponding positions in the IST measurements. The IR of the
+room was measured/calculated by following the method of DFT-based deconvolution using a log-sweep as an excitation signal while using EASERA software.</p>
+
+<h3 id="auralization">Auralization</h3>
+
+<figure style="float: none">
+  <img src="/assets/image/2021_06_30_shreejas_Aimsotra.jpg" width="50%" align="center" />
+  <figcaption>Figure 7: Creatiing Auralization signals</figcaption>
+</figure>
+
+<p>The auralized signals for each of the three sound sources were calculated by convolving the impulse response of the coupled system of floor and the receiving room with the measured ground force reaction of the corresponding sound source (figure 7). The impulse response of the coupled system was determined by convolving the measured sound pressure of the medisin ball with an equilization filter. For simplicity, a model of the force signal of medisin ball was created and the equilization filter was calculated based on the model of the force signal.</p>
+
+<h2 id="results--conclusion">Results &amp; Conclusion</h2>
+
+<h3 id="dynamic-response-sound-pressure-level--sound-pressure-spectrum">Dynamic response, Sound pressure level &amp; Sound Pressure Spectrum</h3>
+
+<p>The simplified approach of studying the dynamic response of the main floor by measuring the acceleration of the floor at two fixed positions for all excitations did not seem to be enough. The method did not reveal many modes of vibration. It did not provide enough information on amplitude of vibration which did not allow to perform an accurate estimation of sound pressure level in the receiving room. Therefore measurements of acceleration of floor at many points are required to get more accurate estimation of the sound pressure level by using the modal sum method. On the other hand, the estimated sound pressure spectrum was very close to the measured values.</p>
+
+<h3 id="auralization-1">Auralization</h3>
+<p>For the three sound sources, 6 audiofiles are presented below that contain the measured sound pressure and the corresponding auralized sound pressure in the receiving room. The sounds play in an ascending order from excitation point P1 through P5. All the soundfiles can be downloaded from <a href="https://github.com/shreejayshrestha/Master_Thesis_SMC_2021">here</a>, if for any reasons the sounds are not playable below.</p>
+
+<figure align="middle">
+    <audio controls="">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_06_30_shreejas_mb_orig.wav" type="audio/wav" />
+      Audio 1: Measured sound pressure for excitation with medisin ball
+    </audio>
+    <figcaption>Audio 1: Measured sound pressure for excitation with medisin ball</figcaption>
+  </figure>
+
+<figure align="middle">
+  <audio controls="">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_06_30_shreejas_mb_aur.wav" type="audio/wav" />
+   Your browser does not support the audio element.
+  </audio>
+  <figcaption>Audio 2: Auralized sound pressure for excitation with medisin ball</figcaption>
+  </figure>
+
+<figure align="middle">
+  <audio controls="">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_06_30_shreejas_with_shoes_orig.wav" type="audio/wav" />
+   Your browser does not support the audio element.
+  </audio>
+  <figcaption>Audio 3: Measured sound pressure for excitation with footstep with shoes</figcaption>
+  </figure>
+
+<figure align="middle">
+  <audio controls="">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_06_30_shreejas_with_shoes_aur.wav" type="audio/wav" />
+   Your browser does not support the audio element.
+  </audio>
+  <figcaption>Audio 4: Auralized sound pressure for excitation with footstep with shoes</figcaption>
+  </figure>
+
+<figure align="middle">
+  <audio controls="">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_06_30_shreejas_without_shoes_orig.wav" type="audio/wav" />
+   Your browser does not support the audio element.
+  </audio>
+  <figcaption>Audio 5: Measured sound pressure for excitation with footstep without shoes</figcaption>
+  </figure>
+
+<figure align="middle">
+  <audio controls="">
+      <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/audio/2021_06_30_shreejas_without_shoes_aur.wav" type="audio/wav" />
+   Your browser does not support the audio element.
+  </audio>
+  <figcaption>Audio 6: Auralized sound pressure for excitation with footstep without shoes</figcaption>
+  </figure>
+
+<figure style="float: none">
+<img src="/assets/image/2021_06_30_shreejas_aura_spectra.jpg" width="60%" align="center" />
+  <figcaption>Figure 8: Sound Pressure Spectrum at excitation point P1: Auralised Vs Original</figcaption>
+</figure>
+
+<p>The formulated hypothesis to create auralization signals was found to be affirmative based on the precision of the auralization of medisin ball excitation from 20-200Hz in 1/3 octave band. The auralization for the other two sound sources
+were found to be relatively close to the corresponding original sounds. Besides, the subjective analysis of the aurlalized signals revealed that all of the auralized signals were more boomier, more louder and contained more ringing sounds compared to their corresponding original signals. The auralized signals introduced broad band noise different from the original signals. Force signals and estimation of impulse response of the coupled system have been identified as two major influencing factor for such inaccuracies. Quality recordings of the force signals with high sampling rate, sound pressure signals with high signal to noise ratio and precise inverser filter can contribute in calculating a more accurate impulse response of the coupled system to get more accurate auralization results while applying the current method.</p>
+
+<h2 id="future-works">Future works</h2>
+
+<p>One of the future works could be to study the vibration pattern of the floor more in
+detail and do a structural modal analysis to understand causes of the resonance
+frequencies and the vibration patterns of the main floor and floating floor.</p>
+
+<p>Similarly, acceleration of the floor can be measured at many points on the floor so that
+maximum vibrating modes of the floor could be captured in the measurement. The impact sound transmission can be measured at several listening positions in the receiving room. The amplitude of the sounds generated in a room are affected by the
+room modes and this could be compared/studied well if measurements are taken at several listening positions.</p>
+
+<p>Similalry, a more accurate impulse response of the system can be calculated in two ways which are; 1) Designing a more precise inverse filter 2) Using a new equipment like shakers for example which can directly measure the
+impulse response of the coupled system. This setup will work almost in the same way like the method used to calculate the IR of the receiving room in this study. Besides, auralization could also be performed at a higher level by addressing directionality of the sounds in the receiving room either working with binaural approach or multi-channel spatial audio techniques.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2021_06_30_shreejas_measuremet_process_comp2.mp4" type="video/mp4" />
+   Demo of the Measurement process
+  </video>
+  <figcaption>Demo of the Measurement process</figcaption>
+</figure>
+
+</div>
+
+  
+
+  <a class="u-url" href="/masters-thesis/2021/06/30/ImSoTra.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

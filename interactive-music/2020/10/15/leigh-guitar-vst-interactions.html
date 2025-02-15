@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Making virtual guitar playing feel more natural | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Making virtual guitar playing feel more natural" />
+<meta name="author" content="Leigh Murray" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Can using sensors, buttons and joysticks to play a virtual Guitar resemble the experience of playing a real guitar and result in a more natural performance than using a keyboard for input?" />
+<meta property="og:description" content="Can using sensors, buttons and joysticks to play a virtual Guitar resemble the experience of playing a real guitar and result in a more natural performance than using a keyboard for input?" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/15/leigh-guitar-vst-interactions.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/15/leigh-guitar-vst-interactions.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/%5Cassets%5Cimage%5C2020_10_15_leigh_strumsession.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-15T10:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/%5Cassets%5Cimage%5C2020_10_15_leigh_strumsession.jpg" />
+<meta property="twitter:title" content="Making virtual guitar playing feel more natural" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Leigh Murray"},"dateModified":"2020-10-15T10:00:00+00:00","datePublished":"2020-10-15T10:00:00+00:00","description":"Can using sensors, buttons and joysticks to play a virtual Guitar resemble the experience of playing a real guitar and result in a more natural performance than using a keyboard for input?","headline":"Making virtual guitar playing feel more natural","image":"https://smc-aau-cph.github.io/smc-cph.github.io/%5Cassets%5Cimage%5C2020_10_15_leigh_strumsession.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/15/leigh-guitar-vst-interactions.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Leigh Murray"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/interactive-music/2020/10/15/leigh-guitar-vst-interactions.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Making virtual guitar playing feel more natural
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-10-15T10:00:00+00:00"
+        itemprop="datePublished"
+      >Oct 15, 2020 •
+      </time>
+         
+      <a href="/authors/leighmurray.html">Leigh Murray</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="the-task">The Task</h1>
+
+<p><img src="/assets/image/2020_10_15_leigh_strumsession.jpg" alt="Strum Session" /></p>
+
+<p>We were given the task to create “an interactive system which you will present as a short musical performance” using any software that might suite our needs.  I had recently written a song using a VST called “Strum Session” which has electric and acoustic guitar sounds, which can either be played in the same way you would play a piano, or by holding down the chord you want to play and triggering an “up strum” or “down strum” using the lower “c” and “d” midi notes on the keyboard.</p>
+
+<p><img src="/assets/image/2020_10_15_leigh_strumsession_strum_keys.jpg" alt="Strum Keys" /></p>
+
+<h1 id="the-idea">The Idea</h1>
+
+<p>My Idea was to use two phones; one in the left had to determine the type of chord you will play, and one in the right hand for strumming.</p>
+
+<p>In the left hand, the user can press buttons on the phone’s display to determine the root note of the chord, then tilt the phone at different angles to determine the type of chord (major, minor, seventh).</p>
+
+<p>In the right hand, the user would be able to hold the phone as though it is a giant plectrum and move their hand up and down to strum the guitar.</p>
+
+<h1 id="the-implementation">The Implementation</h1>
+
+<p>I used <a href="https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&amp;hl=en&amp;gl=US">oscHook</a> on both phones. In the left hand (the phone determining chords) I am sending only the <em>pitch</em> orientation value of the Compass as OSC data to my computer and from there I send the appropriate Midi notes for the selected chord to <a href="https://www.tobias-erichsen.de/software/loopmidi.html">loopMIDI</a> which acts as a hardware midi device in Ableton.</p>
+
+<p>I found that when holding the phone as you would a fretboard, the compass <em>pitch</em> value would range from 0 degrees when the phone is horizonal to 90 when the phone is vertical. So, I simplified this value to three ranges 0-30, 30-60, 60-90 and chose to assign major, minor, and seventh chords to these ranges respectively.</p>
+
+<p>In the right hand I had a bit more trouble since there wasn’t really an appropriate sensor in the phone for this, and data is only sent every 100ms from oscHook (the experimental 50ms option crashed pretty consistently). I tried to use acceleration on the x-axis, so when there was a peak in acceleration downwards I would do a down-strum, and when there is an acceleration upwards there is an up-strum.
+There’s a few problems with this:</p>
+<ul>
+  <li>Most of the acceleration begins at the beginning of a stroke, not while it is “passing over strings” so going by peak acceleration would cause a strum before you would normally hit the strings.</li>
+  <li>Slowing down or deceleration at the end of a stroke is actually acceleration in the opposite direction of movement, so you generally get a peak in acceleration in the opposite direction of movement at the end of the strum, causing a “strum” trigger in the other direction</li>
+  <li>There’s no way to avoid strumming, for example if you only want to do downstrokes or upstrokes.</li>
+</ul>
+
+<p>The second iteration was to not use “peak” acceleration values to trigger a strum, but instead when the acceleration changes direction (acceleration values switch from positive to negative and vice versa). This occurs around the middle-end part of the strum when the user has stopped building up speed for their strum and has begun to slow down.  This created much more accuracy but still didn’t solve the problem of not being able to avoid strumming entirely when you moved your hand.
+Here is an example of this implementation in action:</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_15_leigh_strum_phone.mp4" type="video/mp4" />
+  </video>
+  <figcaption>Strumming with Phone Accelerometer</figcaption>
+</figure>
+
+<h1 id="finding-the-right-sensor">Finding the right sensor</h1>
+
+<p>I wasn’t happy with this strumming solution so I wanted to try a bunch of different sensors I have lying around to see if they could produce a more accurate reading.</p>
+
+<p>For this I used a <a href="https://www.pjrc.com/teensy/">Teensy</a> device (similar to Arduino) which I set up to behave as MIDI hardware device over USB.  I then connected a few sensors to it.</p>
+
+<p>First up is was what is commonly known as a “line tracing” sensor, but also functions as a proximity sensor.</p>
+
+<h2 id="line-traceproximity-sensor">Line Trace/Proximity Sensor</h2>
+
+<p><img src="/assets/image/2020_10_15_leigh_proximity_sensor.jpg" alt="Proximity Sensor" /></p>
+
+<p>This functioned well in that it was very accurate, but the sensitivity of the device was too low. Your hand had to pass within about half a centimetre in order to trigger it so a lot of the time you either hit the device or it doesn’t get registered as a strum because your hand is too far away.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_15_leigh_strum_proximity.mp4" type="video/mp4" />
+  </video>
+  <figcaption>Strumming with Proximity Sensor</figcaption>
+</figure>
+
+<h2 id="magnetic-door-switch">Magnetic Door Switch</h2>
+
+<p><img src="/assets/image/2020_10_15_leigh_magnetic_contact_switch.jpg" alt="Door Switch" /></p>
+
+<p>In testing this functioned the best. The distance was okay at up to 2cm and the switch was consistantly either on or off, unlike the hall effect sensor which had a mid-state and sometimes toggled between on and off when entering or exiting its sensitivity area.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_15_leigh_strum_door.mp4" type="video/mp4" />
+  </video>
+  <figcaption>Strumming with Magnetic Door Switch</figcaption>
+</figure>
+
+<h2 id="magnetic-hall-effect-sensor">Magnetic Hall Effect Sensor</h2>
+
+<p><img src="/assets/image/2020_10_15_leigh_hall_effect.jpg" alt="Hall Effect" /></p>
+
+<p>This device had the largest range but was also the least accurate because of that.  It would retrigger multiple times for the same stroke (which was eliminated in code by implementing a “cooldown” timer after each stroke) but this particular sensor also has a “half-way” point where is constently toggles between the off and on states.  This made for a cool “continuous strumming” effect after I implemented a 10ms cooldown on each stroke in my code, but it made the strumming overall less accurate.</p>
+
+<p>A problem with all the sensors above is that they are only capable of detecting “strum” or “no strum”, there’s no possibility of detecting the direction of the strum.  In testing I did put two Hall Effect sensors next to each other, and if the top sensor was triggered first it would be a down strum and if the bottom sensor was triggered first it was an up strum. Unfortunately, my two sensors had different levels of sensitivity so the results were not very consistent.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_15_leigh_strum_hall.mp4" type="video/mp4" />
+  </video>
+  <figcaption>Strumming with Magnetic Hall Effect Sensor</figcaption>
+</figure>
+
+<h2 id="joystick">Joystick</h2>
+
+<p><img src="/assets/image/2020_10_15_leigh_joystick.jpg" alt="Joystick" /></p>
+
+<p>Finally, I felt like the main thing that was missing from this feeling of strumming was a level of tactility. Thinking back to my days of playing guitar hero on play station, I decided to replicate this strumming action using a joystick module.  This enabled both up and down strums as well as the ability to either play only up or down strums.  Since your thumb is always in contact with the joystick all proximity issues were eliminated, and the results are very accurate in comparison to the options tested.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_15_leigh_strum_joystick.mp4" type="video/mp4" />
+  </video>
+  <figcaption>Strumming with Joystick</figcaption>
+</figure>
+
+<h1 id="the-performance">The performance</h1>
+
+<p>What do you do when you have a guitar? You play Wonderwall, of course. For “Copyright Reasons” I’ve only included 4 bars in this final video, but it gives you an idea of the final product.</p>
+
+<figure style="float: none">
+  <video width="auto" controls="">
+    <source src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/video/2020_10_15_leigh_strum_performance.mp4" type="video/mp4" />
+  </video>
+  <figcaption>Strumming Performance</figcaption>
+</figure>
+
+<h1 id="final-thoughts">Final Thoughts</h1>
+
+<p>Overall, I feel like this was a successful project.  Some adjustments I would make would be:</p>
+<ul>
+  <li>Remove the tilting of the chord hand to modify the chord and just make the buttons customisable so you can set them up for each song.</li>
+  <li>Currently, changing a chord immediately stops the previous chord playing (it sends an “all notes off” midi command). I would change this so that the chord is playing until the next strum is performed.</li>
+  <li>Replace the phone in the chord hand with buttons. It’s hard to find the right chord without looking if there’s no tactile feedback.</li>
+  <li>Make the “strum” note-on, note-off midi messages have a slight delay between them, as I think having no delay causes the VST play a single note sometimes instead of the full chord.</li>
+</ul>
+
+<p>Ultimately, I would try to replace this implementation with a guitar hero controller as it has the layout of a guitar and has the chord buttons, tilt sensor and strumming bar all ready to go.</p>
+
+<h1 id="code">Code</h1>
+
+<p>The Arduino code for the Teensy Strumming can be found here:</p>
+
+<p><a href="https://github.com/leighmurray/teensy-strum-session">https://github.com/leighmurray/teensy-strum-session</a></p>
+
+<p>The python code for the OSC to Midi for chord changes and strumming can be found here:</p>
+
+<p><a href="https://github.com/leighmurray/strum-session-osc-to-midi">https://github.com/leighmurray/strum-session-osc-to-midi</a></p>
+</div>
+
+  
+
+  <a class="u-url" href="/interactive-music/2020/10/15/leigh-guitar-vst-interactions.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

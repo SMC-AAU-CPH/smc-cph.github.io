@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exploring SoundJack | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Exploring SoundJack" />
+<meta name="author" content="Aleksander Tidemann, Rayam Luna, Thibault Jaccard" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SoundJack is a p2p browser-based low-latency telematic communications system." />
+<meta property="og:description" content="SoundJack is a p2p browser-based low-latency telematic communications system." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/05/SoundJack.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/05/SoundJack.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_05_aleksati_soundjack_logo.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-05T17:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_05_aleksati_soundjack_logo.jpg" />
+<meta property="twitter:title" content="Exploring SoundJack" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aleksander Tidemann, Rayam Luna, Thibault Jaccard"},"dateModified":"2020-04-05T17:00:00+00:00","datePublished":"2020-04-05T17:00:00+00:00","description":"SoundJack is a p2p browser-based low-latency telematic communications system.","headline":"Exploring SoundJack","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2020_04_05_aleksati_soundjack_logo.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/05/SoundJack.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Aleksander Tidemann, Rayam Luna, Thibault Jaccard"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/networked-music/2020/04/05/SoundJack.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Exploring SoundJack
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2020-04-05T17:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 5, 2020 •
+      </time>
+         
+      <a href="/authors/aleksandertidemann.html">Aleksander Tidemann,</a>
+           
+      <a href="/authors/rayamluna.html">Rayam Luna,</a>
+           
+      <a href="/authors/thibaultjaccard.html">Thibault Jaccard</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><p><a href="https://www.soundjack.eu/index.php">SoundJack</a> can be described as an ongoing scientific project, created and maintained by Alexander Cârot. On their webpage, SoundJack describes their services as being a browser-based low-latency communications system that provides quality and latency relevant control to the user. In out eyes, this is a pretty spot-on description. The browser UI-implementation, p2p system configuration, up to 8-channel audio support, video, and general customizability makes SoundJack a powerful and easy software to use.</p>
+
+<p><img src="/assets/image/2020_04_05_aleksati_soundjack_main.jpg" alt="browser UI" /></p>
+
+<ul>
+  <li>Compatibility: macOS, Win</li>
+</ul>
+
+<h2 id="how-to-use">How to Use</h2>
+
+<ol>
+  <li>First, create an account on SoundJacks webpage.</li>
+  <li>Download the small core application (SJC) which must run on your device before using SoundJack in the browser.</li>
+  <li>Run the application on your device and navigate to the Stage Tab in the SoundJack browser.</li>
+  <li>Configure your various audio and video settings.</li>
+  <li>Press the green arrow key next to the user(s) you want to connect to.</li>
+</ol>
+
+<p>Important: If you are using OS Mojave, or later, you might need a slightly different installation process. The steps to be taken are well documented and can be found <a href="https://www.soundjack.eu/index.php/problems">here</a>.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Speaking of documentation, the SoundJack software is especially well documented considering its ongoing scientific venture, which also might open up possibilities for us to customize and tailor the software to our needs.</p>
+
+<p>Aditionally, we experience the signifigance of the applications integrated chat where you can easily troubleshoot and connect with fellow users. with everyone logged onto SoundJack. This is great for doing solo system testing and other debugging.</p>
+
+<h2 id="the-facts">The facts</h2>
+
+<p>To measure the roundtrip latency, we ran six tests. The first three were between Switzerland and Norway while the other three were between Switzerland and Germany. For the CH-NO tests we used the computer in Norway as a mirror, output the sound received using a virtual audio bus (SoundFlower). For Germany, SoundJack offers a mirror user we could use. For both locations, we ran the test three times, with different buffer sizes.</p>
+
+<p>On the testing computer (Switzerland), we also used virtual audio busses to route audio from and to a DAW (Reaper) in order to measure exactly the delay. The complete routing is the following: Mic -&gt; DAW -&gt; vb -&gt; SJ -&gt; mirror vb -&gt; SJ -&gt; vb -&gt; DAW (vb = virtual bus, SJ = SoundJack). We obtained the following results:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Audio buffer</th>
+      <th>Network buffer</th>
+      <th>RTL [ms]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CH - NO</td>
+      <td>512</td>
+      <td>512</td>
+      <td>265 ms</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>64</td>
+      <td> </td>
+      <td>207 ms</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>128</td>
+      <td>106 ms</td>
+    </tr>
+    <tr>
+      <td>CH - DE</td>
+      <td>512</td>
+      <td>512</td>
+      <td>111 ms</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>64</td>
+      <td> </td>
+      <td>105 ms</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>128</td>
+      <td>61 ms</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We can conclude that the latency becomes small enough to let people play together when they use very low audio quality settings and are not too far away. SoundJack can therefore be useful but not in every situation.</p>
+
+<h2 id="the-cons">The Cons</h2>
+
+<p>Although SoundJack has considerable potential as a online commincations platform, they still have some obstacles to overcome in able to consider themselves as a reliable and stable candidate in fulfilling the publics’ telematic needs.</p>
+
+<p>Throughout our experimentation, we experienced numerous crashes and highly unstable audio quality despite utilizing various audio and video settings. In light of this, we contacted Cârot himself who explained that they are constantly improving and experimenting with the software, which will inevitably result in unreliable user-experiences, as of yet.</p>
+
+<p>Additionally, having a p2p system configuration will put extra demands on users’ network connectivity, more so than with other applications like zoom or skype which are tailored to providing a reliable and stable service to a broader number of people. In this sense, it seems natural to consider SoundJack as being tailored for more serious and advanced users, specifically for those who prioritize latency and customizability over general stability.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Summing up we can say that SoundJack is a very exciting contribution to the telematic software industry that provides greater freedom to its users via allowing for more network, audio, and video customization than your usual communications application. However, this can give the impression that the system is reserved for more experienced user-groups.</p>
+
+<p>But despite being tailored for more semi-advanced users, SoundJack is surprisingly easy to use and has an overwhelming amount of documentation which continues to grow. We believe that SoundJack would be an interesting addition to our portal setup as well as a worthy project to follow up on and maybe collaborate with in the near future.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/networked-music/2020/04/05/SoundJack.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

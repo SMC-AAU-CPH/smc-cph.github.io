@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Markov Chain Core in PD | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Markov Chain Core in PD" />
+<meta name="author" content="Masoud Niknafs, Nino Jakeli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Markov Chain Core in PD" />
+<meta property="og:description" content="Markov Chain Core in PD" />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/10/ninojak-masoudn-markovchain_pd_masoudn_ninoJ.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/10/ninojak-masoudn-markovchain_pd_masoudn_ninoJ.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_5.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-10T08:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_5.jpg" />
+<meta property="twitter:title" content="Markov Chain Core in PD" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Masoud Niknafs, Nino Jakeli"},"dateModified":"2022-12-10T08:00:00+00:00","datePublished":"2022-12-10T08:00:00+00:00","description":"Markov Chain Core in PD","headline":"Markov Chain Core in PD","image":"https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_5.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/10/ninojak-masoudn-markovchain_pd_masoudn_ninoJ.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Masoud Niknafs, Nino Jakeli"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sound-programming/2022/12/10/ninojak-masoudn-markovchain_pd_masoudn_ninoJ.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      Markov Chain Core in PD
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-12-10T08:00:00+00:00"
+        itemprop="datePublished"
+      >Dec 10, 2022 •
+      </time>
+         
+      <a href="/authors/masoudniknafs.html">Masoud Niknafs,</a>
+            Nino Jakeli   </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><h1 id="markov-chain">Markov chain</h1>
+<p>AA stochastic model called a Markov chain or Markov process describes a series of potential occurrences in which each event’s probability solely depends on the state obtained in the preceding event. A discrete-time Markov chain is created from a countably infinite sequence where the chain changes state at discrete time steps (DTMC). A continuous-time Markov chain is a term for a continuous-time process (CTMC). It bears Andrey’s name, a Russian mathematician, Markov<a href="https://en.wikipedia.org/wiki/Markov_chain">(Wikipedia)</a>.</p>
+
+<p>In this case, Midi data should be given into the analyzer by reading a midi file and providing its pitch input.
+Based on the current state and a set of probabilities, Markov Chains determine the following state. If this were mapped to pitch, selecting our next note would include taking into account both our present note as well as a list of potential notes and their probability.</p>
+
+<p>Markov Chains choose the next state based on the current state and a set of probabilities. As an example, here are the notes of ‘Happy Birthday’:</p>
+
+<ul>
+  <li>C4 C4 D4 C4 F4 E4</li>
+  <li>C4 C4 D4 C4 G4 F4</li>
+  <li>C4 C4 C5 A4 F4 E4 D4</li>
+  <li>Bb4 Bb4 A4 F4 G4 F4</li>
+</ul>
+
+<p>The next note in a First Order Markov Chain is determined by the current note and a set of probabilities. We can learn about the likelihood of one note following another by analyzing Happy Birthday. This table’s first column displays all of the notes in the song, followed by a list of numbers representing all of the notes that followed that pitch.</p>
+
+<ul>
+  <li>C4, C4 D4 F4 C4 D4 G4 C4 C5;</li>
+  <li>D4, C4 C4 Bb4;</li>
+  <li>E4, C4 D4;</li>
+  <li>F4, E4 C4 E4 G4;</li>
+  <li>G4, F4 F4;</li>
+  <li>A4, F4 F4;</li>
+  <li>Bb4, Bb4 A4;</li>
+  <li>C5, A4;</li>
+</ul>
+
+<p>As a result, C5 was only followed by A4. Probabilities between 0 and 1 can be measured. The likelihood of A4 being followed by C5 is one, as is the probability of A4 being followed by F4. Typically, this is represented by a table displaying the following probabilities:</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_probability.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>transition matrix</figcaption>
+</figure>
+
+<p>This table is known as a transition matrix, a state transition matrix (STM), or a transition table.</p>
+
+<p>Once we have this information, we can develop fresh material based on these probabilities. The STM can be generated by manually or by analyzing existing music or data. For example, you could load up all of Mozart’s works and construct algorithmic compositions using the same set of note probabilities.</p>
+
+<p>In this post, we’ll look at how to use PureData to automatically analyze a MIDI file and build a first order STM, which we’ll then use to construct some simple algorithmic music compositions. We’ll only use pitch in this example, but you can easily extend it to include rhythm, dynamics, or other musical components.</p>
+
+<h1 id="bulding-markov-chain-analysis-core">Bulding Markov Chain Analysis core</h1>
+
+<p>Our new matrix is saved in a data object known as a coll. When you refer to a coll with the same name (in this case, pitchMatrix), it retrieves the same data.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_1.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>markov analysis</figcaption>
+</figure>
+
+<h1 id="inside-pd-pair">Inside pd pair</h1>
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_2.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>This additional subpatch chunks up the notes into pairs here.</figcaption>
+</figure>
+
+<h1 id="pitch-generator">Pitch generator</h1>
+<p>Now we can generate pitches based on transition values.
+Beginning with a single note from our input melody, we use the length object to determine the length of the list of possible future notes. This is used as input to the random object, which selects a number at random and then selects one of the following notes from our own pitchMatrix object. In our STM MIDI, for example, if note 60 is followed by 64 62 64 65, there is. There is a 5% probability of picking 64 and a.25 chance of picking 62 or 65.</p>
+
+<figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_3.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>.</figcaption>
+   
+   
+   <figure style="float: none">
+   <img src="https://www.uio.no/english/studies/programmes/SMC-master/blog/assets/image/2022_12_10_masoudn_4.jpg" style="max-height:600px; width:auto;" />
+   <figcaption>pitch generator</figcaption>
+ </figure>  
+
+# Sources:
+[source](http://www.algorithmiccomposer.com/2010/05/algorithmic-composition-tutorial-markov.html)
+
+# Another approach:
+[Markov](https://github.com/simesky/puredata-markov-chains.html) 
+
+# Attention :
+Some versions of PD do not include coll, please consider using text object.
+
+
+  
+  
+</figure>
+</div>
+
+  
+
+  <a class="u-url" href="/sound-programming/2022/12/10/ninojak-masoudn-markovchain_pd_masoudn_ninoJ.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>

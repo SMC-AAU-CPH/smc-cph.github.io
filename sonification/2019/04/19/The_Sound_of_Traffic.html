@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Sound of Traffic - Sonic Vehicle Pathelormeter | The SMC Blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="The Sound of Traffic - Sonic Vehicle Pathelormeter" />
+<meta name="author" content="Ashane Silva, Karolina Jawad, Shreejay Shrestha" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Is it possible to transmit complex data-sets within an instance of a sound, so the content gets revealed? As communication and dissemination of information in our modern digital world has been highly dominated by visual aspects it led to the fact that the modality of sound got neglected. In order to test the hypothesis, the project presents a model for sonification of temporal-spatial traffic data, based on principle of Parametric Mapping Sonification (PMSon) technique." />
+<meta property="og:description" content="Is it possible to transmit complex data-sets within an instance of a sound, so the content gets revealed? As communication and dissemination of information in our modern digital world has been highly dominated by visual aspects it led to the fact that the modality of sound got neglected. In order to test the hypothesis, the project presents a model for sonification of temporal-spatial traffic data, based on principle of Parametric Mapping Sonification (PMSon) technique." />
+<link rel="canonical" href="https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2019/04/19/The_Sound_of_Traffic.html" />
+<meta property="og:url" content="https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2019/04/19/The_Sound_of_Traffic.html" />
+<meta property="og:site_name" content="The SMC Blog" />
+<meta property="og:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_04_19_aleksati_blog_header.JPG" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-19T15:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_04_19_aleksati_blog_header.JPG" />
+<meta property="twitter:title" content="The Sound of Traffic - Sonic Vehicle Pathelormeter" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ashane Silva, Karolina Jawad, Shreejay Shrestha"},"dateModified":"2019-04-19T15:00:00+00:00","datePublished":"2019-04-19T15:00:00+00:00","description":"Is it possible to transmit complex data-sets within an instance of a sound, so the content gets revealed? As communication and dissemination of information in our modern digital world has been highly dominated by visual aspects it led to the fact that the modality of sound got neglected. In order to test the hypothesis, the project presents a model for sonification of temporal-spatial traffic data, based on principle of Parametric Mapping Sonification (PMSon) technique.","headline":"The Sound of Traffic - Sonic Vehicle Pathelormeter","image":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2019_04_19_aleksati_blog_header.JPG","mainEntityOfPage":{"@type":"WebPage","@id":"https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2019/04/19/The_Sound_of_Traffic.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://smc-aau-cph.github.io/smc-cph.github.io/assets/image/2022_07_20_stefanof_SMC_logo_grey.png"},"name":"Ashane Silva, Karolina Jawad, Shreejay Shrestha"},"url":"https://smc-aau-cph.github.io/smc-cph.github.io/sonification/2019/04/19/The_Sound_of_Traffic.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://smc-aau-cph.github.io/smc-cph.github.io/feed.xml" title="The SMC Blog" /></head>
+<body><header class="site-header" role="banner"><div class="hamburger-menu-container">
+  <nav>
+    <ul>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Topics</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+          
+          <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+          
+          <li><a href="/motion-capture/">Embodied Interaction</a></li>
+          
+          <li><a href="/networked-music/">Networked Music</a></li>
+          
+          <li><a href="/sonification/">Sonification</a></li>
+          
+          <li><a href="/sound-programming/">Sound Processing</a></li>
+          
+          <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+          
+          <li><a href="/other/">Other</a></li>
+          
+          <li><a href="/alltopics/">All Topics</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+
+        <a href="#" class="drop-btn-hamburger" onclick="handleMenuClick(this)"
+          >Projects</a
+        >
+        <ul class="dropdown-hamburger">
+          
+          <li><a href="/mini-projects/">Course Mini Projects</a></li>
+          
+          <li><a href="/applied-projects/">Semester Projects</a></li>
+          
+          <li><a href="/masters-thesis/">Master's Theses</a></li>
+          
+          <li><a href="/projects/">All Projects</a></li>
+          
+        </ul>
+
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/people/">People</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/about/">About</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/Guides/">Guides</a>
+        
+      </li>
+      
+      <li class="page-link-hamburger">
+        
+        <a href="/search/">Search</a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+<div class="wrapper">
+        <div class="title-and-logo-wrapper">
+            <a href="/">
+                <img class="site-logo" src="/assets/image/2022_07_20_stefanof_SMC_logo_grey.png" />
+            </a>
+            <p class="site-title">
+            The SMC Blog
+            </p>
+        </div>
+
+        <nav class="site-nav">
+        <ul>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Topics</a>
+                <ul class="dropdown">
+                
+                <li><a href="/interactive-music/">New Interfaces for Musical Expression (NIME)</a></li>
+                
+                <li><a href="/machine-learning/">Machine Learning for Media Experiences</a></li>
+                
+                <li><a href="/motion-capture/">Embodied Interaction</a></li>
+                
+                <li><a href="/networked-music/">Networked Music</a></li>
+                
+                <li><a href="/sonification/">Sonification</a></li>
+                
+                <li><a href="/sound-programming/">Sound Processing</a></li>
+                
+                <li><a href="/spatial-audio/">Spatial User Interfaces</a></li>
+                
+                <li><a href="/other/">Other</a></li>
+                
+                <li><a href="/alltopics/">All Topics</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+
+                <a href='#' class="drop-btn" onclick="handleMenuClick(this)">Projects</a>
+                <ul class="dropdown">
+                
+                <li><a href="/mini-projects/">Course Mini Projects</a></li>
+                
+                <li><a href="/applied-projects/">Semester Projects</a></li>
+                
+                <li><a href="/masters-thesis/">Master's Theses</a></li>
+                
+                <li><a href="/projects/">All Projects</a></li>
+                
+                </ul>
+
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/people/">People</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/about/">About</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/Guides/">Guides</a>
+            
+            </li>
+            
+            <li class="page-link">
+            
+                <a href="/search/">Search</a>
+            
+            </li>
+            
+        </ul>
+        </nav>
+        <nav class="hamburger-icon-nav"><div class="hamburger-icon-container" onclick="handleHamburgerClick(this)">
+  <div class="hamburger-icon-div hamburger-bar1"></div>
+  <div class="hamburger-icon-div hamburger-bar2"></div>
+  <div class="hamburger-icon-div hamburger-bar3"></div>
+</div>
+</nav>
+    </div>
+
+  <script src="/utils/jquery.js"></script>
+  <script src="/utils/hamburger-nav.js"></script>
+  <script src="/utils/nav-dropdown-click-handler.js"></script>
+</header>
+<main class="page-content" aria-label="Content">
+
+      <div class="wrapper">
+        <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline" align="left">
+      The Sound of Traffic - Sonic Vehicle Pathelormeter
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2019-04-19T15:00:00+00:00"
+        itemprop="datePublished"
+      >Apr 19, 2019 •
+      </time>
+         
+      <a href="/authors/ashanesilva.html">Ashane Silva,</a>
+           
+      <a href="/authors/karolinajawad.html">Karolina Jawad,</a>
+           
+      <a href="/authors/shreejayshrestha.html">Shreejay Shrestha</a>
+        </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody"><figure>
+<img src="/assets/image/2019_04_19_aleksati_blog_header.JPG" width="100%" align="center" />
+  <figcaption>Figure1: The Sound of Traffic</figcaption>
+</figure>
+
+<h2 id="introduction">Introduction</h2>
+<p>During the sonification Lecture series, we were exposed to fascinating concepts and theories behind sonification, sound design and their applications. Our primary goal was to explore the techniques that we learned and put them into practice in order to understand a real-world problem. After searching and referring so much available data we finally decided to work on traffic vehicle data from 3 regions in England measured over 17 years. Is it possible to transmit complex datasets within an instance of a sound, so the content gets revealed? As communication and dissemination of information in our modern digital world has been highly dominated by visual aspects it led to the fact that the modality of sound got neglected. In order to test the hypothesis, the project presents two prototypes for the sonification of temporal-spatial traffic data. While looking for similar projects, it was striking that ‘sonification of traffic’ is mainly applied for internet- and network traffic. In order to better comprehend data-streams and detect abnormal patterns for example. There is one project though with an approach very close to our experiment, found on <a href="http://www.lalistens.org/sonifying-traffic-data/">LA-Listen</a> by Steven Kemper. It extracts data from field recordings of moving vehicles and uses SuperCollider to generate Midi files aiming to use sound to further articulate patterns in the sonic data.</p>
+
+<p>As stated earlier, we had been introduced with various facets of sonification from artistic and or qualitative approach like Øyvind Brandtsegg’s <a href="https://www.ntnu.no/flyndresang" target="_blank"><strong>Flyndre Project</strong></a> or Daniel Formo’s <a href="https://orchestraofspeech.com/results/software-instrument-system/" target="_blank"><strong>Orchestra of Speech</strong></a> to a combination of both artistic and quantitative approach like <a href="https://sonification.de/handbook/chapters/chapter15/#S15.3" target="_blank"><strong>sound examples by T. Hermann, A. Hunt and J.G. Neuhoff</strong></a> taken from <strong>chapter15</strong> ( e.g. example #S15.3 ) from , <a href="https://sonification.de/handbook" target="_blank"><strong>The Sonification handbook (Hermann, T., Hunt, A., &amp; Neuhoff, J. G., 2011)</strong></a>
+and so on. Our idea was quite like the latter approach. Hence, we decided to go for <strong>Parameter Mapping Sonification (PMSon)</strong> technique. In this technique, a data set is mapped with different parameter of sound synthesis which produce sound signals. Further, as per the definition of Sonification by Thomas Hermann (2008), a true sonification should have the following four attributes; (1) the sound should reflect objective properties or relation in the input data, (2) the transformation is systematic, (3) the sonification is reproducible, and (4) the system can be used with different data sets. Through <strong>PMSon technique</strong>, both of our prototyes meet these four criterias.</p>
+
+<h2 id="data-set">Data set</h2>
+<figure>
+<img src="/assets/image/2019_04_19_aleksati_map_3region.jpg" width="90%" align="center" />
+  <figcaption>Figure 2: Method for Selecting Data</figcaption>
+</figure>
+
+<p>The data has been collected from <a href="https://www.dft.gov.uk/traffic-counts/download" target="_blank"><strong>The Department of Transport, U.K.</strong></a> It includes <strong>Annual Average daily Flow (AADF)</strong> of buses/coaches, cars/taxies and motorbikes for three regions of England from 2000 to 2017. The three regions include the North East, the West Midlands &amp; the South East which have been chosen based upon their population as shown in Figure 2. The primary data includes number of vehicles, but they are segregated into numerous divisions of road types for each region. Shreejay made a <a href="https://github.com/shreejayshrestha/SMC4046_Sonification_Project/blob/master/matlab%20script/read_data.m" target="_blank">matlab script</a> to refine the data as per our requirement. The script reads the raw data of each region of choice at a time and writes them into an excel sheet by calculating the total number of vehicles in the region in each year and exports them as in CSV file format.</p>
+
+<h2 id="sonification--sound-design">Sonification &amp; Sound design</h2>
+
+<h3 id="prototype-1-with-javascript-and-p5js">Prototype 1 with Javascript and P5.js</h3>
+<figure align="middle">
+<audio controls="">
+<source src="https://docs.google.com/uc?export=download&amp;id=1crtXge_qcugW-j33vacIBdK1PrXOvXu6" type="audio/wav" volume="0.2" />
+ Your browser does not support the audio element.
+</audio>
+<figcaption>Audio 1: Prototype-1, Sonification of Buses &amp; Coaches in the three regions</figcaption>
+</figure>
+
+<p>We chose to work with JavaScript to create our first prototype. The number of buses in each particular region was directly mapped into a frequency of an oscillator by using the “map ()” method in P5.js. Figure 3 below gives an overview of the mapping method. Here, for example, the minimum to maximum range of number of bus in each region is mapped to the minimum to maximum range of frequency.</p>
+
+<figure>
+<img src="/assets/image/2019_04_19_stefanof_mapping_proto1.JPG" width="100%" align="center" />
+<figcaption>Figure 3: Mapping method in Prototype 1</figcaption>
+</figure>
+
+<p>Sound was generated through three unique oscillators that correspond with the data for each region. Additionally, three non-overlapping frequency ranges were chosen in the mapping to further differentiate between the three sounds. Moreover, the “settimeout()” method states the durations of a single frequency that corresponds to a certain year.</p>
+
+<h4 id="code-snippet">Code Snippet</h4>
+<p>The following code snippet shows how the three oscillators are defined and highlights the mapping method and set timeout () method applied in the prototype 1.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">preload</span><span class="p">(){</span>
+  <span class="nf">loadJSON</span><span class="p">(</span><span class="dl">"</span><span class="s2">Buses.json</span><span class="dl">"</span><span class="p">,</span> <span class="nx">dataReady1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nf">dataReady1</span><span class="p">(</span><span class="nx">data1</span><span class="p">){</span>
+  <span class="nx">osc1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">p5</span><span class="p">.</span><span class="nc">Oscillator</span><span class="p">();</span>
+  <span class="nx">osc2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">p5</span><span class="p">.</span><span class="nc">Oscillator</span><span class="p">();</span>
+  <span class="nx">osc3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">p5</span><span class="p">.</span><span class="nc">Oscillator</span><span class="p">();</span>
+
+  <span class="nx">osc1</span><span class="p">.</span><span class="nf">setType</span><span class="p">(</span><span class="dl">'</span><span class="s1">sine</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">osc1</span><span class="p">.</span><span class="nf">freq</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="nx">osc1</span><span class="p">.</span><span class="nf">amp</span><span class="p">(</span><span class="mf">0.4</span><span class="p">);</span>
+  <span class="nx">osc1</span><span class="p">.</span><span class="nf">start</span><span class="p">();</span>
+
+  <span class="nx">osc2</span><span class="p">.</span><span class="nf">setType</span><span class="p">(</span><span class="dl">'</span><span class="s1">triangle</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">osc2</span><span class="p">.</span><span class="nf">freq</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="nx">osc2</span><span class="p">.</span><span class="nf">amp</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+  <span class="nx">osc2</span><span class="p">.</span><span class="nf">start</span><span class="p">();</span>
+
+  <span class="nx">osc3</span><span class="p">.</span><span class="nf">setType</span><span class="p">(</span><span class="dl">'</span><span class="s1">sawtooth</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">osc3</span><span class="p">.</span><span class="nf">freq</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="nx">osc3</span><span class="p">.</span><span class="nf">amp</span><span class="p">(</span><span class="mf">0.2</span><span class="p">);</span>
+  <span class="nx">osc3</span><span class="p">.</span><span class="nf">start</span><span class="p">();</span>
+
+  <span class="nx">figures1</span> <span class="o">=</span> <span class="nx">data1</span><span class="p">.</span><span class="nx">figures</span><span class="p">;</span>
+  <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">figures1</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">append</span><span class="p">(</span><span class="nx">arrayBus</span><span class="p">,</span> <span class="p">[</span><span class="nx">figures1</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">AADF</span><span class="p">,</span><span class="nx">figures1</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">NE</span><span class="p">,</span><span class="nx">figures1</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">SE</span><span class="p">,</span><span class="nx">figures1</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">WM</span><span class="p">]);</span>
+<span class="p">};</span>
+
+  <span class="c1">// for three cities</span>
+  <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arrayBus</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>  <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">freq1</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="nx">arrayBus</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="mi">140235</span><span class="p">,</span> <span class="mi">183753</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">600</span><span class="p">);</span>
+    <span class="nx">freq2</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="nx">arrayBus</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span><span class="mi">227700</span><span class="p">,</span> <span class="mi">377048</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+    <span class="nx">freq3</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="nx">arrayBus</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span><span class="mi">328924</span><span class="p">,</span> <span class="mi">490877</span><span class="p">,</span> <span class="mi">1100</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
+
+    <span class="c1">//console.log(freq);</span>
+
+    <span class="nx">osc1</span><span class="p">.</span><span class="nf">freq</span><span class="p">(</span><span class="nx">freq1</span><span class="p">);</span>
+    <span class="nx">osc2</span><span class="p">.</span><span class="nf">freq</span><span class="p">(</span><span class="nx">freq2</span><span class="p">);</span>
+    <span class="nx">osc3</span><span class="p">.</span><span class="nf">freq</span><span class="p">(</span><span class="nx">freq3</span><span class="p">);</span>
+
+    <span class="p">},</span> <span class="nx">i</span> <span class="o">*</span> <span class="mi">500</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+     <span class="c1">// we're passing i  </span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<h3 id="prototype-2-with-python-and-supercollider">Prototype 2 with Python and Supercollider</h3>
+<figure>
+<img src="/assets/image/2019_04_19_stefanof_system drawing2.jpg" width="65%" align="center" />
+<figcaption>Figure 4: Prototype 2, System Diagram</figcaption>
+</figure>
+
+<p>The first prototype was further developed with Python and Supercollider. It is inspired by <strong>Thomas Hermann’s</strong> lecture on topics of Sonification and hands on exercise on <strong>Parameter Mapping Sonification</strong> during a series of talks in the SMC4046 Sonification and Sound Design course in this spring semester. The python code for this prototype is based upon two examples; Example-1: the code of the hands-on exercise provided by Thomas and <a href="https://github.com/thomas-hermann/sc3nb/blob/master/examples/sc3nb-examples.ipynb" target="_blank">Example-2:</a> the code shared by Thomas through his GitHub repository. The code for the prototype has been further developed to adapt a different structure of data, create different synth definitions and apply different forms of mapping by exploring various example of synths in Supercollider. For instance, Example-1 and Example-2 have used synth definitions like SinOsc.ar, DynKlank.ar, Dust.ar etc while prototype 2 applies Saw.ar, LFPulse.ar and RLPF.ar along with combination of SinOsc.ar and so on. Moreover, the synths have been designed to meet our objective of combining both artistic and scientific approach, crafted in Supercollider, as shown in the code snippet below;</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ----------------Bus -----------------Amplitude &amp; Frequency to be used in Mapping</span>
+<span class="nc">SynthDef </span><span class="p">(</span><span class="dl">"</span><span class="s2">bus</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span><span class="nx">arg</span> <span class="nx">out</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">freq</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">mul</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="nx">amp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">f</span><span class="p">;</span>
+    <span class="nx">f</span> <span class="o">=</span> <span class="nx">Saw</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="nx">freq</span><span class="p">,</span><span class="nx">mul</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+	<span class="nx">Out</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="nx">out</span><span class="p">,</span><span class="nx">f</span><span class="o">*</span><span class="nx">amp</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">add</span><span class="p">;</span>
+
+<span class="nx">g</span><span class="o">=</span> <span class="nx">Synth</span><span class="p">.</span><span class="k">new</span><span class="p">(</span><span class="err">\</span><span class="nx">bus</span><span class="p">)</span>
+<span class="nx">g</span><span class="p">.</span><span class="nx">free</span>
+
+<span class="c1">// ----------------Car -----------------Amplitude &amp; Frequency to be used in Mapping</span>
+<span class="nc">SynthDef </span><span class="p">(</span><span class="dl">"</span><span class="s2">formula1</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span><span class="nx">arg</span> <span class="nx">out</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">freq</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="nx">mul2</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">f</span><span class="p">;</span>
+    <span class="nx">f</span> <span class="o">=</span> <span class="nx">LFPulse</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="nx">LFPulse</span><span class="p">.</span><span class="nf">kr</span><span class="p">(</span><span class="nx">freq</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="nx">mul2</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
+    <span class="nx">Out</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="nx">out</span><span class="p">,</span><span class="nx">f</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">add</span><span class="p">;</span>
+
+<span class="nx">f</span><span class="o">=</span> <span class="nx">Synth</span><span class="p">.</span><span class="k">new</span><span class="p">(</span><span class="err">\</span><span class="nx">formula1</span><span class="p">)</span>
+<span class="nx">f</span><span class="p">.</span><span class="nx">free</span>
+
+<span class="c1">// ----------------Motorbike -----------------Amplitude &amp; Frequency to be used in Mapping</span>
+<span class="nc">SynthDef</span><span class="p">(</span><span class="dl">"</span><span class="s2">motogp</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="nx">arg</span> <span class="nx">out</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">freq</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">mul3</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">amp</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">m</span><span class="p">;</span>
+    <span class="nx">m</span> <span class="o">=</span> <span class="nx">RLPF</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="nx">LFPulse</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="nx">SinOsc</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span><span class="nx">freq</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+    <span class="nx">Out</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="nx">out</span><span class="p">,</span> <span class="nx">m</span><span class="o">*</span><span class="nx">amp</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">add</span><span class="p">;</span>
+<span class="nx">m</span> <span class="o">=</span> <span class="nx">Synth</span><span class="p">.</span><span class="k">new</span><span class="p">(</span><span class="err">\</span><span class="nx">motogp</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Similarly, Figure 5 below highlights the mapping of different parameters for the prototype 2. Here, for example, the minimum to maximum range of number of bus in each region is mapped to both of the minimum to maximum range of frequency and the minimum to maximum range of amplitude and so on. Therefore, for buses, the change in frequency and amplitude gives the idea of increase or decrease in number of buses in the selected region with respect to time. The speed of oscillation and change of amplitude signify the rise or fall of number of car/taxies in the region of choice with time. Similarly, for the motorbikes, the change in frequency and amplitude gives the information of change in number of motorbikes with respect to time in the selected region.</p>
+
+<figure>
+<img src="/assets/image/2019_04_19_stefanof_mapping_proto_2.jpg" width="100%" align="center" />
+ <figcaption>Figure 5: Mapping method in Prototype 2</figcaption>
+</figure>
+
+<h4 id="code-snippet-1">Code Snippet</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span> <span class="kn">from</span> <span class="n">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">Data_WM.csv</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">random</span><span class="p">,</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">sc3nb</span> <span class="k">as</span> <span class="n">scn</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sc</span> <span class="o">=</span> <span class="n">scn</span><span class="p">.</span><span class="nf">startup</span><span class="p">()</span>  <span class="c1"># optionally use argument sclangpath="/path/to/your/sclang"
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">sc</span>
+<span class="nc">SynthDef </span><span class="p">(</span><span class="sh">"</span><span class="s">bus</span><span class="sh">"</span><span class="p">,</span> <span class="p">{</span><span class="n">arg</span> <span class="n">out</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">freqb</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">ampb</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">;</span>
+    <span class="n">var</span> <span class="n">f</span><span class="p">;</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">Saw</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="n">freqb</span><span class="p">,</span><span class="n">mul</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">Out</span><span class="p">.</span><span class="nf">ar</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="n">f</span><span class="o">*</span><span class="n">ampb</span><span class="p">);</span>
+<span class="p">}).</span><span class="n">add</span><span class="p">;</span>
+</code></pre></div></div>
+<p>The code snippet above imports various python modules in the Jupyter notebook, required to make the sonification. Besides, it reads the data, boots supercollider using the sc3nb module and creates synth definition for buses and coaches using the Saw.ar synth in supercollider.</p>
+
+<p>Similarly, the code snippet below sets TimedQueue function, which is required for creating sonification with precise timing. Synths are then initiated with a delay of 0.2 seconds and preparation are made for recording. Similarly, with iteration of the data, the algorithm maps the minimum and maximum range of the data to certain specified range of frequency and amplitude of the corresponding synth as explained in Figure 5. Finally, the sonification of each set of vehicle for each region is generated one at a time in wav file format.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">queue</span> <span class="o">=</span> <span class="n">scn</span><span class="p">.</span><span class="nc">TimedQueue</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+<span class="n">delay</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+<span class="c1"># instantiate synths
+#queue.put(t0+delay, sc.msg, ("/s_new", ["bus", 1234, 1, 1]))
+#queue.put(t0+delay, sc.msg, ("/s_new", ["car", 1235, 1, 1]))
+</span><span class="n">queue</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="n">t0</span><span class="o">+</span><span class="n">delay</span><span class="p">,</span> <span class="n">sc</span><span class="p">.</span><span class="n">msg</span><span class="p">,</span> <span class="p">(</span><span class="sh">"</span><span class="s">/s_new</span><span class="sh">"</span><span class="p">,</span> <span class="p">[</span><span class="sh">"</span><span class="s">motorbike</span><span class="sh">"</span><span class="p">,</span> <span class="mi">1236</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+
+<span class="n">sc</span><span class="p">.</span><span class="nf">prepare_for_record</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sh">"</span><span class="s">my_recording.wav</span><span class="sh">"</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">"</span><span class="s">wav</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">int16</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># buffer 99 will be used
+</span><span class="n">sc</span><span class="p">.</span><span class="nf">record</span><span class="p">(</span><span class="n">t0</span><span class="o">+</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">2001</span><span class="p">)</span>  <span class="c1"># recording starts in 200 ms
+#sc.bundle(0.2, "/s_new", ["car", 1234, 1, 1])
+</span><span class="n">sc</span><span class="p">.</span><span class="nf">stop_recording</span><span class="p">(</span><span class="n">t0</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># and stops in 1 seconds
+</span>
+<span class="c1"># modulate with data while playing through time
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range </span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">d</span><span class="p">)):</span>
+    <span class="n">onset</span> <span class="o">=</span> <span class="n">scn</span><span class="p">.</span><span class="nf">linlin</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="c1">#b_freq= scn.linlin((d.iloc[i][4]), min(d.BusCoaches),max(d.BusCoaches), 10, 100)
+</span>    <span class="c1">#print(b_freq)
+</span>    <span class="c1">#b_amp = scn.linlin((d.iloc[i][4]), min(d.BusCoaches),max(d.BusCoaches), 0.2, 10)
+</span>    <span class="c1">#print(b_amp)
+</span>    <span class="c1">#c_freq= scn.linlin((d.iloc[i][3]), min(d.CarTaxies),max(d.CarTaxies), 0.2,15)
+</span>    <span class="c1">#c_amp= scn.linlin((d.iloc[i][3]), min(d.CarTaxies),max(d.CarTaxies), 0.2,10)
+</span>    <span class="n">m_freq</span> <span class="o">=</span> <span class="n">scn</span><span class="p">.</span><span class="nf">linlin</span><span class="p">((</span><span class="n">d</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="nf">min</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">MotorCycle</span><span class="p">),</span><span class="nf">max</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">MotorCycle</span><span class="p">),</span> <span class="mi">30</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+    <span class="n">m_amp</span> <span class="o">=</span> <span class="n">scn</span><span class="p">.</span><span class="nf">linlin</span><span class="p">((</span><span class="n">d</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="nf">min</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">MotorCycle</span><span class="p">),</span><span class="nf">max</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">MotorCycle</span><span class="p">),</span> <span class="mf">0.2</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+    <span class="c1">#queue.put(t0 + delay + onset, sc.msg, ("/n_set",
+</span>        <span class="c1">#[1234,'freqb', b_freq,'ampb',b_amp]))
+</span>    <span class="c1">#queue.put(t0 + delay + onset, sc.msg, ("/n_set",
+</span>     <span class="c1">#   [1235, 'freqc', c_freq,'ampc',c_amp]))    
+</span>    <span class="n">queue</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="n">t0</span> <span class="o">+</span> <span class="n">delay</span> <span class="o">+</span> <span class="n">onset</span><span class="p">,</span> <span class="n">sc</span><span class="p">.</span><span class="n">msg</span><span class="p">,</span> <span class="p">(</span><span class="sh">"</span><span class="s">/n_set</span><span class="sh">"</span><span class="p">,</span>
+        <span class="p">[</span><span class="mi">1236</span><span class="p">,</span> <span class="sh">'</span><span class="s">freqm</span><span class="sh">'</span><span class="p">,</span><span class="n">m_freq</span><span class="p">,</span><span class="sh">'</span><span class="s">ampm</span><span class="sh">'</span><span class="p">,</span> <span class="n">m_amp</span><span class="p">]))</span>
+
+
+<span class="c1"># shut down synth when finished
+#queue.put(t0 + delay + onset, sc.msg, ("/n_free", 1234))
+#queue.put(t0 + delay + onset, sc.msg, ("/n_free", 1235))
+</span><span class="n">queue</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="n">t0</span> <span class="o">+</span> <span class="n">delay</span> <span class="o">+</span> <span class="n">onset</span><span class="p">,</span> <span class="n">sc</span><span class="p">.</span><span class="n">msg</span><span class="p">,</span> <span class="p">(</span><span class="sh">"</span><span class="s">/n_free</span><span class="sh">"</span><span class="p">,</span> <span class="mi">1236</span><span class="p">))</span>
+</code></pre></div></div>
+<figure align="middle">
+<audio controls="">
+<source src="https://docs.google.com/uc?export=download&amp;id=1WjU1Wj-HE2tMD819SRSgsqDGXJFrWntD" type="audio/wav" volume="0.2" />
+ Your browser does not support the audio element.
+</audio>
+<figcaption>Audio2: Prototype-2, Sonification of Buses &amp; Coaches in the North East Region in England</figcaption>
+</figure>
+
+<figure align="middle">
+<audio controls="">
+<source src="https://docs.google.com/uc?export=download&amp;id=11rG4gGQmvWWUPcEtULcAQgrgW-PXA1_P" type="audio/wav" volume="0.2" />
+  Your browser does not support the audio element.
+</audio>
+<figcaption>Audio3: Prototype-2, Sonification of Buses &amp; Coaches in the South East Region in England</figcaption>
+ </figure>
+
+<figure>
+<img src="/assets/image/2019_04_19_stefanof_Bus_NE_SE.png" width="75%" align="center" />
+  <figcaption>Figure 6: Prototype-2, Buses &amp; Coaches in the North East &amp; South East Region</figcaption>
+</figure>
+
+<figure align="middle">
+<audio controls="">
+<source src="https://docs.google.com/uc?export=download&amp;id=1q8HZiy923Z0PTv1B-J8rOY_I4CmdSuEA" type="audio/wav" volume="0.2" />
+  Your browser does not support the audio element.
+</audio>
+<figcaption>Audio 4: Prototype-2, Sonification of Cars &amp; Taxies in the North East Region in England</figcaption>
+</figure>
+
+<figure align="middle">
+<audio controls="">
+<source src="‹https://docs.google.com/uc?export=download&amp;id=1kve43lVTVj_1CGAo2vDBXjAq3UDDRNTY" type="audio/wav" volume="0.2" />
+  Your browser does not support the audio element.
+</audio>
+<figcaption>Audio 5, Prototype-2, Sonification of Cars &amp; Taxies in the South East Region in England</figcaption>
+</figure>
+
+<figure>
+<img src="/assets/image/2019_04_19_stefanof_Car_NE_SE.png" width="75%" align="center" />
+  <figcaption>Figure 7: Prototype-2, Cars &amp; Taxies in the North East &amp; South East Region</figcaption>
+</figure>
+
+<figure align="middle">
+<audio controls="">
+<source src="https://docs.google.com/uc?export=download&amp;id=1MGibzFVAf4buZIRxY6e-T9SjybjzOBw-" type="audio/wav" volume="0.2" />
+  Your browser does not support the audio element.
+</audio>
+<figcaption>Audio 6: Prototype-2, Sonification of Motorbikes in the North East Region in England</figcaption>
+</figure>
+
+<figure align="middle">
+<audio controls="">
+<source src="https://docs.google.com/uc?export=download&amp;id=19ispasC90JKaFOjVMQ1OUWK3aKTgor6m" type="audio/wav" volume="0.2" />
+  Your browser does not support the audio element.
+</audio>
+<figcaption>Audio 7: Prototype-2, Sonification of Motorbikes in the South East Region in England</figcaption>
+</figure>
+
+<figure>
+<img src="/assets/image/2019_04_19_stefanof_Bike_NE_SE.png" width="75%" align="center" />
+  <figcaption>Figure 8: Prototype-2, Motorbikes in the North East &amp; South East Region</figcaption>
+</figure>
+
+<p>We bet you would also like to listen to the sonification of the third region of our second prototype and see full codes. Great! Just follow the <a href="https://github.com/shreejayshrestha/SMC4046_Sonification_Project" target="_blank"><strong>GitHub repository</strong></a> and you will get access to all the sonification, codes, scripts, data files and other files related to this project.</p>
+
+<h2 id="project-timeline--contributions">Project Timeline &amp; Contributions</h2>
+
+<figure>
+<img src="/assets/image/2019_04_19_stefanof_timeline2.jpg" width="100%" align="center" />
+  <figcaption>Figure 9: Project Timeline</figcaption>
+</figure>
+
+<figure>
+<img src="/assets/image/2019_04_19_stefanof_contribution3.jpg" width="70%" align="center" />
+  <figcaption>Figure 10: Division of labour</figcaption>
+</figure>
+
+<h2 id="main-findings-in-brief">Main findings in brief</h2>
+
+<p>Prototype 1 was not revealing the actual content of the data. Although we chose non-overlapping frequency ranges in the mapping to further differentiate between the three sounds, it did not meet our objective of combining both artistic and scientific approach. Thus we decided to improve it and developed prototype 2. The informative qualities of the sounds, now standalone and representing each region/vehicle, could increase immensely. The structural elicitors like amplitude and frequency are creating again rhythm and tempo among others, which could reveal patterns in the content. In doing so it affirms our hypothesis.</p>
+
+<h2 id="additional-reflections">Additional reflections</h2>
+
+<p>Our approach to perceptualize the data was from the beginning complementary, using sonification and visualisation. Especially together they have the power to convey information in ways also non-experts can comprehend. Going through the development processes of two sonification prototypes it posed questions how sound can be designed in order to become a standalone mediator of the sonified processes. Finally, the context of sonification and target audience refines the final outcome as well.</p>
+
+<h2 id="future-work">Future Work</h2>
+<p>Currently, the prototype 2 covers sonification of data for individual vehicle for a given period of time only. Running the sonification for the three vehicle types can mask each other and hide potential patterns of data. So, the sound design can be improved to make the sonification distinct as much as possible.
+Similarly, additional features can be introduced to the system such as the ability to select a preferred time period, to select certain transportation methods and regions etc. A data visualization tool can also be introduced to support the sonification model with multiple methods of visualizations to choose from.
+Another interesting suggestion appeared to build an API for sonification of traffic data of England, or any country with options for selecting different regions and different vehicles. The API could be extensively used for analysis and or for understanding the growth of traffic in the chosen region via sonification.</p>
+
+<h2 id="acknowledgement">Acknowledgement</h2>
+<p>We are very grateful to Anna Xambo, our teacher for the SMC4046 Sonification and Sound Design course for exposing us to many experts and professionals working in the areas of sonification and sound design through this course. We would also like to thank her for guiding us in developing prototype 1. Similarly, we would like to extend our heartfelt gratitude to Thomas Hermann for sharing his plethora of knowledge on sonification. Likewise, we would also like to thank Thomas for providing us with his slides and python script and credit him for the prototype 2. All of them helped us practice, learn and expand our knowledge on sonification.</p>
+
+<h2 id="thank-you">Thank you!</h2>
+
+<h2 id="references">References</h2>
+
+<p>Hermann, T. (2008). <em>TAXONOMY AND DEFINITIONS FOR SONIFICATION AND AUDITORY DISPLAY.</em> 14th International Conference on Auditory Display,      Paris, France June 24 - 27, 2008. Retrieved from: <a href="http://www.icad.org/Proceedings/2008/Hermann2008.pdf" target="_blank">http://www.icad.org/Proceedings/2008/Hermann2008.pdf</a>.</p>
+
+<p>Hermann, T., Hunt, A., &amp; Neuhoff, J. G. (2011). <em>The Sonification Handbook (1st ed.)</em>. Berlin: Logos Publishing House. Retrieved from:        <a href="https://sonification.de/handbook/" target="_blank">https://sonification.de/handbook/</a>.</p>
+</div>
+
+  
+
+  <a class="u-url" href="/sonification/2019/04/19/The_Sound_of_Traffic.html" hidden></a>
+</article>
+
+<script src="/utils/slideshow.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.0.1/dist/wavesurfer.js"></script>
+<script src="/utils/waveform.js"></script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The SMC Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The SMC Blog</li><li><a class="u-email" href="mailto:cer@create.aau.dk">cer@create.aau.dk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://www.twitter.com/smc-aau-cph"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">smc-aau-cph</span></a></li><li><a href="https://youtube.com/c/smc-aau-cphr/videos"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">SMC_master</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS feed</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The student-led blog of the Aalborg University Copenhagen (AAU-CPH) master&#39;s programme in Sound and Music Computing (SMC).</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- include comments here -->
+
+  </body>
+
+</html>
