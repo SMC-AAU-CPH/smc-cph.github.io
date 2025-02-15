@@ -1,6 +1,8 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll as Action
 
+
+
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -42,8 +44,18 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
+      - name: Setup Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+      - name: Set remote URL
+        run: git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/SMC-AAU-CPH/smc-cph.github.io.git
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./_site
+
+
