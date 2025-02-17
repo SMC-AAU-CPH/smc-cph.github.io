@@ -1,6 +1,6 @@
 ---
-name: Ashane Silva
-title: Ashane Silva
+name: Benjamin Melvin Stein
+title: Benjamin Melvin Stein
 excerpt: All blog posts authored by this student
 exclude:
 ---
